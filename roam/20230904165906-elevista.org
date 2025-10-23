@@ -145,7 +145,7 @@ https://www.youtube.com/watch?v=1j5lhDzlFUM
 
 
 
-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
+
 * thrid
 ** Migration from java to nest
 *** setup NX

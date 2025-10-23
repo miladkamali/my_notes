@@ -1,0 +1,22 @@
+* source
+** https://www.youtube.com/playlist?list=PL6TbWIxWsLY3XuAZB4C0_GxrR76TAZOf2
+* [[file:./ssl.org][ssl]]
+* AES
+* RSA
+* Eliptic curve
+** [[https://www.youtube.com/watch?v=yDXiDOJgxmg][Elliptic Curve Cryptography & Diffie-Hellman]]
+** [[https://www.youtube.com/watch?v=yBr3Q6xiTw4][Martijn Grooten - Elliptic Curve Cryptography for those who are afraid of maths]]
+** [[https://www.youtube.com/watch?v=6eZQu120A80][Elliptic curves]]
+* KeyExchange
+** Diffie-Hellman
+   [[https://www.youtube.com/watch?v=YEBfamv-_do][Public key cryptography - Diffie-Hellman Key Exchange (full version)]]
+** ecdhe-rsa-aes256-gcm-sha384
+* ASN.1(Abstract Syntax Notation One)
+   ASN.1 is a binary format like WSDL protocol buffer or JSON Schema
+** [[https://www.youtube.com/watch?v=EccHushRhWs][Introduction to ASN.1]]
+** TODO [[https://www.youtube.com/watch?v=OStr5K2R5oo][What the heck is ASN.1?]]
+* SNMP
+* LDAP
+* x.509
+* BER
+* DER

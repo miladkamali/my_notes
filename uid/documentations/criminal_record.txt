@@ -1,0 +1,26 @@
+request 
+curl --location 'https://json-api.uid.ir/api/inquiry/criminal-record' \
+--header 'Content-Type: application/json' \
+--data '{
+    "requestContext": {
+        "apiInfo": {
+            "businessId": "74b78281-a739-4948-92f6-ee57f583c09d",
+            "businessToken": "d93c407e-ff29-48c9-8346-b994e7be2ca7"
+        }
+    },
+    "nationalId" : "2710028859",
+    "birthdate" : "1368/06/19",
+    "mobileNumber" : "09122751475",
+    "postalCode" : "1456819027",
+    "callbackUri" : ""
+}'
+
+
+
+callback object 
+
+public class CallbackResponse {
+    private boolean hasCriminalRecord;
+    private String nationalId;
+    private String trackingId;
+}

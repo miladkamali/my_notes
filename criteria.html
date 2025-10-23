@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-10-16 Fri 01:58 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="milad" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org60a44d2">1. levels</a>
+<ul>
+<li><a href="#orgb568d36">1.1. junior</a>
+<ul>
+<li><a href="#orgce7207f">1.1.1. programming skills</a></li>
+<li><a href="#org5a1a38d">1.1.2. soft-skills</a></li>
+</ul>
+</li>
+<li><a href="#org10a7122">1.2. midlevel</a>
+<ul>
+<li><a href="#org68da77f">1.2.1. programming skills</a></li>
+<li><a href="#org5616f04">1.2.2. knowledge</a></li>
+<li><a href="#orga0c0674">1.2.3. stress handling</a></li>
+<li><a href="#org923cc89">1.2.4. soft-skills</a></li>
+</ul>
+</li>
+<li><a href="#org5af6d49">1.3. senior</a>
+<ul>
+<li><a href="#org4d22239">1.3.1. programming skills</a></li>
+<li><a href="#org9e66deb">1.3.2. knowledge</a></li>
+<li><a href="#org8a5da21">1.3.3. stress handling</a></li>
+<li><a href="#orge85373d">1.3.4. soft-skills</a></li>
+</ul>
+</li>
+<li><a href="#org4648a15">1.4. lead</a>
+<ul>
+<li><a href="#orge544669">1.4.1. programming skills</a></li>
+<li><a href="#org3aea83a">1.4.2. knowledge</a></li>
+<li><a href="#org72aca7f">1.4.3. stress handling</a></li>
+<li><a href="#org75685cd">1.4.4. soft-skills</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org60a44d2" class="outline-2">
+<h2 id="org60a44d2"><span class="section-number-2">1</span> levels</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgb568d36" class="outline-3">
+<h3 id="orgb568d36"><span class="section-number-3">1.1</span> junior</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgce7207f" class="outline-4">
+<h4 id="orgce7207f"><span class="section-number-4">1.1.1</span> programming skills</h4>
+<div class="outline-text-4" id="text-1-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgf57802d"></a>Java programming&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="org6b662f4"></a>spring framework&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="org85b2348"></a>Hibernate JPA&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+</ol>
+</div>
+<div id="outline-container-org5a1a38d" class="outline-4">
+<h4 id="org5a1a38d"><span class="section-number-4">1.1.2</span> soft-skills</h4>
+<div class="outline-text-4" id="text-1-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org37f0f28"></a>Growth Mentality&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="org0bb9de2"></a>avid learner&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="orgae1accd"></a>taking responsibility for their action and consequences&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org10a7122" class="outline-3">
+<h3 id="org10a7122"><span class="section-number-3">1.2</span> midlevel</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org68da77f" class="outline-4">
+<h4 id="org68da77f"><span class="section-number-4">1.2.1</span> programming skills</h4>
+<div class="outline-text-4" id="text-1-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orge022321"></a>Java programming&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="org86d62ef"></a>spring framework&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="org1bb0944"></a>Hibernate JPA&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="org297c730"></a>Database&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org9e904ec"></a>redis&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org26418fb"></a>Tests&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org67d9d89"></a>Test framework JUnit&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</div>
+<div id="outline-container-org5616f04" class="outline-4">
+<h4 id="org5616f04"><span class="section-number-4">1.2.2</span> knowledge</h4>
+<div class="outline-text-4" id="text-1-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org6edc6e3"></a>how systems work<br />
+<ol class="org-ol">
+<li><a id="org46109b4"></a>Understand Java echo-system&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org1663c9c"></a>Understand how Spring framework works&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org007dcf3"></a>Understand algorithm complexity&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgc7847c7"></a>Understanding of JVM and how it works&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org1dda228"></a>understand how logging work&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</li>
+<li><a id="orgb2468ba"></a>Codding standards<br />
+<ol class="org-ol">
+<li><a id="orgddbcea7"></a>Fault tolerant code&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orge318095"></a>Error handling practices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org2d7e6ab"></a>resource management practices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgba7c94b"></a>Familiar with some test practices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org85e33c8"></a>Fail fast concept and it's implementation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</li>
+<li><a id="org47ccfd9"></a>architecture<br />
+<ol class="org-ol">
+<li><a id="orgb9c7a48"></a>understand common code structure&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org371fc39"></a>Clean Code&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgbd68bfc"></a>understand and implement design patterns&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgf912e73"></a>Refactoring&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgdeeb43f"></a>Code Smells&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org3b39ae6"></a>practical understanding of monitoring&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orge429857"></a>practical understanding of logging system&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</li>
+<li><a id="orge1a2d33"></a>Operational requirements<br />
+<ol class="org-ol">
+<li><a id="org1a2b9a6"></a>Understand fin-tech coding standards&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgab84222"></a>Understand fin-tech operational standard&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org7e5ca77"></a>Understand security implication and policies&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orga113b98"></a>Understand Backward compatibility&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</li>
+<li><a id="org3d8923a"></a>practical understanding of how database works&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</div>
+<div id="outline-container-orga0c0674" class="outline-4">
+<h4 id="orga0c0674"><span class="section-number-4">1.2.3</span> stress handling</h4>
+<div class="outline-text-4" id="text-1-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="org23f94c2"></a>Work reliably under stress and time constraint&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orge47cbd4"></a>Ability to prioritize tasks under stress&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</div>
+<div id="outline-container-org923cc89" class="outline-4">
+<h4 id="org923cc89"><span class="section-number-4">1.2.4</span> soft-skills</h4>
+<div class="outline-text-4" id="text-1-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="org3caae09"></a>communicate with clients and service providers&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org1dbc063"></a>patience&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orge40b3af"></a>Growth Mentality&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="orgabf378d"></a>avid learner&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="orge23b6d6"></a>taking responsibility for their action and consequences&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="org336412a"></a>communication skills&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org5af6d49" class="outline-3">
+<h3 id="org5af6d49"><span class="section-number-3">1.3</span> senior</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org4d22239" class="outline-4">
+<h4 id="org4d22239"><span class="section-number-4">1.3.1</span> programming skills</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgc715d9a"></a>Java programming&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="org967ee4a"></a>spring framework&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="orge49b18c"></a>Hibernate JPA&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="org8f3e769"></a>Database&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgd727e5a"></a>redis&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org72995fb"></a>Tests&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgec4d34d"></a>Test framework JUnit&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</div>
+<div id="outline-container-org9e66deb" class="outline-4">
+<h4 id="org9e66deb"><span class="section-number-4">1.3.2</span> knowledge</h4>
+<div class="outline-text-4" id="text-1-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org27c3b3b"></a>how systems work<br />
+<ol class="org-ol">
+<li><a id="org1a1e963"></a>Understand Java echo-system&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org6bef198"></a>Understand how Spring framework works&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgfb108a7"></a>Understand algorithm complexity&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgc21d784"></a>Understanding of JVM and how it works&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgab9c826"></a>understand how logging work&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</li>
+<li><a id="org8a7a10a"></a>Codding standards<br />
+<ol class="org-ol">
+<li><a id="org45688ff"></a>Fault tolerant code&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orga8f9d2e"></a>Error handling practices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org6da7972"></a>resource management practices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org3961843"></a>Familiar with some test practices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org99666a6"></a>Understand difference between different testing methodology&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="orge1aad6c"></a>Fail fast concept and it's implementation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org2b958b2"></a>practical understanding of different type of tests and their usage&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+</ol>
+</li>
+<li><a id="org740fc4d"></a>architecture<br />
+<ol class="org-ol">
+<li><a id="orga3dd1ff"></a>understand common code structure&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgb3eed42"></a>understand dependency and it's side effects&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="org3c5fd2d"></a>Clean Code&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org73eb214"></a>understand and implement design patterns&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org5f82a19"></a>Correctly identify usage of design patters&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="org9430386"></a>Refactoring&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orga3a8432"></a>Code Smells&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org2099f43"></a>refactoring recipe&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="orgf63aa3a"></a>Understand Testable design&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="orge115354"></a>Understand Conformance test/criteria&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="orga7e415b"></a>practical understanding of monitoring&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgfca8ec8"></a>practical understanding of logging system&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org0befced"></a>ability to compare architectures&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="orgbd0bc4e"></a>ability to design Architecture&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+</ol>
+</li>
+<li><a id="orgd80c880"></a>Operational requirements<br />
+<ol class="org-ol">
+<li><a id="orgba885fc"></a>Understand fin-tech coding standards&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgddd0041"></a>Understand fin-tech operational standard&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgab743c5"></a>Understand fin-tech monitoring standard&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="org46bc820"></a>Understand Data policies&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="org8d746d7"></a>Understand Audit policies and Auditable system&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="org058fa68"></a>Understand security implication and policies&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgf0f45f9"></a>Understand Backward compatibility&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</li>
+<li><a id="org1ca0bd2"></a>Ability to find bottle-necks in the system&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="orge92553a"></a>practical understanding of how database works&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org688fb66"></a>deep understanding of how database works&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+</ol>
+</div>
+<div id="outline-container-org8a5da21" class="outline-4">
+<h4 id="org8a5da21"><span class="section-number-4">1.3.3</span> stress handling</h4>
+<div class="outline-text-4" id="text-1-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org7f81136"></a>Work reliably under stress and time constraint&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org711cd5e"></a>Ability to prioritize tasks under stress&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</div>
+<div id="outline-container-orge85373d" class="outline-4">
+<h4 id="orge85373d"><span class="section-number-4">1.3.4</span> soft-skills</h4>
+<div class="outline-text-4" id="text-1-3-4">
+</div>
+<ol class="org-ol">
+<li><a id="org26a68f0"></a>communicate with clients and service providers&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org2fa27fc"></a>patience&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org4688b1a"></a>Growth Mentality&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="orgae09418"></a>avid learner&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="orgf376c19"></a>taking responsibility for their action and consequences&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="org844f3a0"></a>communication skills&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org4648a15" class="outline-3">
+<h3 id="org4648a15"><span class="section-number-3">1.4</span> lead</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-orge544669" class="outline-4">
+<h4 id="orge544669"><span class="section-number-4">1.4.1</span> programming skills</h4>
+<div class="outline-text-4" id="text-1-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org0cfe711"></a>Java programming&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="org0a3247e"></a>spring framework&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="orge1cfa51"></a>Hibernate JPA&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="org116cc5d"></a>Database&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org75a0c7b"></a>redis&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org4caeb3c"></a>Tests&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org28ecb61"></a>Test framework JUnit&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</div>
+<div id="outline-container-org3aea83a" class="outline-4">
+<h4 id="org3aea83a"><span class="section-number-4">1.4.2</span> knowledge</h4>
+<div class="outline-text-4" id="text-1-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgae5b69a"></a>how systems work<br />
+<ol class="org-ol">
+<li><a id="orgd1834f1"></a>Understand Java echo-system&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org3932c00"></a>Understand how Spring framework works&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org0efc462"></a>Understand algorithm complexity&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orga435a0f"></a>Understanding of JVM and how it works&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org30137ef"></a>understand how logging work&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</li>
+<li><a id="orgd1d05db"></a>Codding standards<br />
+<ol class="org-ol">
+<li><a id="org955d736"></a>Fault tolerant code&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org88af9ea"></a>Error handling practices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org19cedaf"></a>resource management practices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org65d4c1b"></a>Familiar with some test practices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orga504f7a"></a>Understand difference between different testing methodology&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="org4e36f3c"></a>Fail fast concept and it's implementation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgacb96af"></a>practical understanding of different type of tests and their usage&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+</ol>
+</li>
+<li><a id="org6b5206e"></a>architecture<br />
+<ol class="org-ol">
+<li><a id="org7988365"></a>understand common code structure&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgc15e793"></a>understand dependency and it's side effects&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="orgec5fec3"></a>Clean Code&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgd6074d6"></a>understand and implement design patterns&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org93c68fe"></a>Correctly identify usage of design patters&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="org2adbbf9"></a>Refactoring&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org0be577c"></a>Code Smells&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org49f5f99"></a>refactoring recipe&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="orgcf554dc"></a>Understand Testable design&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="org7023c19"></a>Understand Conformance test/criteria&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="org3298d61"></a>practical understanding of monitoring&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org49782cf"></a>practical understanding of logging system&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org38138a5"></a>ability to compare architectures&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="org5d07ffc"></a>ability to design Architecture&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+</ol>
+</li>
+<li><a id="orgbbd39ff"></a>Operational requirements<br />
+<ol class="org-ol">
+<li><a id="org29e82c8"></a>Understand fin-tech coding standards&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="orgcbfd09e"></a>Understand fin-tech operational standard&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org5c4b141"></a>Understand fin-tech monitoring standard&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="orge11e12e"></a>Understand Data policies&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="org353f895"></a>Understand Audit policies and Auditable system&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="org3c45360"></a>Understand security implication and policies&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org7e6879d"></a>Understand Backward compatibility&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</li>
+<li><a id="orgbed7c11"></a>Ability to find bottle-necks in the system&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+<li><a id="org5755db4"></a>practical understanding of how database works&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org30fddc1"></a>deep understanding of how database works&#xa0;&#xa0;&#xa0;<span class="tag"><span class="senior">senior</span></span><br /></li>
+</ol>
+</div>
+<div id="outline-container-org72aca7f" class="outline-4">
+<h4 id="org72aca7f"><span class="section-number-4">1.4.3</span> stress handling</h4>
+<div class="outline-text-4" id="text-1-4-3">
+</div>
+<ol class="org-ol">
+<li><a id="org3100d3c"></a>Work reliably under stress and time constraint&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org78babca"></a>Ability to prioritize tasks under stress&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</div>
+<div id="outline-container-org75685cd" class="outline-4">
+<h4 id="org75685cd"><span class="section-number-4">1.4.4</span> soft-skills</h4>
+<div class="outline-text-4" id="text-1-4-4">
+</div>
+<ol class="org-ol">
+<li><a id="org2fdcb83"></a>communicate with clients and service providers&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org8eb6872"></a>patience&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+<li><a id="org60122f4"></a>Growth Mentality&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="orge3bbbfe"></a>avid learner&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="orgb026487"></a>taking responsibility for their action and consequences&#xa0;&#xa0;&#xa0;<span class="tag"><span class="junior">junior</span></span><br /></li>
+<li><a id="orgd58884e"></a>communication skills&#xa0;&#xa0;&#xa0;<span class="tag"><span class="midlevel">midlevel</span></span><br /></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: milad</p>
+<p class="date">Created: 2020-10-16 Fri 01:58</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

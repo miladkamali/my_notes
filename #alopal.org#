@@ -1,0 +1,229 @@
+#+PROPERTY: Effort_ALL 0 1:00 2:00 4:00 8:00 12:00 16:00 20:00 24:00 36:00 48:00
+#+COLUMNS: %50ITEM %EFFORT(Effort Children){:} %PRIORITY
+* list of services
+** psychiratriatric therapy session
+** online classes
+** office related stuff
+** surprise mother fucker
+*** 
+* requirements
+** user management
+** verify user email/sms
+** profile per user
+** accounting system for services
+** payment service
+*** paypal
+** Tax and legal headaches 
+*** calculating tax
+*** generating reports
+*** audit-able systems 
+** service management
+** what is a service
+** notification 
+*** push notification
+*** sms notification
+*** email notification
+** messaging system email like
+** messing chat 
+** reports
+** rating 
+** request for class 
+** review for class and teacher 
+* requirements 
+** lacks
+*** no tax consideration
+*** no offline money
+*** no special algorithms
+*** no automated orsemi-automated  support center, 
+** needs
+*** design
+    :PROPERTIES:
+    :Effort:   32:00
+    :END:
+*** user management
+    :PROPERTIES:
+    :EFFORT:   8:00
+    :END:
+**** OAuth facebook
+     :PROPERTIES:
+     :Effort:   8:00
+     :END:
+**** registration
+**** login
+**** reset password
+**** forgot password
+*** verify user email/sms
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+*** payment system
+    :PROPERTIES:
+    :Effort:   24:00
+    :END:
+*** collect basic rating behavior like who rated whom when
+    :PROPERTIES:
+    :Effort:   20:00
+    :END:
+*** filtering system for Doctors  
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+*** service tree hierarchy 
+    :PROPERTIES:
+    :Effort:   24:00
+    :END:
+**** add a service
+**** disable a service
+*** notification system
+**** [#A] email
+     :PROPERTIES:
+     :Effort:   8:00
+     :END:
+**** [#C] iran sms
+**** [#A] push notification on app
+     :PROPERTIES:
+     :Effort:   16:00
+     :END:
+*** [#B] messaging
+    :PROPERTIES:
+    :Effort:   36:00
+    :END:
+**** offline messaging system
+**** any user can send message to the other user
+*** [#B] bulletin board system 
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+*** a ticketing system 
+    :PROPERTIES:
+    :Effort:   20:00
+    :END:
+*** a system for managing and setting session 
+    :PROPERTIES:
+    :Effort:   48:00
+    :END:
+**** session validation by a form via email
+*** conferencing system target is skype
+    :PROPERTIES:
+    :Effort:   40:00
+    :END:
+*** all power full admin panel which access every thing
+    :PROPERTIES:
+    :Effort:   36:00
+    :END:
+**** ability to change every thing
+**** ability to change balance
+**** list of events that needs attention 
+*** calendar system
+    :PROPERTIES:
+    :Effort:     72:00
+    :END:
+*** two types of users with their profile
+**** Doctors 
+***** has profile
+      :PROPERTIES:
+      :Effort:   16:00
+      :END:
+****** a fixed profile 
+******* some personal and professional information
+******* a album video
+******* a album of pictures
+******* a list of bio 
+***** can view their views 
+***** can be notified by their rating 
+***** has list of comments on their 
+***** has list of rating
+      :PROPERTIES:
+      :Effort:   4:00
+      :END:
+***** calendar 
+      
+**** patients 
+     :PROPERTIES:
+     :Effort:   16:00
+     :END:
+***** basic profile
+***** balance 
+***** calendar
+***** history of sessions for himself
+***** history comments for himself 
+*** reports
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+**** list of session information
+     Dr patient date type length money isClearedOrNOt
+* new talk
+** services
+   many to many relation ship between service pal and services
+   each service has a series 
+
+
+[
+{
+"logo" : "https..."
+"description" : "lkfksjlfkjslf"
+"extraInformation": [
+{"key": "salam", "value": ""}
+{"key": "", "value": ""}
+{"key": "daraje", "value": "",type="string|image|video"}
+]
+},{
+}
+] 
+*** consultation
+**** sex tropy
+**** couple tropy
+**** psycho 
+**** ...
+*** training
+*** class
+** pal
+*** personal information
+**** 
+*** financial data
+*** profile data
+*** ? rating -> profile it is not viewed constantly only the average
+*** ? rating per session for each alo who has session with pal per tropy season
+*** ? comments -> profile
+** service season
+** calender
+*** pal
+**** list of general availability of schedule
+**** list of events and their capacity
+**** APIs
+***** list of available times for specific day and time in future
+*** calender events
+*** calender slots
+*** per pal
+*** per alo
+* work log 
+** server
+   :LOGBOOK:
+   CLOCK: [2020-12-01 Tue 22:20]--[2020-12-02 Wed 01:56] =>  3:36
+   :END:
+* road-map
+** finalizing architecture
+*** finalizing technologies
+*** finalizing database design
+*** finalizing API design 
+*** finalizing test methodology
+*** finalizing documentation methodology
+*** finalizing backup/media storage strategy
+*** finalizing admin/report strategy
+** deployment strategy
+*** server configurations
+*** database configuration and management
+*** implement back up strategy
+*** implement media storage strategy
+** developing APIs
+*** user registration/confirmation
+*** profile management
+*** session management
+*** booking system
+*** payment system
+*** financial management system for pals
+*** admin access/management
+** security 
+** support
+* 

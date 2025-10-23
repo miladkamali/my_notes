@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-07-15 Sat 11:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="milad kamali" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org6caf9dc">1. UID authentication Documentation</a>
+<ul>
+<li><a href="#org6ec5690">1.1. Front-end</a>
+<ul>
+<li><a href="#org7257349">1.1.1. start of user journey</a></li>
+<li><a href="#orgf21595c">1.1.2. end of user journey</a></li>
+</ul>
+</li>
+<li><a href="#org859cb50">1.2. backend</a>
+<ul>
+<li><a href="#org973cfc4">1.2.1. image service</a></li>
+<li><a href="#org64c1e5a">1.2.2. final authentication response</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6caf9dc" class="outline-2">
+<h2 id="org6caf9dc"><span class="section-number-2">1.</span> UID authentication Documentation</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+We provide a very flexible eKYC solution to authenticate users for our
+customers. User authentication journey begins by user redirection to our website
+which depending on the business requested authentication flow we will request
+series of information from the user and at the end we will redirect the user to
+business defined return url with status of how the user completed it's journey
+in our website. At the end we will provide the final authentication results
+directly to the business backend.
+</p>
+
+<p>
+process rough flow diagram is presented bellow.
+<img src="./flow.drawio.svg" alt="flow.drawio.svg" class="org-svg" />
+</p>
+</div>
+<div id="outline-container-org6ec5690" class="outline-3">
+<h3 id="org6ec5690"><span class="section-number-3">1.1.</span> Front-end</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org7257349" class="outline-4">
+<h4 id="org7257349"><span class="section-number-4">1.1.1.</span> start of user journey</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Redirect your user to our website with the following query
+parameters
+</p>
+<ul class="org-ul">
+<li>business_id businessId is provided by the UID to your business and is used to
+identify your business and it's requirements in PWA</li>
+<li>business_token a token which will be used to identify the user by the
+business, In case of backend communication between us and business this token
+will be used to identify the user. This token has to be unique.</li>
+<li>business_meta_data optionally business can send us up to 255 characters of
+meta data which can be used internally by the business. It's not required to
+be unique.</li>
+<li>business_return_url is the return url which will be used to redirect the user
+to the business, this field has to be url encoded</li>
+<li>business_signature in order to ensure users are being sent by business, we
+require the this field which is a digital signature of the query parameters.
+(business_id+business_token+business_meta_data+business_return_url) signature
+should be provided here which we will check against business public key</li>
+</ul>
+
+
+
+<p>
+an example of
+</p>
+
+<pre class="example" id="org8fc4175">
+https://{customDomain}/?business_id=d5162891-c1e2-409c-b4b1-852cecb59763&amp;business_signature=iEYEARECAAYFAjdYCQoACgkQJ9S6ULt1dqz6IwCfQ7wP6i%2Fi8HhbcOSKF4ELyQB1%0AoCoAoOuqpRqEzr4kOkQqHRLE%2Fb8%2FRw2k%0A%3Dy6kj&amp;business_token=a592-597f1fedc5d3&amp;business-meta-date=4666&amp;business_return_url=https%3A%2F%2Fu-id.net%2Fauthentication%2F
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-orgf21595c" class="outline-4">
+<h4 id="orgf21595c"><span class="section-number-4">1.1.2.</span> end of user journey</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+At the end of authentication process users will be redirected to the business return url provided by the business with the following query parameters
+</p>
+<ul class="org-ul">
+<li>status</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">code</th>
+<th scope="col" class="org-left">result code</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">SUCCESS</td>
+<td class="org-left">user has completed authentication journey</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">RESULT_CAMERA_NOT_SUPPORTED</td>
+<td class="org-left">unsupported camera</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">RESULT_PERMISSIONS_NOT_GRANTED</td>
+<td class="org-left">permission was not granted to view camera</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">RESULT_UNKNOWN_ERROR</td>
+<td class="org-left">unknown error</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">RESULT_INVALID_PARAMETERS</td>
+<td class="org-left">invalid query parameters</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">RESULT_PAYMENT_FAILED</td>
+<td class="org-left">user failed to complete payment</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">RESULT_USER_CANCELED_PROCESS</td>
+<td class="org-left">user has canceled the process</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>business_meta_data</li>
+<li>business_token</li>
+<li>verification_signature (statusCode+business_token+business_meta_data) is signed by our private key to ensure authenticity of data</li>
+</ul>
+
+
+
+
+
+<p>
+example url would be as follows
+</p>
+<pre class="example" id="orgdc57b9a">
+https://redirectUrl/?status=1&amp;business_meta_data=4666&amp;business_token=a592-597f1fedc5d3&amp;verification_signature=iEYEARECAAYFAjdYCQoACgkQJ9S6ULt1dqz6IwCfQ7wP6i%2Fi8HhbcOSKF4ELyQB1%0AoCoAoOuqpRqEzr4kOkQqHRLE%2Fb8%2FRw2k%0A%3Dy6kj
+</pre>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="outline-container-org859cb50" class="outline-3">
+<h3 id="org859cb50"><span class="section-number-3">1.2.</span> backend</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org973cfc4" class="outline-4">
+<h4 id="org973cfc4"><span class="section-number-4">1.2.1.</span> image service</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+In order to receive reference images for each user we require business to provide
+us with the reference images that will be compared with liveness image obtained
+from the video. This endpoint should be post which as input receives user token
+and in output returns base64 encoded images of reference and profile. Endpoint
+authentication or IP white listing is business decision.
+</p>
+
+<pre class="example" id="orgac20adc">
+HTTP method POST
+</pre>
+
+<div class="org-src-container">
+<pre class="src src-javascript"><span style="color: #4f97d7;">{</span>
+    token: <span style="color: #2d9574;">'usertoken'</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+
+<div class="org-src-container">
+<pre class="src src-javascript"><span style="color: #4f97d7;">{</span>
+    referenceImage: <span style="color: #2d9574;">'base64 of image'</span>,
+    profileImage:<span style="color: #2d9574;">'base64 of image'</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org64c1e5a" class="outline-4">
+<h4 id="org64c1e5a"><span class="section-number-4">1.2.2.</span> final authentication response</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+To get final authentication response 20 minutes after user has been redirected back to your website, you should call the below endpoint 
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orga43f328"></a>login<br />
+<div class="outline-text-5" id="text-1-2-2-1">
+<p>
+first you need to login with the credential provided to you by UID in the bellow domain
+</p>
+
+<pre class="example" id="org1d848a8">
+https://{customDomain}/business/login
+</pre>
+
+<pre class="example" id="org4b276b0">
+HTTP method POST
+</pre>
+</div>
+
+<ol class="org-ol">
+<li><a id="org43a1c57"></a>request input<br />
+<div class="outline-text-6" id="text-1-2-2-1-1">
+<div class="org-src-container">
+<pre class="src src-javascript"><span style="color: #4f97d7;">{</span>
+    userName:<span style="color: #2d9574;">'username'</span>,
+    password:<span style="color: #2d9574;">'password'</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+</div>
+</li>
+<li><a id="org389c1f9"></a>response<br />
+<div class="outline-text-6" id="text-1-2-2-1-2">
+<div class="org-src-container">
+<pre class="src src-javascript"><span style="color: #4f97d7;">{</span>
+  <span style="color: #2d9574;">"access_token"</span> : <span style="color: #2d9574;">"4484e52dc4744374aced826a4543cd28948816ff"</span>,
+  <span style="color: #2d9574;">"token_type"</span> : <span style="color: #2d9574;">"Bearer"</span>,
+  <span style="color: #2d9574;">"expires_in"</span> : <span style="color: #a45bad;">1295999</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org4f136ec"></a>get response<br />
+<div class="outline-text-5" id="text-1-2-2-2">
+<p>
+using the token from business/login as 'authorization: Bearer 4484e52dc4744374aced826a4543cd28948816ff' header 
+</p>
+<pre class="example" id="orgaacf7be">
+https://{customDomain}/business/get-final-authentication-response
+</pre>
+
+<pre class="example" id="orgeae7648">
+HTTP method POST
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-javascript"><span style="color: #4f97d7;">{</span>
+    businessToken:<span style="color: #2d9574;">'a592-597f1fedc5d3'</span><span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">business token to identify users with</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+
+
+<div class="org-src-container">
+<pre class="src src-javascript"><span style="color: #4f97d7;">{</span>
+    status: <span style="color: #4f97d7; font-weight: bold;">enum</span>
+    successfulPayment: <span style="color: #ce537a; font-weight: bold;">boolean</span>,
+    authenticationStartTime: <span style="color: #2d9574;">'2023&#8208;07&#8208;15T04:05:07Z'</span>,
+    authenticationEndTime:<span style="color: #2d9574;">'2023&#8208;07&#8208;15T04:06:07Z'</span>,
+    referenceSimilarity: <span style="color: #ce537a; font-weight: bold;">boolean</span>,
+    profileSimilarity: <span style="color: #ce537a; font-weight: bold;">boolean</span>,
+    livenessImageLink:<span style="color: #2d9574;">'downloadLink'</span>,
+    livenessVideoLink:<span style="color: #2d9574;">'downloadLink'</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">code</th>
+<th scope="col" class="org-left">result code</th>
+<th scope="col" class="org-left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">AuthenticationStarted</td>
+<td class="org-left">user has landed with appropriate data in our website</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">PaymentStarted</td>
+<td class="org-left">user has been sent to IPG provider to complete payment</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">PaymentCompleted</td>
+<td class="org-left">user has return from payment portal to our website</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">RedirectedToBusiness</td>
+<td class="org-left">user has been redirected to business landing page</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Waiting</td>
+<td class="org-left">waiting for operator response</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">authenticated</td>
+<td class="org-left">User identity has been confirmed</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">rejected</td>
+<td class="org-left">user identity has been rejected</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>

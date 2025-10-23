@@ -1,0 +1,16 @@
+* project needs
+** TODO full loging
+** TODO correct handling of 
+* cleanup Account managet
+** TODO Logging in account manager
+*** TODO every one learn Log4J
+*** TODO log every event in manager
+** TODO Creating Account inMemoryData object
+*** TODO the interface 
+*** TODO implementation
+** TODO create enum for status
+** TODO move every  consumer function to commits
+*** TODO modify Commit to have a apply function
+*** TODO 
+** TODO revamp hibernate relate entities to remove serializations
+* cleaning up 

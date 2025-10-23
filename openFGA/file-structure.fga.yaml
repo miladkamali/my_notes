@@ -1,0 +1,51 @@
+name: test
+model: |
+  model
+    schema 1.1
+
+  type user
+
+  type folder
+    relations
+      define parent: [folder]
+      define owner: [user] or owner from parent
+      define viewer: [user]
+      define editor: [user]
+      define can_edit: editor or owner or can_edit from parent
+      define can_view: viewer or can_edit
+
+  type document
+    relations
+      define parent: [folder]
+      define viewer: [user] or viewer from parent
+      define owner: [user] or owner from parent
+      define editor: [user]
+      define can_edit: editor or owner or can_edit from parent
+      define can_view: viewer or can_edit
+tuples:
+  - object: folder:root
+    user: user:milad
+    relation: owner
+  - user: folder:root
+    relation: parent
+    object: folder:milad_document
+  - object: folder:milad_personal
+    user: folder:milad_document
+    relation: parent
+  - object: document:milad_personal_document
+    user: folder:milad_personal
+    relation: parent
+  - user: user:hasan
+    relation: owner
+    object: folder:hasan_document
+tests:
+  - name: Tests
+    check:
+      - user: user:milad
+        object: document:milad_personal_document
+        assertions:
+          can_view: true
+      - user: user:hasan
+        object: document:milad_personal_document
+        assertions:
+          can_view: false

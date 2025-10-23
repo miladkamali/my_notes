@@ -1,0 +1,174 @@
+name: ats-model
+model: |
+  model
+    schema 1.1
+
+
+  type user
+
+  type company
+    relations
+      define hr_expert: [user] or hr_expert from parent
+      define hr_deputy: [user] or hr_deputy from parent
+      define supervision_expert: [user] or supervision_expert from parent
+      define supervision_manager: [user] or supervision_manager from parent
+      define committee_member: [user] or committee_member from parent
+      define committee_secretary: [user] or committee_secretary from parent
+      define committee_manager: [user] or committee_manager from parent
+      
+      define parent:[company]
+      define can_manage: hr_expert or hr_deputy or supervision_expert or supervision_manager or committee_member or committee_secretary or committee_manager
+      define can_view: can_manage or can_view from parent
+      define can_create_job_opportunity: hr_expert or hr_expert from parent
+
+  #type position
+  #  relations
+  #    define company: [company]
+  #    define root_company: [company]
+
+  type job_opportunity
+    relations
+      define requesting_department: [company]
+      #define position: [position]
+      define root_company: [company]
+      define hr_expert: hr_expert from requesting_department or hr_expert from root_company
+      define hr_deputy: hr_deputy from requesting_department or hr_deputy from root_company
+      define supervision_expert: supervision_expert from requesting_department or supervision_expert from root_company
+      define supervision_manager: supervision_manager from requesting_department or supervision_manager from root_company
+      define committee_member: committee_member from requesting_department or committee_member from root_company
+      define committee_secretary: committee_secretary from requesting_department or committee_secretary from root_company
+      define committee_manager: committee_manager from requesting_department or committee_manager from root_company
+
+      define can_create: hr_expert
+      define can_edit: hr_expert 
+      define can_disable: hr_expert 
+      define can_view: hr_expert or hr_deputy
+      define can_create_jobseeker: hr_expert 
+          
+  type jobseeker
+    relations
+      define related_job_opportunity: [job_opportunity]
+      define can_create_jobseeker: can_create_jobseeker from related_job_opportunity
+
+      define can_view: can_create_jobseeker
+      define can_create: can_create_jobseeker 
+      define can_edit: can_create_jobseeker
+      define can_notify_interview: hr_expert from related_job_opportunity
+
+  type case
+    relations
+      define related_job_opportunity: [job_opportunity]
+      define related_jobseeker: [jobseeker]
+      define hr_expert: hr_expert from related_job_opportunity
+      define hr_deputy: hr_deputy from related_job_opportunity
+      define supervision_expert: supervision_expert from related_job_opportunity
+      define supervision_manager: supervision_manager from related_job_opportunity
+      define committee_member: committee_member from related_job_opportunity
+      define committee_secretary: committee_secretary from related_job_opportunity
+      define committee_manager: committee_manager from related_job_opportunity
+
+      define can_view: hr_expert or hr_deputy or supervision_expert or supervision_manager or committee_member or committee_secretary or committee_manager
+      define can_archive: hr_expert
+      define can_unarchive: hr_expert
+      define can_send_supervision: hr_expert
+      define can_send_deputy: hr_expert
+      define can_start_research: supervision_expert
+      define can_refer_from_supervision: supervision_expert
+      define can_comment: supervision_expert or supervision_manager or committee_secretary or committee_manager
+      define can_approve_by_deputy: hr_deputy
+      define can_refer_from_deputy: hr_deputy
+      define can_feedback: committee_member 
+      define can_refer_from_committee: committee_secretary 
+      define can_reply_to_referrer_unit: hr_expert
+
+  type interview
+  relations
+      define case: [case]
+      define hr_expert: hr_expert from case
+      define hr_deputy: hr_deputy from case
+      define committee_member: committee_member from case
+      define committee_secretary: committee_secretary from case
+      define committee_manager: committee_manager from case
+
+      define can_view: hr_expert or hr_deputy or committee_member or committee_secretary
+      define can_create: committee_secretary
+      define can_edit: committee_secretary
+
+  type report
+    relations
+      define hr_expert: [user]
+      define hr_deputy: [user]
+      define Supervision_expert: [user]
+      define Supervision_manager: [user]
+      define committee_member: [user]
+      define committee_secretary: [user]
+      define committee_manager: [user]
+      
+      define can_view_reports: hr_expert or hr_deputy or Supervision_expert or Supervision_manager or committee_member or committee_secretary or committee_manager
+tuples:
+  - object: company:test
+    user: user:milad
+    relation: hr_expert
+  - user: company:test
+    relation: parent
+    object: company:sales_department
+  - object: job_opportunity:sales_expert_sales_department
+    user: company:sales_department
+    relation: requesting_department
+  - user: user:hamid
+    relation: hr_expert
+    object: company:test2
+  - user: company:test2  
+    relation: parent
+    object: company:software_department
+  - user: company:software_department
+    relation: requesting_department
+    object: job_opportunity:software_expert_software_department
+  - user: job_opportunity:sales_expert_sales_department
+    relation: related_job_opportunity
+    object: jobseeker:sales_expert_sales_department_jobseeker_1
+  - user : jobseeker:sales_expert_sales_department_jobseeker_1
+    relation: related_jobseeker
+    object: case:sales_expert_sales_department_case_1
+
+  - user: job_opportunity:sales_expert_sales_department
+    relation: related_job_opportunity
+    object: case:sales_expert_sales_department_case_1
+
+tests:
+  - name: Tests
+    check:
+      - user: user:milad
+        object: job_opportunity:sales_expert_sales_department
+        assertions:
+          can_view: true
+          can_create: true
+          can_edit: true
+          can_disable: true
+          can_create_jobseeker: true
+
+      - user: user:milad
+        object: jobseeker:sales_expert_sales_department_jobseeker_1
+        assertions:
+          can_notify_interview: true
+          can_view: true
+          can_create: true
+          can_edit: true
+
+      - user: user:hamid
+        object: job_opportunity:software_expert_software_department
+        assertions:
+          can_view: true
+          can_create: true
+          can_edit: true
+          can_disable: true
+          can_create_jobseeker: true
+      - user: user:milad
+        object: job_opportunity:software_expert_software_department
+        assertions:
+          can_view: false
+          can_create: false
+          can_edit: false
+          can_disable: false
+          can_create_jobseeker: false
+

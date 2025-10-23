@@ -1,0 +1,4 @@
+* checking dependencies
+** npm-check
+** depcheck
+npm install depcheck -g

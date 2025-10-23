@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-10-08 Sat 18:19 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="milad kamali" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org792068a">1. phase 2</a>
+<ul>
+<li><a href="#org51ee46d">1.1. Middle ware</a>
+<ul>
+<li><a href="#orgb372d10">1.1.1. restructure model writer code ( 2 weeks )</a></li>
+<li><a href="#org0ec3a65">1.1.2. user interface</a></li>
+<li><a href="#orgf8898ce">1.1.3. scene data extraction module (6 weeks)</a></li>
+<li><a href="#org425ba47">1.1.4. export information from P&amp;Id (4 weeks)</a></li>
+</ul>
+</li>
+<li><a href="#orgcfcd864">1.2. Solver</a>
+<ul>
+<li><a href="#orgfe68c3b">1.2.1. Setting up solver playground</a></li>
+<li><a href="#orgdd43ca7">1.2.2. Design evaluator interface</a></li>
+<li><a href="#org738d115">1.2.3. Evaluator module(unknown)</a></li>
+<li><a href="#org6532966">1.2.4. Integrate Evaluator( 1 week)</a></li>
+<li><a href="#org482df81">1.2.5. Optimizing solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org792068a" class="outline-2">
+<h2 id="org792068a"><span class="section-number-2">1.</span> phase 2</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org51ee46d" class="outline-3">
+<h3 id="org51ee46d"><span class="section-number-3">1.1.</span> Middle ware</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgb372d10" class="outline-4">
+<h4 id="orgb372d10"><span class="section-number-4">1.1.1.</span> restructure model writer code ( 2 weeks )</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+The goal is to use proper software engendering practices for our prototype
+</p>
+</div>
+</div>
+<div id="outline-container-org0ec3a65" class="outline-4">
+<h4 id="org0ec3a65"><span class="section-number-4">1.1.2.</span> user interface</h4>
+<div class="outline-text-4" id="text-1-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org1f64d13"></a>design how user is supposed to interact with the plugin<br />
+<div class="outline-text-5" id="text-1-1-2-1">
+<p>
+At the moment we have specified a command that would prompt the user to select a
+component and port
+</p>
+</div>
+</li>
+<li><a id="orgc2a8ab1"></a>understand plant3d UI components ( 2 weeks)<br />
+<div class="outline-text-5" id="text-1-1-2-2">
+<p>
+Depending on the design of the previous, to implement required UI, we need to
+investigate how plant3d custom UI system works. If we continue using command
+interface we can skip this step
+</p>
+</div>
+</li>
+<li><a id="org7a714fb"></a>implement the user interface( 3 days - 3 weeks depending on the level of complexity of the UI )<br />
+<div class="outline-text-5" id="text-1-1-2-3">
+<p>
+In case of continuation of command interface there is fairly little time required in this section
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgf8898ce" class="outline-4">
+<h4 id="orgf8898ce"><span class="section-number-4">1.1.3.</span> scene data extraction module (6 weeks)</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+The goal of this module is to export scene information for solver
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org1da596d"></a>Query/list scene components ( 1.5 week )<br /></li>
+<li><a id="org549380b"></a>define export interface for all the components types ( 1 week)<br />
+<div class="outline-text-5" id="text-1-1-3-2">
+<p>
+for some basic components like pipe, bend this interface has already been
+defined however for more complex components types and supports we need to design
+this interface.
+</p>
+</div>
+</li>
+<li><a id="orgd61a54d"></a>implement export interface (1.5 week)<br /></li>
+<li><a id="orgd6f4234"></a>Mapping scene components to their p&amp;id counterparts (2 weeks)<br />
+<ol class="org-ol">
+<li><a id="orga1d2f9f"></a>identify related component<br /></li>
+<li><a id="orgc836798"></a>identify related ports<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org425ba47" class="outline-4">
+<h4 id="org425ba47"><span class="section-number-4">1.1.4.</span> export information from P&amp;Id (4 weeks)</h4>
+<div class="outline-text-4" id="text-1-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="org28e727f"></a>investigate P&amp;ID plant3d interface(2 weeks)<br /></li>
+<li><a id="org021728b"></a>extract p&amp;id information (2 weeks)<br />
+<ol class="org-ol">
+<li><a id="org3c8753d"></a>query/list components<br /></li>
+<li><a id="org848d24f"></a>query port connection between components<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgcfcd864" class="outline-3">
+<h3 id="orgcfcd864"><span class="section-number-3">1.2.</span> Solver</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orgfe68c3b" class="outline-4">
+<h4 id="orgfe68c3b"><span class="section-number-4">1.2.1.</span> Setting up solver playground</h4>
+<div class="outline-text-4" id="text-1-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orga23e107"></a>Price evaluation module<br />
+<ol class="org-ol">
+<li><a id="orgc5f4fa5"></a>create component/process price database<br />
+<div class="outline-text-6" id="text-1-2-1-1-1">
+<p>
+This requires an investigation into actual cost of models 
+</p>
+</div>
+</li>
+<li><a id="org10ad550"></a>estimate model cost base on component/process (1 week)<br /></li>
+</ol>
+</li>
+<li><a id="org3918e31"></a>Environment availability calculation (1 week)<br /></li>
+<li><a id="org7ad9c73"></a>3d Piping model view ( 1-3 weeks)<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgdd43ca7" class="outline-4">
+<h4 id="orgdd43ca7"><span class="section-number-4">1.2.2.</span> Design evaluator interface</h4>
+</div>
+<div id="outline-container-org738d115" class="outline-4">
+<h4 id="org738d115"><span class="section-number-4">1.2.3.</span> Evaluator module(unknown)</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+The goal of this module is to create a fitness value according to fitness
+evaluation criteria like price, mechanical constraints, hydrodynamic
+constraints. This module is used in optimization process to ensure movement
+toward the optimum solution
+</p>
+</div>
+</div>
+<div id="outline-container-org6532966" class="outline-4">
+<h4 id="org6532966"><span class="section-number-4">1.2.4.</span> Integrate Evaluator( 1 week)</h4>
+</div>
+<div id="outline-container-org482df81" class="outline-4">
+<h4 id="org482df81"><span class="section-number-4">1.2.5.</span> Optimizing solution</h4>
+<div class="outline-text-4" id="text-1-2-5">
+</div>
+<ol class="org-ol">
+<li><a id="org2753b8b"></a>setting up genetic algorithm ( 1 month )<br />
+<ol class="org-ol">
+<li><a id="orga42050c"></a>phenotype generation module<br /></li>
+<li><a id="org72d2e0b"></a>gene mutation/crossover module<br /></li>
+<li><a id="org4778bc5"></a>fitness evaluation module<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: milad kamali</p>
+<p class="date">Created: 2022-10-08 Sat 18:19</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

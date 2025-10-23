@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package uid.backend;
+
+option cc_enable_arenas = true;
+option java_multiple_files = true;
+option java_package = "uid.backend.kyc";
+
+
+
+message Device{
+
+}
+
+message RequestContext{
+  string requestId = 1;
+  bytes payloadHmac = 2;
+  Device deviceInfo = 3;
+}
+
+
+message ResponseContext{
+
+
+}
+
+
+

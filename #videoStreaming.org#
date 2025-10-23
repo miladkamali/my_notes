@@ -1,0 +1,27 @@
+* Red5
+** setup
+   https://www.vultr.com/docs/setup-red5-media-server-on-ubuntu-16-04
+** pricing and performance
+*** [[https://red5pro.com/][pricing]]
+*** [[https://blog.red5pro.com/new-red5-pro-benchmarks/][benchmark]]
+** [[https://github.com/Red5/red5-server][github]]
+* Helix media server
+** benchmark
+   High performance HLS (12,000+ concurrent devices)
+   https://en.wikipedia.org/wiki/HTTP_Live_Streaming
+* wowza media system
+** https://www.wowza.com/docs/how-to-set-up-low-latency-applications-in-wowza-streaming-engine-for-rtmp-streaming
+** pricing
+   https://www.wowza.com/pricing/streaming-engine
+* ffmpeg streaming
+** https://trac.ffmpeg.org/wiki/StreamingGuide
+* protocols
+** RSTP
+*** https://github.com/jiaxin-du/RTSPMultiCam
+*** https://www.npmjs.com/package/rtsp-ffmpeg
+* stress testing
+  https://stackoverflow.com/questions/151392/how-to-stress-test-video-streaming-server
+** JMeter
+* websites
+** [[https://www.youphptube.com/][youphptube]]
+** [[https://mediagoblin.org/][mediagoblin]]
