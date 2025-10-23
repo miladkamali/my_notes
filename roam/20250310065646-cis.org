@@ -56,3 +56,49 @@ this is the orchestrator of the project
 ** information microservices
 *** how many information microservices are we going to need at the moment its five including inventory customer profile product user and logistic
 ** workflow 
+* delivery phase                                                   :@bentoak:
+** finalizing the project
+*** TODO [#A] review ERD of each service
+SCHEDULED: <2025-10-23 Thu>
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 23:31]
+:END:
+*** Logging systems
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 23:31]
+:END:
+**** request-response log to a file
+use nlog or serilog to log into files similar to 
+*** observibility
+**** monitor open workflows
+**** monitor average workflow start to finish time
+**** monitor number of call back failures
+**** monitor number of activity failures
+**** monitor number of request per endpoint
+**** monitor average response time per endpoint
+*** [#B] Testing[0/2]
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 23:31]
+:END:
+**** TODO write a bunch of test for query module
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 23:32]
+:END:
+**** TODO write a bunch of test for form validation module
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 23:32]
+:END:
+*** TODO finalize the protobuf design
+SCHEDULED: <2025-10-23 Thu>
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 23:40]
+:END:
+make sure form validation are repeated
+*** caching system for forms in form handling module
+*** Dockerize all the projects and create a docker compose that lunches dependencies
+** handover process
+*** documentations
+**** create ERD and data dictionary
+**** create basic structure of project document
+**** create all the dependencies and nuggets we are using
+
