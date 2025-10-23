@@ -1,0 +1,4 @@
+https://www.autohotkey.com/download/2.0/
+https://github.com/Wox-launcher/Wox
+
+[[http://magzdb.org/j/5986][magazin database]]

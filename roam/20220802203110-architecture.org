@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       A9C26B1E-9819-4882-A0A9-9169C4C307C5
+:END:
+#+title: architecture
+* Backend For Frontends
+https://samnewman.io/patterns/architectural/bff/
+* architectural patterns
+** ports and adaptors
+** hexagonal architecture
+** Onion
+** SOLID + Clean architecture
+*** SOLID
+*** Component principle
+*** boundaries and dependencies 
+*** nearly every thing is just a detail
+* common features
+** layering + separate boundaries
+** agnostic encapsulated core domain
+** inversion of control

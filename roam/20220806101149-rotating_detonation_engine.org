@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       458160B1-45E1-477F-B904-22F5596D282F
+:END:
+#+title: Rotating Detonation Engine
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj0nObGwLH5AhVwg_0HHZD_B4UQFnoECAkQAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FRotating_detonation_engine&usg=AOvVaw1gVipU2s37tS3N02YfzDW2
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj0nObGwLH5AhVwg_0HHZD_B4UQwqsBegQIBRAB&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DWs4kbgfpKCw&usg=AOvVaw1B99LquLe0jkzFpRja90pT
+* terms
+** deflagration
+subsonic explosion
+** detonation

@@ -1,0 +1,6 @@
+* when we use Sync
+  - one off task
+  - has nothing to do
+  - will finish with response
+  - fine grain control
+  - Simple program

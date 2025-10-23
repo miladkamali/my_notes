@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       BE426E3B-52B3-4D7A-85D7-C6BCD4085B6D
+:END:
+#+title: تعویض پلاک
+first you have to check
+https://www.heyvalaw.com/web/articles/view/3138/سامانه-دریافت-مالیات-نقل-و-انتقال-خودرو.html
+and pay the required taxes
+
+
+create a proper profile here
+https://sakha.epolice.ir/portal/login?service=http%3A%2F%2Fsakha.epolice.ir%3A80%2Fportal%2Fticket_check

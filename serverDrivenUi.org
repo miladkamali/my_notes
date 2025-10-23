@@ -1,0 +1,8 @@
+* resources
+** [[https://www.youtube.com/watch?v=ERPmUsLkwEE][Server Driven UI, Tom Lokhorst (English)]]
+** [[https://www.youtube.com/watch?v=Ir8lq4rSyyc][KotlinConf 2019: Lona: Scaling Server-driven UI by Laura Kelly & Nathanael Silverman]]
+* Backend for frontend
+** [[https://www.youtube.com/watch?v=PwgQZ8eCGxA][Why Backend for Frontend Is Key to Your Microservices Journey • B. Grant & K. Ramanathan • GOTO 2017]]
+** [[https://www.youtube.com/watch?v=wgD9t3R3x-w][Backends For Frontends Pattern - Cloud Design Patterns - BFF Pattern]]
+** [[https://www.youtube.com/watch?v=JexwKAlbJ6o][Building a secure BFF at Postman]]
+** [[https://www.youtube.com/watch?v=Vs-D2Fb3xEU][Rapidly Iterating Across Platforms Using Server-Driven UI - Laura Kelly]]

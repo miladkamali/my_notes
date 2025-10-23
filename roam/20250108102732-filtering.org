@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       F32DAB84-CDDB-4899-AF36-4C982D82536C
+:END:
+#+title: filtering
+https://filtershekan.sbs/DNS/

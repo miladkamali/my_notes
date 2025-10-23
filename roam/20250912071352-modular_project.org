@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       a5b619a7-db51-4581-8ed5-8106d1b6463e
+:END:
+#+title: modular_project
+* initial steps
+** TODO Design modular architecture
+** TODO Estimate modular roadmap

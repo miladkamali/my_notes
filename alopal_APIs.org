@@ -1,0 +1,35 @@
+* APIs
+** session
+*** login
+**** google oauth
+**** facebook oauth
+**** user/password
+*** logout
+** registration
+*** email Verification
+**** preregister/ send email
+**** verify email
+*** profile
+**** crud aloProfile
+**** crud palProfile
+** notification system
+*** email
+** payment system
+*** paypal
+** Valet
+** document upload
+** calender/api
+** financial
+* things to do
+** [#C] create the capability of having multiple language for each profile
+** [#B] firebase authentication
+** [#A] paypal  
+** [#A] bug multiple people can book the same time
+** [#B] number of unread messages and upcomming messages ?
+** TODO [#B] error hanling for forms :talk_to_pourya:
+** add number of unread messages for each contact as a api
+** upcomming session information
+** TODO [#B] implement all meeting list
+** TODO list of pals you have session with
+** TODO list popular people providing services based on profession
+** TODO list of popular service type based on profession

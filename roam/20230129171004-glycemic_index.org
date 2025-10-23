@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       004ec03b-a1ac-4d4c-a8f9-1385459f3f34
+:END:
+#+title: glycemic index
+

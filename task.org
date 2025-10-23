@@ -1,0 +1,33 @@
+* server/monitor/active
+  return json
+** DONE Yaghut wsdl
+   download yaghut wsdl and check if it's a valid xml
+   otherwise
+   reason : if there is an exception
+** DONE getCardOwner
+   an specific card owner should always be checked.
+** Get deposit
+   IbanController Deposits endpoint
+   headers : uba_id, session_id
+** TODO get IBAN
+   get owner of specific IBAN
+** DONE GetIBAN from card
+   get IBAN from card number
+** sms service
+   port 8989
+   simple get()
+   8888 
+   soap
+** mail service
+** DONE mechant terminal 
+   give masoud national number and get terminal number
+   get masoud's national number
+*** how
+    this "/merchant/terminals" endpoint requires only and HttpServletRequest havving a header user_id
+    and internally it calls merchantBl.getTerminals with the user_id
+** TODO get a valid userId
+** 
+** TODO how do i get a session
+   tokenBl.bankLogin(request.getUbaUsername(), request.getUbaPassword(), request.getLoginType());
+   LoginHelper
+

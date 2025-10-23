@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       FE42A286-3CFE-4491-A7D4-0FDDE318DBB3
+:END:
+#+title: http
+[[https://www.youtube.com/watch?v=UMwQjFzTQXw][HTTP 1 Vs HTTP 2 Vs HTTP 3!]]

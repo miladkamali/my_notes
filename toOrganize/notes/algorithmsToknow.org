@@ -1,0 +1,27 @@
+* tree traversal
+** preorder traversal
+** inorder traversal
+** post order traversal
+** BFS
+** DFS
+* binary search Algorithm
+* datastructure to represent tree
+* recursion
+** any recursive algorithm can be converted into iterative ones by stack or queue
+* learn about stacks and queues
+* OOP
+  code structure
+  - class definition
+  - data structure
+  - 
+* hashMaps
+  - hashing functions for object
+* sorting
+** buble sort
+** merge sort
+** quick sort
+** palendrum
+** anagram
+** dynamic programming
+[[https://helloacm.com/how-to-delete-a-node-from-a-binary-search-tree/][remove a bst node]]
+https://helloacm.com/category/algorithms/

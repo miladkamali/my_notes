@@ -1,0 +1,32 @@
+* creating a certificate chain
+  [[https://www.youtube.com/watch?v=KXi3-3dEb8k][Generating SSL certificate chain in Linux]]
+** generate a Root key
+   openssl genrsa -out RootCA.key 4096
+** generate Root certificate
+   openssl req -new -x509 -days 1826 -key RootCA.key -out RootCA.crt
+** generate Intermediate Certificate Authority key
+   openssl genrsa -out IntermediateCA.key 4096
+** create Intermediate Certificate signing request (CSR)
+   openssl req -new -key IntermediateCa.key -out IntermediateCA.csr
+** Generate Intermediate Certificate signed by Root CA
+   openssl x509 -req -days 1000 -in IntermediateCA.csr -CA RootCA.crt -CAkey RootCA.key -CAcreateserial -out IntermediateCA.crt
+** Add certificate to operating system's trust
+** Generate RSA server key
+** create server sertificate signing request
+** sign CSR by intermediate CA
+* sources
+** [[https://www.youtube.com/watch?v=Y2yXEjxNG04][Cryptography/SSL 101 #5: SSL certificate chain in depth]]
+** [[https://www.youtube.com/watch?v=KXi3-3dEb8k][Generating SSL certificate chain in Linux]]
+* two type of certificate authorities
+** root CA
+** intermediate CA
+** ssl certificate chain
+   the list of SSL certificate from the root certificate to the end user
+   certificate represent the SSL certificate chain
+* how devices react to certificates
+  if a certificate is not issued by a trusted CA then it will chick to see if
+  that certificate was issued by a trusted CA and so on until a trusted CA is
+  found at which point a secure connection will be established.
+* ssl pinning
+** gRPC ssl pinning
+   https://hackernoon.com/how-to-pin-mobile-grpc-connections-fd3ff1143dda

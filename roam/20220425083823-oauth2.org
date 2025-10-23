@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       7c617410-8534-4b7f-bd77-244c9dbcf217
+:END:
+#+title: oauth2
+https://www.ietf.org/rfc/rfc6750.txt

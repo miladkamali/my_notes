@@ -1,0 +1,2 @@
+* video
+** [[https://www.youtube.com/watch?v=g7sP33QtuxM][Amazing Free VPS (4CPU 24GB Ram) Oracle Quick Setup Tutorial]]

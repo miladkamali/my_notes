@@ -1,0 +1,6 @@
+* design classes
+** design for readability
+*** chose proper names
+    [[https://www.youtube.com/watch?v=MBRoCdtZOYg][naming is hard lets do it better 2019]]
+    [[https://www.youtube.com/watch?v=ZDluHz-ybPE][naming is hard lets do it better 2021]]
+*** design for extensibility and change

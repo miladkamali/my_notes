@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       6814f33a-f1ef-433f-a783-fad43f0a4146
+:END:
+#+title: finding jobs
+* germany
+** [[https://www.stepstone.de][stepstone]]
+* [[https://www.youtube.com/watch?v=uX719LQBLXw][3 Career Killers for Software Engineers (from a Principal at Amazon)]]

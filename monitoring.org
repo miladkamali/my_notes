@@ -1,0 +1,14 @@
+* spring boot monitoring
+** spring boot actuator
+*** securing spring boot actuator
+    https://www.amitph.com/how-to-secure-spring-boot-actuator-endpoints/
+*** seting up actuator
+    https://www.baeldung.com/spring-boot-actuators
+*** prometheus
+**** https://docs.spring.io/spring-metrics/docs/current/public/prometheus
+**** connecting spring boot actuator to promethues
+     https://www.callicoder.com/spring-boot-actuator-metrics-monitoring-dashboard-prometheus-grafana/
+* promethues
+** [[https://www.youtube.com/watch?v=jb9j_IYv4cU][Prometheus Monitoring for Java Developers by Fabian Stäber]]
+** [[https://www.youtube.com/watch?v=PDxcEzu62jk][Monitoring, the Prometheus Way]]
+** [[https://www.youtube.com/watch?v=nJMRmhbY5hY][The 4 Types Of Prometheus Metrics]]

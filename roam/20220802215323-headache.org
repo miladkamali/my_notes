@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       9D22B60B-C1AD-4CB5-B24A-5012E0B3EDE9
+:END:
+#+title: headache
+* types of headaches
+** primary headache
+*** tension headache
+the most common type headache, ranging from mild to modrate in sevirity and they
+are usually bilateral meaning effect both side of the head the pain is typically
+discribed as non-pulsatile,dull band-like tension or pain around the head or
+even radiating down into the neck. they can last from hours to even days in some instances
+
+
+they are described as featureless headache, meaning they are not usaully
+associated with other symptoms like nausea vomiting,visual changes, or even aura
+like migraine, they don't tend to be aggrivated by physical activities like some
+other headaches. people don't tend to report photophobia(light sensitivity) or
+phonophobia(sound sensitivity).
+
+
+what are the causes.
+they were believed to be cause by tension in muscles around the head like Trapezius 
+*** migraine headache
+*** cluster headache
+** secondry headache
+secondry headaches are usually cause by an underlying issue
+like bacterial meningitis, sinus infection, flue, trumatic head injury, tumor, ruptured anurisum

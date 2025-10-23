@@ -1,0 +1,107 @@
+* mark down
+** convert markdown to org
+   pandoc -f markdown -t org -o ${f}.org ${f}; 
+   pandoc -t markdown -f org -o output.md input.org
+** view 
+   grib
+* [[https://www.youtube.com/watch?v=0g9BcZvQbXU][Consistent Technical Documents Using Emacs and Org Mode]]
+* API Documentation
+** nice links
+   - [[https://www.youtube.com/watch?v=9IJKQypBAYY][Migrating to OpenAPI 3.0: How to Convert Your Existing APIs with Swagger Tools]]
+   - [[https://www.youtube.com/watch?v=Kziad2G-dkE][swagger-code ]]
+   - [[https://www.youtube.com/watch?v=6kwmW_p_Tig][OpenAPI 3.0: How to Design and Document APIs with the Latest OpenAPI Specification 3.0]]
+** openAPI specification
+*** Usefull Articles to read
+    - [[https://blog.readme.com/an-example-filled-guide-to-swagger-3-2/][difference between swagger 2 and 3 ]]
+** Open API
+*** definitions compartments
+**** info
+**** servers
+**** security
+**** paths
+**** tags
+**** externalDocs
+**** components
+*** Parameters
+**** Query
+**** Path
+**** Header
+**** Cookies
+**** RequstBody
+*** Content Negotioation
+    - different media types can be defined in Response nad Request Bodies
+    - ranges in Responses
+    #+begin_src yaml
+    ---
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/Employees'
+        
+      application/xml:
+        schema:
+          $ref: '#/components/schemas/Employees'
+    ---
+#+end_src
+*** Generating
+** API documentation formats
+*** RAML
+*** Postman
+*** WSDL
+*** API bluePrint
+** converting between APIs
+*** money
+    [[https://www.apimatic.io/transformer/][APIMATIC]]
+*** openSource
+** Versioning
+   https://semver.org/
+** Swagger tools
+*** Swagger editor
+    writing api
+*** swagger UI
+    documenting api
+*** swagger inspector
+    testing api
+*** swagger hub
+*** Swagger-Core
+    annotation based documentation for java
+**** list of annotations
+***** @Get
+***** @Path
+***** @Consumes
+***** @Parameter
+***** @Operation
+*** swagger codegen
+    swagger-codegen generate -i test.yaml -o outputDir -l spring
+    
+    https://github.com/swagger-api/swagger-codegen
+    git 
+*** openapi-generator
+    https://github.com/OpenAPITools/openapi-generator/wiki/Server-stub-generator-HOWTO
+    java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generate \
+  -i http://petstore.swagger.io/v2/swagger.json \
+  -l spring --library spring-mvc\
+  -o samples/server/petstore/spring-mvc
+
+  java -jar target/openapi-generator-cli.jar generate -i ~/mock/CUFX.Swagger.yaml -g spring ~/CUFX/
+
+*** swagger maven plugin
+    this pluggin is used to automatically update swagger hub
+    [[file:./swaggerMavenPlugin.png][plugin]]
+    [[file:./swaggerMavenParameter.png][parameters]]
+** swagger configuration
+   [[file:./swaggerConfiguration.png][swaggerConfiguration]]
+* Code Documentation
+** Doxygen
+** javadoc
+   - http://corochann.com/get-to-know-coding-rule-of-javadoc-in-10-mins-366.html
+   - https://corochann.com/javadoc-coding-rule-of-link-linkplain-see-372.html
+* git
+** https://plugins.jetbrains.com/plugin/9861-git-commit-template
+	https://github.com/MobileTribe/commit-template-idea-plugin	
+** commitzen
+	https://github.com/commitizen/cz-cli
+* Code review
+  https://gerrit-review.googlesource.com/Documentation/
+* testing
+  https://developer.android.com/training/testing/#Espresso

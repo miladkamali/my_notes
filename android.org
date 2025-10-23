@@ -1,0 +1,7 @@
+* app security
+** https://developer.android.com/training/safetynet
+** https://developer.android.com/google/play/integrity/overview
+** Implement emulator detection
+** Implement root detection checks
+** Implement Hook tools detection
+** Implement Magisk detection

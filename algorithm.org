@@ -1,0 +1,6 @@
+* data structure
+** HAT-trie
+** Trie
+* sorting algorithm
+** Burstsort
+   https://en.wikipedia.org/wiki/Burstsort

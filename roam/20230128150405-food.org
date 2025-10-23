@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       cc538733-6a22-4e68-8d77-7c700656ba3e
+:END:
+#+title: food
+
+* information
+** DONE [[https://www.youtube.com/watch?v=xNQXeQ9KDW0][What Does Professor Tim Spector Eat in a Day?]]
+CLOSED: [2023-01-29 Sun 17:36]
+** DONE [[https://www.youtube.com/watch?v=-LUuqxQSaFQ][What Role Does our Microbiome Play in a Healthy Diet? - with Tim Spector]]
+CLOSED: [2023-01-29 Sun 17:36]
+** TODO [[https://www.youtube.com/watch?v=T8MJus8IAOE][5 foods I got ]]
+** TODO [[https://www.youtube.com/watch?v=3yExtphYB8w][What does science say about intermittent fasting? | Gin Stephens and Professor Tim Spector]]
+* books
+** [[https://www.amazon.de/-/en/Professor-Tim-Spector/dp/1780229003][The Diet Myth: The Real Science Behind What We Eat]]
+** [[https://www.amazon.de/Food-Life-Science-Eating-Well/dp/1787334260][food for life]]
+* actions
+** start adding some spice to your food
+
+* general information
+- adding a bit of spice to your food will boost your gut microbiome
+- try to eat variety of plants ( 30 recommended ) each week
+- eat fermented food every day
+  - [[id:b3db792d-b1d3-4d8e-a804-20cba61bc2d9][kefir]]
+  - yogurt
+- good food for microbiome
+  - vegetables
+  - seads
+  - coffee
+  - olive
+  - red wine
+  - peanuts
+  - olive oil
+  - dark chocolate
+  - [[id:9ffb9eef-e960-4742-873d-3c787272646b][Kombucha]]
+- pick plants that are high in color and have some bitterness
+- cut out ultra processed food
+- bacteria against obesity
+  - [[id:61b36e57-2dcc-4dc2-92e9-255c3fdc0634][Christensenella]]
+  - [[id:264d82cd-0748-46d4-b8c8-3f503bf6ff7e][Akkermansia]]
+- [[id:1222ff9e-849b-4b77-84d0-aa80b1fad219][polyphenols]] also known as anti oxydant
+- [[id:004ec03b-a1ac-4d4c-a8f9-1385459f3f34][glycemic index]]

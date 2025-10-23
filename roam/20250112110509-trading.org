@@ -1,0 +1,49 @@
+i:PROPERTIES:
+:ID:       DDAB9A2C-C244-4150-94B0-8277FC034352
+:END:
+#+title:  trading
+* indicators
+** ATR Average true range
+indicate the volitility of market which you should use to set take profit and stop loss accordingly
+https://www.youtube.com/watch?v=8KzwWYpZP3s
+** 
+* trading view
+** [[https://www.youtube.com/watch?v=YWPdkMvGUrc][ This TOOL Draws Automatic Trendlines That Work! ]]
+* tutorials 
+** https://www.youtube.com/watch?v=ZbvZWvEgoMY
+
+* pair trading
+** [[https://www.youtube.com/watch?v=g-qvFjvyqcs][ "Basic Statistical Arbitrage: Understanding the Math Behind Pairs Trading" by Max Margenot ]]
+
+* Jim simons
+** [[https://www.youtube.com/watch?v=K10PVDm0LVw][ Jim Simons Trading Secrets 1.2 SIMULATED Data Generation]]
+* trading strategy evaluation
+** [[https://www.youtube.com/watch?v=9HD6xo2iO1g][sharpe ratio]]
+* toview
+** DONE [[https://www.youtube.com/watch?v=GZ5dBb8m5fw][ It took me 5+ years of trading to realize what I’ll teach you in 27 minutes]]
+limiting your losses is the key to becoming profitable and managing your risk is
+the key in limiting your losses. You do not need a very high win rate, if your
+winners outweigh your losers by large margin. keep a constant risk in all your
+trades, chose your position size appropriate to your stoploss if your stop loss
+is too wide your position has to become smaller to keep your risk constant.
+risking 1 percent of your portfolio is appropriate at the beginning but you can
+increase the
+** [[https://www.youtube.com/watch?v=UelyLynSlLk][my strategy is boing but makes me 50k/month]]
+** [[https://www.youtube.com/watch?v=NLBXgSmRBgU][how i develop trading strategies]]
+** [[https://www.youtube.com/watch?v=n1-1t5LTw8o][ 5 years of trading psychology in 17 minutes]]
+** [[https://www.youtube.com/watch?v=b6GKG-vGUyE&t=1200s&pp=0gcJCY0JAYcqIYzv][MACD+AI Trading]]
+** [[https://www.youtube.com/watch?v=GDMkkmkJigw][ Algorithmic Trading Python for Beginners - FULL TUTORIAL ]]
+** [[https://www.youtube.com/shorts/2A2CqCmDbl0][ predicting reversal based on bullish reversal candle]]
+** [[https://www.youtube.com/watch?v=xfzGZB4HhEE][algorithmic trading in python]]
+** [[https://www.youtube.com/watch?v=FxTLkyjYOAc][i tested 100 trading strategies and i found this]]
+* deep topic
+** [[https://www.youtube.com/watch?v=oWheof70O9g][market simulation]]
+* simple but maybe effective
+** https://www.youtube.com/watch?v=J6VRMhDnVrM
+* things to improve in my script
+** find a way to analyse how much the price has been over the fast ema
+ and utilize this as a sort of uncetainity arount fastema
+** start your positions with a stop loss and while the stop loss has not been triggered let the position run
+** once the position has become profitable then you can set the stop loss at break even
+** make sure the sentiment of green and red remains
+** create a strategy for pull backs and take profit at the top

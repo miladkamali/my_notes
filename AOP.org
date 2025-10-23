@@ -1,0 +1,14 @@
+* Aspect J
+** @AfterThrowing
+** sources
+*** https://blog.jayway.com/2015/09/03/aspectj-and-aop-the-black-magic-of-programming/
+*** https://stackoverflow.com/questions/41974800/how-does-aspectj-work
+*** https://www.baeldung.com/spring-aop-vs-aspectj
+*** https://www.baeldung.com/aspectj
+* C++
+** https://lisha.ufsc.br/teaching/sce/aop_with_c++.pdf
+** https://aspectc.org/doc/ac-lang-survey.pdf
+** https://aspectc.org/doc/ac-quickref.pdf
+** https://stackoverflow.com/questions/4200183/aspect-oriented-programming-in-c-current-supported-alternatives
+** https://www.aspectc.org/
+** https://www.aspectc.org/doc/ac-compilerman.pdf

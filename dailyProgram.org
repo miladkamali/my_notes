@@ -1,0 +1,15 @@
+* 
+** complete BlueBank tasks
+*** create account crud
+    :LOGBOOK:
+    CLOCK: [2020-03-09 Mon 11:00]--[2020-03-09 Mon 12:00] =>  1:00
+    :END:
+*** create post man
+*** connect transfer to mock
+** list all my todo files and attempt to organize them
+** open up my computer and install ssd and gpu
+** read 30 minutes of book
+** watch 5 statistics videos
+** make tesseract ocr work for agah
+** figure out how to authomatic login in agah
+** call ashkan

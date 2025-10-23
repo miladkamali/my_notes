@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       dc450704-fedf-489c-b4a8-eeae5703abb1
+:END:
+#+title: document management system
+* notables
+** Paperless-ngx
+** Mayan EDMS
+** OpenDocMan
+** LogicalDOC Community Edition
+** OpenKM Community Edition
+** SeedDMS
+** Kimios
+** Alfresco
+** Teedy
+** Docspell

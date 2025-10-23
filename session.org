@@ -1,0 +1,32 @@
+* issues
+** how are we going to handle the payment
+*** are we going to have refund? 
+** set up the flow
+** TODO IPG issue
+*** DONE u-id.net
+CLOSED: [2023-07-15 Sat 17:58]
+the problem is we are hosting everything under uid.ir  however IPG only recognize the u-id.net
+
+
+sub-domain like bff.u-id.net and payment.u-id.net could be remedy for the situation.
+*** TODO introduce IBANs to ap that we are going to use to split money
+*** TODO our IPG was in test mode should be converted into production
+** DONE anonymizing UID
+CLOSED: [2023-07-15 Sat 16:52]
+It's virtually impossible to be anonymous while having an IPG
+** TODO tell nima about the anonymity impossibility              :call:sajad:
+** TODO add reason for rejection
+should add reason for status, the same that i had this morning
+*** rejection reasons
+**** can not identify the face
+**** two faces in the video
+**** live image not matching the reference image
+**** liveness is rejected
+**** profile do not match ('live image' is redundant)
+*** accept condition
+should we divulge the Hijab ? I don't want to 
+** TODO contact the CTO or any one in charge to discuss bunch of these things :call:
+** DONE should we reject if profile image do not match the liveness?
+CLOSED: [2023-07-15 Sat 16:41]
+then we decided that if profile or reference do not match the liveness image we
+are going to reject them

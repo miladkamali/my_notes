@@ -1,0 +1,34 @@
+* kafka performance
+** https://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines
+** https://www.confluent.io/blog/how-choose-number-topics-partitions-kafka-cluster/
+** https://www.confluent.io/blog/apache-kafka-supports-200k-partitions-per-cluster/
+** https://www.confluent.io/blog/configure-kafka-to-minimize-latency/
+* security
+** [[https://www.youtube.com/watch?v=3qNNinbnWmw][kafka security]]
+* sources
+** https://sookocheff.com/post/kafka/kafka-in-a-nutshell/
+* kafka connect
+* stream api for kafka
+* kafka message loss
+  https://jack-vanlightly.com/blog/2018/9/14/how-to-lose-messages-on-a-kafka-cluster-part1  
+  https://developer20.com/when-you-can-nose-messages-in-kafka/
+  https://www.confluent.io/kafka-summit-2016-ops-when-it-absolutely-positively-has-to-be-there/
+* kafka special topics
+** https://dzone.com/articles/kafka-architecture
+** https://dzone.com/articles/kafka-topic-architecture-replication-failover-and
+** https://dzone.com/articles/kafka-producer-architecture-picking-the-partition
+** https://dzone.com/articles/kafka-consumer-architecture-consumer-groups-and-su
+** https://dzone.com/articles/synchronous-kafka-using-spring-request-reply-1
+** https://callistaenterprise.se/blogg/teknik/2018/10/26/synchronous-request-reply-over-kafka/
+** https://blog.softwaremill.com/event-sourcing-using-kafka-53dfd72ad45d
+** https://github.com/confluentinc/kafka-streams-examples/tree/4.0.0-post/src/main/java/io/confluent/examples/streams/microservicehttps://www.confluent.io/blog/building-a-microservices-ecosystem-with-kafka-streams-and-ksqlshttps://www.confluent.io/blog/building-a-microservices-ecosystem-with-kafka-streams-and-ksql/
+** https://www.confluent.io/blog/event-sourcing-cqrs-stream-processing-apache-kafka-whats-connection/
+** https://www.confluent.io/blog/event-sourcing-using-apache-kafka/
+** https://www.confluent.io/blog/spring-for-apache-kafka-deep-dive-part-2-apache-kafka-spring-cloud-stream/
+** https://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines
+** 
+* kafka commands
+** 
+* https://www.devglan.com/apache-kafka/stream-log4j-logs-to-kafka
+* videos
+** [[https://www.youtube.com/watch?v=rqjdSbIOrJ4][Kafka Streams using Spring Cloud Stream | Microservices Example | Tech Primers]]

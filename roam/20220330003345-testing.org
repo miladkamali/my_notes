@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       c0d8f86a-53ad-4605-a20a-1b0db8a87b92
+:END:
+#+title: testing
+* frontend testing
+** https://www.cypress.io/
+https://www.youtube.com/watch?v=BQqzfHQkREo
+** [[https://developers.google.com/web/tools/puppeteer][puppeteer]]

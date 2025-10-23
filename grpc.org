@@ -1,0 +1,104 @@
+* videos
+** [[https://www.youtube.com/watch?v=F2znfxn_5Hg][gRPC Load Balancing on Kubernetes - Jan Tattermusch, Google (Intermediate Skill Level)]]
+   very good introduction
+   talks about grpcurl as well
+   30 minutes
+** [[https://www.youtube.com/watch?v=fMq3IpPE3TU][The Story of Why We Migrate to gRPC and How We Go About It - Matthias Grüter, Spotify]]
+   the story of spotify migration to gRPC
+   it introduces Buf and protoman
+** [[https://www.youtube.com/watch?v=S7WIYLcPS1Y][gRPC Deep Dive – Sree Kuchibhotla & Jayant Kolhe]]
+** [[https://www.youtube.com/watch?v=Yw4rkaTc0f8][gRPC Crash Course - Modes, Examples, Pros & Cons and more]]
+** [[https://www.youtube.com/watch?v=2CWYorTWyGs][gRPC with Spring Boot Example | Protobuf Stub & Skeleton | Tech Primers]]
+* grpc retry
+** https://github.com/grpc/proposal/blob/master/A6-client-retries.md
+** https://docs.microsoft.com/en-us/aspnet/core/grpc/retries?view=aspnetcore-6.0
+** https://github.com/grpc/proposal/blob/master/A6-client-retries.md
+* retry throttling
+* pushback
+* deadline
+* curl for grpc
+** grpcurl
+
+*** download
+    https://github.com/fullstorydev/grpcurl/releases
+       https://tortuoise.github.io/grpcurl.html
+*** list services
+    grpcurl --plaintext localhost:9090 list
+*** list endpoint
+    grpcurl --plaintext localhost:9090 list com...Service
+*** send request
+    grpcurl --plaintext -d '{"message":"how are you"}' localhost:9090 serviceName/serviceEndpoint
+* gRPC loadbalancing options
+** server load balancing
+*** Proxy Load blanacers
+**** envoy
+**** Nginx
+*** proxy LB in service mesh
+**** envoy/istio
+**** Linkerd
+** client loadbalancing
+*** lookaside client LB
+**** grpclb protocol
+*** round robing load balancer
+* load balancing
+** L4 vs L7
+** lookaside load blancing
+   lookaside  LB
+   proxyless rpc mesh
+*** TODO what is XDS routing api from envoy
+** client-side load balancing
+   no proxy
+   complex client
+   low latancy
+** server-side
+   proxy
+   dump client
+   extra hop
+* quarkus
+** https://quarkus.io/guides/grpc-service-implementation
+** https://quarkus.io/guides/grpc-getting-started
+** https://developers.redhat.com/blog/2020/12/23/supersonic-subatomic-grpc-services-with-java-and-quarkus#using_grpc_in_quarkus
+* spring cloud gateway and gRPC
+** https://spring.io/blog/2021/12/08/spring-cloud-gateway-and-grpc
+* spring boot grpc
+** https://github.com/LogNet/grpc-spring-boot-starter?ref=https://githubhelp.com#grpc-response-observer-and-spring-transactional-caveats
+** TODO https://github.com/LogNet/grpc-spring-boot-starter?ref=https://githubhelp.com
+** [[https://stackoverflow.com/questions/65208698/spring-boot-grpc-logging-correlation-id][logging in grpc]]
+** https://stackoverflow.com/questions/55595361/how-to-use-a-grpc-interceptor-to-attach-update-logging-mdc-in-a-spring-boot-app
+** https://yidongnan.github.io/grpc-spring-boot-starter/en/client/configuration.htmlhttps://yidongnan.github.io/grpc-spring-boot-starter/en/client/configuration.html
+* grpc web
+** [[https://www.youtube.com/watch?v=RtyKEDZipsM][Intro: gRPC-Web - Stanley Cheung & Wenbo Zhu, Google]]
+** [[https://www.youtube.com/watch?v=NFZbTy_B4H0][Creating a Chat App w/ React gRPC, Redis & Envoy! (Part 1)]]
+** https://grpc.io/blog/state-of-grpc-web/#f19
+** https://grpc.io/docs/platforms/web/basics/
+* grpc security
+** https://github.com/quarkusio/quarkus/issues/13656
+* grpc protobuf plugin
+<plugins>
+            <plugin>
+                <groupId>org.xolstice.maven.plugins</groupId>
+                <artifactId>protobuf-maven-plugin</artifactId>
+                <version>0.6.1</version>
+                <configuration>
+                    <protocArtifact>
+                        com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}
+                    </protocArtifact>
+                    <pluginId>grpc-java</pluginId>
+                    //general
+<pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}</pluginArtifact>
+//for mac m1
+<protocArtifact>com.google.protobuf:protoc:3.14.0:exe:osx-x86_64</protocArtifact>
+                    <protoSourceRoot>${basedir}/src/main/resources</protoSourceRoot>
+                    <attachProtoSources>false</attachProtoSources>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>compile-custom</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+

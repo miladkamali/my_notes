@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       6f3d0eca-e5ba-4cfa-9345-6e8992529000
+:END:
+#+title: puppeteer
+* sourceCode
+https://github.com/puppeteer/puppeteer
+python source code https://github.com/pyppeteer/pyppeteer
+* request interception
+python https://stackoverflow.com/questions/52969381/how-can-i-capture-all-network-requests-and-full-response-data-when-loading-a-pag
+
+node https://www.checklyhq.com/learn/headless/request-interception/
+* select option
+https://stackoverflow.com/questions/49116472/puppeteer-how-to-select-a-dropdown-option-based-on-its-text

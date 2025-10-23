@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       1A96D58E-6129-4E2D-84DC-487E2E05B935
+:END:
+#+title: lte
+* modems
+** teltonika rutx50
+*** specs
+https://teltonika-networks.com/cdn/products/2024/03/65e573928e5f58-11603758/datasheets/rutc50-datasheet-2024-v17.pdf
+**** supported frequencies
+5G NR: n1, n3, n5, n7, n8, n20, n28, n38,
+n40, n41, n75, n76, n77, n78
+4G (LTE-FDD): B1, B3, B5, B7, B8, B20, B28,
+B32
+4G (LTE-TDD): B38, B40, B41, B42, B43
+3G: B1, B5, B8
+*** [[https://www.youtube.com/watch?v=i9_vQEG0ipo][Possibly the BEST 5G Sim LTE Router I Have EVER Used - The Teltonika RUTX50 Router Review]]
+*** https://www.amazon.co.uk/s?k=rutx50&crid=2ZF5K7N10PX6K&sprefix=rutx50%2Caps%2C209&ref=nb_sb_noss_1
+*** https://www.amazon.co.uk/Teltonika-RUTX50-5G-Industrial-Router-Silver/dp/B0CPM5FFQ8/ref=sr_1_5?crid=2ZF5K7N10PX6K&dib=eyJ2IjoiMSJ9.Ka3kzKPYCrZ0fCxl410L2hbFoaxdGBFeHYauH3JA51l3vwujDl2eDg4sHjUjI-Bj_egtYdKHoNbR_wluWtvVszXepCm_SPyZSgY4W7rb3Eb3V9mHFWCoUaomeSAQm-WN.mD2neq4dtAkonSamcZ-emDCkiTZB3hB-NTtqpjrclbc&dib_tag=se&keywords=rutx50&qid=1727064450&sprefix=rutx50%2Caps%2C209&sr=8-5
+** rutc50
+*** https://teltonika-networks.com/products/routers/rutc50
+*** [[https://www.youtube.com/watch?v=DHhSHfMUPpA][rutc50 vs rutx50]]
+** GL-X3000
+* anthena
+** design antena
+https://www.youtube.com/watch?v=iMBQiFAvcRo

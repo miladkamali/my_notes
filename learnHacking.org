@@ -1,0 +1,4 @@
+* https://www.root-me.org/en/Capture-The-Flag/
+* https://overthewire.org/wargames/
+* https://security.stackexchange.com/questions/3592/what-hacking-competitions-challenges-exist
+* https://www.geeksforgeeks.org/top-10-cyber-hacking-competitions-capture-the-flag-ctf/

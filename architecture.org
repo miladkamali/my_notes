@@ -1,0 +1,106 @@
+* distributed transaction or two phase commit
+  - cap theorm
+* event stores
+  - list of event stores
+    - https://eventstore.org/docs/event-sourcing-basics/index.html
+* NATS
+  https://www.youtube.com/watch?v=SLb4rdI5lIM
+* TODO Isabelle 
+* microservice
+** [[https://www.youtube.com/watch?v=tpspO9K28PM][four distributed system architecture pattern ]]
+** resources
+*** videos
+**** consistency
+     eventual consistency
+     consistency as locival monotonicity CALM
+     ACID 2.0 associative commutative idempotent distributed
+     CRDT conflict-free replicated data type
+     Event: timestamp actor verb thing
+     unique events 
+     - G-set
+     - 2p-Set
+     - OR-set
+     - Roshi set
+       github.com/soundcloud/roshi
+     [[https://www.youtube.com/watch?v=em9zLzM8O7c]["Consistency without consensus in production systems" by Peter Bourgon]]
+     [[https://www.youtube.com/watch?v=B5NULPSiOGw][CRDTs and the Quest for Distributed Consistency]]
+     [[https://www.youtube.com/watch?v=vBU70EjwGfw][CRDTs for Non Academics]]
+     algorithm
+     byzantine consensus algorithm
+     Isabekke a theorem proving software
+**** event sourcing
+***** https://www.youtube.com/watch?v=avi-TZI9t2I
+**** [[https://www.youtube.com/watch?v=sSm2dRarhPo][Microservices + Events + Docker = A Perfect Trio]]
+     - talks about advantages and disadvantages of microservice vs
+       monolithic architecture
+     - talks about maintaining consistency in our microservice architecture
+     - a small refrence to CQRS
+     - talks about Event sourcing
+**** [[https://www.youtube.com/watch?v=X0tjziAQfNQ][10 tips to fail at microservice badly]]
+**** TODO https://www.youtube.com/watch?v=GzrZworHpIk
+**** TODO https://www.youtube.com/watch?v=rUDN40rdly8
+**** TODO https://www.youtube.com/watch?v=rolfJR9ERxo
+**** TODO https://www.youtube.com/watch?v=t2AI9hODJ2E
+**** TODO https://www.youtube.com/watch?v=rsSld8NycCU
+**** TODO https://www.youtube.com/watch?v=XWTrcBqXi6s
+**** TODO https://www.youtube.com/watch?v=9a1PqwFrMP0
+**** TODO https://www.youtube.com/watch?v=N_nuAqpif20
+**** [[https://www.youtube.com/watch?v=CZ3wIuvmHeM][Mastering Chaos - A Netflix Guide to Microservices]]
+**** kafka
+***** [[https://www.youtube.com/watch?v=b17l7LvrTco][Building event sourced systems with Kafka Streams (Amitay Horwitz, Israel)]]
+***** [[https://www.youtube.com/watch?v=pRUxU5OSB0c][Event Sourcing from Scratch with Apache Kafka and Spring - Kenny Bastani]]
+***** [[https://www.youtube.com/watch?v=IR1NLfaq7PU][Building event-driven (Micro)Services with Apache Kafka by Guido Schmutz]]
+**** [[https://www.youtube.com/watch?v=CmuA9yhCmNY][Debugging Distributed Systems by Donny Nadolny]]
+**** [[https://www.youtube.com/watch?v=4fFDFbi3toc]["Testing Distributed Systems w/ Deterministic Simulation" by Will Wilson]]
+**** [[https://www.youtube.com/watch?v=em9zLzM8O7c]["Consistency without consensus in production systems" by Peter Bourgon]]
+**** [[https://www.youtube.com/watch?v=tpspO9K28PM][Four Distributed Systems Architectural Patterns by Tim Berglund]]
+**** [[https://www.youtube.com/watch?v=eQV71Mw1u1c][Devoxx Poland 2016 - Marcin Grzejszczak - Microservices tracing with Spring Cloud and Zipkin]]
+
+**** Netflix
+***** https://www.youtube.com/watch?v=rsSld8NycCU
+***** https://www.youtube.com/watch?v=yql-VL1rJWY
+***** https://www.youtube.com/watch?v=_7rlXKEeVFw
+***** https://www.youtube.com/watch?v=aweV9FLTZkU
+**** do it yourself
+     https://www.youtube.com/playlist?list=PL-nSd-yeckKh7Ts5EKChek7iXcgyUGDHa
+** tracer
+	opentracing.org
+	[[https://www.youtube.com/watch?v=ii7xQZeX_-o][Priyanka Sharma: Testing and Debugging in Production with Distributed Tracing]]
+	[[https://www.youtube.com/watch?v=jkSm-652UPo][An Introduction to Distributed Tracing and Zipkin]]
+	jeager
+	https://github.com/jaegertracing/jaeger-client-java
+	https://github.com/griddynamics/jagger
+	continues performance testing
+	https://github.com/opentracing/opentracing-java
+** [[https://www.youtube.com/watch?v=vpFL4MZ0jlI][Implementing Microservices tracing with Spring Cloud and Zipkin]]
+** https://12factor.net/
+	[[https://www.youtube.com/watch?v=gPKJkY2t7Pc][Distributed log tracing in Microservices using Spring Cloud Sleuth with Example | Tech Primers]]
+** maven
+   https://maven.apache.org/guides/index.html
+** info
+*** nhttps://logz.io/blog/istio-linkerd-envoy-comparison-service-meshes/
+*** https://www.envoyproxy.io
+*** https://linkerd.io/2/features/http-grpc
+*** https://engineering.opsgenie.com/comparing-api-gateway-performances-nginx-vs-zuul-vs-spring-cloud-gateway-vs-linkerd-b2cc59c65369
+*** https://medium.com/@ihcsim/linkerd-2-0-and-istio-performance-benchmark-df290101c2bb
+* event source
+** people
+*** Greg Young
+** [[https://www.youtube.com/watch?v=GzrZworHpIk&t=5s][Event Sourcing You are doing it wrong by David Schmitz]]
+** TODO [[https://www.youtube.com/watch?v=LDW0QWie21s][Greg Young — A Decade of DDD, CQRS, Event Sourcing]] 
+** TODO https://skillsmatter.com/skillscasts/1980-cqrs-not-just-for-server-systems
+** 
+** info
+*** https://medium.com/serialized-io/apache-kafka-is-not-for-event-sourcing-81735c3cf5
+*** https://github.com/EventStore/EventStore
+*** https://stackoverflow.com/questions/17708489/using-kafka-as-a-cqrs-eventstore-good-idea/49868866#49868866
+*** https://blog.softwaremill.com/event-sourcing-using-kafka-53dfd72ad45d
+* two phase commit  
+* consensus protocol
+* saga pattern
+** [[https://www.youtube.com/watch?v=xDuwrtwYHu8][GOTO 2015 • Applying the Saga Pattern • Caitie McCaffrey]]
+** TODO [[https://www.youtube.com/watch?v=0UTOLRTwOX0][Distributed Sagas: A Protocol for Coordinating Microservices - Caitie McCaffrey - JOTB17]]
+* [[https://www.youtube.com/watch?v=uB35m60GAZw][
+* consuming during contract tests
+  checks input and output of service basically 
+* keycloak 

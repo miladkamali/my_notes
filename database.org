@@ -1,0 +1,11 @@
+* resources
+** [[https://www.youtube.com/watch?v=onYjxRcToto][Transactions and Concurrency Control Patterns by Vlad Mihalcea]]
+** https://www.youtube.com/watch?v=uwGCPtga06U
+** https://www.youtube.com/watch?v=UesS08AUcDQ
+* VoltDB
+* concepts
+** 2PL
+   2 phase locking
+** universal scalibility law
+   
+** amdal's law

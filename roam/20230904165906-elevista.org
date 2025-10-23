@@ -1,0 +1,593 @@
+:PROPERTIES:
+:ID:       CC123861-BD6E-4571-AD2A-531C6A3DBDD4
+:END:
+#+title: elevista
+* infrastructure
+** old system
+*** upgrade OS
+*** upgrade gitlab
+at the moment 14.5.0-ee
+the latest version is 16.3.1
+**** TODO ask mahyar about the crack
+** new system
+*** infrastructure as a code
+investigate ArgoCD and flux
+investigate gitops
+*** proper develop area
+*** proper staging area
+staging area should regularly bring data from production to staging area for
+proper experience
+*** proper production area
+**** 
+**** Kubernates
+**** ArgoCD
+**** Proper CI/CD
+***** Jenkins
+*** proper backup strategy for data
+*** proper log management with elastic and fluentd
+*** proper integration test in our system
+
+* backend
+** keycloak as oauth
+** proper management of secrets with hashicorpe vault
+** create proper contracts with gRPC
+** create core services with spring native images
+* frontend
+*** NX
+*** storybook
+*** cypress
+*** Nextjs (React & Typescript)
+*** Material UI (UI kit)
+*** figma
+* questions
+** investigate email system
+*** TODO ask mahyar about the email system                           :mahyar:
+
+* junk 
+
+** check jira integration with gitlab and discord
+** update the current OS for security patch
+** grpc integration 
+** TODO review tRPC 
+** nx.dev
+** Invideo.io
+** https://vidyo.ai/
+** https://vidyo.ai/
+** calendly
+** https://substack.com
+** https://pictory.ai
+* second shape up 
+** leader board
+*** anonymity in leader board
+how to ensure anonymity where people do not complain in leader board
+*** provide statistics for leader-board
+**** TODO definition of these statistics
+***** email
+***** discord 
+*** leader board presentation
+*** leader board service backend
+**** dramatically improve performance of the queries 
+** original video generation
+**** [#A] slicing video
+the goal is to slice one section of the video using ffmpeg
+**** filter 
+** discord bot
+*** verification of discord id
+*** video editing interface
+** infrastructure
+*** replacing the old infrastructure for generating referrals
+**** email services replacement
+**** login/verify endpoints
+**** people registration
+***** discord                                                  :verification:
+***** email                                                    :verification:
+***** name
+***** family name
+***** banking info for payment
+what is the 
+*** move umamy into new infrastructure
+*** set up git server
+*** set up CI/CD pipeline
+*** 
+* unknown
+** separation from old infrastructure
+** shutting down unnecessary infrastructure
+** set up new infrastructure
+*** things that would be awsome to check
+**** minio cluster
+**** working with helm
+**** production experience with kubernatess
+*** get control of DNS
+*** setup sub domains for elevista
+**** git
+**** minio
+**** jenkins
+**** vault
+**** rancher
+*** server s1 81.0.249.87 ( 4 cores and 8 Gig ram)
+**** set up new gitlab
+**** set up jenkins
+**** set up vault
+**** rancher
+https://www.youtube.com/watch?v=1j5lhDzlFUM
+*** server s2 84.247.59.94 ( 4 cores and 8 Gig ram)
+**** set up minio dockerized 
+*** server s3 81.0.249.85 (8 cores 30 Gig ram )
+**** setup kubernatess
+** pipeline
+** tasks
+*** 
+*** one pond sighup reward
+**** figure out how the sighup in quench works
+*** dashboard for quench
+**** stats and metrics related to promoters
+*** 
+* APIs
+** dashboard login
+*** with user and password ( preferably with keycloak)
+** stats api with optional date range definately with caching
+- total visitor
+- unique visitor
+- sign ups
+- subscribe ( purchase success )
+** leader board data sort by total income per week 
+- total visitor
+- unique visitor
+- subscribe
+- signup
+- total income for date ragne
+- total income for all time
+** get upload link
+** verify upload link
+** set meta data
+
+
+
+
+
+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
+* thrid
+** Migration from java to nest
+*** setup NX
+**** dto setup
+**** 
+*** create video service
+*** create statistic service
+*** setup logging
+*** create referral related service
+** migrate old database to new service
+*** expose database in our new infrastructure
+** 
+* connection to database
+export KUBECONFIG=/Users/miladkamali/Downloads/elevista\ \(1\).yaml
+** umami-develop
+kubectl --insecure-skip-tls-verify port-forward -n develop svc/postgres-umami-service 25432:5432
+** prod
+*** core
+kubectl --insecure-skip-tls-verify port-forward -n production svc/postgres-core-service 15432:5432
+postgress-core-production-username: postgres
+postgress-core-production-database: elevista
+postgress-core-production-password:9fa0753a-56f0-4976-8b4d-a0d83ab28f6d
+
+
+
+
+
+[[https://www.youtube.com/watch?v=SZVCJRUADc4][GitHub Copilot just got exponentially smarter]]]
+I Tried Every AI Coding Assistant   https://www.youtube.com/watch?v=TXtnFw9eDmM
+* cycle 4
+** setting up infrastructure for campaign hierarchy
+*** how we are going to differentiate share button vs ready made campaign
+
+
+git checkout ec7ff08d268e
+git checkout HEAD~55
+
+
+8b89917d
+
+
+
+
+
+9e445fa99
+* cycle 8
+** [#A] Fix multiple workflow issue with our project ( 1 day )
+** crm integration ( 3 days)
+*** define workflow that check for subscription confirmation ( 1 day)
+*** define beehive service to check (2 days)
+**** figure out the api associated with it
+**** implement 
+** Fix issue with renewal of workflow ( 1 day)
+** refactor workflow service to keep track of workflows run (1.5)
+** Add email repository to ensure rerun of email workflow after termination is safe (1 day)
+** Clean up email workflow and imap service ( 1 day ) 
+
+
+
+lq49DXEITHdFFxAPIf9XErE7DBYi0ENRafGqUiWdMtMo58JWhdmiUMenwYPdJDXI
+
+
+
+https://support.beehiiv.com/hc/en-us/articles/13081072798743-How-to-enable-double-opt-in-and-Smart-Nudge
+
+
+
+
+
+
+* umami removal
+
+** removed module
+
+*** CronModule
+*** StatisticModule
+*** BaseStatisticModule
+** removed-endpoint
+*** createInviteFriendCampaign
+*** registerCampaign
+*** CreateShareButtonCampaign
+*** 
+* bulljs
+** removed-queue
+
+
+
+
+
+* payment system
+** payments
+*** amount
+*** reason
+*** userid
+***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* email flow
+
+** email list
+*** welcome email + training video id:1
+*** check setup and need help email for manual campaign generation id:2
+after signup,
+after 6 days of not having a crm integration which means manual campaign
+generation, and not having a published a campaign this email will be sent.
+*** well done with campaign link
+after the first campaign generation we send this email 
+** workflows
+*** user_uuid_access_management 
+**** stripe payment integration 3 days 
+**** access management workflow 3 days
+**** update access management 2 days
+*** email templates 1.5 days
+*** user_uuid_onboarding 1.5 days
+*** campaign_uuid_followup 0.5 days
+*** user_uuid_content_creator_report 0.5 days
+*** user_uuid_promoter_report 0.5 day
+* tasks
+** Pricing packages for our premium 
+*** stripe integration 3 days
+*** access management workflow 3 days 
+a workflow to manage the trial period and manage access level of the user based on payments
+*** define and test payed users access level 2 days
+define new roles for 
+** P1:7 Emails
+*** define email templates 1.5 days
+*** workflows associated with emails 3 days
+**** campaign followup 
+**** content creator report
+**** promoter report
+**** on-boarding user
+* flows
+** getting a anonymous token
+go to https://website-develop.elevista.ai/app
+in the local storage extract browserSessionId and browserFinger print
+in core/website/auth/anonymous
+#+begin_src js
+ {
+  "browserSessionId": "8f1142b2-ec56-425c-8f52-52a9426aa940",
+  "newBrowserFingerprint": "cy72k1",
+  "platformAddressUrl": "http://localhost:4900",
+  "oldBrowserFingerprint": "cy72k1"
+}
+#+end_src
+
+use the anonymous token to
+/core/website/auth/send-otp
+to get and otp and
+/core/website/auth/identify
+#+begin_src js
+ {
+  "emailAddress": "milad@bentoak.systems",
+  "otpCode": "2787",
+  "platformAddress": "http://localhost:4900"
+
+}
+#+end_src
+to get the token to check
+
+#+begin_src js
+ {
+  "user": {
+    "id": "18fd8e76-d44f-40f5-9822-4773c3b2a314",
+    "createdAt": "2024-10-02T08:08:47.431Z",
+    "updatedAt": "2024-10-02T08:08:47.431Z",
+    "deletedAt": null,
+    "email": "milad@bentoak.systems",
+    "type": "Business",
+    "username": "grained-weaverbird",
+    "fullName": null,
+    "discordUsername": null,
+    "discordId": null,
+    "hasProfileUpdated": false,
+    "discordBannerColor": null,
+    "platformId": null,
+    "discordPicture": null,
+    "profilePictureAssetId": null,
+    "defaultNewsletterPlatform": null,
+    "balance": null,
+    "accountDetail": null,
+    "businessOnBoarding": {
+      "id": "a0af7bec-7a97-48bd-a6a2-707b373ba375",
+      "createdAt": "2024-10-02T08:08:47.431Z",
+      "updatedAt": "2024-10-02T08:08:47.431Z",
+      "deletedAt": null,
+      "userId": "18fd8e76-d44f-40f5-9822-4773c3b2a314",
+      "businessId": "ca36d757-fe66-4dab-af8e-400d0f78f57a",
+      "isOwner": true,
+      "promoterLevel": null,
+      "startDate": null,
+      "endDate": null,
+      "promoterSourceEmail": null,
+      "promoterSourceUserId": null,
+      "referralId": null,
+      "business": {
+        "id": "ca36d757-fe66-4dab-af8e-400d0f78f57a",
+        "createdAt": "2024-10-02T08:08:47.431Z",
+        "updatedAt": "2024-10-02T08:08:47.431Z",
+        "deletedAt": null,
+        "name": "grained-weaverbird",
+        "title": null,
+        "description": null,
+        "balance": null,
+        "businessLegacyToken": null,
+        "businessAddress": null,
+        "platformId": "a1539c3a-bbb2-4d0c-b1cf-c3945c6a87fb"
+      }
+    },
+    "userRoleOnResources": [
+      {
+        "id": "e8ecc79e-fba4-40f7-84ba-4d7ec490397c",
+        "createdAt": "2024-10-02T08:08:47.431Z",
+        "updatedAt": "2024-10-02T08:08:47.431Z",
+        "deletedAt": null,
+        "userId": "18fd8e76-d44f-40f5-9822-4773c3b2a314",
+        "roleId": "0500b0a4-3d31-4774-be10-ae3acf797fbb",
+        "resourceType": "business",
+        "resourceId": "ca36d757-fe66-4dab-af8e-400d0f78f57a",
+        "accessType": "permanent",
+        "expirationAt": null,
+        "grantedBy": null,
+        "isActive": true,
+        "role": {
+          "id": "0500b0a4-3d31-4774-be10-ae3acf797fbb",
+          "createdAt": "2024-05-06T09:04:53.906Z",
+          "updatedAt": "2024-05-06T09:04:53.906Z",
+          "deletedAt": null,
+          "name": "content_creator",
+          "description": null
+        }
+      },
+      {
+        "id": "81deaec3-3e4e-4b41-8eac-77a6fe244a1d",
+        "createdAt": "2024-10-02T08:08:47.431Z",
+        "updatedAt": "2024-10-02T08:08:47.431Z",
+        "deletedAt": null,
+        "userId": "18fd8e76-d44f-40f5-9822-4773c3b2a314",
+        "roleId": "eb70c7c9-48dd-460f-9dba-a4f5b6befe25",
+        "resourceType": "business",
+        "resourceId": "ca36d757-fe66-4dab-af8e-400d0f78f57a",
+        "accessType": "permanent",
+        "expirationAt": null,
+        "grantedBy": null,
+        "isActive": true,
+        "role": {
+          "id": "eb70c7c9-48dd-460f-9dba-a4f5b6befe25",
+          "createdAt": "2024-05-06T09:04:53.906Z",
+          "updatedAt": "2024-05-06T09:04:53.906Z",
+          "deletedAt": null,
+          "name": "promoter",
+          "description": null
+        }
+      },
+      {
+        "id": "317fa5c8-665e-4a1e-9d6d-bba7bc3aafff",
+        "createdAt": "2024-10-02T08:08:47.431Z",
+        "updatedAt": "2024-10-02T08:08:47.431Z",
+        "deletedAt": null,
+        "userId": "18fd8e76-d44f-40f5-9822-4773c3b2a314",
+        "roleId": "d8ff5ea4-d303-4c28-8514-20ba90065ebf",
+        "resourceType": "business",
+        "resourceId": "ca36d757-fe66-4dab-af8e-400d0f78f57a",
+        "accessType": "permanent",
+        "expirationAt": null,
+        "grantedBy": null,
+        "isActive": true,
+        "role": {
+          "id": "d8ff5ea4-d303-4c28-8514-20ba90065ebf",
+          "createdAt": "2024-05-08T10:34:50.197Z",
+          "updatedAt": "2024-05-08T10:34:50.197Z",
+          "deletedAt": null,
+          "name": "promoter_level_one",
+          "description": null
+        }
+      }
+    ]
+  },
+  "isAnonymous": false,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdyYWluZWQtd2VhdmVyYmlyZCIsImlkIjoiMThmZDhlNzYtZDQ0Zi00MGY1LTk4MjItNDc3M2MzYjJhMzE0IiwiY3JlYXRlZEF0IjoiMjAyNC0xMC0wMlQwODowODo0Ny41MTZaIiwidHlwZSI6IkJ1c2luZXNzIiwiYnVzaW5lc3NJZCI6ImNhMzZkNzU3LWZlNjYtNGRhYi1hZjhlLTQwMGQwZjc4ZjU3YSIsImlzQW5vbnltb3VzIjpmYWxzZSwiaWF0IjoxNzI3ODU2NTI3LCJleHAiOjE3MzA0NDg1Mjd9.skunqOvr4MbYPHLn-L4ui3huJbGrQxP2op5CqIO00wI",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdyYWluZWQtd2VhdmVyYmlyZCIsImlkIjoiMThmZDhlNzYtZDQ0Zi00MGY1LTk4MjItNDc3M2MzYjJhMzE0IiwiY3JlYXRlZEF0IjoiMjAyNC0xMC0wMlQwODowODo0Ny41MTZaIiwidHlwZSI6IkJ1c2luZXNzIiwiYnVzaW5lc3NJZCI6ImNhMzZkNzU3LWZlNjYtNGRhYi1hZjhlLTQwMGQwZjc4ZjU3YSIsImlzQW5vbnltb3VzIjpmYWxzZSwiaWF0IjoxNzI3ODU2NTI3LCJleHAiOjE3MzE3NDQ1Mjd9.xcp7ihcSsBEhb1JvevXGIRIKUbJs9BPteFktLWkYYBY"
+}
+#+end_src
+* extending signal system
+** figure out the current visitpage system 1 day
+*** talk to farhad 1h
+*** talk to amir 1h
+*** check the detail 6h
+** update value action definition 1 
+*** add type to definition
+at the moment we are only talking about visit page, we should add signal, click on button as well
+- value action definition type: page_visit,signal
+- signal metadata structure json_schema  
+*** make sure nothing breaks
+**** check with farhad about all the tests related to how they work 1h
+**** check with farhad about all the consumers involved 1h
+**** run the tests associated with value actions and fix broken ones  
+**** write new tests for it
+** update event definition 2 days
+add event type signal
+add event meta data
+*** add event type signal 6h
+*** write tests 6h
+*** 
+** create endpoint to add events 1 day
+* new system
+** add a system for visitor profile
+  - website identify
+  - email identify
+  - user identify
+  - ...
+
+** event  
+
+* new ACL
+| access/Role |   |   |   |   |
+|-------------+---+---+---+---|
+| test        | 1 | 0 | 1 | 0 |
+| test 2      | 1 | 1 | 1 | 1 |
+
+** check multiple affiliation for a user
+based on the talk with Amir it seems users will have multiple affiliation on one campaign based on new AI content request
+
+** TODO set tier modes on platform
+business
+
+* script service
+** create an endpoint for front-end to view all their permissions
+- list of business and role on them
+
+  return list of all business the user has a role in.
+** update where ever we are using platform business from token
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* share script
+
+
+** and endpoint to create the campaign for the first person who first visits the page
+no token required
+input: - content of the page-> title,description
+- url
+- businessid
+
+  campaign owner is the businessOwner
+** search campaign based on url
+no token /v1/campaign is the preferred place to do it
+** affiliate on a campaign
+should work on anonymous token
+/core/website/campaign/{campaignId}/affiliate
+
+
+check /core/website/auth/identity and /core/website/auth/send-otp to see if they are actually useful for this situation
+** TODO remove all website rewards related endpoints
+** TODO remove 
+** reward
+app/api/core/v1/rewards   -> shows reward that cc has put on platform mostly used for anonymous user
+core/v1/rewards/businesses/{businessesId}/user/rewards  -> rewards gained by promoter
+** report
+/core/v1/report/events-timeseries
+/core/v1/report/events-timeseries
+** registering business for script
+*** registering business for script
+- should we specify type of business?
+- should we delete unfinished business?
+
+  input is domain,
+- 
+*** verify installation process
+load the domain for the business script and check for the script tag to be there
+*** finalize the business script
+conclude the workflow of creating business script
+*** an endpoint to check status of business script flow
+*** an endpoint to stop/cancel unfinished business script process
+*** script setting cru
+- get is public since script need to access it via business id
+** TODO   //todo : review tests to check the point where access where removed
+      //todo : review tests
+      //todo : ACL
+** TODO Remove this api: POST /core/website/auth/identity
+** DONE fix issue reguarding campaign-id/business-id not being forward in nginx
+CLOSED: [2025-01-02 Thu 12:45]
+** TODO POST /core/v1/auth/identity issue 
+user already exist error should be resolved
+
+
+
+* script refactor
+
+** business/business-api-record
+post method required business id
+
+** /core/script/promoter/level-one/generate-referral-link
+do not exist anywhere
+
+**     return this.exclusivePromatService.getCompletedExclusivePromats();
+check how are we doing it ?
+
+**     return this.exclusivePromatService.getFailedExclusivePromats();
+
+check how are we doing it ?

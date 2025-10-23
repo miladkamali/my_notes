@@ -1,0 +1,14 @@
+
+* create a programming language
+** parser
+** lexer
+** ast
+* tracker
+  :LOGBOOK:
+  CLOCK: [2020-03-25 Wed 20:15]--[2020-03-25 Wed 20:50] =>  0:35
+  CLOCK: [2020-03-25 Wed 15:00]--[2020-03-25 Wed 16:00] =>  1:00
+  CLOCK: [2020-03-24 Tue 19:50]--[2020-03-24 Tue 21:25] =>  1:35
+  CLOCK: [2020-03-24 Tue 18:00]--[2020-03-24 Tue 18:35] =>  0:35
+  CLOCK: [2020-03-24 Tue 12:00]--[2020-03-24 Tue 14:00] =>  2:00
+  :END:
+  

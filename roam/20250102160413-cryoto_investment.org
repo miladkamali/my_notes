@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       AA361E5F-A23C-460F-80FB-FE64C26BBF88
+:END:
+#+title: cryoto investment
+* [[hummingbot][https://hummingbot.org/strategies/]]
+* investigate Hyperliquid Vault
+* trading platform 
+** https://app.octobot.cloud/intro/start
+https://github.com/Drakkar-Software/OctoBot

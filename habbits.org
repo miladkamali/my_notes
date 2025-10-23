@@ -1,0 +1,22 @@
+* Health habbits
+** TODO Eat Lunch in 20 minutes
+   SCHEDULED: <2019-02-06 Wed .+1d/1d>
+   :PROPERTIES:
+   :STYLE:    habit
+   :LAST_REPEAT: [2019-02-05 Tue 11:52]
+   :END:
+   - State "DONE"       from "TODO"       [2019-02-05 Tue 11:52]
+     average time it takes to finish your lunch should be 30 minutes
+** TODO Walk from mapsa to vanak
+   SCHEDULED: <2019-02-04 Mon .+1d/1d>
+   :PROPERTIES:
+   :STYLE:    habit
+   :LAST_REPEAT: [2019-02-03 Sun 12:39]
+   :END:
+** TODO wake up at 7 in morning
+   SCHEDULED: <2019-02-05 Tue .+1d/1d>
+   :PROPERTIES:
+   :STYLE:    habit
+   :LAST_REPEAT: [2019-02-04 Mon 20:06]
+   :END:
+   - State "DONE"       from "TODO"       [2019-02-05 Tue 07:10]

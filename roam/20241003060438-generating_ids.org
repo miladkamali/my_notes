@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       C33F69AA-9C2D-4DD0-8FAB-8F611EB4D93A
+:END:
+#+title: generating ids
+uuid
+uuidv7
+tsid
+snowflake id
+https://www.foxhound.systems/blog/time-sorted-unique-identifiers/

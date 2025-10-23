@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       306CCF61-4AE8-43C1-A356-B86F831FB786
+:END:
+#+title: etherium
+* how etherium works
+* Layer 2
+** Arbitrum
+*** Arbitrum one
+flagship optimistic rollup
+*** arbitrum nitro
+*** arbiturim stylus
+used to code etherium smart contract in other language
+*** arbitrum nova
+** Base
+** Optimism OP
+** ZkSync
+* DAPS
+* sources
+** https://polynya.mirror.xyz/
+** 
+* etherium upgrades
+** TODO [[https://www.youtube.com/watch?v=FqW7TlAY9t0][pectra]] already in                                             :watch:
+** fusaka
+** Glamsterdam

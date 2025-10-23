@@ -1,0 +1,13 @@
+* https://www.cgsecurity.org/wiki/PhotoRec
+* https://undelete360.com/
+* https://7datarecovery.com/blog/best-ntfs-undelete-software/
+* https://www.cgsecurity.org/wiki/TestDisk
+* https://unix.stackexchange.com/questions/494491/sd-card-recovery-without-data-loss-or-corruption 
+* 
+* foremost
+https://www.youtube.com/watch?v=6pzm6909IvY  
+https://unix.stackexchange.com/questions/494491/sd-card-recovery-without-data-loss-or-corruption
+* https://www.journaldev.com/36900/top-best-linux-data-recovery-tools
+* https://tinyapps.org/blog/201609300700_ddrescue_ubuntu.html
+* https://www.maketecheasier.com/use-foremost-recover-deleted-files-linux/
+* https://linuxconfig.org/how-to-recover-deleted-files-with-foremost-on-linux

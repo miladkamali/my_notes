@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       aea11e89-887d-4c0a-83f6-d9f2003834bd
+:END:
+#+title: mocking api
+mockoon
+[[https://www.youtube.com/watch?v=tJRN5WBF5Wc][How to Mock RESTFUL APIs - The Easy way!]]

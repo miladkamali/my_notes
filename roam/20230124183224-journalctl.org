@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       27d8b34e-9fec-4e9e-b193-e3f0c59658b5
+:END:
+#+title: journalctl
+https://www.loggly.com/ultimate-guide/using-journalctl/
+
+
+journalctl -f -u v2ray

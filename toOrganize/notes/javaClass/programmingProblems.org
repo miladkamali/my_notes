@@ -1,0 +1,110 @@
+* problems
+** write a program that prints a square of astrisks by asking user about it's size
+** write a program which creates checker board of astrisks like below
+ * * * * * * * *
+  * * * * * * * *
+ * * * * * * * *
+  * * * * * * * *
+ * * * * * * * *
+  * * * * * * * *
+ * * * * * * * *
+  * * * * * * * *
+** diamon printing program get n from user
+    *
+   ***
+  *****
+ *******
+  *****
+   ***
+    *
+** write a program that calculate diameter circumference and area of a circle
+** calculate Pi from 
+   4 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 + ....
+** write a program which converts string to Integer
+** write a program which prints table of squares and cubes
+   number square cube
+   0      0      0
+   1      1      1
+   2      4      8
+   3      9      27
+   4      16     64
+   5      25     125
+   6      36     216
+   7      49     343
+   8      64     512
+   9      81     729
+   10     100    1000
+** write a program which prints multiplication table
+** write a program which calculates BMI based on Pounds and kilograms and print relavent category
+   BMI=\frac{weightInPounds*703}{heightInInches × heightInInches}
+   BMI=\frac{weightInKilograms}{heightInMeters × heightInMeters}
+
+   BMI VALUES
+   Underweight: less than 18.5
+   Normal: between 18.5 and 24.9
+   Overweight: between 25 and 29.9
+   Obese: 30 or greater
+** write a program which calculates world population after n years with given growth rate
+** write a program which converts string to float
+** write a program which detects if a string is float or Integer
+** write a program which detects if a string fits in an Integer or is bigger
+** write a program which detects if a string fits in a Long or is bigger
+** write a class which can hold 128 bit inegers Strings
+** Write a GUI program which calculate Operational cost of a car per day
+   a) Total miles driven per day.
+   b) Cost per gallon of gasoline.
+   c) Average miles per gallon.
+   d) Parking fees per day.
+   e) Tolls per day
+** write a program which recives n names and scores for each individual and prints the highest and lowest scores and average of class ( print one of the lowest and the heighest )
+** write a program which recives n names and scores for each individual and prints the highest and lowest scores and average of class ( print all the lowest and heighest names)
+** write a program which recives n scores for each individual and prints how A B C D E F score percentage
+** write a program which recives unknown names and scores for each individual and prints the highest and lowest scores and average of class
+** write a program which recives unknown names and scores for each individual and prints how A B C D E F score percentage
+** gas Mileage a series of miles and liters of gas used are the input, print the average gas usage per miles
+** sales Commission Calculator
+A large company pays its salespeople on a commission basis.
+The salespeople receive $200 plus 9% commision of week sales.For example, a
+salesperson who sells $5000 worth of merchandise in a week receives $200 plus 9% of $5000 or a
+total of $650.
+  SalesPerson Value
+   1 239.99
+   2 129.75
+   1 99.95
+   2 350.89
+   2 350.89
+   2 350.89
+   1 350.89
+** advance sales Commition and sales person performance calculator
+   salesMan value salesWeek
+   1 239.99 1
+   2 129.75 1
+   1 99.95 1 
+   2 350.89 1 
+   2 350.89 2
+   2 350.89 2 
+   1 350.89 2
+** given a series of numbers find the Nth largest number
+** Convert binary input string to Integer
+** Convert Hex input to Integer
+** Convert Integer to binary 
+** convert Integer to Hex
+** Convet Float to Binary
+** Convet Binary to float
+** (Sides of a Triangle) 
+** (sides of Right triangle) identify the Hypotemuse
+** replacement cyphers
+** positional replacement cyphers
+** 4 digit integer cypher
+   Replace each digit with the result of adding 7 to the digit and
+getting the remainder after dividing the new value by 10. Then swap
+the first digit with the third, and swap the second digit with the
+fourth.
+** Enigma cypher
+** Compund Interest
+   calculate the final balance of a bank account which it's interest is
+   added to the principal
+** compund interest
+   calculate the final balance of a bank account where it's interest
+   is held in an other account and periodicly added to the principal 
+

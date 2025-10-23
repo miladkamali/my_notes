@@ -1,0 +1,13 @@
+* AspectJ concepts
+** dynamic parts
+*** join point
+    A join point is a well-defined point in the program flow
+*** point cut
+     A pointcut picks out certain join points and values at those points
+*** advice
+    A piece of advice is code that is executed when a join point is reached
+** static parts
+*** inter-type declaration
+    spectJ also has different kinds of inter-type declarations that allow the
+    programmer to modify a program's static structure, namely, the members of
+    its classes and the relationship between classes.

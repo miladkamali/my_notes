@@ -1,0 +1,35 @@
+* project
+** requirement
+*** general
+**** web based
+**** uniform look
+**** connected subsystems( microservice architecture)
+**** very picky about database design( or they mean unconnected duplicated data)
+**** single login
+**** ACL
+**** MAC levels of access for
+**** deep form access for ACL/MAC
+**** search capability
+**** hiearchy of forms
+*** work flow system
+**** UI workflow  generator
+*** report generator
+** 
+* planning
+** system design 4 month ( 3 very strong people ) (people:2x20,000,000 ,2x3,000,000)
+** UI design and mockups 3 month( start after the 2 month of design ) 1X15,000,000 4x5,000,000
+** core Microservices
+*** Automation system 5 month (people: 1x15,000,000 5x7,000,000)
+*** process builder 4 month (people: 1x10,000,000 3x5,000,000) 
+*** reporting system 3 month (people 1x10,000,000 3x5,000,000)
+*** BI system backend 2 month (people 1x10,000,000 3x5,000,000)
+*** authorization system 2 month (people 1x10,000,000)
+*** notification system 2 month (people 1x10,000,000 2x7,000,000)
+*** Administration 2 month ( people 1x10,000,000 2x7,000,000)
+** UI systems
+*** Desktop client (4-6 month) (people: 1x20,000,000 5x7,000,000)
+*** web application (3-5 month) (people: 1x15,000,000 3x5,000,000)
+** testing
+*** UI test framework 3-4 month (web/clinet) (people 1x15,000,000 4x7,000,000)
+*** API test framework 2 month 
+*** Acceptance/ failure Test cases 5 month (1x15,000,000 5x4,000,000)

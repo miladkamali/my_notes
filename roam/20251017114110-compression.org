@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       88C35103-B0A4-4402-95E9-37A41B9209EE
+:END:
+#+title: compression
+* openZL
+[[https://idroot.us/install-openzl-fedora-42/][openzl]]

@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       2D1FF2FA-FC58-4668-BFDB-0256BBD7ED67
+:END:
+#+title: bentoak
+* elevista
+* QC
+* CIS
+** design
+** meeting
+*** acteck
+:LOGBOOK:
+CLOCK: [2025-04-14 Mon 13:55]--[2025-04-14 Mon 14:43] =>  0:48
+:END:
+** HR
+*** reviewing resumes
+*** interview

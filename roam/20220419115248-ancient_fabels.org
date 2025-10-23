@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       d46465ef-66df-4e5f-b624-7fb0e44f0780
+:END:
+#+title: ancient fabels
+* [[id:47269b7f-4832-4ce7-8986-fcda979294be][the sword of damocles]]

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       a6fe096e-6496-4b61-9704-2d4bac97b4cc
+:END:
+#+title: comedian
+* Bill Burr
+* Bill Bailey
+* Bill Maher
+* George Carlin

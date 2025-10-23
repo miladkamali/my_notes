@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       a84512c7-9eb7-4b74-a722-8be6b5adfee4
+:END:
+#+title: org-mode
+* insert code block
+ C-c C-,
+* [[id:4a5cb504-9db9-41cd-84b2-250d60eef3aa][table]]
+* technical documents
+https://www.youtube.com/watch?v=0g9BcZvQbXU
+* useful toggles
+** to view images inside a org file
+org-toggle-inline-image
+
+
+org-show-todo-tree
+
+
+C-c [  adding files to agenda 
+
+SPC a o t  list agenda
+
+SPC a o o agenda view
+
+, d d org-deadline
+, d s org-schedule
+, e e org export 
+

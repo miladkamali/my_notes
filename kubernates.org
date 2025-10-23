@@ -1,0 +1,27 @@
+https://kubernetes.io/blog/2018/11/07/grpc-load-balancing-on-kubernetes-without-tears/
+https://linkerd.io
+https://linkerd.io/2019/10/10/announcing-linkerd-2.6/
+https://www.cncf.io/
+* kubernates
+** local deployment and play around
+   https://minikube.sigs.k8s.io/docs/start/
+*** single machine configuration
+**** https://www.redpill-linpro.com/techblog/2019/04/04/kubernetes-setup.html
+**** https://ubuntu.com/blog/kubernetes-on-a-single-machine
+** tutorial
+*** [[https://github.com/kelseyhightower/kubernetes-the-hard-way][kubernates the hard way]]
+*** [[https://www.youtube.com/watch?v=00r9C8rWsK8][Kubernetes the Hard Way Using Terraform]]
+*** [[https://www.youtube.com/watch?v=NvQY5tuxALY][[ Kube 38 ] Kubernetes The Hard Way - Part 1]]
+*** [[https://www.youtube.com/watch?v=2bVK-e-GuYI][[ Kube 39 ] Kubernetes The Hard Way Part 2]]
+* stateful
+** https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/
+** https://loft.sh/blog/kubernetes-statefulset-examples-and-best-practices/
+** https://blog.knoldus.com/how-to-deploy-mysql-statefulset-in-kubernetes/
+** https://devopscube.com/deploy-postgresql-statefulset/
+** https://github.com/arianitu/postgres-statefulset
+* helm
+  https://www.bmc.com/blogs/kubernetes-helm-charts/
+  https://helm.sh/
+  https://artifacthub.io/packages/helm/prometheus-community/prometheus
+  https://www.bmc.com/blogs/deployment-pipeline/
+  https://www.bmc.com/blogs/what-is-kubernetes/

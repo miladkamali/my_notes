@@ -1,0 +1,38 @@
+* libraries
+
+** natural language processing
+*** NLTk
+*** gensim
+    information retrival 
+*** flashtext
+    replace text for large data
+** computer vision
+*** openCV
+*** simpleCV
+** GUI
+*** thinker
+*** wxpython
+*** pyqt
+** game development
+*** pygame
+*** pyglet
+    3d games
+*** pyengine3d
+** web
+*** request
+*** lassie
+*** scrapy
+*** beautifulSoup
+*** zappa
+    serverless webhost
+*** django
+*** flask
+** mathematics
+*** numpy
+*** scipy
+*** sympy
+*** spyder
+*** pandas
+** sql
+*** sqlAlchemy
+*** mathPlot 

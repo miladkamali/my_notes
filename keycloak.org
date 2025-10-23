@@ -1,0 +1,50 @@
+* resources
+** video
+*** [[https://www.youtube.com/watch?v=XJYy6Aq-PJ8][Keycloak Deep Dive]] 
+** this is a Docker compose example to bind Keycloak with PostgreSQL database
+   http://www.mastertheboss.com/keycloak/keycloak-with-docker/
+#+BEGIN_SRC yaml
+version: '3'
+volumes:
+  postgres_data:
+      driver: local
+services:
+  postgres:
+      image: postgres
+      volumes:
+        - postgres_data:/var/lib/postgresql/data
+      environment:
+        POSTGRES_DB: keycloak
+        POSTGRES_USER: keycloak
+        POSTGRES_PASSWORD: password
+  keycloak:
+      image: quay.io/keycloak/keycloak:latest
+      environment:
+        DB_VENDOR: POSTGRES
+        DB_ADDR: postgres
+        DB_DATABASE: keycloak
+        DB_USER: keycloak
+        DB_SCHEMA: public
+        DB_PASSWORD: password
+        KEYCLOAK_USER: admin
+        KEYCLOAK_PASSWORD: Pa55w0rd
+        # Uncomment the line below if you want to specify JDBC parameters. The parameter below is just an example, and it shouldn't be used in production without knowledge. It is highly recommended that you read the PostgreSQL JDBC driver documentation in order to use it.
+        #JDBC_PARAMS: "ssl=true"
+      ports:
+        - 8080:8080
+      depends_on:
+        - postgres
+#+END_SRC
+** tutorial
+*** https://www.keycloak.org/getting-started/getting-started-docker
+*** https://github.com/keycloak/keycloak-quickstarts
+*** spring boot
+    https://github.com/keycloak/keycloak-quickstarts/tree/latest/app-authz-rest-springboot
+    [[https://www.youtube.com/watch?v=haHFoeWUj0w][How to secure your Spring Apps with Keycloak by Thomas Darimont @ Spring I/O 2018]]
+*** keycloak-grpc
+    https://github.com/openstandia/keycloak-grpc/blob/master/pom.xml
+    https://github.com/openstandia/keycloak-grpc
+*** quarkus and keycloak
+    https://www.youtube.com/watch?v=F_VbzqqqRq8
+    [[https://www.youtube.com/watch?v=eZYGLuUrUp4][KEYCLOAK - Implementing Custom REST Resources (endpoints) | Niko Köbler (@dasniko)]]
+*** [[https://www.youtube.com/watch?v=1UklqPPjcRY][KEYCLOAK Implementing Custom User Storage Provider (in-depth) | Niko Köbler (@dasniko)]]

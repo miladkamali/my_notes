@@ -1,0 +1,24 @@
+* RabbitMQ
+** source
+   https://www.youtube.com/watch?v=Cie5v59mrTg
+   https://www.youtube.com/watch?v=-td8qgCU75E
+** performance
+*** http://www.rabbitmq.com/blog/2012/04/25/rabbitmq-performance-measurements-part-2/
+** server
+   - default port 5672
+   - 
+** key words
+*** publisher
+*** consumer
+*** connection
+*** push message
+*** channel
+*** multiplexing
+    each connection can have many channels( similar to http2)
+*** exchange Queues
+*** exchange
+    exchange takes care of distributing messages( it has several algorithms)
+** docker install
+*** docker --run --name rabbitMQ -p 5672:5672 rabbitmq
+** protocols
+*** AMPQ

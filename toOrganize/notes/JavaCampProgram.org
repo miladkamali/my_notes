@@ -1,0 +1,265 @@
+* links
+  magnet:?xt=urn:btih:73BC7952113AB9D7543D7900DFC92E3906A0F8E0&dn=%5bFreeTutorials.Us%5d%20Udemy%20-%20data-structures-and-algorithms-deep-dive-using-java&tr=udp%3a%2f%2f62.138.0.158%3a6969%2fannounce&tr=udp%3a%2f%2f87.233.192.220%3a6969%2fannounce&tr=udp%3a%2f%2f111.6.78.96%3a6969%2fannounce&tr=udp%3a%2f%2f90.179.64.91%3a1337%2fannounce&tr=udp%3a%2f%2f51.15.4.13%3a1337%2fannounce&tr=udp%3a%2f%2f151.80.120.113%3a2710%2fannounce&tr=udp%3a%2f%2f191.96.249.23%3a6969%2fannounce&tr=udp%3a%2f%2f35.187.36.248%3a1337%2fannounce&tr=udp%3a%2f%2f82.45.40.204%3a1337%2fannounce&tr=udp%3a%2f%2f123.249.16.65%3a2710%2fannounce&tr=udp%3a%2f%2f127.0.0.1%3a6969%2fannounce&tr=udp%3a%2f%2f210.244.71.25%3a6969%2fannounce&tr=udp%3a%2f%2f78.142.19.42%3a1337%2fannounce&tr=udp%3a%2f%2f173.254.219.72%3a6969%2fannounce&tr=udp%3a%2f%2f51.15.76.199%3a6969%2fannounce&tr=udp%3a%2f%2f91.212.150.191%3a3418%2fannounce&tr=udp%3a%2f%2f103.224.212.222%3a6969%2fannounce&tr=udp%3a%2f%2f92.241.171.245%3a6969%2fannounce&tr=udp%3a%2f%2f51.15.40.114%3a80%2fannounce&tr=udp%3a%2f%2f5.79.83.194%3a6969%2fannounce
+  https://1337x.to/torrent/3098901/Udemy-Algorithms-and-Data-Structures-in-Java-Part-II/#
+  https://www.freetutorials.eu/algorithms-and-data-structures-in-java-part-i-1/
+  https://www.freetutorials.eu/complete-java-se-8-developer-bootcamp-oca-prep-included-2/
+  [[https://www.javainterviewpoint.com/java-virtual-machine-architecture-in-java/][JVM internals]]
+  [[https://www.geeksforgeeks.org/collections-in-java-2/][collections in java]]
+  [[https://www.geeksforgeeks.org/differences-between-hashmap-and-hashtable-in-java/][hashmap vs HashTable]]
+  [[   https://www.journaldev.com/4098/java-heap-space-vs-stack-memory ][heap vs stack]]
+  [[https://www.quora.com/What-is-the-syllabus-of-OCA-OCP-Java-SE-7-Programmer-I-II-certification-exams][java exam materials]]
+  [[https://www.baeldung.com/java-executor-service-tutorial][java executor service]]
+  [[https://www.pluralsight.com/guides/introduction-to-the-fork-join-framework][Use the parallel Fork/Join Framework]]
+  http://tutorials.jenkov.com/java/modules.html
+  [[https://www.quora.com/What-are-good-web-crawlers-in-Java-like-Scrapy-in-Python][web crawlers]]
+* list of dataStructures
+  https://en.wikipedia.org/wiki/List_of_data_structures
+  https://en.wikipedia.org/wiki/Data_structure
+  https://www.youtube.com/results?search_query=log-structured+merge-tree
+  [[https://www.youtube.com/watch?v=yTkzNHF6rMs][Boundaries by Gray Bernhardt]]
+* Understanding dataStructures and algorithms ( 4 weeks )
+** Understanding algorithm complexity and "Big-Oh" notation
+** implementing and understanding order of operations in each of these data structures( 8 days )
+*** ArrayList
+*** LinkedList
+*** double linkedList
+*** binary Tree
+*** TreeSet
+*** HashMap
+*** queue
+*** Heap
+** binary search trees
+** sorting algorithm (2 days)
+*** bubble sort
+*** merge sort
+*** Quick sort
+** pattern matching (3 days)
+*** Bruteforce
+*** Boyer-Moore 
+** Tries (1 day)
+** Graphs (2 days)
+*** Graph traversals
+**** Depth-First search
+**** Breadth-First search
+* Things to learn about JAVA SE
+** understading Java
+*** Understand JDK and JRE
+*** ByteCode and platform Independence
+*** JVM Internals
+** Java API Documentation
+** primitive Types
+*** understand overflow
+*** understand float and double errors
+** package
+*** understanding package and subpackage
+*** import
+*** Class paths
+*** JARS
+** Object oriented Design
+*** Goals and principles of OOD
+*** inheretence
+**** Chaning Constructors
+**** protected keyword
+**** super keyword
+**** this keyword
+**** method override
+**** Covariant Returns
+**** final keyword usage
+***** class
+***** variable
+***** method
+**** Understanding IS-a relation
+**** Understanding Has-a relation
+**** upcasting and downcasting
+**** polymorphism
+*** abstract class and interface usage
+*** nested classes
+** Exception
+*** try catch finally blocks
+*** throwing an exception
+*** Java Exception Hierarchy
+** Memory
+*** Stack and Heap memory
+*** garbage Collector 
+** Collections
+*** List
+*** Set
+*** Queue
+*** Deque
+*** Map
+*** implentation
+**** ArrayList
+**** LinkedList
+**** Stack
+**** Vector
+**** HashSet
+**** LinkedHashSet
+**** TreeSet
+**** PriorityQueue
+**** ArrayDeque
+**** HashMap
+**** HashLinkedMap
+**** HashTable
+**** TreeTable
+*** Iterator and it's usage
+** Generics
+** String Processing
+*** Scanner
+*** tringTokenizer
+*** StringBuilder
+*** Formatter
+*** Regular Expression
+** I/O
+*** BufferedReader
+*** BufferedWriter
+*** File
+*** FileReader/FileWriter
+*** DataInputStream/DataOutputStream
+*** ObjectOutputStream/ObjectInputStream
+** File I/O
+*** check,delete.copy,move files and directories
+*** file and directory attributes
+*** DirectoryStream 
+*** FileVisitor
+** Threads
+*** Thread class
+*** Runnable Interface
+*** wait
+*** notify
+*** Synchronization
+** Concurrency
+*** Lock/ReadWriteLock/ReentrantLock 
+*** Executor/ExecutorService
+** JDBC
+* Hibernate
+** Understand ORM
+** Understand ACID principle
+** Configuration
+** Session
+** Annotations
+** O/R Mapping
+*** collection mapping
+*** association mapping
+**** Many-to-One
+**** One-to-One
+**** One-to-Many
+**** Many-to-Many
+*** component mapping
+** HQL
+** Criteria API
+* concepts
+** hashCode function
+   https://eclipsesource.com/blogs/2012/09/04/the-3-things-you-should-know-about-hashcode/
+   https://www.geeksforgeeks.org/importance-hashcode-method-java/
+** equals function
+   https://www.geeksforgeeks.org/equals-hashcode-methods-java/
+** OOP concepts
+   - abstraction
+   - encapsulation
+   - inheritance
+   - polimorphism
+   https://www.journaldev.com/12496/oops-concepts-java-example
+** Law of Demeter
+   - principle of least knowledge
+   - talk only to your friends
+** ACID principle
+** premature optimization
+   - writing code for computer makes it faster but harder to read
+   - writing code with high level abstraction makes it easy to
+     understand but degrade the performance
+** SOLID principle
+* problems
+** collections
+*** [[ https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_where_can_i_find_practice_exercises_and_project_ideas.3F][ collection of collections]]
+*** [[https://www.reddit.com/r/learnprogramming/comments/2a9ygh/1000_beginner_programming_projects_xpost/][collection of collections]]
+*** https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_where_can_i_find_practice_exercises_and_project_ideas.3F
+*** [[https://www.reddit.com/r/learnprogramming][learnProgramming]]
+*** [[https://old.reddit.com/r/dailyprogrammer][Reddit dailyProgrammer]]
+*** https://codingbat.com/java
+*** https://www.w3resource.com/java-exercises/
+*** [[https://www.w3resource.com/java-exercises/sorting/index.php][ sorting]]
+*** [[https://www.w3resource.com/java-exercises/io/index.php][ files and io ]]
+*** https://github.com/karan/Projects
+*** https://www.codewars.com/
+*** https://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/
+*** http://rosettacode.org/wiki/Category:Solutions_by_Programming_Task
+*** http://liquidthink.net/introduction-100-program-challenge-series-python/
+*** https://codingbat.com/java
+*** https://github.com/karan/Projects-Solutions/blob/master/README.md
+*** http://www.codeabbey.com/index/task_list
+*** [[https://www.coderslexicon.com/downloads/the-programmers-idea-book/][check if you can find the book]]
+*** http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/
+** meta collection
+   https://uvatoolkit.com/problemssolve.php#100
+   https://vjudge.net/problem#OJId=All&probNum=&title=&source=&category=all
+   https://uva.onlinejudge.org/external/1/p118.pdf
+   https://uva.onlinejudge.org/external/1/p101.pdf
+   https://uva.onlinejudge.org/external/118/p11805.pdf
+   https://uva.onlinejudge.org/external/117/p11743.pdf
+   https://uva.onlinejudge.org/external/1/p101.pdf
+   https://uva.onlinejudge.org/external/2/p272.pdf
+   https://uva.onlinejudge.org/external/2/p278.pdf
+   https://uva.onlinejudge.org/external/1/p155.pdf
+   https://uva.onlinejudge.org/external/1/p133.pdf
+   https://uva.onlinejudge.org/external/1/p123.pdf
+   https://uva.onlinejudge.org/external/1/p127.pdf
+   https://uva.onlinejudge.org/external/1/p128.pdf
+   https://uva.onlinejudge.org/external/1/p139.pdf
+   https://uva.onlinejudge.org/external/1/p119.pdf
+   https://uva.onlinejudge.org/external/1/p101.pdf
+** problems
+*** Word Count Tool
+    a program that acts as wc and create different outputs
+    - test against actual wc program.
+* design patterns
+** strategy
+** Observer
+** Factory
+*** Factory Method
+*** Abstract Factory
+** Singleton
+** multiton
+** Facade
+** Proxy
+*** remote proxy
+    - promise
+    - looks like the thing that is proxying(has the same interface)
+*** virtual proxy
+    - controls access to a resource that is expensive to create
+    - kind of like lazy evaluation which makes sure when yu acctually
+      need that thing then you are going to create it.
+
+*** protection proxy
+    - access management
+    - controlls access to a resource based on the access rights
+** Adaptor
+** Decorator
+** bridge pattern
+   - view and media resource
+     - https://www.youtube.com/watch?v=F1YQ7YRjttI 15:00
+* pojects
+  - any project large enough will cover
+    - OOD
+    - Exception Management
+    - and Package section
+  - for project to support design patterns either they should be big and desigend first
+    or they can be achived in the refactoring section
+** projects to cover text processing
+*** writing a lexer(Home)
+*** document formatting(home)
+    - string builder is a must
+*** regex engine
+    - Tries are a must
+*** write a html parser
+*** write an xml parser
+*** write an data harvesing system
+** projects to cover I/O and File I/O
+*** encryption Virus
+    - will learn about Random numbers
+    - directory and file traversal
+    - (possibly socket programming to store keys offsite)
+*** write a dd program
+*** write a hex reader
+*** Write a pattern matcher(binary)
+*** write file management system
+    - needs database

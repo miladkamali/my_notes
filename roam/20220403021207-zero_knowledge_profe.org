@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       54e5dae7-07d8-4fc1-bcfd-fcd5757eed1e
+:END:
+#+title: zero knowledge proof
+https://www.youtube.com/watch?v=V5uVKZn3F_4

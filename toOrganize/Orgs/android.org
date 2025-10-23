@@ -1,0 +1,6 @@
+* material designe
+  - [[https://www.materialpalette.com/colors][material palette ]]
+
+
+* class
+  https://stackoverflow.com/questions/22639218/how-to-get-all-buttons-ids-in-one-time-on-android

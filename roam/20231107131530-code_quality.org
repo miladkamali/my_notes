@@ -1,0 +1,71 @@
+:PROPERTIES:
+:ID:       A2F4BA8B-3BA8-44C3-80E1-BAF22B1DA348
+:END:
+#+title: code quality
+
+* info
+
+** [[https://www.youtube.com/watch?v=q1qKv5TBaOA][How principled coders outperform the competition]]
+* use code standard
+* programming principles
+** Keep it DRY
+** If it ait broke don't fix it
+** separation of concerns
+** You aren't gonna need 
+** arrange act assert 
+** keep it simple stupid
+** worse is better
+** avoid premature optimization
+** SOLID
+* design patterns
+** creation patterns
+*** factory method pattern
+*** abstract factory
+*** builder
+*** Dependency injection
+*** lazy instantiation
+*** multiton
+*** Object pool
+*** prototype
+*** RAII
+*** Singleton
+** structual pattern
+*** adaptor pattern
+*** bridge
+*** composite
+*** Decorator
+*** delegation
+*** extension object
+*** facade
+*** flyweignt
+*** front controller 
+*** marker
+*** module
+*** proxy
+*** translator
+*** twin
+** behavioral pattern
+*** observer pattern
+*** Blackboard
+*** chain of respoinsibility
+*** command
+*** fluent interface
+*** interpreter
+*** iterator
+*** memento
+*** null object
+*** observer
+*** servant
+*** specification
+*** state
+*** strategy
+*** template method
+*** visitor
+* naming
+* testing
+** end to end
+** unit tests
+** integration tests
+* time estimation
+* speed
+do not rush

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       55f449d6-030e-46bc-871a-421936494b96
+:END:
+#+title: hormone
+* [[id:edcaa58c-ed9c-4485-ad4a-ce051a786208][dopamine]]
+* [[id:fae7c773-ade2-409a-851f-dcc3fb7e07b9][endorphins]]
+* [[id:e83568d7-c759-4881-86a9-ad6513ccf9ca][testosterone]]
+* [[https://www.youtube.com/watch?v=qJXKhu5UZwk][optimize testosterone and estrogen]]
+* [[id:E5D06B71-E620-43AB-A100-70D26E029470][prolactin]]

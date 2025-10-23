@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4c5bbc26-2730-4817-a241-df3b2809fa55
+:END:
+#+title: neurogenisis
+the process in which neurons are generated from neural stem cells
+https://en.wikipedia.org/wiki/Adult_neurogenesis

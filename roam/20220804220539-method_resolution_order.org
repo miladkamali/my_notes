@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       5DBF1203-0688-41E0-959D-A37464A5F1DA
+:END:
+#+title: method resolution order
+Method Resolution Order(MRO) is how programming languages decides which method should be called
+
+
+in python you can use ClassName.__mro__

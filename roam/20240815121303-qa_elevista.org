@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       20B37C88-B091-4EA5-A349-79B489E00ACA
+:END:
+#+title: QA-elevista
+* test Scenarios
+** Freemium Scenario
+*** user login
+**** login with correct credential
+**** login with wrong credential
+*** 

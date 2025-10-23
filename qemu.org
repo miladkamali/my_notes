@@ -1,0 +1,2 @@
+* start default network
+  virsh net-start default 

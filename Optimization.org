@@ -1,0 +1,2 @@
+* escape analysis
+ * TODO [[https://www.youtube.com/watch?v=QNeu0wK92NE][Jonathan Worthington. Perl 6 performance update]]

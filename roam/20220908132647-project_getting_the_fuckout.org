@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       8D961957-CB0B-4086-918B-9A5077EFC16F
+:END:
+#+title: project getting the fuckout
+talent.io
+honeypot.io

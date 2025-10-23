@@ -1,0 +1,2 @@
+* tunnel everything through ssh
+  sshuttle --dns -r root@158.58.189.8 -x 158.58.189.8  0/0 -vv

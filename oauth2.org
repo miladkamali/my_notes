@@ -1,0 +1,80 @@
+* Oauth2/OpenIdConnect
+** videos
+*** [[https://www.youtube.com/watch?v=996OiexHze0][OAuth 2.0 and OpenID Connect (in plain English) ]]
+** Identity use case
+*** simple login   : Authentication
+*** Single sign-on across sites  : Authentication
+*** Mobile app login : Authentication
+*** Delegate authorization : Authorization
+** sources
+   [[https://www.youtube.com/watch?v=996OiexHze0][OAuth 2.0 and OpenID Connect (in plain English)]]
+** OpenIdConnect
+   extention to Oauth 2.0
+   openIdConnects adds
+   [[file:./OpenIdConnect_flow.png][openIdConnect]]
+   [[file:./OpenIdConnect_NativeAppflow.png]]
+*** openIdConnect adds
+**** ID token
+**** UserInfo endpoint for getting more user information
+**** Standard set of scopes
+**** Standardized implementations
+** Oauth2 
+   is used for authorization and not authentication
+*** terminology 
+**** Single sign-on across sites (SAML)
+     [[https://www.youtube.com/watch?v=S9BpeOmuEz4][Introduction to SAML]]
+**** delegated authorization
+**** Resource Owner
+     you and me who has some data in google facebook linkedin ...
+     my contacts in google account
+**** Client
+     application that need access to the data
+**** Authorization server
+     system that authorizes access to the resource
+**** Resource Server
+     google contact server
+**** AUTHORIZATION GRANT
+     the thing that proves you have granted the access
+     there are several authorization grants most commonly it is 
+     authorization code flow
+**** Redirect URI
+     the url that authorization server redirects user with the authorization grant
+**** Access token
+     access token grants specific access to the resource in resource server for
+     instance you can only read contacts in google contact but you can not
+     modify or delete them
+***** TODO how access tokens access are identified internally
+**** Scope
+     authorization server has a list of scopes it understands like
+     contacts read
+     contacts modify
+     contacts delete
+     email delete
+     email read
+**** Consent
+**** Back channel
+     highly secure channel
+     back-end server to some API
+**** Front channel
+     browser
+*** OAUthFlow
+**** General flow
+     [[file:./OauthFlow1.png][flow 1]]
+**** authorization code flow
+     [[file:./OauthFlow_authorization_code_flow.png][authorization code flow]]
+**** asking for specific scope in authorization code flow
+     [[file:./OauthFlow_authorization_code_flow_with_scope.png][flow]] 
+     [[file:./OauthFlow_authorization_code_flow_google_example.png][google example]]
+     [[file:./OauthFlow_authorization_code_flow_google_example_response.png][google response]]
+     [[file:./OauthFlow_authorization_code_flow_google_example_exchange.png][exchange access token]]
+     - https://oauthdebugger.com/ 
+     - the reason exchange happens in back channel is because access tokens
+     are sensitive information and in order to get them there is a password
+     specific to the application that should be provided to the authorization
+     server and it's not safe to store this password in browser.
+*** OAuth2.0 flows
+**** Authorization code (front channel + back channel)
+**** implicit (front channel only)
+     [[file:./OauthFlow_authorization_implicit_flow.png][implicit flow]]
+**** resource owner password credentials (back channel only)
+**** Client credentials (back channel only) 

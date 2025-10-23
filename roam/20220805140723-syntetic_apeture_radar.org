@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       489D6C38-FB34-4F7C-8164-F92653D678C6
+:END:
+#+title: syntetic apeture radar
+[[https://www.youtube.com/watch?v=u2bUKEi9It4][Satellites Use 'This Weird Trick' To See More Than They Should - Synthetic Aperture Radar Explained.]]

@@ -1,0 +1,34 @@
+* sources
+** [[https://www.youtube.com/watch?v=D4auWwMsEnY][Code Refactoring: Learn Code Smells And Level Up Your Game!]]
+** https://refactoring.guru
+** https://www.martinfowler.com/bliki/DataClump.html
+* categories of code smells
+** Bloaters
+*** Long Method
+*** Large Class
+*** Data Clumps
+    
+*** Long Parameter List
+*** Primitive Obsession
+** Tool Abusers
+*** Switch Statements
+*** Refused Bequest
+*** Alternative Classes/Differet Interfaces
+*** Temporary Field
+** Change Preventers
+*** Divergent Change
+*** Shotgun Surgery
+*** Parallel Inheritance Hierarchies
+** Dispensables
+*** Lazy Class
+*** Speculative Generality
+*** Data Class
+*** Duplicated Code
+** Couplers
+*** Feature Envy
+*** Inappropriate Intimacy
+*** Message Chains
+*** Middle Man
+* recipies
+** https://www.industriallogic.com/wp-content/uploads/2005/09/smellstorefactorings.pdf
+   [[file:./smellstorefactorings.pdf][recepies pdf]]

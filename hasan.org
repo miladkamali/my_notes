@@ -1,0 +1,37 @@
+* programming
+** Java پیشرفته
+** Javascript متوسط
+** Bash  آشنایی
+** php  آشنایی
+* Technologies - 
+** Git  متوسط
+** Spring boot  متوسط 
+** spring security مقدماتی
+** Hibernate متوسط
+** Junit متوسط
+** Mockito مقدماتی
+** JWT مقدماتی
+** protobuf متوسط
+** MinIO متوسط
+** Redis متوسط
+** Liquibase مقدماتی
+** SQL
+** Postgresql تجربه کار و راهبری
+** Oracle  تجربه کار و راهبری
+** ActiveMQ  مقدماتی
+* miscellaneous
+** BootStrap
+** jQuery
+** WordPress
+** html css 
+* operating system
+** Linux (admin level)
+*** Cent OS
+*** yum
+** Windows
+* language 
+** English
+*** Reading خوب
+*** Listening متوسط
+*** Writing ضعیف
+*** speaking ضعیف

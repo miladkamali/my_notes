@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       4ffaebfb-a864-4eac-a21a-6532c949c755
+:END:
+#+title: bnb
+
+* bnb
+binance smart chain
+
+* concences method
+** proof fo staked authority
+* features
+** fast performance
+** low cost
+** Integration with binance

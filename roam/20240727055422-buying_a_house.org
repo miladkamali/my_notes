@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       F81D3B52-B8FE-45AE-9763-E4275AC2DA64
+:END:
+#+title: buying a house
+* fund aggregation
+** possible funds that i might get access to
+*** Uid options that i have
+*** uid exit funds(250 mil)
+*** 
+** loans
+*** 800 of maskan bank
+*** 2* 100 of aban tether
+*** 400 of resalat
+*** blu bank loans 2*40
+*** blu bank loan 1*200
+** savings
+*** actual dollars
+**** TODO check with dady about the amount of dollars i have as physical cash :call:
+*** actual euro
+**** TODO check with dady about the amount of euro i have as physical cash
+*** tether funds
+  10000 $
+** 

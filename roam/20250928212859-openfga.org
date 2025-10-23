@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       5de59f6f-d112-4f7e-9397-4b5995b59b1b
+:END:
+#+title: openfga
+* documentations
+** [[https://openfga.dev/docs/interacting/relationship-queries][relationship query]]
+* cli
+https://github.com/openfga/cli
+https://github.com/openfga/cli/releases/download/v0.7.5/fga_0.7.5_linux_amd64.rpm
+
+* running it
+docker run -p 8080:8080 -p 8081:8081 -p 3000:3000 openfga/openfga run

@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       9C4340C9-EE58-49D1-BBA2-40012C6926E7
+:END:
+#+title: bitcoin
+
+* indicators
+** [[https://www.bitcoinmagazinepro.com/charts/mvrv-zscore/][mvrv z score]]
+** [[https://www.bitcoinmagazinepro.com/charts/relative-unrealized-profit--loss/][NUPL net unrealized profit]]
+** [[https://www.bitcoinmagazinepro.com/charts/pi-cycle-top-indicator/][pi cycle top indicator]]
+** [[https://www.bitcoinmagazinepro.com/charts/puell-multiple/][puell multiple miners profit]]
+** [[https://www.bitcoinmagazinepro.com/charts/bitcoin-rainbow-chart/][rainbow chart]]
+** coin investor tool: 2 year MA multiplier  
+* common strategies 
+** 500 rule
+buy buicoin 500 days before halfing and sell it 500 days after halfing
+* people
+** Mark Moss
+** the prophet
+*** Josh man
+@JoshMandell
+**** first
+Ok, so here goes.... I have been somewhat vague and have attempted make these
+latest predictions seem like they could be explained by some system or knowledge
+of markets. This is not true. The truth is that I have a very specific
+prediction based on memories of something that happened 30 years ago, combined
+with thoughts which seem ever present in my mind. If Bitcoin were to close at
+84,000 on March 14th, it will "run the table". I am not certain what that
+means... I have a couple thoughts but there's no point unless somehow it
+actually closes at 84,000 today. The truth is that I am becoming convinced that
+it may well do just that, and that the impossible odds of such a thing occurring
+means that I will have some explaining to do. If this occurs, I will likely take
+the rest of the month off and reach out to family members to let them know what
+I am planning to reveal. Believe me, I hope I am wrong about this because some
+people are definitely going to view me as mentally ill if they are non-believers
+or heretical if they are people of faith.
+**** second
+Now we are simpatico. Here's my vision... Street does handicap P/E, assuming a
+Bitcoin winter is right around the corner. $BTC peaks at 444K and comes back
+down to 84K. Street is like "I told you so". But a recovery ensues from there
+and the pinball game is on. Hopefully @Saylor figures out that I am the peanut
+butter to his chocolate... I know he's seen the future, but just glimpses. Every
+sniper needs a spotter. I have the scope. I know why he's worried about giving
+out wallet addresses. He knows that Quantum is a risk. I know the

@@ -1,0 +1,97 @@
+* topics
+** set java environment variables
+** introduction to javac and java
+** explain file and class naming conventions
+** explain comments
+   - /* */
+   - //
+   - java doc
+     /**
+     *
+     *
+     */
+** explain println()
+** explain escape char
+   - \\
+   - \"
+   - \r
+   - \t
+   - \n
+** explain printf( i really dont like it)
+** explain Scanner
+*** scanner.next()
+*** scanner.nextLine()
+*** scanner.nextInt()
+*** scanner.nextDouble()
+*** scanner.nextFloat()
+** import and their location( maybe some other time )
+** concept of variables
+** dataTypes
+*** Int
+*** Long
+*** float
+*** double
+*** char
+** range and size of each data type                                    :Home:
+** binary representation of these data types                           :Home:
+** Unicode                                                             :Home:
+** ASCII                                                               :Home:
+** Arithmetic
+*** +
+*** -
+*** *
+*** /
+*** %
+** integer arithmetic
+** operator pirority
+** ask clever questions                                                :Exam:
+*** int a=3.5/3
+*** int a=-3.5/3
+*** int  a= 0/0
+*** int a = 10/0
+*** int a = 3.5+3.5
+*** 3*2 + 10*2
+** comparison operators
+*** <
+*** >
+*** >=
+*** ==
+*** !=
+** introductio to swing
+*** dialog box
+*** text box
+* introduction to structured programming
+** search about goto and spagetti code                                 :Home:
+** sequence selection and reptition structures
+*** selection
+**** if else
+**** Conditional Operator
+     studentGrade >= 60 ? "Passed" : "Failed"
+**** switch
+*** repitition structures
+**** while
+**** do while
+**** for
+**** enhanced for
+** learn about activity diagram                                        :Home:
+** sentinel-controlled loop
+** cast operators
+** Compound Assignment Operators
+   - +=
+   - -=
+   - /=
+   - *=
+   - %=
+   - ++a
+   - a++
+   - --a
+   - a--
+*** int a=10;int b=a++;int c=++a; what are b and c
+** gui
+   3.14 page 147
+** for
+** break/continue
+** Conditional And &&
+** Conditional OR ||
+** Logical Exclusive OR ^
+** Logical Not !

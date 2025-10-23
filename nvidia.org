@@ -1,0 +1,26 @@
+* tempreture
+  
+
+    Download Nvclock with the following command (or with the package manager named :add/remove software)
+    sudo pacman -S nvclock
+    After installing it, type nvclock -T (in your terminal) to display the temperature.
+
+OR
+
+    You can also type nvidia-settings -q gpucoretemp. (in your terminal)
+
+OR
+
+    An alternative is to use nvidia-smi: the “NVIDIA System Management Interface program”.
+
+    user@box:~$ nvidia-smi -q -d temperature
+    GPU 0:
+    Product Name : GeForce 210
+    PCI ID : a6510de
+    Temperature : 39 C
+
+OR
+
+    If you want to watch the temperature in your terminal for monitoring, you can use watch with the commands that were given above. For instance, to refresh the temperature every 1 seconds:
+
+    watch -n 1 nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader

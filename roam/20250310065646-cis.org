@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       B5B37EB3-FEAE-45DC-B1B3-DCC82B6D64FF
+:END:
+#+title: cis
+
+* cis modules
+** State Monitoring Service
+*** write a method to check table exist with exactly the same column and types
+*** DONE investigate if views are same as tables                      :hasan:
+*** DONE write a method to check if table with associated view exist or not :hasan:
+*** create a technical document from technologies that are being used :milad:hasan:
+*** DONE Create DataMaker Project With Fake Data                                                             :armin:
+this database has to have small(100-500) medium(2000-5000) and large(20000 - 50000) and huge( 200000 - 5000000 ) row tables
+*** create test infrastructure for replication methods                :arash:
+*** create a simple project to update data in sample project periodically to test performance of the system :armin:
+*** setup gRPC submodule                                              :hasan:
+*** setup temporal submodule                                          :hasan:
+*** finalize protobuf designs                                         :milad:
+*** implement list of entities rpc                                    :hasan:
+*** implement list entity search rpc                                  :hasan:
+*** DONE create docker compose to setup environment for the development :saleh:
+*** TODO investigate temporal simple project                          :hasan:
+*** setup CI/CD for the project                                       :arash:
+** BFF
+this is the orchestrator of the project
+*** set up project 
+**** set up temporal submodule
+**** set up grpc submodule
+*** set up keycloak integration
+*** setup open fga  integration
+*** design entity read workflows
+*** design form submission workflow
+*** design ERD
+*** design monitoring system
+*** implement Read workflow
+*** implement form submission workflow 
+*** implement access checking module
+*** implement monitoring system
+*** [#A] finalize proto designs                                       :milad:
+*** [#A] Verify Proto designs with Acctech                            :milad:
+** Fourm handler
+*** [#A] design protobuf for communication with acctech module
+*** [#A] finalize protobuf with acctech
+*** design ERD for the project
+*** design form workflow
+*** design monitoring system
+*** implement monitoring system
+*** implement form workflow
+*** create sample program to simulate Acctech software
+
+* open questions
+** gateway for communication with ERP
+*** how many services do gateway for communication is going to communicate with
+*** what are the rules regarding user management in that gateway
+*** we need comprehensive list of 
+** information microservices
+*** how many information microservices are we going to need at the moment its five including inventory customer profile product user and logistic
+** workflow 

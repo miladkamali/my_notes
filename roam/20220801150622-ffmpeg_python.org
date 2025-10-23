@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       278df156-0177-4617-aba4-1a54ad40c7e6
+:END:
+#+title: ffmpeg-python
+a library that is used to interface with ffmpeg from python
+
+ffmpeg.input("2.mkv").output('out.mkv',vcodec='libx265',crf='28',preset='slow').run()

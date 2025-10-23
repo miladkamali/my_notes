@@ -1,0 +1,102 @@
+:PROPERTIES:
+:ID:       296B2C37-BC5E-4559-8494-909156885281
+:END:
+#+title: ATS
+* information
+لینک‌های مورد نیاز پروژه ATS اک‌تک:
+لینک استوری:
+https://docs.google.com/document/d/1dp8o7qJGpdqx7ET3fSuooBgk3Ue1JOMB/edit
+لینک دیزاین فیگما:
+https://www.figma.com/design/8xmjic6RtnoA27dV9Vp78x/Applicant-Tracking-System?node-id=4197-29362&p=f&t=GwuOgyeCz0rp52M9-0
+
+لینک پروتوتایپ‌ها:
+https://www.figma.com/proto/8xmjic6RtnoA27dV9Vp78x/Applicant-Tracking-System?page-id=4197%3A29362&node-id=4249-28511&p=f&viewport=4403%2C2185%2C0.06&t=KK0K4CHIPkTJIazt-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4249%3A28511&show-proto-sidebar=1
+
+* demo 15 shahrivar
+** User
+** Integration issues
+* delivery process for ATS                                         :@bentoak:
+** finalizing the project[0/6]
+*** TODO finalizing authorization model and implementation [0/4]
+- State "TODO"       from              [2025-10-21 Tue 14:04]
+**** TODO check authorization model with saleh                        :saleh:
+SCHEDULED: <2025-10-22 Wed>
+- State "TODO"       from              [2025-10-21 Tue 14:04]
+**** TODO check tuple insertion with armin
+- State "TODO"       from              [2025-10-21 Tue 14:05]
+**** TODO create remaining endpoints for getting the role
+- State "TODO"       from              [2025-10-21 Tue 14:49]
+*** TODO update documents on the project
+*** DELEGATED add extra users to user seed for setup                  :saleh:
+DEADLINE: <2025-10-23 Thu>
+:LOGBOOK:
+- State "DELEGATED"  from "DOINGNOW"   [2025-10-23 Thu 13:07]
+- State "DOINGNOW"   from "TODO"       [2025-10-23 Thu 13:06]
+- State "TODO"       from              [2025-10-23 Thu 13:05]
+:END:
+*** DOINGNOW identify issues with company hierarchy structure         :saleh:
+:LOGBOOK:
+- State "DOINGNOW"   from "TODO"       [2025-10-23 Thu 13:25]
+- State "TODO"       from              [2025-10-23 Thu 13:23]
+:END:
+*** TODO clean up and review documentations
+SCHEDULED: <2025-10-26 Sun>
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 13:35]
+:END:
+*** TODO clean up and review tests of the project
+SCHEDULED: <2025-10-28 Tue>
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 13:36]
+:END:
+** deploy new environment for testing[0/2]
+*** DELEGATED create appropriate environment variable in front-end :adib:basir:
+DEADLINE: <2025-10-23 Thu>
+:LOGBOOK:
+- State "DELEGATED"  from "TODO"       [2025-10-23 Thu 13:08]
+- State "TODO"       from              [2025-10-23 Thu 13:07]
+:END:
+*** DELEGATED set up environment with new address
+:LOGBOOK:
+- State "DELEGATED"  from              [2025-10-23 Thu 13:09]
+:END:
+** create data entry endpoint
+*** DELEGATED create an endpoint that                                 :saleh:
+SCHEDULED: <2025-10-26 Sun>
+:LOGBOOK:
+- State "DELEGATED"  from              [2025-10-23 Thu 13:30]
+:END:
+** fitting notification interfaces to acctech
+*** DOINGNOW identify the current interfaces we are using in the project
+SCHEDULED: <2025-10-23 Thu>
+:LOGBOOK:
+- State "DOINGNOW"   from "NEXT"       [2025-10-23 Thu 13:30]
+- State "NEXT"       from "TODO"       [2025-10-23 Thu 13:29]
+- State "TODO"       from              [2025-10-23 Thu 13:29]
+:END:
+*** NEXT get notification endpoint from acctech
+SCHEDULED: <2025-10-25 Sat>
+:LOGBOOK:
+- State "NEXT"       from              [2025-10-23 Thu 13:29]
+:END:
+*** TODO  integrating the endpoints
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 13:31]
+:END:
+** start handover to Devops team
+*** TODO request direct access to a person in charge that we can communicate with for Devops
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 13:33]
+:END:
+*** TODO cleanup all the docker compose and CI/CD and connect Arash with the same person
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 13:34]
+:END:
+*** TODO get access to git to upload the code
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 13:48]
+:END:
+**** TODO request user and git repo and also access to the internal git
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 13:48]
+:END:

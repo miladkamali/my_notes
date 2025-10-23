@@ -1,0 +1,38 @@
+* docker
+** what are other container technologies
+** terminalogy
+*** container repository
+    - docker-hub
+*** image
+    the artifact
+*** container
+    container is the running environment for image
+** what is container
+   container is a layers of linux base image , application image with configuration
+   for linux people usually use alpine
+** commands
+*** download an image
+    docker pull <imageName>
+*** list images
+    docker images
+*** list all container that are running or not running
+    docker ps -a
+*** associate a port to the container
+    docker run -pHostPort:DockerPort -d --name "containerName"  <imageName> 
+    -d run in detached mode
+    -pHost:Container  attach host port to container
+    - --name specify a cusom name for the container
+    - -e set environment variable
+*** start container
+    docker start containerId
+*** stop a container
+    docker stop containerId
+*** see container logs
+    docker logs containerId
+*** get into terminal 
+    docker exec -it <containerImage> /bin/bash
+*** network
+**** list docker networks
+     docker network ls
+**** create netwrok 
+     docker network create "networkname"

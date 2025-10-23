@@ -1,0 +1,4 @@
+SUPER-CTRL-Q – Quit
+SUPER-CTRL-W – Show/Hide main window
+SUPER-CTRL-R – Start Recording
+SUPER-CTRL-F – Finish Recording

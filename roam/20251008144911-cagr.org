@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       bf1e1f84-c6e5-484f-b1dc-549324471b58
+:END:
+#+title: cagr
+
+Compound annual growth rate
+https://en.wikipedia.org/wiki/Compound_annual_growth_rate

@@ -1,0 +1,33 @@
+* things to do
+** [#A] user registration [0.5 day]
+*** username
+*** password
+*** email
+*** phoneNumber
+*** capta
+** [#A] profile for users [ 0.5 day ] 
+*** security based on user login
+*** information for user
+**** name
+**** family name
+**** country
+**** city
+**** payment channels(bank account,paypal, ....)
+**** [#C] picture
+**** transaction list
+** [#A] admin panel [1 day] 
+*** ability to see orders
+*** ability to check users
+*** ability to update different money conversion rates
+*** search and list users
+*** list transactions
+*** [#B] message to user
+** [#A] integration with paypal [ 3 day ] 
+** [#A] integration with zarinpal [0.5 day]
+** [#A] ordering system [ 2 days ]  
+*** ability to track orders in different stages
+** [#A] information system [0.5]
+   - conversion rates for money
+   - it's history
+** [#A] logged in section [1 day]
+** [#A] public section [0.5]

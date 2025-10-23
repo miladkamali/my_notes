@@ -1,0 +1,60 @@
+* C- محمدرضا فلاحتی
+  reject because i can't 
+  i did't like the resume, he dose't have deep enough knowledge
+* حامد حریری B-
+  mid level maybe
+  he is trying to build a resume, but i think we should take a look at it him.
+  he should have bare minimum required knowledge
+* ‫مهدی قنبر زاده c+ 
+  junior developer
+  he has not been working anywhere for about a year and half?
+* ‬محمد بسیج C-
+  at best mid-level
+  not enough related experience
+* علی یونسی B
+  i don't think he has a grasp of his actual level
+* مریم زوارقدیم C+
+  i would say at best mid even maybe jounior
+  definitely not knows how to create a resume.
+* علی محمدی A
+It seems he knows his way around virtualization technologies specially docker which we need.
+I love his personal projects, It seems he is a developer by heart, which is what i was looking for.
+  
+* امیر احسان شهمیرزالو B+
+  it seems he is more of contractor than a employee
+  he has experience working with international projects that's a major plus
+  
+  it seems a bit strange he goes from support to senior java developer in no time.
+
+  
+*  Saeedeh Karami C (reject)
+  she seems to be a talented young developer, definitely not a senior and more
+  over not a java developer, unfortunately we can't have her in our teem now.
+
+* Bardya Momeni b-  (should be checked but not much hope)
+  he is more of a mobile developer than java back-end developer. there is few
+  demonstrable back-end work in java. i feel like his claims about some of his
+  skills are unfounded and they are listed because he has done some research on
+  them.
+
+* Masoud moghini C(reject)
+  fist thing first, he has no idea how to make a CV. what is up with his email?
+  i can certainly say he is not a senior developer in any thing! Definitely a
+  junior developer.
+
+* reza mazloom B+ (should be checked, there is some hope)
+  definitely a java developer, his knowledge seems adequate for our needs. i
+  doubt he's an architect how ever we can use his skills if every thing else is OK.
+
+ 
+  i'm gonna let "‫‪Train‬‬ ‫‪Java‬‬ ‫‪Core‬‬ ‫‪and‬‬ ‫‪some‬‬ ‫‪advanced‬‬ ‫‪subjects‬‬ ‫‪like‬‬ ‫‪MultiThread,‬‬ ‫‪Collection‬‬" slide!
+
+* MAHDIEH ZAVARGHADIM B ( should be checked, there is some hope even though she is not senior )
+  i highly doubt that she is an architect, she is focused on java which is plus.
+  she might have good knowledge of echo system. Her listed skill set is close to
+  what we are going to need. she has not worked on micro-service architecture.
+  she has Fintec/banking experience in all his work.
+
+  I myself had an interview with Digi-Pay and i rejected them! ;)
+
+  

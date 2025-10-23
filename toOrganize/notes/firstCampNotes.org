@@ -1,0 +1,63 @@
+* project
+** git
+*** make sure every one has proper credential
+    - choose proper names and add theri emails
+    - make sure they have the same configuration on every system
+*** make sure people have the same credential every where
+**** TODO add a system to detect unknown or changes in names
+*** add signature for every person
+**** TODO make the process of commit signature painless
+** setup automated test pipeline for easier management of merges 
+* managing class
+** make sure every one is following the exercises
+*** TODO create a test system for every exercise
+    - takes a long time
+*** create an atmosphere of group working so they help each other
+    - ask Dr shamsaie for help on this one
+*** Do not progress to the next problem unless atleast 90 percent 
+** TODO create automated tests system to check everyone's code correctness
+
+* problems
+** make sure the camps do not mix
+   - it was a major headache which drained a lot of energy
+** Since most people have no base, They need a guide map at the very least.
+   the problem is that most of the time they have no idea what they need to 
+   do so they waste time stumbling between things to figure out.
+* problems
+** time management
+*** visits should be confirmed two weeks in advance(Dotin visit was bad timing)
+*** we did not prepare Trainees for interview
+*** we did not prepare their resume to make them look good
+*** we needed much more evaluations before end of camp
+*** project was acceptable not good
+*** we did lose about 2.5 to 3 weeks of productive work
+*** in the begining of project Trainiees were not ready
+*** camp mixture
+    - total disaster
+*** project timing
+**** project deadlines were relaxed due to technical difficulties
+*** sprint management
+**** lack of time for grooming
+**** lack of definitive start and finish time
+**** no backLog
+** equipment and accessories
+*** it took too long for ferniture to be available
+*** we did have major problems with internet, still we are suffering in that department
+    - 
+*** PCs and laptop needs maintanance( it's out of our or trainees responsibilites)
+    - at least one laptop has problem connecting to projector
+    - VGA HDMI
+*** projector clarity degrades over time
+** learning intruptions
+*** sudden introduction of hibernate
+*** sudden intoruction of failure sprint
+*** presure on me to be less present
+*** introduction of the second camp
+** change in goals
+*** initially we planned for Android and over night it changed to java
+*** initial plans were for Java SE and a bit of hibernate it changed in the middle of execution
+     much higher 
+** feedback management
+*** TODO in the end and middle of camp feed backs were too little
+    - get the feedback after they leave the camp
+*** I need more feed back from Dotin and other places to manage the plan accordingly

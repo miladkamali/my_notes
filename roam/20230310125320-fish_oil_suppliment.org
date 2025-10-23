@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       8963E7E4-7F13-4FE0-B997-C3D1B4946645
+:END:
+#+title: fish oil suppliment
+fish oil contains [[id:D8B12E01-8E2C-45FE-8150-29B0D2794304][omega 3]] [[id:020F373F-6F35-41AB-B6D3-AAB51FFCC5FE][epa]] and [[id:A08208C1-6221-46C3-9246-45941A48F975][dha]]
+* sources
+** [[https://www.youtube.com/watch?v=zt-64z2QKto][Stop Buying RANCID Fish Oil - How to Choose the Right Fish Oil]]
+** [[https://www.youtube.com/watch?v=bSeYHUc9xo8][How to Choose the Best Fish Oil and Omega-3 Supplement with ConsumerLab's Dr. Tod Cooperman]]
+* effect of fish oil
+** reduce inflamation 
+** helps brain function and reduce risk of dementia and alzaymer
+du to presence of high level of EPA and DHA 
+** greate source of [[id:7E58040B-08D8-40B4-9FF4-D5C8719C6347][vitamin A]] and [[id:BDBCAC5B-1C93-46AE-8AD0-943494C546A0][vitamin D]]
+it's [[id:7E58040B-08D8-40B4-9FF4-D5C8719C6347][vitamin A]] is retinol type which is important for healthy skin, vision and
+immune system function
+** helps slow agin process
+it contains [[id:3F426271-072E-48D3-9C49-9084896176CA][collagen]]
+
+fish oil show down certain aspects of 
+** helps with joint health
+[[id:D8B12E01-8E2C-45FE-8150-29B0D2794304][omega 3]] helps reduce inflamation in connective tissue
+fish oils has proven effective for thoes who are suffering from [[id:65C8619C-09D4-472D-8A45-AC1868908755][arthritis]]
+** improve immune system
+fish oil suppliment improves the function of [[id:D7033E13-6369-4790-9851-6BF78C46C918][t cell]] in intensive care patients
+fish oil may help agains infection and improve recovery after sergery
+
+fish oil with combination of [[id:25081E0A-22C0-401B-AFE8-DF4B4A6BBC12][flaxseed oil]] has proven to increase [[id:A08208C1-6221-46C3-9246-45941A48F975][dha]] and [[id:020F373F-6F35-41AB-B6D3-AAB51FFCC5FE][epa]]
+** decryses eye pressure
+** increases stamina and muscle damage
+fish oil increase body ability to burn fat instead of cabohydrate
+** speed up muscle recovery after exercise
+** increases levels of serotonin
+* side offects
+some people experience dierria and burping after consuming fish oil suppliment
+* supliment types
+** Ethanol
+** Ethyl esters
+** triglyceride form
+cod liver oil 

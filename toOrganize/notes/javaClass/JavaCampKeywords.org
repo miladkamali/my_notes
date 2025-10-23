@@ -1,0 +1,55 @@
+* java
+  - java history
+  - java SE
+  - java EE
+  - java ME
+  - java SIM
+  - compile once run anywhere
+  - Java Byte Code
+  - OpenJDK vs Oracle
+  - JVM and how it works
+  - what is JIT 
+  - Java Garbage collector
+  - Java Memory management
+  - Object Oriented Programming
+  - procedural programming
+* computer
+  - cpu
+  - ALU
+  - RAM
+  - Secondry Storage Units
+  - Tape,HDD,SDD
+  - bit/Byte/Character/Word
+  - Unicode(8,16,32)
+  - ASCII
+  - File/FileSystems
+    - fat16
+    - fat32
+    - NTFS
+    - HFS
+    - ZFS
+    - BTRFS
+* database
+  - Relational Database
+  - SQL
+* machine architecture
+  - instruction Sets
+    - CISC
+    - RISC
+    - VLIW
+    - EPIC
+* programming languages
+  - Assembly Language
+  - Compiler
+    - Symbol table
+    - Abstract syntax tree
+  - Interpreted languages
+  - Compiled languages
+
+* Operating sytem
+  - operating system history
+  - DOS
+  - Windows
+  - OSX
+  - Linux
+  - Android

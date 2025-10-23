@@ -1,0 +1,49 @@
+* subsystems
+** Oracle
+*** problems we have seen so far
+**** table space
+     filled quata for each table in database
+     11 January
+*** possible problems
+**** concurrent connection limitation
+     number of concurrent connection exceed the limit which cause the new
+     connections be droped right now we have 3 server each having 30
+     simultanious connection due to JDBC errors which are poping up we need to
+     increase this number, maybe to 50
+**** table space
+**** password expiration
+     we had this one in our development oracle database
+** F5 loadBalancer/Networking issue
+*** history of problems
+    - that day which we were offline since 9:20 - 10:30 Dr was here alone before
+      us, it turned out it was a network routing issue after lots of discussion.
+      checking wsdl showed the problem is not limited to our system. The problem
+      went away by a network restart, but it came back in 5 minutes
+      intervals(give or take) up to 11:15 or around that time.
+** RabitMQ
+** Reddis
+   - two servers
+** SMS system
+*** REST subsystem
+*** SOAP subsystem
+** Mail System
+   bank service
+** file Logs system
+*** Possible Issues
+**** not enough space on disk 
+** elastic search kibanna logstash
+   - 3 elastic search masters
+   - 2 nodes
+   - 2 Logstash
+   - 1 Kibana
+*** problems we have seen so far
+    i have not seen any problems
+*** possible problems
+**** server space
+* APIs
+** SEP
+** Yaghut
+*** problems we have seen so far
+    every thing could and would go wrong with this stupid service!
+*** problems
+** ThirdParty yaghut cardowner

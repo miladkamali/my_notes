@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       071D4ED4-61F0-4EFF-A395-49AFE0E15157
+:END:
+#+title: grpc
+* load balancing
+** HA proxy
+
+https://grpc.io/blog/grpc-load-balancing/
+
+https://www.haproxy.com/blog/haproxy-1-9-2-adds-grpc-support/
+[[https://github.com/grpc/grpc-java/issues/5018][issue with discovering real client ip]]
+
+https://tousu.in/qa/?qa=326539/go-how-can-i-get-the-client-ip-address-in-grpc-from-a-load-balancer-that-adds-x-real-ip-and-x-forward-for-to-the-header

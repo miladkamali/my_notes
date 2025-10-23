@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       9424c217-d3e3-4c99-be2f-92ccf38ef1ce
+:END:
+#+title: computational photography
+
+* aligning images
+** using hugin
+ align_image_stack -a align_ *.jpg
+** using photoshop
+* median on images
+** using image magic
+convert `ls|grep alig|tail -n 50` -evaluate-sequence median result_median2.tif
+* average on images
+** using image magic
+convert -average `ls|grep alig|head -n 30` result_average.tif
+* noise removal
+

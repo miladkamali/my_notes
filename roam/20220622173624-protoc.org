@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       44d5f202-7abc-43e7-a8de-694f9f4a177f
+:END:
+#+title: protoc
+* documentation
+https://github.com/pseudomuto/protoc-gen-doc
+https://github.com/pseudomuto/protoc-gen-doc/wiki/Custom-Templates
+https://github.com/pseudomuto/protoc-gen-doc/blob/master/examples/templates/grpc-md.tmpl
+
+
+protoc --doc_out=./doc  ir/uid/services/*
+protoc --doc_out=./doc --doc_opt=html,index.html `find ./ir -name "*.proto"|grep -v node`
+
+
+protoc --proto_path=./ \
+    --descriptor_set_out=helloworld.protoset \
+    --include_imports \
+    ./helloworld.proto
+
+
+protoc --descriptor_set_out=api.protoset `find ./ir -name "*.proto"|grep -v node`

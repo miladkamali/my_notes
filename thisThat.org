@@ -1,0 +1,343 @@
+* https://github.com/getify/You-Dont-Know-JS
+* environments
+** develop
+*** https://development-fcd06.firebaseapp.com/
+* contaboo server
+  - panel 
+    Pf43rDB3wvUB
+  osborne@thisthatapp.com
+  - server
+    - root
+    - 8Nt2DvB92s
+ssh root@62.171.168.171 -p 9669
+* alopal server
+  80.241.214.236
+* sweedish server
+ssh root@62.171.134.30 -p 220  
+* nestJS
+* TypeORM
+* log viewing
+** production
+*** gcloud app logs tail -s eagle-v1
+*** gcloud app logs tail -s tiger-v4
+** develop
+*** gcloud app logs tail -s tiger-v1
+* connect to database
+export PGPASSWORD=tiger@thisthat.dev#2020!
+export PGPASSWORD=tiger@thisthat.dev#2020!
+psql -h localhost -p 5432 -d thisthat -U milad
+** mac production
+cloud_sql_proxy -credential_file=/Users/miladkamali/thisThat/thisthat-37376-37776e16453d.json -instances=thisthat-37376:us-central1:thisthat-db-v2=tcp:5432
+** mac develop
+cloud_sql_proxy -credential_file=/Users/miladkamali/thisThat/development-fcd06-0df8189882fe.json -instances=development-fcd06:us-central1:develop-v2=tcp:5433
+** production
+   - connect to sql
+     cloud_sql_proxy -credential_file=/home/milad/thisThat/thisthat-37376-749395088a2e.json -instances=thisthat-37376:us-central1:thisthat-db-v2=tcp:5432 -dir=/home/milad/thisThat/sockets/
+   - to run eagle 
+     cloud_sql_proxy -credential_file=/home/milad/thisThat/thisthat-37376-749395088a2e.json -instances=thisthat-37376:us-central1:thisthat-db-v2=tcp:5436 -dir=/home/milad/thisThat/sockets/
+** develop
+export PGPASSWORD=tiger@thisthat.dev#2020!
+     cloud_sql_proxy -credential_file=/home/milad/thisThat/development-fcd06-d44367d960f3.json -instances=development-fcd06:us-central1:develop-v2=tcp:5432 -dir=/home/milad/thisThat/sockets_develop
+
+   - tiger
+     cloud_sql_proxy -credential_file=/home/milad/thisThat/development-fcd06-d44367d960f3.json -instances=development-fcd06:us-central1:develop-v2=tcp:5433 -dir=/home/milad/thisThat/sockets_develop
+
+   - eagle
+     cloud_sql_proxy -credential_file=/home/milad/thisThat/development-fcd06-d44367d960f3.json -instances=development-fcd06:us-central1:develop-v2=tcp:5434 -dir=/home/milad/thisThat/sockets_develop
+
+* db book keeper
+npm install
+  npm run build
+** migrate to dev
+   cloud_sql_proxy -credential_file=/home/milad/thisThat/development-fcd06-d44367d960f3.json -instances=development-fcd06:us-central1:develop-v2=tcp:5433 -dir=/home/milad/thisThat/sockets_develop
+   ./migrage.sh dev
+
+* TODO find location of tiger password for pg_pass
+  .pg_pass
+* renewal is used to update trigers
+  users are quite important for setting trigers and functions
+  take care to always 
+* progress
+** 
+* understanding filters
+** case one 
+*** curl
+    curl 'http://localhost:3002/survey/filter' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0' -H 'Accept: application/json, text/plain, */*' -H 'Accept-Language: en-US,en;q=0.5' --compressed -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjFkZTgwNjdhODI5OGE0ZTMzNDRiNGRiZGVkMjVmMmZiNGY0MGYzY2UiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoibWlsYWQga2FtYWxpIiwicGljdHVyZSI6Imh0dHBzOi8vbGg0Lmdvb2dsZXVzZXJjb250ZW50LmNvbS8teWxtcHd6Q1NBMnMvQUFBQUFBQUFBQUkvQUFBQUFBQUFBQUEvQU1adXVjbmMzQjVGMGFleTNFMVZFUU1zeDJ1YjJVQmJaUS9zOTYtYy9waG90by5qcGciLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdGhpc3RoYXQtMzczNzYiLCJhdWQiOiJ0aGlzdGhhdC0zNzM3NiIsImF1dGhfdGltZSI6MTYxODIzMjc3NywidXNlcl9pZCI6IndaOVIwNUg2cldNQ2FxWnNjMUdQS2g4YWFhbjIiLCJzdWIiOiJ3WjlSMDVINnJXTUNhcVpzYzFHUEtoOGFhYW4yIiwiaWF0IjoxNjE4NTA4MDUyLCJleHAiOjE2MTg1MTE2NTIsImVtYWlsIjoibXprYW1hbGk5MThAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDEwNzIzMzc5NTQwMzYzNjk4OTAiXSwiZW1haWwiOlsibXprYW1hbGk5MThAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.BgRgV6AgRA8ssQL-53eVZtNHssQTX6G9ZRngtAFXkpYkLMyO-QJyLgqwpCu_sAUDI20N5bfU_vjsS73-Eqte6dMJPW1W2eLDwHVjSFabNnnyGkZMFjdwIMNtqTsRxlnX32xTVe-ie-KRL2IT_OWgWl_is2ULUiqkqKi8iWXW5-CGDy2uVa_-hWvPCuBILPfZU8octSOhPZBZ9o7fH2tfux7Prjx4ptco8dQ3fHkTTjQVvzIOwAvhvdSejcQJLj53M-pPY5MBEGkyuDODj9scceaIOyrR7i_VRwGQnm2gLE7wMPGCvEyfqIPXgwdwR3WobKEkcZ8Y_2-g4nNJ1EPkww' -H 'Content-Type: application/json' -H 'Origin: https://analytics.thisthatapp.com' -H 'Connection: keep-alive' -H 'Referer: https://analytics.thisthatapp.com/' -H 'Sec-GPC: 1' -H 'TE: Trailers' --data-raw '{"surveyId":"05de66ad-b30f-4b72-af2e-2f949f88aed4","pollId":"9d6050cf-f1f6-4861-aa44-7d020dae9a3a","trackableLinkIds":["823a3e32-0dc8-4380-aadc-153da457fe7b"]}'
+*** query
+   " with p as (  select profile_id from  profiles      )  select  (select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '0' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as wins_count   ,(select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '1' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as losses_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = 'ad95b347-22ac-4fd5-b9ee-d9883dcaeafb' and  option_votes.action = '0' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as upvotes_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = 'ad95b347-22ac-4fd5-b9ee-d9883dcaeafb' and  option_votes.action = '1' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as downvotes_Count   union all  select  (select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = '5cef64a9-5541-4b82-8bba-a7438ce6409c' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '0' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as wins_count   ,(select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = '5cef64a9-5541-4b82-8bba-a7438ce6409c' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '1' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as losses_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = 'd1a716e4-7bee-4b19-a145-37b585e3325a' and  option_votes.action = '0' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as upvotes_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = 'd1a716e4-7bee-4b19-a145-37b585e3325a' and  option_votes.action = '1' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as downvotes_Count   union all  select  (select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = 'c475f4b2-be3e-447a-91bc-ee2990e1d9f2' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '0' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as wins_count   ,(select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = 'c475f4b2-be3e-447a-91bc-ee2990e1d9f2' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '1' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as losses_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = '69202e03-d5ba-40cb-aa5d-374ea40efc9f' and  option_votes.action = '0' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as upvotes_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = '69202e03-d5ba-40cb-aa5d-374ea40efc9f' and  option_votes.action = '1' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as downvotes_Count   union all  select  (select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = '5cef64a9-5541-4b82-8bba-a7438ce6409c' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '1' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as wins_count   ,(select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = '5cef64a9-5541-4b82-8bba-a7438ce6409c' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '0' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as losses_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = '1c27dcb5-b11e-4cb2-a223-c67d50826b8c' and  option_votes.action = '0' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as upvotes_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = '1c27dcb5-b11e-4cb2-a223-c67d50826b8c' and  option_votes.action = '1' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as downvotes_Count  "
+*** 
+*** response
+  [{"baseNode":{"pairId":"39a9b83b-5306-40af-a278-cd1940ec475e","optionId":"ad95b347-22ac-4fd5-b9ee-d9883dcaeafb","pollId":"9d6050cf-f1f6-4861-aa44-7d020dae9a3a","relativeAction":0},"filterPath":[],"filteredWinCount":16,"filteredLossCount":7,"filteredUpvoteCount":0,"filteredDownVoteCount":0},{"baseNode":{"pairId":"5cef64a9-5541-4b82-8bba-a7438ce6409c","optionId":"d1a716e4-7bee-4b19-a145-37b585e3325a","pollId":"9d6050cf-f1f6-4861-aa44-7d020dae9a3a","relativeAction":0},"filterPath":[],"filteredWinCount":14,"filteredLossCount":17,"filteredUpvoteCount":0,"filteredDownVoteCount":0},{"baseNode":{"pairId":"c475f4b2-be3e-447a-91bc-ee2990e1d9f2","optionId":"69202e03-d5ba-40cb-aa5d-374ea40efc9f","pollId":"9d6050cf-f1f6-4861-aa44-7d020dae9a3a","relativeAction":0},"filterPath":[],"filteredWinCount":3,"filteredLossCount":25,"filteredUpvoteCount":0,"filteredDownVoteCount":0},{"baseNode":{"pairId":"5cef64a9-5541-4b82-8bba-a7438ce6409c","optionId":"1c27dcb5-b11e-4cb2-a223-c67d50826b8c","pollId":"9d6050cf-f1f6-4861-aa44-7d020dae9a3a","relativeAction":1},"filterPath":[],"filteredWinCount":17,"filteredLossCount":14,"filteredUpvoteCount":0,"filteredDownVoteCount":0}]
+** notes
+   with p as (select action,count(voter_id) as num from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e' and NOT action = '3'  and pair_votes.trackable_link_id= 'b882d4af-1e63-4f50-a068-83c341b0a3ee' group by action)
+select * from p order by num desc
+* something
+  --select * from surveys where title = 'Battle of the platforms'
+
+
+--select * from survey_engagements where survey_id = '460e78a4-297a-4861-b70d-ed1afcd4a17c' and is_complete_respondent = true
+
+--with respondent as(select profile_id from survey_engagements where survey_id = '460e78a4-297a-4861-b70d-ed1afcd4a17c' and is_complete_respondent = false)
+--select get_engaged_polls_count('460e78a4-297a-4861-b70d-ed1afcd4a17c',prof) from respondent prof
+
+select count(*) from survey_audience_requests
+
+select * from  survey_engagements where survey_id = '460e78a4-297a-4861-b70d-ed1afcd4a17c' and is_complete_respondent = false
+
+select profile_id,get_engaged_polls_count('460e78a4-297a-4861-b70d-ed1afcd4a17c',survey_engagements.profile_id) from  survey_engagements where survey_id = '460e78a4-297a-4861-b70d-ed1afcd4a17c' and is_complete_respondent = false
+
+
+select count(*),pair_votes.pair_id from pair_votes where pair_id in (select pair_id from pairs where poll_id in(select poll_id from polls where survey_id = '460e78a4-297a-4861-b70d-ed1afcd4a17c')) group by pair_votes.pair_id
+select count(distinct(voter_id)),pair_votes.pair_id from pair_votes where pair_id in (select pair_id from pairs where poll_id in(select poll_id from polls where survey_id = '460e78a4-297a-4861-b70d-ed1afcd4a17c')) group by pair_votes.pair_id
+
+
+select count(distinct(selector_id)),option_selections.option_id,(select options.title from options where options.option_id = option_selections.option_id ) from option_selections left join options on option_selections.option_id=options.option_id where option_selections.option_id in (select option_id from options where poll_id in(select poll_id from polls where survey_id = '460e78a4-297a-4861-b70d-ed1afcd4a17c')) group by option_selections.option_id
+
+
+
+
+select pair_id from pairs where poll_id in(select poll_id from polls where survey_id = '460e78a4-297a-4861-b70d-ed1afcd4a17c')
+
+select * from polls where survey_id = '460e78a4-297a-4861-b70d-ed1afcd4a17c'
+
+
+
+
+
+
+
+
+
+
+
+ with p as ( select profile_id from profiles ) select (select count(*) from p where exists 
+													   ( select * from pair_votes where pair_votes.pair_id = '831110d4-3344-4503-b8be-3cb8009fc766' and pair_votes.voter_id = p.profile_id and pair_votes.action = '0' and true )
+													   and exists ( select * from pair_votes where pair_votes.pair_id = '4d1a2b71-211d-43e0-ab1e-e5d8aada0284' and pair_votes.voter_id = p.profile_id and pair_votes.action = '0' and true )
+													  ) as wins_count union all
+													  select (select count(*) from p where exists 
+															  ( select * from pair_votes where pair_votes.pair_id = '831110d4-3344-4503-b8be-3cb8009fc766' and pair_votes.voter_id = p.profile_id and pair_votes.action = '1' and true )
+															  and exists ( select * from pair_votes where pair_votes.pair_id = '4d1a2b71-211d-43e0-ab1e-e5d8aada0284' and pair_votes.voter_id = p.profile_id and pair_votes.action = '0' and true )
+															 ) as wins_count 
+													union all
+																										  select (select count(*) from p where exists 
+															  ( select * from pair_votes where pair_votes.pair_id = '831110d4-3344-4503-b8be-3cb8009fc766' and pair_votes.voter_id = p.profile_id and pair_votes.action = '1' and true )
+															  and exists ( select * from pair_votes where pair_votes.pair_id = '4d1a2b71-211d-43e0-ab1e-e5d8aada0284' and pair_votes.voter_id = p.profile_id and pair_votes.action = '0' and true )
+															 ) as wins_count
+ 
+ 
+ select * from pair_votes where pair_votes.pair_id = '4d1a2b71-211d-43e0-ab1e-e5d8aada0284' and pair_votes.voter_id = p.profile_id and pair_votes.action = '0' and true
+ 
+ 
+ 
+ select * from profiles limit 100
+ 
+ 
+select profile_id from  profiles  select * from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e'
+ 
+with p as (select action,count(voter_id) as num from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e' and NOT action = '3'  and pair_votes.trackable_link_id= 'b882d4af-1e63-4f50-a068-83c341b0a3ee' group by action)
+select * from p order by num desc
+													  
+select * from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e'
+
+select * from pairs;
+
+select * from options limit 100;
+
+with p as (  select profile_id from  profiles      )  select  (select count(*) from p where exists 
+															   (  select * from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '0' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as wins_count   ,(select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '1' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as losses_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = 'ad95b347-22ac-4fd5-b9ee-d9883dcaeafb' and  option_votes.action = '0' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as upvotes_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = 'ad95b347-22ac-4fd5-b9ee-d9883dcaeafb' and  option_votes.action = '1' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as downvotes_Count   union all  select  (select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = '5cef64a9-5541-4b82-8bba-a7438ce6409c' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '0' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as wins_count   ,(select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = '5cef64a9-5541-4b82-8bba-a7438ce6409c' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '1' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as losses_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = 'd1a716e4-7bee-4b19-a145-37b585e3325a' and  option_votes.action = '0' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as upvotes_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = 'd1a716e4-7bee-4b19-a145-37b585e3325a' and  option_votes.action = '1' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as downvotes_Count   union all  select  (select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = 'c475f4b2-be3e-447a-91bc-ee2990e1d9f2' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '0' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as wins_count   ,(select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = 'c475f4b2-be3e-447a-91bc-ee2990e1d9f2' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '1' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as losses_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = '69202e03-d5ba-40cb-aa5d-374ea40efc9f' and  option_votes.action = '0' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as upvotes_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = '69202e03-d5ba-40cb-aa5d-374ea40efc9f' and  option_votes.action = '1' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as downvotes_Count   union all  select  (select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = '5cef64a9-5541-4b82-8bba-a7438ce6409c' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '1' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as wins_count   ,(select count(*) from p where exists (  select * from pair_votes  where  pair_votes.pair_id = '5cef64a9-5541-4b82-8bba-a7438ce6409c' and  pair_votes.voter_id = p.profile_id and  pair_votes.action = '0' and  pair_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )  ) ) as losses_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = '1c27dcb5-b11e-4cb2-a223-c67d50826b8c' and  option_votes.action = '0' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as upvotes_count,  (  select count(*) from p  inner join option_votes  on p.profile_id = option_votes.voter_id  where  option_votes.option_id = '1c27dcb5-b11e-4cb2-a223-c67d50826b8c' and  option_votes.action = '1' and  option_votes.trackable_link_id in ( '823a3e32-0dc8-4380-aadc-153da457fe7b' )   ) as downvotes_Count
+** possible solution
+
+   add this to the surveyVoterQueryBuilder and select voters that match the criteria 
+   with p as (select action,count(voter_id) as num from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e' and NOT action = '3'  and pair_votes.trackable_link_id= 'b882d4af-1e63-4f50-a068-83c341b0a3ee' group by action)
+select * from p order by num desc
+
+
+
+
+-
+  with pp as (  select profile_id from  profiles      )
+, all_data as( select * from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e' and (NOT action = '3')  and pair_votes.trackable_link_id= 'b882d4af-1e63-4f50-a068-83c341b0a3ee' and exists( select * from pp where pair_votes.voter_id = pp.profile_id ))
+,p0 as (select action,count(voter_id) as num from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e' and (NOT action = '3')  and pair_votes.trackable_link_id= 'b882d4af-1e63-4f50-a068-83c341b0a3ee' group by action)
+,min_number as  (select * from p0 order by num asc limit 1)
+select * from all_data;
+
+
+
+
+
+with pp as (  select profile_id from  profiles      )
+, all_data as( select * from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e' and (NOT action = '3')  and pair_votes.trackable_link_id= 'b882d4af-1e63-4f50-a068-83c341b0a3ee' and exists( select * from pp where pair_votes.voter_id = pp.profile_id ))
+,p0 as (select action,count(voter_id) as num from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e' and (NOT action = '3')  and pair_votes.trackable_link_id= 'b882d4af-1e63-4f50-a068-83c341b0a3ee' group by action)
+,min_number as  ((select * from p0 order by num asc limit (select 1)))
+,p1 as (select * from all_data where action = '0' limit (select num from min_number))
+,p2 as (   select * from all_data where action = '1' limit (select num from min_number))
+,p3 as (select * from p1 union all select * from p2 )
+select * from p3;
+
+
+
+
+
+    with pp as ( select profile_id from profiles  ) , all_data as( select * from pair_votes where pair_votes.pair_id = \'39a9b83b-5306-40af-a278-cd1940ec475e\' and (NOT action = \'3\') and pair_votes.trackable_link_id= \'b882d4af-1e63-4f50-a068-83c341b0a3ee\' and exists( select * from pp where pair_votes.voter_id = pp.profile_id ),min_number as ((select * from p0 order by num asc limit 1)) ,p1 as (select * from all_data where action = \'0\' limit (select num from min_number)) ,p2 as ( select * from all_data where action = \'1\' limit (select num from min_number)) ,p3 as (select * from p1 union all select * from p2 ) ,p as (select voter_id from p3) select (select count(*) from p where exists ( select * from pair_votes where pair_votes.pair_id = \'b26ae411-40df-4454-af2a-1ca5e205383e\' and pair_votes.voter_id = p.profile_id and pair_votes.action = \'0\' and true ) and exists ( select * from pair_votes where pair_votes.pair_id = \'8d66422f-5809-4360-8814-72c659c6c858\' and pair_votes.voter_id = p.profile_id and pair_votes.action = \'0\' and true ) ) as wins_count union all select (select count(*) from p where exists ( select * from pair_votes where pair_votes.pair_id = \'b26ae411-40df-4454-af2a-1ca5e205383e\' and pair_votes.voter_id = p.profile_id and pair_votes.action = \'1\' and true ) and exists ( select * from pair_votes where pair_votes.pair_id = \'8d66422f-5809-4360-8814-72c659c6c858\' and pair_votes.voter_id = p.profile_id and pair_votes.action = \'0\' and true ) ) as wins_count
+
+
+   with pp as (      select profile_id from      profiles                      )  , all_data as( select * from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e' and (NOT action = '3') and pair_votes.trackable_link_id= 'b882d4af-1e63-4f50-a068-83c341b0a3ee' and exists( select * from pp where pair_votes.voter_id = pp.profile_id ) )p0 as (select * from pair_votes  where  pair_votes.pair_id = '39a9b83b-5306-40af-a278-cd1940ec475e' and (NOT action = '3') and pair_votes.trackable_link_id= 'b882d4af-1e63-4f50-a068-83c341b0a3ee' and exists(select * from pp where pair_votes.voter_id = pp.profile_id) ),min_number as  ((select * from p0 order by num asc limit 1))    ,p1 as (select * from all_data where action = '0' limit (select num from min_number))    ,p2 as (   select * from all_data where action = '1' limit (select num from min_number))    ,p3 as (select * from p1 union all select * from p2 )    ,p as (select voter_id from p3)      select      (select count(*) from p where exists (        select * from pair_votes        where        pair_votes.pair_id = 'b26ae411-40df-4454-af2a-1ca5e205383e' and        pair_votes.voter_id = p.profile_id and        pair_votes.action = '0' and        true      )  and   exists (        select * from pair_votes        where        pair_votes.pair_id = '8d66422f-5809-4360-8814-72c659c6c858' and        pair_votes.voter_id = p.profile_id and        pair_votes.action = '0' and        true      )  ) as wins_count           union all       select      (select count(*) from p where exists (        select * from pair_votes        where        pair_votes.pair_id = 'b26ae411-40df-4454-af2a-1ca5e205383e' and        pair_votes.voter_id = p.profile_id and        pair_votes.action = '1' and        true      )  and   exists (        select * from pair_votes        where        pair_votes.pair_id = '8d66422f-5809-4360-8814-72c659c6c858' and        pair_votes.voter_id = p.profile_id and        pair_votes.action = '0' and        true      )  ) as wins_count          
+* todo
+** renew your cloud-sql-proxy
+2021/05/04 19:28:57 ephemeral certificate for instance thisthat-37376:us-central1:thisthat-db-v2 will expire soon, refreshing now.
+** research about https://www.algolia.com
+** figure out
+   survey.repository.ts eagle
+   there needs to be ',' at the end but currently it is not required
+   
+   (select count(distinct(selector_id)) from option_selections where option_id in (select option_id from options where poll_id = p.poll_id )) as option_selection_vote_count
+** figure out why we have -1 here
+                   {
+                    "id": "61028649-1d55-4879-b599-e8e4bf8ec2b4",
+                    "title": "Jane Fonda",
+                    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/development-fcd06.appspot.com/o/poll_images2%2F1620131753276?alt=media&token=b7c8450c-9e69-403a-bae1-5e3c09f4fceb",
+                    "videoUrl": null,
+                    "upVotes": 0,
+                    "downVotes": 0,
+                    "winsCount": -1,
+                    "lossesCount": 4
+                }
+
+               select * from pairs where option2_id = '61028649-1d55-4879-b599-e8e4bf8ec2b4'
+
+
+"pair_id","created_at","poll_id","option1_id","option2_id","option1_wins_count","option2_wins_count"
+"ca00b469-0358-4a5f-b034-49a72b45c654","2021-05-04 13:25:40.019991+00","8d32c9e9-443f-46ca-b6f3-1eec3c9b6056","66a94036-a6d8-4c2f-8053-86262eb37757","61028649-1d55-4879-b599-e8e4bf8ec2b4",0,0
+"ca4aaba5-f6f4-4cb9-ad48-864d91225dc1","2021-05-04 13:25:40.019991+00","8d32c9e9-443f-46ca-b6f3-1eec3c9b6056","c44a53ed-a3a9-4e58-8245-1e2bc27729f7","61028649-1d55-4879-b599-e8e4bf8ec2b4",1,0
+"5cfb451b-7ecc-4241-a184-408a23cbaf34","2021-05-04 13:25:40.019991+00","8d32c9e9-443f-46ca-b6f3-1eec3c9b6056","97bfa49e-2943-4d6f-b679-973163388c04","61028649-1d55-4879-b599-e8e4bf8ec2b4",0,0
+"49773d5f-629f-4494-abdc-d403b0e459d8","2021-05-04 13:25:40.019991+00","8d32c9e9-443f-46ca-b6f3-1eec3c9b6056","9523e831-ccd1-4258-8f5d-8fdfe89a00f2","61028649-1d55-4879-b599-e8e4bf8ec2b4",0,0
+"f381f7c9-36d4-4bb0-84f0-113759c45cf4","2021-05-04 13:25:40.019991+00","8d32c9e9-443f-46ca-b6f3-1eec3c9b6056","5335b30d-402f-460b-9e76-7dca6fe914b9","61028649-1d55-4879-b599-e8e4bf8ec2b4",0,0
+"733b935d-f8c1-4397-8b55-aabde48ce62e","2021-05-04 13:25:40.019991+00","8d32c9e9-443f-46ca-b6f3-1eec3c9b6056","bcef6ab7-a617-4ef6-a638-c3cbc1f20382","61028649-1d55-4879-b599-e8e4bf8ec2b4",0,0
+"02ba92c6-b1e6-4a16-b408-a2a4d044432b","2021-05-04 13:25:40.019991+00","8d32c9e9-443f-46ca-b6f3-1eec3c9b6056","4c6797bb-bc9b-4f3e-af17-21c72b6275f9","61028649-1d55-4879-b599-e8e4bf8ec2b4",1,0
+"4d357f77-dbe7-4f16-8e37-1a11f1542e77","2021-05-04 13:25:40.019991+00","8d32c9e9-443f-46ca-b6f3-1eec3c9b6056","8d63bc48-817d-44a6-b864-4b56d8210918","61028649-1d55-4879-b599-e8e4bf8ec2b4",0,0
+"51c5c8bf-426c-4487-9fec-711e23a560f0","2021-05-04 13:25:40.019991+00","8d32c9e9-443f-46ca-b6f3-1eec3c9b6056","1e2a0ef1-973b-43a9-88b8-b948c9e5a515","61028649-1d55-4879-b599-e8e4bf8ec2b4",1,0
+"0aedc3d4-75d5-4dfa-8d1a-7cbfdd93d7a8","2021-05-04 13:25:40.019991+00","8d32c9e9-443f-46ca-b6f3-1eec3c9b6056","3575428d-b23b-47ae-8389-32d022e262f6","61028649-1d55-4879-b599-e8e4bf8ec2b4",1,-1
+
+it's a pair option
+** domenic
+  update users set username= 'dominic.ivison_old',email = 'ivison@thisthatapp.com_old' where user_id = 'gcxkczrw8ghja9sy1wkPp7E2kCf2';
+  update users set username= 'dominic.ivison_old2',email = 'ivison@thisthatapp.com_old2' where user_id = 'bXQsorlg8YRvubjQHWzBwIdeB153'; 
+* notes
+** debug frozen survey
+   INSERT INTO public.invitations(
+	invitation_message, status, type, is_active, inviter_id, invitee_id, team_id, profile_id, invitation_id)
+	VALUES ('', '1', '0', true, 'OxtpJCj4yGZJ85du89ChSXeDK043', 'c4lhViMIshSrhGlurNgarZus9s63', '0571c4f0-4ed0-4465-984a-d0ff04713394', null, '22651362-0cc6-4255-a20d-5fda8a16f438');
+	
+	
+	INSERT INTO public.invitations(
+	invitation_message, status, type, is_active, inviter_id, invitee_id, team_id, profile_id, invitation_id)
+	VALUES ('', '1', '0', true, 'OxtpJCj4yGZJ85du89ChSXeDK043', 'c4lhViMIshSrhGlurNgarZus9s63', null, '04bc38a0-d5d5-4a5b-87ae-88afd55a9e5d', '85981950-8383-4d69-990a-30f133afa808');
+
+
+  NSERT INTO public.invitations(
+	invitation_message, status, type, is_active, inviter_id, invitee_id, team_id, profile_id, invitation_id)
+	VALUES ('', '1', '0', true, 'OxtpJCj4yGZJ85du89ChSXeDK043', 'c4lhViMIshSrhGlurNgarZus9s63', '0571c4f0-4ed0-4465-984a-d0ff04713394', null, '22651362-0cc6-4255-a20d-5fda8a16f438');
+	
+	
+	INSERT INTO public.invitations(
+	invitation_message, status, type, is_active, inviter_id, invitee_id, team_id, profile_id, invitation_id)
+	VALUES ('', '1', '0', true, 'OxtpJCj4yGZJ85du89ChSXeDK043', 'c4lhViMIshSrhGlurNgarZus9s63', null, '04bc38a0-d5d5-4a5b-87ae-88afd55a9e5d', '85981950-8383-4d69-990a-30f133afa808');
+	
+	
+	delete  from invitations where invitee_id = 'c4lhViMIshSrhGlurNgarZus9s63' and inviter_id = 'OxtpJCj4yGZJ85du89ChSXeDK043' ;
+	
+	
+	select * from surveys where survey_id = '33be36c7-f3e7-4bfe-97a7-ac07fc313339';
+	
+	
+	update surveys set is_active = false where survey_id = '33be36c7-f3e7-4bfe-97a7-ac07fc313339'
+
+* export table definition
+  cat Cloud_SQL_Export_2021-11-09\ \(11\ 14\ 43\).sql| tr '\n' ' '|tr ';' '\n'|sed -e 's/ Owner: - --  //g' |grep -i "create table"|tr ',' '\n'|sed -e 's/     /\n/' |sed -e '/^$/d' -e 's/CREATE TABLE/\n\nCREATE TABLE/g' -e 's/^/\t/g' >>table.txt
+* special queries
+
+** multiple choice respondents for each option
+    with poll_id as (select '0a857d25-05d4-4d45-9da5-7d5a99debe6e'),
+    nums as  (select count(distinct(selector_id) ) as respondants,option_selections.option_id as option_id from option_selections left join options on (option_selections.option_id=options.option_id) where option_selections.option_id in (select option_id from options where poll_id = (select * from poll_id)) group by option_selections.option_id)
+    select respondants,title from nums left join options on (nums.option_id = options.option_id  )
+
+** this that respondants for each option
+   with poll_id as ( select '0a857d25-05d4-4d45-9da5-7d5a99debe6e' ),
+ pair_id as ( select pair_id from pairs where poll_id = (select * from poll_id)),
+ this_id as  (select option_id from options where option_id = ( select option1_id from pairs where poll_id = (select * from poll_id))),
+ that_id as  (select option_id from options where option_id = ( select option2_id from pairs where poll_id = (select * from poll_id))),
+ pair_ids as (select * from this_id union all select * from that_id),
+ result as  (select count(distinct(voter_id)),action from pair_votes where pair_votes.pair_id = (select * from pair_id)  group by action)
+ select  case
+ 	when action = '0' then (select title from options where option_id = (select * from this_id) )
+	when action = '1' then (select title from options where option_id = (select * from that_id) )
+	when action = '2' then 'skiped'
+	end title, count
+ from result
+** count responses
+ select * from surveys where survey_id = '460e78a4-297a-4861-b70d-ed1afcd4a17c'
+
+ select poll_id,type from polls where survey_id = '460e78a4-297a-4861-b70d-ed1afcd4a17c' order by position limit 1 offset 31
+  - 
+ select count(distinct(voter_id)) from pair_votes where pair_id in( select pair_id from pairs where pairs.poll_id =  (select poll_id from polls where survey_id = '460e78a4-297a-4861-b70d-ed1afcd4a17c' order by position limit 1 offset 30))
+
+ select count(distinct(selector_id)) from option_selections where option_selections.option_id in ( select option_id from options where poll_id in (select poll_id from polls where survey_id = '460e78a4-297a-4861-b70d-ed1afcd4a17c' order by position limit 1 offset 28))
+
+
+
+ with completedResponseCount as (select calculateCompletedResponseFromEngagements(s.survey_id))    select     s.*,    (      select count(1) from trackings where survey_id = s.survey_id    ) as trackings_count,    ( select * from completedResponseCount ) as fixed_completed_response,    (select count(*) from survey_engagements where survey_id = s.survey_id) as fixed_responses_count,    (      select count(1) from reactions where survey_id = s.survey_id    ) as reactions_count,    (      select json_agg(t) from (        select reaction, count(reaction) from reactions where survey_id = s.survey_id group by reaction      ) as t    ) reactions,    (      select sum(upvotes_count) + sum(downvotes_count) from comments      where       comment_id in (select comment_id from comments where survey_id = s.survey_id)     ) comment_votes_count,    (      select sum(option1_wins_count) + sum(option2_wins_count) from pairs where pair_id in (        select pair_id from pairs where poll_id in (          select poll_id from polls where survey_id = s.survey_id        )      )    ) pair_votes_count,    (      select sum(upvotes_count) + sum(downvotes_count) from options where option_id in (        select option_id from options where poll_id in (          select poll_id from polls where survey_id = s.survey_id        )      )    ) option_votes_count,    (      select count(1) from followerships where following_id = s.profile_id and by_survey_id = s.survey_id    ) gained_followers_count,    (      select 0      ) engaged_followers_count,               p.poll_id p_id,      p.question p_question,      p.visible_options_count p_visible_options_count,      p.is_familiarity_required p_is_familiarity_required,      p.votes_count p_votes_count,      p.responses_count p_responses_count,          ,          o.option_id o_id,      o.title o_title,      o.position o_position,      o.image_url o_image_url,      o.video_url o_video_url,      o.upvotes_count o_up_votes,      o.downvotes_count o_down_votes,      (        select         COALESCE((select sum(option1_wins_count) from pairs where option1_id = o.option_id),(select count(*) from option_selections where option_id = o.option_id  ) ,0) +        COALESCE((select sum(option2_wins_count) from pairs where option2_id = o.option_id),0)        as o_wins_count      ) as o_wins_count,      (        select         COALESCE((select sum(option2_wins_count) from pairs where option1_id = o.option_id),0) +        COALESCE((select sum(option1_wins_count) from pairs where option2_id = o.option_id),0)        as o_losses_count      ) as o_losses_count,      (select count(distinct(selector_id)) from option_selections where option_id in (select option_id from options where poll_id = p.poll_id )) as option_selection_vote_count              from surveys s    left join polls p on p.survey_id = s.survey_id    left join options o on p.poll_id = o.poll_id    where s.survey_id = $1    order by s.finalized_at desc, p.position, o.position
+** 
+   with surveyData as  (select * from surveys as survey inner join polls as poll using(survey_id) where is_analytics_survey = false and poll.type = '0')
+, optionCount as (select poll_id,count(*) from options where poll_id  in (select poll_id from surveyData) group by poll_id)
+update polls set type='1' where poll_id in (select poll_id from optionCount where count>2)
+* tasks
+** fixing nans and inf
+   curl 'https://eagle-v1-dot-thisthat-37376.uc.r.appspot.com/survey/analysis/395c7915-d2a9-4dfd-a370-68da1b875a29/export/exel/email' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' -H 'Accept: application/json, text/plain, */*' -H 'Accept-Language: en-US,en;q=0.5' --compressed -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDZmMzc1MjI0N2ZjZjk0Y2JlNWQyZDZiNTlmYThhMmJhYjFlYzIiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoibWlsYWQga2FtYWxpIiwicGljdHVyZSI6Imh0dHBzOi8vbGg0Lmdvb2dsZXVzZXJjb250ZW50LmNvbS8teWxtcHd6Q1NBMnMvQUFBQUFBQUFBQUkvQUFBQUFBQUFBQUEvQU1adXVjbmMzQjVGMGFleTNFMVZFUU1zeDJ1YjJVQmJaUS9zOTYtYy9waG90by5qcGciLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdGhpc3RoYXQtMzczNzYiLCJhdWQiOiJ0aGlzdGhhdC0zNzM3NiIsImF1dGhfdGltZSI6MTY0MTQ2MzUyOSwidXNlcl9pZCI6IndaOVIwNUg2cldNQ2FxWnNjMUdQS2g4YWFhbjIiLCJzdWIiOiJ3WjlSMDVINnJXTUNhcVpzYzFHUEtoOGFhYW4yIiwiaWF0IjoxNjQyMDg1MzY5LCJleHAiOjE2NDIwODg5NjksImVtYWlsIjoibXprYW1hbGk5MThAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDEwNzIzMzc5NTQwMzYzNjk4OTAiXSwiZW1haWwiOlsibXprYW1hbGk5MThAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.IiExEc2xZuTv9vu5oexvZ7qiVbcoBcX7WJKbmAO8PXdOgcmyUuvxEIAeIaZ3U-VPLwuw1yILQDj8lTSJJ1CkNtUdKDb8S-MGVGMW6EBmMqXUx4bi7M2qhLSdRIw1Sioe8Jr5VnalobEVzFhtgRb7_COFOeyIcbjv1kjer3tFPrqsL8g3RVY8aXGARnrHYp3HE-Z38DTHMYaIAyX6joavKixvhVu9KnmPvOQ2c2ja3PfAEefpgHFZsViqW-htqOwjFL0TmDRf-suz1tyy6cJAbTIz4svoyqVZeDRtKMrE_cZCH2pVSVO0WPQcStmIEo-3bTGPPdzAzVqaaAu-5QhW-A' -H 'Content-Type: application/json' -H 'Origin: https://analytics.thisthatapp.com' -H 'Connection: keep-alive' -H 'Referer: https://analytics.thisthatapp.com/' -H 'Sec-Fetch-Dest: empty' -H 'Sec-Fetch-Mode: cors' -H 'Sec-Fetch-Site: cross-site' -H 'TE: trailers' --data-raw '{"includeUplift":false,"filters":[{"filterName":"How old are you? = 40+ & Trackable link = max.hovey, izzierodgers, joannajkenny, aaliyahramseyy","filter":{"surveyId":"395c7915-d2a9-4dfd-a370-68da1b875a29","pollId":null,"trackableLinkIds":["abc68690-2ac2-4528-ab85-8f2d9cd5e4ba","17037a1a-eaf2-4a70-9a0b-6ef1a9b152a2","1b6176f5-16f8-4771-a48d-c4d0bd5c4d2b","5158035d-4458-478c-9363-31dead7860c7"],"anonymous":false,"completeResponsesOnly":false,"complementaryResult":false,"queryLogic":0,"queries":[{"filterPollId":"d7f96d9b-42c5-4c83-9fae-b03968c4c850","pollType":2,"queryOptionsLogic":1,"queryOptions":[{"type":2,"id":"1229cc65-458c-4c82-a46a-2e8f6f28bb27","optionSelectionAction":1}]}]}}]}'
+** include branduplift
+curl 'http://localhost:3002/survey/analysis/395c7915-d2a9-4dfd-a370-68da1b875a29/export/exel/email' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' -H 'Accept: application/json, text/plain, */*' -H 'Accept-Language: en-US,en;q=0.5' --compressed -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjQwMTU0NmJkMWRhMzA0ZDc2NGNmZWUzYTJhZTVjZDBlNGY2ZjgyN2IiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoibWlsYWQga2FtYWxpIiwicGljdHVyZSI6Imh0dHBzOi8vbGg0Lmdvb2dsZXVzZXJjb250ZW50LmNvbS8teWxtcHd6Q1NBMnMvQUFBQUFBQUFBQUkvQUFBQUFBQUFBQUEvQU1adXVjbmMzQjVGMGFleTNFMVZFUU1zeDJ1YjJVQmJaUS9zOTYtYy9waG90by5qcGciLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdGhpc3RoYXQtMzczNzYiLCJhdWQiOiJ0aGlzdGhhdC0zNzM3NiIsImF1dGhfdGltZSI6MTY0MTQ2MzUyOSwidXNlcl9pZCI6IndaOVIwNUg2cldNQ2FxWnNjMUdQS2g4YWFhbjIiLCJzdWIiOiJ3WjlSMDVINnJXTUNhcVpzYzFHUEtoOGFhYW4yIiwiaWF0IjoxNjQyNjUyMTkyLCJleHAiOjE2NDI2NTU3OTIsImVtYWlsIjoibXprYW1hbGk5MThAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDEwNzIzMzc5NTQwMzYzNjk4OTAiXSwiZW1haWwiOlsibXprYW1hbGk5MThAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.SV6iYG4bYneacWsqSXCZQ_4VXhhFBzuWQ26eJqY4s_o8vVHUxeIopH0sY1_BKYbuhv9fcGuUcAQfTDF5B2zA8lSsg9IrObn7AIJVV-7fBmWGPTjl0RgZ1O2ToRig5qX0rjjoXrmaRgGzzEk0PiMMjluC2gW-9YfzUdLM5jk9ma63nBUmUliHjM9SPwBVNHV92ChBnbHA-jSQWNeFZD3G9jf08gpiYm0_U62jK-EV81gMy0QtcmlkRPZIjkf08_yoKMwh2TyIu-5XfJpmn_7IOsNrdHM4MgKgu_cXaYNLHYRWzwvKLRgrrRG0qmqZ0wWpYyxcCzLHw-6X72DEr1Jg0w' -H 'Content-Type: application/json' -H 'Origin: https://analytics.thisthatapp.com' -H 'Connection: keep-alive' -H 'Referer: https://analytics.thisthatapp.com/' -H 'Sec-Fetch-Dest: empty' -H 'Sec-Fetch-Mode: cors' -H 'Sec-Fetch-Site: cross-site' -H 'TE: trailers' --data-raw '{"includeUplift":true}'
+* information
+** max profile 
+   1caLpXL4csQenkiRSWsCfdGsB5s1
+** my profile
+   wZ9R05H6rWMCaqZsc1GPKh8aaan2
+** list of all profile and teams max is involved in 
+   select team_id,name from teams where team_id in (select team_id from invitations where (inviter_id = '1caLpXL4csQenkiRSWsCfdGsB5s1' or invitee_id = '1caLpXL4csQenkiRSWsCfdGsB5s1') and team_id is not null)
+   select profile_id,name from profiles where profile_id in (select profile_id from invitations where (inviter_id = '1caLpXL4csQenkiRSWsCfdGsB5s1' or invitee_id = '1caLpXL4csQenkiRSWsCfdGsB5s1') and profile_id is not null)
+** accept max invitations
+ update invitations set status =1 where inviter_id = '1caLpXL4csQenkiRSWsCfdGsB5s1' and invitee_id = 'wZ9R05H6rWMCaqZsc1GPKh8aaan2'
+* moving to new acl
+** change team access tiger post /team/access
+** fix team invite tiger post /team/invite
+** add owner role to profile creator in  tiger post profile 
+** fix update profile tiger put /profile
+   it seems i have stoped it from working
+** make sure invite to profile works tiger post profile/invite
+** rewrite profile/access
+** change invitation status tiger post invitation/status
+   invitation status need a new subsystem 
+** do look ad payment controller
+* onboarding sara
+** give her access to the code
+she needs to gain access to her account again before going forward
+** help her set up her environment
+** help her set up access to database
+* data duplication
+** delete this survey 55d6e76e-a089-401f-b931-aa3b18a8a578 Influencer Impact Social media
+** re-import data powertooth brush 31a4d3ac-ca32-42c4-92bc-13073e421231 from Phillips Sonicare… (395c7915-d2a9-4dfd-a370-68da1b875a29)
+** re-import data for taxiapp b4c7290c-5e00-48eb-8e38-1e3beb63f821 from Uber Driver LA (673a7b48-ac07-4007-9d77-ba54bedd9c5f) 
+** import data for vegbox service ba2c76d6-9fe7-467f-8f27-94ef1635b94f from e9772457-24b2-4c1c-b216-d45c21693a66 oddbox
+** this one has half the completed respondants
+https://analytics.thisthatapp.com/panel/teams/null/profiles/p_930f86e8-ab27-4a8b-a3f8-2f5cb245fa7c/analysis/collection/2b9923c9-23b8-4394-b801-dbdba9589a32
+of
+https://analytics.thisthatapp.com/panel/teams/null/profiles/163ec348-87b8-4146-b43a-ec2e01615537/analysis/collection/c507eac3-9469-4664-af88-c98b5327c1ac
+** 
+* remove credit
+the function that i believe is being called periodically
+@Put('expire-unlimited-period')
+  expireUnlimitedPeriod() {
+    return this.teamService.expireUnlimitedPeriod();
+  }
+
+the sql function that does resetting
+create  function expire_teams(free_days_limit integer)
+* respondents tale

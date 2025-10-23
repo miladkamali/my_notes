@@ -1,0 +1,65 @@
+* people
+** Kevlin Henney
+*** videos
+**** [[https://www.youtube.com/watch?v=YyhfK-aBo-Y][GOTO 2017 • Code as Risk • Kevlin Henney]]
+     - security
+     - user experience
+     - 
+**** [[https://www.youtube.com/watch?v=tMW08JkFrBA][The SOLID Design Principle Deconstructed]]
+     here he talks about solid principles ,basically he boils all of
+     them to SRP which makes the distinction between what every body
+     consider SRP and what Uncle BOB meant by SRP.
+     - he talks about difference between public and published interface
+**** [[https://www.youtube.com/watch?v=JiQct3QixMo][Full Stack Developer]]
+*** books
+** Robert C Martin(uncle bob)
+*** [[https://www.youtube.com/watch?v=o_TH-Y78tt4&t=7s][clean architecture]]
+** Martin Fowler
+** Robert B Murray
+*** videos
+**** [[https://www.youtube.com/watch?v=eisuQefYw_o][YOW! 2016 Robert C. Martin - Effective Estimation (or: How not to Lie)]]
+** sean parent
+*** videos
+**** [[https://www.youtube.com/watch?v=QtzVd0MT3R0][better code]]
+** Sandi Metz
+** Scott Hanselman
+*** [[https://www.youtube.com/watch?v=FS1mnISoG7U&t=1134s][scaling yourself]]
+* Concepts
+** Microservice
+*** [[https://www.youtube.com/watch?v=1xo-0gCVhTU][Introduction to Microservices Docker, and kubernettes]]
+*** [[https://www.youtube.com/watch?v=MjIfWe6bn40][Greg Young - The Long Sad History of MicroServices TM]]
+*** [[https://www.youtube.com/watch?v=vs_XiP5Lkgg][The Entity Microservie Trap you may be doing it wrong]]
+** Code Smells
+*** [[https://www.youtube.com/watch?v=D4auWwMsEnY][Code Refactoring: Learn Code Smells And Level Up Your Game!]]
+    - very good talk
+*** [[https://www.youtube.com/watch?v=7oyiPBjLAWY][Code smells and feel]]
+*** [[https://www.youtube.com/watch?v=aKSd9DaD_Os&t=479s][Identify and Correct Common Code Smells]]
+*** [[https://www.youtube.com/watch?v=lbp6vwdnE0k][Avoiding Code Smells]]
+** Agile
+*** Agile samurai
+    - https://www.youtube.com/watch?v=zIPv-Ym2n1E
+    - https://www.youtube.com/watch?v=LvRVnFmLpSA
+    - https://www.youtube.com/watch?v=sCCUEtjCpCs&t=206s
+    - https://www.youtube.com/watch?v=MSMBYm9dHso
+    - https://www.youtube.com/watch?v=xQmm_K7Wz_E
+    - https://www.youtube.com/watch?v=YajHqROVsKo
+*** David Griffiths
+    - [[https://www.youtube.com/watch?v=Hwu438QSb_g][lean agile estimation in 10 minutes]]
+** Event Driven
+*** [[https://www.youtube.com/watch?v=H_ang8BatXQ][Moving from lagacy to event-driven with kafka]]
+* bash
+** [[https://www.youtube.com/watch?v=oxuRxtrO2Ag][Beginner's Guide to bash terminals]]
+* project estimation
+  - best case 95% chanse of missing
+  - worst case 5% chanse of missing
+  - nominal case 50% chance of missing
+  - std dev = (W-B)/6
+  - mean(B+W+4N)/6
+  - project mean = sum(mean)
+  - project std dev =sqrt(sum(stddev^2))
+* testing
+** [[https://www.youtube.com/watch?v=VD51AkG8EZw][RubyConf 2015 - How to Stop Hating your Test Suite by Justin Searls]]
+   22:07 audio becomes out of sync
+* microservice
+** 
+* 

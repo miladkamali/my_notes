@@ -1,0 +1,104 @@
+* proxy.py
+** plugin development
+   Plugin Developer and Contributor Guide
+Everything is a plugin
+
+As you might have guessed by now, in proxy.py everything is a plugin.
+
+    We enabled proxy server plugins using --plugins flag. All the
+    plugin examples were implementing HttpProxyBasePlugin. See
+    documentation of HttpProxyBasePlugin for available lifecycle
+    hooks. Use HttpProxyBasePlugin to modify behavior of http(s) proxy
+    protocol between client and upstream server. Example,
+    FilterByUpstreamHostPlugin.
+
+    We also enabled inbuilt web server using
+    --enable-web-server. Inbuilt web server implements
+    HttpProtocolHandlerPlugin plugin. See documentation of
+    HttpProtocolHandlerPlugin for available lifecycle hooks. Use
+    HttpProtocolHandlerPlugin to add new features for http(s)
+    clients. Example, HttpWebServerPlugin.
+
+    There also is a --disable-http-proxy flag. It disables inbuilt proxy server. Use this flag with --enable-web-server flag to run proxy.py as a programmable http(s) server. HttpProxyPlugin also implements HttpProtocolHandlerPlugin.
+
+Internal Architecture
+
+    HttpProtocolHandler thread is started with the accepted TcpClientConnection. HttpProtocolHandler is responsible for parsing incoming client request and invoking HttpProtocolHandlerPlugin lifecycle hooks.
+
+    HttpProxyPlugin which implements HttpProtocolHandlerPlugin also has its own plugin mechanism. Its responsibility is to establish connection between client and upstream TcpServerConnection and invoke HttpProxyBasePlugin lifecycle hooks.
+
+    HttpProtocolHandler threads are started by Acceptor processes.
+
+    --num-workers Acceptor processes are started by AcceptorPool on start-up.
+
+    AcceptorPool listens on server socket and pass the handler to Acceptor processes. Workers are responsible for accepting new client connections and starting HttpProtocolHandler thread.
+** running it
+   If you are trying to run proxy.py from source code, there is no binary file named proxy in the source code.
+
+To start proxy.py from source code follow these instructions:
+
+    Clone repo
+
+    ❯ git clone https://github.com/abhinavsingh/proxy.py.git
+    ❯ cd proxy.py
+
+    Create a Python 3 virtual env
+
+    ❯ python3 -m venv venv
+    ❯ source venv/bin/activate
+
+    Install deps
+
+    ❯ pip install -r requirements.txt
+    ❯ pip install -r requirements-testing.txt
+
+    Run tests
+
+    ❯ make
+
+    Run proxy.py
+
+    ❯ python -m proxy
+
+Also see Plugin Developer and Contributor Guide if you plan to work with proxy.py source code.
+** https://www.thepythoncode.com/article/writing-http-proxy-in-python-with-mitmproxy
+** https://levelup.gitconnected.com/how-to-build-a-super-simple-http-proxy-in-python-in-just-17-lines-of-code-a1a09192be00
+** https://opencollective.com/proxypy
+* mitmproxy
+  https://docs.mitmproxy.org/stable/overview-features/
+  https://mitmproxy.org/posts/releases/mitmproxy4/
+** use mitproxy certificate
+   https://docs.mitmproxy.org/stable/concepts-certificates/
+** custom code
+https://docs.mitmproxy.org/stable/api/events.html
+** examples
+   https://docs.mitmproxy.org/stable/addons-examples/
+** https://developers.refinitiv.com/en/article-catalog/article/use-mitmdump-to-capture-rt-content
+** https://searchfox.org/mozilla-central/source/testing/mozbase/mozproxy/mozproxy/backends/mitm/scripts/alternate-server-replay.py
+** https://github.com/mitmproxy/mitmproxy/issues/2447
+   https://datatracker.ietf.org/doc/html/rfc6455#section-5.3
+** [[https://quickref.me/mitmproxy][mitmproxy cheatsheet]]
+** https://stackoverflow.com/questions/50207103/mitmproxy-make-output-human-readable-to-file
+** https://docs.mitmproxy.org/stable/api/mitmproxy/http.html#HTTPFlow
+** https://docs.mitmproxy.org/stable/api/events.html
+** https://docs.mitmproxy.org/stable/addons-examples/#log-events
+** https://lucaslegname.github.io/mitmproxy/2020/11/04/mitmproxy-scripts.html
+** https://docs.mitmproxy.org/stable/addons-commands/
+** https://docs.mitmproxy.org/stable/addons-overview/
+** [[https://github.com/italankin/mitmproxy-addons/blob/master/offline.py][examples]]
+** https://docs.mitmproxy.org/stable/api/mitmproxy/websocket.html
+** https://blog.heckel.io/2013/07/01/how-to-use-mitmproxy-to-read-and-modify-https-traffic-of-your-phone/
+** https://github.com/mitmproxy/mitmproxy/issues/3306
+** https://pretagteam.com/question/using-mitmproxy-inside-python-script
+** [[https://github.com/mitmproxy/mitmproxy/blob/main/examples/addons/websocket-simple.py][websocket example]]
+* c++
+** pushpin
+   https://pushpin.org/docs/install/
+   github.com/fanout/pushpin.git
+** https://www.example-code.com/cpp/websocket_httpProxy.asp
+** https://github.com/kzhdev/zorro_websocket_proxy
+** https://github.com/zaphoyd/websocketpp
+* go
+** https://github.com/JavaHutt/ws-proxy?ref=golangexample.com
+** https://golangexample.com/http-http2-https-websocket-debugging-proxy/
+** [[https://gist.github.com/yowu/f7dc34bd4736a65ff28d][a simple websocket proxy]]

@@ -1,0 +1,54 @@
+* life
+** [#A] Health
+*** reduce weight to under 100
+*** general health
+*** healthy food
+*** Exercise
+** [#A] Professional
+*** Job Skills
+**** JAVA
+**** Machine Learning
+*** Online presentation
+*** Networking
+*** Resume
+*** Projects
+*** Starting my Company
+*** Partners
+** [#B] Financial
+*** Income
+*** Investment
+*** Savings
+*** Expenses
+** [#B] Social
+*** [#C] Privacy
+*** [#B] Social Networks
+*** [#B] Friends
+** [#B] Immigration
+*** PHD path
+*** Marko path
+*** Sweedish path
+** [#C] Hobbies
+*** photography
+*** graphics
+*** swimming
+*** electronics
+*** martial art
+*** running
+*** mountain climbing
+** [#A] Family
+*** Momy and Dady
+*** Wife
+*** aunt and uncles
+** [#C] Science
+*** Phd or no Phd
+** [#A] Living
+*** Travling and seeing the world
+*** Reading books and meeting interesting people
+* Fears
+** Not having live a life and regreting not doing things when i'm dying
+* Facts
+** I am living only once
+** I don't wanna die alone
+* improvement
+** dating
+   https://www.doctornerdlove.com/men-this-is-why-you-think-youre-ugly/

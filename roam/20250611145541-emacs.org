@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       9ef5e5a7-a77e-482d-a12c-1828907d6ddc
+:END:
+#+title: emacs
+describe a variable C+h v

@@ -1,0 +1,21 @@
+* Micrometer
+   a low level 
+   slf4j for metric
+   it is facade for different metric frameworks
+   
+** implementations
+   micrometer-registry-prometheus
+   micrometer-registry-jmx
+
+** metric monitoring frameworks
+*** cloudWatch
+*** prometheus
+*** influxDb
+*** signalFX
+*** dataDog
+*** JMX
+*** Atlas
+*** Graphite
+*** PCF Metric
+*** Elastic
+** spring boot actuator

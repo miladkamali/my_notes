@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       fb5ff36c-cccb-44fc-a468-73ef4414178d
+:END:
+#+title: invention
+triz method
+
+it's a method that classifies all the possible invention methods
+
+
+https://www.triz40.com/TRIZ_GB.php

@@ -1,0 +1,12 @@
+* my api key
+    UCMlGfpWw-RUdWX_JbLCukXg
+* resources
+  https://stackoverflow.com/questions/18953499/youtube-api-to-fetch-all-videos-on-a-channel
+  https://developers.google.com/youtube/v3/quickstart/java
+* get channel id
+  https://www.googleapis.com/youtube/v3/channels?part=snippet&forUsername=CppCon&key=AIzaSyAlo_YmJ7LGuH5DkmU6RMmB2xpJVHHoBeo
+* get channel video
+  https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=UCMlGfpWw-RUdWX_JbLCukXg&maxResults=10&key=AIzaSyAlo_YmJ7LGuH5DkmU6RMmB2xpJVHHoBeo
+  - next page
+    https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=UCMlGfpWw-RUdWX_JbLCukXg&maxResults=10&pageToken=CDIQAA&key=AIzaSyAlo_YmJ7LGuH5DkmU6RMmB2xpJVHHoBeo
+    

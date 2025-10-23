@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       960575CA-0D5F-4705-9B6F-9BCE13D80113
+:END:
+#+title: open source software
+* [[https://www.youtube.com/watch?v=lpRsqiBc2JQ][n8n]]
+* baserow
+https://www.youtube.com/watch?v=woTUh-6sEns

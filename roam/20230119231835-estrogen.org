@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       8EA89500-C2E7-4AB8-8B48-E97E7B57298D
+:END:
+#+title: estrogen
+
+
+estrogen production is proportional to the amount of fat you have in your body
+
+estrogen is linked to risk of cancer caused by [[id:217E2512-4E15-4FB2-A2B2-50C6531B776C][HPV]] 

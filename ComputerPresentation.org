@@ -1,0 +1,7 @@
+* cpu
+** [[https://www.youtube.com/watch?v=cNN_tTXABUA&t=24s][how a cpu works]]
+* links
+** https://en.wikipedia.org/wiki/MESM
+** https://en.wikipedia.org/wiki/Fortran
+** https://en.wikipedia.org/wiki/History_of_compiler_construction
+** [[https://www.youtube.com/watch?v=2KSahAoOLdU][Apollo Guidance Computer]]

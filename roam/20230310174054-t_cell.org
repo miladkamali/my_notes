@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       D7033E13-6369-4790-9851-6BF78C46C918
+:END:
+#+title: t cell
+
+a type of white blood cells

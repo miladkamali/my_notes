@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       FAFE0156-0911-4879-A904-2FDDC7C28B38
+:END:
+#+title: scrum
+[[https://www.youtube.com/watch?v=HURvJDldVGA][Why Does Scrum Make Programmers HATE Coding?]]

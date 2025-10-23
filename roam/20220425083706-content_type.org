@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       05914e13-8b57-4562-b894-37699f154681
+:END:
+#+title: content-type
+https://stackoverflow.com/questions/5661596/do-i-need-a-content-type-header-for-http-get-requests
+
+
+
+"A sender that generates a message containing a payload body SHOULD
+   generate a Content-Type header field in that message unless the
+   intended media type of the enclosed representation is unknown to the
+   sender."
+فرستادن content-type برای توصیف محتوای payload استفاده میشه. از اونجایی که "به طور معمولا" با get ریکوست payload فرستاده نمی‌شه فرستادن content-type برای get تعریف نشده است نه غیر مجاز.
+از اونجایی که payload درخواست توی این مورد خالی است پس کلا موضوع عدم هماهنگی content-type header  و payload که میتونی از نظر امنیتی مشکل داشته باشه منتفی است.
+نکته اینجاست که این کد آخرین بار بیش از ۳ ماه پیش تغییر کرده و اون تغییر هم هیچ ارتباطی با این بخش نداشته. توی تست‌‌‌هایی که برای pwa که توسط ما و همکاران شماانجام شد قبل از عید هیچ مشکلی وجود نداشت و waf هم هیچ کدوم از این ریکوست ها رو مانع نمی‌شد.تو این بازه تغیری توی config مربوط به WAF ایجاد شده که unspecified ها رو هم reject میکنه. بخاطر همین هم گفتم اصولا باید توی WAF  این بر طرف بشه.
+اگه امکان برگردوندن این تنظیم به حالت قبلی برای شما وجود نداره که در این صورت ما باید تغییر توی این بخش از کد ایجاد کنیم.

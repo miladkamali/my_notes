@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       6c991ec0-c3eb-49cf-9f89-c80be2d3dc50
+:END:
+#+title: bonker buster
+[[https://www.youtube.com/watch?v=33IfCt-fAOk][ Can Iran Stop U.S. Bunker Buster Bombs?]]
+
+* bombs
+** [[https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiF4_2s-Lf8AhUMQkEAHdwZDrcQFnoECA4QAQ&url=https%3A%2F%2Fde.wikipedia.org%2Fwiki%2FTallboy_(Bombe)&usg=AOvVaw0qU1HLvI9O7IR8b-qdHznw][tallBoy]] 5 ton
+** [[https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiqorrE-Lf8AhVqhv0HHZqeDTQQFnoECBkQAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGrand_Slam_(bomb)&usg=AOvVaw0QYT27f53X9Kw4aKNsBFzw][grand slam]] 10 ton
+** [[https://www.google.com/url?sa=t&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjyv4aa-bf8AhUji_0HHaoxD1AQFnoECA8QAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDisney_bomb&usg=AOvVaw1GaMybWddluHygq7xuHogm][dusbet bomb]]
+rocket powered thin tall bomb hitting target with 1.2 mach speed
+** [[https://en.wikipedia.org/wiki/BOLT-117][BOLT-117]]
+** GBU-28
+** GBU-57 Massive Ordnance Penetrator
+penetrate almost 200 feet of earth 
+it's made of [[id:9fb12a47-cbdf-4c31-adcb-7b5255ffa611][eglin steel]]

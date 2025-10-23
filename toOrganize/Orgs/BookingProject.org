@@ -1,0 +1,131 @@
+* planning what we need to do
+** check booking website to see how it is working
+** create a benchmark of how much volume can i handle 
+** talk to ata about diffrent process 
+** write the code that extracts information from booking
+** check the database requirements
+** plan for early preview
+* non technical things
+** help ata come up with better plans for handling situation
+*** help him analyse different situations by examining extrems to know where he stands
+*** play the devils advocate so the situation become more clear
+*** DO NOT get involve in non technical things before dust settles
+*** DO NOT make decisions for him
+
+
+** think about possible outcomes( positive and negatives)
+*** negative things
+    - If ghods learns about what is happening at the very least he
+      will be very angry at me
+    - He had been working at the very least one month effectively on
+      the project, i dont have this, and i might be blind sided to
+      some of the errors and problems that might happen technically, I
+      dont want to disappoint Ata.
+      - make sure you minimize technical risks.
+      - make sure ata has other options besides you or at the very
+        least you are not the reason he his making these decisions.
+      - DO Talk to him about these things.
+    - If things go sideways there is a chance that it might effect my
+      friendship with Ata negatively
+      - Make SURE WE ARE ON THE SAME PAGE(what that page is i have no idea).
+    - It could be consided as coup against Ghods, There will be some
+      collateral damages
+      - PREPARE A LIST OF ACTIONS TO COUNTER AND MINIMIZE THESE DAMAGES
+      - Make a list of all possible actions of Ghods and possbile responses
+    - Make sure Ata's stress is properly managed
+      - Teach him what ever you know that will help him manage stress
+*** positive things
+    - i like the project and it's challenging enough
+    - there can be financial and non financial benefits here(think about the list)
+    - Become a key member is a startup 
+
+*** what are the things that are neither good or bad here?
+** my reasons to get involve
+   so far based on the previous list of possible outcomes LOGICALLY i
+   should not get involve, but getting involve feels like a good idea,
+   WHY? what are the things that might be unknown to me( as of now)
+   which makes this feels better than it should LOGICALLY?
+*** hidden motives
+**** Ghods
+     - I do feel that he uses people
+     - I also feel the net of his behavior has been positive toward me
+       - negative aspects
+	 - Hatam pour
+	   - Raw deal 
+	   - his attempt to control my behavior
+	   - He did manage to convince me to continue working with him
+	 - Marko- initialization
+	   - the way he sold the project viewed his greed
+	 - Science Direct
+	   - Raw deal (I was't considered in finacial part of the project)
+	     - partially my fault
+       - positive
+	 - mohsen
+	   - I do think i was put there to prepare for his eventual
+             departure
+	   - 
+	 - Mapsa
+	   - His behavior toward camp control was questionable never
+             the less I consider the net sum positive
+	   - 
+     - He has lots of connections which are quite useful.
+**** Ata
+**** Project
+**** Vahid
+     - I like him ( at least i think i would like him)
+     - working with him do sound interesting because i get to know him
+     - the fact that Ghods hates him with passion makes him
+       interesting
+     - 
+**** Rahnama
+     - I have heard their names on different occation and that makes
+       them interesting
+     - 
+**** Alavian
+**** Iran/canada
+     - canada PR wasn't an option before and i still felt good, so
+       it's safe to say it's not the main reason, However it's a very
+       tempting proposition.
+**** Navid/Mapsa
+     - There is some uncertainity in mapsa which i dont like, but it's
+       shrinking, because of it i dont like it to have major effect on
+       my prospect(it has right now)
+     - I like navid, he seems like a good person, I dont trust him
+       completely, but i feel because of his principles he can be
+       trusted to do certain things even if it's not in his immediate interest.
+     - over all my 
+**** MosharSystem
+     I dont have any feeling for it except what is attached to Ghods, So it's not a factor
+* links
+** ExecutionService
+   https://www.youtube.com/watch?v=6Oo-9Can3H8&list=PLhfHPmPYPPRl0LntrCBnQD5ln6lnqqoms
+** forkJoinPool
+   https://www.youtube.com/watch?v=5wgZYyvIVJk
+** volatile vs AtomicInteger
+   https://www.youtube.com/watch?v=WH5UvQJizH0
+** multithread interview questions
+   https://www.youtube.com/watch?v=AfVbJDr-8ic
+** Java ReentrantLock - fairness, tryLock and more
+   https://www.youtube.com/watch?v=ahBC69_iyk4
+** http 
+   https://dzone.com/articles/high-concurrency-http-clients-on-the-jvm
+   http://blog.paralleluniverse.co/2014/02/04/littles-law/
+   http://blog.paralleluniverse.co/2015/05/21/quasar-vs-akka/
+   [[https://www.atlassian.com/blog/archives/http-client-performance-io][
+   - async 
+     https://github.com/AsyncHttpClient/async-http-client
+   - apachee httpclient
+     https://hc.apache.org/httpcomponents-client-ga/tutorial/pdf/httpclient-tutorial.pdf
+     https://www.baeldung.com/httpclient-ssl
+     https://www.baeldung.com/httpclient-post-http-request
+     https://www.baeldung.com/httpclient4
+     https://www.baeldung.com/httpclient-guide
+   - apachee httpasyncclient
+     https://www.baeldung.com/httpasyncclient-tutorial
+     [[http://allenxwang.blogspot.com/2013/10/netty-httpasyncclient-and-httpclient.html][benchmark]]
+     https://hc.apache.org/httpcomponents-client-ga/tutorial/html/connmgmt.html#d5e371
+   - async-http-client
+     https://github.com/AsyncHttpClient/async-http-client
+** ignore ssl validation
+   https://nakov.com/blog/2009/07/16/disable-certificate-validation-in-java-ssl-connections/
+   https://stackoverflow.com/questions/2893819/accept-servers-self-signed-ssl-certificate-in-java-client

@@ -1,0 +1,5 @@
+* https://www.c-sharpcorner.com/article/configuring-https-in-asp-net-core-2-1/
+* https://social.technet.microsoft.com/wiki/contents/articles/37272.code-first-migration-asp-net-core-mvc-with-entityframework-core.aspx
+* https://neelbhatt.com/2018/01/14/code-first-migration-in-net-core2-0-crud-operations/
+* https
+  https://blogs.msdn.microsoft.com/webdev/2018/02/27/asp-net-core-2-1-https-improvements/

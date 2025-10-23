@@ -1,0 +1,5 @@
+* set up jira
+** [[https://virgool.io/@hosseinkhani/%D9%86%D8%B5%D8%A8-%D9%88-%D8%B1%D8%A7%D9%87-%D8%A7%D9%86%D8%AF%D8%A7%D8%B2%DB%8C-%D9%86%D8%B1%D9%85%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-jira-qam6itsqota1][install jira]]
+** [[https://virgool.io/@hosseinkhani/%D9%85%D8%AA%D8%B5%D9%84-%DA%A9%D8%B1%D8%AF%D9%86-gitlab-%D8%A8%D9%87-jira-xrokttzxuq7v][connect jira to gitlab]]
+** [[https://www.ratosan.com/best-jira-addon-plugin/][some of the plugins]]
+*  https://samansolutions.atlassian.net/plugins/servlet/ac/clockwork-free-cloud/clockwork-timesheet?project.key=BB&project.id=10101#!startingAt=2020-03-20&endingAt=2020-04-14&activeReportDetailKeys%5B%5D=projects&activeReportDetailKeys%5B%5D=users&projects%5B%5D=10101

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       336c7b8c-1e54-44f0-a16f-521ac726f536
+:END:
+#+title: wernicke-korsakoff syndrome
+a condition caused by B1 deficiency which degenerate neuron

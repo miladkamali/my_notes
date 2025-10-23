@@ -1,0 +1,162 @@
+:PROPERTIES:
+:ID:       cb498fe8-5273-46c2-925d-bc8e690712b0
+:END:
+#+title: postgres
+* resources
+** https://tapoueh.org/page/3/
+** https://tapoueh.org/blog/2014/02/postgresql-aggregates-and-histograms/
+* configuration
+** remote loging
+   in /etc/postgresql/12/main/pg_hba.conf
+   listen_addresses = '*' 
+* installing postgres
+  https://computingforgeeks.com/how-to-install-postgresql-11-on-debian-9-debian-8/
+
+  apt install -y vim wget
+  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+  RELEASE=$(lsb_release -cs)
+  echo "deb http://apt.postgresql.org/pub/repos/apt/ ${RELEASE}"-pgdg main | sudo tee  /etc/apt/sources.list.d/pgdg.list
+* special sql commands
+** get size of databases
+   SELECT pg_size_pretty( pg_database_size('milad') );
+   SELECT pg_database.datname as "database_name", pg_database_size(pg_database.datname)/1024/1024 AS size_in_mb FROM pg_database ORDER by size_in_mb DESC;
+** get size of tables in current database
+   SELECT nspname || '.' || relname AS "relation",
+    pg_size_pretty(pg_total_relation_size(C.oid)) AS "total_size"
+  FROM pg_class C
+  LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace)
+  WHERE nspname NOT IN ('pg_catalog', 'information_schema')
+    AND C.relkind <> 'i'
+    AND nspname !~ '^pg_toast'
+  ORDER BY pg_total_relation_size(C.oid) DESC
+  LIMIT 5;
+** describe table
+   SELECT 
+   table_name, 
+   column_name, 
+   data_type 
+FROM 
+   information_schema.columns
+WHERE 
+   table_name = 'city';
+* user creation
+  CREATE USER jonathan;
+
+Create a user with a password:
+
+CREATE USER davide WITH PASSWORD 'jw8s0F4';
+
+Create a user with a password that is valid until the end of 2004. After one second has ticked in 2005, the password is no longer valid.
+
+CREATE USER miriam WITH PASSWORD 'jw8s0F4' VALID UNTIL '2005-01-01';
+
+Create an account where the user can create databases:
+
+CREATE USER manuel WITH PASSWORD 'jw8s0F4' CREATEDB;
+
+* partitionaning
+  https://minimalistic-oracle.blogspot.com/2019/01/how-to-create-partitioned-table-with.html
+** partitioning list 
+   CREATE TABLE orders(
+  id            integer,
+  country_code  VARCHAR(5),
+  customer_id   integer,
+  order_date    DATE,
+  order_total   numeric(8,2),
+PRIMARY KEY (id,country_code)
+)
+PARTITION BY LIST (country_code);
+
+ create table tradeCopy(id bigint,date varchar(255),last_number bigint,price bigint,stock_id varchar(255),time varchar(255),trade_number integer, volume bigint, primary key(id,stock_id)) partition by list(stock_id);
+ create table bids_row_copy(id bigint,date varchar(255),time varchar(255),stock_id varchar(255),place bigint,num_buyer bigint,buy_volume bigint,fifth bigint,sixth bigint,seventh bigint,eighth bigint,primary key(id,stock_id)) partition by list(stock_id);
+ create table bids_row_copy(id bigint,stock_id varchar(255),date varchar(255),time varchar(255),place bigint ,num_buyer bigint,buy_volume bigint,buy_offer bigint ,sell_offer bigint ,sell_volume bigint,num_seller bigint,primary key(id,stock_id))partition by list(stock_id);
+select stock_id,date,time,second as place ,third as num_buyer,fourth as buy_volume,fifth as buy_offer,sixth as sell_offer,seventh as sell_volume,eighth as num_seller from bids_row where stock_id='15259343650667588' and date='20180218' order by time desc limit 1;
+
+ create table tradecopy_35714741066489959 partition of tradecopy for values in ('35714741066489959');
+ create table tradecopy_39728531612582989 partition of tradecopy for values in ('39728531612582989');
+ create table tradecopy_24212636157410845 partition of tradecopy for values in ('24212636157410845');
+ create table tradecopy_23192192662105757 partition of tradecopy for values in ('23192192662105757');
+ create table tradecopy_523316700238094 partition of tradecopy for values in ('523316700238094');
+ create table tradecopy_2254054929817435 partition of tradecopy for values in ('2254054929817435');
+
+select stock_id,date,time,second as place ,third as num_buyer,fourth as buy_volume,fifth as buy_offer,sixth as sell_offer,seventh as sell_volume,eighth as num_seller from bids_row where stock_id='15259343650667588' and date='20180218' order by time desc limit 1;
+* indexing
+** creating index
+   http://www.postgresqltutorial.com/postgresql-indexes/postgresql-unique-index/
+   CREATE UNIQUE INDEX index_name ON table_name(column);
+** drop index
+   http://www.postgresqltutorial.com/postgresql-indexes/postgresql-drop-index/
+   DROP INDEX index_name;
+* loging
+  https://tableplus.com/blog/2018/10/how-to-show-queries-log-in-postgresql.html
+* backup 
+  [[https://medium.com/leboncoin-engineering-blog/managing-postgresql-backup-and-replication-for-very-large-databases-61fb36e815a0][large scale backup]]
+  https://www.linode.com/docs/databases/postgresql/how-to-back-up-your-postgresql-database/
+  pg_dump dbname > dbname.bak
+  psql test < dbname.bak
+** back up a table
+   pg_dump -d databaseName -t tableName > file.sql
+* talks
+** [[https://www.youtube.com/watch?v=8mKpfutwD0U][Postgres 10TB and beyond]]
+** [[https://www.youtube.com/watch?v=4Or_duEEYr8][Scaling postgres for Time series]]
+** [[https://www.youtube.com/watch?v=xrMbzHdPLKM][Tuning postgres for hight write workload]]
+** [[https://www.youtube.com/watch?v=t8-BQjWJFKw][postgres is the new nosql]]
+** [[https://www.youtube.com/watch?v=atvgYJTBEF4][efficient time series with postgres]]
+* TODO learn generte_series function
+* permissions
+  Grant usage schema:
+
+GRANT USAGE ON SCHEMA database_name TO username;
+Grant all table for DML statements: SELECT, INSERT, UPDATE, DELETE:
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA database_name TO username;
+Grant access to all tables in the database:
+
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA schema_name TO username;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA schema_name TO username;
+GRANT ALL PRIVILEGES ON DATABASE database_name TO username;
+Granting permission to create database:
+
+ALTER USER username CREATEDB;
+Make a user superuser:
+
+ALTER USER myuser WITH SUPERUSER;
+Remove superuser status:
+
+ALTER USER username WITH NOSUPERUSER;
+Those statements above only affect the current existing tables. To apply to newly created tables, you need to use alter default.
+
+ALTER DEFAULT PRIVILEGES
+FOR USER username
+IN SCHEMA schema_name
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO username;
+** check available permissions for user 
+ select 
+  * 
+ from information_schema.role_table_grants 
+ where grantee='YOUR_USER'
+ ;
+
+* commands
+** list all databases
+   \l
+** create a database
+   CREATE DATABASE dbname;
+** connect to database
+   \c databaseName
+** list all tables in database
+   \d
+** expanded display
+   \x
+* optimizations
+** insert speed
+   [[https://stackoverflow.com/questions/12206600/how-to-speed-up-insertion-performance-in-postgresql][how-to-speed-up-insertion-performance-in-postgresql]]
+   https://dzone.com/articles/50-best-performance-practices-for-hibernate-5-amp
+   [[https://gist.github.com/valyala/ae3cbfa4104f1a022a2af9b8656b1131][general points]]
+*** id generation
+    https://vladmihalcea.com/database-primary-key-flavors/
+    https://vladmihalcea.com/the-hilo-algorithm/
+** vacuum
+   https://confluence.atlassian.com/kb/optimize-and-improve-postgresql-performance-with-vacuum-analyze-and-reindex-885239781.html
+
+

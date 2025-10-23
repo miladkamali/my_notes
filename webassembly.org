@@ -1,0 +1,3 @@
+* https://developer.mozilla.org/en-US/docs/WebAssembly/Using_the_JavaScript_API
+* https://egghead.io/lessons/go-access-js-functions-and-variables-from-a-go-webassembly-program
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global

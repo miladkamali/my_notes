@@ -1,0 +1,95 @@
+* business
+table containing business registration information
+** normal business information
+*** name
+*** phone number
+*** email
+*** ...
+** business-id
+** business token
+** business public key
+* business_workflows
+table containing workflows associated with a business
+** id : uuid
+** businessID
+** workflow type :  foreign key refrences workflow definition table
+** workflow config : id for collection in mongo
+* workflows
+workflows run by business
+** id uuid (session id)
+** businessid foreign key refrencess business table
+** workflow type : foreign key refrences workflow definition table
+** workflow start time : LocalDateTime
+** workflow end time : LocalDateTime 
+** status : enum
+*** started
+*** ended
+*** Failed
+** status detail : varchar 4096
+any error that can occur
+** user_id foreign key users table
+** workflow_info mongo_db collection
+only writes once when the workflow is being closed
+* workflow_definitions
+** id: uuid
+** name: string
+** description : string
+** config template: id for collection in mongo
+* ACL
+** access
+** roles-definitions
+** role-access
+** permissions
+* users information
+first we want the users to be identifiable via their nationalId and birthday
+one user can participate in different business
+
+users are uniq on combination of business_id,business_workflow_id,national_id,birthday
+** id : uuid
+//** token: uuid (this is the token that will be passed outside)
+** business_id foreign key business table
+** business_workflow_id foreign key business_workflows table
+** national_id
+** birthday
+** mobile number
+** creation_at
+** updated_at
+** authenticated_at
+** user_profile -> id of mongo collection
+these profiles are going to be stored in Encrypted format
+*** user basic information
+all the information we get from sitad
+**** name
+**** family name
+**** father name
+**** birthdate
+**** gender
+**** ...
+*** cellphone information
+*** landline information
+*** marital status
+*** health status
+*** religion status
+*** military service status
+*** national card information
+*** drivers licence information
+*** user financial information
+*** user address information
+*** education information
+*** videos
+*** profile images
+*** certified profile images
+*** documents
+*** signature
+** user_history -> id of mongo collection
+*** user status history
+**** dateTime,status
+*** user ip history
+*** user API calls
+** user_status
+*** registered(the moment we get national_id and call shahkar api)
+*** in-flow ( every step after shahkar)
+*** closed-flow ( for some reason the workflow has been closed)
+*** waiting for call Center
+*** Authenticated
+*** Rejected

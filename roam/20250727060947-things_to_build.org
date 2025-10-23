@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4DCD17C5-998C-46AE-BA9F-E60B227D9A28
+:END:
+#+title: things to build
+* self loading cross bow
+https://www.youtube.com/watch?v=_uFdarU_19Y

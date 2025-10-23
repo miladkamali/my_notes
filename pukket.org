@@ -1,0 +1,13 @@
+* fahim
+kind of interesting person
+* hamideh
+design
+* puket journey
+* handover
+** https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjiyNiI2ZyAAxXcAjQIHQGJDp0QFnoECBEQAQ&url=https%3A%2F%2Fgrafana.com%2Foss%2Floki%2F&usg=AOvVaw3JtWV5gf-dmX-XGHPRgZ28&opi=89978449
+** metabase
+* time log
+** 
+:LOGBOOK:
+CLOCK: [2023-07-24 Mon 16:30]--[2023-07-24 Mon 18:21] =>  1:51
+:END:

@@ -1,0 +1,4 @@
+* notes
+** adding a date to org-capture                            :note:unprocessed: 
+   https://emacs.stackexchange.com/questions/24368/current-time-timestamp-in-org-capture-templates
+   https://www.reddit.com/r/orgmode/comments/bim468/timestamp_in_capture_template/

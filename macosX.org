@@ -1,0 +1,37 @@
+* in
+* packages
+  libvirt
+  qemu
+  ovmf
+  virt-manager
+
+  1) systemctl enable libvirtd
+     systemctl start libvirtd
+
+  2) [[file:./images/macOS/4.png][ image]]
+
+  3) https://github.com/foxlet/macOS-Simple-KVM
+
+  4) 
+* https://www.youtube.com/watch?v=h2xoRkzjQoc
+0:00 TinkerTool - https://www.bresink.com/osx/TinkerToo...
+3:51 CheatSheet  - https://www.mediaatelier.com/CheatSheet/
+4:27 ImgOptim - https://imageoptim.com/mac
+5:28 Dropzone  - https://aptonic.com
+7:19 IINA - https://iina.io
+7:57 Overcast  - https://overcast.fm
+8:35 Alfred - https://alfredapp.com
+11:07 Mathpix Snip - https://mathpix.com
+12:55 Mockuuups Studio - https://mockuuups.studio
+13:54Front and Center - https://hypercritical.co/front-and-ce...
+15:37 TextSniper - https://textsniper.app
+17:00 Magnet - https://magnet.crowdcafe.com
+18:30 PDF Squeezer - https://www.witt-software.com/pdfsque...
+19:48 HomeControl - https://apps.apple.com/us/app/homecon...
+20:27 Reeder - https://reederapp.com
+22:12 Bartender - https://www.macbartender.com
+23:14 1Password - https://1password.com
+26:17 Fantastical - https://flexibits.com/fantastical
+27:52 Craft - https://www.craft.do
+
+* 

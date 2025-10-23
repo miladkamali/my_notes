@@ -1,0 +1,63 @@
+* Java general questions
+** What is java
+** what do you know about JRE/JDK
+** what is JVM
+** what is JIT
+** explain how a java program runs
+** how java manages memory
+** how many types of memory do we have in java
+** what do you know about Garbage collector
+* OOP
+** what is the OOP
+** What are the OOP concepts
+  - Abstraction.
+  - Encapsulation.
+  - Inheritance.
+  - Polymorphism.
+** what is a class
+** how many programing paradime do you know
+   - Procedural
+   - functional
+   - Logic
+   - OO
+** Is java a pure Object Oriented programming language
+** what is an object
+** what is polimorphism
+** what is the difference between runtime polimorphism and 
+** what is the constructor
+** what happens with new keyword
+* OOD
+** lets say i 
+** lets say i wanna create a notification system which notifies using email/sms/telegram/phonecall/... how would you do that?
+* JAVA SE
+** Concurrency in java
+*** how can we start a new thread in java
+*** why we might use thread or runnable
+*** Do you know of any other method of doing multiple things simultaniously
+*** imaging you were going to handle lots of events ( 10000 different types ) how do you go about it 
+*** how can you ensure not too many threads are being run simultaniously
+*** What is Wait/Notify and where do they belong?
+*** what is a future or a promise
+** Socket programming
+** Java Collections
+*** hierarchy of collections
+** Java Exceptions
+*** Hierarchy of Exceptions
+*** how can you define an exception
+*** why should you throw and exception
+*** is any other way of communicating errors in program
+*** have you heard about Optional 
+*** 
+* Hibernate
+  https://www.onlineinterviewquestions.com/hibernate-interview-questions-answers/
+** what is hibernate
+** how it is configured
+** what is HQL
+** is every thing put into database ever
+** Lazy vs Eager
+** cache levels 
+** what are these annotations for
+*** @Entity
+*** @Inheritance
+*** @Embedable
+*** @MappedSupperClass

@@ -1,0 +1,14 @@
+* setting up logitec k400 plus linux
+** resources
+   https://pwr-solaar.github.io/Solaar/installation
+** setup
+    download the latest solaar 
+    https://github.com/pwr-Solaar/Solaar/releases
+    extract it and run
+    rules.d/install.sh script
+** swap fn and function
+   ./bin/solar config 0 fn-swap off
+* keyboards
+** https://www.digikala.com/product/dkp-6496117/%DA%A9%DB%8C%D8%A8%D9%88%D8%B1%D8%AF-%D9%85%D8%AE%D8%B5%D9%88%D8%B5-%D8%A8%D8%A7%D8%B2%DB%8C-%D8%B1%D8%AF%D8%B1%D8%A7%DA%AF%D9%88%D9%86-%D9%85%D8%AF%D9%84-k630-dragonborn
+** https://www.digikala.com/product/dkp-521595/%DA%A9%DB%8C%D8%A8%D9%88%D8%B1%D8%AF-%D9%85%D8%AE%D8%B5%D9%88%D8%B5-%D8%A8%D8%A7%D8%B2%DB%8C-%DA%AF%D8%B1%DB%8C%D9%86-%D9%85%D8%AF%D9%84-gk601-rgb
+** https://torob.com/p/42cf4602-0fc6-43f1-a3e1-22308b53ecb5/%DA%A9%DB%8C%D8%A8%D9%88%D8%B1%D8%AF-razer-blackwidow-v3/

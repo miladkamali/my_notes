@@ -1,0 +1,11 @@
+* Connection pool
+** pool-locking
+   a senario where a request in a thread requires multiple connections to the
+   database and if number of connections are less than optimal, we can
+   experience a dead lock due to race for acquiring connection.
+   pool size = (T_n) *(C_m +1 ) +1
+   T_n = maximum number of threads
+   C_m = maximum number of simultanious connection heald by a thead
+*** how can we learn C_m for spring application
+** 
+** 

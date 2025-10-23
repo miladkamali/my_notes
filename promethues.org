@@ -1,0 +1,5 @@
+* [[https://www.youtube.com/watch?v=9GMWvFcQjYI][Intro + Deep Dive: Prometheus - Julius Volz, Prometheus & Richard Hartmann, SpaceNet]]
+* set up for mysql
+** [[https://www.youtube.com/watch?v=jc4D7g1xuYg][Mysql Monitoring with Prometheus and Grafana]]
+* tutorials
+** [[https://www.youtube.com/watch?v=9TJx7QTrTyo][Server Monitoring // Prometheus and Grafana Tutorial]]

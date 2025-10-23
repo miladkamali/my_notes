@@ -1,0 +1,454 @@
+* question sources
+** https://www.javatpoint.com/corejava-interview-questions
+** http://www.java67.com/2015/03/top-40-core-java-interview-questions-answers-telephonic-round.html
+** [[https://javarevisited.blogspot.com/2014/07/top-50-java-multithreading-interview-questions-answers.html][Thread question java]]
+** [[https://www.javatpoint.com/java-multithreading-interview-questions][Thread questions 2]]
+** [[https://howtodoinjava.com/interview-questions/useful-java-collection-interview-questions/][ java collection questions]]
+** [[https://www.journaldev.com/1330/java-collections-interview-questions-and-answers][collections]]
+** [[https://javaconceptoftheday.com/java-practice-questions-on-method-overloading-and-overriding/][java-practice-questions-on-method-overloading-and-overriding]]
+** [[https://www.journaldev.com/3633/hibernate-interview-questions-and-answers][hibernate]]
+   https://www.journaldev.com/3793/hibernate-tutorial
+** [[http://www.java67.com/2017/08/difference-between-abstract-class-and-interface-in-java8.html#more][usage]]
+** [[https://www.hackerrank.com/domains/java/oop/difficulty:all/page:1][check this out]]
+** [[http://www.ntu.edu.sg/home/ehchua/programming/java/J3f_OOPExercises.html][check this out]]
+** [[https://www.javatpoint.com/java-multithreading-interview-questions][java-multithreading-interview-questions]]
+** http://www.java67.com/2017/08/difference-between-abstract-class-and-interface-in-java8.html#more
+** [[https://www.careerride.com/Data-Structure-Interview-Questions.aspx][data Structures]]
+** coding questions
+Write a program to reverse a string using recursive algorithm.
+Write a program to reverse a number.
+Find longest substring without repeating characters.
+Write a program to find sum of each digit in the given number using recursion.
+Write a program to check the given number is a prime number or not?
+Write a program to remove duplicates from sorted array.
+Write a program to check the given number is binary number or not?
+How to check the given Binary Tree is Binary Search Tree (BST) or not?
+Find min and max value from Binary Search Tree (BST)
+Find out duplicate number between 1 to N numbers.
+Write a program to find maximum repeated words from a file.
+Implement Binary Search Tree (BST) post-order traversal (depth first).
+Write a program for Bubble Sort in java.
+Write a program to convert binary to decimal number.
+Write a program to find out duplicate characters in a string.
+Write a program to convert string to number without using Integer.parseInt() method.
+Write a program to sort a map by value.
+Write a program to find the given number is Armstrong number or not?
+Implement Binary Search Tree (BST) pre-order traversal (depth first).
+Write a program to get distinct word list from the given file.
+Write a program to print fibonacci series.
+Write a program to implement ArrayList.
+Write a program to convert decimal number to binary format.
+Write a program to find top two maximum numbers in a array.
+Find height of a Binary Search Tree (BST)
+Write a program for Insertion Sort in java.
+How to delete a node from Binary Search Tree (BST)?
+How to reverse Singly Linked List?
+Implement Binary Search Tree (BST)
+Write a program to find the sum of the first 1000 prime numbers.
+How to sort a Stack using a temporary Stack?
+Write a program to find two lines with max characters in descending order.
+How to get distinct elements from an array by avoiding duplicate elements?
+Write a program to implement hashcode and equals.
+Write a program to create deadlock between two threads.
+Find out middle index where sum of both ends are equal.
+Write a program to print all permutations of a given string.
+Write a program to get a line with max word count from the given file.
+Implement Binary Search Tree (BST) Level order traversal (breadth first).
+Implement Binary Search Tree (BST) in-order traversal (depth first).
+* Hibernate
+** Why ORM and what problem it solves
+** ACID principle
+** hibernate Configuration
+** Session
+** Component mapping
+** Association mapping
+*** Many-to-One
+*** One-to-One
+*** One-to-Many
+*** Many-to-Many
+** hibernate Relations
+** Inheretence
+** annotations
+* Spring
+** Spring AOP
+   https://www.youtube.com/playlist?list=PLE37064DE302862F8
+   https://www.youtube.com/watch?v=Og9Fyew8ltQ
+** Spring Dependency Injection
+   https://www.youtube.com/watch?v=GB8k2-Egfv0
+
+   https://www.youtube.com/watch?v=yxY9-ABmt94
+* java Core
+** Thread
+*** difference between concurency and parallelism 
+*** Runnable
+*** synchronization
+*** Locks
+*** wait/Notify
+** boxing and unboxing
+** Generics
+** memory
+*** Heap
+**** controlling Heap size
+*** Stack
+**** StackFrame
+**** what goes in a stack frame
+**** what is tipical size of stack
+*** Garbage collector
+**** how it works 
+**** garbage collector pause
+** error handling
+*** try/catch
+*** throw
+*** exception Hierachy
+*** what is stack trace
+*** Checked Exceptions
+*** runtime Exceptions
+*** Constume Exceptions
+** java Collections
+   - https://docs.oracle.com/javase/tutorial/collections/index.html
+   - https://www.geeksforgeeks.org/collections-in-java-2/
+*** list of collections interfaces
+**** List
+**** SET
+**** Queue
+*** list of implementations
+**** Arraylist
+**** LinkedList
+**** Stack
+**** Vector
+**** Hashset
+**** LinkedHashset
+**** Treeset
+**** PriorityQueue
+**** ArrayDeque
+**** Hashmap
+**** HashLinkedMap
+*** what is the insert remove and lookup order of each implementation
+*** Algorithms on collections
+    https://docs.oracle.com/javase/tutorial/collections/algorithms/index.html
+**** Sorting
+**** Shuffling
+**** Searching
+***** binarySearch
+**** Finding min/Max
+** Serialization
+** StringBuilder vs StringBuffer
+** Optional and how it's used( why we use it)
+   https://javarevisited.blogspot.com/2017/04/10-examples-of-optional-in-java-8.html#axzz4pXFCC65F
+* Operating system
+** Thread vs process
+*** memory access
+*** communication between threads
+*** communication between processes
+* design patterns
+  - [[https://www.youtube.com/playlist?list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc][Design Patterns in Object Oriented Programming]]
+** important Patterns
+*** Singleton
+*** Factory
+*** Strategy
+*** Observer
+*** Microservice
+*** Thread Pool
+*** Adapter
+*** Proxy
+** Types of design patterns
+  - https://en.wikipedia.org/wiki/Software_design_pattern
+*** Creational pattersn
+*** Structual Pattern
+*** Behavioral pattern
+*** Concurrentcy patterns
+* MVC
+** Why problems MVC solves
+* OOP
+** SOLID Principles
+** What is OOPS?
+OOPS is abbreviated as Object Oriented Programming system in which
+programs are considered as a collection of objects. Each object is
+nothing but an instance of a class.
+** Write basic concepts of OOPS?
+   Following are the concepts of OOPS and are as follows:
+  - Abstraction.
+  - Encapsulation.
+  - Inheritance.
+  - Polymorphism.
+** What is a class?
+A class is simply a representation of a type of object. It is the
+blueprint/ plan/ template that describe the details of an object.
+** What is an object?
+Object is termed as an instance of a class, and it has its own state,
+behavior and identity.
+** What is Encapsulation?
+Encapsulation is an attribute of an object, and it contains all data
+which is hidden. That hidden data can be restricted to the members of
+that class.
+
+Levels are Public,Protected, Private, Internal and Protected Internal.
+
+** What is Polymorphism?
+
+Polymorphism is nothing butassigning behavior or value in a subclass
+to something that was already declared in the main class. Simply,
+polymorphism takes more than one form.
+
+** what is runtime polymorphism vs compile time polymorphism
+** What is Inheritance?
+Inheritance is a concept where one class shares the structure and
+behavior defined in another class. Ifinheritance applied on one class
+is called Single Inheritance, and if it depends on multiple classes,
+then it is called multiple Inheritance.
+** What are manipulators?
+Manipulators are the functions which can be used in conjunction with
+the insertion operators on an
+object. Examples are endl and setw.
+** Define a constructor?
+Constructor is a method used to initialize the state of an object, and
+it gets invoked at the time of object creation. Rules forconstructor
+are:
+
+Constructor Name should be same asclass name.
+
+Constructor must have no return type.
+** Define Destructor?
+
+Destructor is a method which is automatically called when the object
+ismade ofscope or destroyed. Destructor name is also same asclass name
+but with the tilde symbol before the name.
+
+Quick Links : Get easiest and Simplest idea about Dot Net
+
+** What is Inline function?(c++)
+
+Inline function is a technique used by the compilers and instructs to
+insert complete body of the function wherever that function is used in
+the program source code.
+
+** What is operator overloading?(c++)
+Operator overloading is a function where different operators are
+applied and depends on the arguments. Operator,-,* can be used to pass
+through the function , and it has their own precedence to execute.
+
+** What is an abstract class?
+
+An abstract class is a class which cannot be instantiated. Creation of an object is not possible with abstract class , but it can be inherited. An abstract class can contain only Abstract method. Java allows only abstract method in abstract class while for other language it allows non-abstract method as well.
+
+** What is an interface?
+
+An interface is a collection of abstract method. If the class implements an inheritance, and then thereby inherits all the abstract methods of an interface.
+
+** What is exception handling?
+
+Exception is an event that occurs during the execution of a program. Exceptions can be of any type – Run time exception, Error exceptions. Those exceptions are handled properly through exception handling mechanism like try, catch and throw keywords.
+
+** What is dynamic or run time polymorphism?
+
+Dynamic or Run time polymorphism is also known as method overriding in which call to an overridden function is resolved during run time, not at the compile time. It means having two or more methods with the same name,same signature but with different implementation.
+
+**  What is static and dynamic binding?
+Binding is nothing but the association of a name with the
+class. Static binding is a binding in which name can be associated
+with the class during compilation time , and it is also called as
+early Binding.
+
+Dynamic binding is a binding in which name can be associated with the
+class during execution time , and it is also called as Late Binding.
+
+** What is a copy constructor?
+
+This is a special constructor for creating a new object as a copy of
+an existing object. There will be always only on copy constructor that
+can be either defined by the user or the system.
+
+** Difference between class and an object?
+
+An object is an instance of a class. Objects hold any information ,
+but classes don’t have any information. Definition of properties and
+functions can be done at class and can be used by the object.
+
+Class can have sub-classes, and an object doesn’t have sub-objects.
+
+** What is the difference between structure and a class?
+
+Structure default access type is public , but class access type is
+private. A structure is used for grouping data whereas class can be
+used for grouping data and methods. Structures are exclusively used
+for data and it doesn’t require strict validation , but classes are
+used to encapsulates and inherit data which requires strict
+validation.
+
+** Are private functions really private?
+Poor OOPS design can be exploited to call private functions from instances of the classes.
+This is because of Virtual functions 
+
+** Can you maintain the number of active instances of class A that reside in heap section of the memory?
+This problem alone talks about 6+ OOPS concepts -
+Constructor/Destructor
+Static Data Members
+How to initialize static data members?
+Dynamic Memory Allocation
+Stack memory v/s Heap memory
+New/delete v/s malloc/free
+Operator Overloading
+
+** c++
+What is the full form of OOPS?
+What is a class?
+What is an object?
+List the types of inheritance supported in C++.
+What is the role of protected access specifier?
+What is encapsulation?
+What is abstraction?
+What is inheritance?
+Explain the purpose of the keyword volatile.
+What is an inline function?
+What is a storage class?
+Mention the storage classes names in C++.
+What is the role of mutable storage class specifier?
+Distinguish between shallow copy and deep copy.
+What is a pure virtual function?
+What is an abstract class in C++?
+What is a reference variable in C++?
+What is role of static keyword on class member variable?
+Explain the static member function.
+Name the data type which can be used to store wide characters in C++.
+What are/is the operator/operators used to access the class members?
+Can we initialize a class/structure member variable as soon as the same is defined?
+What is the data type to store the Boolean value?
+What is function overloading?
+
+What is operator overloading?
+
+Do we have a String primitive data type in C++?
+
+Name the default standard streams in C++.
+
+Which access specifier/s can help to achive data hiding in C++?
+
+When a class member is defined outside the class, which operator can be used to associate the function definition to a particular class?
+
+What is a destructor? Can it be overloaded?
+
+What is a constructor?
+
+What is a default constructor? Can we provide one for our class?
+
+Which operator can be used in C++ to allocate dynamic memory?
+
+What is the purpose of ‘delete’ operator?
+
+Can I use malloc() function of C language to allocate dynamic memory in C++?
+
+Can I use ‘delete’ operator to release the memory which was allocated using malloc() function of C language?
+
+What is a friend function?
+
+What is a copy constructor?
+
+Does C++ supports exception handling? If so what are the keywords involved in achieving the same.
+
+Explain the pointer – this.
+
+What is the difference between the keywords struct and class in C++?
+
+Can we implement all the concepts of OOPS using the keyword struct?
+
+What is the block scope variable in C++?
+
+What is the role of the file opening mode ios::trunk?
+
+What is the scope resolution operator?
+
+What is a namespace?
+
+What are command line arguments?
+
+What is a class template?
+
+How can we catch all kind of exceptions in a single catch block?
+
+What is keyword auto for?
+
+What is a static variable?
+
+What is the purpose of extern storage specifier.
+
+What is the meaning of base address of the array?
+
+When should we use the register storage specifier?
+
+Can a program be compiled without main() function?
+
+Where an automatic variable is stored?
+
+What is a container class?
+
+What is a token?
+
+What is a preprocessor?
+
+What are command line arguments?
+
+What are the different ways of passing parameters to the functions? Which to use when?
+
+What is reminder for 5.0 % 2?
+
+Which compiler switch to be used for compiling the programs using math library with g++ compiler?
+
+Can we resize the allocated memory which was allocated using ‘new’ operator?
+
+Who designed C++ programming language?
+
+Which operator can be used to determine the size of a data type/class or variable/object?
+
+How can we refer to the global variable if the local and the global variable names are same?
+
+What are valid operations on pointers?
+
+What is recursion?
+
+What is the first string in the argument vector w.r.t command line arguments?
+
+What is the maximum length of an identifier?
+
+What is the default function call method?
+
+What are available mode of inheritance to inherit one class from another?
+
+What is the difference between delete and delete[]?
+
+Does an abstract class in C++ need to hold all pure virtual functions?
+
+Is it legal to assign a base class object to a derived class pointer?
+
+What happens if an exception is thrown outside a try block?
+
+Are the exceptions and error same?
+
+What is function overriding?
+
+Which function is used to move the stream pointer for the purpose of reading data from stream?
+
+Which function is used to move the stream pointer for the purpose of writing data from stream?
+
+Are class functions taken into consideration as part of the object size?
+
+Can we create and empty class? If so what would be the size of such object.
+
+What is ‘std’?
+
+What is the full form of STL?
+
+What is ‘cout’?
+
+What is ‘cin’?
+
+What is the use of the keyword ‘using’?
+
+* general
+** different implementation of singleton
+** how substring method works
+** Anonymous Class or Array
+** access modifiers(public private protected)
+** Java IO
+** Java IO buffers
+** what Override dose
+** Exception Hierachy

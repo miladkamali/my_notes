@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       D22D79AB-32DE-486F-955B-F109295AB8A2
+:END:
+#+title: immersion cooling
+
+a tachnique that they submerge computer elements in a dyelectric solution to cool them off
+
+[[https://www.youtube.com/watch?v=2Q0bLo5nSsU][This server lives underwater! - Hypertec Immersion Cooling]]

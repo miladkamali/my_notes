@@ -1,0 +1,43 @@
+* life categories
+** self improvement
+*** reading
+**** allocate 45 minutes to reading every night 11-12 PM
+*** knowledge
+*** clean up my surrounding
+**** clean up my room
+***** DONE remove most of the things that are useless now first stage from library
+      CLOSED: [2020-04-02 Thu 00:00]
+***** TODO set a relative order to my library
+***** remove up useless things from desk and file partition
+***** check all the papers
+***** check all the CDs
+**** clean up my notes
+**** clean up my pictures
+**** clean up my files
+*** language
+**** English
+**** german
+** health
+*** loose weight
+    ideal weight for me is arount 90 KG and right now i am at 115 KG, i am gonna
+    loose weight in two stages. Stage 1 come under 100 KG
+**** become more active
+***** limit daily sitting hours
+***** mountain climbing
+***** daily running
+**** reduce food intake
+***** create a diery of what you eat
+***** limit your eating period to 10 hours every day
+***** reduce food intake by 20%
+**** sleep
+     i need to get at least 8 hours of sleep every night.
+***** wake up early in the morning
+****** 8 am
+***** sleep early in night
+****** 12 pm
+*** exercise
+**** TODO 2 hour daily exercise
+** social media
+** family
+** work
+** immigration

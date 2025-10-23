@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       c65cfecf-fe99-4208-bce4-5d4dede7f217
+:END:
+#+title: speed reading
+* resources
+** TODO [[https://www.youtube.com/watch?v=tDttHr2GadM][why speed reading is an Overpowered skill]]
+** TODO [[https://www.youtube.com/watch?v=YNtnP-j3DA8][how to speed read ali abdaal]]
+* improvements
+** stop sub vocalization
+human could speak at about 150 to 200 word per minutes when reading something if
+you vocalize it in your head you are essentially limited to this speed. even
+though it will increase comprehension, it's not good for reading speed.
+** grouping words
+instead of trying to read each word individually, you can group words and read them together.

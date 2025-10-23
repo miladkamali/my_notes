@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       7353A0D9-F811-49E2-A817-2624D18EB4EB
+:END:
+#+title: rust
+
+install rust on m1
+https://www.rust-lang.org/tools/install
+
+
+unistall
+rustup self uninstall

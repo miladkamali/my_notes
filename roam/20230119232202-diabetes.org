@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       BF260D4A-A046-43FD-86D1-A41DB4CB5DDE
+:END:
+#+title: diabetes
+

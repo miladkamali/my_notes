@@ -1,0 +1,13 @@
+* complete set of inputs
+* explanation about the required fields
+* complete set of errors and their meaning
+* 
+* things that we need
+  Authentication guide
+  An Authentication Scheme
+  Quickstart guide
+  Endpoint definitions
+  Code snippets  
+  Human Readable Method Descriptions
+  Requests and Examples
+  Example responses

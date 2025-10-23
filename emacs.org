@@ -1,0 +1,31 @@
+* Project Mastering emacs
+** learn your way arount documentation
+   Ctr+h v  variable help
+   Ctr+h f  function help
+   Ctrl+h i first help menu 
+   Ctrl+h k describe a key
+   Ctrl+h m describe the major mode
+** page breaks
+   Ctrl+q Ctrl+l
+   Ctrl+] next page
+   Ctrl + [ previous page
+** learn to setup org file as emacs config
+put these in init.el
+#+BEGIN_SRC emacs-lisp
+  (require 'org)
+  (org-babel-load-file
+   (expand-file-name "settings.org"
+                     user-emacs-directory))
+#+END_SRC
+* resources
+  https://www.youtube.com/watch?v=rLF9oTmVFsc
+  https://www.youtube.com/watch?v=QcPenVmmQyM
+  https://www.youtube.com/watch?v=dljNabciEGg
+* orgmode
+** tramp
+** latex
+   https://orgmode.org/worg/org-tutorials/org-latex-preview.html
+   https://mathlive.io/reference.html
+   https://orgmode.org/manual/LaTeX-fragments.html#LaTeX-fragments
+   https://orgmode.org/manual/Previewing-LaTeX-fragments.html#Previewing-LaTeX-fragments
+** 

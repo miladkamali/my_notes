@@ -1,0 +1,4 @@
+* detect if audio is playing in linux
+  fuser /dev/snd/timer && echo "Something is playing" || echo "There's silence"
+
+  pacmd list-sink-inputs | grep -c 'state: RUNNING'

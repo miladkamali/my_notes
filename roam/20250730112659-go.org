@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       83ebf5cd-e7c4-48b1-9894-3c6585a387c1
+:END:
+#+title: go
+* basic types 
+|         |   |
+|---------+---|
+| int     |   |
+| int16   |   |
+| int32   |   |
+| int64   |   |
+| uint    |   |
+| uint16  |   |
+| uint32  |   |
+| uint64  |   |
+| float32 |   |
+| float64 |   |
+| int8    |   |
+| string  |   |
+
+
+** int
+** int16
+** int32
+** int64
+** uint
+** uint
+* variable and constant
+ var a = "test"
+ var a string
+ a="test"
+ a:="test
+ a,b:="a","b"
+** 
+* working with string
+import "unicode/utf8
+utf8.RuneCountInString("string")
+
+len(string) returns the byte size of string and not the actual characters
+** 

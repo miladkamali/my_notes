@@ -1,0 +1,16 @@
+#/bin/bash
+
+InstallationLocation="/usr/local/"
+
+apt install build-essential
+wget ftp://ftp.gnu.org/gnu/gcc/gcc-9.2.0/gcc-9.2.0.tar.xz
+tar xf gcc-9.2.0.tar.xz
+cd gcc-9.2.0
+./contrib/download_prerequisites
+mkdir build && cd build
+../gcc-9.2.0/configure -v --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --prefix=/usr/local/gcc-9.2 --enable-checking=release --enable-languages=c,c++,fortran --disable-multilib --program-suffix=-9.2
+make -j 8
+
+make install-strip
+echo "export export PATH=/usr/local/gcc-9.1/bin:$PATH" >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=/usr/local/gcc-9.1/lib64:$LD_LIBRARY_PATH" >>~/.bashrc

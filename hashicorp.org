@@ -1,0 +1,14 @@
+* consul
+  https://www.youtube.com/watch?v=KZIu33sbwQQ
+  https://www.youtube.com/watch?v=mxeMdl0KvBI
+* boundry
+  https://www.youtube.com/watch?v=KpLfdc5vikk
+  https://learn.hashicorp.com/tutorials/boundary/getting-started-connect?in=boundary/getting-started
+  [[https://www.youtube.com/watch?v=eRZuaw0AW0I][HashiConf Digital Keynote - Boundary]]
+  [[https://www.youtube.com/watch?v=pGfSITzcTQ0][HashiCorp Boundary Demo for Secure Sessions Management]]
+* hashicorp
+  https://www.youtube.com/watch?v=-gKTeT3BgHE
+  https://www.youtube.com/watch?v=bKe4BkDfdvI
+* [[https://www.youtube.com/watch?v=Ek4nIj8Kx4Q][Security Best Practices to Mitigate Ransomware Risks with HashiCorp Vault]]
+* teraform
+** [[https://www.youtube.com/watch?v=PjxJzyP_bdU][Provisioning and Managing Kubernetes on AWS with HashiCorp Terraform]]

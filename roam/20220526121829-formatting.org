@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d402e35c-eef8-4113-806f-7f2a70be1cf4
+:END:
+#+title: formatting
+remove formatting in text
+
+https://stackoverflow.com/questions/17998978/removing-colors-from-output
+
+./somescript | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g'

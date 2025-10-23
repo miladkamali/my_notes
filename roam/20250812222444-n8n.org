@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       563688D3-7F4B-48F6-832D-6F6A29F03EC3
+:END:
+#+title: n8n
+https://www.youtube.com/watch?v=Myjo1amUZ08

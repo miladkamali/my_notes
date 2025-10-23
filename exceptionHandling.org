@@ -1,0 +1,4 @@
+* sources
+** https://stackify.com/best-practices-exceptions-java/
+** https://www.loggly.com/blog/logging-exceptions-in-java/
+** https://stackoverflow.com/questions/10259574/catch-and-log-all-unhandled-exceptions-with-log4j

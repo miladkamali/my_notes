@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       305C1F31-5238-4E38-BE9E-54512B29D322
+:END:
+#+title: asset-flo
+* time log
+** reading and learning documents
+:LOGBOOK:
+CLOCK: [2025-08-11 Mon 10:59]--[2025-08-11 Mon 11:57] =>  0:58
+CLOCK: [2025-08-08 Fri 19:27]--[2025-08-08 Fri 21:27] =>  2:00
+CLOCK: [2025-08-08 Fri 12:10]--[2025-08-08 Fri 14:10] =>  2:00
+CLOCK: [2025-08-08 Fri 10:12]--[2025-08-08 Fri 11:27] =>  1:15
+CLOCK: [2025-08-07 Thu 22:10]--[2025-08-07 Thu 22:45] =>  0:35
+CLOCK: [2025-08-07 Thu 11:00]--[2025-08-07 Thu 11:45] =>  0:45
+:END:
+*** meta
+**** figure out how we are going to connect to Meta
+**** figure out how we are going to list assets connected to a meta account
+**** figure out how to collect performance of a asset in meta
+*** figure out AI analysis pipline
+https://g.co/gemini/share/056227ca6797

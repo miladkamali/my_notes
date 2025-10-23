@@ -1,0 +1,52 @@
+#+TODO: TODO(t!) NEXT(n)  | WAIT(w@/!) DONE(d!) CANCELED(c@)
+#+TODO: STARTED(s!) INPROGRESS(i!) HALTED(h@/!) | COMPLETED(C!)
+* projects
+** INPROGRESS Mezmerizing
+   - State "INPROGRESS" from              [2019-02-03 Sun 13:02]
+*** TODO talk to ata and others  about                                 :talk:
+*** WAIT give access to api
+**** TODO get access to contaboo server
+*** complete API[0/2]
+**** TODO figure out what needs to be done
+**** TODO clean unused code
+*** deploy website
+** HALTED Marko
+   - State "HALTED"     from "INPROGRESS" [2019-02-03 Sun 12:14] \\
+     I need to figure out the forward plan
+   - State "INPROGRESS" from "STARTED"    [2019-02-03 Sun 12:14]
+** HALTED WAITING mapsa java Peresentation
+** HALTED mapsa Exam Questions
+*** TODO Figure out what you want to do
+** STARTED Project Tracker
+*** TODO explain the scope of project for Amir Hossein
+*** info
+**** https://stackoverflow.com/questions/6391439/getting-active-window-information-in-java/6393901
+** HALTED Metal detector
+     i have to figure out how to make progress in this project, Right now i'm just stalling for time
+** STARTED Learning Spring
+** STARTED Learning Hibernate
+** HALTED Arab pour
+** INPROGRESS Make your workplace in mapsa better
+   - State "INPROGRESS" from "STARTED"    [2019-02-03 Sun 12:30]
+   - State "STARTED"    from              [2019-02-03 Sun 12:28]
+*** INPROGRESS Stop concurrent camps
+    - State "INPROGRESS" from              [2019-02-03 Sun 12:30]
+**** I Strongly disagreed with 
+*** Make a list of things that bothers you about mapsa
+** STARTED revitalize your ORG system[0/4]
+   - State "STARTED"    from              [2019-02-03 Sun 12:45]
+   - 
+*** NEXT Setup emacs universally
+    - State "TODO"       from              [2019-02-03 Sun 12:46]
+*** TODO how to set different color for different todo states
+    - State "TODO"       from              [2019-02-03 Sun 13:03]
+*** TODO learn about TODO system
+    - State "TODO"       from              [2019-02-03 Sun 12:46]
+*** TODO learn about Habbit Tracking system
+    - State "TODO"       from              [2019-02-03 Sun 12:46]
+** STARTED organize your knowledge into graphs or org-files
+   - State "STARTED"    from              [2019-02-03 Sun 12:49]
+** STARTED become active in Linkedin
+   - State "STARTED"    from              [2019-02-03 Sun 12:50]
+** STARTED create a blog for yourself
+   - State "STARTED"    from              [2019-02-03 Sun 12:51]

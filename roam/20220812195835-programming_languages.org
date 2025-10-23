@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       A2F112E1-7A8C-400D-8E5A-0ED5F510E706
+:END:
+#+title: programming languages
+* ZIG
+* C
+* C++
+* rust
+* Go
+* Python
+* javascript
+* TypeScript
+* 

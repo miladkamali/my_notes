@@ -1,0 +1,138 @@
+* one step tasks
+** TODO  https://www.xvideos.com/video46676533/gorgeous_teen_massage_lesbian                                                        :download:
+** TODO  https://www.xvideos.com/video49387453/caprice_-_hot_hotel_massage                                                        :download:
+** TODO https://www.youtube.com/playlist?list=PLs3KjaCtOwSZ2tbuV1hx8Xz-rFZTan2J1                                                         :download:
+** TODO  https://www.xvideos.com/video48788403/we_were_friends_until_we_had_sex_and_we_fell_in_love                                                        :download:
+** TODO  https://www.xvideos.com/video56786091/sexiest_couple_on_xvideos_amazing_fuck_and_rimming                                                        :download:
+** TODO [[https://www.youtube.com/watch?v=her_7pa0vrg][spring security]]  :download:
+** TODO [[https://www.youtube.com/watch?v=yefmcX57Eyg][inteligidea tutorial]] :download:
+** TODO https://www.xvideos.com/video33424983/mature_woman_vs_young_girl_67                                                         :download:
+** TODO https://www.xvideos.com/video51694451/very_hot_daughter_seduces_mother                                                         :download:
+** TODO dune                                                       :download:
+** TODO           counceller                                       :download:
+* Tasks
+  : ** TODO   https://www.youtube.com/watch?v=ZEfESotBY3Y
+      [[file:~/orgs/GTD/info.org::*ssh reverse tunneling][ssh reverse tunneling]]
+** TODO   https://www.youtube.com/watch?v=YlPrQE82m-E :watch:
+      [[file:~/orgs/conferences.org::*channels][channels]]
+** TODO   https://www.youtube.com/watch?v=SUiWfhAhgQw  :watch:
+      [[file:~/orgs/mobilletPayments.org::*Workday \[2020-04-19 Sun\]][Workday [2020-04-19 Sun]​]]
+** TODO   https://www.youtube.com/watch?v=ioxWuCd-mn0
+      [[file:~/orgs/mobilletPayments.org::*Workday \[2020-04-19 Sun\]][Workday [2020-04-19 Sun]​]]
+** TODO [[https://www.youtube.com/watch?v=xkxo0lah51s][CppCon 2018: Jean-Louis Leroy “Open is Good - yomm2: Fast, Orthogonal Open Methods”]]                    :watch:c++:
+      [[file:~/orgs/GTD/info.org::*https://github.com/rouzwawi/grpc-kotlin][https://github.com/rouzwawi/grpc-kotlin]]
+** TODO  [[https://www.youtube.com/watch?v=zB_bhZCoX5M][Free your functions! - Klaus Iglberger - Meeting C++ 2017]]        :watch:c++: 
+      [[file:~/orgs/GTD/info.org::*https://github.com/rouzwawi/grpc-kotlin][https://github.com/rouzwawi/grpc-kotlin]]
+** TODO [[https://www.youtube.com/watch?v=_lVlC0xzXDc][David Stone: Functions Want To Be Free]]        :watch:c++:
+      [[file:~/orgs/GTD/info.org::*https://github.com/rouzwawi/grpc-kotlin][https://github.com/rouzwawi/grpc-kotlin]]
+** TODO [[https://www.youtube.com/watch?v=lLEcbXidK2o][CppCon 2018: Kostya Serebryany “Memory Tagging]]          :watch:c++:  
+      [[file:~/orgs/GTD/info.org::*https://github.com/rouzwawi/grpc-kotlin][https://github.com/rouzwawi/grpc-kotlin]]
+** TODO [[https://www.youtube.com/watch?v=a5L66zguFe4][CppCon 2017: Michael Spencer “My Little Object File: How]]                         :watch:c++:   
+      [[file:~/orgs/GTD/info.org::*https://github.com/rouzwawi/grpc-kotlin][https://github.com/rouzwawi/grpc-kotlin]]
+** TODO [[https://www.youtube.com/watch?v=PzEox3szeRc][GOTO 2019 • "Good Enough" Architecture • Stefan Tilkov]]                 :watch:architecture: 
+      [[file:~/orgs/GTD/info.org::*https://github.com/rouzwawi/grpc-kotlin][https://github.com/rouzwawi/grpc-kotlin]]
+** TODO   https://www.youtube.com/watch?v=4S7w0wDSiyw :watch:
+      [[file:~/orgs/conferences.org::*\[\[https://www.youtube.com/channel/UCpExuV8qJMfCaSQNL1YG6bQ\]\[ Better Than Yesterday\]\]][Better Than Yesterday]]
+** TODO [[https://www.youtube.com/watch?v=0TYbHVc2yWI][Autonomous microservices don't share data. Period - Dennis van der Stelt]]
+      [[file:~/orgs/conferences.org::*Neal Ford evolutionary software architecture][Neal Ford evolutionary software architecture]]
+** TODO check  Retrofit or Dagger 2 
+** TODO poet tutorial  https://www.baeldung.com/java-poet
+** TODO [[https://www.youtube.com/watch?v=ndeN983j_GQ][Real time 101 - David Rowland & Fabian Renn Giles - Meeting C++ 2019]]   :watch:  
+** TODO  [[https://www.youtube.com/watch?v=boPEO2auJj4][CppCon 2015: Timur Doumler “C++ in the Audio Industry]] :watch: 
+** TODO [[https://www.youtube.com/watch?v=2vmXy7znEzs][C++ in the Audio Industry, Episode II: Floating Atomics, Timur Doumler, JUCE Summit 2015]]    :watch:  
+** TODO  [[https://www.youtube.com/watch?v=jNSiZqSQis4][C++Now 2019: Timur Doumler “Audio in standard C++]]   :watch: 
+** TODO [[https://www.youtube.com/watch?v=ho9QSSPVJVU][Building reactive microservices with Vert.x 3.3 by Erwin de Gier]]   :watch: 
+      [[file:~/orgs/interviewReport.org::*computer][computer]]
+** TODO  [[https://www.youtube.com/watch?v=MydhJVPEnzU][Reactive Microservices on the JVM with Vert.x by Burr Sutter]]    :watch:  
+      [[file:~/orgs/interviewReport.org::*computer][computer]]
+** TODO  [[https://www.youtube.com/watch?v=7IbdWcdlYOI][Reactive Microservices with Vert.x by Edson Yanaga and]] 
+      [[file:~/orgs/interviewReport.org::*computer][computer]]
+** TODO [[https://www.youtube.com/watch?v=T9MPDmw6MNI][Patterns of resilience - the untold stories of robust]]        :watch: 
+      [[file:~/orgs/interviewReport.org::*computer][computer]]
+** TODO   https://www.youtube.com/watch?v=koku2Caof1E
+      [[file:~/orgs/interviewReport.org::*computer][computer]]
+** TODO  [[https://www.youtube.com/watch?v=OYpTn0nWKR4][10,000 Java performance tips over 15 years - what did I learn? by Jack Shirazi]] 
+      [[file:~/orgs/interviewReport.org::*computer][computer]]
+** TODO  [[https://www.youtube.com/watch?v=EMv_8dxSqdE][New Concurrency Models on the JVM: Fibres, Verticles, Agents and Actors. by Lutz Huehnken]] 
+      [[file:~/orgs/interviewReport.org::*computer][computer]]
+** TODO   https://youtu.be/ovJcsL7vyrk   :watch:
+** TODO   https://www.youtube.com/watch?v=8tKuviI68Ss  :watch:
+      [[file:~/orgs/conferences.org::*\[\[https://www.youtube.com/watch?v=RGbCR_pq4_A\]\[ Ali Abdaal self development channel\]\]][Ali Abdaal self development channel]]
+** TODO [[https://www.youtube.com/watch?v=1vLMuWsfMcA][Lessons learned form Kafka in production (Tim Berglund,]]   :watch:  
+** TODO   https://www.youtube.com/watch?v=Hlb-Ss3q3as
+** TODO  learn about haselcast 
+      [[file:~/orgs/backendPeople.org::*Bardya Momeni][Bardya Momeni]]
+** TODO  learn about MQTT 
+      [[file:~/orgs/backendPeople.org::*Bardya Momeni][Bardya Momeni]]
+** TODO  [[https://www.youtube.com/watch?v=IR1NLfaq7PU][Building event-driven (Micro)Services with Apache]]   :watch: 
+** TODO learn about JPOS   :read:
+** TODO learn about Gatling performance testing   
+      [[file:~/orgs/mobilletPayments.org::*task planning][ask planning]]
+** TODO learn about scape analysis :learn:   
+      [[file:~/orgs/architecturePresentation.org::*microservice][microservice]]
+** TODO JMH   benchmanr :learn:
+** DONE [[https://www.youtube.com/watch?v=SFv8Wm2HdNM][The Forgotten Art of Structured Programming - Kevlin Henney [C++ on Sea 2019]] :watch:  
+   CLOSED: [2020-06-08 Mon 01:20]
+   - State "DONE"       from "TODO"       [2020-06-08 Mon 01:20]
+      [[file:~/orgs/mobilletPayments.org::*set status code in return][set status code in return]]
+** TODO [[https://www.youtube.com/watch?v=w0sz5WbS5AM][KEYNOTE: What Everyone Should Know About How Amazing Compilers Are - Matt Godbolt [C++ on Sea 2019]] :watch:
+   - State "TODO"       from              [2020-06-08 Mon 01:19]
+** TODO  [[https://www.youtube.com/watch?v=qeMMwnlbfUQ][Very Large Datasets with the GPU Data Frame]] :watch: 
+** TODO [[https://www.youtube.com/watch?v=b86DIo0_UoU][Cloudstate—towards Stateful Serverless]]    :watch:
+** TODO [[https://www.youtube.com/watch?v=dOfucXtyEsU][CppCon 2018: Matt Godbolt “The Bits Between the Bits: How We Get to]]  :watch:c++:
+** TODO   [[https://www.youtube.com/watch?v=Y6Ev8GIlbxc&t=3s][ Distributed Systems in One Lesson by Tim Berglund]]   :watch:
+      [[file:~/orgs/kafka.org::*https://dzone.com/articles/kafka-consumer-architecture-consumer-groups-and-su][https://dzone.com/articles/kafka-consumer-architecture-consumer-groups-and-su]]
+** TODO [#A]  [[https://www.youtube.com/watch?v=nZcLHkORdHE][Do not walk away from Complexity, Run - Venkat]]  :watch: 
+      [[file:~/orgs/kafka.org::*https://dzone.com/articles/kafka-consumer-architecture-consumer-groups-and-su][https://dzone.com/articles/kafka-consumer-architecture-consumer-groups-and-su]]
+** TODO  read https://samnewman.io/patterns/architectural/bff/ 
+      [[file:~/orgs/mobilletPayments.org::*KYC mock server simple][KYC mock server simple]]
+** TODO [[https://www.youtube.com/watch?v=OYpTn0nWKR4][10,000 Java performance tips over 15 years - what did I learn]]   :watch:  
+      [[file:~/orgs/mobilletPayments.org::*]]
+** TODO [[https://www.youtube.com/watch?v=dnUFEg68ESM][Eric Evans — Tackling Complexity in the Heart of Software]]    :watch: 
+      [[file:~/orgs/architecture.org::*]]
+** TODO learn about actor model   
+      [[file:~/orgs/architecture.org::*]]
+** TODO read about google spanner database  :learn: 
+      [[file:~/orgs/architecture.org::*consensus protocol][consensus protocol]]
+** TODO [[boost ASIO model][https://www.youtube.com/watch?v=rwOv_tw2eA4&t=3215s]]    :wtach: 
+https://www.youtube.com/watch?v=hdRpCo94_C4
+** TODO  set org effort estimation 
+     https://stackoverflow.com/questions/8009901/org-mode-summing-effort-at-multiple-levels-of-hierarchy-in-column-view
+     https://www.gnu.org/software/emacs/manual/html_node/org/Effort-estimates.html
+     https://emacs.stackexchange.com/questions/48983/sum-effort-estimates-from-todays-scheduled-tasks-in-org-mode
+     https://orgmode.org/manual/Column-View.html#Column-View
+     https://orgmode.org/guide/Multi_002dstate-Workflow.html
+     https://orgmode.org/manual/TODO-dependencies.html
+      [[file:~/orgs/BlueBank.org::*payment APIs issues][payment APIs issues]]
+** TODO  https://orgmode.org/worg/org-tutorials/org-column-view-tutorial.html 
+      [[file:~/orgs/BlueBank.org::*planning MVP][planning MVP]]
+** TODO   watch https://www.youtube.com/watch?v=hdRpCo94_C4
+** TODO  introduction to computation theory https://www.youtube.com/playlist?list=PL601FC994BDD963E4 
+** TODO  event sourcing at netflix scale https://www.youtube.com/watch?v=rsSld8NycCU 
+** TODO  read hackers delight book 
+** TODO read Search Results The Book of Five Rings
+** TODO [[https://www.youtube.com/watch?v=vDns3Um39l0][memory and cache]]  :watch: 
+** TODO [[https://www.youtube.com/watch?v=mdPeXJ0eiGc][design graphic pipeline ]] :watch:  
+      [[file:~/orgs/dehbod.org::*]]
+** TODO  [[https://www.youtube.com/watch?v=nZNd5FjSquk][CppCon 2017: John Lakos “Local ('Arena') Memory Allocators (part 1 of 2)”]]  :watch: 
+      [[file:~/orgs/dehbod.org::*]]
+** TODO [[https://www.youtube.com/watch?v=CFzuFNSpycI][CppCon 2017: John Lakos “Local ('Arena') Memory Allocators (part 2 of 2)”  ]]  :watch:
+      [[file:~/orgs/dehbod.org::*]]
+** TODO  [[https://www.youtube.com/watch?v=rX0ItVEVjHc&t=58s][Data oriented design]] 
+      [[file:~/orgs/dehbod.org::*]]
+** TODO  [[https://www.youtube.com/watch?v=ARxj3dfF_h0][CppCon 2019: Andrew Sutton “Reflections: Compile-time Introspection of Source Code”]]   :watch: 
+** TODO [[https://www.youtube.com/watch?v=YA-nB2wjVcI][CppCon 2017: Nicholas Ormrod “Fantastic Algorithms and Where To Find Them”]]  :watch:  
+      [[file:~/orgs/BlueBank.org::*check kafka brokers][check kafka brokers]]
+** TODO  [[https://www.youtube.com/watch?v=XkDEzfpdcSg][CppCon 2017: Kate Gregory “10 Core Guidelines You Need to Start Using ]]  :watch:
+      [[file:~/orgs/mobilletPayments.org::*]]
+** TODO  [[https://www.youtube.com/watch?v=GnG6RPSRLCs][jira tutorial]] :watch: 
+      [[file:~/orgs/mobilletPayments.org::*internal commiunication][internal commiunication]]
+** TODO  https://www.youtube.com/watch?v=ECuqb5Tv9qI  :watch: 
+      [[file:~/orgs/mobilletPayments.org::*internal commiunication][internal commiunication]]
+** TODO  [[https://www.youtube.com/watch?v=WQeoO7MI0Bs][learn opencv ]] :watch:
+** TODO https://github.com/harrybournis/org-fancy-priorities
+      [[file:~/orgs/criteria.org::*lead teaching skills][lead teaching skills]]
+** TODO watch [[https://www.youtube.com/watch?v=fBr8BKPW5tc][optimize for time]] :java:watch:   
+      [[file:~/orgs/BlueBank.org::*ImageAssetFactory should not be a component][ImageAssetFactory should not be a component]]
+** TODO learn about QubesOS    
+      [[file:~/orgs/painting.org::*\[\[https://www.youtube.com/user/jonodry\]\[jonodry\]\]][jonodry]]

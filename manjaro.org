@@ -1,0 +1,23 @@
+* initial setup
+** language tools 
+   pacman -S spell-en libmythes mythes-en languagetool
+** fonts
+   ttf-ms-fonts from AUR
+   ttf-adobe-source-fonts AUR
+** enable trim for ssd
+   systemctl enable fstrim.timer
+** fixing qt theam
+   To fix the issue:
+Make sure that the qt5-styleplugins package is installed (sudo pacman -S qt5-styleplugins)
+Set the environment variable QT_QPA_PLATFORMTHEME=gtk2 before executing QtCreator (preferably export this from the ~/.bashrc file).
+** nvidia driver
+   inxi -G
+   sudo mhwd -a pci nonfree 0300
+   mhwd -li
+** openCL
+   extra/opencl-nvidia-440xx
+   clinfo
+   pacman -S opencl-nvidia-440xx clinfo
+** cuda
+   
+   pacman -S cuda cudnn

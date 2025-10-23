@@ -1,0 +1,35 @@
+* tasks
+** porting to spring 2
+**** finding serialization solution
+      - time 4h
+**** clean up spring profiles
+     create 3 different profiles which made the deployment process less
+     error prone.
+     - time 3h
+**** 
+**** SAAJ bug
+     it took almost two whole day to fix
+     - time 2d
+**** fix default image serving error after deployment to production
+     the default empty image was being served by tomcat and since moving to internal
+     tomcat it was not being served
+     - time 1h
+     - 
+** on boarding
+*** understanding the architecture
+*** understanding elastic
+*** learning elastic search
+    :LOGBOOK:
+    CLOCK: [2020-02-04 Tue 10:07]--[2020-02-04 Tue 11:43] =>  1:36
+    CLOCK: [2020-02-03 Mon 12:40]--[2020-02-03 Mon 15:50] =>  3:10
+    :END:
+** documentation and refactoring
+
+* working on Blue
+** blue types
+   :LOGBOOK:
+   CLOCK: [2020-02-09 Sun 11:00]--[2020-02-09 Sun 15:00] =>  4:00
+   :END:
+* set routes
+  ip route add 172.17.3.107/32 via 172.16.6.1 dev enp3s0
+  ip route add 172.17.3.107/32 via 172.16.6.1 dev enp3s0

@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       a9c5fdb2-9dad-466b-b36c-47ec8af306d0
+:END:
+#+title: turtle-trading
+* risk management
+* trend following
+* market conditions
+focus on market with deep liquidity and high volume
+Focus on as many uncorrelated market as you can
+** the markets that turtle traders focused on
+
+*** fixed income
+**** 30 year US Treasury Bond
+**** 10 Year US Treasury Note
+**** 90 Day US Treasury Bill
+*** Commodities
+**** Coffee
+**** Cocoa
+**** Sugar
+**** Cotton
+**** Gold
+**** Silver
+**** Crude oil
+*** Index
+**** S&P 500 stock index
+*** Currency
+**** EuroDollar
+** TODO  What markets can i focus on now in crypto
+the problem in crypto is that they have a very close correlation with each other
+*** BTC
+*** ETH
+*** DOGE
+* position sizing
+* video
+** [[https://www.youtube.com/watch?v=O0xnwQvGdDo&pp=0gcJCcYJAYcqIYzv][5 rules that made him 200 Mil from 400]]
+

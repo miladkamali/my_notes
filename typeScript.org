@@ -1,0 +1,25 @@
+* install typescript
+  npm install -g typescript
+
+  typescript version 
+  tsc --version 
+* typescript types
+  - let a : number ;
+  - let b : boolean;
+  - let c = string;
+  - let d : any;
+  - let e : number[];
+  - let f : any[];
+  - enum
+    enum Color {Red,Green,Blue};
+    enum Color {Red=0,Green=1,Blue=2};
+  - 
+* type assertion
+  let message;
+  message = 'abc';
+  let endswith = (<string> message).endswith('c');
+  let endswith = ( message as string ).endswith('c');
+* arrow function
+
+  let c = (message) => {console.log(message)};
+* 

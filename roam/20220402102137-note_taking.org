@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       76e95686-a7ce-401b-83b2-c1cb26fb02e1
+:END:
+#+title: note taking
+* Niklas Luhmann
+he published 70 books nad 400 articles
+* how to take smart notes
+** every thing you need to know
+** main takeaways from the book
+*** Writing is thinking
+writing is a very powerful way of thinking
+
+if you wanna remember something you have to distill it in your own words 
+*** Value of external system
+*** Superiority of emergent approach 
+* there are three type of notes
+** fleeting note which you write down with minimum effort 
+** literature note
+** permanent notes

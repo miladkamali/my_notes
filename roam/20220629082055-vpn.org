@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       5A77B70F-3E89-4028-8E95-5E72D532A14E
+:END:
+#+title: vpn
+* l2tp
+https://www.tecmint.com/create-own-ipsec-vpn-server-in-linux/
+https://github.com/hwdsl2/setup-ipsec-vpn
+https://adriangin.wordpress.com/2018/03/03/how-to-setup-l2tp-ipsec-vpn-servers-debian/
+** germany
+Server IP: 62.171.168.171
+IPsec PSK: naMnKaR7tAedRx97fDWV
+Username: vpnuser
+Password: V34aAXEx4ZUAMcxA
+
+Cisco ipse
+Username  'vahid'
+password 'Wq0OXvKUZ2Rz0BSL+8rfgg=='
+Shared secret “naMnKaR7tAedRx97fDWV”
+ address “62.171.168.171”
+
+Cisco ipse
+Username ’mazyar'
+password '3raslpe/EL1AzTxNmCP7KQ=='
+Shared secret “naMnKaR7tAedRx97fDWV”
+ address “62.171.168.171”
+
+Cisco ipse
+Username  'salman'
+password ‘61lAsI+HH14wtfAKsLgcuQ==‘
+Shared secret “naMnKaR7tAedRx97fDWV”
+ address “62.171.168.171”
+* hasan
+hysteria2://2m0t7AxAHC@176.124.202.164:24922?obfs=salamander&obfs-password=sdathgb5er7yb64567wybsdfxgbfcysdrtus&insecure=1#HYS-MLD-TLS%2BECH%2BPOSQ
+
+http://184.174.96.147:2096/jsn/USA-MLD?format=json
+http://184.174.96.147:2096/jsn/USA-MLD
+** unknown
+
+hysteria2://EAP69t23bv@212.192.248.198:10777?obfs=salamander&obfs-password=asyzdrtys5678ksrj6dywetggxdfh&insecure=1#hysteria2-TLS%2BECH%2BPOSQ
+hysteria2://EAP69t23bv@212.192.248.198:43603?obfs=salamander&obfs-password=ae56m58s6ufgasdrserg&insecure=1#hysteria2-TLS%2BECH
+hysteria2://EAP69t23bv@212.192.248.198:11123?obfs=salamander&obfs-password=aw4btdtmuyiytu8078iw65terd&insecure=1#hysteria2-TLS
+* setup
+** passwall on openwt
+https://github.com/Ramtiiin/install-passwall2-openwrt

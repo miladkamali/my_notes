@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       F2F1F410-7718-42C9-8463-3B28FD6009F6
+:END:
+#+title: galaxy watch
+[[https://www.youtube.com/watch?v=BdqX5vALWnk][Top 30 Unknown Samsung Galaxy Watch 5 Features!]]
+* battery life
+** display
+*** diable auto brighness
+*** set brightness to 30%
+*** always on display
+setting this on will reduce battery life to almost 1.5 days
+** turn of wifi
+** GPS can stay on
+** health
+*** set heart rate monitor to every 10 minutes while still
+this could lead to almost 3 days worth of battery life
+*** blood oxygen monitoring
+turning this off will save a lot of battry at night
+*** snore detection set to OFF
+*** automatic activity detection to on
+just limit the number of automatic activity detection types
+** sound and vibration
+*** set to vibrate
+** notification

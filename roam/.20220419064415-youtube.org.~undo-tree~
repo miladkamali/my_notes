@@ -1,0 +1,9 @@
+(undo-tree-save-format-version . 1)
+"7379b2fc1187b8e7acbd82bb00407e79ca743acb"
+[nil nil nil nil (25182 6927 966425 531000) 0 nil]
+([nil nil ((#("%?" 0 2 (fontified nil)) . -85) (87 . 87) (85 . 88) (#(":ID: e63a8a31-290e-4392-996f-d58e26ee0b24" 0 1 (fontified nil) 1 3 (fontified nil) 3 4 (fontified nil) 4 5 (fontified nil) 5 41 (fontified nil)) . -14) (14 . 102) (14 . 15) (1 . 20) (1 . 18) (t . -1)) nil (25182 6927 966424 389000) 0 nil])
+([nil nil ((nil rear-nonsticky nil 148 . 149) (nil fontified nil 106 . 149) (104 . 149) (nil org-todo-head nil 103 . 104) (nil org-todo-head nil 99 . 103) (nil org-todo-head nil 98 . 99) (nil org-todo-head nil 97 . 98) (nil org-todo-head nil 96 . 97) (nil fontified t 103 . 104) (nil face org-level-2 103 . 104) (nil fontified t 98 . 103) (nil face (org-superstar-header-bullet org-level-2) 98 . 103) (#(" " 0 1 (face org-level-2 fontified t)) . 98) (99 . 105) (nil fontified t 98 . 99) (nil face org-level-1 98 . 99) (nil fontified t 97 . 98) (nil face (org-superstar-header-bullet org-level-1) 97 . 98) (nil composition (0 1 [9673]) 97 . 98) (#("* " 0 1 (composition (0 1 [9673]) face (org-superstar-header-bullet org-level-1) fontified t) 1 2 (face org-level-1 fontified t)) . 96) (98 . 101) (95 . 98) (90 . 95) (89 . 90) (#("w" 0 1 (face org-level-1 font-lock-fontified t fontified t)) . -89) (undo-tree-id0 . -1) (undo-tree-id1 . -1) (#("a" 0 1 (face org-level-1 font-lock-fontified t fontified t)) . -90) (undo-tree-id2 . -1) (undo-tree-id3 . -1) 91 (85 . 91)) nil (25182 6927 966420 372000) 0 nil])
+([nil nil ((149 . 151)) nil (25182 6927 966395 235000) 0 nil])
+([nil nil ((nil rear-nonsticky nil 194 . 195) (nil fontified nil 151 . 195) (151 . 195)) nil (25182 6927 966394 123000) 0 nil])
+([nil current ((195 . 197)) nil (25182 6927 966389 935000) 0 nil])
+nil

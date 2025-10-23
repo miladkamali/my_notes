@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       6AD1836B-B61A-4B58-9368-9ABCB2872740
+:END:
+#+title: mikrotik
+https://www.youtube.com/watch?v=d39IvN70Eb4
+https://tosinso.com/articles/38464/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%DB%8C%DA%A9%DB%8C-%DA%A9%D8%B1%D8%AF%D9%86-%DA%86%D9%86%D8%AF-%D8%AE%D8%B7-%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA-%D8%AF%D8%B1-%D9%85%DB%8C%DA%A9%D8%B1%D9%88%D8%AA%DB%8C%DA%A9-%D8%A8%D8%A7-Load-Balancing
+
+
+[[https://www.youtube.com/watch?v=wX8iFy4rJt0][MikroTik Load Balancing with Auto Failover | 3 WAN Static IP + 1 LAN]]
+
+
+https://www.youtube.com/watch?v=IsJlBqpVgGo
+
+
+[[https://www.aparat.com/v/i2933t6][نحوه استفاده از اینترنت LTE در میکروتیک]
+]
+
+[[https://www.youtube.com/watch?v=rwjtRLQjMjA][An Introduction to MikroTik RouterOS for Newbies!]]
+
+[[https://www.youtube.com/watch?v=2ME4l4VrGDw][vpn on mikrotik]]
+
+[[https://www.youtube.com/watch?v=B9pNOvMdg7I][vpn on mikrotik]]
+
+https://www.youtube.com/watch?v=eibriI7aXCk
+* cell lock in lte
+https://forum.mikrotik.com/viewtopic.php?t=190480
+https://forum.mikrotik.com/viewtopic.php?t=205789
+
+
+https://confusedbird.com/thread-119-post-2885.html
+https://www.ispreview.co.uk/talk/threads/best-enthusiast-5g-router-antenna-currently-mikrotik-chateau-5g-ax-testing.40324/
+https://confusedbird.com/thread-119-post-1151.html
+
+https://jupitel.ir/product/%d9%85%d9%88%d8%af%d9%85-5g-%d9%88-4g-lte-%d9%85%d8%af%d9%84-zlt-x21-%d9%be%d9%86%d9%84-%d8%b3%d9%88%d9%be%d8%b1-%d8%a7%d8%af%d9%85%db%8c%d9%86-%d9%88%db%8c%da%98%d9%87-%d8%af%d8%b3%d8%aa-%d8%af/?utm_medium=PPC_adv_click&utm_source=Torob
+https://www.zyxel.com/uk/en-gb/products/mobile-broadband/5g-nr-indoor-router-nr5101/specifications
+
+[[https://www.youtube.com/watch?v=rwjtRLQjMjA][An introduction to mikrotik router OS]]
+* modifying chatua 5g ax
+https://www.youtube.com/watch?v=_4QJnnga6CA
+https://www.youtube.com/watch?v=_4QJnnga6CA
+
+
+https://www.youtube.com/watch?v=lFWFONBv4-g

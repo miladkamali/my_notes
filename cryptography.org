@@ -1,0 +1,100 @@
+* source
+** https://www.youtube.com/playlist?list=PL6TbWIxWsLY3XuAZB4C0_GxrR76TAZOf2
+** [[https://www.youtube.com/watch?v=NuyzuNBFWxQ][7 Cryptography Concepts EVERY Developer Should Know]]
+* [[file:./ssl.org][ssl]]
+* sp network
+** [[https://www.youtube.com/watch?v=DLjzI5dX8jc][Almost All Web Encryption Works Like This (SP Networks) - Computerphile]]
+* reed solomon encoding
+* finite field / galot field
+* Feistel network / fiestel cypher
+* key scadule 
+** [[https://www.youtube.com/watch?v=rmqWaktEpcw][AES – Key Schedule/Key Expansion Explained]]
+* key expantion
+* symmetric
+** AES
+*** videos
+**** [[https://www.youtube.com/watch?v=O4xNJsjtN6E][AES Explained (Advanced Encryption Standard) - Computerphile]]
+*** [[file:./AESDiagram.png][AES Diagram]]
+*** [[file:./AES_Key_Expansion.png][AES Key Expansion]]
+*** [[file:./AES_RotWord.png][RotWord]]
+*** [[file:./AES_SubWord.png][SubWord]]
+*** Rcon
+*** key size to number of rounds
+**** 128 -> 10
+**** 192 -> 12
+**** 256 -> 14
+*** each round
+**** substitude bytes
+**** shift raws
+**** mix columns
+**** add key
+** rijndael
+** DES
+*** video
+**** [[https://www.youtube.com/watch?v=-j80aA8q_IQ][Data Encryption Standard (DES) - Explained with an Example - Cryptography - CyberSecurity - CSE4003]]
+** two fish
+   [[https://www.youtube.com/watch?v=r_mjBYPAXEQ][Twofish]]
+** GCM
+   Gabis Counter Mode
+   [[https://www.youtube.com/watch?v=g_eY7JXOc8U][What is GCM? Galois Counter Mode (of operation) (usually seen as AES-GCM)]]
+** ECB
+** CTR
+* IV
+  initialization vector
+* asymmetric
+** RSA
+** Eliptic curve
+*** [[https://www.youtube.com/watch?v=yDXiDOJgxmg][Elliptic Curve Cryptography & Diffie-Hellman]]
+*** [[https://www.youtube.com/watch?v=yBr3Q6xiTw4][Martijn Grooten - Elliptic Curve Cryptography for those who are afraid of maths]]
+*** [[https://www.youtube.com/watch?v=6eZQu120A80][Elliptic curves]]
+* KeyExchange
+** Diffie-Hellman
+   [[https://www.youtube.com/watch?v=YEBfamv-_do][Public key cryptography - Diffie-Hellman Key Exchange (full version)]]
+** ecdhe-rsa-aes256-gcm-sha384
+** IKE protocol
+   https://en.wikipedia.org/wiki/Internet_Key_Exchange
+** TLS handshake
+* ASN.1(Abstract Syntax Notation One)
+   ASN.1 is a binary format like WSDL protocol buffer or JSON Schema
+** [[https://www.youtube.com/watch?v=EccHushRhWs][Introduction to ASN.1]]
+** TODO [[https://www.youtube.com/watch?v=OStr5K2R5oo][What the heck is ASN.1?]]
+* SNMP
+* LDAP
+* x.509
+* BER
+* DER
+* diffie-hellman
+ ** videos
+   - [[https://www.youtube.com/watch?v=NmM9HA2MQGI][Secret Key Exchange (Diffie-Hellman) - Computerphile]]
+     very good explanation from computerphile with color theory + basic mathematics
+   - [[https://www.youtube.com/watch?v=YEBfamv-_do][Public key cryptography - Diffie-Hellman Key Exchange (full version)]]
+     good explanation with color theory
+   - [[https://www.youtube.com/watch?v=ESPT_36pUFc][The Mathematics of Diffie-Hellman Key Exchange | Infinite Series]]
+     good explanation with actual mathematics 
+   - [[https://www.youtube.com/watch?v=yDXiDOJgxmg][Elliptic Curve Cryptography & Diffie-Hellman]]
+     eliptic curve diffie-hellman
+   - [[https://www.youtube.com/watch?v=d1KXDGgwIpA][7 - Cryptography Basics - Diffie-Hellman Key Exchange]]
+* private key
+** type pkcs8
+** format pem
+* public key
+** type spki
+** format pem
+* hashing algorithm
+** md5
+** Sha1
+** Argon2
+* hmac
+** [[https://www.youtube.com/watch?v=wlSG3pEiQdc][ securing stream ciphers HMAC]]
+* GMAC
+* signing algorithm
+  [[https://www.youtube.com/watch?v=s22eJ1eVLTU][what are digital signature]]
+** RS256
+* TLS
+** [[https://www.youtube.com/watch?v=86cQJ0MMses][TLS Handshake explained]]
+** [[https://www.youtube.com/watch?v=0TLDTodL7Lc][Transport Layer Security (TLS) - Computerphile]]
+** [[https://www.youtube.com/watch?v=cuR05y_2Gxc][beaking down the TLS handshake]]
+* word property
+** Index of Coincidence
+** trigram score
+** Quadrogram score

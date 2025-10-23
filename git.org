@@ -1,0 +1,127 @@
+* git command
+** reset a single file 
+   git checkout HEAD -- filename
+** git reset to head
+   git reset --hard HEAD
+** clean working directory
+*** clean untracked files
+    git clean -f
+*** clean untracked files and directories
+    git clean -f -d
+*** removed ignored files
+    git clean -f -X
+** list all the authors
+   git log --format='%aN' | sort -u
+** check author contributions
+   git log --author="vahid forghani" --pretty=tformat: --numstat
+** check versions of a file
+   for commitID in `git log --pretty='format:%H' --follow -- pom.xml`; do git diff HEAD $commitID -- pom.xml; done
+* git encrypted repository
+** git-remote-gcrypt
+   On my personal Git server I have a lot of repositories. In order not to loose these repositories, a backup policy is important.
+
+ I keep copies of my Git repositories on several machines in my home network. However, a catastrophic power-event like a lightning bolt or some other high-voltage peak could wipe all those machines. Therefor I wanted to have a copy outside my house, and thus at a third party. Because of the confidentiality of a part of the data, this has to be an encrypted backup.
+ Create GNU Privacy Guard-encrypted git remotes with git-remote-gcrypt
+
+ The open source GnuPG tools provide very strong encryption and is easy to implement. (GnuPG is also known under the names gpg and OpenPGP).
+
+ git-remote-gcrypt handles gcrypt:: URLs that will access a remote repository encrypted with GnuPG. On Debian, it is easy to install:
+
+ apt-get install git-remote-gcrypt
+
+ ... and you are ready to go!
+
+ git-remote-gcrypt is a shell-script, so an other easy way to install is:
+
+ git clone https://github.com/spwhitton/git-remote-gcrypt
+ cd git-remote-gcrypt
+ ./install.sh
+
+ This can be handy on other Linux distributions. The git-remote-gcrypt is a shell-script that uses curl amoung other things, and it will not be easy to get it working properly on OpenBSD.
+ GnuPG key
+
+ Before starting to use git-remote-gcrypt to set up encrypted remotes, it is useful to think about which GnuPG key we are going to use.
+
+ We set up the remote encrypted repositories as a backup for the case our entire home network is foobar. When we want to access the contents of the remote repository, we will need the private gpg-key to do the decryption.
+
+ So you will have to store this gpg-key on a remote position, probably at a third party (which is, of course, not the same third party as where the remote repository is located). This can be on an USB memory-stick, or as a file stored by some cloud provider.
+
+ For this reason, I choosed to use a separate key, only to be used for the encryption and decryption of the Git repositories, and not my "normal" key for everyday use, like signing email messages.
+ How to set up an encrypted remote Git repository
+ Preparation on the remote machine
+
+ On the remote machine, create a bare, empty repository:
+
+ mkdir -p /opt/git/<new repository>
+ cd /opt/git/<new repository>
+ git init --bare .   
+
+ This results in a normal, remote empty repository.
+
+ In the example above, the remote repository is located in the /opt/git directory. This is just an example, you can choose any other path.
+ Preparation on the local repository
+
+ In the directory of our local Git repository we enter the following commands:
+
+ git remote add cryptremote gcrypt::rsync://<remote-machine>:/opt/git/$mydir
+ git config remote.cryptremote.gcrypt-participants "<gpg-key-id>"
+
+ With this, we add an encrypted remote repository to the git config. Also, we tell git which GnuPG key to use for the encryption. The gpg-key-id is a long string, you can get this string f.e. with "gpg -K", which lists all your secret keys.
+
+ When you want to share the encrypted remote with other people, you can also add their gpg-keys in the list of gcrypt-participants.
+ Push encrypted data to the git remote
+
+ Now all we have to do, is to push the contents of our local repository to the remote, git-remote-gcrypt will do all the encryption for us:
+
+ git push cryptremote master
+
+ The name of the repository, and the git config and so on will not be encrypted, only the data. So if your repository name is sensitive too, you have to come up with some mechanism to replace this with something else. In the above example, the local repository got pushed to a remote in /opt/git, followed by a directory-name. You can of course replace this directory-name with something else.
+ Cloning from the remote repository
+
+ So there has been some catastrophic event, and no we want our data back from the remote encrypted repository. How do we approach this?
+
+ It turns out to be very simple. Of course we need the GnuPG key for decryption, so both the public as well as the private part of the key.
+
+ git clone gcrypt::rsync://<remote-machine>:/opt/git/<repository>
+
+ You will be prompted to enter the passphrase for the gpg-key and a local, decrypted clone will be made.
+ Test the recovery of the backup
+
+ Remeber, that a backup that is not tested, is not a backup. Test the recovery process on a regular basis, to be sure it is working OK.
+*** git-remote-gcypt
+    https://github.com/spwhitton/git-remote-gcrypt
+** generating gpg key
+   https://help.github.com/en/github/authenticating-to-github/generating-a-new-gpg-key
+** git-crypt
+   https://www.agwa.name/projects/git-crypt/
+* change a commit author
+  https://stackoverflow.com/questions/3042437/how-to-change-the-commit-author-for-one-specific-commit
+  
+Interactive rebase off of a point earlier in the history than the commit you
+need to modify (git rebase -i <earliercommit>). In the list of commits being
+rebased, change the text from pick to edit next to the hash of the one you want
+to modify. Then when git prompts you to change the commit, use this:
+
+git commit --amend --author="Author Name <email@address.com>" --no-edit
+
+For example, if your commit history is A-B-C-D-E-F with F as HEAD, and you want to change the author of C and D, then you would...
+
+    Specify git rebase -i B (here is an example of what you will see after executing the git rebase -i B command)
+        if you need to edit A, use git rebase -i --root
+    Change the lines for both C and D from pick to edit
+    Exit the editor (for vim, this would be pressing Esc and then typing :wq).
+    Once the rebase started, it would first pause at C
+    You would git commit --amend --author="Author Name <email@address.com>"
+    Then git rebase --continue
+    It would pause again at D
+    Then you would git commit --amend --author="Author Name <email@address.com>" again
+    git rebase --continue
+    The rebase would complete.
+    Use git push -f to update your origin with the updated commits.
+* sane defaults
+** pull rebase
+
+git config --global pull.rebase true
+** show git config
+   - git config --list
+   - git config --list --show-origin

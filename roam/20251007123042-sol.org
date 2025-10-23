@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       ba57195a-3062-4aba-b8c9-5a4be9625def
+:END:
+#+title: sol
+* solana sol
+lunched in 2020
+** concences mechanism
+*** proof of history (PoH)
+**** TODO Learn about Proof of history                             :research:
+*** proof of stake
+* 

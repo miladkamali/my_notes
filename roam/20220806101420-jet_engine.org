@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       564C9B1C-DC97-453E-9275-C3195961D107
+:END:
+#+title: jet engine
+* type of jet engine
+** Pulse jet engine
+** pulse detonation engine
+** [[id:458160B1-45E1-477F-B904-22F5596D282F][Rotating Detonation Engine]]

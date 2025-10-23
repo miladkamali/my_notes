@@ -1,0 +1,4 @@
+* get national id image 
+  JusticeRepository -> getNationalCardImage
+
+  JusticeService->getNationalCard uses the above and saves the data to the disk

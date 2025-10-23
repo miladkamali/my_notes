@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       26498E56-E8CE-4F83-A047-EC07B3891115
+:END:
+#+title: remote access management
+* team viewer
+* any desk
+* goToAssist
+* bomgar
+* Rustdesk
+[[https://www.youtube.com/watch?v=9nzHm3xGz2I][Rustdesk - an Open Source, Self Hosted alternative to TeamViewer, AnyDesk, GoToAssist, and the like.]]
+
+at the moment only support X11 and wayland is not supported
+* remote desktop access
+** remote machine management
+*** mesh central
+*** rport
+** remotely

@@ -1,0 +1,260 @@
+* what are these
+** TODO lucene
+** TODO optimistic concurrency control
+   prevent overwriting documents with older versions since write orders can come
+   in wrong order 
+   [[file:./elasticOptimisticConcurrenctyControl.png][wrong write order]]
+
+   [[file:./elasticOptimisticConcurrenctyControl2.png][old way of handing the situation]]
+   [[file:./elasticOptimisticConcurrenctyControl_newWay.png][new way]] using primary term and sequence number 
+** NDJson
+* APM
+** videos
+*** [[https://www.youtube.com/watch?v=pGUVVIIa7wE][Elastic APM and Java APM agent in 5 minutes]]
+*** [[https://www.youtube.com/watch?v=K2XL7h6ehMM][Instrument and Monitor Java Applications using Elastic APM]]
+** problem
+   co.elastic.apm.agent.report.IntakeV2ReportingEventHandler - Error sending data to APM server: Server returned HTTP response code: 503 for URL: http://10.0.36.72:8200/intake/v2/events, response code is 503
+   https://www.elastic.co/guide/en/apm/server/current/tune-apm-server.html
+   https://stackoverflow.com/questions/54623543/elastic-apm-http-error-503-queue-is-full
+* elastic
+** download and install 
+*** docker based
+    https://docs.docker.com/install/linux/docker-ce/debian/#install-using-the-repository
+*** debian
+    https://www.elastic.co/guide/en/elasticsearch/reference/7.5/deb.html#deb-repo
+*** zip
+    https://www.elastic.co/downloads/elasticsearch
+** structure
+*** /bin/
+**** elasticsearch
+     runs elasticsearch on port 9200
+**** elasticsearch-sql-cli
+   
+**** elasticsearch-plugin
+**** elasticsearch-certgen
+**** elasticsearch-certutil
+**** elasticsearch-cli
+**** elasticsearch-croneval
+**** elasticsearch-env
+**** elasticsearch-keystore
+**** elasticsearch-migrate
+**** elasticsearch-node
+**** elasticsearch-saml-metadata
+**** elasticsearch-setup-passwords
+**** elasticsearch-shard
+**** elasticsearch-sql-cli-7.5.2.jar
+**** elasticsearch-syskeygen
+**** elasticsearch-users
+**** x-pack-env
+**** x-pack-security-env
+**** x-pack-watcher-env
+*** config
+*** jdk
+    jdk whi
+** dev tools
+   GET /_cluster/health
+
+   GET /_cat/nodes?v
+
+   GET /_nodes
+ 
+   GET /_cat/indices?v
+** indices
+*** add an indice
+    put /indiceName
+*** remove an indice
+    delete /indiceName
+** data
+*** add
+    post /indexname
+    {
+    "something":"something"
+    }
+*** add with specific id
+    post /indexname
+    {
+    "something":"something"
+    }
+*** get document
+    GET /indexName/_doc/id
+*** update a document
+    post /indexName/_update/id
+    {
+    "doc":{
+    "something":"something" 
+    }
+    }
+*** scripted update
+    post /indicies/_update/id
+    {
+    "script":{
+       "source": "ctx._source.in_stock--;"
+    }
+    }
+
+    post /indicies/_update/id
+    {
+    "script":{
+       "source": "ctx._source.in_stock-0-=params.quantity;"
+    }
+    "params":{
+       "quantity" : 4
+    }
+    }
+
+    post /indicies/_update/id
+    {
+    "script":{
+       "source": """
+       if ( ctx._source.stock== 0 ){
+          ctx.op = 'noop';
+       }
+       ctx._source.in_stock--; """
+    }
+    }
+
+    post /indicies/_update/id
+    {
+    "script":{
+       "source": """
+       if ( ctx._source.stock<= 1 ){
+          ctx.op = 'delete';
+       }
+       ctx._source.in_stock--; """
+    }
+    }
+*** upsert
+    update using script if exist otherwise insert the upsert
+
+    post /indicies/_update/id
+    {
+    "script":{
+       "source": " ctx._source.in_stock--";
+    },
+    "upsert":{
+    "name":
+    }
+    }
+*** delete
+    DELETE /index/id
+*** update by query
+    [[file:./elasticUpdateByQuery.png][how update by query works]]
+    in case of error query are aborted not rolled back
+    if you want the query to continue in case of conflict you should specify
+    "conflicts": "proceed"
+    in the main body 
+    post /products/_update_by_query 
+    {
+    "conflicts": "proceed",   //optional
+    "script" : {
+      "source": "ctx._source.stock--"
+    },
+    "querry":{
+      "match_all":{}
+
+    }
+*** delete by query
+    post /products/_delete_by_query
+    {
+      "query" : {
+         "match_all":{}
+      }
+    }
+*** bulk api
+    [[file:./elasticHeaderType.png][header for bulk]]
+    post /_bulk
+    {"index":{"_index":"products","_id":200} }
+    {"name": "something" , "price":123,"stock":10}
+    {"create":{"_index":"products","_id":201} }
+    {"name": "something" , "price":123,"stock":10}
+    {"update":{"_index":"products","_id":201} }
+    {"price":129}
+*** search
+    post /index/_search
+    {
+    "query":{
+     "match_all":{}
+    }
+    }
+** search
+*** query parameter
+    get /products/default/_search?q=*
+*** query dsl
+** how elastic works
+*** routing
+    by default elastic use document id in routing we can set custom routing which
+    will result in _routing being added to each document. however if we are going
+    to use custom  routing we should ensure that we have even distribution for
+    each shard 
+    [[file:./elasticRouting.png][routing]]
+*** reading data
+    [[file:./elasticReadingData.png][how elastic reads data]]
+*** writing data 
+    [[file:./elasticWriteData.png][elastic write data]]
+** definition
+*** replication group
+*** replication shard
+*** primary shard
+*** primary terms
+    primary term is increased when ever the primary shard is down and a new
+    primary is selected
+*** global/ local checkpoint
+    the sequence number that all active shards within a replication group have
+    been aligned at least up to that point
+*** sequence numbers
+*** version
+**** internal versioning
+     [[file:./elasticVersioning.png][elastic versioning]]
+**** external versioning
+     useful when versions are maintained outside of elastic search for example
+     when documents are in a RDBMS and they are added to elastic for search
+     put /product/_doc/123?version=234&version_type=external
+     {
+     ...
+     }
+
+* kibanna
+** download
+   https://www.elastic.co/downloads/kibana
+* text analysis
+** normalizer
+** character filter
+*** html_strip
+    removes html elements from text and only return full text.
+*** mapping
+    for mapping a word or field into something else.
+*** pattern_replace
+    use regular expression to replace patterns in text
+** tokenizer
+*** world oriented tokenizer
+**** standard tokenizer
+**** letter tokenizer
+**** lowercase
+**** whitespace
+*** partial word tokenizer
+**** ngram
+     substring with increasing starting position
+**** edge_ngram
+     auto completion( not a very good thing) suggestions are better
+*** structured text tokenizer
+**** keyword
+**** pattern
+** token filter
+*** standard token filter
+*** lowercase
+*** uppercase
+*** nGram
+*** edgeNGram
+*** stop
+*** word_delimiter
+*** stemmer
+    reduce the words to the base form
+*** keyword_marker
+*** snowball
+*** synonym
+*** trim
+*** length
+*** truncate
+* inverted index
+  structure to enable quick full search of 
+  [[https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=2ahUKEwjvvPakq7fnAhVt8-AKHZcECUMQFjACegQIDhAG&url=https%3A%2F%2Fwww.geeksforgeeks.org%2Finverted-index%2F&usg=AOvVaw18IudSCp5scb-PJYTNi65r][inverted index]]

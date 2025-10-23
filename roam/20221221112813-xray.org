@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       324A8EFD-590C-4D3F-956B-4A4FE08E4D54
+:END:
+#+title: xray
+
+
+An example config is installed to /opt/homebrew/etc/xray/config.json
+
+To restart xray after an upgrade:
+  brew services restart xray
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/xray/bin/xray run --config /opt/homebrew/etc/xray/config.json

@@ -1,0 +1,21 @@
+* pull configuration tools
+** puppet
+** chef
+** saltstack
+* push configuration
+** ansible
+*** vagrant
+**** 
+*** installation
+    pip3 install ansible
+*** set up inventory file
+    [test]
+    167.86.119.149
+*** run ping command
+    ansible -i inventory test -m ping -u root
+*** modules -m
+    -a is argument for module
+**** ping
+**** command
+*** playbook
+**** 

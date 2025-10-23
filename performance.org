@@ -1,0 +1,7 @@
+* videos
+** [[https://www.youtube.com/watch?v=EqfAPZGKifA][Blocking and Locking: How to Find and Fight Concurrency Problems]]
+** BrentOzar.com/go/lock
+** [[https://www.youtube.com/watch?v=5AvRn3DMMCs][top 10 developers mistakes that worn't scale]]
+** [[https://www.youtube.com/watch?v=SqhX8OaOI6A][Pinal Dave - SQL Server Performance Tuning Made Easy]]
+* TODO bpftrace
+https://github.com/iovisor/bpftrace/blob/master/docs/reference_guide.md

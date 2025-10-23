@@ -1,0 +1,36 @@
+* QWidget
+** QMainWindow
+*** parts
+**** centralWidget
+**** menuBar
+**** statusBar
+** QAction
+** QPalette
+** QFont
+** QLabel
+** QPushButton
+** QMessageBox
+** QLineEdit
+** QApplication
+*** QApplication::quit()
+    quit the application loop
+** QMessageBox
+** QPixmap
+   ("://images/test.png")
+** QLayout
+   Layout Management
+*** QHBoxLayout
+*** QVBoxLayout
+*** QGridLayout
+*** QStackedLayout
+** QButtonGroup
+** QComboBox
+** QListWidget
+** QTabWidget
+* unknown
+** QLIST
+* info
+** https://stackoverflow.com/questions/32040202/qt-5-get-the-mouse-position-in-a-screen
+** https://forum.qt.io/topic/7761/getting-the-window-title-of-a-non-qt-application/8
+** https://stackoverflow.com/questions/49233573/how-to-get-active-window-title-in-ubuntu-qt
+** https://amin-ahmadi.com/2016/06/21/how-to-get-the-topmost-window-title-using-qtc-for-windows/

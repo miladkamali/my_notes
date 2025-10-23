@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       E75FD63F-051F-49EE-B306-B870CBADD4D0
+:END:
+#+title: workflow engine
+* temporal
+* camunda
+* 

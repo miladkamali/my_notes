@@ -1,0 +1,49 @@
+* face detection js
+** https://trackingjs.com/examples/face_hello_world.html
+* ffmpeg recorder
+  https://www.npmjs.com/package/ffmpeg-recorder
+* communication styles
+** webhook
+   trigger the server to send requests to the call back URL provided
+   by the client 
+*** cons
+**** server has to ensure delivery through retries
+**** apps running behind a firewall has to expose call-back url to the outside
+**** several events happening can be quite noisy
+** websocket
+*** pros
+**** bidirecetional low latency communication
+**** reduced overhead of http requests
+*** cons
+**** clients are responsible for connections
+**** Scalibility can be a challenge
+** http streaming
+*** chunked
+*** Server-Sent-Events(SSE)
+    twitter uses SSE to sent tweet updates over a single http connection
+**** pros
+***** can stream over simple HTTP
+***** Native browser support
+**** cons
+***** bidirectional communication is challenging
+***** Buffering related issue
+      clients and proxies and buffering limits, they might not even
+      start to process data after the buffer is filled
+** GRPC
+** short polling
+** long polling
+** Server Send Events
+** [[https://www.youtube.com/watch?v=n9mRjkQg3VE][SSE vs WebSockets vs Long Polling. Martin Chaov. JS Fest 2018]]
+* TODO what is ALPN (Application Layer Protocol Negotioation)
+* keycloak
+** videos
+*** [[https://www.youtube.com/watch?v=RupQWmYhrLA][Bilding an effective identity and access management architecture with Keycloak]]
+** documentation
+*** https://github.com/keycloak/keycloak-documentation/blob/main/server_development/topics/admin-rest-api.adoc
+** 2FA authentication
+*** https://stackoverflow.com/questions/50319327/keycloak-multi-2fa-factor-otp-qr-code-custom-login-screen-rest-api/65726440#
+*** [[https://www.youtube.com/watch?v=GQi19817fFk][2FA with Keycloak and SMS based OTP text messages | Niko Köbler (@dasniko)]]
+    code : https://github.com/dasniko/keycloak-2fa-sms-authenticator
+** [[https://www.youtube.com/watch?v=FyVHNJNriUQ][How to secure your Microservices with Keycloak - Thomas Darimont]]
+* jeager tracing
+** [[https://www.youtube.com/watch?v=lJ_XAol-OKM][Jaeger Tracing with Spring Boot | Distributed Log Tracing in Spring Boot | Tech Primers]]

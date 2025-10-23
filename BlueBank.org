@@ -1,0 +1,1524 @@
+#+TODO: TODO(t) INPROGRESS(i) | BLOCKED(b) DONE(d)
+#+TODO: ADD_TO_JIRA(j) ADDED_TO_JIRA(J)
+#+TODO: API_ISSUE(a) REPORTED(r)| Waiting(w) FIXED(f)
+#+TODO: REPORT(r) BUG(b) KNOWNCAUSE(k) | FIXED(f)
+#+TODO: | CANCELED(c)
+#+PROPERTY: Effort_ALL 0 1:00 2:00 4:00 8:00 12:00 16:00 20:00 24:00
+#+COLUMNS: %50ITEM %EFFORT(Effort Children){:} %PRIORITY
+* technical debt
+** error handling
+** logs
+** change service interfaces to prepare for microservice 
+** add APM
+** monitoring performance 
+* services to document
+** UserProfileService
+*** how are we storing current user avatar ?  
+* issues to fix
+** [#A] clean up error handling systems
+*** types of errors
+    we need a method of categorizing errors and meaning of them
+    we need a pattern matching system to determine 
+
+    generally we have three  major error dealing with external APIs
+**** communication errors
+**** well formatted errors containing an error message and a code
+      these types of errors are supposed to be normalized and contain proper
+      localized errors(So far they are not but they should). we need to create a
+      list these errors and their meaning gradually and report them as a
+      appropriate class of errors. This category could contain all sort of errors
+      from validation due to user input/client bug or server bug or major ones
+      that bank internal services are facing issues like
+
+
+  سروس برخط در دسترس نمیباشد. 
+
+
+
+     or Mongo or oracle going down. It also contains simple issues like the
+      target account has been blocked or not enough funds available or no cards
+      found for user.
+
+      currently there are two different type of these errors CUFX and plain errors.
+**** ill formatted errors
+     they are errors due to infrastructure issues like 504 nginx
+     these errors which can not be parsed 
+
+
+       - error which contains error messages and a code.
+       - error messages which do not follow message code pattern
+*** error categories
+**** Communication issues
+     right now it only happens in our atoms
+     these kind of error should raise an alert for service owner and/or infrastructure team
+     while at the same time the client will receive a generic error like 
+
+متاسفانه در حال حاضر سرویس های بانک امکان پاسخ گویی ندارند مشکل در حال پیگیری میباشد
+     
+***** Connection Timeout
+***** Host not found
+***** nginx 503
+***** nginx 502
+
+**** logical failure modes of service due to request or conditions
+     these modes messages should be transferred to the Client and they are
+     generally have a message and a code which should be transferred to the
+     client, It is outbound APIs responsibility to generate proper error
+     messages for these.
+
+     
+***** not enough funds in deposit
+***** wrong document id
+***** 400 series
+***** Harim
+***** can not transfer to targeted card/Account
+***** lots of different KYC errors
+**** Business Error
+     Errors that are combination of different systems like phone owner dose not
+     match National ID These errors are also transferred to the client,
+     Responsibility for error message here falls on MIB.
+**** service internal issues
+     known problems that external services which bank relies on return to us like
+     عدم دسترسی به سرویس برخط  در tibo
+     these errors should be reported directly to the service owner and request fast resolution!
+
+     in this case we should send a generic error to the client like "متاسفانه در حال حاضر سرویس های بانک امکان پاسخ گویی ندارند مشکل در حال پیگیری میباشد"
+
+**** Atom Warnings ( not an error but has to be logged with Error or Warning level )
+     these type of errors are only logged and later should be followed on 
+***** detection of new fields or non breaking change in response and field format in fields
+**** Atom Errors
+     anything that can go wrong in our Atoms like invalid command, or invalid
+     response from the service. It is the category of unhandled issues the that
+     we have not explicitly handled. this category ideally
+     
+     these errors were we have no idea what the service is complaining about and
+     possibly does't match any of our error templates in these situation these
+     logs has to be reviewed as soon as possible
+     
+     In this case we should also present Clients with generic error however we
+     should immediately review type of error and add a pattern matcher for it.
+***** failure to parse response or breaking changes responses
+***** validation errors on input and output protobufs
+**** validation errors
+     these errors should be reported to the Client explicitly, It is MIB
+     responsibility to generate proper errors for these kind of issues.
+***** input validation
+      wrong phone number format
+      wrong billid/payId.
+      wrong IBAN
+      we have lots of these validation in our code.
+**** Security
+***** rate limiter trigger
+***** HMAC error
+***** duplicated requests
+** KycStateService
+   if token is not found we should return a re-login error
+** [#A] restart of server should not have any side effect since we have redis available
+   AuthenticationFilter
+** [#A] add these headers after f5
+   https://support.f5.com/csp/article/K4816
+   https://support.f5.com/csp/article/K43444200
+   https://youtu.be/QrQxjt4-e4k
+   https://devcentral.f5.com/s/question/0D51T00006n5Sja/how-to-enable-xforwardedhost
+*** X-Forwarded-For
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For
+*** X-Forwarded-Proto
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto
+*** X-Forwarded-Host
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host
+** DONE [#A] add avatar for default user
+   CLOSED: [2020-12-12 Sat 12:08]
+** DONE [#A] unify transfer and other receipts  
+   CLOSED: [2020-12-12 Sat 12:08]
+** DONE [#A] CARD
+   CLOSED: [2020-12-12 Sat 12:08]
+*** card order
+    - to differentiate between order and reorder we should check list of cards 
+    - look up Postal code( we already have the endpoint)
+    - receive and send data to api (one atom and an endpoint)
+*** list of cards
+    - Atom + controller endpoint
+    - mapping between state,status ->
+    - finding card id from pan due to design of delivered APIs
+*** navigation uri for card
+    if they dont have a card they should enter card registration process
+*** card activation and set/reset pin1
+    update credential is going to be used to set/reset pin1
+*** pin2  next sprint
+    - adding delivery channel to generate-otp
+      if delivery channel is not sms we should ensure that card belongs blue
+      if this is violated we should create an alert due to bug in client
+*** block card ( manual blocking by user )  
+    - atom + controller endpoint /account/..../update-status
+    - unblocking a card happens when they reorder a card
+** DONE [#A] feature smart transfer 
+   CLOSED: [2020-12-12 Sat 12:08]
+** DONE [#A] recover username and password (the new flow )
+   CLOSED: [2020-12-12 Sat 12:08]
+** DONE [#B] refactor update credential to become more extensible
+   CLOSED: [2020-12-12 Sat 12:08]
+** things to look at in refactoring
+*** AssetService
+    should receive request id and correlation id from outside 
+    it seems that assetService is doing a request 
+*** AssetController
+    why we have this controller here, under no circumstance we are going to
+    do a request to ourselves, unless the user is going to do that
+*** change ElectricBillCommand to ElectricBillInfoCommand
+*** InternetPackageService  getInternetPackageForOperatorNow
+    why are we passing partiId instead of oAuth token ? 
+*** 
+*** ImageAssetFactory should not be a component
+* questions
+** is deposit transfer going to remain account to account
+* endpoints
+** /account/deposit/list/all
+***  parse protobuf AccountListAllRequest
+*** check token exist
+*** get Oauth,user,party token
+*** TODO generate transaction id 
+    create 
+*** get list of deposits
+*** generate AccountListAllResponse
+** /account/owner/get
+*** parse protobuf /account/owner/get
+*** 
+* initial tasks
+** set up user authentication API
+*** JWT controller
+*** set up security for clients EC
+*** 
+** bank services
+*** set up Account
+*** set up authentication
+*** set up user profile
+*** set up every thing from protobuffs
+** Tasks
+*** set up protobuf
+**** create build process to generate models
+***** help Dr generate approptiate classes and architecture around it
+***** ensure class sanity after code generation
+**** integrate protobuf into spring response
+***** create appropriate POJO for internal use
+***** create JSON serialiser and register it.
+**** ensure json/protobuf interoperability every where in request/response 
+**** prepare clients for protobuf
+     do explain the benefits of protobuf and help them set up every thing
+*** set up mock server
+*** customize mock server with preview data
+*** set up initial project
+*** provide documentation for clients
+*** implement required controllers
+**** login controller
+**** dashboard controller
+**** payment controller
+**** card controller
+**** ...
+*** set up logging
+*** design data layer of service
+*** design microservice architecture
+** knowledge
+*** learn more about WSO2
+**** identity server
+     https://wso2.com/identity-and-access-management/
+**** API management
+     https://wso2.com/api-management/features/
+**** checking wso2 5.7  vs wso2 5.8
+     https://wso2.com/blogs/thesource/2019/05/wso2-identity-server-5-8-0-is-here/
+*** Protobug and grpc
+    https://developers.google.com/protocol-buffers/docs/javatutorial
+    https://stackoverflow.com/questions/41243168/inheritance-in-protocol-buffers
+*** Getting to know the people up stairs working on the backend
+*** checking how easy it is to actually bring up fineract-CN ourselves
+*** understand fineract-CN architecture at the high level (microservices and what they do)
+*** Architecture of our backend
+**** CQRS
+**** Docker
+**** CI/CD
+**** Logging system
+**** Event source
+**** kubernates
+**** GRPC
+**** monitoring performance
+**** monitoring availability
+* tasks
+** protobuf/grpc research
+   2020-02-18 6 hours protobuf compiler
+   2020-02-19 6 hours 
+   
+** creating cufx mock server from swagger
+   <2020-02-22 Sat 10:00> 9 hours
+   <2020-02-23 Sun 10:00> 6 hours
+** creating bluebank clinet facing server
+   <2020-02-24 Mon 10:00> 9 hours
+   <2020-02-25 Tue 12:00> 7 hours
+** cleanup protobuf/grpc
+   
+** start implementing mock server by hand
+   <2020-02-26 Wed 22:25> 5 hours
+*** Card
+    <2020-02-28 Fri 22:24> 6 hours 
+    <2020-02-29 Sat 22:24> 5 hours
+*** Transfer
+    <2020-03-01 Sun 22:22> 6 hours cleaning up CUFX swagger models and comparing them with 
+    <2020-03-02 Mon 22:23> 3 hours
+    <2020-03-03 Tue 22:23> 4 hours
+** understanding CUFX
+** R&D
+*** architecture
+**** Kafka
+**** RabbitMQ
+**** GRPC
+**** Linkered
+**** Envoy
+**** Aviro
+* create protobufs wrappers 
+** TODO create complete set of banks enum
+   waiting for a json from Dr
+* stories
+** user login into their account and see their balance
+*** login end point
+*** user information backend 
+**** register device for user mock server
+**** token generation for user services mock server
+**** connect login to mockserver
+*** account end points
+**** access list of accounts for user
+**** account information
+**** access an account transactions list
+*** blue account backend
+**** account transactions mock server
+**** service for account list mock server
+**** service for account balance based on transactions mock server
+** user transfer money from their account to an other
+*** transfer endpoint
+*** transfer backend
+**** add transaction for both accounts
+**** 
+* stories
+** story 1 7.5 days
+   login into her account
+*** login endpoint 1 days
+**** protobuf models helper functions and validation 8 hours
+*** token management 1 day or  8 hour
+*** connect to authentication channel 1 days
+**** develop simple OAuth2 token management in mock server 4 hour
+**** manage OAuth2 token for each user 4 hours
+*** account endpoint 2 days
+**** protobuf models helper functions and validation 8 hours
+**** CUFX mock server necessary changes 4 hours
+**** converting CUFX models to protobuf models 3 hours
+**** connect MIB to CUFX mock-server 2 hours
+*** transaction endpoint 2 days
+**** protobuf models helper functions and validation 8 hours
+**** implement transaction CUFX mock server 4 hours
+**** connect to CUFX 2 hours
+**** converting CUFX models to protobuf models 3 hours
+
+*** communication 4 hours
+** story 2 2.5 days
+   transfer between accounts
+*** transfer endpoint
+**** protobuf models helper functions and validation 8 hours
+**** CUFX mock server necessary changes 4 hours
+**** connect to CUFX endpoint 2 hours
+**** converting CUFX models to protobuf models 3 hours
+*** communication 4 hours
+* task 
+** create a system for localized description
+*** TODO CoordinatesIn
+*** TODO CountryIn
+** helper functions
+*** TODO address validation [0/2]
+**** TODO require a database to check countries and cites
+**** TODO a nice have to check coordinates against the city as well
+*** time stamp
+*** datetime
+**** create datetime from time for local 
+** exception handling
+*** UUID length exception
+*** 
+** make sure the amount goes back to string or big decimal
+** tests
+*** learn how to use spring boot tests
+* days
+** <2020-03-04 Wed>
+*** TODO finish transfer models
+    :LOGBOOK:
+    CLOCK: [2020-03-04 Wed 12:45]--[2020-03-04 Wed 14:00] =>  1:15
+    CLOCK: [2020-03-04 Wed 11:00]--[2020-03-04 Wed 12:30] =>  1:30
+    :END:
+*** TODO create transfer crud
+    :LOGBOOK:
+    CLOCK: [2020-03-04 Wed 14:30]--[2020-03-04 Wed 15:30] =>  1:00
+    :END:
+
+*** TODO create blue mock server for transfer
+    :LOGBOOK:
+    CLOCK: [2020-03-04 Wed 16:00]--[2020-03-04 Wed 18:30] =>  2:30
+    :END:
+
+** [2020-03-06 Fri]
+
+*** prepare postman for saturday meeting of Dr and akbari
+    :LOGBOOK:
+    CLOCK: [2020-03-06 Fri 22:00]--[2020-03-07 Sat 02:00] =>  4:00
+    :END:
+
+** [2020-03-14 Sat]
+*** working on cufx transaction
+    :LOGBOOK:
+    CLOCK: [2020-03-14 Sat 10:00]--[2020-03-14 Sat 12:30] =>  2:30
+    CLOCK: [2020-03-14 Sat 13:15]--[2020-03-14 Sat 14:30] =>  1:15
+    :END:
+    
+*** prepare report of what we have done so far, for presentation
+    :LOGBOOK:
+    CLOCK: [2020-03-14 Sat 15:00]--[2020-03-14 Sat 18:00] =>  3:00
+    :END:
+*** [2020-03-15 Sun]
+**** 
+** [2020-03-15 Sun]
+*** cufx transaction
+    :LOGBOOK:
+    CLOCK: [2020-03-15 Sun 12:00]--[2020-03-15 Sun 15:00] =>  3:00
+    :END:
+*** presentation
+    :LOGBOOK:
+    CLOCK: [2020-03-15 Sun 10:00]--[2020-03-15 Sun 12:00] =>  2:00
+    :END:
+    
+** [2020-03-16 Mon]
+*** Blue bank MIB
+    :LOGBOOK:
+    CLOCK: [2020-03-16 Mon 10:00]--[2020-03-16 Mon 13:30] =>  3:30
+    :END:
+*** cufx transaction
+    :LOGBOOK:
+    CLOCK: [2020-03-16 Mon 14:45]--[2020-03-16 Mon 17:00] =>  2:15
+    :END:
+    
+* people
+** Dr ghazanfari
+   CTO
+** akbari
+   right hand of ghazanfari
+** khoshbin
+   WSO2 or darion
+** payam esfandiari
+   the big data team + docker
+* communication
+** ‫‪MVP‬‬ ‫در‬ ‫وجه‬ ‫انتقال‬ ‫براي‬ ‫‪CUFX‬‬ ‫جزییات‬ ‫سند
+*** what i need*** what i need
+**** sample of TransferOccuranceMessage
+**** sample of DepositMessage
+**** sample of TransactionMessage
+**** DONE please tell those idiots to not follow pagination model of CUFX for every list
+     CLOSED: [2020-04-13 Mon 13:33]
+     - State "DONE"       from "NEXT"       [2020-04-13 Mon 13:33]
+     - State "NEXT"       from "TODO"       [2020-04-13 Mon 13:33]
+     - State "TODO"       from              [2020-04-13 Mon 13:33]
+*** message context
+**** requestId
+**** sessionId
+**** userId
+**** what is partyId
+*** DepositMessage
+* integration issues
+** DONE 172.17.3.110 can not access 172.16.2.22:8244
+   CLOSED: [2020-04-28 Tue 14:30]
+   - State "TODO"       from              [2020-04-28 Tue 11:37]
+** DONE depositMessageGet is not working
+   CLOSED: [2020-04-30 Thu 04:05]
+   - State "DONE"       from "TODO"       [2020-04-30 Thu 04:05]
+   - State "TODO"       from "NEXT"       [2020-04-30 Thu 04:05]
+   - State "NEXT"       from "TODO"       [2020-04-30 Thu 04:05]
+   - State "TODO"       from              [2020-04-28 Tue 11:42]
+** DONE partyMessageGet is not working
+   CLOSED: [2020-04-28 Tue 18:00]
+   - State "DONE"       from "TODO"       [2020-04-28 Tue 18:00]
+   - State "TODO"       from              [2020-04-28 Tue 11:42]
+** TODO transferMessage is acting funny
+   first why i am supposed to pass the time in           "processingStartedDateTime": "30 April 2020",
+*** when date is "5 February 2020" or same for 5 april i get 
+**** request
+     {
+  "transferOccurrenceMessage": 
+  {
+    "messageContext": {
+      "cufxVersion": "1.0.3",
+      "requestId": "123222",
+      "configurationId": "string",
+      "vendorId": "string",
+      "appId": "string",
+      "fiId": "string",
+      "dataSourceId": "string",
+      "sendingNetworkNodeId": "string",
+      "receivingNetworkNodeId": "string",
+      "environment": "string",
+      "returnDataFilter": "All",
+      "includeBlankFields": true,
+      "includeZeroNumerics": true,
+      "sessionId": "string",
+      "userList": {
+        "currentPage": 0,
+        "totalPages": 0,
+        "pageSize": 0,
+        "positionIndex": "string",
+        "returnPage": 0,
+        "returnPositionIndex": "string",
+        "user": [
+          {
+            "userId": "admin",
+            "processorSessionId": "string",
+            "userIdType": "EmployeeId",
+            "partyId": "string",
+            "customData": {
+              "currentPage": 0,
+              "totalPages": 0,
+              "pageSize": 0,
+              "positionIndex": "string",
+              "returnPage": 0,
+              "returnPositionIndex": "string",
+              "valuePair": [
+                {
+                  "name": "string",
+                  "value": "string"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "transferOccurrenceList": {
+      "transferOccurrence": [
+        {
+          "occurrenceId": "string",
+          "recurringId": "string",
+          "occurrenceAmount": {
+            "value": "112",
+            "currencyCode": "IRR",
+            "exchangeRate": 0
+          },
+          "occurrenceFromAccount": {
+            "accountId": "000000016",
+            "type": "Checking",
+            "openDate": "2020-03-11",
+            "closeDate": "2020-03-11",
+            "accountStatus": {
+              "depositAccountStatus": "Active",
+              "investmentStatus": "Active",
+              "loanAccountStatus": "Active"
+            },
+            "accountSubStatus": "string",
+            "micrAccountNumber": "string",
+            "routingNumber": "string",
+            "displayAccountId": "string"
+          },
+          "occurrenceToAccount": {
+            "accountId": "000000035",
+            "type": "Checking",
+            "openDate": "2020-03-11",
+            "closeDate": "2020-03-11",
+            "accountStatus": {
+              "depositAccountStatus": "Active",
+              "investmentStatus": "Active",
+              "loanAccountStatus": "Active"
+            },
+            "accountSubStatus": "string",
+            "micrAccountNumber": "string",
+            "routingNumber": "string",
+            "displayAccountId": "string"
+          },
+          "occurrenceStatus": "Scheduled",
+          "fundsWithdrawalType": "WhenRequested",
+          "occurrenceMemo": "string",
+          "estimatedProcessDateTime": "string",
+          "createdDateTime": "string",
+          "processingStartedDateTime": "5 February 2020",
+          "processedDateTime": "string",
+          "completedDateTime": "string",
+          "lastUpdatedDateTime": "string",
+          "occurrenceConfirmationCode": "string",
+          "queuedForPosting": true,
+          "note": "string",
+          "batchId": "string",
+          "occurrenceType": "AccountToAccount",
+          "customData": {
+            "currentPage": 0,
+            "totalPages": 0,
+            "pageSize": 0,
+            "positionIndex": "string",
+            "returnPage": 0,
+            "returnPositionIndex": "string",
+            "valuePair": [
+              {
+                "name": "string",
+                "value": "string"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+**** response
+     {
+    "transferOccurrenceMessage": {
+        "messageContext": {
+            "cufxVersion": "1.0.3",
+            "requestId": "123222",
+            "configurationId": "string",
+            "vendorId": "string",
+            "appId": "string",
+            "fiId": "string",
+            "dataSourceId": "string",
+            "sendingNetworkNodeId": "string",
+            "receivingNetworkNodeId": "string",
+            "environment": "string",
+            "returnDataFilter": "All",
+            "includeBlankFields": true,
+            "includeZeroNumerics": true,
+            "sessionId": "string",
+            "userList": {
+                "currentPage": 0,
+                "totalPages": 0,
+                "pageSize": 0,
+                "positionIndex": "string",
+                "returnPage": 0,
+                "returnPositionIndex": "string",
+                "user": [
+                    {
+                        "userId": "admin",
+                        "processorSessionId": "string",
+                        "userIdType": "EmployeeId",
+                        "partyId": "string",
+                        "customData": {
+                            "currentPage": 0,
+                            "totalPages": 0,
+                            "pageSize": 0,
+                            "positionIndex": "string",
+                            "returnPage": 0,
+                            "returnPositionIndex": "string",
+                            "valuePair": [
+                                {
+                                    "name": "string",
+                                    "value": "string"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "statusList": {
+                "status": [
+                    {
+                        "statusType": "Error",
+                        "statusCode": "403",
+                        "statusMessage": {
+                            "developerMessage": "Request was understood but caused a domain rule violation.",
+                            "httpStatusCode": "403",
+                            "defaultUserMessage": "Errors contain reason for domain rule violation.",
+                            "userMessageGlobalisationCode": "validation.msg.domain.rule.violation",
+                            "errors": [
+                                {
+                                    "developerMessage": "Insufficient account balance.",
+                                    "defaultUserMessage": "Insufficient account balance.",
+                                    "userMessageGlobalisationCode": "error.msg.savingsaccount.transaction.insufficient.account.balance",
+                                    "parameterName": "id",
+                                    "value": null,
+                                    "args": [
+                                        {
+                                            "value": "transactionAmount"
+                                        },
+                                        {
+                                            "value": 95016726
+                                        },
+                                        {
+                                            "value": null
+                                        },
+                                        {
+                                            "value": 112
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "transferOccurrenceList": {
+            "transferOccurrence": [
+                {
+                    "occurrenceId": "string",
+                    "recurringId": "string",
+                    "occurrenceAmount": {
+                        "value": "112",
+                        "currencyCode": "IRR",
+                        "exchangeRate": 0
+                    },
+                    "occurrenceFromAccount": {
+                        "accountId": "000000016",
+                        "type": "Checking",
+                        "openDate": "2020-03-11",
+                        "closeDate": "2020-03-11",
+                        "accountStatus": {
+                            "depositAccountStatus": "Active",
+                            "investmentStatus": "Active",
+                            "loanAccountStatus": "Active"
+                        },
+                        "accountSubStatus": "string",
+                        "micrAccountNumber": "string",
+                        "routingNumber": "string",
+                        "displayAccountId": "string"
+                    },
+                    "occurrenceToAccount": {
+                        "accountId": "000000035",
+                        "type": "Checking",
+                        "openDate": "2020-03-11",
+                        "closeDate": "2020-03-11",
+                        "accountStatus": {
+                            "depositAccountStatus": "Active",
+                            "investmentStatus": "Active",
+                            "loanAccountStatus": "Active"
+                        },
+                        "accountSubStatus": "string",
+                        "micrAccountNumber": "string",
+                        "routingNumber": "string",
+                        "displayAccountId": "string"
+                    },
+                    "occurrenceStatus": "Scheduled",
+                    "fundsWithdrawalType": "WhenRequested",
+                    "occurrenceMemo": "string",
+                    "estimatedProcessDateTime": "string",
+                    "createdDateTime": "string",
+                    "processingStartedDateTime": "5 February 2020",
+                    "processedDateTime": "string",
+                    "completedDateTime": "string",
+                    "lastUpdatedDateTime": "string",
+                    "occurrenceConfirmationCode": "string",
+                    "queuedForPosting": true,
+                    "note": "string",
+                    "batchId": "string",
+                    "occurrenceType": "AccountToAccount",
+                    "customData": {
+                        "currentPage": 0,
+                        "totalPages": 0,
+                        "pageSize": 0,
+                        "positionIndex": "string",
+                        "returnPage": 0,
+                        "returnPositionIndex": "string",
+                        "valuePair": [
+                            {
+                                "name": "string",
+                                "value": "string"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
+*** then on ""
+** TODO too many deposits in depositMessageGet
+   - State "TODO"       from              [2020-04-30 Thu 04:06]
+** TODO It seems expired token send transfer into timeout!
+** TODO why the fuck you are asking me for processingStartedDateTime in transferOccurrence
+   - State "TODO"       from              [2020-04-30 Thu 04:17]
+   - 
+** TODO why on earth is processingStartedDateTime format is dd MMMM YYYY ? and you are validating it
+   - State "TODO"       from              [2020-04-30 Thu 04:43]
+** TODO partiGetMessage individual information is incorrect 
+   you should seperate fistname lastname , ... 
+   fill them with empty string.
+"characteristics": {
+   "individual": {
+   "firstName": "مسعود قبایی"
+   }
+   }
+** TODO no user discription in DepositMessageGet
+* sprint 3
+** technical dept 3 days
+*** [#A] cleaning todos from sprint 2  8 hours
+*** [#A] [BKD] Refactoring code base to seperate dependencies between artifacts 4 hours
+*** [#A] [BKD] Create different profiles to integrate mock-server build with MIB serve 4 hours
+*** [#A] [BKD] Clean up tests to avoid disabling them in build process 4 hours
+*** [#A] [BKD] Discuss integration system with data team 4 hours
+** KYC step 2
+*** upload server 3.5 days 5.5 days
+**** [#A] Upload Server: Design and implement Upload Server communication with MIB  8 hours
+**** [#A] file management system( and abstraction possibly base on file content) step1 4 hours
+**** [#C] file management system( similar to git) and prepare integration with other APIs step2 8 hours
+**** [#A] hashing system for calculating hash on fly 6 hours 
+**** [#A] upload APIs version 1 (using blocking IO) 4 hours 
+**** [#C] upload APIs version 2 (using Non blocking IO ) 8 hours 
+**** [#A] cleaning protobuf designs( probably separating them into different files) 2 hours
+**** [#A] basic file access 4 hours
+*** certificate handling 10 hours
+**** [#A] understanding certificate related code 4 hours
+**** [#A] reading certificates 6 hours
+*** personal information management 10 hours
+**** [#A] design certificate and other personal information collection 4 hours
+**** [#A] implement the design as best as possible 6 hours
+*** KYC integration 8 hours
+*** custom upload without loading into ram
+* planning
+** issues we are facing
+*** [#A] we don't have messaging infrastructure 10 days+ 2 days       :milad:
+**** design message handling interface 2 days
+***** design aggregate interface
+***** design message structure
+***** design data models
+**** We need Kafka integration 4 days
+***** setup kafka, and research different message/response and publish/subscribe abstraction
+***** check kafka integration with protobuf
+***** implement basic message routing between topics and partitions
+***** design message container abstraction 
+***** We need message response abstraction
+***** We need Publish message abstraction
+***** we need subscribe message abstraction
+**** We need orchestration service 4 days
+***** design outbound architecture in orchestration service
+***** finalize design of how we are going to handle outbound requests 
+***** should we implement micro-services or a wrapper for them? 
+**** We need protobuf definitions of messages 2 days
+***** implement request reply schema
+***** implement message container
+*** [#A] Updating my detail knowledge of APIs                         :milad:
+*** [#B] we don't have clear code conventions 
+*** [#B] We don't have unit tests
+*** [#C] we don't have code review
+*** [#A] we don't have clean deployment process                       :milad:
+*** [#B] We don't have architecture document to communicate big ideas
+*** [#A] We don't have class diagrams to explain big components       :milad:
+** goals
+*** Session management
+    definitely we are going to keep a user specific data, including
+    - username
+    - list of devices
+      - uid for each device
+      - list of specification for each device
+      - public key for each device
+    - list of logins
+      - ip
+      - date time
+    - 
+**** Definition of domain models and related events
+**** Tracking of user activity
+**** Public Key management
+**** connect device uid to user
+**** device Tracking based on what exactly device UID?
+**** TODO what is the information we can collect on each device
+*** bill payment
+**** TODO get list of APIs for bill
+**** TODO study the document
+*** prepaid cards
+**** TODO get list of APIs for prepaid cards
+**** Tree structure 
+*** Security
+**** TODO definition of sensitive fields which we will use HMAC on
+** Architecture
+*** create Class diagrams of major components
+*** come up with naming schemes and general agreements on coding related issues
+*** create code formatting guide lines
+*** testing kafka
+** testing infrastructure
+* payment APIs issues
+** [#B] Autherization header unification
+   Sometimes it's 
+   bearer ....  -> BillPayment
+   Bearer ....  -> TransactionMessage/Get
+   ...   -> KYC1001
+** [#B] bug payment bills inquiry failed for mobile with internal server error
+
+   - this bill information came from mci bill inquiry 
+   {
+   "mobile": "09122245662"
+   }
+   {
+    "midBillId": "4667178730150",
+    "midPayId": "19296402",
+    "midAmount": 192000,
+    "midExtraInfo": null,
+    "finalBillId": "4667178730150",
+    "finalPayId": "14992389",
+    "finalAmount": 149000,
+    "finalExtraInfo": null
+    }
+  -
+   {
+    "billId": "4667178730150",
+    "payId": "19296402"
+    }
+*** 
+    {
+    "path": "/api/v1/inquiries/bills/payment",
+    "message": null,
+    "code": "101"
+    }
+** [#C] Address unification with versions 
+** [#A] Internet package inquiries
+** [#A] general clean up of CUFX APIs
+* APIs report
+** Account                                                            :test:
+** DONE IAM
+** DONE KYC with ip not with address
+** TODO renovation
+*** TODO renovation waste bill error with sample 
+    {
+    "path": "/api/v1/inquiries/bills/renovation/waste",
+    "message": "ورودی سرویس معتبر نیست.",
+    "code": "G00003"
+    }
+*** TODO renovation Toll Billing Inquiry error with sample 
+    {
+    "path": "/api/v1/inquiries/bills/renovation/toll",
+    "message": "ورودی سرویس معتبر نیست.",
+    "code": "G00003"
+    }
+** TODO TIPO
+*** TODO bussiness
+**** TODO business Waste Billing Inquiry not working with sample 
+     {
+    "path": "/api/v1/inquiries/bills/business/waste",
+    "message": "ورودی سرویس معتبر نیست.",
+    "code": "G00003"
+    }
+**** TODO business Toll Billing Inquiry not working with sample
+     {
+    "path": "/api/v1/inquiries/bills/business/toll",
+    "message": "ورودی سرویس معتبر نیست.",
+    "code": "G00003"
+    }
+*** TODO bills
+**** TODO payment bills inquiry seems to be mock only works with sample 
+**** TODO electric Bill inquiries seems to be mock only works with sample
+     only works with sample
+**** DONE MCI bill works correctly no mock
+**** traffic fine seems working tested with sample but no other data was available at test
+**** gas seems working but no other 
+**** TODO MTN seems to be fucked!
+     i couldn't get data for alireza, or other random numbers
+**** DONE Landline bill is ok
+**** DONE Rightel is responding but i couldn't get a valid report due to lack of working phone number
+**** DONE Water bill seems OK
+**** DONE address inquiry but there was an error in my postal code reported province
+**** DONE Internet Package inquiry
+**** TODO Civil-registry
+***** TODO civil inquiry not working 
+      {
+      "path": "/api/v1/inquiries/civil-registry",
+      "message": "Must Understand check failed for header http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd : Security",
+      "code": "101"
+      }
+***** TODO civil image inquiry not working
+** TODO Payment
+*** TODO billAllPaymentInquiry not working with sample 
+** Party ( what the fuck is this one ?)
+* planning MVP                                                          :MVP:
+** infrastructure
+*** kafka
+**** connect to kafka 
+*** servers
+**** setup extra servers
+*** [#A] implement basic orchestration service
+    :PROPERTIES:
+    :Effort:   24:00
+    :END:
+*** [#A] design and implement subscribe message abstraction
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+*** logging infrastructure
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+*** [#B] APM 
+    :PROPERTIES:
+    :Effort:   12:00
+    :END:
+*** [#A] essential unknown work
+    :PROPERTIES:
+    :Effort:   24:00
+    :END:
+** Architecture
+*** [#A] define topics and partitions
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+*** [#A] essential work
+    :PROPERTIES:
+    :Effort:   24:00
+    :END:
+*** [#A] essential documentation for APIs
+    :PROPERTIES:
+    :Effort:   24:00
+    :END:
+** KYC
+*** API_ISSUE [#A] we don't have an API to get postal code location, only address :api:issue:
+*** Waiting [#A] integrate postal code to location API
+*** TODO [#A] clean up KYC flow 1 day                      :alireza:Dr:milad:
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+*** TODO [#A] move every thing to the new design 3 days work with tests :alireza:
+    :PROPERTIES:
+    :Effort:   24:00
+    :END:
+*** TODO [#A] create KYC atoms
+    :PROPERTIES:
+    :Effort:   20:00
+    :END:
+*** CI/CD for KYC
+**** TODO [#B] compliance tests
+**** TODO [#B] end to end tests
+** Account
+*** [#A] design protobuf messages for account APIs                    :milad:
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+*** API_ISSUE clarify the transaction information                        :Dr:
+*** API_ISSUE test transaction API                                    :milad:
+*** [#A] Transaction List
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+*** [#A] move partyMessageGet to new senario
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** [#A] move transfer to new design
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+*** [#A] move getDeposits to new senario
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+** change password
+*** API_ISSUE [#A] we don't have change password API               :issue:Dr:
+*** API_ISSUE [#A] get change password flow                        :issue:Dr:
+*** [#A] test change password API
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** [#A] design change password message
+    :PROPERTIES:
+    :Effort:   2:00
+    :END:
+*** [#A] implement change password
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** [#A] BFF implementation of change password
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+** Recovery Password
+*** API_ISSUE [#A] we don't have password recovery
+*** API_ISSUE [#A] we don't have password recovery flow
+*** [#A] test recovery password
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** [#A] design change password messages
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** [#A] implement recover password ( with flow)
+    :PROPERTIES:
+    :Effort:   24:00
+    :END:
+** recovery Username
+*** API_ISSUE [#A] we don't have password recovery
+*** API_ISSUE [#A] we don't have password recovery flow
+*** [#A] test recovery password
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** [#A] design change password messages
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** [#A] implement change password messages
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+
+** Security
+*** [#A] key exchange
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+*** [#A] password encryption on wire with p-256
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+*** [#A] calculate HMAC secret
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+*** [#A] white list of App signature
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+*** [#A] Determining debugger connection 
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** [#A] design security flows
+    what should happen when user is debugging the application
+    what should happen if a user is spamming us with request
+    what should happen if user HMAC is not correct 
+    what should happen when wire password is not correct
+** Session Management
+*** [#A] save History of device information
+    :PROPERTIES:
+    :Effort:   12:00
+    :END:
+*** [#A] save device public key in database
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+** bill inquiry ghabzino 
+*** [#A] get
+*** [#A] design Orchestrators 
+*** [#A] gas
+**** gas API atom
+     :PROPERTIES:
+     :Effort:   4:00
+     :END:
+*** [#A] electric
+**** electric API atom
+     :PROPERTIES:
+     :Effort:   4:00
+     :END:
+*** [#A] water
+**** water API atom
+     :PROPERTIES:
+     :Effort:   4:00
+     :END:
+*** [#A] phone
+**** MCI
+***** MCI API atom
+      :PROPERTIES:
+      :Effort:   4:00
+      :END:
+**** Rightel
+***** Rightel API atom
+      :PROPERTIES:
+      :Effort:   4:00
+      :END:
+**** Irancell
+***** Irancell API atom 
+      :PROPERTIES:
+      :Effort:   4:00
+      :END:
+**** home 
+***** Home API atom 
+      :PROPERTIES:
+      :Effort:   4:00
+      :END:
+*** [#A] all bill inquary 
+**** all Bills API atom
+     :PROPERTIES:
+     :Effort:   4:00
+     :END:
+*** [#A] implement bill inquiry BFF  
+    :PROPERTIES:
+    :Effort:   12:00
+    :END:
+*** [#A] traffic bill atom 
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** [#A] bill inquiry service message 
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+
+** mobile internet package
+*** API_ISSUE [#A] client API for internet package is not finalized 
+*** [#A] inquary atom
+    :PROPERTIES:
+    :Effort:   12:00
+    :END:
+    convert the return list into a tree structure or URI based response
+*** [#A] BFF api
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+** ADD_TO_JIRA [#A] design Orchestrate interface
+   :PROPERTIES:
+   :Effort:   12:00
+   :END:
+** mobile charge
+*** API_ISSUE [#A] client API for mobile charge is not finalized 
+*** TODO clean up actual amount calculation
+*** DONE [#A] we don't have mobile charge API ? 
+    CLOSED: [2020-07-18 Sat 10:16]
+*** DONE [#A] mobile topup fields are not clear
+    CLOSED: [2020-07-18 Sat 10:20]
+    is the occurance amount the amount of charge for mobile or it's the payment id 
+*** ADDED_TO_JIRA [#A] mobile topup atom
+    CLOSED: [2020-07-15 Wed 00:30]
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** ADDED_TO_JIRA [#A] mobile charge orchestrator 
+    CLOSED: [2020-07-15 Wed 00:30]
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+** bill payment
+*** ADDED_TO_JIRA [#A] orchid BillPayment atom
+    CLOSED: [2020-07-14 Tue 23:34]
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** ADDED_TO_JIRA [#A] billpayment orchestration
+    CLOSED: [2020-07-14 Tue 23:37]
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+** account topup 
+*** DONE [#A] client APIs for charging account is not clear
+    CLOSED: [2020-07-18 Sat 11:12]
+*** DONE [#A] clean up CUFX and necessary fields
+    CLOSED: [2020-07-18 Sat 11:11]
+*** ADD_TO_JIRA [#A] design account charge messages 
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** ADDED_TO_JIRA [#A] account topup atom 
+    CLOSED: [2020-07-14 Tue 23:39]
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+*** ADDED_TO_JIRA [#A] account charge BFF APIs 
+    CLOSED: [2020-07-14 Tue 23:39]
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+** QR SEP
+*** API_ISSUE [#A] we don't have change QR SEP
+*** API_ISSUE [#A] client APIs design is not finalized or i don't know about it
+*** [#A] test QR sep api
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** [#A] implement QR sep  
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+** models to create
+*** reciept information 
+** moving to protobuf errors 
+** send logs for data team on kafka (basically solve every issue related to connecting to kafka and then send the logs on it
+   :PROPERTIES:
+   :jira_id:  BB-898
+   :END:
+*** TODO check kafka brokers 
+    SCHEDULED: <2020-07-18 Sat>
+    kafka-broker1.sdb247.com
+    kafka-broker2.sdb247.com
+    kafka-broker3.sdb247.com
+    kafka-broker4.sdb247.com
+    kafka-broker5.sdb247.com
+*** TODO set up log partitions and communication
+* remaining tasks
+** DONE [#A] List and detail transactions                           :blocked:
+   :PROPERTIES:
+   :Effort:   40:00
+   :END:
+** [#A] Logs
+   :PROPERTIES:
+   :EFFORT:   19:00
+   :END:
+*** ensure UTF-8 support in our logs
+    :PROPERTIES:
+    :Effort:   01:00
+    :END:
+*** DONE [#A] sending logs to Data team
+    :PROPERTIES:
+    :Effort:   2:00
+    :END:
+*** [#A] async logging
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+** DONE [#A] Security
+   :PROPERTIES:
+   :Effort:   8:00
+   :END:
+** DONE [#A] Internal Error handling
+   moving all hard coded string into resources 
+   :PROPERTIES:
+   :Effort:   12:00
+   :END:
+** DONE [#A] localized error message  
+   :PROPERTIES:
+   :Effort:   12:00
+   :END:
+** [#B] update protobuf 
+   :PROPERTIES:
+   :Effort:   36:00
+   :END:
+** DONE [#A] setting up servers
+   :PROPERTIES:
+   :Effort:   8:00
+   :END:
+** DONE [#A] prepare for deployment reza bajelan CD
+   :PROPERTIES:
+   :Effort:   24:00
+   :END:
+** DONE [#A] appropriate error status code 
+   :PROPERTIES:
+   :Effort:   24:00
+   :END:
+** [#A] Clean up login process
+   :PROPERTIES:
+   :Effort:   16:00
+   :END:
+** [#B] Architecture
+*** [#A] clean up KYC APIs
+    :PROPERTIES:
+    :Effort:   36:00
+    :END:
+*** major refactoring
+    :PROPERTIES:
+    :Effort:   36:00
+    :END:
+*** finalize Orchestrators architecture
+    :PROPERTIES:
+    :Effort:   24:00
+    :END:
+** moving to microservice
+*** use kafka for internal communication
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+*** convert flows to 
+**** Payment
+***** Mobile
+      :PROPERTIES:
+      :Effort:   12:00
+      :END:
+***** Internet
+      :PROPERTIES:
+      :Effort:   16:00
+      :END:
+***** Ghabz
+      :PROPERTIES:
+      :Effort:   24:00
+      :END:
+***** QR
+      :PROPERTIES:
+      :Effort:   12:00
+      :END:
+***** account topUp
+      :PROPERTIES:
+      :Effort:   12:00
+      :END:
+**** Transfer
+     :PROPERTIES:
+     :Effort:   8:00
+     :END:
+**** Login
+     :PROPERTIES:
+     :Effort:   8:00
+     :END:
+**** session management
+     :PROPERTIES:
+     :Effort:   16:00
+     :END:
+*** implement microservice architecture
+**** create orchestrator service
+     :PROPERTIES:
+     :Effort:   40:00
+     :END:
+**** create outbound service
+     :PROPERTIES:
+     :Effort:   16:00
+     :END: 
+** [#B] Clean up our test system
+*** create mock for every APIs we are using
+    :PROPERTIES:
+    :Effort:   36:00
+    :END:
+*** write conformance tests for every clinet APIs
+    :PROPERTIES:
+    :Effort:   80:00
+    :END:
+*** overhaul unit tests
+    :PROPERTIES:
+    :Effort:   24:00
+    :END:
+*** Separate out Unit and Integration tests
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+** [#B] activate actuator
+** [#B] remove experimental features ( records )
+** [#B] use kafka for internal communication
+** [#B] seperate modules into microservice
+** [#A] update receipt structure 16 hours 
+** [#A] validate protobufs 24 hours 
+** [#A] security phase 2
+*** [#A] block sensitive headers from clients 4 hours
+*** [#B] move security related checking into spring security 36 hours 
+*** [#B] encrypt jwt tokens with AES key from client
+*** [#A] persisting device information 8 hours                     :critical:
+*** [#B] otp for new devices
+*** [#C] support ticket for clients
+** development
+*** [#C] server driven UI for error presentation 24 hours
+*** [#A] get user profile 
+*** [#C] complementary information for transactions
+*** [#B] payment tree
+*** [#C] identify bill issuer company
+*** [#C] special cases in kyc
+* blue features and deadlines 
+** آخر مرداد ماه
+***  دنلود اپ internal
+***  احراز هویت KYC (دریافت اطلاعات و تعریف مشتری) -->ours
+***  افتتاح حساب  --> not ours ( i think it's in the 
+***  شارژ حساب   --> ours
+***  انتقال وجه سپرده به سپرده  --> ours
+***  پرداخت قبض(خدماتی و موبایل)   --> ours 
+***  خرید شارژ  --> ours 
+***  خرید بسته  --> ours 
+***  پرداخت با QR SEP --> ours 
+***  لیست تراکنش  --> ours 
+***  جزئیات تراکنش --> ours 
+***  بازیابی رمز عبور (ماک کارت) --> ours 
+***  بازیابی نام کاربری (ماک کارت)  --> ours 
+***  تغییر پسورد  --> ours 
+***  پنل ادمین(متناسب با فیچر‌های سافت لانچ)
+***  پنل ارتباط با مشتریان
+***  چت
+** آخر مهر ماه
+***  دانلود از استورها عمومی
+***  احراز هویت KYC (با صدور کارت)
+***  افتتاح حساب
+***  شارژ حساب
+***  انتقال وجه (سپرده به سپرده)
+***  انتقال وجه (به نام کاربری)
+***  انتقال وجه (شماره موبایل)
+***  انتقال وجه (بین بانکی)
+***  انتقال وجه (بین بلو و سامان)
+***  انتقال وجه (کارت به کارت)
+***  انتقال وجه هوشمند(پیشنهاد هوشمند انتقال وجه)
+***  پرداخت قبض(خدماتی و موبایل)
+***  خرید شارژ
+***  خرید بسته
+***  پرداخت با QR SEP
+***  کارت و کلیه ویژگی‌هایش
+***  آنالیز‌ داخل اپ
+***  لیست تراکنش
+***  جزئیات تراکنش
+***  بازیابی رمزعبور
+***  بازیابی نام کاربری
+***  تغییر پسورد
+***  پنل ادمین(متناسب با فیچر‌های پابلیک لانچ)
+***  پنل ارتباط با مشتریان
+***  چت
+***  بستن حساب
+***  انتگریشن با پشتیبانی
+***  سیستم نوتیفیکیشن
+***  وب سایت
+***  تغییر اطلاعات مشتری
+***  تماس اضطراری برای سناریو دزدی
+***  لاجستیک 
+* internal tasks
+** clean up internal protobufs
+** clean up protobuf type names 
+*** rename our internal with a prefix
+** restructure project
+*** package names
+*** dependency structure
+    dependency structure needs refinement 
+*** define atom exception and their output message 
+*** clean up controller 
+** clean up types 
+* config server
+** https://springbootdev.com/2018/07/17/spring-cloud-config-refreshing-the-config-changes-with-spring-cloud-bus-part-2/
+** https://springbootdev.com/2018/07/14/microservices-introduction-to-spring-cloud-config-server-with-client-examples/
+** https://medium.com/@athulravindran/spring-cloud-config-server-auto-refresh-using-apache-kafka-in-kubernetes-86e3c427926e
+sshuttle --dns  -r root@62.171.134.30 -x 62.171.134.30  0/0 -vv
+* roadMap
+** [#A] our testing system
+*** [#A] ensuring 90% plus unit test coverage
+*** [#A] Create a mock server for outbound APIs
+*** [#A] bring back our controllers tests
+**** [#A] fix session provider
+     :PROPERTIES:
+     :Effort:   4:00
+     :END:
+**** [#A] create script to add device into mongoDb 
+     :PROPERTIES:
+     :Effort:   4:00
+     :END:
+*** [#B] Create End-to-End tests based on use cases
+*** [#B] API test to ensure outbound APIs are working properly and have not changed
+** [#A] ensuring code quality
+*** [#B] Review current codes
+*** [#A] set up review infrastructure to ensure future code quality
+*** [#A] set up centralized documented knowledge
+    there are lots of island of knowledge, Which is becoming problematic
+    - create documented flows
+    - create 
+*** [#B] set up git commit structure
+*** [#B] set up automatic code formatting structure 
+*** [#C] set up sonar-Qube linter
+** [#A] Logs 
+*** [#A] centralized Request/correlation id
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+*** [#A] add correlation id in user logs
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+*** [#A] create unified json log structure
+    :PROPERTIES:
+    :Effort:   12:00
+    :END:
+*** [#A] seperate service logs(service, atoms, ... ), user logs, Error logs
+**** Create different log files
+     :PROPERTIES:
+     :Effort:   4:00
+     :END:
+**** Manage Badjelan
+     :PROPERTIES:
+     :Effort:   8:00
+     :END:
+*** [#C] Create service input, output logs
+    :PROPERTIES:
+    :Effort:   36:00
+    :END:
+** code restructure
+*** [#A] create the Unified Atom structure
+*** [#B] service communication in protobufs
+*** [#B] manage dependencies between different services 
+*** [#B] clean up protobuf structure
+** [#A] our error handling system
+*** [#A] prepare error handling documentation
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+** code clean ups
+*** [#A] Rewrite Login
+*** [#A] our filter system to produce meaningful error messages
+*** [#B] Asset management
+*** [#B] upload service
+** documentation
+*** [#A] create documentation on usage and request/responses of outbound APIs
+*** [#B] create documentation on structure of our code 
+** [#C] Debugable system
+*** ensure our logs could act as an atom

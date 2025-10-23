@@ -1,0 +1,26 @@
+[[https://mailchi.mp/blenderguru/weekly][blender guru articles]]
+* video editing  
+** creating proxy for smooth viewing 
+** short cuts
+*** H hide a strip
+*** Alt+H un-hide strip
+*** Shift+S to snap selected strip to the 
+* plugin
+** https://blendermarket.com/products/e-cycles
+* plugins
+** human generation
+*** [[https://mb-lab-community.github.io/MB-Lab.github.io/][mb labs]]
+    https://www.youtube.com/watch?v=jd2WGb8Bvgc
+* photoscan
+  [[https://www.youtube.com/watch?v=k4NTf0hMjtY][How to 3D Photoscan Easy and Free!]]
+  https://github.com/alicevision/meshroom
+** https://alicevision.org/
+* [[https://www.youtube.com/watch?v=j6lct_lVUco][Top 10 Rigging & Animation Addons for Blender 2.8 - #1 is FREE]] 
+* tutorials 
+  blenderella
+  https://www.youtube.com/playlist?list=PLCF8C2CA7D76785B7
+* muscle simulation 
+  https://www.youtube.com/watch?v=higGxGmwDbs
+  https://arxiv.org/abs/1906.05260
+  https://github.com/vcg-uvic/viper
+* https://www.blendernation.com/2020/08/23/new-rea-time-subsurface-scattering-add-on-for-eevee/ 

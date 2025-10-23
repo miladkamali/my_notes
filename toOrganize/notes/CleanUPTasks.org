@@ -1,0 +1,43 @@
+* AccountCommitLog
+** clean the Constructor
+   findPreviousCommitId function and AccountDAL here is wrong
+   accountPreviousCommit should be passed in constructor
+** setTime should be private and only be used in constructor
+* AccountCommitResponseLog
+** setTime should be private
+** setTime should be normalized
+import java.time.Instant;
+   Instant.now().toEpochMilli()
+* Card class
+** wrong spelling on getCardID ->Id
+** no get password needed
+** no set password needed 
+** wrong signature on updatecardpass
+* missing UserCommitReponseLog
+* CardCommitLogger
+** missing saveCommit function
+* Tests [0/2]
+** TODO CardDAL[0/1]
+*** TODO what is the problem with
+    - saveCards test
+    - getCardById test
+    - loadCards test
+** TODO UserDAL[0/1]
+*** TODO what is the problem with saveUsers test
+* building CommitFollower [0/2] 
+** TODO define the CommitWrapper
+** TODO create uml of commit Follower
+* Buiding AccountManager
+** TODO Test blockAccountCommitConsumer
+** TODO test unblockAccountCommitConsumer
+** TODO test reactivateAccountCommitConsumer
+** TODO test deactivateAccountCommitConsumer
+** TODO test withdrawCommitConsumer
+** TODO test depositCommitConsumer
+** TODO test accountTransactionCommitConsumer
+** TODO test CreateAccountCommitConsumer
+** TODO test accountHistoryCommitConsumer
+* Building UserManager
+** TODO 
+* building TransactionFollower
+* building RequestFollower

@@ -1,0 +1,16 @@
+* type of metal detector
+** barracuda metal detector
+*** https://www.youtube.com/watch?v=gTEED-2Z_lM
+** PIM v06
+*** https://www.youtube.com/watch?v=uidfxfxBySc
+*** http://www.thunting.com/smf/pi_designs_deepseekers/pim_2_digital_pi_md_elbombaci-t28025.30.html
+** LORENZ PULSE X2 LPX2
+*** http://www.metaldetectors.de/uk/products_lpx2.htm
+** http://www.geotech1.com/cgi-bin/pages/common/index.pl?page=metdet&file=projects/hammerhead/index.dat
+** http://www.geotech1.com/cgi-bin/pages/common/index.pl?page=metdet&file=projects/hammerhead/index.dat
+** http://felezyabkurd.com/
+** http://silverdog.co.uk/shop2/library/BuildingtheGeotechBaracuda(Rev-A).pdf
+* general
+** https://www.youtube.com/watch?v=XnrStRklcUQ
+** https://www.youtube.com/watch?v=ZO8bU6KtEk4
+** 

@@ -1,0 +1,34 @@
+* sources
+** https://refactoring.guru/smells/data-clumps
+** head first design patterns - ora 2004
+* Design patters
+** Creational Patterns
+*** Factory Method
+*** Abstract Factory
+*** Builder
+*** Prototype
+*** Singleton
+** Behavioral Patterns
+*** Chain of responsibility
+*** Command
+*** Iterator
+*** Mediator
+*** Memento
+*** Observer
+*** State
+*** Strategy
+*** Template Method
+*** Visitor
+*** circuit breaker
+    used in http request/response usually  
+** microservice
+*** chorieography pattern
+*** correlation identifier pattern
+** Structual Patters
+*** Adaptor
+*** Bridge
+*** Composite
+*** Decorator
+*** Facade
+*** FlyWeight
+*** Proxy

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       ED600863-3CC6-4BA3-A170-4975ADF4CDB7
+:END:
+#+title: ai tools
+* auto commit
+https://github.com/Nutlope/aicommits
+* code generation
+https://v0.dev/chat
+* https://www.langchain.com/langgraph
+* https://jules.google.com/settings
+

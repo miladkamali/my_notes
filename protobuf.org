@@ -1,0 +1,78 @@
+
+https://www.baeldung.com/spring-rest-api-with-protocol-buffers
+* compiling protobuf
+  protoc -I=$SRC_DIR --java_out=$DST_DIR $SRC_DIR/addressbook.proto
+* protobuf to Gson
+  https://medium.com/@moijes12/converting-protocol-buffers-data-to-json-and-back-with-gson-type-adapters-22d9f355673
+
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java-util</artifactId>
+            <version>3.11.4</version>
+        </dependency>
+  JsonFormat.printer().print(searchRequest.toBuilder())
+
+
+* syntax
+
+** descriptions
+   all classes generated from proto files are immutable and the only way of
+   creating them is by using their appropriate builder, this sometimes becomes
+   an annoyance for small fields
+
+** methods 
+** package and class
+   you can define package name with
+   package packagename;
+   there is also an optional setting for java
+   option java_package = "com.example.somethin"
+
+
+   setting the name of class is by default with the name of protobuf file
+   however we can set it by
+   option java_outer_classname = "ClasName"
+** types
+* sample project
+	https://medium.com/@thinhda/build-service-that-provides-http-and-grpc-api-with-spring-9e7cff7aa17a
+	https://github.com/thinhdanggroup/spring_grpc_http
+	
+
+	[[https://github.com/uw-labs/bloomrpc][grpc UI]]
+
+	
+	https://github.com/ExampleDriven/spring-boot-grpc-example
+* compiling protoc 
+  https://chromium.googlesource.com/external/github.com/protocolbuffers/protobuf/+/HEAD/src/README.md
+  apt-get install autoconf automake libtool curl make g++ unzip
+  git clone https://github.com/protocolbuffers/protobuf.git
+  cd protobuf
+  git submodule update --init --recursive
+  ./autogen.sh
+
+  ./configure //./configure --prefix=/usr
+  make
+  make check
+  sudo make install
+  sudo ldconfig # refresh shared library cache.
+
+  
+  https://chromium.googlesource.com/external/github.com/google/protobuf/+/v3.0.0-beta-1/cmake/README.md
+* [[https://medium.com/@tim.r.coulson/writing-a-protoc-plugin-with-google-golang-org-protobuf-cd5aa75f5777][Writing a protoc plugin with google.golang.org/protobuf Go lang]] 
+* null in protobuf
+  https://itnext.io/protobuf-and-null-support-1908a15311b6
+  https://stackoverflow.com/questions/21227924/handling-null-values-in-protobuffers
+* compiler plugin
+  https://developers.google.com/protocol-buffers/docs/reference/cpp/google.protobuf.compiler.plugin.pb
+  https://developers.google.com/protocol-buffers/docs/reference/java-generated#plugins  
+  https://developers.google.com/protocol-buffers/docs/reference/java-generated
+* passing null in set
+  https://github.com/protocolbuffers/protobuf/issues/5697
+  https://github.com/efenglu/protobuf/tree/refactor/eenglund/getNPE
+* converting pojo to protobuf
+  https://stackoverflow.com/questions/18261372/converting-a-protocol-buffer-to-a-pojo
+  https://github.com/BAData/protobuf-converter
+* protobuf linting
+** [[https://github.com/bufbuild/buf][buf]]
+** [[https://github.com/uber/prototool][prototool]]
+* postman for protobuf
+** [[https://github.com/spluxx/Protoman][protoman]]

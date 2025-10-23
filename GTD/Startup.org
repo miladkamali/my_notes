@@ -1,0 +1,42 @@
+* monlithic 15 days
+** UserRegistration 1+1 days(email)
+   - register user
+   - reset passwords with question
+   - reset password with email
+   - change password
+   - generate code for recovery
+** profile 1 day
+   - update fields of profile
+   - validate series of information
+** Document Service 2 days
+   stores all the documents with unified id
+   - store files securely
+   - stores information about the paitient like prescription
+** ACL service 4 days  
+** Notification service 1 days
+** chat service 1 days
+** request service 1 days
+** Credit(referal/discounts) 2 days
+** payments service 7 days
+** reporting 2
+* microservices services 30 days
+** UserRegistration 3 days(email)
+   - register user
+   - reset passwords with question
+   - reset password with email
+   - change password
+** profile 1 day
+   - update fields of profile
+   - validate series of information
+** Document Service 10 - 15 days
+   stores all the documents with unified id
+   - store files securely
+   - stores information about the paitient like prescription
+** ACL service 3-6 days  
+** Notification service 4 days
+** chat service 2 days
+** request service 3 days
+** Credit(referal/discounts) 3 days
+** payments service 7 days
+** reporting 
+* with Event source 40 days

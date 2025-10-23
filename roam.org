@@ -1,0 +1,8 @@
+* https://jwiegley.github.io/use-package/installation/
+* refrences
+** [[https://org-roam.discourse.group/t/minimum-configuration-of-org-roam-v2-org-roam-bibtex-for-spacemacs-users/1755/3][setup org-roam with org-roam bibtex for spacemacs]]
+** [[https://www.lucacambiaghi.com/posts/discovering-org-roam.html][discovering org-roam]]
+** [[https://www.orgroam.com/manual.html#Installing-from-MELPA][org-roam installation]]
+** [[https://github.com/org-roam/org-roam/wiki/Hitchhiker%27s-Rough-Guide-to-Org-roam-V2][Hitchhiker's-Rough-Guide-to-Org-roam-V2]]
+** https://protesilaos.com/emacs/dotemac
+https://www.youtube.com/watch?v=zm85Q6m3JDU

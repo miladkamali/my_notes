@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       D80C0E38-31D4-4DE7-B130-9B760CE9D4C3
+:END:
+#+title: stock market
+* tehran stock market
+https://tsetmc.com/instInfo/15259343650667588
+https://brsapi.ir/bourse-api-transaction-webservice/
+
+https://brsapi.ir/tsetmc-exchange-free-bourse-api-key-request/

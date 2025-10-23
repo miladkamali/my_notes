@@ -1,0 +1,51 @@
+* Projects
+** update uid
+*** make your presence more effective
+**** set a start time every day
+**** remove distractions
+*** [#A] migrate fron u-id.net to uid.ir
+**** TODO get ap payment
+**** set up new payment service
+**** 
+*** 
+*** 
+** igerd
+*** getting my money back from Igerd
+** FiberOptics lahijan
+*** DONE ask dady about the credential he use to login into fiber optics
+CLOSED: [2024-09-22 Sun 13:57]
+*** 
+** tehran VDSL
+*** DONE check with lotfi about the progress of the process
+CLOSED: [2024-09-22 Sun 13:57] SCHEDULED: <2024-09-17 Tue>
+** elevista
+*** DONE merge current workflow changes into develop :computer:github:coding:
+CLOSED: [2024-09-22 Sun 13:58] SCHEDULED: <2024-09-17 Tue>
+** UID
+*** HR
+**** DONE [#A] get Hamed Contract orderd
+CLOSED: [2024-09-17 Tue 09:59] SCHEDULED: <2024-09-17 Tue>
+**** DONE set up meeting with hamed
+CLOSED: [2024-09-17 Tue 10:35] SCHEDULED: <2024-09-17 Tue>
+meeting has been set for 5 pm today
+*** infrastructure
+**** [#B] migration to asiatec
+***** change the raid on one of the servers
+in order to install ESXI on one of the servers and move gitlab,registry,jira,backup,monitoring,demo,build,ldap
+****** TODO get the new panel credential                         :faraz:talk:
+**** [#B] Get fiber optic as a second line of connection
+***** make sure Sajad and shamsaie are following that
+***** TODO [#B] recheck with sajad and shamsaie
+SCHEDULED: <2024-09-29 Sun>
+**** review elastic integration
+**** [#A] fix your access to servers                               :montazer:
+SCHEDULED: <2024-09-17 Tue>
+**** create a document for servers and all the services available on them
+*** security
+**** Do a port on our servers
+***** TODO Get list of our servers                                 :montazer:
+SCHEDULED: <2024-09-17 Tue>
+**** create a org-file to do the port scan and create a report daily
+** BankID
+*** get control of the bankid.info
+**** who is the owner of bankid.info

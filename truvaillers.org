@@ -1,0 +1,7 @@
+* expenses
+** water + juice
+   20000
+** electric ports
+   40000
+** ice cream
+   15000

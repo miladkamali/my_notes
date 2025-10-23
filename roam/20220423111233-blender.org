@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       24c18516-4e32-4735-9bb7-18cf37728870
+:END:
+#+title: blender
+[[https://www.youtube.com/watch?v=idcFMhoSdIc][all 54 modifiers in blender explained]]
+
+[[https://www.youtube.com/watch?v=N4Wi1__Diz4][14+ AMAZING New Blender Tutorials to Watch!]]
+* 
+** [[https://www.youtube.com/watch?v=5WboPlU9c6I][dream texture]]
+create seamless texture
+** [[https://www.youtube.com/watch?v=7aP_QAypcBM][Procedural fantasy city creation using Geometry Nodes]]
+** [[https://www.youtube.com/watch?v=xNMACKK8Nzs][Blender 3.5 Alpha - Simulation Node Is Finally Here!]]
+** [[https://www.youtube.com/watch?v=Z8AAX-ENWvQ][The Secrets of Photorealism]]
+** [[https://www.youtube.com/watch?v=VEdd9CynwQU][5 Tips for FASTER Renders in Blender Cycles]]

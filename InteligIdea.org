@@ -1,0 +1,23 @@
+* key Bindings
+** String manipulation
+   Alt+M
+** collapse all
+   Ctrl+Shift -
+** open All
+   Ctrl+shift +
+** collapse
+   Ctrl -
+** Open
+   Ctrl +
+** quick documentation
+   Ctrl+q
+** extend selection
+   Ctrl+w
+** context action
+   Alt+Enter
+** close a window
+   Ctrl+F4
+* plugin
+** String manipulation 
+** https://intellij-support.jetbrains.com/hc/en-us/community/posts/206590175-Http-Proxy-or-Http-Interceptor
+** 

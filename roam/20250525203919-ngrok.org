@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b7c79139-f6a5-4aec-a8e7-7bc91eac4268
+:END:
+#+title: ngrok
+
+zuplo should be similar to ngrok

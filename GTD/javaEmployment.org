@@ -1,0 +1,21 @@
+* spring
+  https://www.javatpoint.com/spring-interview-questions
+  https://www.greycampus.com/blog/programming/top-spring-interview-questions-and-answers
+  [[https://www.edureka.co/blog/interview-questions/spring-interview-questions/][i like this one]]
+  https://www.baeldung.com/spring-interview-questions
+  https://intellipaat.com/blog/interview-question/spring-interview-questions/
+  https://www.tutorialspoint.com/spring/spring_interview_questions.htm
+  https://hackr.io/blog/spring-interview-questions
+  https://mindmajix.com/java-spring-interview-questions
+** AOP
+** 
+* sql
+  https://www.javatpoint.com/sql-interview-questions
+* hibernate
+  https://www.javatpoint.com/pl-sql-interview-questions
+  https://www.javatpoint.com/hibernate-interview-questions
+  https://www.javatpoint.com/jdbc-interview-questions
+* JSP/Servelet
+  https://www.javatpoint.com/jspinterview
+  https://www.javatpoint.com/servletinterview
+* Design patterns

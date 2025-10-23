@@ -1,0 +1,2559 @@
+:PROPERTIES:
+:ID:       aa92d191-c73c-4d16-89fd-e09bcd58111a
+:END:
+#+title: lucid
+* lucid
+** question
+*** question types
+**** "Dummy"
+seems to be irrelevant or very specific question
+#+begin_src js
+  {
+    "IsCoreDemographic": true,
+    "IsFeasibilityFactor": true,
+    "LK_QuestionClassificationID": 8,
+    "Name": "STATE",
+    "QuestionID": 96,
+    "QuestionText": "What is your state?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 3922
+  }
+  {
+    "IsCoreDemographic": true,
+    "IsFeasibilityFactor": true,
+    "LK_QuestionClassificationID": 8,
+    "Name": "DMA",
+    "QuestionID": 97,
+    "QuestionText": "What is your DMA?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 1662
+  }
+  {
+    "IsCoreDemographic": true,
+    "IsFeasibilityFactor": true,
+    "LK_QuestionClassificationID": 8,
+    "Name": "DIVISION",
+    "QuestionID": 101,
+    "QuestionText": "What is your Division?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 55
+  }
+
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 8,
+    "Name": "MSA",
+    "QuestionID": 120,
+    "QuestionText": "what is your MSA?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 11
+  }
+  {
+    "IsCoreDemographic": true,
+    "IsFeasibilityFactor": true,
+    "LK_QuestionClassificationID": 8,
+    "Name": "REGION",
+    "QuestionID": 122,
+    "QuestionText": "What is your REGION ?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 4492
+  }
+
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 9,
+    "Name": "MS_browser_type_Non_Wurfl",
+    "QuestionID": 1035,
+    "QuestionText": "What browser are you currently using?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 17
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "MS_os_type_Non_Wurfl",
+    "QuestionID": 1047,
+    "QuestionText": "What operating system are you currently using?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 1
+  }
+
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 21,
+    "Name": "RECONTACT_PID_1",
+    "QuestionID": 4098,
+    "QuestionText": "Recontact_PID_1",
+    "QuestionType": "Dummy",
+    "SurveyUse": 4
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 21,
+    "Name": "RECONTACT_RID_1",
+    "QuestionID": 4099,
+    "QuestionText": "Recontact_RID_1",
+    "QuestionType": "Dummy",
+    "SurveyUse": 26
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 21,
+    "Name": "RECONTACT_PARAMS_1",
+    "QuestionID": 4100,
+    "QuestionText": "Recontact_Params_1",
+    "QuestionType": "Dummy",
+    "SurveyUse": 6
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 21,
+    "Name": "RECONTACT_PARAMS_2",
+    "QuestionID": 4138,
+    "QuestionText": "RECONTACT_PARAMS_2",
+    "QuestionType": "Dummy",
+    "SurveyUse": 4
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 21,
+    "Name": "RECONTACT_PID_2",
+    "QuestionID": 4139,
+    "QuestionText": "Recontact_PID_2",
+    "QuestionType": "Dummy",
+    "SurveyUse": 4
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": null,
+    "Name": "SUPPLIER_ID",
+    "QuestionID": 4183,
+    "QuestionText": "test",
+    "QuestionType": "Dummy",
+    "SurveyUse": 15
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 21,
+    "Name": "RECONTACT_RID_2",
+    "QuestionID": 4284,
+    "QuestionText": "Recontact_RID_2",
+    "QuestionType": "Dummy",
+    "SurveyUse": 26
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 21,
+    "Name": "RECONTACT_PARAMS_3",
+    "QuestionID": 4285,
+    "QuestionText": "Recontact_Params_3",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 9,
+    "Name": "MS_device_type_Non_Wurfl",
+    "QuestionID": 7062,
+    "QuestionText": "What is the device type?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 3
+  }
+
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 9,
+    "Name": "MS_brand_name",
+    "QuestionID": 8210,
+    "QuestionText": "What is the device brand name?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 1
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 9,
+    "Name": "MS_model_name",
+    "QuestionID": 8211,
+    "QuestionText": "What is the device model name?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 1
+  }
+  {
+    "IsCoreDemographic": true,
+    "IsFeasibilityFactor": true,
+    "LK_QuestionClassificationID": 9,
+    "Name": "MS_is_tablet",
+    "QuestionID": 8213,
+    "QuestionText": "Are you using a tablet?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 1774
+  }
+  {
+    "IsCoreDemographic": true,
+    "IsFeasibilityFactor": true,
+    "LK_QuestionClassificationID": 9,
+    "Name": "MS_is_mobile",
+    "QuestionID": 8214,
+    "QuestionText": "Are you using a mobile device?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 4780
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "MS_device_os",
+    "QuestionID": 8215,
+    "QuestionText": "ms_device_os",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 9,
+    "Name": "MS_full_flash_support",
+    "QuestionID": 8219,
+    "QuestionText": "Is flash enabled?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 21,
+    "Name": "PIDCheck",
+    "QuestionID": 22405,
+    "QuestionText": "Stores PIDs",
+    "QuestionType": "Dummy",
+    "SurveyUse": 98
+  }
+
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 22,
+    "Name": "SUPPLIER_CODE",
+    "QuestionID": 23643,
+    "QuestionText": "SUPPLIER_CODE",
+    "QuestionType": "Dummy",
+    "SurveyUse": 1694
+  }
+
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_SITE_ID",
+    "QuestionID": 31530,
+    "QuestionText": "AT_SITE_ID",
+    "QuestionType": "Dummy",
+    "SurveyUse": 902
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_CREATIVE_ID",
+    "QuestionID": 31531,
+    "QuestionText": "AT_CREATIVE_ID",
+    "QuestionType": "Dummy",
+    "SurveyUse": 902
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_PLACEMENT_ID",
+    "QuestionID": 31532,
+    "QuestionText": "AT_PLACEMENT_ID",
+    "QuestionType": "Dummy",
+    "SurveyUse": 902
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_DAYS_SINCE_IMPRESSION",
+    "QuestionID": 31533,
+    "QuestionText": "AT_DAYS_SINCE_IMPRESSION",
+    "QuestionType": "Dummy",
+    "SurveyUse": 902
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_IMPRESSION_TIME",
+    "QuestionID": 31538,
+    "QuestionText": "AT_IMPRESSION_TIME",
+    "QuestionType": "Dummy",
+    "SurveyUse": 902
+  }
+
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_CUSTOM1",
+    "QuestionID": 61554,
+    "QuestionText": "AT_CUSTOM1",
+    "QuestionType": "Dummy",
+    "SurveyUse": 528
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_CUSTOM2",
+    "QuestionID": 61555,
+    "QuestionText": "AT_CUSTOM2",
+    "QuestionType": "Dummy",
+    "SurveyUse": 525
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_CUSTOM3",
+    "QuestionID": 61556,
+    "QuestionText": "AT_CUSTOM3",
+    "QuestionType": "Dummy",
+    "SurveyUse": 525
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_CUSTOM4",
+    "QuestionID": 61557,
+    "QuestionText": "AT_CUSTOM4",
+    "QuestionType": "Dummy",
+    "SurveyUse": 523
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_CUSTOM5",
+    "QuestionID": 61559,
+    "QuestionText": "AT_CUSTOM5",
+    "QuestionType": "Dummy",
+    "SurveyUse": 523
+  }
+
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": 2,
+    "Name": "AT_VECTOR_ID",
+    "QuestionID": 86830,
+    "QuestionText": "Do you belong to this vector ID?",
+    "QuestionType": "Dummy",
+    "SurveyUse": 23
+  }
+
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_AD_CHANNEL",
+    "QuestionID": 100224,
+    "QuestionText": "AT_AD_CHANNEL",
+    "QuestionType": "Dummy",
+    "SurveyUse": 0
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_INAPP",
+    "QuestionID": 100225,
+    "QuestionText": "AT_INAPP",
+    "QuestionType": "Dummy",
+    "SurveyUse": 0
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_REASON",
+    "QuestionID": 100440,
+    "QuestionText": "AT_REASON",
+    "QuestionType": "Dummy",
+    "SurveyUse": 832
+  }
+
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_IMPRESSION_PARTNER_ID",
+    "QuestionID": 162016,
+    "QuestionText": "AT_IMPRESSION_PARTNER_ID",
+    "QuestionType": "Dummy",
+    "SurveyUse": 506
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_IMPRESSION_TYPE",
+    "QuestionID": 162027,
+    "QuestionText": "AT_IMPRESSION_TYPE",
+    "QuestionType": "Dummy",
+    "SurveyUse": 37
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_IMPRESSION_TV_PROGRAM",
+    "QuestionID": 162028,
+    "QuestionText": "AT_IMPRESSION_TV_PROGRAM",
+    "QuestionType": "Dummy",
+    "SurveyUse": 37
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_IMPRESSION_AD_DURATION",
+    "QuestionID": 162029,
+    "QuestionText": "AT_IMPRESSION_AD_DURATION",
+    "QuestionType": "Dummy",
+    "SurveyUse": 37
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_IMPRESSION_TV_DAYPART",
+    "QuestionID": 162030,
+    "QuestionText": "AT_IMPRESSION_TV_DAYPART",
+    "QuestionType": "Dummy",
+    "SurveyUse": 37
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_IMPRESSION_TV_NETWORK",
+    "QuestionID": 162031,
+    "QuestionText": "AT_IMPRESSION_TV_NETWORK",
+    "QuestionType": "Dummy",
+    "SurveyUse": 37
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_IMPRESSION_DEVICE_TYPE",
+    "QuestionID": 162032,
+    "QuestionText": "AT_IMPRESSION_DEVICE_TYPE",
+    "QuestionType": "Dummy",
+    "SurveyUse": 507
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_IMPRESSION_TV_BUY_TYPE",
+    "QuestionID": 162033,
+    "QuestionText": "AT_IMPRESSION_TV_BUY_TYPE",
+    "QuestionType": "Dummy",
+    "SurveyUse": 37
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AUDIENCE_ISPOT_UNIVERSE",
+    "QuestionID": 162463,
+    "QuestionText": "AUDIENCE_ISPOT_UNIVERSE",
+    "QuestionType": "Dummy",
+    "SurveyUse": 5
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AUDIENCE_SAMBA_UNIVERSE",
+    "QuestionID": 169726,
+    "QuestionText": "AUDIENCE_SAMBA_UNIVERSE",
+    "QuestionType": "Dummy",
+    "SurveyUse": 16
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_PRODUCT",
+    "QuestionID": 171038,
+    "QuestionText": "AT_PRODUCT",
+    "QuestionType": "Dummy",
+    "SurveyUse": 3
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_AD_START_TIMESTAMP",
+    "QuestionID": 171040,
+    "QuestionText": "AT_AD_START_TIMESTAMP",
+    "QuestionType": "Dummy",
+    "SurveyUse": 5
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_PERCENT_VIEWED",
+    "QuestionID": 171041,
+    "QuestionText": "AT_PERCENT_VIEWED",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_GENDER_SKEW",
+    "QuestionID": 171042,
+    "QuestionText": "AT_GENDER_SKEW",
+    "QuestionType": "Dummy",
+    "SurveyUse": 5
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_AGE_SKEW",
+    "QuestionID": 171043,
+    "QuestionText": "AT_AGE_SKEW",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_TIME_SHIFT",
+    "QuestionID": 171044,
+    "QuestionText": "AT_TIME_SHIFT",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_NEW_OR_RERUN",
+    "QuestionID": 171045,
+    "QuestionText": "AT_NEW_OR_RERUN",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_PROGRAM_GENRE",
+    "QuestionID": 171046,
+    "QuestionText": "AT_PROGRAM_GENRE",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_PROGRAM_SUB_GENRE",
+    "QuestionID": 171047,
+    "QuestionText": "AT_PROGRAM_SUB_GENRE",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_PROGRAM_TYPE",
+    "QuestionID": 171048,
+    "QuestionText": "AT_PROGRAM_TYPE",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_POD_NUMBER",
+    "QuestionID": 171050,
+    "QuestionText": "AT_POD_NUMBER",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_POD_POSITION_NUMERIC",
+    "QuestionID": 171051,
+    "QuestionText": "AT_POD_POSITION_NUMERIC",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_POD_POSITION_LETTER",
+    "QuestionID": 171052,
+    "QuestionText": "AT_POD_POSITION_LETTER",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_DAY_OF_WEEK",
+    "QuestionID": 171053,
+    "QuestionText": "AT_DAY_OF_WEEK",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_SPOT_COST",
+    "QuestionID": 171054,
+    "QuestionText": "AT_SPOT_COST",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_AIRING_TYPE",
+    "QuestionID": 171055,
+    "QuestionText": "AT_AIRING_TYPE",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_CREATIVE_GROUP_ID",
+    "QuestionID": 171104,
+    "QuestionText": "AT_CREATIVE_GROUP_ID",
+    "QuestionType": "Dummy",
+    "SurveyUse": 2
+  }
+  {
+    "IsCoreDemographic": false,
+    "IsFeasibilityFactor": false,
+    "LK_QuestionClassificationID": -1,
+    "Name": "AT_BRAND",
+    "QuestionID": 172330,
+    "QuestionText": "AT_BRAND",
+    "QuestionType": "Dummy",
+    "SurveyUse": 3
+  }
+#+end_src
+**** "Grid"
+seems to be irrelevant for us
+#+begin_src js
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "AT_R&D_Q3",
+      "QuestionID": 33865,
+      "QuestionText": "For each of the following, please choose your most preferred:",
+      "QuestionType": "Grid",
+      "SurveyUse": 0
+  }
+#+end_src
+**** "Multi Punch"
+equivalent to our multi select type question
+#+begin_src js
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 15,
+      "Name": "STANDARD_PETS",
+      "QuestionID": 639,
+      "QuestionText": "Which of the following pets are present in your household?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 126
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 4,
+      "Name": "STANDARD_INDUSTRY",
+      "QuestionID": 643,
+      "QuestionText": "Do you, or does anyone in your household, work in any of the following industries?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 706
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 3,
+      "Name": "STANDARD_AUTO_BRANDS",
+      "QuestionID": 649,
+      "QuestionText": "If you own/lease a car(s), which brand(s) are they?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 42
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 3,
+      "Name": "STANDARD_AUTO_TYPE",
+      "QuestionID": 650,
+      "QuestionText": "How would you describe the vehicle(s) you own/lease?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 15
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 13,
+      "Name": "STANDARD_FAST_FOOD_VISIT",
+      "QuestionID": 721,
+      "QuestionText": "Which fast food (quick service) restaurants have you visited ever?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 1
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 7,
+      "Name": "STANDARD_BEVERAGE_P4W",
+      "QuestionID": 722,
+      "QuestionText": "Which, if any, of these drinks have you consumed in the past four weeks?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 19
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 7,
+      "Name": "STANDARD_BEVERAGE_REGULARLY",
+      "QuestionID": 723,
+      "QuestionText": "Which of the following beverages do you regularly consume?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 40
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 14,
+      "Name": "STANDARD_HOBBIES",
+      "QuestionID": 725,
+      "QuestionText": "What are your hobbies and interests?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 59
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 2,
+      "Name": "STANDARD_MOVIE_GENRE",
+      "QuestionID": 727,
+      "QuestionText": "What kinds of movies do you watch when you go to the movie theater?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 2
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 14,
+      "Name": "STANDARD_SPORTS",
+      "QuestionID": 731,
+      "QuestionText": "What sports do you regularly participate in?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 18
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 23,
+      "Name": "STANDARD_GAMBLING",
+      "QuestionID": 732,
+      "QuestionText": "What kind of gambling do you participate in?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 34
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 11,
+      "Name": "STANDARD_ELECTRONICS",
+      "QuestionID": 733,
+      "QuestionText": "Which of the following electronic products do you own?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 11
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 16,
+      "Name": "STANDARD_INTERNET_TYPE",
+      "QuestionID": 738,
+      "QuestionText": "What kind of internet connection(s) do you use at home?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 0
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 11,
+      "Name": "STANDARD_GAMING_PLATFORMS",
+      "QuestionID": 740,
+      "QuestionText": "Which gaming platforms do you regularly use?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 5
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 11,
+      "Name": "STANDARD_GAMING_TYPE",
+      "QuestionID": 741,
+      "QuestionText": "What kind(s) of video/computer games do you play?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 12
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 11,
+      "Name": "STANDARD_GAMING_PARTNERS",
+      "QuestionID": 743,
+      "QuestionText": "How do you play video/computer games?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 0
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 11,
+      "Name": "STANDARD_GAMING_DEVICE",
+      "QuestionID": 744,
+      "QuestionText": "Which of the following devices do you use to play games?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 78
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 2,
+      "Name": "STANDARD_PUBLICATIONS",
+      "QuestionID": 749,
+      "QuestionText": "Which types of publications do you read?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 18
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 1,
+      "Name": "STANDARD_DOMESTIC_AIRLINES",
+      "QuestionID": 752,
+      "QuestionText": "Which  domestic airlines have you flown with during the last 12 months?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 0
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 1,
+      "Name": "STANDARD_INTERNATIONAL_AIRLINES",
+      "QuestionID": 753,
+      "QuestionText": "Which international airlines have you flown with during the last 12 months?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 0
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 1,
+      "Name": "STANDARD_COUNTRIES_VISITED",
+      "QuestionID": 754,
+      "QuestionText": "Which of the following countries/regions have you travelled to in the last 12 months?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 23
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 1,
+      "Name": "STANDARD_HOTEL_TYPE",
+      "QuestionID": 755,
+      "QuestionText": "Of these hotel chains, which one(s) have you stayed at during the last 12 months?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 0
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "STANDARD_SMOKING_QUIT_TYPE",
+      "QuestionID": 758,
+      "QuestionText": "Have you tried to quit smoking using any of these products/methods?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 0
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 15,
+      "Name": "Age_and_Gender_of_Child",
+      "QuestionID": 1249,
+      "QuestionText": "Please indicate the age and gender of your child or children:",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 1265
+  }
+
+  {
+      "IsCoreDemographic": true,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 4,
+      "Name": "STANDARD_B2B_DECISION_MAKER",
+      "QuestionID": 3546,
+      "QuestionText": "Please choose which departments/products you have influence or decision making authority over regarding spending/purchasing.",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 1018
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 15,
+      "Name": "Parental_Status_Standard",
+      "QuestionID": 7064,
+      "QuestionText": "Please choose the options that best describe your household:",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 666
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 24,
+      "Name": "Financial_Product",
+      "QuestionID": 25640,
+      "QuestionText": "Which of the following financial products do you own?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 3
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "P4W_GROCERY_PURCHASING",
+      "QuestionID": 26691,
+      "QuestionText": "Which of the following groceries have you purchased in the last four weeks?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 9
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_BIG_PURCHASES",
+      "QuestionID": 28289,
+      "QuestionText": "Which of the following products have you purchased in the last 2 years, or intend to buy in the next 12 months?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 6
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 15,
+      "Name": "STANDARD_HH_RESPONSIBILITY",
+      "QuestionID": 61195,
+      "QuestionText": "In your household, which of the following things are you responsible or partially responsible for making decisions about? ",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 10
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 2,
+      "Name": "STANDARD_SOCIAL_MEDIA",
+      "QuestionID": 61295,
+      "QuestionText": "Which of the following social media platforms do you use or actively participate in?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 32
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 1,
+      "Name": "STANDARD_ACCOMMODATION_TYPE",
+      "QuestionID": 61318,
+      "QuestionText": "In which type of accommodation have you stayed in the past year?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 0
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 5,
+      "Name": "STANDARD_HH_INVESTMENTS_US",
+      "QuestionID": 61678,
+      "QuestionText": "What kinds of savings and/or investment accounts do you have?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 1
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 1,
+      "Name": "STANDARD_AIRLINE_LOYALTY",
+      "QuestionID": 69779,
+      "QuestionText": "Do you belong to any of the following airline loyalty programs?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 0
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 1,
+      "Name": "STANDARD_HOTEL_LOYALTY",
+      "QuestionID": 69788,
+      "QuestionText": "Do you belong to any of the following hotel loyalty programs?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 0
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_JOB_SEARCH",
+      "QuestionID": 74807,
+      "QuestionText": "In the last year, have you engaged in any of the following job-related activities?\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 5
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_SUPPLEMENTAL_INCOME",
+      "QuestionID": 93517,
+      "QuestionText": "Do you participate in any of the following activities either full-time or as supplemental income?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 1
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_INDUSTRY_IT",
+      "QuestionID": 93521,
+      "QuestionText": "Which IT role(s)/function(s) do you operate within?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 20
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 13,
+      "Name": "STANDARD_GROCERY_STORES_US",
+      "QuestionID": 105014,
+      "QuestionText": "Which of the following grocery stores do you regularly shop at?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 5
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_PURCHASE_CATEGORY",
+      "QuestionID": 105015,
+      "QuestionText": "Which of the following categories have you purchased in the past 12 months?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 4
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_DIET",
+      "QuestionID": 105018,
+      "QuestionText": "Do you adhere to one or more of the following diets or dietary restrictions?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 1
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "Beverage_Regularity_Soft",
+      "QuestionID": 133831,
+      "QuestionText": "Which of the following non-alcoholic beverages do you regularly consume?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 6
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "Beverage_Regularity_Alcohol",
+      "QuestionID": 133844,
+      "QuestionText": "Which of the following alcoholic beverages do you regularly consume?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 7
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_ADDICTION",
+      "QuestionID": 137449,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to addiction?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 0
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_VISION_HEARING",
+      "QuestionID": 137450,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Vision / Hearing Impairments?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 1
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_RESPIRATORY",
+      "QuestionID": 137451,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Allergy / Asthma / Respiratory?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 22
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_SLEEP",
+      "QuestionID": 137452,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Sleep Disorders?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 5
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_ARTHRITIS",
+      "QuestionID": 137453,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Arthritis / Joint Ailments?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 9
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_SKIN",
+      "QuestionID": 137454,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Skin / Dermatologic?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 15
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_PAIN",
+      "QuestionID": 137455,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Pain (e.g. Fibromyalgia, Gout)?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 0
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_1",
+      "QuestionID": 137456,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following ailments or medical conditions? (Please select all that apply.)",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 71
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_AUTOIMMUNE",
+      "QuestionID": 137457,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Autoimmune / Blood?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 8
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_NEURO",
+      "QuestionID": 137458,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Neurologic / Nervous (e.g. Migraines, MS, Stroke)?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 23
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_CANCER",
+      "QuestionID": 137459,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Cancer?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 38
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_CARDIOVASCULAR",
+      "QuestionID": 137460,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Cardiovascular / Heart?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 14
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_MENTAL_HEALTH",
+      "QuestionID": 137461,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Mental Health (e.g. Anxiety, ADD/ADHD, Depression)?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 5
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_DENTAL",
+      "QuestionID": 137462,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Dental?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 2
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_MALE_FEMALE",
+      "QuestionID": 137463,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Male / Female Health (e.g. ED, Low T, Menopause, Osteoporosis)?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 10
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_GASTRIC",
+      "QuestionID": 137464,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Gastric / Digestive / Urinary (e.g. Crohn's, Heartburn, Kidney Disease)?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 20
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "AILMENTS_2_DIABETES",
+      "QuestionID": 137465,
+      "QuestionText": "Have you, or someone for whom you provide care, been diagnosed with any of the following medical conditions related to Diabetes / Thyroid / Obesity?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 62
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 8,
+      "Name": "ETHNIC_IDENTITY_1",
+      "QuestionID": 157547,
+      "QuestionText": "How do you identify? (Check all that apply)",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 77
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "TV_BRAND_OWNERSHIP",
+      "QuestionID": 163467,
+      "QuestionText": "What brand(s) of Television set(s) do you have in your household? (Choose all that apply)",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 40
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "TV_NETWORK_CONSUMPTION",
+      "QuestionID": 163468,
+      "QuestionText": "Which networks do you typically watch on TV? (Choose all that apply)",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 40
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "TV_DEVICE_USAGE",
+      "QuestionID": 163470,
+      "QuestionText": "On which of these devices do you typically watch TV shows or Movies? (Choose all that apply)",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 42
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "TV_HOW_DO_YOU_WATCH",
+      "QuestionID": 163471,
+      "QuestionText": "How do you typically watch TV? (Choose all that apply)",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 42
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "TV_DOW_CONSUMPTION",
+      "QuestionID": 163472,
+      "QuestionText": "What day of the week do you typically watch TV? (Choose all that apply)",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 40
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "TV_DAYPART_CONSUMPTION",
+      "QuestionID": 163534,
+      "QuestionText": "What time of the day do you typically watch TV? (Choose all that apply)",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 40
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "TV_PROGRAM_GENRE_CONSUMPTION",
+      "QuestionID": 163635,
+      "QuestionText": "Which program genres do you typically watch on TV? (Choose all that apply)\n",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 42
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "Indeed_hiring_activities",
+      "QuestionID": 176239,
+      "QuestionText": "Have you done any of the following activities in the past year?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 3
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 7,
+      "Name": "Beverage_Regularity_Alcohol_1",
+      "QuestionID": 179215,
+      "QuestionText": "Which of the following alcoholic beverages do you regularly consume?",
+      "QuestionType": "Multi Punch",
+      "SurveyUse": 2
+  }
+#+end_src
+**** "Numeric - Open-end"
+these questions are input based
+#+begin_src js
+  {
+      "IsCoreDemographic": true,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 8,
+      "Name": "AGE",
+      "QuestionID": 42,
+      "QuestionText": "What is your age?",
+      "QuestionType": "Numeric - Open-end",
+      "SurveyUse": 46919
+  }
+
+  {
+      "IsCoreDemographic": true,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 8,
+      "Name": "ZIP",
+      "QuestionID": 45,
+      "QuestionText": "What is your zip code?",
+      "QuestionType": "Numeric - Open-end",
+      "SurveyUse": 12202
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "KIDS_STANDARD",
+      "QuestionID": 3708,
+      "QuestionText": "How many children do you have under the age of 18? ",
+      "QuestionType": "Numeric - Open-end",
+      "SurveyUse": 153
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": null,
+      "Name": "TSANTANA_QUESTION_TEST_3",
+      "QuestionID": 177524,
+      "QuestionText": "testQuestionTS_3",
+      "QuestionType": "Numeric - Open-end",
+      "SurveyUse": 0
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": null,
+      "Name": "SANTANA-TURBO-TEST",
+      "QuestionID": 178272,
+      "QuestionText": "testQuestion1574801279032",
+      "QuestionType": "Numeric - Open-end",
+      "SurveyUse": 0
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": null,
+      "Name": "SANTANA-TURBO-ANOTHERTEST",
+      "QuestionID": 178284,
+      "QuestionText": "testQuestion1574801279032",
+      "QuestionType": "Numeric - Open-end",
+      "SurveyUse": 0
+  }
+#+end_src
+**** "Single Punch"
+equivalent to single select 
+#+begin_src js
+  {
+      "IsCoreDemographic": true,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 8,
+      "Name": "GENDER",
+      "QuestionID": 43,
+      "QuestionText": "What is your gender?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 44166
+  }
+
+  {
+      "IsCoreDemographic": true,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 8,
+      "Name": "HISPANIC",
+      "QuestionID": 47,
+      "QuestionText": "Are you of Hispanic, Latino, or Spanish origin?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 9497
+  }
+
+  {
+      "IsCoreDemographic": true,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 8,
+      "Name": "ETHNICITY",
+      "QuestionID": 113,
+      "QuestionText": "What is your race?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 9643
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 15,
+      "Name": "STANDARD_RELATIONSHIP",
+      "QuestionID": 632,
+      "QuestionText": "What is your relationship status?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 107
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 20,
+      "Name": "STANDARD_VOTE",
+      "QuestionID": 634,
+      "QuestionText": "Are you registered to vote?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 173
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 15,
+      "Name": "STANDARD_PRIMARY_DECISION_MAKER",
+      "QuestionID": 638,
+      "QuestionText": "In your household, are you the person who makes most of the daily purchasing decisions?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 45
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 15,
+      "Name": "STANDARD_SEXUAL_ORIENTATION",
+      "QuestionID": 640,
+      "QuestionText": "What is your sexual orientation?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 25
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 15,
+      "Name": "STANDARD_TOTAL_HOUSEHOLD",
+      "QuestionID": 641,
+      "QuestionText": "How many people live in your household including yourself?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 54
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 15,
+      "Name": "STANDARD_HOUSEHOLD_TYPE",
+      "QuestionID": 642,
+      "QuestionText": "What best describes your current household?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 95
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 4,
+      "Name": "STANDARD_COMPANY_REVENUE",
+      "QuestionID": 645,
+      "QuestionText": "Approximately what is the annual revenue for your organization?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 815
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 4,
+      "Name": "STANDARD_COMPANY_DEPARTMENT",
+      "QuestionID": 646,
+      "QuestionText": "Which department do you primarily work within at your organization?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 683
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 3,
+      "Name": "STANDARD_CAR_USE",
+      "QuestionID": 647,
+      "QuestionText": "Do you drive a car regularly?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 34
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 3,
+      "Name": "STANDARD_AUTO_DECISION_MAKER",
+      "QuestionID": 648,
+      "QuestionText": "Are you the primary decision maker in your household for automotive-related purchases?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 14
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 3,
+      "Name": "STANDARD_AUTO_MANUFACTURE_DATE",
+      "QuestionID": 715,
+      "QuestionText": "What year was your main vehicle (owned or leased) manufactured?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 19
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 3,
+      "Name": "STANDARD_AUTO_PURCHASE_DATE",
+      "QuestionID": 716,
+      "QuestionText": "In which year did you purchase/lease your main vehicle?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 23
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 3,
+      "Name": "STANDARD_AUTO_PURCHASE_TYPE",
+      "QuestionID": 717,
+      "QuestionText": "Did you purchase/lease your primary vehicle new or used?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 2
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 3,
+      "Name": "STANDARD_AUTO_MOTORCYCLE",
+      "QuestionID": 719,
+      "QuestionText": "Do you own a motorcycle?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 11
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 7,
+      "Name": "STANDARD_ALCOHOL_FREQUENCY",
+      "QuestionID": 724,
+      "QuestionText": "On average, how many alcoholic drinks do you consume in a week?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 4
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 2,
+      "Name": "STANDARD_MOVIE_FREQUENCY",
+      "QuestionID": 726,
+      "QuestionText": "How often do you go to the movie theater?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 42
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 2,
+      "Name": "STANDARD_MOVIE_HOME_WATCHING",
+      "QuestionID": 728,
+      "QuestionText": "How frequently do you rent or download movies for home viewing (on average)?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 0
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "STANDARD_EXERCISE_HOURS",
+      "QuestionID": 730,
+      "QuestionText": "How many hours a week do you exercise/participate in sports?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 15
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 16,
+      "Name": "STANDARD_EARLY_ADOPTER",
+      "QuestionID": 734,
+      "QuestionText": "Would you consider yourself to be an early adopter of new technology (the first to buy new gadgets/electronics/etc)?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 11
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 16,
+      "Name": "STANDARD_CELL_PLAN",
+      "QuestionID": 736,
+      "QuestionText": "What type of mobile phone plan do you have?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 10
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 16,
+      "Name": "STANDARD_SMART_PHONE",
+      "QuestionID": 737,
+      "QuestionText": "Do you use a smart phone?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 23
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 2,
+      "Name": "STANDARD_MOVIE_DOWNLOAD",
+      "QuestionID": 739,
+      "QuestionText": "Do you have access to download movies through gaming console, digital receiver, Blu-ray/DVD player or similar devices?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 0
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 11,
+      "Name": "STANDARD_GAMING_HOURS",
+      "QuestionID": 742,
+      "QuestionText": "How many hours per week do you spend playing video/computer games?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 39
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 11,
+      "Name": "STANDARD_GAMING_PURCHASE",
+      "QuestionID": 745,
+      "QuestionText": "On average, how many computer/video games a month do you purchase?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 0
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 11,
+      "Name": "STANDARD_GAMING_ONLINE",
+      "QuestionID": 746,
+      "QuestionText": "Do you play video games with others online? (e.g. Xbox Live or World of Warcraft)?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 3
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 2,
+      "Name": "STANDARD_TELEVISION_FREQUENCY",
+      "QuestionID": 747,
+      "QuestionText": "On average, how many hours of television do you watch per week?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 18
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_RADIO_FREQUENCY",
+      "QuestionID": 748,
+      "QuestionText": "On average, how many hours of radio do you listen to per week?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 11
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 1,
+      "Name": "STANDARD_FLIGHT_PURPOSE",
+      "QuestionID": 750,
+      "QuestionText": "For which purposes do you travel by plane?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 14
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 1,
+      "Name": "STANDARD_FLIGHT_DESTINATION",
+      "QuestionID": 751,
+      "QuestionText": "When you fly, which types of flights do you take?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 5
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "STANDARD_SMOKING",
+      "QuestionID": 756,
+      "QuestionText": "Do you smoke?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 38
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "STANDARD_CIGARETTE_FREQUENCY",
+      "QuestionID": 757,
+      "QuestionText": "On average, how many cigarettes do you smoke in a day?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 1
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 17,
+      "Name": "STANDARD_EYEWEAR",
+      "QuestionID": 769,
+      "QuestionText": "Do you use glasses or contact lenses?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 6
+  }
+
+  {
+      "IsCoreDemographic": true,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 4,
+      "Name": "STANDARD_EMPLOYMENT",
+      "QuestionID": 2189,
+      "QuestionText": "What is your current employment status?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 6456
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 18,
+      "Name": "Panel_Recruit",
+      "QuestionID": 2204,
+      "QuestionText": "Are you willing to consider joining an online panel community? If you qualify to join the panel, you will be asked to provide your name and e-mail address so that we can complete your registration. ",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 4
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_HOME_OWNER",
+      "QuestionID": 2216,
+      "QuestionText": "Which of the following describes your current living situation?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 139
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 3,
+      "Name": "CAR_MODEL_US_STANDARD",
+      "QuestionID": 3727,
+      "QuestionText": "Please select the model of the car you own.",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 0
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 4,
+      "Name": "STANDARD_INDUSTRY_PERSONAL",
+      "QuestionID": 5729,
+      "QuestionText": "Which of the following best describes the industry that you, personally, work in?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 3119
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 11,
+      "Name": "Standard_Internet_Frequency",
+      "QuestionID": 6259,
+      "QuestionText": "How often do you go online on a computer (desktop, laptop, netbook, or tablet)? This includes access to the Internet from home, work, or elsewhere (including weekdays and weekends). ",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 12
+  }
+
+  {
+      "IsCoreDemographic": true,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 15,
+      "Name": "STANDARD_HHI_US",
+      "QuestionID": 14785,
+      "QuestionText": "How much total combined annual income do all members of your household earn before taxes?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 5014
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 4,
+      "Name": "STANDARD_JOB_TITLE",
+      "QuestionID": 15297,
+      "QuestionText": "What is your job title, level or responsibility?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 1919
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 3,
+      "Name": "STANDARD_AUTO_FUTURE_PURCHASE_20",
+      "QuestionID": 20613,
+      "QuestionText": "When do you estimate that you will purchase/lease your next car?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 2
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 4,
+      "Name": "STANDARD_NO_OF_EMPLOYEES",
+      "QuestionID": 22467,
+      "QuestionText": "Approximately how many employees work at your organization (all locations)?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 1585
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 20,
+      "Name": "STANDARD_RELIGION",
+      "QuestionID": 23415,
+      "QuestionText": "Which of the following religions do you most closely identify with?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 13
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "DRIVER_LICENSE",
+      "QuestionID": 28975,
+      "QuestionText": "Do you possess a driver's license?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 31
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_APP_DOWNLOAD",
+      "QuestionID": 29226,
+      "QuestionText": "In order to qualify for this survey you may be asked to download an app or plug-in.\n\nWould you like to continue?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 20
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_PII",
+      "QuestionID": 29228,
+      "QuestionText": "In order to qualify for this survey you may be asked to provide personally-identifiable information (PII). Would you like to continue?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 68
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 15,
+      "Name": "STANDARD_TEEN_PARTICIPATE",
+      "QuestionID": 30226,
+      "QuestionText": "You have indicated that you have a teenage child in the household between the ages of 13 and 17. Is your teenage child available to come to the computer and participate in a survey with your assistance?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 26
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 1,
+      "Name": "Standard_Travel_DM",
+      "QuestionID": 30282,
+      "QuestionText": "Which of the following best describes what role you play when making traveling decisions for you and your household?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 33
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 15,
+      "Name": "STANDARD_CHILD_PARTICIPATE",
+      "QuestionID": 30319,
+      "QuestionText": "You have indicated that you have a child in the household under the age of 18. Is your child available to come to the computer and participate in a survey with your assistance?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 53
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 15,
+      "Name": "STANDARD_TEEN_ANSWER_FORWARD",
+      "QuestionID": 30321,
+      "QuestionText": "Thank you for agreeing to participate. At this point, please pass the computer over to your child and have them answer the following questions from his or her perspective. The next questions will be for your teen.",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 23
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_GROCERY_SHOPPER",
+      "QuestionID": 30396,
+      "QuestionText": "Are you the primary decision maker in your household for grocery purchases?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 73
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_POLITICAL_PARTY",
+      "QuestionID": 32350,
+      "QuestionText": "In politics today, do you consider yourself a Democrat, Republican, or Independent?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 69
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_HISPANIC_ACCULTURATION",
+      "QuestionID": 32352,
+      "QuestionText": "Would you say that in your household you speak…? / ¿Diría que en su hogar usted habla…?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 106
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_AUTO_MAKER",
+      "QuestionID": 32355,
+      "QuestionText": "When do you estimate that you will purchase/lease your next car?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 4
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 11,
+      "Name": "STANDARD_WEBCAM",
+      "QuestionID": 43501,
+      "QuestionText": "Do you have a webcam and are you willing to use it for an online research opportunity?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 94
+  }
+  {
+      "IsCoreDemographic": true,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_EDUCATION_v2",
+      "QuestionID": 48741,
+      "QuestionText": "What is the highest level of education you have completed?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 2468
+  }
+  {
+      "IsCoreDemographic": true,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 15,
+      "Name": "STANDARD_HHI",
+      "QuestionID": 61076,
+      "QuestionText": "What is your current annual household income before taxes?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 6296
+  }
+  {
+      "IsCoreDemographic": true,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 15,
+      "Name": "STANDARD_HH_ASSETS",
+      "QuestionID": 61190,
+      "QuestionText": "What are your household investable assets (not including homeownership)?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 81
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 11,
+      "Name": "STANDARD_INTERNET_PROVIDER_US",
+      "QuestionID": 61200,
+      "QuestionText": "Which of the following is your primary home internet service provider?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 17
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 16,
+      "Name": "STANDARD_CELL_CARRIER_US",
+      "QuestionID": 61255,
+      "QuestionText": "Which of these is your carrier for your primary mobile / cell phone?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 16
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 16,
+      "Name": "STANDARD_CELL_TYPE",
+      "QuestionID": 61283,
+      "QuestionText": "Which type of mobile phone do you own?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 12
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 2,
+      "Name": "STANDARD_SOCIAL_MEDIA_USAGE",
+      "QuestionID": 61306,
+      "QuestionText": "About how often do you access social media services (Facebook, Twitter, Instagram, Pinterest,  YouTube, etc.)? ",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 10
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 1,
+      "Name": "STANDARD_BUSINESS_FLIGHTS",
+      "QuestionID": 61322,
+      "QuestionText": "How often do you fly for business?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 0
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 3,
+      "Name": "STANDARD_NEXT_CAR_PURCHASE",
+      "QuestionID": 61332,
+      "QuestionText": "When do you estimate that you will purchase/lease your next car?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 25
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 13,
+      "Name": "STANDARD_FAST_FOOD_FREQUENCY_v2",
+      "QuestionID": 61442,
+      "QuestionText": "On average, how often do you eat fast food?\n",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 8
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_TV_PROVIDER_US",
+      "QuestionID": 74804,
+      "QuestionText": "Which of the following television providers do you subscribe to at your primary residence?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 1
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_SMARTPHONE_TYPE",
+      "QuestionID": 74875,
+      "QuestionText": "What type of smartphone do you primarily use?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 45
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_MILITARY_SERVICE",
+      "QuestionID": 84668,
+      "QuestionText": "Do you, or have you ever, served in the United States Military?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 5
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_ORGANIZATION_TYPE",
+      "QuestionID": 93518,
+      "QuestionText": "Which of the following best describes your organization?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 31
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 10,
+      "Name": "STANDARD_INDUSTRY_EDUCATION",
+      "QuestionID": 93519,
+      "QuestionText": "Which of the following best describes your current profession?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 21
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_INDUSTRY_CONSTRUCTION",
+      "QuestionID": 93520,
+      "QuestionText": "Which of the following best describes your current profession?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 28
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_INDUSTRY_HEALTHCARE",
+      "QuestionID": 93522,
+      "QuestionText": "Which of the following best describes your current profession?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 14
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": true,
+      "LK_QuestionClassificationID": 8,
+      "Name": "STANDARD_URBAN_RURAL",
+      "QuestionID": 105013,
+      "QuestionText": "Which of the following best describes the area you live in?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 32
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_HEALTH_INSURANCE_US",
+      "QuestionID": 105016,
+      "QuestionText": "What best describes your current health insurance?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 70
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_PRIMARY_BANK_US",
+      "QuestionID": 105019,
+      "QuestionText": "Which of the following is your primary bank? ",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 17
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_HOME_INSURANCE_US",
+      "QuestionID": 105020,
+      "QuestionText": "Which of the following companies do you currently have home insurance from? ",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 0
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_CAR_INSURANCE_US",
+      "QuestionID": 105021,
+      "QuestionText": "Which of the following companies do you currently have car insurance with? ",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 2
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_INDUSTRY_HR",
+      "QuestionID": 119718,
+      "QuestionText": "Which of the following best describes your role within human resources?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 8
+  }
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "STANDARD_POLITICALVIEW",
+      "QuestionID": 128244,
+      "QuestionText": "In terms of your political views, do you consider yourself… ",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 26
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 8,
+      "Name": "GENDER_PLUS",
+      "QuestionID": 137510,
+      "QuestionText": "Are you...",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 237
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": 8,
+      "Name": "ETHNIC_IDENTITY_2",
+      "QuestionID": 157550,
+      "QuestionText": "Which race/ethnicity do you identify with MOST (select one)?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 118
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "TV_HOURS_CONSUMPTION",
+      "QuestionID": 163473,
+      "QuestionText": "How many hours of television do you typically watch on a daily basis?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 43
+  }
+
+  {
+      "IsCoreDemographic": false,
+      "IsFeasibilityFactor": false,
+      "LK_QuestionClassificationID": -1,
+      "Name": "Vox_GameStop_VR",
+      "QuestionID": 174654,
+      "QuestionText": "Are you interested in virtual reality?",
+      "QuestionType": "Single Punch",
+      "SurveyUse": 0
+  }
+#+end_src
+*** LK_QuestionClassificationID
+
+| row | QuestionClassificationID | count |
+|-----+--------------------------+-------|
+|   1 |                       -1 |    86 |
+|-----+--------------------------+-------|
+|   2 |                        1 |    11 |
+|-----+--------------------------+-------|
+|   3 |                       10 |     1 |
+|-----+--------------------------+-------|
+|   4 |                       11 |    11 |
+|-----+--------------------------+-------|
+|   5 |                       13 |     3 |
+|-----+--------------------------+-------|
+|   6 |                       14 |     2 |
+|-----+--------------------------+-------|
+|   7 |                       15 |    15 |
+|-----+--------------------------+-------|
+|   8 |                       16 |     6 |
+|-----+--------------------------+-------|
+|   9 |                       17 |    22 |
+|-----+--------------------------+-------|
+|  10 |                       18 |     1 |
+|-----+--------------------------+-------|
+|  11 |                        2 |     9 |
+|-----+--------------------------+-------|
+|  12 |                       20 |     2 |
+|-----+--------------------------+-------|
+|  13 |                       21 |     8 |
+|-----+--------------------------+-------|
+|  14 |                       22 |     1 |
+|-----+--------------------------+-------|
+|  15 |                       23 |     1 |
+|-----+--------------------------+-------|
+|  16 |                       24 |     1 |
+|-----+--------------------------+-------|
+|  17 |                        3 |    11 |
+|-----+--------------------------+-------|
+|  18 |                        4 |     8 |
+|-----+--------------------------+-------|
+|  19 |                        5 |     1 |
+|-----+--------------------------+-------|
+|  20 |                        7 |     4 |
+|-----+--------------------------+-------|
+|  21 |                        8 |    14 |
+|-----+--------------------------+-------|
+|  22 |                        9 |     7 |
+|-----+--------------------------+-------|
+|  23 |                     null |     4 |
+|-----+--------------------------+-------|
+|     |            all questions |   229 |
+#+TBLFM: @25$3=vsum(@2..@-1)
+
+
+** question options
+#+begin_src js
+      "QuestionOptions": [
+        {
+            "OptionText": "White ",
+            "ParentItemText": null,
+            "Precode": "1",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Black, or African American",
+            "ParentItemText": null,
+            "Precode": "2",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "American Indian or Alaska Native ",
+            "ParentItemText": null,
+            "Precode": "3",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Asian *** Asian Indian ",
+            "ParentItemText": null,
+            "Precode": "4",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Asian *** Chinese ",
+            "ParentItemText": null,
+            "Precode": "5",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Asian *** Filipino ",
+            "ParentItemText": null,
+            "Precode": "6",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Asian *** Japanese ",
+            "ParentItemText": null,
+            "Precode": "7",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Asian *** Korean ",
+            "ParentItemText": null,
+            "Precode": "8",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Asian *** Vietnamese ",
+            "ParentItemText": null,
+            "Precode": "9",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Asian *** Other ",
+            "ParentItemText": null,
+            "Precode": "10",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Pacific Islander *** Native Hawaiian ",
+            "ParentItemText": null,
+            "Precode": "11",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Pacific Islander *** Guamanian ",
+            "ParentItemText": null,
+            "Precode": "12",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Pacific Islander *** Samoan ",
+            "ParentItemText": null,
+            "Precode": "13",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Pacific Islander *** Other Pacific Islander",
+            "ParentItemText": null,
+            "Precode": "14",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Some other race ",
+            "ParentItemText": null,
+            "Precode": "15",
+            "QuestionID": 113
+        },
+        {
+            "OptionText": "Prefer not to answer ",
+            "ParentItemText": null,
+            "Precode": "16",
+            "QuestionID": 113
+        }
+    ]
+#+end_src
+*** OptionText
+*** ParentItemText
+*** Precode
+*** QuestionID

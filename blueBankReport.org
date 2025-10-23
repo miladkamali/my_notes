@@ -1,0 +1,24 @@
+* things that had been done so far
+** Architecture research
+   we have compared and continue to compare different microservice architecture 
+** design communication between clients and MIB
+** create the MIB monolithic backend
+   it is done to facilitate client development before finalizing the
+   architecture of MIB. Even though it is designed as a monolith, it is
+   seperated into several component to easily split into microservices. This
+   process serves to iron out any issue we will have with clients related to the
+   technilogy stack we have chosen.
+** clean up CUFX customization
+   since MIB is supposed to talk to the bank channels and we have not recieved
+   solid design from them, this step became necessory to participate in the api
+   design process while moving MIB forward
+*** Understanding communication protocol and models in CUFX
+*** cleaning up swagger documentation
+*** talking to Dr and mr akbari for further clarification and customization
+** create CUFX mock server
+   - to enable us moving forward before actually reciveing channels from the upstairs
+   - to enable testing
+*** mocking card
+*** mocking account
+*** mocking transfer
+*** mocking transaction

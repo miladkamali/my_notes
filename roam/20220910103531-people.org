@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       7b1f5397-7b9c-4800-86f1-f65c4dedb758
+:END:
+#+title: people
+* behnam
+19 dey
+* hasan
+6 dey
+* hosein
+6/6/66

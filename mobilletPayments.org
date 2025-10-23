@@ -1,0 +1,3313 @@
+* sprints tasks
+** sprint 1
+*** login into her account
+**** DONE login endpoint BB-185
+     CLOSED: [2020-04-13 Mon 11:53]
+     - State "DONE"       from "NEXT"       [2020-04-13 Mon 11:53]
+     - State "NEXT"       from "TODO"       [2020-04-13 Mon 11:53]
+     - State "TODO"       from              [2020-04-13 Mon 11:53]
+**** DONE protobuf model helper functions and validation BB-186
+     CLOSED: [2020-04-13 Mon 11:53]
+     - State "DONE"       from "NEXT"       [2020-04-13 Mon 11:53]
+     - State "NEXT"       from "TODO"       [2020-04-13 Mon 11:53]
+     - State "TODO"       from              [2020-04-13 Mon 11:53]
+**** token management BB-187
+**** connect to authentication channel BB-188
+**** Develop simple OAuth token mangement in Mock server BB-189
+**** Manage OAuth2 token for each user BB-190
+**** Communication BB-191
+*** transfer between her accounts
+**** DONE transfer endpoint BB-180
+     CLOSED: [2020-04-13 Mon 11:54]
+     - State "DONE"       from "NEXT"       [2020-04-13 Mon 11:54]
+     - State "NEXT"       from "TODO"       [2020-04-13 Mon 11:54]
+     - State "TODO"       from              [2020-04-13 Mon 11:54]
+**** DONE protobuf model helper functions and validation BB-181
+     CLOSED: [2020-04-13 Mon 11:54]
+     - State "DONE"       from "NEXT"       [2020-04-13 Mon 11:54]
+     - State "NEXT"       from "TODO"       [2020-04-13 Mon 11:54]
+     - State "TODO"       from              [2020-04-13 Mon 11:54]
+**** CUFX mockserver necessory changes BB-182
+**** connect to CUFX endpoint BB-183
+**** converting cufx models to protobuf BB-184
+**** communication BB-199
+*** Account and transaction
+**** account endpoint BB-202
+**** protobuf model helper functions and validation BB-203
+**** CUFX mockserver necessory changes BB-204
+**** Converting CUFX models to prototype BB-205
+**** connect MIB to CUFX mockserver BB-206
+**** Transaction endpoint BB-207
+**** protobuf model helper functions and validation (transaction) BB-208
+**** Implement transaction CUFX mockserver BB-209
+**** connect to cufx BB-210
+**** converting cufx to protobuf models BB-211
+**** communication BB-212
+** sprint 2
+*** updating protobufs for changes in communication 4 hours
+*** Connect to main channel 5 days
+**** checking delivered APIs for errors 1 days
+**** Login process 4 hours
+***** managing OAuth token life cycle 2 hours
+***** managing user token life cycle  2 hours
+**** create CUFX and internal data models 2 days
+***** Owner 2 hours
+***** transfer 8 hours
+***** deposits 4 hours
+***** login 2 hours
+**** convert between CUFX and internal models 4 hours
+**** CUFX error/status management(very basic one) 1 days 
+*** Setup test server 1 day
+**** ensure vpn has access to test server
+**** ensure that we can lunch kubernates and docker on server
+**** set up monolithic server 3 hours
+*** Level one of KYC 2.5 days
+**** finalizing protobufs/endpoints models 4 hours
+**** Anonymous Login management 4 hours
+**** SMS and OTP 6 hours
+**** OTP endpoint 6 hours
+**** User registration endpoint 3 hours
+*** Infrastructure 3 days
+**** Implement Logging system 1 days
+**** Design and implement State/Command pattern for out requests 1 day
+**** Identify Domain system 1 day
+** sprint 3
+*** upload server
+*** client APIs
+*** reading certificates
+*** certificate integration
+*** KYC level 1
+*** KYC level 2
+** sprint 4
+*** refactoring
+**** 
+** sprint 5
+*** Clean up Upload server logic 8 hours
+*** Clean up deployment process 1 day 
+*** Refactoring KYC state machine 4 hours
+*** Design Orchestration Microservices 1 day
+*** Plan payment services 4 hours
+*** R&D on state machine implementation 1 day
+*** R&D on message passing infrastructure 2 days
+*** protobuf type investigation
+*** Design internal messages between microservice phase one 1 day
+*** Upload Document to Document Management System 4 hours
+*** Connect to KYC version 2   8 hours
+*** Navigation URI for KYC return codes 4 hours
+*** National Id validation  2 hours
+*** Age validation   2 hours
+*** KYC mock server simple 
+*** Create code guide lines phase one 2 hours
+*** Create Commit guide lines phase one 2 hours
+*** KYC mock server complete
+* esfand
+** [2020-02-22 Sat]
+*** creating cufx mock server from swagger
+    :LOGBOOK:
+    CLOCK: [2020-02-22 Sat 10:00]--[2020-02-22 Sat 17:00] =>  7:00
+    CLOCK: [2020-02-22 Sat 22:00]--[2020-02-23 Sun 00:00] =>  2:00
+    :END:
+** [2020-02-23 Sun]
+*** create cufx mock server from swagger
+    :LOGBOOK:
+    CLOCK: [2020-02-23 Sun 10:00]--[2020-02-23 Sun 16:00] =>  6:00
+    :END:
+** [2020-02-24 Mon]
+*** creating bluebank clinet facing server
+    :LOGBOOK:
+    CLOCK: [2020-02-24 Mon 09:30]--[2020-02-24 Mon 18:30] =>  9:00
+    :END:
+** [2020-02-25 Tue]
+*** creating bluebank clinet facing server
+    :LOGBOOK:
+    CLOCK: [2020-02-25 Tue 10:00]--[2020-02-25 Tue 17:00] =>  7:00
+    :END:
+** [2020-02-26 Wed]
+*** start implementing mock server by hand
+    :LOGBOOK:
+    CLOCK: [2020-02-26 Wed 10:00]--[2020-02-26 Wed 15:00] =>  5:00
+    :END:
+** [2020-02-28 Fri]
+*** cufx mock server card
+    :LOGBOOK:
+    CLOCK: [2020-02-26 Wed 12:00]--[2020-02-26 Wed 14:00] =>  2:00
+    CLOCK: [2020-02-26 Wed 15:00]--[2020-02-26 Wed 18:00] =>  3:00
+    CLOCK: [2020-02-26 Wed 19:00]--[2020-02-26 Wed 20:00] =>  1:00
+    :END:
+** [2020-02-29 Sat]
+   :LOGBOOK:
+   CLOCK: [2020-02-29 Sat 10:00]--[2020-02-29 Sat 16:00] =>  6:00
+   :END:
+** [2020-03-01 Sun]
+*** cufx transfer
+    :LOGBOOK:
+    CLOCK: [2020-03-01 Sun 10:00]--[2020-03-01 Sun 12:00] =>  2:00
+    CLOCK: [2020-03-01 Sun 13:00]--[2020-03-01 Sun 16:00] =>  3:00
+    CLOCK: [2020-03-01 Sun 17:00]--[2020-03-01 Sun 19:00] =>  2:00
+** [2020-03-02 Mon]
+*** cufx transfer
+    :LOGBOOK:
+    CLOCK: [2020-03-01 Sun 13:00]--[2020-03-01 Sun 16:00] =>  3:00
+    CLOCK: [2020-03-01 Sun 20:00]--[2020-03-01 Sun 22:00] =>  2:00
+    :END:
+** [2020-03-03 Tue]
+*** cufx transfer
+    :LOGBOOK:
+    CLOCK: [2020-03-01 Sun 12:00]--[2020-03-01 Sun 17:00] =>  5:00
+    :END:
+** [2020-03-04 Wed]
+*** DONE finish transfer models
+    CLOSED: [2020-03-16 Mon 15:40]
+    :LOGBOOK:
+    CLOCK: [2020-03-04 Wed 12:45]--[2020-03-04 Wed 14:00] =>  1:15
+    CLOCK: [2020-03-04 Wed 11:00]--[2020-03-04 Wed 12:30] =>  1:30
+    :END:
+*** DONE create transfer crud
+    CLOSED: [2020-03-16 Mon 15:40]
+    :LOGBOOK:
+    CLOCK: [2020-03-04 Wed 14:30]--[2020-03-04 Wed 16:30] =>  2:00
+    :END:
+
+*** TODO create blue mock server for transfer
+    :LOGBOOK:
+    CLOCK: [2020-03-04 Wed 16:00]--[2020-03-04 Wed 18:30] =>  2:30
+    :END:
+** [2020-03-06 Fri]
+*** prepare postman for saturday meeting of Dr and akbari
+    :LOGBOOK:
+    CLOCK: [2020-03-06 Fri 21:30]--[2020-03-07 Sat 02:00] =>  4:30
+    :END:
+** [2020-03-07 Sat]
+*** cufx models discussion results of akbari and Dr meeting
+    :LOGBOOK:
+    CLOCK: [2020-03-07 Sat 10:00]--[2020-03-07 Sat 16:00] =>  6:00
+    :END:
+** [2020-03-08 Sun]
+*** working on transaction
+    :LOGBOOK:
+    CLOCK: [2020-03-08 Sun 11:00]--[2020-03-08 Sun 16:00] =>  5:00
+    :END:
+** [2020-03-10 Tue]
+*** general work on everything talking mostly
+    :LOGBOOK:
+    CLOCK: [2020-03-10 Tue 10:00]--[2020-03-10 Tue 16:30] =>  6:30
+    :END:
+** [2020-03-11 Wed]
+*** meeting and talk about architecture
+    :LOGBOOK:
+    CLOCK: [2020-03-10 Tue 08:00]--[2020-03-10 Tue 13:50] =>  5:50
+    :END:
+** [2020-03-14 Sat]
+*** working on cufx transaction
+    :LOGBOOK:
+    CLOCK: [2020-03-14 Sat 10:00]--[2020-03-14 Sat 12:30] =>  2:30
+    CLOCK: [2020-03-14 Sat 13:15]--[2020-03-14 Sat 14:30] =>  1:15
+    :END:
+    
+*** prepare report of what we have done so far, for presentation
+    :LOGBOOK:
+    CLOCK: [2020-03-14 Sat 15:00]--[2020-03-14 Sat 18:00] =>  3:00
+    :END:
+** [2020-03-15 Sun]
+*** cufx transaction
+    :LOGBOOK:
+    CLOCK: [2020-03-15 Sun 12:00]--[2020-03-15 Sun 15:00] =>  3:00
+    :END:
+*** presentation
+    :LOGBOOK:
+    CLOCK: [2020-03-15 Sun 10:00]--[2020-03-15 Sun 12:00] =>  2:00
+    :END:
+    
+** [2020-03-16 Mon]
+*** Blue bank MIB
+    :LOGBOOK:
+    CLOCK: [2020-03-16 Mon 10:00]--[2020-03-16 Mon 13:30] =>  3:30
+    :END:
+*** cufx transaction
+    :LOGBOOK:
+    CLOCK: [2020-03-16 Mon 14:45]--[2020-03-16 Mon 17:30] =>  2:45
+    :END:
+*** fixing protobuf issue
+    :LOGBOOK:
+    CLOCK: [2020-03-16 Mon 23:00]--[2020-03-16 Mon 23:40] =>  0:40
+    CLOCK: [2020-03-16 Mon 20:20]--[2020-03-16 Mon 21:19] =>  0:59
+    :END:
+* farvardin                                                        :BlueBank:
+** DONE Non Workday [2020-03-23 Mon] 
+   CLOSED: [2020-04-14 Tue 23:22]
+   - State "DONE"       from              [2020-04-14 Tue 23:22]
+*** R&D
+    :LOGBOOK:
+    CLOCK: [2020-03-24 Tue 22:00]--[2020-03-25 Wed 00:00] =>  2:00
+    CLOCK: [2020-03-23 Mon 10:00]--[2020-03-23 Mon 14:00] =>  4:00
+    :END:
+    
+** DONE Workday [2020-03-24 Tue]
+   CLOSED: [2020-04-14 Tue 23:22]
+   - State "DONE"       from              [2020-04-14 Tue 23:22]
+*** R&D
+    :LOGBOOK:
+    CLOCK: [2020-03-24 Tue 14:00]--[2020-03-24 Tue 18:00] =>  4:00
+    CLOCK: [2020-03-24 Tue 10:30]--[2020-03-24 Tue 13:25] =>  2:55
+    :END:
+** DONE Workday [2020-03-25 Wed]
+   CLOSED: [2020-04-14 Tue 23:30]
+   - State "DONE"       from              [2020-04-14 Tue 23:30]
+*** R&D and architecture
+    :LOGBOOK:
+    CLOCK: [2020-03-24 Tue 09:30]--[2020-03-24 Tue 17:00] =>  7:30
+    :END:
+** DONE Non Workday [2020-03-27 Fri]
+   CLOSED: [2020-04-14 Tue 23:23]
+   - State "DONE"       from              [2020-04-14 Tue 23:23]
+*** R&D and architecture
+    today i have finally connected the dot between different aspects of our
+    system, i will talk to Dr about how testable the system is.
+    :LOGBOOK:
+    CLOCK: [2020-03-27 Fri 14:00]--[2020-03-27 Fri 16:00] =>  2:00
+    CLOCK: [2020-03-27 Fri 10:00]--[2020-03-27 Fri 11:30] =>  1:30
+    :END:
+
+** DONE Workday [2020-03-28 Sat] 
+   CLOSED: [2020-04-14 Tue 23:37]
+   - State "DONE"       from              [2020-04-14 Tue 23:37]
+*** managing things to do
+    :LOGBOOK:
+    CLOCK: [2020-03-28 Sat 09:50]--[2020-03-28 Sat 10:58] =>  1:08
+    :END:
+*** working on MIB client facing APIs
+    :LOGBOOK:
+    CLOCK: [2020-03-28 Sat 15:29]--[2020-03-28 Sat 17:00] =>  1:31
+    CLOCK: [2020-03-28 Sat 13:29]--[2020-03-28 Sat 14:16] =>  0:47
+    CLOCK: [2020-03-28 Sat 11:00]--[2020-03-28 Sat 12:15] =>  1:15
+    :END:
+*** talk to Dr about architecture and grpc models
+    :LOGBOOK:
+    CLOCK: [2020-03-28 Sat 12:20]--[2020-03-28 Sat 13:10] =>  0:50
+    :END:
+*** microservice video
+    :LOGBOOK:
+    CLOCK: [2020-03-28 Sat 21:30]--[2020-03-28 Sat 23:30] =>  2:00
+    CLOCK: [2020-03-28 Sat 20:53]--[2020-03-28 Sat 21:13] =>  0:20
+    :END:
+** DONE Workday [2020-03-29 Sun]
+   CLOSED: [2020-04-14 Tue 23:42]
+   - State "DONE"       from              [2020-04-14 Tue 23:42]
+*** general refactoring
+    :LOGBOOK:
+    CLOCK: [2020-03-29 Sun 14:00]--[2020-03-29 Sun 18:20] =>  4:20
+    :END:
+** DONE Workday [2020-03-30 Mon]
+   CLOSED: [2020-04-14 Tue 23:42]
+   - State "DONE"       from              [2020-04-14 Tue 23:42]
+*** R&D microservice
+    :LOGBOOK:
+    CLOCK: [2020-03-30 Mon 10:00]--[2020-03-30 Mon 17:00] =>  7:00
+    :END:
+** DONE Non Workday [2020-04-02 Thu]
+   CLOSED: [2020-04-15 Wed 00:49]
+   - State "DONE"       from              [2020-04-15 Wed 00:49]
+*** task definitions
+    :LOGBOOK:
+    CLOCK: [2020-04-04 Sat 15:00]--[2020-04-04 Sat 17:00] =>  2:00
+    :END:
+     
+** DONE Workday [2020-04-04 Sat]                                    :sprint1:
+   CLOSED: [2020-04-14 Tue 02:00]
+   - State "DONE"       from "TODO"       [2020-04-14 Tue 02:00]
+   - State "TODO"       from              [2020-04-14 Tue 01:44]
+*** login endpoint protobufs
+    :LOGBOOK:
+    CLOCK: [2020-04-04 Sat 10:00]--[2020-04-04 Sat 17:30] =>  7:30
+    :END:
+
+** DONE Workday [2020-04-05 Sun]                                    :sprint1:
+   CLOSED: [2020-04-14 Tue 01:45]
+   - State "DONE"       from "NEXT"       [2020-04-14 Tue 01:45]
+   - State "NEXT"       from "TODO"       [2020-04-14 Tue 01:45]
+   - State "TODO"       from              [2020-04-14 Tue 01:44]
+*** daily stand-up
+    :LOGBOOK:
+    CLOCK: [2020-04-05 Sun 10:30]--[2020-04-05 Sun 11:00] =>  0:30
+    :END:
+*** login endpoint protobufs
+    :LOGBOOK:
+    CLOCK: [2020-04-05 Sun 11:00]--[2020-04-05 Sun 17:00] =>  6:00
+    :END:
+** DONE Workday [2020-04-06 Mon]                                    :sprint1:
+   CLOSED: [2020-04-14 Tue 01:45]
+   - State "DONE"       from "TODO"       [2020-04-14 Tue 01:45]
+   - State "TODO"       from              [2020-04-14 Tue 01:44]
+*** daily standup
+    :LOGBOOK:
+    CLOCK: [2020-04-06 Mon 10:30]--[2020-04-06 Mon 10:55] =>  0:25
+    :END:
+    
+*** login endpoint protobuf
+    :LOGBOOK:
+    CLOCK: [2020-04-06 Mon 11:00]--[2020-04-06 Mon 17:00] =>  6:00
+    CLOCK: [2020-04-06 Mon 09:00]--[2020-04-06 Mon 10:30] =>  1:30
+    :END:
+** DONE Workday [2020-04-07 Tue]                                    :sprint1:
+   CLOSED: [2020-04-20 Mon 03:04]
+   - State "DONE"       from "TODO"       [2020-04-20 Mon 03:04]
+   - State "TODO"       from "NEXT"       [2020-04-15 Wed 00:51]
+   - State "NEXT"       from "DONE"       [2020-04-15 Wed 00:51]
+   - State "DONE"       from "TODO"       [2020-04-14 Tue 01:46]
+   - State "TODO"       from              [2020-04-14 Tue 01:45]
+*** standup
+    :LOGBOOK:
+    CLOCK: [2020-04-07 Tue 10:30]--[2020-04-07 Tue 11:00] =>  0:30
+    :END:
+*** TODO login endpoint protobuf
+    - State "TODO"       from              [2020-04-15 Wed 00:51]
+    :LOGBOOK:
+    CLOCK: [2020-04-07 Tue 15:00]--[2020-04-07 Tue 17:30] =>  2:30
+    CLOCK: [2020-04-07 Tue 11:10]--[2020-04-07 Tue 14:30] =>  3:20
+    CLOCK: [2020-04-07 Tue 09:25]--[2020-04-07 Tue 10:30] =>  1:05
+    :END:
+** DONE Workday [2020-04-08 Wed]                                    :sprint1:
+   CLOSED: [2020-04-14 Tue 02:01]
+   - State "DONE"       from              [2020-04-14 Tue 02:01]
+*** login endpoint protobuf helper functions
+    - State "TODO"       from              [2020-04-14 Tue 01:47]
+    :LOGBOOK:
+    CLOCK: [2020-04-08 Wed 15:00]--[2020-04-08 Wed 17:30] =>  2:30
+    CLOCK: [2020-04-08 Wed 11:05]--[2020-04-08 Wed 14:30] =>  3:25
+    CLOCK: [2020-04-08 Wed 09:45]--[2020-04-08 Wed 10:30] =>  0:45
+    :END:
+*** standup
+    :LOGBOOK:
+    CLOCK: [2020-04-08 Wed 10:30]--[2020-04-08 Wed 11:00] =>  0:30
+    :END:
+
+** DONE Workday [2020-04-11 Sat]                                    :sprint1:
+   CLOSED: [2020-04-14 Tue 02:35]
+   - State "DONE"       from "NEXT"       [2020-04-14 Tue 02:35]
+*** fixing login endpoint error
+    5:00 -- 5:46
+    :LOGBOOK:
+    CLOCK: [2020-04-11 Sat 04:40]--[2020-04-11 Sat 05:45] =>  1:05
+    :END:
+*** transfer endpoint   
+    :LOGBOOK:
+    CLOCK: [2020-04-11 Sat 20:10]--[2020-04-11 Sat 22:20] =>  2:10
+    CLOCK: [2020-04-11 Sat 11:40]--[2020-04-11 Sat 15:40] =>  4:00
+    CLOCK: [2020-04-11 Sat 08:05]--[2020-04-11 Sat 10:23] =>  2:18
+    CLOCK: [2020-04-11 Sat 06:00]--[2020-04-11 Sat 08:04] =>  2:04
+    :END:
+*** daily 
+    :LOGBOOK:
+    CLOCK: [2020-04-11 Sat 10:30]--[2020-04-11 Sat 11:40] =>  1:10
+    :END:
+** DONE Workday [2020-04-12 Sun]                                    :sprint1: 
+   CLOSED: [2020-04-14 Tue 02:48]
+   - State "DONE"       from              [2020-04-14 Tue 02:48]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-04-12 Sun 10:30]--[2020-04-12 Sun 11:10] =>  0:40
+    :END:
+*** Protobuf models helper functions and validation transfer
+    :LOGBOOK:
+    CLOCK: [2020-04-12 Sun 11:30]--[2020-04-12 Sun 18:00] =>  6:30
+    CLOCK: [2020-04-12 Sun 09:50]--[2020-04-12 Sun 10:30] =>  0:40
+    :END:
+** DONE Workday [2020-04-13 Mon]                                    :sprint1:
+   CLOSED: [2020-04-14 Tue 23:10]
+   - State "DONE"       from              [2020-04-14 Tue 23:10]
+*** daily stand-up
+    :LOGBOOK:
+    CLOCK: [2020-04-13 Mon 10:30]--[2020-04-13 Mon 11:00] =>  0:30
+    :END:
+*** cleaning up tasks
+    :LOGBOOK:
+    CLOCK: [2020-04-13 Mon 11:05]--[2020-04-13 Mon 13:00] =>  1:55
+    :END:
+*** transaction endpoint
+    :LOGBOOK:
+    CLOCK: [2020-04-13 Mon 13:50]--[2020-04-13 Mon 17:30] =>  3:40
+    :END:
+** DONE Workday [2020-04-14 Tue]                                    :sprint1:
+   CLOSED: [2020-04-14 Tue 23:14]
+   - State "DONE"       from              [2020-04-14 Tue 23:14]
+*** stand-up
+    :LOGBOOK:
+    CLOCK: [2020-04-14 Tue 10:30]--[2020-04-14 Tue 10:50] =>  0:20
+    :END:
+*** preparing ssh port forwarding and ..
+    :LOGBOOK:
+    CLOCK: [2020-04-14 Tue 10:50]--[2020-04-14 Tue 14:00] =>  3:10
+    :END:
+*** fixing every thing clients needed
+    :LOGBOOK:
+    CLOCK: [2020-04-14 Tue 15:00]--[2020-04-14 Tue 21:00] =>  6:00
+    :END:
+*** deploy the solution at company
+* Ordibehesht 
+** DONE Workday [2020-04-15 Wed]                                    :sprint1:
+   CLOSED: [2020-04-20 Mon 02:50]
+   - State "DONE"       from              [2020-04-20 Mon 02:50]
+*** getting the bank APIs and evaluating them 
+    :LOGBOOK:
+    CLOCK: [2020-04-15 Wed 20:15]--[2020-04-15 Wed 23:30] =>  3:15
+    CLOCK: [2020-04-15 Wed 10:15]--[2020-04-15 Wed 17:30] =>  7:15
+    :END:
+** DONE Non Workday [2020-04-16 Thu]                                :sprint1:
+   CLOSED: [2020-04-20 Mon 02:48]
+   - State "DONE"       from              [2020-04-20 Mon 02:48]
+*** unknown 
+    :LOGBOOK:
+    CLOCK: [2020-04-16 Thu 11:00]--[2020-04-16 Thu 18:00] =>  7:00
+    :END:
+
+** DONE Non Workday [2020-04-17 Fri]                                :sprint1:
+   CLOSED: [2020-04-20 Mon 02:42]
+   
+   - State "DONE"       from              [2020-04-20 Mon 02:42]
+*** Cleaning up
+    :LOGBOOK:
+    CLOCK: [2020-04-17 Fri 10:00]--[2020-04-17 Fri 17:00] =>  7:00
+    :END:
+
+** DONE Workday [2020-04-18 Sat]                                    :sprint1:
+   CLOSED: [2020-04-20 Mon 02:55]
+   - State "DONE"       from              [2020-04-20 Mon 02:55]
+*** fixing every thing that clients requested
+    :LOGBOOK:
+    CLOCK: [2020-04-18 Sat 10:30]--[2020-04-18 Sat 12:00] =>  1:30
+    CLOCK: [2020-04-18 Sat 09:00]--[2020-04-18 Sat 21:00] => 12:00
+    :END:
+** DONE Workday [2020-04-19 Sun]                                    :sprint1:
+   CLOSED: [2020-05-09 Sat 16:22]
+   - State "DONE"       from "TODO"       [2020-05-09 Sat 16:22]
+   - State "TODO"       from              [2020-05-06 Wed 13:51]
+*** fixing authentication connection issue 
+*** working on libICU
+    Fixing every thing related to localization and calender.well it need more
+    work but it will be in localization effort witch will come eventually.
+    :LOGBOOK:
+    CLOCK: [2020-04-19 Sun 10:00]--[2020-04-19 Sun 15:00] =>  5:00
+    :END:
+** DONE workday [2020-04-20 Mon]                                    :sprint1:
+   CLOSED: [2020-05-09 Sat 16:17]
+*** OauthToken for user
+    creating infrastructure to keep login token,actually i had to extract login token from oath token thanks to some stupid design.
+    :LOGBOOK:
+    CLOCK: [2020-04-20 Wed 10:13]--[2020-04-20 Mon 17:15] =>  7:02
+    :END:
+    
+** DONE workday [2020-04-21 Tue]                                    :sprint1:
+   CLOSED: [2020-05-09 Sat 16:38]
+   - State "DONE"       from "TODO"       [2020-05-09 Sat 16:38]
+   - State "TODO"       from              [2020-05-06 Wed 14:01]
+   7 hours of work
+
+*** a bunch of refactoring for account in MIB
+    
+    :LOGBOOK:
+    CLOCK: [2020-04-21 Wed 10:00]--[2020-04-21 Tue 12:30] =>  2:30
+    :END:
+
+*** refactoring to records
+    :LOGBOOK:
+    CLOCK: [2020-04-21 Sat 13:00]--[2020-04-21 Tue 18:30] =>  5:30
+    :END:
+    Introduction of records to manage complexity of conversion between types.
+    Actually it was a very nice refactoring with significantly reduced the size of code as well.
+    I am quite happy about it.
+    ;)
+    
+** DONE Workday [2020-04-22 Wed]                                    :sprint1:
+   CLOSED: [2020-05-13 Wed 01:38]
+   - State "DONE"       from "TODO"       [2020-05-13 Wed 01:38]
+   - State "TODO"       from              [2020-05-06 Wed 15:12]
+*** unknown
+    :LOGBOOK:
+    CLOCK: [2020-04-22 Tue 10:00]--[2020-04-22 Wed 15:00] =>  5:00
+    :END:
+*** DONE sprint 1 retro
+    CLOSED: [2020-05-10 Sun 01:12]
+    - State "DONE"       from              [2020-05-10 Sun 01:12]
+    :LOGBOOK:
+    CLOCK: [2020-04-22 Wed 16:00]--[2020-04-22 Wed 19:00] =>  3:00
+    :END:
+
+** DONE non workday [2020-04-24 Fri]                                :sprint1:
+   CLOSED: [2020-05-06 Wed 15:30]
+   - State "DONE"       from "NEXT"       [2020-05-06 Wed 15:30]
+   - State "NEXT"       from "TODO"       [2020-05-06 Wed 15:30]
+   - State "TODO"       from              [2020-05-06 Wed 15:12]
+*** balance update in transfer
+     :LOGBOOK:
+     CLOCK: [2020-04-24 Fri 02:00]--[2020-04-24 Fri 06:00] =>  4:00
+     :END:
+** DONE Workday [2020-04-25 Sat]
+   CLOSED: [2020-05-13 Wed 01:37]
+   - State "DONE"       from              [2020-05-13 Wed 01:37]
+*** unknown 
+    :LOGBOOK:
+    CLOCK: [2020-04-25 Sat 10:00]--[2020-04-25 Sat 16:00] =>  6:00
+    :END:
+*** sprint 2 planning
+    :LOGBOOK:
+    CLOCK: [2020-04-25 Sat 16:00]--[2020-04-25 Sat 18:00] =>  2:00
+    :END:
+** DONE Workday [2020-04-26 Sun]
+   CLOSED: [2020-05-13 Wed 02:20]
+   - State "DONE"       from              [2020-05-13 Wed 02:20]
+   7 hours
+*** sprint planning
+    2 hours
+*** refactoring
+    5 hours
+** DONE Workday [2020-04-27 Mon]                                    :sprint2:
+   CLOSED: [2020-05-16 Sat 11:07]
+   - State "DONE"       from              [2020-05-16 Sat 11:07]
+   7 hours
+*** working on protobufs
+*** DONE cleaning up git history
+    CLOSED: [2020-05-16 Sat 11:03]
+    - State "DONE"       from              [2020-05-16 Sat 11:03]
+*** refactoring 
+*** talking to Dr
+    :LOGBOOK:
+    CLOCK: [2020-04-27 Mon 22:00]--[2020-04-27 Mon 23:00] =>  1:00
+    :END:
+    
+    22--23:00
+** TODO Workday [2020-04-28 Tue]                                    :sprint2:
+   - State "TODO"       from              [2020-05-16 Sat 11:07]
+   8 hours
+** DONE Workday [2020-04-29 Wed]                                    :sprint2:
+   CLOSED: [2020-05-12 Tue 23:38]
+   - State "DONE"       from              [2020-05-12 Tue 23:38]
+*** integration
+I was waiting for a number of problems to be fixed before starting integration,
+however it seems i needed to integrate it now. It's gonna take way longer and
+much less productive activity!
+    :LOGBOOK:
+    CLOCK: [2020-04-29 Wed 23:00]--[2020-04-30 Thu 00:00] =>  1:00
+    CLOCK: [2020-04-29 Wed 20:00]--[2020-04-29 Wed 21:35] =>  1:35
+    CLOCK: [2020-04-29 Wed 10:00]--[2020-04-29 Wed 16:00] =>  6:00
+    :END:
+** DONE non workday[2020-04-30 Thu]                                 :sprint2:
+   CLOSED: [2020-05-12 Tue 23:40]
+   - State "DONE"       from              [2020-05-12 Tue 23:40]
+*** integration
+    :LOGBOOK:
+    CLOCK: [2020-04-30 Thu 14:22]--[2020-04-30 Thu 16:25] =>  2:03
+    CLOCK: [2020-04-30 Thu 00:00]--[2020-04-30 Thu 05:41] =>  5:41
+    :END:
+** DONE non workday [2020-05-01 Fri]                                :sprint2:
+   CLOSED: [2020-05-12 Tue 23:41]
+   - State "DONE"       from              [2020-05-12 Tue 23:41]
+*** integration
+Well initial integration is complete, now it's up to other people to follow the
+trail for the APIs to be fixed!
+    :LOGBOOK:
+    CLOCK: [2020-05-04 Mon 10:23]--[2020-05-04 Mon 14:35] =>  4:12
+    :END:
+** DONE workday not sure [2020-05-02 Sat]                           :sprint2:
+   CLOSED: [2020-05-12 Tue 23:50]
+   - State "DONE"       from              [2020-05-12 Tue 23:50]
+*** channel issues
+    making sure vpn has access to MIB
+    making sure MIB has access to channel
+    losing hair over stupidity
+    :LOGBOOK:
+    CLOCK: [2020-05-02 Sat 11:00]--[2020-05-02 Sat 17:00] =>  6:00
+    :END:
+** DONE workday not sure [2020-05-03 Sun]                           :sprint2:
+   CLOSED: [2020-05-12 Tue 23:51]
+   - State "DONE"       from              [2020-05-12 Tue 23:51]
+*** Channel issues
+    server has been deployed but thanks to some genius it's not visible from any
+    place not even my workstation at the company!
+    :LOGBOOK:
+    CLOCK: [2020-05-03 Sun 11:00]--[2020-05-03 Sun 17:50] =>  6:50
+    :END:
+*** standup
+    :LOGBOOK:
+    CLOCK: [2020-05-03 Sat 10:30]--[2020-05-03 Sun 11:00] =>  0:30
+    :END:
+    
+** DONE workday not sure [2020-05-04 Mon]                           :sprint2:
+   CLOSED: [2020-05-13 Wed 00:01]
+   - State "DONE"       from              [2020-05-13 Wed 00:01]
+*** channel issue
+    well today shit hit fan, server is accessible for local network in the
+    company and the errors are rolling in, slow response and failing
+    transactions (at least now it's visible!).
+    I am acting as a live debugger sending each exception up the chain!
+    :LOGBOOK:
+    CLOCK: [2020-05-04 Mon 21:00]--[2020-05-04 Mon 22:10] =>  1:10
+    CLOCK: [2020-05-04 Mon 11:00]--[2020-05-04 Mon 18:00] =>  7:00
+    :END:
+*** standup
+    :LOGBOOK:
+    CLOCK: [2020-05-04 Sat 10:30]--[2020-05-04 Mon 11:00] =>  0:30
+    :END:
+** DONE workday [2020-05-05 Tue]                                    :sprint2:
+   CLOSED: [2020-05-13 Wed 00:24]
+   - State "DONE"       from              [2020-05-13 Wed 00:24]
+*** standup
+    :LOGBOOK:
+    CLOCK: [2020-05-05 Tue 10:30]--[2020-05-05 Tue 10:50] =>  0:20
+    :END:
+*** fixing issue with channel  
+    well it was a waste of time since almost half of this time was spent going
+    back and forth with khoshbin and mehrdad to figure out what is wrong with
+    our requests. The other half of the time was actually spent on fixing a
+    problem that was not ours to begin with.
+    :LOGBOOK:
+    CLOCK: [2020-05-05 Tue 11:00]--[2020-05-05 Tue 18:00] =>  7:00
+    :END:
+*** comming back to api standard
+    after talk with Dr i rolled back every thing i have done extra to become
+    compatible with their APIs, turns out it would have been much less work if
+    we i was not flexible when it come to the APIs.
+    :LOGBOOK:
+    CLOCK: [2020-05-05 Tue 23:00]--[2020-05-06 Wed 00:00] =>  1:00
+    CLOCK: [2020-05-05 Tue 20:30]--[2020-05-05 Tue 22:03] =>  1:33
+    :END:
+** DONE workday [2020-05-06 Wed]                                    :sprint2:
+   CLOSED: [2020-05-13 Wed 00:27]
+   - State "DONE"       from              [2020-05-13 Wed 00:27]
+*** comming back to API standard
+    finishing up the rolling back and actually deploying the MIB server
+    :LOGBOOK:
+    CLOCK: [2020-05-06 Wed 11:32]--[2020-05-06 Wed 12:05] =>  0:33
+    CLOCK: [2020-05-06 Wed 09:00]--[2020-05-06 Wed 10:10] =>  1:10
+    :END:
+*** standup 
+    :LOGBOOK:
+    CLOCK: [2020-05-06 Wed 10:30]--[2020-05-06 Wed 11:05] =>  0:35
+    :END:
+*** working on server integration 
+    :LOGBOOK:
+    CLOCK: [2020-05-06 Wed 12:08]--[2020-05-06 Wed 16:00] =>  3:52
+    :END:
+** DONE workday [2020-05-09 Sat]                                    :sprint2:
+   CLOSED: [2020-05-13 Wed 00:29]
+   - State "DONE"       from              [2020-05-13 Wed 00:29]
+*** standup
+    :LOGBOOK:
+    CLOCK: [2020-05-09 Sat 10:30]--[2020-05-09 Sat 11:00] =>  0:30
+    :END:
+*** fixing API issues related to new channel 
+    :LOGBOOK:
+    CLOCK: [2020-05-09 Sat 12:00]--[2020-05-09 Sat 19:00] =>  7:00
+    :END:
+** DONE workday [2020-05-10 Sun]                                    :sprint2:
+   CLOSED: [2020-05-13 Wed 00:39]
+   - State "DONE"       from              [2020-05-13 Wed 00:39]
+*** standup
+    :LOGBOOK:
+    CLOCK: [2020-05-10 Sun 10:30]--[2020-05-10 Sun 11:05] =>  0:35
+    :END:
+*** KYC understanding models and api calls 
+    :LOGBOOK:
+    CLOCK: [2020-05-10 Sun 22:00]--[2020-05-10 Sun 23:30] =>  1:30
+    CLOCK: [2020-05-10 Sun 19:30]--[2020-05-10 Sun 20:00] =>  0:30
+    CLOCK: [2020-05-10 Sun 11:10]--[2020-05-10 Sun 17:30] =>  6:20
+    :END:
+*** working on interview process 
+    :LOGBOOK:
+    CLOCK: [2020-05-10 Sun 17:47]--[2020-05-10 Sun 19:12] =>  1:25
+    :END:
+** DONE workday [2020-05-11 Mon]
+   CLOSED: [2020-05-13 Wed 00:44]
+   - State "DONE"       from              [2020-05-13 Wed 00:44]
+*** connecting KYC
+    :LOGBOOK:
+    CLOCK: [2020-05-11 Mon 23:00]--[2020-05-12 Tue 02:25] =>  3:25
+    CLOCK: [2020-05-11 Mon 21:00]--[2020-05-11 Mon 22:02] =>  1:02
+    CLOCK: [2020-05-11 Mon 20:10]--[2020-05-11 Mon 20:23] =>  0:13
+    CLOCK: [2020-05-11 Mon 17:35]--[2020-05-11 Mon 19:23] =>  1:48
+    CLOCK: [2020-05-11 Mon 15:00]--[2020-05-11 Mon 16:00] =>  1:00
+    CLOCK: [2020-05-11 Mon 10:00]--[2020-05-11 Mon 11:00] =>  1:00
+    CLOCK: [2020-05-11 Mon 04:38]--[2020-05-11 Mon 05:10] =>  0:32
+    :END:
+*** interview
+    :LOGBOOK:
+    CLOCK: [2020-05-11 Mon 11:45]--[2020-05-11 Mon 13:30] =>  1:45
+    :END:
+** DONE workday [2020-05-12 Tue]
+   CLOSED: [2020-05-13 Wed 00:46]
+   - State "DONE"       from              [2020-05-13 Wed 00:46]
+*** KYC
+    :LOGBOOK:
+    CLOCK: [2020-05-12 Tue 07:30]--[2020-05-12 Tue 10:23] =>  2:53
+    :END:
+*** sprint 3 planning
+    :LOGBOOK:
+    CLOCK: [2020-05-12 Tue 11:00]--[2020-05-12 Tue 16:50] =>  5:50
+    :END:
+** Workday [2020-05-13 Wed]
+*** fixing errors in channel
+    :LOGBOOK:
+    CLOCK: [2020-05-13 Wed 09:00]--[2020-05-13 Wed 12:00] =>  3:00
+    :END:
+*** Testing KYC
+    :LOGBOOK:
+    CLOCK: [2020-05-13 Wed 12:30]--[2020-05-13 Wed 19:10] =>  6:40
+    :END:
+** non workday [2020-05-14 Thu]
+*** working on KYC
+    :LOGBOOK:
+    CLOCK: [2020-05-14 Thu 17:00]--[2020-05-14 Thu 19:30] =>  2:30
+    CLOCK: [2020-05-14 Thu 10:00]--[2020-05-14 Thu 11:55] =>  1:55
+    :END:
+*** interview
+    :LOGBOOK:
+    CLOCK: [2020-05-14 Thu 16:00]--[2020-05-14 Thu 16:50] =>  0:50
+    CLOCK: [2020-05-14 Thu 12:00]--[2020-05-14 Thu 13:30] =>  1:30
+    :END:
+* khordad
+** DONE non workday [2020-05-15 Fri]
+   CLOSED: [2020-06-14 Sun 01:46]
+   - State "DONE"       from              [2020-06-14 Sun 01:46]
+*** talking in to Dr about KYC level 3
+    :LOGBOOK:
+    CLOCK: [2020-05-16 Sat 20:30]--[2020-05-16 Sat 21:30] =>  1:00
+    :END:
+*** talking to Reza
+    :LOGBOOK:
+    CLOCK: [2020-05-16 Sat 23:30]--[2020-05-17 Sun 00:50] =>  1:20
+    :END:
+** DONE workday [2020-05-16 Sat]
+   CLOSED: [2020-06-14 Sun 01:48]
+   - State "DONE"       from              [2020-06-14 Sun 01:48]
+*** fixing KYC
+    :LOGBOOK:
+    CLOCK: [2020-05-16 Sat 08:30]--[2020-05-16 Sat 19:55] => 11:25
+    :END:
+** DONE workday [2020-05-17 Sun]
+   CLOSED: [2020-06-14 Sun 01:49]
+   - State "DONE"       from              [2020-06-14 Sun 01:49]
+   10:30-3
+** DONE workday [2020-05-18 Mon]
+   CLOSED: [2020-06-14 Sun 01:51]
+   - State "DONE"       from              [2020-06-14 Sun 01:51]
+   10:30-4
+** DONE workday [2020-05-19 Tue]
+   CLOSED: [2020-06-14 Sun 01:52]
+   - State "DONE"       from              [2020-06-14 Sun 01:52]
+   8 hours
+** workday [2020-05-20 Wed] 
+*** DONE merging mock and MIB
+    CLOSED: [2020-06-14 Sun 01:57]
+    - State "DONE"       from              [2020-06-14 Sun 01:57]
+    :LOGBOOK:
+    CLOCK: [2020-05-20 Wed 11:00]--[2020-05-20 Wed 17:00] =>  6:00
+    :END:
+*** implementing initial APIs to free blocking + upgrading protobufs
+    :LOGBOOK:
+    CLOCK: [2020-05-20 Wed 20:25]--[2020-05-20 Wed 23:19] =>  2:54
+    CLOCK: [2020-05-20 Wed 17:00]--[2020-05-20 Wed 19:00] =>  2:00
+    :END:
+** DONE non workday[2020-05-21 Thu] 
+   CLOSED: [2020-06-14 Sun 02:01]
+   - State "DONE"       from              [2020-06-14 Sun 02:01]
+*** communication
+    :LOGBOOK:
+    
+    CLOCK: [2020-05-21 Thu 01:05]--[2020-05-21 Thu 03:35] =>  2:30
+    :END:
+*** working on upload server 
+    :LOGBOOK:
+    CLOCK: [2020-05-21 Thu 20:35]--[2020-05-21 Thu 21:35] =>  1:00
+    CLOCK: [2020-05-21 Thu 14:04]--[2020-05-21 Thu 16:04] =>  2:00
+    :END:
+** DONE workday [2020-05-23 Sat]
+   CLOSED: [2020-06-14 Sun 02:06]
+   - State "DONE"       from              [2020-06-14 Sun 02:06]
+*** unknown 
+    :LOGBOOK:
+    CLOCK: [2020-05-23 Sat 10:00]--[2020-05-23 Sat 18:00] =>  8:00
+    :END:
+** DONE nonworkday [2020-05-24 Sun] 
+   CLOSED: [2020-06-14 Sun 02:08]
+   - State "DONE"       from              [2020-06-14 Sun 02:08]
+   4 hours
+** DONE nonworkday [2020-05-25 Mon] 
+   CLOSED: [2020-06-14 Sun 02:08]
+   - State "DONE"       from              [2020-06-14 Sun 02:08]
+   6 hours
+** DONE workday [2020-05-26 Tue]
+   CLOSED: [2020-06-14 Sun 02:21]
+   - State "DONE"       from              [2020-06-14 Sun 02:21]
+   8 hours
+*** making 
+** DONE workday [2020-05-27 Wed]
+   CLOSED: [2020-06-14 Sun 02:25]
+   - State "DONE"       from              [2020-06-14 Sun 02:25]
+*** sprint 3 meetings
+    :LOGBOOK:
+    CLOCK: [2020-05-27 Wed 16:00]--[2020-05-27 Wed 17:30] =>  1:30
+    CLOCK: [2020-05-27 Wed 14:10]--[2020-05-27 Wed 15:30] =>  1:20
+    CLOCK: [2020-05-27 Wed 11:00]--[2020-05-27 Wed 13:00] =>  2:00
+    :END:
+*** interview with MR mazloom
+    :LOGBOOK:
+    CLOCK: [2020-05-27 Wed 17:30]--[2020-05-27 Wed 19:00] =>  1:30
+    :END:
+*** on boarding 
+    :LOGBOOK:
+    CLOCK: [2020-05-27 Wed 19:00]--[2020-05-27 Wed 20:30] =>  1:30
+    :END:
+** DONE non workday [2020-05-28 Thu]
+   CLOSED: [2020-06-14 Sun 02:28]
+   - State "DONE"       from              [2020-06-14 Sun 02:28]
+*** interview with dehbod
+    :LOGBOOK:
+    CLOCK: [2020-05-28 Thu 11:15]--[2020-05-28 Thu 13:25] =>  2:10
+    :END:
+*** talk to Dr
+    about the interview , protobuf design, infrastructure needs, Alireza, and design.
+    :LOGBOOK:
+    CLOCK: [2020-05-28 Thu 13:20]--[2020-05-28 Thu 13:50] =>  0:30
+    :END:
+*** spring 3 meeting
+    :LOGBOOK:
+    CLOCK: [2020-05-28 Thu 15:00]--[2020-05-28 Thu 16:30] =>  1:30
+    :END:
+*** talk to Alireza about the
+    :LOGBOOK:
+    CLOCK: [2020-05-28 Thu 16:30]--[2020-05-28 Thu 17:15] =>  0:45
+    :END:
+** DONE non workday[2020-05-29 Fri] 
+   CLOSED: [2020-06-14 Sun 02:30]
+   - State "DONE"       from              [2020-06-14 Sun 02:30]
+*** task planning
+    :LOGBOOK:
+    CLOCK: [2020-05-29 Fri 17:20]--[2020-05-29 Fri 19:00] =>  1:40
+    :END:
+** DONE workday [2020-05-30 Sat] 
+   CLOSED: [2020-06-14 Sun 02:44]
+   - State "DONE"       from              [2020-06-14 Sun 02:44]
+*** fixing KYC 2
+    :LOGBOOK:
+    CLOCK: [2020-05-30 Sat 23:00]--[2020-05-31 Sun 03:00] =>  4:00
+    CLOCK: [2020-05-30 Sat 17:40]--[2020-05-30 Sat 21:30] =>  3:50
+    CLOCK: [2020-05-30 Sat 08:30]--[2020-05-30 Sat 12:00] =>  3:30
+    :END:
+*** DONE On boarding / architecture
+    CLOSED: [2020-06-14 Sun 02:33]
+    - State "DONE"       from              [2020-06-14 Sun 02:33]
+    :LOGBOOK:
+    CLOCK: [2020-05-30 Sat 16:30]--[2020-05-30 Sat 17:40] =>  1:10
+    CLOCK: [2020-05-30 Sat 12:00]--[2020-05-30 Sat 14:30] =>  2:30
+    :END:
+** DONE workday [2020-05-31 Sun]
+   CLOSED: [2020-06-14 Sun 02:46]
+   - State "DONE"       from              [2020-06-14 Sun 02:46]
+*** fixing KYC 2
+    :LOGBOOK:
+    CLOCK: [2020-05-31 Sun 17:30]--[2020-05-31 Sun 20:00] =>  2:30
+    CLOCK: [2020-05-31 Sun 08:20]--[2020-05-31 Sun 15:00] =>  6:40
+    :END:
+*** reviewing CVs/interview process
+    :LOGBOOK:
+    CLOCK: [2020-05-31 Sun 20:45]--[2020-05-31 Sun 22:00] =>  1:15
+    :END:
+*** communication
+    :LOGBOOK:
+    CLOCK: [2020-05-31 Sun 22:09]--[2020-05-31 Sun 22:50] =>  0:41
+    :END:
+*** code refactoring 
+** DONE workday [2020-06-01 Mon] 
+   CLOSED: [2020-06-14 Sun 12:02]
+   - State "DONE"       from              [2020-06-14 Sun 12:02]
+*** daily 
+    :LOGBOOK:
+    CLOCK: [2020-06-01 Mon 10:45]--[2020-06-01 Mon 11:10] =>  0:25
+    :END:
+*** unify all the configuration
+    :LOGBOOK:
+    CLOCK: [2020-06-01 Mon 10:00]--[2020-06-01 Mon 10:45] =>  0:45
+    :END:
+*** talk with alireza and Dr 
+    :LOGBOOK:
+    CLOCK: [2020-06-01 Mon 11:10]--[2020-06-01 Mon 12:20] =>  1:10
+    :END:
+*** refactoring 
+    :LOGBOOK:
+    CLOCK: [2020-06-01 Mon 12:29]--[2020-06-01 Mon 14:15] =>  1:46
+    :END:
+*** design 
+** workday [2020-06-02 Tue]  
+*** DONE daily
+    CLOSED: [2020-06-14 Sun 12:04]
+    - State "DONE"       from              [2020-06-14 Sun 12:04]
+    :LOGBOOK:
+    CLOCK: [2020-06-02 Tue 10:30]--[2020-06-02 Tue 10:40] =>  0:10
+    :END:
+*** DONE interview 
+    CLOSED: [2020-06-14 Sun 12:04]
+    - State "DONE"       from              [2020-06-14 Sun 12:04]
+    :LOGBOOK:
+    CLOCK: [2020-06-02 Tue 10:45]--[2020-06-02 Tue 13:00] =>  2:15
+    :END:
+*** TODO Work on architecture 
+    - State "TODO"       from              [2020-06-14 Sun 12:04]
+** non workday [2020-06-03 Wed] 
+** DONE non workday [2020-06-04 Thu]
+*** design message
+    :LOGBOOK:
+    CLOCK: [2020-06-04 Thu 12:37]--[2020-06-04 Thu 14:37] =>  2:00
+    :END:
+*** refactoring 
+    :LOGBOOK:
+    CLOCK: [2020-06-04 Thu 14:37]--[2020-06-04 Thu 17:00] =>  2:23
+    :END:
+** DONE non workday [2020-06-05 Fri] 
+*** talk with dr about APIs
+    :LOGBOOK:
+    CLOCK: [2020-06-05 Fri 08:37]--[2020-06-05 Fri 09:37] =>  1:00
+    :END:
+** DONE workday
+*** todos
+**** TODO change minio to localhost
+**** TODO set status code in return 
+*** checking config server
+    :LOGBOOK:
+    CLOCK: [2020-06-06 Sat 08:39]--[2020-06-06 Sat 09:39] =>  1:00
+    :END:
+*** refactoring 
+    :LOGBOOK:
+    CLOCK: [2020-06-06 Sat 17:00]--[2020-06-06 Sat 19:25] =>  2:25
+    CLOCK: [2020-06-06 Sat 09:39]--[2020-06-06 Sat 15:33] =>  5:54
+    :END:
+** DONE workday 07
+   9h
+** DONE workday 08
+   8h
+** DONE workday [2020-06-09 Tue]
+*** something
+    - State "TODO"       from              [2020-06-11 Thu 15:59]
+     :LOGBOOK:
+     CLOCK: [2020-06-09 Tue 21:35]--[2020-06-09 Tue 23:35] =>  2:00
+     CLOCK: [2020-06-09 Tue 06:30]--[2020-06-09 Tue 14:30] =>  8:00
+     :END:
+** DONE workday[2020-06-10 Wed] 
+*** dehbod
+    :LOGBOOK:
+    CLOCK: [2020-06-10 Wed 13:10]--[2020-06-10 Wed 14:35] =>  1:25
+    CLOCK: [2020-06-10 Wed 09:00]--[2020-06-10 Wed 09:55] =>  0:55
+    :END:
+*** interview with sajad
+    :LOGBOOK:
+    CLOCK: [2020-06-10 Wed 11:00]--[2020-06-10 Wed 13:00] =>  2:00
+    :END:
+*** unknown
+    :LOGBOOK:
+    CLOCK: [2020-06-10 Wed 15:00]--[2020-06-10 Wed 18:00] =>  3:00
+    :END:
+*** look at https://dzone.com/articles/synchronous-kafka-using-spring-request-reply-1
+*** look at https://www.baeldung.com/spring-kafka
+** DONE non workday[2020-06-11 Thu] 
+*** architecture document
+    :LOGBOOK:
+    CLOCK: [2020-06-11 Thu 21:02]--[2020-06-11 Thu 22:08] =>  1:06
+    CLOCK: [2020-06-11 Thu 16:11]--[2020-06-11 Thu 20:02] =>  3:51
+    :END:
+*** architecture
+    :LOGBOOK:
+    CLOCK: [2020-06-12 Fri 12:05]--[2020-06-12 Fri 15:05] =>  3:00
+    CLOCK: [2020-06-11 Thu 22:11]--[2020-06-12 Fri 01:04] =>  2:53
+    :END:
+** DONE non workday[2020-06-12 Fri]
+*** refactoring 
+    :LOGBOOK:
+    CLOCK: [2020-06-12 Fri 14:03]--[2020-06-12 Fri 17:22] =>  3:19
+    :END:
+*** dehbod
+    :LOGBOOK:
+    CLOCK: [2020-06-12 Fri 18:53]--[2020-06-12 Fri 19:43] =>  0:50
+    :END:
+** DONE workday [2020-06-13 Sat]                                    :sprint4: 
+*** refactoring
+    :LOGBOOK:
+    CLOCK: [2020-06-13 Sat 09:15]--[2020-06-13 Sat 11:10] =>  1:55
+    :END:
+*** sprint sessions
+    :LOGBOOK:
+    CLOCK: [2020-06-13 Sat 13:00]--[2020-06-13 Sat 15:35] =>  2:35
+    CLOCK: [2020-06-13 Sat 10:30]--[2020-06-13 Sat 12:00] =>  1:30
+    :END:
+*** code architecture
+    :LOGBOOK:
+    CLOCK: [2020-06-13 Sat 21:37]--[2020-06-13 Sat 23:37] =>  2:00
+    :END:
+** DONE workday [2020-06-14 Sun] 
+*** taks grooming 
+    :LOGBOOK:
+    CLOCK: [2020-06-14 Sun 08:45]--[2020-06-14 Sun 10:30] =>  1:45
+    :END:
+*** clean up deployment system
+    :LOGBOOK:
+    CLOCK: [2020-06-14 Sun 11:30]--[2020-06-14 Sun 14:30] =>  3:00
+    :END:
+* tir
+** DONE workday [2020-06-15 Mon] 
+   CLOSED: [2020-07-15 Wed 14:11]
+   - State "DONE"       from              [2020-07-15 Wed 14:11]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-06-15 Mon 10:30]--[2020-06-15 Mon 10:55] =>  0:25
+    :END:
+*** clean up upload 
+    :LOGBOOK:
+    CLOCK: [2020-06-15 Mon 11:20]--[2020-06-15 Mon 14:10] =>  2:50
+    :END:
+*** dehbod
+    :LOGBOOK:
+    CLOCK: [2020-06-15 Mon 13:30]--[2020-06-15 Mon 14:50] =>  1:20
+    :END:
+*** talk with mehdad
+    :LOGBOOK:
+    CLOCK: [2020-06-15 Mon 15:32]--[2020-06-15 Mon 16:45] =>  1:13
+    :END: 
+** DONE workday [2020-06-16 Tue]
+   CLOSED: [2020-07-15 Wed 14:23]
+   - State "DONE"       from              [2020-07-15 Wed 14:23]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-06-16 Tue 10:30]--[2020-06-16 Tue 11:00] =>  0:30
+    :END:
+*** unknown
+    :LOGBOOK:
+    CLOCK: [2020-06-16 Tue 11:00]--[2020-06-16 Tue 18:30] =>  7:30
+    :END:
+** DONE workday  [2020-06-17 Wed]
+   CLOSED: [2020-07-15 Wed 16:36]
+   - State "DONE"       from              [2020-07-15 Wed 16:36]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-06-17 Wed 10:30]--[2020-06-17 Wed 11:00] =>  0:30
+    :END:
+*** unknown 
+    :LOGBOOK:
+    CLOCK: [2020-06-17 Wed 11:00]--[2020-06-17 Wed 18:27] =>  7:27
+    :END:
+** DONE non workday [2020-06-18 Thu]
+   CLOSED: [2020-07-15 Wed 16:36]
+   - State "DONE"       from              [2020-07-15 Wed 16:36]
+*** checking KYC APIs
+    :LOGBOOK:
+    CLOCK: [2020-06-18 Thu 11:00]--[2020-06-18 Thu 13:31] =>  2:31
+    :END:
+** DONE workday [2020-06-20 Sat]
+   CLOSED: [2020-07-15 Wed 16:38]
+   - State "DONE"       from              [2020-07-15 Wed 16:38]
+*** getting KYC version 2 api and communicating fixes 
+    :LOGBOOK:
+    CLOCK: [2020-06-20 Sat 11:00]--[2020-06-20 Sat 16:30] =>  5:30
+    :END:
+*** architecture research
+    :LOGBOOK:
+    CLOCK: [2020-06-20 Sat 22:00]--[2020-06-21 Sun 01:10] =>  3:10
+    :END:
+
+** workday [2020-06-21 Sun]
+*** working on upload server
+
+** workday [2020-06-22 Mon]
+** DONE workday [2020-06-23 Tue]
+   CLOSED: [2020-07-15 Wed 17:07]
+   - State "DONE"       from              [2020-07-15 Wed 17:07]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-06-23 Tue 10:30]--[2020-06-23 Tue 11:05] =>  0:35
+    :END:
+*** communication with Dr
+    :LOGBOOK:
+    CLOCK: [2020-06-23 Tue 13:02]--[2020-06-23 Tue 14:15] =>  1:13
+    :END:
+*** design message structure
+    :LOGBOOK:
+    CLOCK: [2020-06-23 Tue 14:00]--[2020-06-23 Tue 17:00] =>  3:00
+    :END:
+** DONE workday [2020-06-24 Wed]
+   CLOSED: [2020-07-15 Wed 16:43]
+   - State "DONE"       from              [2020-07-15 Wed 16:43]
+*** DONE KYC errors
+    CLOSED: [2020-07-15 Wed 16:40]
+    - State "DONE"       from              [2020-07-15 Wed 16:40]
+    :LOGBOOK:
+    CLOCK: [2020-06-24 Wed 17:23]--[2020-06-24 Wed 20:00] =>  2:37
+    CLOCK: [2020-06-24 Wed 10:00]--[2020-06-24 Wed 15:00] =>  5:00
+    :END:
+*** on-boarding 
+    :LOGBOOK:
+    CLOCK: [2020-06-24 Wed 15:00]--[2020-06-24 Wed 17:00] =>  2:00
+    :END:
+** DONE non workday[2020-06-25 Thu]
+   CLOSED: [2020-07-15 Wed 16:46]
+   - State "DONE"       from              [2020-07-15 Wed 16:46]
+*** testing KYC 
+    :LOGBOOK:
+    CLOCK: [2020-06-25 Thu 17:25]--[2020-06-25 Thu 19:25] =>  2:00
+    CLOCK: [2020-06-25 Thu 11:00]--[2020-06-25 Thu 14:30] =>  3:30
+    :END:
+** DONE non workday [2020-06-26 Fri]
+   CLOSED: [2020-07-15 Wed 16:48]
+   - State "DONE"       from              [2020-07-15 Wed 16:48]
+*** creates tests
+    :LOGBOOK:
+    CLOCK: [2020-06-26 Fri 11:00]--[2020-06-26 Fri 14:25] =>  3:25
+    :END:
+** DONE workday [2020-06-27 Sat]
+   CLOSED: [2020-07-15 Wed 16:53]
+   - State "DONE"       from              [2020-07-15 Wed 16:53]
+*** fighting with infrastructure team
+    :LOGBOOK:
+    CLOCK: [2020-06-27 Sat 10:30]--[2020-06-27 Sat 14:30] =>  4:00
+    :END:
+*** sprint meetings
+    :LOGBOOK:
+    CLOCK: [2020-06-27 Sat 13:00]--[2020-06-27 Sat 14:30] =>  1:30
+    CLOCK: [2020-06-27 Sat 10:30]--[2020-06-27 Sat 11:40] =>  1:10
+    :END:
+** DONE workday [2020-06-28 Sun]
+   CLOSED: [2020-07-15 Wed 18:13]
+   - State "DONE"       from              [2020-07-15 Wed 18:13]
+*** spring 5 retro
+    :LOGBOOK:
+    CLOCK: [2020-06-28 Sun 15:23]--[2020-06-28 Sun 17:55] =>  2:32
+    :END:
+** workday [2020-06-29 Mon]
+   game day?
+** DONE workday [2020-06-30 Tue]
+   CLOSED: [2020-07-15 Wed 17:12]
+   - State "DONE"       from              [2020-07-15 Wed 17:12]
+*** standup 
+    :LOGBOOK:
+    CLOCK: [2020-06-30 Wed 10:30]--[2020-06-30 Tue 11:00] =>  0:30
+    :END:
+*** KYC thanks!
+    :LOGBOOK:
+    CLOCK: [2020-06-30 Mon 11:00]--[2020-06-30 Tue 20:00] =>  9:00
+    :END:
+
+** DONE workday [2020-07-01 Wed]
+   CLOSED: [2020-07-15 Wed 16:56]
+   - State "DONE"       from              [2020-07-15 Wed 16:56]
+*** testing APIs
+    :LOGBOOK:
+    CLOCK: [2020-07-01 Wed 11:00]--[2020-07-01 Wed 20:36] =>  9:36
+    CLOCK: [2020-07-01 Wed 09:00]--[2020-07-01 Wed 10:36] =>  1:36
+    :END:
+*** standup
+    :LOGBOOK:
+    CLOCK: [2020-07-01 Wed 10:30]--[2020-07-01 Wed 11:00] =>  0:30
+    :END:
+** DONE workday [2020-07-04 Sat] 
+   CLOSED: [2020-07-15 Wed 18:15]
+   - State "DONE"       from              [2020-07-15 Wed 18:15]
+** DONE workday [2020-07-05 Sun]
+   CLOSED: [2020-07-15 Wed 18:15]
+   - State "DONE"       from              [2020-07-15 Wed 18:15]
+*** organizing tasks
+    :LOGBOOK:
+    CLOCK: [2020-07-05 Sun 10:00]--[2020-07-05 Sun 17:00] =>  7:00
+    :END:
+** DONE workday [2020-07-06 Mon]
+   CLOSED: [2020-07-15 Wed 18:19]
+   - State "DONE"       from              [2020-07-15 Wed 18:19]
+*** organizing tasks  
+    :LOGBOOK:
+    CLOCK: [2020-07-06 Mon 13:30]--[2020-07-06 Mon 17:00] =>  3:30
+    CLOCK: [2020-07-06 Mon 11:00]--[2020-07-06 Mon 12:59] =>  1:59
+    CLOCK: [2020-07-06 Mon 08:30]--[2020-07-06 Mon 11:00] =>  2:30
+    :END:
+*** architecture
+    :LOGBOOK:
+    CLOCK: [2020-07-06 Mon 17:40]--[2020-07-06 Mon 19:45] =>  2:05
+    :END:
+** workday [2020-07-07 Tue]
+*** unknown
+    :LOGBOOK:
+    CLOCK: [2020-07-07 Tue 11:20]--[2020-07-07 Tue 18:46] =>  7:26
+    :END:
+** workday [2020-07-08 Wed]
+*** talk about architecture and design atom interface
+    :LOGBOOK:
+    CLOCK: [2020-07-08 Wed 14:16]--[2020-07-08 Wed 18:30] =>  4:14
+    :END:
+*** DONE work on Kafka integration 
+    CLOSED: [2020-07-15 Wed 18:49]
+    - State "DONE"       from              [2020-07-15 Wed 18:49]
+    :LOGBOOK:
+    CLOCK: [2020-07-08 Wed 09:30]--[2020-07-08 Wed 14:15] =>  4:45
+    :END:
+** non workday[2020-07-09 Thu]
+*** design protobufs 
+    :LOGBOOK:
+    CLOCK: [2020-07-09 Thu 10:21]--[2020-07-09 Thu 12:21] =>  2:00
+    :END:
+*** design orchestrators
+    :LOGBOOK:
+    CLOCK: [2020-07-09 Thu 14:21]--[2020-07-09 Thu 17:22] =>  3:01
+    :END:
+** workday [2020-07-11 Sat] 
+*** design internal message
+    :LOGBOOK:
+    CLOCK: [2020-07-11 Sat 11:00]--[2020-07-11 Sat 16:24] =>  5:24
+    :END:
+*** back-end internal 
+    :LOGBOOK:
+    CLOCK: [2020-07-11 Sat 14:44]--[2020-07-11 Sat 18:44] =>  4:00
+    :END:
+*** talk with Dr about API design and evolution of software
+    :LOGBOOK:
+    CLOCK: [2020-07-12 Sun 18:24]--[2020-07-12 Sun 20:10] =>  1:46
+    :END:
+*** talk with Hosein about apis
+    :LOGBOOK:
+    CLOCK: [2020-07-11 Sat 14:26]--[2020-07-11 Sat 14:45] =>  0:19
+    :END:
+*** talk with reza 
+    :PROPERTIES:
+    :ORDERED:  t
+    :END:
+    :LOGBOOK:
+    CLOCK: [2020-07-11 Sat 14:45]--[2020-07-11 Sat 15:10] =>  0:25
+    :END:
+*** talk with mehrdad about progress status 
+    :LOGBOOK:
+    CLOCK: [2020-07-11 Sat 21:15]--[2020-07-11 Sat 21:40] =>  0:25
+    :END:
+** workday [2020-07-12 Sun]
+*** 
+** workday [2020-07-13 Mon]
+** workday [2020-07-14 Tue] 
+* mordad
+  https://jira.saman.solutions/projects/BB?selectedItem=com.alphaserve.autoworklog:project-reports
+  https://jira.saman.solutions/browse/BB-864?jql=project%20%3D%20BB%20AND%20status%20%3D%20Done%20AND%20Sprint%20%3D%2035%20AND%20assignee%20in%20(currentUser())
+** DONE workday [2020-07-15 Wed] 
+   CLOSED: [2020-08-16 Sun 02:09]
+   - State "DONE"       from              [2020-08-16 Sun 02:09]
+*** planning 
+    :LOGBOOK:
+    CLOCK: [2020-07-15 Wed 10:30]--[2020-07-15 Wed 12:30] =>  2:00
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-07-15 Wed 12:30]--[2020-07-15 Wed 15:05] =>  2:35
+    :END:
+*** refactoring
+    :LOGBOOK:
+    CLOCK: [2020-07-15 Wed 15:00]--[2020-07-15 Wed 18:00] =>  3:00
+    :END:
+** DONE non workday [2020-07-16 Thu]
+   CLOSED: [2020-08-16 Sun 02:14]
+   - State "DONE"       from              [2020-08-16 Sun 02:14]
+*** communication with Dr
+    :LOGBOOK:
+    CLOCK: [2020-07-16 Thu 20:00]--[2020-07-16 Thu 21:30] =>  1:30
+    :END:
+*** planning
+    :LOGBOOK:
+    CLOCK: [2020-07-16 Thu 12:10]--[2020-07-16 Thu 15:15] =>  3:05
+    :END:
+** DONE workday [2020-07-18 Sat]
+   CLOSED: [2020-08-16 Sun 02:24]
+   - State "DONE"       from              [2020-08-16 Sun 02:24]
+*** daily 
+    :LOGBOOK:
+    CLOCK: [2020-07-18 Sat 10:00]--[2020-07-18 Sat 11:00] =>  1:00
+    :END:
+*** implement account topup atom
+    :LOGBOOK:
+    CLOCK: [2020-07-18 Sat 11:00]--[2020-07-18 Sat 17:00] =>  6:00
+    :END:
+** DONE workday[2020-07-19 Sun]
+   CLOSED: [2020-08-16 Sun 02:28]
+   - State "DONE"       from              [2020-08-16 Sun 02:28]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-07-19 Sun 10:30]--[2020-07-19 Sun 10:50] =>  0:20
+    :END:
+*** communication
+    :LOGBOOK:
+    CLOCK: [2020-07-19 Sun 13:00]--[2020-07-19 Sun 13:20] =>  0:20
+    CLOCK: [2020-07-19 Sun 10:50]--[2020-07-19 Sun 11:10] =>  0:20
+    :END:
+*** checking billPayment API 
+    :LOGBOOK: 
+    CLOCK: [2020-07-19 Sun 11:20]--[2020-07-19 Sun 12:50] =>  1:30
+    :END:
+*** fixing payment
+    :LOGBOOK:
+    CLOCK: [2020-07-19 Sun 13:30]--[2020-07-19 Sun 19:50] =>  6:20
+    :END: 
+** DONE workday [2020-07-20 Mon]
+   CLOSED: [2020-08-16 Sun 14:42]
+   - State "DONE"       from              [2020-08-16 Sun 14:42]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-07-20 Mon 10:30]--[2020-07-20 Mon 11:00] =>  0:30
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-07-20 Mon 16:55]--[2020-07-20 Mon 17:45] =>  0:50
+    :END:
+*** payment flow
+    :LOGBOOK:
+    CLOCK: [2020-07-20 Mon 11:55]--[2020-07-20 Mon 16:55] =>  5:00
+    :END:
+** DONE workday [2020-07-21 Tue]
+   CLOSED: [2020-08-16 Sun 14:52]
+   
+   - State "DONE"       from "TODO"       [2020-08-16 Sun 14:52]
+** DONE workday [2020-07-22 Wed] 
+   CLOSED: [2020-08-16 Sun 14:52]
+
+   - State "DONE"       from "TODO"       [2020-08-16 Sun 14:52]
+   - State "TODO"       from              [2020-08-16 Sun 01:43]
+** DONE non workday [2020-07-23 Thu]
+   CLOSED: [2020-08-16 Sun 14:56]
+   - State "DONE"       from "TODO"       [2020-08-16 Sun 14:56]
+   - State "TODO"       from "NEXT"       [2020-08-16 Sun 01:43]
+   - State "NEXT"       from "TODO"       [2020-08-16 Sun 01:43]
+** DONE non workday [2020-07-24 Fri]
+   CLOSED: [2020-08-16 Sun 14:56]
+   - State "DONE"       from "TODO"       [2020-08-16 Sun 14:56]
+** DONE workday [2020-07-25 Sat]
+   CLOSED: [2020-08-16 Sun 15:15]
+   - State "DONE"       from "TODO"       [2020-08-16 Sun 15:15]
+   - State "TODO"       from              [2020-08-16 Sun 01:44]
+** DONE workday [2020-07-26 Sun]
+   CLOSED: [2020-08-16 Sun 15:15]
+   - State "DONE"       from "TODO"       [2020-08-16 Sun 15:15]
+   - State "TODO"       from              [2020-08-16 Sun 01:44]
+** DONE workday [2020-07-27 Mon]
+   CLOSED: [2020-08-16 Sun 15:14]
+   - State "DONE"       from "TODO"       [2020-08-16 Sun 15:14]
+   - State "TODO"       from              [2020-08-16 Sun 01:44]
+** DONE workday [2020-07-28 Tue]
+   CLOSED: [2020-08-16 Sun 15:14]
+   - State "DONE"       from "TODO"       [2020-08-16 Sun 15:14]
+   - State "TODO"       from              [2020-08-16 Sun 01:45]
+** TODO workday [2020-07-29 Wed]
+   - State "TODO"       from              [2020-08-16 Sun 01:45]
+** TODO workday [2020-07-30 Thu]
+   - State "TODO"       from              [2020-08-16 Sun 01:45]
+** TODO workday [2020-07-31 Fri]
+   - State "TODO"       from              [2020-08-16 Sun 01:45]
+** DONE workday [2020-08-01 Sat]
+   CLOSED: [2020-08-16 Sun 15:40]
+   - State "DONE"       from              [2020-08-16 Sun 15:40]
+*** cleanup git and talk with dr
+    :LOGBOOK:
+    CLOCK: [2020-08-01 Sat 09:00]--[2020-08-01 Sat 10:03] =>  1:03
+    :END:
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-08-01 Sat 10:30]--[2020-08-01 Sat 11:00] =>  0:30
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-08-01 Sat 12:15]--[2020-08-01 Sat 14:20] =>  2:05
+    :END:
+*** talking with morteza and fixing issues
+    :PROPERTIES:
+    :ORDERED:  t
+    :END:
+    :LOGBOOK:
+    CLOCK: [2020-08-01 Sat 16:17]--[2020-08-01 Sat 19:20] =>  3:03
+    :END:
+*** fixing bug related to reording 
+    :LOGBOOK:
+    CLOCK: [2020-08-01 Sat 21:00]--[2020-08-02 Sun 03:50] =>  6:50
+    :END:
+** DONE workday [2020-08-02 Sun]
+   CLOSED: [2020-08-16 Sun 15:43]
+   - State "DONE"       from              [2020-08-16 Sun 15:43]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-08-02 Sun 10:30]--[2020-08-02 Sun 11:00] =>  1:00
+    :END:
+*** fixing payment issues
+    reording tree structure
+    :LOGBOOK:
+    CLOCK: [2020-08-02 Sun 11:05]--[2020-08-02 Sun 18:00] =>  6:55
+    :END:
+** DONE workday [2020-08-03 Mon] 
+   CLOSED: [2020-08-16 Sun 15:44]
+   - State "DONE"       from              [2020-08-16 Sun 15:44]
+*** standup 
+    :LOGBOOK:
+    CLOCK: [2020-08-03 Mon 10:30]--[2020-08-03 Mon 11:00] =>  0:30
+    :END:
+*** fixing payment issues
+    :LOGBOOK:
+    CLOCK: [2020-08-04 Tue 02:00]--[2020-08-04 Tue 02:41] =>  0:41
+    CLOCK: [2020-08-03 Mon 11:00]--[2020-08-03 Mon 22:20] => 11:20
+    :END:
+** DONE workday [2020-08-04 Tue] 
+   CLOSED: [2020-08-16 Sun 15:46]
+   - State "DONE"       from              [2020-08-16 Sun 15:46]
+*** sprint meetings 
+    :LOGBOOK:
+    CLOCK: [2020-08-04 Tue 15:00]--[2020-08-04 Tue 16:00] =>  1:00
+    CLOCK: [2020-08-04 Tue 10:30]--[2020-08-04 Tue 13:40] =>  3:10
+    :END:
+*** internal discussion
+    :LOGBOOK:
+    CLOCK: [2020-08-04 Tue 17:09]--[2020-08-04 Tue 18:35] =>  1:26
+    :END:
+*** checking issues with internet
+    :LOGBOOK:
+    CLOCK: [2020-08-04 Tue 19:09]--[2020-08-04 Tue 23:09] =>  4:00
+    :END:
+** DONE workday [2020-08-05 Wed]
+   CLOSED: [2020-08-16 Sun 15:47]
+   - State "DONE"       from              [2020-08-16 Sun 15:47]
+*** fixing payment 
+    :LOGBOOK:
+    CLOCK: [2020-08-05 Wed 10:30]--[2020-08-05 Wed 19:30] =>  9:00
+    :END:
+*** daily 
+    :LOGBOOK:
+    CLOCK: [2020-08-09 Sun 10:30]--[2020-08-09 Sun 11:00] =>  0:30
+    :END:
+*** unknown work 
+    :LOGBOOK:
+    CLOCK: [2020-08-09 Sun 12:45]--[2020-08-09 Sun 18:30] =>  5:45
+    CLOCK: [2020-08-09 Sun 11:00]--[2020-08-09 Sun 12:30] =>  1:30
+    :END:
+** workday [2020-08-09 Sun]
+** DONE workday [2020-08-10 Mon]
+   CLOSED: [2020-08-16 Sun 18:44]
+   - State "DONE"       from              [2020-08-16 Sun 18:44]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-08-10 Tue 10:30]--[2020-08-10 Mon 11:00] =>  0:30
+    :END:
+*** KYC grooming
+    :LOGBOOK:
+    CLOCK: [2020-08-10 Mon 11:45]--[2020-08-10 Mon 12:50] =>  1:05
+    :END:
+*** BB-1004 fixing UI bugs
+    :LOGBOOK:
+    CLOCK: [2020-08-10 Mon 12:50]--[2020-08-10 Mon 15:50] =>  3:00
+    CLOCK: [2020-08-10 Mon 09:52]--[2020-08-10 Mon 10:30] =>  0:38
+    :END:
+*** debugging APIs
+    :LOGBOOK:
+    CLOCK: [2020-08-10 Mon 15:50]--[2020-08-10 Mon 18:20] =>  2:30
+    :END:
+*** backend internal communication
+    :LOGBOOK:
+    CLOCK: [2020-08-10 Mon 18:30]--[2020-08-10 Mon 19:15] =>  0:45
+    :END:
+** DONE workday [2020-08-11 Tue]
+   CLOSED: [2020-08-16 Sun 18:47]
+   - State "DONE"       from              [2020-08-16 Sun 18:47]
+*** daily
+    :PROPERTIES:
+    :ORDERED:  t
+    :END:
+    :LOGBOOK:
+    CLOCK: [2020-08-11 Tue 10:30]--[2020-08-11 Tue 10:50] =>  0:20
+    :END:
+*** talk with mehrdad
+    :LOGBOOK:
+    CLOCK: [2020-08-11 Tue 10:51]--[2020-08-11 Tue 11:00] =>  0:09
+    :END:
+*** error handling meeting with Dr Morteza Reza Alireza 
+    :LOGBOOK:
+    CLOCK: [2020-08-11 Tue 11:40]--[2020-08-11 Tue 13:10] =>  1:30
+    :END:
+*** internal commiunication
+    :LOGBOOK:
+    CLOCK: [2020-08-11 Tue 13:47]--[2020-08-11 Tue 14:40] =>  0:53
+    CLOCK: [2020-08-11 Tue 13:12]--[2020-08-11 Tue 13:19] =>  0:07
+    :END:
+*** security grooming
+    :LOGBOOK:
+    CLOCK: [2020-08-11 Tue 18:19]--[2020-08-11 Tue 19:35] =>  1:16
+    :END:
+** DONE workday [2020-08-13 Thu]
+   CLOSED: [2020-08-16 Sun 18:52]
+   - State "DONE"       from              [2020-08-16 Sun 18:52]
+*** communication with Dr
+    :LOGBOOK:
+    CLOCK: [2020-08-13 Thu 23:40]--[2020-08-14 Fri 00:55] =>  1:15
+    :END:
+*** working on security
+    :LOGBOOK:
+    CLOCK: [2020-08-13 Thu 12:44]--[2020-08-13 Thu 16:44] =>  4:00
+    :END:
+** DONE workday [2020-08-14 Fri]
+   CLOSED: [2020-08-16 Sun 18:54]
+   - State "DONE"       from              [2020-08-16 Sun 18:54]
+*** working on security 
+    :LOGBOOK:
+    CLOCK: [2020-08-14 Fri 09:46]--[2020-08-14 Fri 14:46] =>  5:00
+    :END:
+** workday [2020-08-15 Sat] 
+*** fixing logs
+    :LOGBOOK:
+    CLOCK: [2020-08-15 Sat 09:15]--[2020-08-15 Sat 09:47] =>  0:32
+    :END:
+*** daily and bugtracking
+    :LOGBOOK:
+    CLOCK: [2020-08-15 Sat 10:30]--[2020-08-15 Sat 11:31] =>  1:01
+    :END:
+*** working on security
+    :LOGBOOK:
+    CLOCK: [2020-08-15 Sat 11:33]--[2020-08-15 Sat 16:46] =>  5:13
+    :END:
+** workday[2020-08-16 Sun] 
+* shahrivar
+** DONE workday [2020-08-16 Sun]
+   CLOSED: [2020-09-18 Fri 13:53]
+   - State "DONE"       from              [2020-09-18 Fri 13:53]
+   - State "TODO"       from              [2020-09-18 Fri 02:20]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-08-16 Sun 10:30]--[2020-08-16 Sun 11:00] =>  0:30
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-08-16 Sun 11:00]--[2020-08-16 Sun 11:40] =>  0:40
+    :END:
+*** DR
+    :LOGBOOK:
+    CLOCK: [2020-08-16 Sun 13:30]--[2020-08-16 Sun 14:20] =>  0:50
+    :END:
+
+*** unknown
+    :LOGBOOK:
+    CLOCK: [2020-08-16 Sun 11:40]--[2020-08-16 Sun 17:50] =>  6:10
+    :END:
+** DONE workday  [2020-08-17 Mon]
+   CLOSED: [2020-09-18 Fri 13:54]
+   - State "DONE"       from              [2020-09-18 Fri 13:54]
+*** working on security
+    :LOGBOOK:
+    CLOCK: [2020-08-17 Mon 08:43]--[2020-08-17 Mon 10:30] =>  1:47
+    CLOCK: [2020-08-17 Mon 12:00]--[2020-08-17 Mon 19:00] =>  7:00
+    :END:
+*** daily and discussions
+    :LOGBOOK:
+    CLOCK: [2020-08-17 Mon 10:30]--[2020-08-17 Mon 11:15] =>  0:45
+    :END:
+
+** DONE workday [2020-08-18 Tue]
+   CLOSED: [2020-09-18 Fri 14:01]
+   - State "DONE"       from              [2020-09-18 Fri 14:01]
+*** testing account top up and reporting api errors error to 
+    :LOGBOOK:
+    CLOCK: [2020-08-18 Tue 08:00]--[2020-08-18 Tue 09:40] =>  1:40
+    :END:
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-08-18 Tue 10:30]--[2020-08-18 Tue 10:55] =>  0:25
+    :END:
+*** talk to Dr
+    :LOGBOOK:
+    CLOCK: [2020-08-18 Tue 09:40]--[2020-08-18 Tue 09:55] =>  0:15
+    :END:
+*** working on security
+    :LOGBOOK:
+    CLOCK: [2020-08-18 Tue 13:00]--[2020-08-18 Tue 18:40] =>  5:40
+    :END:
+** DONE workday workday [2020-08-19 Wed]
+   CLOSED: [2020-09-18 Fri 14:24]
+   - State "DONE"       from              [2020-09-18 Fri 14:24]
+*** discussion/security
+    :LOGBOOK:
+    CLOCK: [2020-08-20 Thu 15:00]--[2020-08-20 Thu 18:00] =>  3:00
+    :END:
+** DONE workday [2020-08-22 Sat] 
+   CLOSED: [2020-09-19 Sat 01:10]
+   - State "DONE"       from "TODO"       [2020-09-19 Sat 01:10]
+   - State "TODO"       from              [2020-09-18 Fri 02:32]
+
+*** unknown
+    :LOGBOOK:
+    CLOCK: [2020-09-17 Thu 10:41]--[2020-09-17 Thu 14:30] =>  3:49
+    :END:
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-08-18 Tue 10:30]--[2020-08-18 Tue 11:00] =>  0:30
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-08-18 Tue 11:00]--[2020-08-18 Tue 11:45] =>  0:45
+    :END:
+*** talk with Dr
+    :LOGBOOK:
+    CLOCK: [2020-08-18 Tue 12:00]--[2020-08-18 Tue 12:55] =>  0:55
+    :END:
+** DONE workday [2020-08-23 Sun] 
+   CLOSED: [2020-09-19 Sat 01:17]
+   - State "DONE"       from "TODO"       [2020-09-19 Sat 01:17]
+   - State "TODO"       from              [2020-09-18 Fri 02:33]
+*** unknown
+    :LOGBOOK:
+    CLOCK: [2020-09-17 Thu 10:41]--[2020-09-17 Thu 16:41] =>  6:00
+    :END:
+    - State "TODO"       from              [2020-09-17 Thu 02:48]
+** DONE workday [2020-08-24 Mon]
+   CLOSED: [2020-09-19 Sat 01:17]
+   - State "DONE"       from "TODO"       [2020-09-19 Sat 01:17]
+   - State "TODO"       from              [2020-09-18 Fri 02:33]
+*** unknown
+    :LOGBOOK:
+    CLOCK: [2020-09-17 Thu 10:42]--[2020-09-17 Thu 16:20] =>  5:38
+    :END:
+    - State "TODO"       from              [2020-09-17 Thu 02:48]
+** TODO workday [2020-08-25 Tue]
+   - State "TODO"       from              [2020-09-18 Fri 02:33]
+*** unknown
+    :LOGBOOK:
+    CLOCK: [2020-09-17 Thu 10:42]--[2020-09-17 Thu 15:42] =>  5:00
+    :END:
+    - State "TODO"       from              [2020-09-17 Thu 02:48]
+** TODO workday [2020-08-26 Wed]
+   - State "TODO"       from              [2020-09-18 Fri 02:33]
+*** unknown
+    :LOGBOOK:
+    CLOCK: [2020-09-17 Thu 10:43]--[2020-09-17 Thu 14:43] =>  4:00
+    :END:
+** DONE non workday [2020-08-30 Sun]
+   CLOSED: [2020-09-18 Fri 14:28]
+   - State "DONE"       from              [2020-09-18 Fri 14:28]
+*** implement transaction list
+    :LOGBOOK:
+    CLOCK: [2020-08-30 Sun 16:00]--[2020-08-30 Sun 21:50] =>  5:50
+    CLOCK: [2020-08-30 Sun 01:30]--[2020-08-30 Sun 09:50] =>  8:20
+    :END:
+** DONE workday [2020-08-31 Mon]
+   CLOSED: [2020-09-18 Fri 14:29]
+   - State "DONE"       from              [2020-09-18 Fri 14:29]
+*** implementing transaction
+    :LOGBOOK:
+    CLOCK: [2020-08-31 Mon 14:16]--[2020-08-31 Mon 18:16] =>  4:00
+    CLOCK: [2020-08-31 Mon 02:00]--[2020-08-31 Mon 10:00] =>  8:00
+    :END:
+** DONE workday [2020-09-01 Tue]  
+   CLOSED: [2020-09-18 Fri 14:34]
+   - State "DONE"       from              [2020-09-18 Fri 14:34]
+*** implementing transaction 
+    :LOGBOOK:
+    CLOCK: [2020-09-01 Tue 09:00]--[2020-09-01 Tue 10:17] =>  1:17
+    :END:
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-09-01 Tue 10:31]--[2020-09-01 Tue 11:00] =>  0:29
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-09-01 Tue 15:00]--[2020-09-01 Tue 15:45] =>  0:45
+    CLOCK: [2020-09-01 Tue 11:00]--[2020-09-01 Tue 11:32] =>  0:32
+    :END:
+*** refactoring transactions
+    :LOGBOOK:
+    CLOCK: [2020-09-01 Tue 12:51]--[2020-09-01 Tue 16:44] =>  3:53
+    :END:
+*** general communication fixing kyc issue and talking to dr
+    :LOGBOOK:
+    CLOCK: [2020-09-01 Tue 19:30]--[2020-09-01 Tue 20:50] =>  1:20
+    :END: 
+** DONE workday [2020-09-02 Wed] 
+   CLOSED: [2020-09-18 Fri 14:47]
+   - State "DONE"       from              [2020-09-18 Fri 14:47]
+*** daily 
+    :LOGBOOK:
+    CLOCK: [2020-09-02 Wed 10:30]--[2020-09-02 Wed 10:50] =>  0:20
+    :END:
+*** internal communication
+**** talk with alireza
+     :LOGBOOK:
+     CLOCK: [2020-09-02 Wed 11:00]--[2020-09-02 Wed 11:50] =>  0:50
+     :END:
+     Internal communication: talk with alireza about code structure and error handling strategy and dependencies on modules
+*** communication
+    :LOGBOOK:
+    CLOCK: [2020-09-02 Wed 17:00]--[2020-09-02 Wed 17:43] =>  0:43
+    CLOCK: [2020-09-02 Wed 15:31]--[2020-09-02 Wed 16:31] =>  1:00
+    :END:
+*** administration
+**** code review
+     :LOGBOOK:
+     CLOCK: [2020-09-02 Wed 12:00]--[2020-09-02 Wed 12:45] =>  0:45
+     :END:
+*** refactoring 
+    :LOGBOOK:
+    CLOCK: [2020-09-02 Wed 12:45]--[2020-09-02 Wed 15:30] =>  2:45
+    :END:
+*** debugging
+    :LOGBOOK:
+    CLOCK: [2020-09-03 Thu 17:00]--[2020-09-03 Thu 18:30] =>  1:30
+    :END:
+** DONE non workday [2020-09-04 Fri]
+   CLOSED: [2020-09-18 Fri 14:49]
+   - State "DONE"       from              [2020-09-18 Fri 14:49]
+*** refactoring transaction
+    :LOGBOOK:
+    CLOCK: [2020-09-04 Fri 12:56]--[2020-09-04 Fri 17:03] =>  4:07
+    :END:
+** DONE workday [2020-09-05 Sat]
+   CLOSED: [2020-09-18 Fri 14:52]
+   - State "DONE"       from              [2020-09-18 Fri 14:52]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-09-05 Sat 10:30]--[2020-09-05 Sat 11:30] =>  1:00
+    :END:
+*** talk with dr
+    :LOGBOOK:
+    CLOCK: [2020-09-05 Sat 14:00]--[2020-09-05 Sat 15:00] =>  1:00
+    :END:
+*** force update grooming
+    :LOGBOOK:
+    CLOCK: [2020-09-05 Sat 15:00]--[2020-09-05 Sat 16:05] =>  1:05
+    :END:
+*** general bugfixing and refactoring 
+    :LOGBOOK:
+    CLOCK: [2020-09-05 Sat 16:34]--[2020-09-05 Sat 20:40] =>  4:06
+    CLOCK: [2020-09-05 Sat 11:10]--[2020-09-05 Sat 14:05] =>  2:55
+    :END:
+** DONE workday [2020-09-06 Sun]
+   CLOSED: [2020-09-18 Fri 14:55]
+   - State "DONE"       from              [2020-09-18 Fri 14:55]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-09-06 Sun 10:30]--[2020-09-06 Sun 11:00] =>  0:30
+    :END:
+*** integrating security 
+    :LOGBOOK:
+    CLOCK: [2020-09-06 Sun 12:00]--[2020-09-06 Sun 20:30] =>  8:30
+    :END:
+*** system
+    :LOGBOOK:
+    CLOCK: [2020-09-06 Sun 20:30]--[2020-09-06 Sun 22:40] =>  2:10
+    :END:
+** DONE workday [2020-09-07 Mon]
+   CLOSED: [2020-09-18 Fri 15:01]
+   - State "DONE"       from              [2020-09-18 Fri 15:01]
+*** internal communication 
+    :LOGBOOK:
+    CLOCK: [2020-09-07 Mon 16:00]--[2020-09-07 Mon 20:00] =>  4:00
+    :END:
+*** fixing build system
+    :LOGBOOK:
+    CLOCK: [2020-09-07 Mon 22:00]--[2020-09-08 Tue 00:40] =>  2:40
+    :END:
+** DONE workday[2020-09-08 Tue]
+   CLOSED: [2020-09-19 Sat 00:19]
+   - State "DONE"       from              [2020-09-19 Sat 00:19]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-09-08 Tue 10:30]--[2020-09-08 Tue 11:00] =>  0:30
+    :END:
+*** fixing build system
+    :LOGBOOK:
+    CLOCK: [2020-09-08 Tue 11:00]--[2020-09-08 Tue 15:00] =>  4:00
+    :END:
+*** setting up our systems
+    :LOGBOOK:
+    CLOCK: [2020-09-08 Tue 15:00]--[2020-09-08 Tue 19:00] =>  4:00
+    :END:
+** DONE workday[2020-09-09 Wed] 
+   CLOSED: [2020-09-19 Sat 00:20]
+   - State "DONE"       from              [2020-09-19 Sat 00:20]
+*** integrating security 
+    :LOGBOOK:
+    CLOCK: [2020-09-13 Sun 11:00]--[2020-09-13 Sun 21:31] => 10:31
+    :END:
+** DONE workday [2020-09-12 Sat]
+   CLOSED: [2020-09-19 Sat 00:27]
+   - State "DONE"       from              [2020-09-19 Sat 00:27]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-09-12 Sat 10:30]--[2020-09-12 Sat 11:00] =>  0:50
+    :END:
+*** fixing date
+    :LOGBOOK:
+    CLOCK: [2020-09-12 Sat 12:21]--[2020-09-12 Sat 14:21] =>  2:00
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-09-12 Sat 11:00]--[2020-09-12 Sat 12:05] =>  1:05
+    :END:
+*** debugging session
+    :LOGBOOK:
+    CLOCK: [2020-09-12 Sat 17:22]--[2020-09-13 Sun 02:22] =>  9:00
+    :END:
+** DONE workday[2020-09-13 Sun]
+   CLOSED: [2020-09-19 Sat 00:29]
+   - State "DONE"       from              [2020-09-19 Sat 00:29]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-09-13 Sun 10:29]--[2020-09-13 Sun 11:00] =>  0:31
+    :END:
+*** working on get owner
+    :LOGBOOK:
+    CLOCK: [2020-09-13 Sun 23:00]--[2020-09-14 Mon 03:10] =>  4:10
+    CLOCK: [2020-09-13 Sun 11:00]--[2020-09-13 Sun 14:30] =>  3:30
+    :END:
+*** talking to Dr
+    :LOGBOOK:
+    CLOCK: [2020-09-13 Sun 22:00]--[2020-09-13 Sun 22:20] =>  0:20
+    :END:
+** DONE workday [2020-09-14 Mon] 
+   CLOSED: [2020-09-19 Sat 00:41]
+   - State "DONE"       from              [2020-09-19 Sat 00:41]
+*** preparing deployment
+    :LOGBOOK:
+    CLOCK: [2020-09-14 Mon 10:35]--[2020-09-15 Tue 01:35] => 15:00
+    :END:
+** workday [2020-09-15 Tue] 
+*** deployment
+    :LOGBOOK:
+    CLOCK: [2020-09-15 Tue 07:34]--[2020-09-15 Tue 21:30] => 13:56
+    :END:
+* mehr
+** DONE workday[2020-09-16 Wed] 
+   CLOSED: [2020-10-18 Sun 11:35]
+   - State "DONE"       from              [2020-10-18 Sun 11:35]
+*** fixing bugs  BLUR-1524
+    :LOGBOOK:
+    CLOCK: [2020-09-16 Wed 10:30]--[2020-09-17 Thu 00:33] => 14:03
+    :END:
+** DONE non workday[2020-09-17 Thu] 
+   CLOSED: [2020-10-18 Sun 11:35]
+   - State "DONE"       from              [2020-10-18 Sun 11:35]
+*** clean up profiles and config BLUR-1524
+    :LOGBOOK:
+    CLOCK: [2020-09-17 Thu 10:35]--[2020-09-17 Thu 13:35] =>  3:00
+    :END:
+*** talk with dr
+    :LOGBOOK:
+    CLOCK: [2020-09-17 Thu 15:10]--[2020-09-17 Thu 15:40] =>  0:30
+    :EN
+** DONE non workday[2020-09-18 Fri]
+   CLOSED: [2020-10-18 Sun 11:38]
+   - State "DONE"       from              [2020-10-18 Sun 11:38]
+*** importing tasks
+    :LOGBOOK:
+    CLOCK: [2020-09-19 Sat 10:03]--[2020-09-19 Sat 13:03] =>  3:00
+    :END:
+** DONE workday [2020-09-19 Sat] 
+   CLOSED: [2020-10-18 Sun 11:43]
+   - State "DONE"       from              [2020-10-18 Sun 11:43]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-09-19 Sat 10:30]--[2020-09-19 Sat 10:50] =>  0:20
+    :END:
+*** communication
+**** alireza
+     :LOGBOOK:
+     CLOCK: [2020-09-19 Sat 12:30]--[2020-09-19 Sat 12:36] =>  0:06
+     CLOCK: [2020-09-19 Sat 10:50]--[2020-09-19 Sat 11:20] =>  0:30
+     :END:
+**** Dr
+     :LOGBOOK:
+     CLOCK: [2020-09-19 Sat 12:00]--[2020-09-19 Sat 12:26] =>  0:26
+     :END:
+     logs redis deployment
+**** badjelan
+     :LOGBOOK:
+     CLOCK: [2020-09-19 Sat 11:40]--[2020-09-19 Sat 12:00] =>  0:20
+     :END:
+     deployment plan, our logging strategy
+*** working on logs
+*** fixing broken logos due to changes in networking infrastructure BLUR-1524
+    :LOGBOOK:
+    CLOCK: [2020-09-19 Sat 15:00]--[2020-09-20 Sun 00:00] =>  9:00
+    :END:
+*** deploying to production and debugging BLUR-1524
+    :LOGBOOK:
+    CLOCK: [2020-09-19 Sat 12:15]--[2020-09-19 Sat 13:12] =>  0:57
+    :END:
+** DONE workday[2020-09-20 Sun]
+   CLOSED: [2020-10-18 Sun 11:48]
+   - State "DONE"       from              [2020-10-18 Sun 11:48]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-09-20 Sun 10:30]--[2020-09-20 Sun 11:00] =>  0:30
+    :END:
+*** internal communication about future tasks
+    :LOGBOOK:
+    CLOCK: [2020-09-20 Sun 11:00]--[2020-09-20 Sun 11:22] =>  0:22
+    :END:
+*** adding avatar BLUR-1524
+    :LOGBOOK:
+    CLOCK: [2020-09-20 Sun 09:50]--[2020-09-20 Sun 10:30] =>  0:40
+    :END:
+*** talking to alireza
+    :LOGBOOK:
+    CLOCK: [2020-09-20 Sun 11:20]--[2020-09-20 Sun 12:05] =>  0:45
+    :END:
+*** fixing softlunch bugs BLUR-1524
+    :LOGBOOK:
+    CLOCK: [2020-09-20 Sun 12:53]--[2020-09-20 Sun 18:53] =>  6:00
+    :END:
+** DONE workday [2020-09-21 Mon] 
+   CLOSED: [2020-10-18 Sun 11:50]
+   - State "DONE"       from              [2020-10-18 Sun 11:50]
+*** badjelan BLUR-1525
+    :LOGBOOK:
+    CLOCK: [2020-09-21 Mon 12:00]--[2020-09-21 Mon 18:55] =>  6:55
+    :END:
+    
+** DONE workday [2020-09-22 Tue]
+   CLOSED: [2020-10-18 Sun 11:53]
+   - State "DONE"       from              [2020-10-18 Sun 11:53]
+*** working on logs BLUR-1526
+    :LOGBOOK:
+    CLOCK: [2020-09-22 Tue 12:00]--[2020-09-22 Tue 19:50] =>  7:50
+    :END:
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-09-22 Tue 10:30]--[2020-09-22 Tue 11:00] =>  0:30
+    :END:
+** DONE workday[2020-09-23 Wed] 
+   CLOSED: [2020-10-18 Sun 12:00]
+   - State "DONE"       from              [2020-10-18 Sun 12:00]
+*** daily 
+    :LOGBOOK:
+    CLOCK: [2020-09-23 Wed 10:30]--[2020-09-23 Wed 11:00] =>  0:30
+    :END:
+*** working on logs BLUR-1526
+There was lots of interruption which was not possible to log separately so they become part of logs task.
+
+    :LOGBOOK:
+    CLOCK: [2020-09-23 Wed 12:00]--[2020-09-23 Wed 19:50] =>  7:50
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-09-23 Wed 11:00]--[2020-09-23 Wed 12:05] =>  1:05
+    :END:
+*** DR
+    :LOGBOOK:
+    CLOCK: [2020-09-23 Wed 21:00]--[2020-09-23 Wed 21:40] =>  0:40
+    :END:
+*** badjelan  BLUR-1525
+    :LOGBOOK:
+    CLOCK: [2020-10-18 Sun 17:00]--[2020-10-18 Sun 19:10] =>  2:10
+    :END:
+** DONE workday [2020-09-24 Thu] 
+   CLOSED: [2020-10-18 Sun 12:01]
+   - State "DONE"       from              [2020-10-18 Sun 12:01]
+*** working on logs BLUR-1526
+    :LOGBOOK:
+    CLOCK: [2020-09-24 Thu 12:00]--[2020-09-24 Thu 17:50] =>  5:50
+    :END:
+** DONE workday [2020-09-26 Sat] 
+   CLOSED: [2020-10-18 Sun 12:02]
+   - State "DONE"       from              [2020-10-18 Sun 12:02]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-09-26 Sat 10:30]--[2020-09-26 Sat 11:20] =>  0:50
+    :END:
+*** working on logs BLUR-1526
+    :LOGBOOK:
+    CLOCK: [2020-09-26 Sat 12:00]--[2020-09-26 Sat 14:50] =>  2:50
+    :END:
+*** badjelan BLUR-1525
+    :LOGBOOK:
+    CLOCK: [2020-09-26 Sat 15:04]--[2020-09-26 Sat 19:04] =>  4:00
+    :END:
+
+** DONE workday [2020-09-27 یکشنبه] 
+   CLOSED: [2020-10-18 Sun 12:04]
+   - State "DONE"       from              [2020-10-18 Sun 12:04]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-09-27 یکشنبه 10:30]--[2020-09-27 یکشنبه 11:05] =>  0:35
+    :END:
+*** badjelan BLUR-1525
+    :LOGBOOK:
+    CLOCK: [2020-09-27 Sun 12:00]--[2020-09-27 Sun 18:40] =>  6:40
+    :END:
+*** internal communication 
+    :LOGBOOK:
+    CLOCK: [2020-09-27 Fri 11:00]--[2020-09-27 Sun 11:55] =>  0:55
+    :END:
+    
+
+-o "%(playlist)s\%(playlist_index)s - %(title)s.%(ext)s"
+** DONE workday[2020-09-29 Tue]
+   CLOSED: [2020-10-18 Sun 12:15]
+   - State "DONE"       from              [2020-10-18 Sun 12:15]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-09-29 Fri 10:30]--[2020-09-29 Tue 11:00] =>  0:30
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-09-29 Tue 17:30]--[2020-09-29 Tue 18:00] =>  0:30
+    CLOCK: [2020-09-29 Tue 11:00]--[2020-09-29 Tue 12:00] =>  1:00
+    :END:
+*** badjelan
+    :LOGBOOK:
+    CLOCK: [2020-10-18 Sun 18:30]--[2020-10-18 Sun 20:45] =>  2:15
+    CLOCK: [2020-09-29 Tue 12:00]--[2020-09-29 Tue 17:30] =>  5:30
+    :END:
+*** Dr
+    :LOGBOOK:
+    CLOCK: [2020-10-18 Sun 18:00]--[2020-10-18 Sun 18:50] =>  0:50
+    :END:
+** DONE workday [2020-09-30 Wed]
+   CLOSED: [2020-10-18 Sun 12:21]
+   - State "DONE"       from              [2020-10-18 Sun 12:21]
+*** daily 
+    :LOGBOOK:
+    CLOCK: [2020-09-30 Wed 10:30]--[2020-09-30 Wed 11:00] =>  0:30
+    :END:
+*** internal communication 
+    :LOGBOOK:
+    CLOCK: [2020-09-30 Wed 12:00]--[2020-09-30 Wed 20:00] =>  8:00
+    :END:
+*** task management
+    :LOGBOOK:
+    CLOCK: [2020-09-30 Wed 20:10]--[2020-09-30 Wed 21:00] =>  0:50
+    :END:
+** DONE non workday [2020-10-01 Thu] 
+   CLOSED: [2020-10-18 Sun 12:22]
+   - State "DONE"       from              [2020-10-18 Sun 12:22]
+*** Fixing SIT BLUR-1525
+    :LOGBOOK:
+    CLOCK: [2020-10-01 Thu 10:47]--[2020-10-01 Thu 14:35] =>  3:48
+    :END:
+** DONE workday [2020-10-03 Sat] 
+   CLOSED: [2020-10-18 Sun 12:24]
+   - State "DONE"       from              [2020-10-18 Sun 12:24]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-10-03 Sat 10:30]--[2020-10-03 Sat 11:00] =>  0:30
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-10-03 Sat 11:00]--[2020-10-03 Sat 12:40] =>  1:40
+    :END:
+*** fixing SIT deployment and bugs BLUR-1525
+    :LOGBOOK:
+    CLOCK: [2020-10-03 Sat 23:00]--[2020-10-03 Sat 23:45] =>  0:45
+    CLOCK: [2020-10-03 Sat 20:00]--[2020-10-03 Sat 21:30] =>  1:30
+    CLOCK: [2020-10-03 Sat 13:00]--[2020-10-03 Sat 17:30] =>  4:30
+    :END:
+** DONE workday [2020-10-04 Sun] 
+   CLOSED: [2020-10-18 Sun 12:29]
+   - State "DONE"       from              [2020-10-18 Sun 12:29]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-10-04 Sun 10:30]--[2020-10-04 Sun 10:45] =>  0:15
+    :END:
+*** internal communication 
+    about 
+    :LOGBOOK:
+    CLOCK: [2020-10-04 Sun 10:50]--[2020-10-04 Sun 11:15] =>  0:25
+    :END:
+*** tesing application and logs
+    :LOGBOOK:
+    CLOCK: [2020-10-04 Sun 11:50]--[2020-10-04 Sun 16:31] =>  4:41
+    :END:
+*** fixing KYC SIT deployment BLUR-1525
+    :LOGBOOK:
+    CLOCK: [2020-10-04 Sun 16:30]--[2020-10-04 Sun 21:30] =>  5:00
+    :END:
+** DONE workday [2020-10-05 Mon]
+   CLOSED: [2020-10-18 Sun 12:33]
+   - State "DONE"       from              [2020-10-18 Sun 12:33]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-10-05 Mon 10:30]--[2020-10-05 Mon 11:00] =>  0:30
+    :END:
+*** internal communication 
+    :LOGBOOK:
+    CLOCK: [2020-10-05 Mon 11:00]--[2020-10-05 Mon 11:45] =>  0:45
+    :END:
+*** Operation force deployment BLUR-1525
+    :LOGBOOK:
+    CLOCK: [2020-10-05 Mon 12:05]--[2020-10-05 Mon 19:59] =>  7:54
+    :END:
+*** communication with dr about tasks
+    :LOGBOOK:
+    CLOCK: [2020-10-05 Mon 23:35]--[2020-10-06 Tue 00:30] =>  0:55
+    :END:
+** DONE workday [2020-10-06 Tue] 
+   CLOSED: [2020-10-18 Sun 12:39]
+   - State "DONE"       from              [2020-10-18 Sun 12:39]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-10-06 Tue 10:30]--[2020-10-06 Tue 11:05] =>  0:35
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-10-06 Tue 11:05]--[2020-10-06 Tue 11:20] =>  0:15
+    :END:
+*** talk with Dr 
+    :LOGBOOK:
+    CLOCK: [2020-10-06 Tue 23:16]--[2020-10-07 Wed 00:00] =>  0:44
+    CLOCK: [2020-10-06 Tue 18:43]--[2020-10-06 Tue 19:30] =>  0:47
+    CLOCK: [2020-10-06 Tue 11:20]--[2020-10-06 Tue 11:55] =>  0:35
+    :END:
+*** fixing issues with deployment and tracking bugs BLUR-1525
+    :LOGBOOK:
+    CLOCK: [2020-10-06 Tue 16:42]--[2020-10-06 Tue 19:00] =>  2:18
+    CLOCK: [2020-10-06 Tue 12:05]--[2020-10-06 Tue 13:57] =>  1:52
+    :END:
+*** error handling design BLUR-1527
+    :LOGBOOK:
+    CLOCK: [2020-10-06 Tue 13:59]--[2020-10-06 Tue 16:42] =>  2:43
+    :END:
+*** clean up jira tasks 
+    :LOGBOOK:
+    CLOCK: [2020-10-06 Tue 20:44]--[2020-10-06 Tue 22:10] =>  1:26
+    :END:
+** DONE workday [2020-10-07 Wed]
+   CLOSED: [2020-10-18 Sun 12:41]
+   - State "DONE"       from              [2020-10-18 Sun 12:41]
+*** retro
+    :LOGBOOK:
+    CLOCK: [2020-10-07 Wed 12:15]--[2020-10-07 Wed 16:45] =>  4:30
+    :END:
+*** internal communication 
+    :LOGBOOK:
+    CLOCK: [2020-10-07 Wed 16:46]--[2020-10-07 Wed 17:47] =>  1:01
+    :END:
+** DONE workday [2020-10-10 Sat]
+   CLOSED: [2020-10-18 Sun 12:42]
+   - State "DONE"       from              [2020-10-18 Sun 12:42]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-10-10 Sat 10:30]--[2020-10-10 Sat 11:15] =>  0:45
+    :END:
+*** internal communication with alireza
+    :LOGBOOK:
+    CLOCK: [2020-10-10 Sat 13:05]--[2020-10-10 Sat 13:48] =>  0:43
+    :END:
+** DONE workday [2020-10-11 Sun]
+   CLOSED: [2020-10-18 Sun 12:43]
+   - State "DONE"       from              [2020-10-18 Sun 12:43]
+*** daily 
+    :LOGBOOK:
+    CLOCK: [2020-10-18 Sun 10:30]--[2020-10-18 Sun 11:00] =>  0:30
+    :END:
+*** clean up tasks
+    :LOGBOOK:
+    CLOCK: [2020-10-11 Sun 13:50]--[2020-10-11 Sun 17:50] =>  4:00
+    :END:
+** DONE workday[2020-10-12 Mon]
+   CLOSED: [2020-10-18 Sun 12:48]
+   - State "DONE"       from              [2020-10-18 Sun 12:48]
+*** fixing bugs
+    :LOGBOOK:
+    CLOCK: [2020-10-18 Sun 12:35]--[2020-10-18 Sun 17:50] =>  5:15
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-10-18 Sun 11:00]--[2020-10-18 Sun 12:25] =>  1:25
+    :END:
+*** DR
+    :LOGBOOK:
+    CLOCK: [2020-10-12 Mon 15:00]--[2020-10-12 Mon 16:35] =>  1:35
+    :END:
+** DONE workday[2020-10-13 Tue]
+   CLOSED: [2020-10-18 Sun 12:49]
+   - State "DONE"       from              [2020-10-18 Sun 12:49]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-10-13 Tue 10:30]--[2020-10-13 Tue 11:00] =>  0:30
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-10-13 Tue 14:00]--[2020-10-13 Tue 19:50] =>  5:50
+    :END:
+*** refactoring 
+    :LOGBOOK:
+    CLOCK: [2020-10-13 Tue 20:00]--[2020-10-13 Tue 21:00] =>  1:00
+    :END:
+** DONE non workday[2020-10-15 Thu]
+   CLOSED: [2020-10-18 Sun 12:51]
+   - State "DONE"       from              [2020-10-18 Sun 12:51]
+*** report
+    :LOGBOOK:
+    CLOCK: [2020-10-15 Thu 21:00]--[2020-10-15 Thu 22:15] =>  1:15
+    :END:
+* aban
+** DONE non workday[2020-10-17 Sat]
+   CLOSED: [2020-10-18 Sun 12:51]
+   - State "DONE"       from              [2020-10-18 Sun 12:51]
+*** cleanup tasks
+    :LOGBOOK:
+    CLOCK: [2020-10-17 Sat 23:51]--[2020-10-18 Sun 01:51] =>  2:00
+    :END:
+** DONE workday [2020-10-19 Mon]
+   CLOSED: [2020-11-14 Sat 13:40]
+   - State "DONE"       from              [2020-11-14 Sat 13:40]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-10-19 Mon 10:30]--[2020-10-19 Mon 11:15] =>  0:45
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-10-19 Mon 11:15]--[2020-10-19 Mon 11:42] =>  0:27
+    :END:
+*** Dr
+    :LOGBOOK:
+    CLOCK: [2020-10-19 Mon 11:43]--[2020-10-19 Mon 11:55] =>  0:12
+    :END:
+*** refactoring protobufs
+    :LOGBOOK:
+    CLOCK: [2020-10-19 Mon 12:50]--[2020-10-19 Mon 15:25] =>  2:35
+    CLOCK: [2020-10-19 Mon 12:00]--[2020-10-19 Mon 12:43] =>  0:43
+    :END:
+*** task definition bbf-1553
+    :LOGBOOK:
+    CLOCK: [2020-10-19 Mon 16:45]--[2020-10-19 Mon 17:31] =>  0:46
+    CLOCK: [2020-10-19 Mon 16:26]--[2020-10-19 Mon 16:43] =>  0:17
+    :END:
+** DONE workday[2020-10-20 Tue]
+   CLOSED: [2020-11-14 Sat 13:47]
+   - State "DONE"       from              [2020-11-14 Sat 13:47]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-10-20 Tue 10:30]--[2020-10-20 Tue 11:00] =>  0:30
+    :END:
+*** internal communication 
+    :LOGBOOK:
+    CLOCK: [2020-10-21 Wed 11:00]--[2020-10-21 Wed 11:40] =>  0:40
+    :END:
+*** update protobuf
+    :LOGBOOK:
+    CLOCK: [2020-10-20 Tue 12:00]--[2020-10-20 Tue 16:06] =>  4:06
+    :END:
+*** Dr 
+    :LOGBOOK:
+    CLOCK: [2020-10-20 Tue 20:08]--[2020-10-20 Tue 21:08] =>  1:00
+    :END:
+    about task definition, Card tasks and fixing
+** DONE workday [2020-10-21 Wed]
+   CLOSED: [2020-11-14 Sat 13:50]
+   - State "DONE"       from              [2020-11-14 Sat 13:50]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-10-21 Wed 10:30]--[2020-10-21 Wed 11:00] =>  0:30
+    :END:
+*** internal communication
+    about following tasks
+    :LOGBOOK:
+    CLOCK: [2020-10-21 Wed 10:15]--[2020-10-21 Wed 10:30] =>  0:15
+    :END:
+*** add correlation id , ... BBF-1442
+    :LOGBOOK:
+    CLOCK: [2020-10-21 Wed 13:40]--[2020-10-21 Wed 17:24] =>  3:44
+    CLOCK: [2020-10-21 Wed 11:22]--[2020-10-21 Wed 13:05] =>  1:43
+    :END:
+*** communication with hossein
+    help him with navigating protobufs 
+    :LOGBOOK:
+    CLOCK: [2020-10-21 Wed 13:05]--[2020-10-21 Wed 13:37] =>  0:32
+    :END:
+    about 
+** DONE workday [2020-10-24 Sat]
+   CLOSED: [2020-11-14 Sat 13:53]
+   - State "DONE"       from              [2020-11-14 Sat 13:53]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-10-24 Sat 10:30]--[2020-10-24 Sat 10:50] =>  0:20
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-10-24 Sat 10:50]--[2020-10-24 Sat 11:05] =>  0:15
+    :END:
+*** add correlation bbf-1442
+    :LOGBOOK:
+    CLOCK: [2020-10-24 Sat 17:25]--[2020-10-24 Sat 18:17] =>  0:52
+    CLOCK: [2020-10-24 Sat 16:10]--[2020-10-24 Sat 17:21] =>  1:11
+    CLOCK: [2020-10-24 Sat 15:05]--[2020-10-24 Sat 16:01] =>  0:56
+    CLOCK: [2020-10-24 Sat 11:56]--[2020-10-24 Sat 14:30] =>  2:34
+    :END:
+*** talk to dr
+    :LOGBOOK:
+    CLOCK: [2020-10-24 Sat 14:30]--[2020-10-24 Sat 14:55] =>  0:25
+    :END:
+** DONE workday [2020-10-26 Mon]
+   CLOSED: [2020-11-17 Tue 01:03]
+   - State "DONE"       from              [2020-11-17 Tue 01:03]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-10-26 Mon 10:30]--[2020-10-26 Mon 10:55] =>  0:25
+    :END:
+*** Dr
+    :LOGBOOK:
+    CLOCK: [2020-10-26 Mon 11:30]--[2020-10-26 Mon 12:25] =>  0:55
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-10-26 Mon 12:30]--[2020-10-26 Mon 13:05] =>  0:35
+    :END:
+*** a bunch of cleanup BBF-1109
+    :LOGBOOK:
+    CLOCK: [2020-10-26 Mon 14:30]--[2020-10-26 Mon 20:05] =>  5:35
+    :END:
+** DONE workday [2020-10-27 Tue] 
+   CLOSED: [2020-11-17 Tue 01:03]
+   - State "DONE"       from              [2020-11-17 Tue 01:03]
+*** DONE daily
+    CLOSED: [2020-11-14 Sat 19:46]
+    - State "DONE"       from              [2020-11-14 Sat 19:46]
+    :LOGBOOK:
+    CLOCK: [2020-10-27 Tue 10:30]--[2020-10-27 Tue 10:45] =>  0:15
+    :END:
+*** DONE cleaning up tasks 
+    CLOSED: [2020-11-14 Sat 19:46]
+    - State "DONE"       from              [2020-11-14 Sat 19:46]
+    :LOGBOOK:
+    CLOCK: [2020-10-27 Tue 10:45]--[2020-10-27 Tue 11:55] =>  1:10
+    :END:
+*** DONE internal communication
+    CLOSED: [2020-11-14 Sat 19:46]
+    - State "DONE"       from              [2020-11-14 Sat 19:46]
+    :LOGBOOK:
+    CLOCK: [2020-10-27 Tue 11:55]--[2020-10-27 Tue 12:10] =>  0:15
+    :END:
+*** DONE add correlation bbf-1442 
+    CLOSED: [2020-11-14 Sat 19:46]
+    - State "DONE"       from              [2020-11-14 Sat 19:46]
+    fixing 
+    :LOGBOOK:
+    CLOCK: [2020-10-27 Tue 16:08]--[2020-10-27 Tue 17:24] =>  1:16
+    :END:
+*** DONE a bunch of clean up BBF-1109
+    CLOSED: [2020-11-17 Tue 01:03]
+    - State "DONE"       from              [2020-11-17 Tue 01:03]
+    :LOGBOOK:
+    CLOCK: [2020-10-27 Tue 14:53]--[2020-10-27 Tue 17:53] =>  3:00
+    :END:
+    
+** DONE workday [2020-10-28 Wed]
+   CLOSED: [2020-11-14 Sat 19:53]
+   - State "DONE"       from              [2020-11-14 Sat 19:53]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-10-28 Wed 10:30]--[2020-10-28 Wed 10:45] =>  0:15
+    :END:
+*** internal communication with alireza
+    :LOGBOOK:
+    CLOCK: [2020-10-28 Wed 11:25]--[2020-10-28 Wed 12:00] =>  0:35
+    :END:
+    about correlation id, transactions id and their usage 
+*** Dr
+**** talk about deployment in production for 
+     :LOGBOOK:
+     CLOCK: [2020-10-28 Wed 10:55]--[2020-10-28 Wed 11:10] =>  0:15
+     :END:
+*** fixing minio issue in sit
+    :LOGBOOK:
+    CLOCK: [2020-10-28 Wed 12:10]--[2020-10-28 Wed 14:45] =>  2:35
+    :END:
+*** fixing BBF-1109
+    :LOGBOOK:
+    CLOCK: [2020-10-28 Sat 15:00]--[2020-10-28 Wed 18:00] =>  3:00
+    :END:
+    
+** DONE workday [2020-10-31 Sat] 
+   CLOSED: [2020-11-17 Tue 16:18]
+   - State "DONE"       from              [2020-11-17 Tue 16:18]
+*** daily 
+    :LOGBOOK:
+    CLOCK: [2020-10-31 Sat 10:30]--[2020-10-31 Sat 10:55] =>  0:25
+    :END:
+*** protobuf refactoring 
+    :LOGBOOK:
+    CLOCK: [2020-10-31 Sat 14:30]--[2020-10-31 Sat 20:05] =>  5:35
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-10-31 Sat 11:50]--[2020-10-31 Sat 12:15] =>  0:25
+    :END:
+*** Dr
+    :LOGBOOK:
+    CLOCK: [2020-10-31 Sat 13:30]--[2020-10-31 Sat 14:05] =>  0:35
+    :END:
+** DONE workday [2020-11-01 Sun]
+   CLOSED: [2020-11-17 Tue 16:19]
+   - State "DONE"       from              [2020-11-17 Tue 16:19]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-01 Sun 10:30]--[2020-11-01 Sun 10:50] =>  0:20
+    :END:
+*** Dr
+    :LOGBOOK:
+    CLOCK: [2020-11-01 Sun 12:30]--[2020-11-01 Sun 12:55] =>  0:25
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-11-01 Sun 11:25]--[2020-11-01 Sun 12:00] =>  0:35
+    :END:
+*** protobuf refactoring
+    :LOGBOOK:
+    CLOCK: [2020-11-01 Sun 12:55]--[2020-11-01 Sun 18:55] =>  6:00
+    :END:
+** DONE workday [2020-11-02 Mon] 
+   CLOSED: [2020-11-17 Tue 16:21]
+   - State "DONE"       from              [2020-11-17 Tue 16:21]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-02 Tue 10:30]--[2020-11-02 Mon 10:55] =>  0:25
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-11-02 Mon 11:00]--[2020-11-02 Mon 11:20] =>  0:20
+    :END:
+*** Dr
+    :LOGBOOK:
+    CLOCK: [2020-11-02 Mon 12:00]--[2020-11-02 Mon 12:25] =>  0:25
+    :END:
+*** Talk to Hossein
+    :LOGBOOK:
+    CLOCK: [2020-11-02 Mon 16:10]--[2020-11-02 Mon 16:45] =>  0:35
+    :END:
+*** card internal protobuf design
+    :LOGBOOK:
+    CLOCK: [2020-11-02 Mon 13:40]--[2020-11-02 Mon 16:10] =>  2:30
+    CLOCK: [2020-11-02 Mon 16:45]--[2020-11-02 Mon 19:05] =>  2:20
+    :END:
+** DONE workday [2020-11-03 Tue]
+   CLOSED: [2020-11-17 Tue 16:23]
+   - State "DONE"       from              [2020-11-17 Tue 16:23]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-03 Tue 10:30]--[2020-11-03 Tue 10:50] =>  0:20
+    :END:
+*** Talk to hossein
+    :LOGBOOK:
+    CLOCK: [2020-11-03 Tue 15:30]--[2020-11-03 Tue 16:25] =>  0:55
+    :END:
+*** card internal protobuf design
+    :LOGBOOK:
+    CLOCK: [2020-11-02 Mon 13:40]--[2020-11-02 Mon 15:25] =>  1:45
+    :END:
+*** fixing protobufs 
+    :LOGBOOK:
+    CLOCK: [2020-11-02 Mon 11:40]--[2020-11-02 Mon 13:20] =>  1:40
+    CLOCK: [2020-11-02 Mon 16:40]--[2020-11-02 Mon 17:20] =>  0:40
+    :END:
+** DONE workday [2020-11-04 Wed]
+   CLOSED: [2020-11-17 Tue 16:27]
+   - State "DONE"       from              [2020-11-17 Tue 16:27]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-04 Wed 10:30]--[2020-11-04 Wed 10:55] =>  0:25
+    :END:
+*** debugging card apis 
+    :LOGBOOK:
+    CLOCK: [2020-11-04 Tue 11:00]--[2020-11-04 Wed 15:00] =>  4:00
+    CLOCK: [2020-11-04 Wed 17:00]--[2020-11-04 Wed 22:00] =>  5:00
+    CLOCK: [2020-11-05 Thu 00:25]--[2020-11-05 Thu 02:00] =>  1:35
+    :END:
+** DONE workday [2020-11-07 Sat]
+   CLOSED: [2020-11-17 Tue 16:28]
+   - State "DONE"       from              [2020-11-17 Tue 16:28]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-08 Sun 10:30]--[2020-11-08 Sun 10:50] =>  0:20
+    :END:
+*** fixing protobufs
+    :LOGBOOK:
+    CLOCK: [2020-11-07 Sat 11:30]--[2020-11-07 Sat 17:10] =>  5:40
+    :END:
+*** talking to Dr 
+    :LOGBOOK:
+    CLOCK: [2020-11-07 Sat 11:32]--[2020-11-07 Sat 12:32] =>  1:00
+    :END:
+** DONE workday [2020-11-08 Sun]
+   CLOSED: [2020-11-17 Tue 16:29]
+   - State "DONE"       from              [2020-11-17 Tue 16:29]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-08 Sun 10:30]--[2020-11-08 Sun 11:00] =>  0:30
+    :END:
+*** fixing protobuf
+    :LOGBOOK:
+    CLOCK: [2020-11-08 Sun 15:00]--[2020-11-08 Sun 16:40] =>  1:40
+    CLOCK: [2020-11-08 Sun 12:00]--[2020-11-08 Sun 14:20] =>  2:20
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-11-08 Sun 11:00]--[2020-11-08 Sun 11:40] =>  0:40
+    :END:
+** DONE workday [2020-11-09 Mon]
+   CLOSED: [2020-11-17 Tue 16:30]
+   - State "DONE"       from              [2020-11-17 Tue 16:30]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-09 Mon 10:30]--[2020-11-09 Mon 11:00] =>  0:30
+    :END:
+*** fixing protobuf
+    :LOGBOOK:
+    CLOCK: [2020-11-09 Mon 14:00]--[2020-11-09 Mon 16:45] =>  2:45
+    CLOCK: [2020-11-09 Mon 11:00]--[2020-11-09 Mon 13:10] =>  2:10
+    :END:
+*** inconsistency in response
+    :LOGBOOK:
+    CLOCK: [2020-11-09 Mon 17:00]--[2020-11-09 Mon 17:45] =>  0:45
+    :END:
+
+** DONE workday [2020-11-10 Tue]
+   CLOSED: [2020-11-17 Tue 16:31]
+   - State "DONE"       from              [2020-11-17 Tue 16:31]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-09 Mon 10:30]--[2020-11-09 Mon 11:00] =>  0:30
+    :END:
+*** fixing protobuf 
+    :LOGBOOK:
+    CLOCK: [2020-11-10 Tue 14:00]--[2020-11-10 Tue 17:10] =>  3:10
+    CLOCK: [2020-11-10 Tue 11:00]--[2020-11-10 Tue 13:30] =>  2:30
+    :END:
+** DONE workday [2020-11-11 Wed]
+   CLOSED: [2020-11-17 Tue 16:33]
+   - State "DONE"       from              [2020-11-17 Tue 16:33]
+*** demo day
+    :LOGBOOK:
+    CLOCK: [2020-11-11 Wed 16:00]--[2020-11-11 Wed 18:15] =>  2:15
+    CLOCK: [2020-11-11 Wed 10:30]--[2020-11-11 Wed 11:15] =>  0:45
+    :END:
+*** Dr
+    tracking 
+    :LOGBOOK:
+    CLOCK: [2020-11-11 Wed 19:11]--[2020-11-11 Wed 20:00] =>  0:49
+    CLOCK: [2020-11-11 Wed 12:10]--[2020-11-11 Wed 12:35] =>  0:25
+    :END:
+*** Hosein
+    tracking different client issues with hossein 
+    :LOGBOOK:
+    CLOCK: [2020-11-11 Wed 14:09]--[2020-11-11 Wed 15:25] =>  1:16
+    :END:
+*** fixing protobufs
+    :LOGBOOK:
+    CLOCK: [2020-11-11 Wed 21:12]--[2020-11-11 Wed 23:13] =>  2:01
+    :END:
+** DONE non workday [2020-11-12 Thu] 
+   CLOSED: [2020-11-17 Tue 16:33]
+   - State "DONE"       from              [2020-11-17 Tue 16:33]
+*** fixing protobufs
+    :LOGBOOK:
+    CLOCK: [2020-11-12 Thu 14:50]--[2020-11-12 Thu 18:45] =>  3:55
+    :END:
+** DONE workday [2020-11-14 Sat]
+   CLOSED: [2020-11-17 Tue 16:41]
+   - State "DONE"       from              [2020-11-17 Tue 16:41]
+*** grooming 
+    :LOGBOOK:
+    CLOCK: [2020-11-14 Sat 11:00]--[2020-11-14 Sat 13:50] =>  2:50
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-11-14 Sat 11:49]--[2020-11-14 Sat 12:40] =>  0:51
+    :END:
+*** Communication with Dr
+    :LOGBOOK:
+    CLOCK: [2020-11-14 Sat 13:51]--[2020-11-14 Sat 14:25] =>  0:34
+    :END:
+
+** DONE workday [2020-11-15 Sun]
+   CLOSED: [2020-11-17 Tue 16:42]
+   - State "DONE"       from              [2020-11-17 Tue 16:42]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-15 Sun 10:30]--[2020-11-15 Sun 10:50] =>  0:20
+    :END:
+*** working on proto
+    :LOGBOOK:
+    CLOCK: [2020-11-15 Sun 11:15]--[2020-11-15 Sun 17:25] =>  6:10
+    :END:
+** daily
+* azar
+** DONE workday [2020-11-16 Mon] 
+   CLOSED: [2020-12-15 Tue 02:52]
+   - State "DONE"       from              [2020-12-15 Tue 02:52]
+*** daily 
+     :LOGBOOK:
+     CLOCK: [2020-11-16 Mon 10:30]--[2020-11-16 Mon 10:55] =>  0:25
+     :END:
+*** working on proto
+    :LOGBOOK:
+    CLOCK: [2020-11-15 Sun 11:15]--[2020-11-15 Sun 17:05] =>  5:50
+    :END: 
+** DONE workday [2020-11-17 Tue]
+   CLOSED: [2020-12-15 Tue 02:52]
+   - State "DONE"       from              [2020-12-15 Tue 02:52]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-17 Tue 10:30]--[2020-11-17 Tue 11:00] =>  0:30
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-11-17 Tue 11:00]--[2020-11-17 Tue 11:40] =>  0:40
+    :END:
+*** Dr
+    :LOGBOOK:
+    CLOCK: [2020-11-17 Tue 15:00]--[2020-11-17 Tue 15:35] =>  0:35
+    :END:
+*** protobuf migration
+    :LOGBOOK:
+    CLOCK: [2020-11-17 Sat 15:45]--[2020-11-17 Tue 18:45] =>  3:00
+    CLOCK: [2020-11-17 Tue 11:35]--[2020-11-17 Tue 14:40] =>  3:05
+    :END:
+** DONE workday [2020-11-18 Wed]
+   CLOSED: [2020-12-15 Tue 02:53]
+   - State "DONE"       from              [2020-12-15 Tue 02:53]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-18 Wed 10:30]--[2020-11-18 Wed 11:00] =>  0:30
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-11-18 Wed 11:00]--[2020-11-18 Wed 11:20] =>  0:20
+    :END:
+*** Dr
+    :LOGBOOK:
+    CLOCK: [2020-11-18 Wed 13:00]--[2020-11-18 Wed 13:25] =>  0:25
+    :END:
+*** working on protobuf
+    :LOGBOOK:
+    CLOCK: [2020-11-18 Wed 14:00]--[2020-11-18 Wed 19:45] =>  5:45
+    CLOCK: [2020-11-18 Wed 11:00]--[2020-11-18 Wed 12:45] =>  1:45
+    :END:
+
+** DONE workday [2020-11-21 Sat]
+   CLOSED: [2020-12-15 Tue 02:53]
+   - State "DONE"       from              [2020-12-15 Tue 02:53]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-21 Sat 10:30]--[2020-11-21 Sat 11:05] =>  0:35
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-11-21 Sat 11:10]--[2020-11-21 Sat 11:35] =>  0:25
+    :END:
+*** Refactoring reciepts
+    :LOGBOOK:
+    CLOCK: [2020-11-21 Sat 11:40]--[2020-11-21 Sat 15:49] =>  4:09
+    :END:
+** DONE workday [2020-11-22 Sun]
+   CLOSED: [2020-12-15 Tue 02:53]
+   - State "DONE"       from              [2020-12-15 Tue 02:53]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-22 Sun 10:30]--[2020-11-22 Sun 11:00] =>  0:30
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-11-22 Sun 11:00]--[2020-11-22 Sun 11:25] =>  0:25
+    :END:
+*** implementing calender util
+    :LOGBOOK:
+    CLOCK: [2020-11-22 Sun 15:35]--[2020-11-22 Sun 20:50] =>  5:15
+    :END:
+** DONE workday [2020-11-23 Mon]
+   CLOSED: [2020-12-15 Tue 03:16]
+   - State "DONE"       from              [2020-12-15 Tue 03:16]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-12-15 Tue 02:17]--[2020-12-15 Tue 02:56] =>  0:39
+    :END:
+*** reviewing mongodb 1386
+    :LOGBOOK:
+    CLOCK: [2020-11-23 Mon 11:11]--[2020-11-23 Mon 13:20] =>  2:09
+    :END:
+*** creatign a test for enum translations and making sure it works
+    :LOGBOOK:
+    CLOCK: [2020-12-15 Tue 14:30]--[2020-12-15 Tue 19:30] =>  5:00
+    :END:
+** DONE workday [2020-11-24 Tue]
+   CLOSED: [2020-12-15 Tue 03:16]
+   - State "DONE"       from              [2020-12-15 Tue 03:16]
+*** daily 
+    :LOGBOOK:
+    CLOCK: [2020-11-24 Tue 10:30]--[2020-11-24 Tue 10:55] =>  0:25
+    :END:
+*** creating resource bundle abstraction to stop error 
+    :LOGBOOK:
+    CLOCK: [2020-11-24 Tue 11:15]--[2020-11-24 Sun 17:20] =>  6:05
+    :END:
+** DONE workday [2020-11-25 Wed]
+   CLOSED: [2020-12-15 Tue 02:53]
+   - State "DONE"       from              [2020-12-15 Tue 02:53]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-25 Sun 10:30]--[2020-11-25 Wed 11:00] =>  0:30
+    :END:
+*** fixing bugs related to 1681 1682 1683 1685 1386 tasks
+    :LOGBOOK:
+    CLOCK: [2020-12-15 Tue 11:11]--[2020-12-15 Tue 21:11] => 10:00
+    :END:
+** DONE nonworkday [2020-11-26 Thu]
+   CLOSED: [2020-12-15 Tue 02:53]
+   - State "DONE"       from              [2020-12-15 Tue 02:53]
+*** fixing list of recent pagination
+    :LOGBOOK:
+    CLOCK: [2020-11-26 Thu 15:20]--[2020-11-26 Thu 17:20] =>  2:00
+    :END:
+    day of fixing pagination
+** DONE workday [2020-11-28 Sat] 
+   CLOSED: [2020-12-15 Tue 03:00]
+   - State "DONE"       from              [2020-12-15 Tue 03:00]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-28 Sun 10:30]--[2020-11-28 Sat 10:50] =>  0:20
+    :END:
+*** communication with clients about fixing bugs
+    :LOGBOOK:
+    CLOCK: [2020-11-28 Sat 11:40]--[2020-11-28 Sat 16:15] =>  4:35
+    :END:
+*** Demo
+    :LOGBOOK:
+    CLOCK: [2020-11-28 Sun 17:00]--[2020-11-28 Sat 19:25] =>  2:25
+    :END:
+** DONE workday [2020-11-29 Sun]
+   CLOSED: [2020-12-15 Tue 03:17]
+   - State "DONE"       from              [2020-12-15 Tue 03:17]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-29 Tue 10:30]--[2020-11-29 Sun 11:25] =>  0:55
+    :END:
+*** working on atom new abstraction 
+    :LOGBOOK:
+    CLOCK: [2020-11-29 Sun 11:10]--[2020-11-29 Sun 14:15] =>  3:05
+    :END:
+*** retro session
+    :LOGBOOK:
+    CLOCK: [2020-11-29 Sun 14:26]--[2020-11-29 Sun 16:30] =>  2:04
+    :END:
+** DONE workday [2020-11-30 Mon]
+   CLOSED: [2020-12-15 Tue 10:24]
+   - State "DONE"       from              [2020-12-15 Tue 10:24]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-11-30 Mon 10:30]--[2020-11-30 Mon 10:55] =>  0:25
+    :END:
+*** 1694 1753
+    :LOGBOOK:
+    CLOCK: [2020-11-30 Mon 15:00]--[2020-11-30 Mon 19:23] =>  4:23
+    CLOCK: [2020-11-30 Mon 11:00]--[2020-11-30 Mon 14:30] =>  3:30
+    :END:
+** DONE workday [2020-12-01 Tue]
+   CLOSED: [2020-12-15 Tue 10:24]
+   - State "DONE"       from              [2020-12-15 Tue 10:24]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-12-01 Tue 10:30]--[2020-12-01 Tue 11:00] =>  0:30
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-12-01 Tue 11:10]--[2020-12-01 Tue 11:43] =>  0:33
+    :END:
+*** fixing QR/Internet/charge
+    :LOGBOOK:
+    CLOCK: [2020-12-01 Tue 12:00]--[2020-12-01 Tue 16:25] =>  4:25
+    :END:
+** WAITING workday [2020-12-02 Wed]                                 :waiting:
+   - State "WAITING"    from "DONE"       [2020-12-15 Tue 15:26]
+   - State "DONE"       from              [2020-12-15 Tue 10:24]
+*** DONE daily
+    CLOSED: [2020-12-15 Tue 15:26]
+    - State "DONE"       from "NEXT"       [2020-12-15 Tue 15:26]
+    - State "NEXT"       from "TODO"       [2020-12-15 Tue 15:26]
+    - State "TODO"       from              [2020-12-15 Tue 15:26]
+    :LOGBOOK:
+    CLOCK: [2020-12-02 Wed 10:30]--[2020-12-02 Wed 11:00] =>  0:30
+    :END:
+*** fixing protobufs QR/Internet/Charge/...
+    :LOGBOOK:
+    CLOCK: [2020-12-02 Wed 15:00]--[2020-12-02 Wed 18:15] =>  3:15
+    :END:
+*** DONE code review 
+    CLOSED: [2020-12-15 Tue 15:26]
+    - State "DONE"       from              [2020-12-15 Tue 15:26]
+    :LOGBOOK:
+    CLOCK: [2020-12-02 Wed 11:20]--[2020-12-02 Wed 12:30] =>  1:10
+    :END:
+*** DONE Dr 
+    CLOSED: [2020-12-15 Tue 15:26]
+    - State "DONE"       from              [2020-12-15 Tue 15:26]
+    :LOGBOOK:
+    CLOCK: [2020-12-02 Wed 13:48]--[2020-12-02 Wed 14:35] =>  0:47
+    :END:
+** DONE non workday [2020-12-03 Thu]
+   CLOSED: [2020-12-15 Tue 04:06]
+   - State "DONE"       from              [2020-12-15 Tue 04:06]
+*** fix login/mobile charge bug/...
+    :LOGBOOK:
+    CLOCK: [2020-12-15 Tue 11:04]--[2020-12-15 Tue 14:05] =>  3:01
+    :END:
+    - fix mobile charge bugs
+    - fix temporary login issues
+    - bunch of issue tracking with alireza android
+
+** DONE nonworkday [2020-12-04 Fri]
+   CLOSED: [2020-12-15 Tue 04:04]
+   - State "DONE"       from              [2020-12-15 Tue 04:04]
+*** fix wrong data in api call
+    :LOGBOOK:
+    CLOCK: [2020-12-04 Fri 16:02]--[2020-12-04 Fri 17:00] =>  0:58
+    :END:
+*** working on new atom abstraction
+    :LOGBOOK:
+    CLOCK: [2020-12-04 Fri 20:03]--[2020-12-04 Fri 21:50] =>  1:47
+    :END:
+** DONE workday [2020-12-05 Sat] 
+   CLOSED: [2020-12-15 Tue 10:20]
+   - State "DONE"       from              [2020-12-15 Tue 10:20]
+*** daily 
+    :LOGBOOK:
+    CLOCK: [2020-12-05 Sat 10:30]--[2020-12-05 Sat 11:00] =>  0:30
+    :END:
+*** created tests for TransferCriteria
+    :LOGBOOK:
+    CLOCK: [2020-12-05 Sat 11:00]--[2020-12-05 Sat 13:40] =>  2:40
+    :END:
+*** working on new atom abstraction
+    :LOGBOOK:
+    CLOCK: [2020-12-05 Sat 14:15]--[2020-12-05 Sat 16:18] =>  2:03
+    :END:
+
+** DONE workday [2020-12-06 Sun]
+   CLOSED: [2020-12-15 Tue 03:42]
+   - State "DONE"       from              [2020-12-15 Tue 03:42]
+*** daily 
+    :LOGBOOK:
+    CLOCK: [2020-12-06 Sun 10:30]--[2020-12-06 Sun 11:00] =>  0:30
+    :END:
+*** Smart transfer bug fix
+    :LOGBOOK:
+    CLOCK: [2020-12-06 Sun 14:15]--[2020-12-06 Sun 18:40] =>  4:25
+    :END:
+*** fixing Icons addresses
+    :LOGBOOK:
+    CLOCK: [2020-12-06 Sun 19:40]--[2020-12-06 Sun 20:45] =>  1:05
+    :END:
+*** QR/Internet bug fix
+    :LOGBOOK:
+    CLOCK: [2020-12-06 Sun 11:39]--[2020-12-06 Sun 13:39] =>  2:00
+    :END:
+** DONE workday [2020-12-07 Mon]
+   CLOSED: [2020-12-15 Tue 03:21]
+   - State "DONE"       from              [2020-12-15 Tue 03:21]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-12-07 Mon 10:30]--[2020-12-07 Mon 11:00] =>  0:30
+    :END:
+*** few bug fixes for demo 
+    :LOGBOOK:
+    CLOCK: [2020-12-07 Mon 12:27]--[2020-12-07 Mon 16:30] =>  4:03
+    :END:
+*** working on new atom abstraction
+    :LOGBOOK:
+    CLOCK: [2020-12-07 Mon 16:35]--[2020-12-07 Mon 19:03] =>  2:28
+    :END:
+
+** DONE workday [2020-12-08 Tue]
+   CLOSED: [2020-12-15 Tue 03:21]
+   - State "DONE"       from              [2020-12-15 Tue 03:21]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-12-08 Tue 10:30]--[2020-12-08 Tue 11:00] =>  0:30
+    :END:
+*** fixed a bunch of enum localization 
+    :LOGBOOK:
+    CLOCK: [2020-12-08 Tue 15:35]--[2020-12-08 Tue 18:35] =>  3:00
+    :END:
+*** fixed a bunch of bugs in Reciept and contact
+    :LOGBOOK:
+    CLOCK: [2020-12-08 Tue 11:00]--[2020-12-08 Tue 15:15] =>  4:15
+    :END:
+*** PWA
+    :LOGBOOK:
+    CLOCK: [2020-12-08 Tue 18:40]--[2020-12-08 Tue 19:50] =>  1:10
+    :END:
+
+** DONE workday [2020-12-09 Wed]
+   CLOSED: [2020-12-15 Tue 10:16]
+   - State "DONE"       from "TODO"       [2020-12-15 Tue 10:16]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-12-09 Wed 10:30]--[2020-12-09 Wed 11:00] =>  0:30
+    :END:
+*** fixing smart transfer isssues
+    :LOGBOOK:
+    CLOCK: [2020-12-09 Wed 11:15]--[2020-12-09 Wed 17:16] =>  6:01
+    :END:
+    - fixed a bug in shared content recipet that cause failure in failed transfer
+    - share content/smart transfer reciept
+    - smart transfer reciept
+** DONE workday [2020-12-12 Sat]
+   CLOSED: [2020-12-15 Tue 03:03]
+   - State "DONE"       from              [2020-12-15 Tue 03:03]
+*** daily 
+    :LOGBOOK:
+    CLOCK: [2020-12-12 Sat 10:31]--[2020-12-12 Sat 11:00] =>  0:29
+    :END:
+*** series of bug fixes/ issue tracking
+    :LOGBOOK:
+    CLOCK: [2020-12-12 Sat 12:00]--[2020-12-12 Sat 15:30] =>  3:30
+    :END:
+*** helping pwd with tracking login issues/ CORS ...
+    :LOGBOOK:
+    CLOCK: [2020-12-12 Sat 15:01]--[2020-12-12 Sat 18:01] =>  3:00
+    :END:
+** DONE workday [2020-12-13 Sun]
+   CLOSED: [2020-12-15 Tue 03:03]
+   - State "DONE"       from              [2020-12-15 Tue 03:03]
+*** DONE daily
+    CLOSED: [2020-12-15 Tue 20:25]
+    - State "DONE"       from              [2020-12-15 Tue 20:25]
+    :LOGBOOK:
+    CLOCK: [2020-12-13 Sun 10:30]--[2020-12-13 Sun 10:55] =>  0:25
+    :END:
+*** working on error handling
+    :LOGBOOK:
+    CLOCK: [2020-12-13 Sun 10:55]--[2020-12-13 Sun 12:30] =>  1:35
+    :END:
+*** presenting error handling
+    :LOGBOOK:
+    CLOCK: [2020-12-13 Sun 14:21]--[2020-12-13 Sun 15:21] =>  1:00
+    :END:
+*** DONE working on transaction details
+    CLOSED: [2020-12-15 Tue 20:25]
+    - State "DONE"       from              [2020-12-15 Tue 20:25]
+    :LOGBOOK:
+    CLOCK: [2020-12-13 Sun 15:24]--[2020-12-13 Sun 19:45] =>  4:21
+    CLOCK: [2020-12-13 Sun 12:30]--[2020-12-13 Sun 14:21] =>  1:51
+    :END:
+** DONE workday [2020-12-14 Mon]
+   CLOSED: [2020-12-15 Tue 03:03]
+   - State "DONE"       from              [2020-12-15 Tue 03:03]
+*** DONE daily
+    CLOSED: [2020-12-15 Tue 20:26]
+    - State "DONE"       from              [2020-12-15 Tue 20:26]
+    :LOGBOOK:
+    CLOCK: [2020-12-14 Mon 10:30]--[2020-12-14 Mon 11:00] =>  0:30
+    :END:
+*** debugging production deployment
+    :LOGBOOK:
+    CLOCK: [2020-12-14 Mon 14:00]--[2020-12-14 Mon 14:55] =>  0:55
+    :END:
+*** communication with Dr 
+    :LOGBOOK:
+    CLOCK: [2020-12-14 Mon 15:00]--[2020-12-14 Mon 15:15] =>  0:15
+    CLOCK: [2020-12-14 Mon 12:00]--[2020-12-14 Mon 12:10] =>  0:10
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-12-14 Mon 16:26]--[2020-12-14 Mon 17:05] =>  0:39
+    CLOCK: [2020-12-14 Mon 11:26]--[2020-12-14 Mon 11:55] =>  0:29
+    :END:
+** workday [2020-12-15 Tue] 
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-12-15 Tue 10:30]--[2020-12-15 Tue 11:00] =>  0:30
+    :END:
+*** data entry
+    :LOGBOOK:
+    CLOCK: [2020-12-15 Tue 14:16]--[2020-12-15 Tue 15:28] =>  1:12
+    :END:
+* dey
+** DONE workday [2020-12-16 Wed]
+   CLOSED: [2021-01-15 Fri 17:31]
+   - State "DONE"       from              [2021-01-15 Fri 17:31]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-12-16 Wed 10:30]--[2020-12-16 Wed 10:55] =>  0:25
+    :END:
+*** initial implementation of transaction list
+    :LOGBOOK:
+    CLOCK: [2020-12-16 Wed 13:35]--[2020-12-17 Thu 00:15] => 10:40
+    :END:
+*** internal communication
+    :LOGBOOK:
+    CLOCK: [2020-12-16 Wed 11:00]--[2020-12-16 Wed 11:25] =>  0:25
+    :END:
+** DONE non workday [2020-12-18 Fri]
+   CLOSED: [2021-01-15 Fri 17:33]
+   - State "DONE"       from              [2021-01-15 Fri 17:33]
+*** debugging issues with infrastructure
+    :LOGBOOK:
+    CLOCK: [2020-12-18 Fri 20:37]--[2020-12-18 Fri 23:50] =>  3:13
+    :END:
+** DONE workday [2020-12-19 Sat]
+   CLOSED: [2021-01-15 Fri 17:33]
+   - State "DONE"       from              [2021-01-15 Fri 17:33]
+*** release bug fixes
+    :LOGBOOK:
+    CLOCK: [2020-12-19 Sat 10:30]--[2020-12-19 Sat 21:00] => 10:30
+    :END:
+** DONE workday [2020-12-20 Sun]
+   CLOSED: [2021-01-15 Fri 17:47]
+   - State "DONE"       from              [2021-01-15 Fri 17:47]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-12-20 Sun 10:30]--[2020-12-20 Sun 10:55] =>  0:25
+    :END: 
+*** Dr
+    :LOGBOOK:
+    CLOCK: [2021-01-15 Fri 17:45]--[2021-01-15 Fri 18:25] =>  0:40
+    :END:
+*** android communication
+    :LOGBOOK:
+    CLOCK: [2021-01-15 Fri 17:45]--[2021-01-15 Fri 18:45] =>  1:00
+    :END:
+*** int32 overflow
+    :LOGBOOK:
+    CLOCK: [2020-12-20 Sun 17:00]--[2020-12-20 Sun 19:50] =>  2:50
+    :END:
+    
+** DONE workday [2020-12-21 Mon]
+   CLOSED: [2021-01-15 Fri 18:21]
+   - State "DONE"       from              [2021-01-15 Fri 18:21]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-12-21 Tue 10:30]--[2020-12-21 Mon 10:55] =>  0:25
+    :END:
+*** clean up transaction List Renderer
+    :LOGBOOK:
+    CLOCK: [2020-12-21 Mon 11:00]--[2020-12-21 Mon 18:00] =>  7:00
+    :END:
+** DONE workday [2020-12-22 Tue]
+   CLOSED: [2021-01-15 Fri 18:21]
+   - State "DONE"       from              [2021-01-15 Fri 18:21]
+** DONE workday [2020-12-23 Wed]
+   CLOSED: [2021-01-15 Fri 18:21]
+   - State "DONE"       from              [2021-01-15 Fri 18:21]
+*** release bug fix session
+    :LOGBOOK:
+    CLOCK: [2020-12-23 Wed 10:01]--[2020-12-23 Wed 21:01] => 11:00
+    :END:
+** DONE non Workday [2020-12-25 Fri]
+   CLOSED: [2021-01-15 Fri 18:21]
+   - State "DONE"       from              [2021-01-15 Fri 18:21]
+*** release bug fix session
+    :LOGBOOK:
+    CLOCK: [2020-12-25 Fri 10:30]--[2020-12-25 Fri 22:45] => 12:15
+    :END:
+    fixing kyc state log
+    added account saman to transaction list
+    fixed package of customer.proto
+    added base atom configuration
+    added BaseAtomConfiguration to set general configs of RestTemplateBuilder
+    changed package of RestTemplateBuilder providers
+    changed NameAssetUtil name to ResourceUtil
+    changed kyc state log topic to trace
+    added description to internet package leaf node
+    now check exist reads user password data from config
+    fixed Oauthtoken issue in async context
+    AccountService now throws if deposit list return with error
+    removed share content from other types of reciepts
+    added amount to share content
+    update share content
+
+
+** DONE workday [2020-12-26 Sat]
+   CLOSED: [2021-01-15 Fri 18:21]
+   - State "DONE"       from              [2021-01-15 Fri 18:21]
+*** release bug fixes
+    :LOGBOOK:
+    CLOCK: [2020-12-26 Sat 10:00]--[2020-12-26 Sat 16:30] =>  6:30
+    :END:
+** DONE workday [2020-12-27 Sun] 
+   CLOSED: [2021-01-15 Fri 19:14]
+   - State "DONE"       from              [2021-01-15 Fri 19:14]
+** DONE workday [2020-12-28 Mon] 
+   CLOSED: [2021-01-15 Fri 19:14]
+   - State "DONE"       from              [2021-01-15 Fri 19:14]
+** DONE workday [2020-12-29 Tue]
+   CLOSED: [2021-01-15 Fri 19:14]
+   - State "DONE"       from              [2021-01-15 Fri 19:14]
+*** hot fix 02
+    :LOGBOOK:
+    CLOCK: [2020-12-29 Tue 09:20]--[2020-12-29 Tue 10:20] =>  1:00
+    :END:
+** DONE workday [2020-12-30 Wed] 
+   CLOSED: [2021-01-15 Fri 19:14]
+   - State "DONE"       from              [2021-01-15 Fri 19:14]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2020-12-30 Wed 10:30]--[2020-12-30 Wed 11:00] =>  0:30
+    :END:
+*** fixing production issues
+    :LOGBOOK:
+    CLOCK: [2021-01-02 Sat 17:00]--[2021-01-02 Sat 20:50] =>  3:50
+    CLOCK: [2020-12-30 Wed 12:00]--[2020-12-30 Wed 15:00] =>  3:00
+    :END:
+*** working with security auditor
+    :LOGBOOK:
+    CLOCK: [2020-12-30 Wed 15:00]--[2020-12-30 Wed 17:05] =>  2:05
+    :END:
+** DONE non workday [2020-12-31 Thu]
+   CLOSED: [2021-01-15 Fri 19:19]
+   - State "DONE"       from              [2021-01-15 Fri 19:19]
+*** working on filter issues and logging
+    :LOGBOOK:
+    CLOCK: [2020-12-31 Thu 16:00]--[2020-12-31 Thu 18:00] =>  2:00
+    :END:
+*** debugging carious bug in android
+    :LOGBOOK:
+    CLOCK: [2020-12-31 Thu 21:30]--[2021-01-01 Fri 00:55] =>  3:25
+    :END:
+    there was a bug where out of no where the logging button seems not working
+    any more, after almost 3 hours of banging our head through wall we figured
+    out that one of debugger attached method in android has false positive which
+    will cause debugger-attached to become true and our server sends 401
+    response to the client.
+** DONE non workday [2021-01-01 Fri]
+   CLOSED: [2021-01-15 Fri 19:25]
+   - State "DONE"       from              [2021-01-15 Fri 19:25]
+*** reactivating card api and changes to it
+    dealing with changes to the Card List api and changing default error messages
+    :LOGBOOK:
+    CLOCK: [2021-01-01 Fri 12:00]--[2021-01-01 Fri 13:10] =>  1:10
+    :END:
+** DONE workday [2021-01-05 Tue]
+   CLOSED: [2021-01-15 Fri 19:52]
+   - State "DONE"       from              [2021-01-15 Fri 19:52]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2021-01-09 Sat 10:30]--[2021-01-09 Sat 10:50] =>  0:20
+    :END:
+*** release bug fixes
+    :LOGBOOK:
+    CLOCK: [2021-01-05 Tue 11:00]--[2021-01-05 Tue 16:48] =>  5:48
+    :END:
+** DONE workday [2021-01-06 Wed]
+   CLOSED: [2021-01-15 Fri 19:52]
+   - State "DONE"       from              [2021-01-15 Fri 19:52]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2021-01-06 Wed 10:30]--[2021-01-06 Wed 10:55] =>  0:25
+    :END:
+*** release bug fixes
+    :LOGBOOK:
+    CLOCK: [2021-01-06 Wed 12:00]--[2021-01-06 Wed 22:40] => 10:40
+    :END:
+** workday [2021-01-09 Sat]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2021-01-09 Sat 10:30]--[2021-01-09 Sat 10:50] =>  0:20
+    :END:
+*** release bug fix
+    :LOGBOOK:
+    CLOCK: [2021-01-09 Sat 22:28]--[2021-01-09 Sat 23:28] =>  1:00
+    :END:
+** workday [2021-01-10 Sun]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2021-01-10 Sun 10:30]--[2021-01-10 Sun 10:55] =>  0:25
+    :END:
+** workday [2021-01-11 Mon]
+*** daily
+*** 
+*** [BKD] Refresh token handling
+    :LOGBOOK:
+    CLOCK: [2021-01-11 Mon 14:03]--[2021-01-11 Mon 22:03] =>  8:00
+    :END:
+** workday [2021-01-10 Sun]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2021-01-12 Tue 10:30]--[2021-01-12 Tue 10:55] =>  0:25
+    :END:
+*** fixing my logs
+    :LOGBOOK:
+    CLOCK: [2021-01-12 Tue 17:13]--[2021-01-12 Tue 17:13] =>  0:00
+    :END:
+*** talk to siamak about 
+    :LOGBOOK:
+    CLOCK: [2021-01-12 Tue 16:14]--[2021-01-12 Tue 16:50] =>  0:36
+    :END:
+** nonworkday
+* bahman
+** workday[2021-02-14 Sun]
+*** daily
+    :LOGBOOK:
+    CLOCK: [2021-02-14 Sun 10:35]--[2021-02-14 Sun 10:55] =>  0:20
+    :END:
+*** working on card reorder
+    :LOGBOOK:
+    CLOCK: [2021-02-14 Sun 11:09]
+    :END:
+* tasks
+** 1119 seperate Unit tests 15 hours
+   fixing resource bundle 
+   creating tests for resource bundle
+   creating new abstraction to manage errors
+** 1379 share reciept content 8 hours
+** DONE 1681 1682 1683 1685 1386 (8 hours over all for fixing bugs) debugging atoms 
+   CLOSED: [2020-12-15 Tue 02:15]
+   - State "DONE"       from              [2020-12-15 Tue 02:15]
+** DONE 1687 3 hours fixing pagination issues
+   CLOSED: [2020-12-15 Tue 02:15]
+   - State "DONE"       from              [2020-12-15 Tue 02:15]
+** 1691 1 hour
+** 1692 8 hours creating new tests and refactoring and bug hunting
+** 1386 device session in mongodb 2 hours
+** 1694 6 hours
+** 1753 4 hours 
+** 1754 protobuf migration fixing internet/  16 hours
+** 1767 3 hours
+** day of debugging smart transfer 8 hours
+** DONE day of implementing calender util 5 hours 
+   CLOSED: [2020-12-15 Tue 01:44]
+   - State "DONE"       from              [2020-12-15 Tue 01:44]
+* list of tasks
+** bb-982 fix broken transfer due to api changes
+** bb-961 clean up internal protobufs and design 
+** bb-960 implement required util class for conversion between types
+** bb-958 api clean up 
+** bb-989 [BKD] send logs for data team on kafka (basically solve every issue related to connecting to kafka and then send the logs on it)
+** bb-876 [BKD] Task organization and planning
+** bb-766 [BKD] Implement basic Orchestrator service
+**  test delivered APIs
+**  moving services to production
+**  debugging production related issues and hot fixes 
+**  setting up new environment for different deployment plans
+** bb-652 calculate hmac with secret
+** security
+** bb-743 security and session management
+** bb-1106 prepare for deployment and communication with Reza bajelan
+** bb-1105 setting up servers
+** bb-1210 [BKD] Transaction list bugs
+** bb-1164 [BKD] Correction QR Code Receipt
+** BB-1121 [BKD] Overhaul or unit tests
+** BB-1108 [BKD] move every remaining Api call to atom format
+** bb-994 [BKD] Internet package receipt with non related info
+** BB-993 [BKD] List of the operators in internet packages has only one operator
+** security 
+** BB-1281 Testing account topup apis and communicating errors and fixes
+** BB-1282 - [BKD] implement Transaction logs has been successfully created
+** bb-1283 code refactoring
+** BB-1284 - [BKD] fixing date format in reciepts 
+* list of tasks card sprint
+** bb-1650 internal protobuf refactor
+   2 days
+** bb-1649 card internal protobuf design
+   6 hour
+** bb-1109 a bunch of code clean up
+   2 days
+** bb-1655 remove useless classes
+** bb-1612 address lookup update
+   1 hour debugging the issue
+** bb-inconsistency in responses
+   2 hours 
+** bb-1614 card list
+   2 hours
+** bb-1616 
+   2 hours
+** debbuging issues wendsday 
+   10 hours and 30 min
+   11-3
+   5-10 pm
+   12:30-2:00 am
+** protobuf migration final touch
+   3 days

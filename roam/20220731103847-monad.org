@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       3686f319-8ab0-4c44-beb8-43adb20ba51f
+:END:
+#+title: monad
+[[https://www.youtube.com/watch?v=C2w45qRc3aU][ The Absolute Best Intro to Monads For Software Engineers ]]
+Wrapper Type
+Wrap function ( allows entry to monad echo system, also known as return, pure, unit)
+Run function( runs transformation on manadic values also known as bind, flatMap, or >>= )
+Option also known as maybe
+Future/Promise possibility for a value to only become available later
+List

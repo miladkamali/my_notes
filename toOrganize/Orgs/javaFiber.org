@@ -1,0 +1,18 @@
+* Loom project
+  this project is aimed to introduce Fibers and continuation into JVM
+
+
+  [[https://www.youtube.com/watch?v=fpyub8fbrVE][Project Loom: Fibers and Continuations for the Java Virtual Machine with Ron Pressler]]
+  [[https://www.youtube.com/watch?v=vbGbXUjlRyQ][Project Loom: Fibers and Continuations for Java by Alan Bateman]]
+
+  http://cr.openjdk.java.net/~rpressler/loom/Loom-Proposal.html
+* java future
+  [[https://www.youtube.com/watch?v=Csc2JRs6470][40:31 performance of normal collections]]
+* TODO what is JMH
+* java eventsource and CQRS microservice
+  https://www.youtube.com/watch?v=A0goyZ9F4bg
+  https://www.youtube.com/watch?v=7e5euKxHhTE
+
+  https://www.youtube.com/watch?v=7kX3fs0pWwc
+* spring boot
+  https://www.youtube.com/watch?v=97UTDmonq7w

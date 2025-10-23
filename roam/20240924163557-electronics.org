@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       BA11F314-B7D0-4180-B9F3-C65A67D26504
+:END:
+#+title: electronics
+[[https://www.youtube.com/watch?v=0loXukB302Q][how to use a multimeter]]

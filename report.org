@@ -1,0 +1,56 @@
+* APIs report
+** Account                                                            :test:
+** DONE IAM
+** DONE KYC with ip not with address
+** TODO renovation
+*** TODO renovation waste bill error with sample 
+    {
+    "path": "/api/v1/inquiries/bills/renovation/waste",
+    "message": "ورودی سرویس معتبر نیست.",
+    "code": "G00003"
+    }
+*** TODO renovation Toll Billing Inquiry error with sample 
+    {
+    "path": "/api/v1/inquiries/bills/renovation/toll",
+    "message": "ورودی سرویس معتبر نیست.",
+    "code": "G00003"
+    }
+** TODO TIPO
+*** TODO bussiness
+**** TODO business Waste Billing Inquiry not working with sample 
+     {
+    "path": "/api/v1/inquiries/bills/business/waste",
+    "message": "ورودی سرویس معتبر نیست.",
+    "code": "G00003"
+    }
+**** TODO business Toll Billing Inquiry not working with sample
+     {
+    "path": "/api/v1/inquiries/bills/business/toll",
+    "message": "ورودی سرویس معتبر نیست.",
+    "code": "G00003"
+    }
+*** TODO bills
+**** TODO payment bills inquiry seems to be mock only works with sample 
+**** TODO electric Bill inquiries seems to be mock only works with sample
+     only works with sample
+**** DONE MCI bill works correctly no mock
+**** traffic fine seems working tested with sample but no other data was available at test
+**** gas seems working but no other 
+**** TODO MTN seems to be fucked!
+     i couldn't get data for alireza, or other random numbers
+**** DONE Landline bill is ok
+**** DONE Rightel is responding but i couldn't get a valid report due to lack of working phone number
+**** DONE Water bill seems OK
+**** DONE address inquiry but there was an error in my postal code reported province
+**** DONE Internet Package inquiry
+**** TODO Civil-registry
+***** TODO civil inquiry not working 
+      {
+      "path": "/api/v1/inquiries/civil-registry",
+      "message": "Must Understand check failed for header http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd : Security",
+      "code": "101"
+      }
+***** TODO civil image inquiry not working
+** TODO Payment
+*** TODO billAllPaymentInquiry not working with sample 
+** Party ( what the fuck is this one ?)

@@ -1,0 +1,60 @@
+* Clean up Technical Infrastructure
+** Company Infrastructure
+*** Set up proper VLANs to seperate users and infrastruture.      :outsource:
+*** Set up Cario VPN for better monitoring access to the network  :outsource:
+*** Set up Firewall to protect access to the network              :outsource:
+*** set up monitoring station
+*** Proper set up of server room
+**** set up temprature monitoring and alert                       :outsource:
+**** add shelf to the server room for proper storage of items     :outsource:
+**** Remove unnecessory items from server room                    :outsource:
+**** Check server UPS health                                      :outsource:
+**** Make sure that server room is leak free by installing water sensitive marks
+**** add additional measure to ensure in case of water leakage or servers are reasonably safe
+**** proper cooling for server room, current cooling is not adequate :outsource:
+*** fix Power issues that we are going to face in hot season
+    this is going to be major issue once the temprature increases based on the
+    knowledge i have gathered 
+** Asiatec Infrastracture
+*** Add a new server to support expansion
+*** Add ZFS based storage to asiatec for proper management of data
+*** proper seperation of services
+**** change seperation of services from path to subdomain for easier management
+**** change sana url from root of cloud.uid.ir
+**** increase the rage ip of asiateck
+** human Resources(urgent need)
+*** employ a help desk
+*** employ two devops (one of which has to have extensive knowlege of networking)
+*** employ two front end developers
+*** employ one 
+** support infrastructure for running projects
+*** Fix performance critical issues related to database
+**** SANA
+**** SAJAM
+**** Labour
+*** negotioate with labour project for getting an access for sms delivery and send information
+*** Overhaul Documentation of Crypto based on the feed back we recieve from customers
+*** improvement to support team
+**** Set up proper ticketing system for managing technical support
+**** Create a list of customers and their priority 
+**** Set up call center call recording
+**** Set up call center voip with
+**** add all common required capabilities to the panel
+***** resend estelam request
+***** check status of payment
+***** check status of final result
+**** set up Call and Issue tracking statistic
+**** Set up FAQ for easier onboarding and explanation of issues people face
+
+*** Fix Sana Flow bug related
+*** Set up Elastic For better understanding of bugs
+** Software infrastructure
+*** monitoring and health check of services
+**** Set up elastic search infrastructure
+**** Set up prometheus 
+*** New technologies
+**** Minio
+**** AES Encryption in all the assets
+**** Keycloak for Authorization
+**** Temporal for work flow engine
+**** gRPC for communication

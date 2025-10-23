@@ -1,0 +1,42 @@
+* lighting
+** [[https://www.youtube.com/watch?v=VkT1no0Zork][DIY Neutral Density Filter (Cheap homemade ND Filter)]]
+** [[https://www.youtube.com/watch?v=DhbMnQt14_o][DIY Studio Lights - How to Build Your Own!]]
+** [[https://www.youtube.com/watch?v=jgpt9Fe_PUc][How to make Photography lighting Softbox at home]]
+** [[https://www.youtube.com/watch?v=NFzIP_TN75A&list=RDQMv8rRELYfUEM&start_radio=1][How-to: Powerful DIY video light (800 watt equivalent)]]
+* astro photography
+** [[https://www.youtube.com/watch?v=iuMZG-SyDCU][Orion Nebula WITHOUT a Star Tracker or Telescope, Start to Finish, DSLR Astrophotography]]
+* reflector
+** [[https://www.youtube.com/watch?v=wdOSnxjFVUQ][15 Hacks for using Reflectors in Video]]
+* channels
+** https://www.youtube.com/c/BrendanvanSon/videos
+** https://www.youtube.com/channel/UChHudeF-1905SXyYqzfvzTQ/videos
+* shops
+** https://noornegar.com/product-category/lense-and-filter/lenses/nikon-lens/page/2/
+* editing
+** https://www.pyimagesearch.com/2017/04/10/detect-eyes-nose-lips-jaw-dlib-opencv-python/
+** https://www.google.com/search?client=firefox-b-d&q=opencv+detect+eye
+** https://sala.melda.info/en/focus_stacking/
+* tutorials
+** https://www.youtube.com/watch?v=ZHnNyKQsdLw
+* upscale 
+** https://github.com/thunil/TecoGAN
+   https://www.youtube.com/watch?v=MwCgvYtOLS0
+   https://arxiv.org/pdf/1811.09393.pdf
+* pano head
+** https://www.youtube.com/watch?v=FYjuBoQQnUw
+   http://montanamonk.com/lake_como/lake_como_pano.htm
+* darktable
+** https://www.youtube.com/c/KeiferHunnifordPhotography/playlists
+* micro photography 
+  https://guifh.github.io/arduino/Basics.html
+  https://create.arduino.cc/projecthub/jendeegan/driving-a-focus-stacking-rail-using-an-arduino-a2115c
+  https://www.diyphotography.net/diy-focus-rail-focus-stacking/
+  https://www.youtube.com/watch?v=vvJAPVwuzQ4
+  [[https://www.youtube.com/watch?v=I-tNoJsKPuI][micro photography ideas]]
+* color distance
+  http://downloads.hindawi.com/journals/mpe/2018/4652526.pdf
+  https://www.hindawi.com/journals/mpe/2018/4652526/
+  
+  https://stackoverflow.com/questions/9018016/how-to-compare-two-colors-for-similarity-difference
+* photoshop 
+  https://www.youtube.com/channel/UCMrvLMUITAImCHMOhX88PYQ

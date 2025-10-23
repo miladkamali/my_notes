@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       EDD7CFF9-D34B-4E9C-AA86-BA153307D81D
+:END:
+#+title: pinescript
+using pinescript version 6
+//@version=6
+
+plotshape(barstate.islast,text="hello world")

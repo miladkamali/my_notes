@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       60E8ECF2-0576-427A-AB87-45B37FBAD2B7
+:END:
+#+title: ollama
+https://blog.driftingruby.com/ollama-context-window/

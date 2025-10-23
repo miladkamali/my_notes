@@ -1,0 +1,18 @@
+* login process
+** when requesting captcha there is a session cookie in response header
+** then  
+   curl 'https://online.agah.com/fwb/first_submit.df' -H 'User-Agent:
+   Mozilla/5.0 (X11; Linux x86_64; rv:74.0) Gecko/20100101 Firefox/74.0' -H
+   'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5' --compressed -H
+   'Content-type: application/x-www-form-urlencoded' -H 'Origin:
+   https://online.agah.com' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Referer:
+   https://online.agah.com/Auth/login' -H 'Cookie:
+   SESSION_COOKIE=ikddatzfrq51kgwklw3rlea2' --data 'Language=en-US&Time
+   Zone=UTC%2B4.5&Current Resolution=1920x1080&Color
+   Depth=24&Canvas=ae44bddcf94d1cb8be1a8ada87811ed3&WebGL=0a26e1e731aa9e23af8a50b0fc2dfab5&Browser=Firefox&OS=Linux(x86_64)&CPU=amd64&df_id=7954fa8e6b6e422751151441d9d5671f&stable_df_id=8b79fee8b67a6208dd86d2398760ed47&'
+
+   well the basters are using canvas and webGL 
+   https://webbrowsertools.com/webgl-fingerprint/
+   https://en.wikipedia.org/wiki/Canvas_fingerprinting
+
+   and something else df-id

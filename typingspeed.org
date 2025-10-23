@@ -1,0 +1,31 @@
+* practice sites
+http://10fastfingers.com
+https://www.keybr.com/
+https://play.typeracer.com/
+https://www.nitrotype.com/
+https://monkeytype.com/
+the closer you get to the speed of thinking you have while typing is better.
+
+learning some keyboard shortcuts to fix problems fast
+* keyboard shortcuts to fix problems
+** delete an entire word
+Option + backspace
+Control + backspace
+** delete an entire line
+CMD + backspace
+* practice
+** [[10 fast finger][10fastfingers.com]]
+** [[https://www.keybr.com/][practice for problematic section of keyboard]]
+* use keyboard 
+** use alfered program
+** short cuts for maximizing and minimizing or hiding 
+* do not look at the keyboard
+* try to make noise
+if you try to make noise you usually start typing faster
+* keyboard testing
+https://www.mechanical-keyboard.org/key-rollover-test/
+make sure the keyboard you are using has at least 5 or 6 key rollover
+* typing progression
+ - up to 80 words per minutes, you can easily type character by character
+ - to reach 120 you need to type word by word
+ - you should start reading ahead to reach 120 words per minutes

@@ -1,0 +1,22 @@
+* telegram service API 50 hours
+** upload video
+** get messages 
+** send messages 
+** get text and file
+   https://stackoverflow.com/questions/31096358/how-do-i-download-a-file-or-photo-that-was-sent-to-my-telegram-bot
+* question service 
+** senario one 55 hours
+*** list of available questions and their responses 20 hours
+*** connection to kafka and services 20 hours
+*** admin APIs (basic database) 
+*** file management 15 hours
+** identify the question 120 hours
+*** organizing questions 36 hours
+*** comming up with question matching algorithm 36 hours
+*** testing the algorithm 36 hours
+*** 
+* customer support service
+** login
+** user management 
+** APIs for connecting to customers
+** UI

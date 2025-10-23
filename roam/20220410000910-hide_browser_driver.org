@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       e2de77c7-2afa-4b74-9f36-4aba1e98a541
+:END:
+#+title: hide browser driver
+https://piprogramming.org/articles/How-to-make-Selenium-undetectable-and-stealth--7-Ways-to-hide-your-Bot-Automation-from-Detection-0000000017.html
+https://intoli.com/blog/not-possible-to-block-chrome-headless/
+https://github.com/paulirish/headless-cat-n-mouse
+https://github.com/puppeteer/puppeteer/issues/3220
+https://stackoverflow.com/questions/47269938/how-to-remove-chrome-is-being-controlled-by-automated-test-software
+https://www.npmjs.com/package/puppeteer-extra-plugin-stealth
+https://stackoverflow.com/questions/33225947/can-a-website-detect-when-you-are-using-selenium-with-chromedriver
+
+  // import puppeteer from "puppeteer-extra";
+// import * as Stealth from "puppeteer-extra-plugin-stealth";
+// puppeteer.use(Stealth())

@@ -1,0 +1,38 @@
+* things to fix
+** lack of proper planning
+*** grooming without knowing the full scope is fools errand
+*** sprints should be planned after the grooming not before
+*** capacity of teams needs to calculated
+*** there is no specific time for maintenance
+    getting free time after burnout is not maintenance time. it needs specific
+    portion of each sprint to be dedicated to maintenance and improvement and
+    documentation. 
+** attitude
+*** Sprints has to be successful at all cost is not acceptable
+*** we get punished if a sprint is not successful but there are never gratitude for success or maybe 
+*** there is a growing tendency of micro-managing everything.
+*** 
+** micro management
+*** it's not acceptable to be forced to do a specific things at specific times
+** communication
+*** we are suffering a complete break down in communication between teams in different floors
+**** we need regular meeting between teams to exchange ideas and technologies
+*** we are suffering issues in communication withing second floor as well
+**** bring back dailies 
+**** bring back gatherings 
+**** bring back technology talks
+** development
+** burnout 
+*** we have serious issues with burnouts, i am personally suffering from it now
+** bug handling
+*** we need a proper system for reporting and prioritizing bugs  
+* things to tell alireza
+** you said responsibility
+   the week before lunch i specifically asked you whole week before to be there
+   in the end of the week.
+** the sprint started with an order from you
+   you said in one hour do the grooming. why? no explanation. 
+** the mock of KYC was a training task for siamak
+** you have lost my respect gradually 
+   - come on the 
+** you are just seeing your nose not me!

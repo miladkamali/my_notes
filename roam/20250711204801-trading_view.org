@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       1a1c8db5-2528-4de0-838c-7d6010b55088
+:END:
+#+title: trading view
+* short cuts
+https://www.tradingview.com/charting-library-docs/latest/getting_started/Shortcuts/

@@ -1,0 +1,101 @@
+* required systems
+** VAS
+*** VAS payment system 2 Weeks
+    we should be given an api for each operator
+    - we need a system to figure out which number is for which
+      operator
+    - a catalog system for users and their subsciptions
+    -
+**** questions
+***** can a user unsubscribe from service from phone( if so how can we learn about it)
+***** how do we know users(based on username/mobile number /?)
+***** 
+***** 
+** user management
+*** user CRUD 1 Week
+** Channel management
+*** Channnel CRUD 1 Week
+    - create channel, cover photo, subscription to channel, ...
+** payment management 4 weeks
+*** user credit management
+*** costomizable payment for each content/channel
+*** user payment system(to get money out) 2 Week
+** Streaming 2-3 month
+*** check streaming system
+* phase one
+** backend
+*** VAS 7 day
+*** Streaming 6 days for testing 
+**** TODO test performance
+***** learning protocol 2 days( min 2 hours/max 4 days) 
+***** Create botfarm 4 days( min 2 days/ worst 7 day)
+*** user management 6 days min 11 days max
+**** create and implement facade for different APIs/ figure out front API 1-2 days
+**** user info 2 days
+      امکان ایجاد پروفایل شامل پروفایل فوتو، کاور فوتو و لیست
+      ویدیوها، درباره من و پلی لیست و البته امکان دنبال کردن پروفایل
+      - ability to upload video (connecting with streaming sevice api)
+      - abitlity to create playlist (from his video and other videos)
+**** subscription system for user feed ? 2 days max 4 days
+     - check vas / cancel
+**** Ignored notificaion system
+**** VAS integration 1 days
+*** Content provider 3 days max  7 days
+    special user
+**** assign payment schema for content
+**** payment information
+**** payment system
+*** Admin 4 days
+**** video audit
+**** Comment audit
+**** delete account
+**** add account
+*** video system 4 days
+**** upload video 4 days
+**** identification/ streaming integration 4 days
+*** Comment system 3 days
+** UI
+*** test
+* everyThing they want
+** payment options
+*** VAS Integration
+**** operator one
+**** operator two
+*** IPG payment
+** content and users
+*** User/profile/channel informaiton CRUD
+*** content echosystem(rating/comment) user and channels
+*** content Tag hierachies
+*** ACL 
+*** OpenIDConnect (Google)
+*** messaging between admin/users
+*** messaging between users
+*** OTP generation and validation( should carry contex information)
+*** payment management
+**** for users
+**** for content providers
+*** monetization system
+*** Social media connnection
+*** notification system for users
+**** on site notification
+**** SMS
+**** Email
+**** ...
+** video services
+*** upload video
+*** Video Conversion 
+*** Video editing 
+*** video forwarding from other services
+** Content Creator dashboard
+** Streaming service
+*** videos streaming
+*** Live video Streaming
+** SEO optimizations facilities
+** request ticketing/ bug reporting
+** Filtering system to identify appropriate contents
+** administration
+*** Video content confirmation
+** Event System
+** reporting system
+*** number of videos watched
+*** ....

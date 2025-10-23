@@ -1,0 +1,222 @@
+
+* conferences
+** devoxx
+** the lead developer
+** cppcon
+** boostcon
+** springDeveloper
+   https://www.youtube.com/channel/UC7yfnfvEUlXUIfm8rGLwZdA
+** infoQ
+   https://www.youtube.com/user/MarakanaTechTV
+** redis labs
+   https://www.youtube.com/channel/UCD78lHSwYqMlyetR0_P4Vig
+** EclipseCon
+** strange loop
+    https://www.youtube.com/channel/UC_QIfHvN9auy2CoOdSfMWDw/videos
+* Podcast
+** software engineering daily
+   http://softwareengineeingdaily.com
+* videos
+** TODO [[https://www.youtube.com/watch?v=u6CmfFQxNtU][the art of keeping your project from falling apart]]
+** TODO [[https://www.youtube.com/watch?v=ZfP4VAK21zc][initialization in modern c++ ]]
+** TODO [[https://www.youtube.com/watch?v=CELWr9roNno][std variant and the power of pattern matching - Nikolai Wuttke - Meeting C++ 2018]]
+** TODO [[https://www.youtube.com/watch?v=j-hyMm3eIHk][dealing with aliasing using contracts]]
+* channels
+** code bullet
+** PigDev
+** what i've learned
+** [[https://www.youtube.com/channel/UCpExuV8qJMfCaSQNL1YG6bQ][ Better Than Yesterday]]
+   self improvement
+** [[https://www.youtube.com/channel/UCiz26UeGvcTy4_M3Zhgk7FQ][Defog Tech]]
+** [[https://www.youtube.com/user/phuckmediocrity][fightmediocrity]]
+** [[https://www.youtube.com/channel/UCRlICXvO4XR4HMeEB9JjDlA][thought2]]
+** [[https://www.youtube.com/user/adoredtv][adoredtv]]                                      :computerTechnology:cpu:gpu:
+** [[https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg/videos][linux what ever]]
+** [[https://www.youtube.com/user/sentdex][sentdex]]
+** [[https://www.youtube.com/watch?v=wHK7RDG_-x8][humble trader]]
+** [[https://www.youtube.com/channel/UC-yuWVUplUJZvieEligKBkA/videos][lone coder]]
+** [[ https://www.youtube.com/channel/UC3VWbWk8qDBiF0741izgpQg/search?query=anki ][ Med School Insiders ]]
+*** [[https://www.youtube.com/watch?v=V2_2UGeGL9M][study less study smart]]
+*** [[https://www.youtube.com/watch?v=AbvaITy3oeQ][13 Steps to Better ANKI Flashcards | Part 1/2]]
+*** [[https://www.youtube.com/watch?v=G49R744t4Ew][Most Effective Way to IMPROVE MEMORY (& Memorize ANYTHING)]]
+*** [[https://www.youtube.com/watch?v=JPUEw2wWH94][13 Steps to Better ANKI Flashcards | Part 2/2]]
+*** [[https://www.youtube.com/playlist?list=PL2ADAFpTg5aYuGojjD_O0mU1uml7Plw2Q][anki tutorials]]
+** [[https://www.youtube.com/channel/UCMrvLMUITAImCHMOhX88PYQ][PiXimperfect]]
+   photoshop
+** [[https://www.youtube.com/user/khanacademy/playlists?view=50&flow=grid&shelf_id=11][khan academy]]
+** [[https://www.youtube.com/channel/UCcIvNGMBSQWwo1v3n-ZRBCw/videos][Humbled Trader]]
+** [[https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA][luke smith]]
+   a linux channel specially for bash scripting
+** [[https://www.youtube.com/user/DIYPerks/videos][diy perks]]
+** [[https://www.youtube.com/user/Zan560/videos][neural network]]
+** [[https://www.youtube.com/channel/UCO2x-p9gg9TLKneXlibGR7w][snazzy labs]] 
+** [[https://www.youtube.com/channel/UCd6Za0CXVldhY8fK8eYoIuw][freedom in thought]]
+** [[https://www.youtube.com/channel/UCS0N5baNlQWJCUrhCEo8WlA][ben eater the bredboard computer ]]
+** [[https://www.youtube.com/channel/UC6Iaz96RkYE-MOjnq5NPgqw][ FarFromAverage]]
+** [[https://www.youtube.com/channel/UCpCSAcbqs-sjEVfk_hMfY9w/videos][Zach Star]]
+   math
+ 
+** [[https://www.youtube.com/user/DIYPerks][DIYPerks]] 
+   
+** [[https://www.youtube.com/channel/UC6Iaz96RkYE-MOjnq5NPgqw][far from average]] 
+
+** [#A] [[https://www.youtube.com/user/briantwill][Brian Will]]  programming os hardware
+** [[https://www.youtube.com/channel/UCeQhZOvNKSBRU0Mdg7V44wA/videos][Hopson]]
+   mine craft c++ channel
+** [[https://www.youtube.com/watch?v=RGbCR_pq4_A][  Ali Abdaal self development channel]]
+
+* series
+** Sex education
+** Black sails
+** Vikings
+** Skins
+** stranger things
+** Hands made tale
+** Barry
+** Black mirror
+** Killing Eve
+** you 
+   a psychotic killer stocking someone
+** Numb3rs  
+* movies
+** molly's game
+** source code
+* people
+** [[https://www.youtube.com/channel/UCPXFlFhjHP71rqhI2i4MvAQ][motobike guy with his sexy girlfriend]]
+** [[https://www.youtube.com/user/AdamSaaks][adam saaks the guy which create fancy dress by cutting ordinary ones]]
+** [[https://www.youtube.com/channel/UCIIMxhN5UNAKb9Wi0HLgSIA/videos][his girl  Christina Khalil]]
+   https://www.instagram.com/khalittle/
+** [[https://www.youtube.com/user/carsonichole][some chick i dont know why i have selected it]]
+** tom gilb one of the agile manifesto architects
+** Don Draper mad men
+** Kevlin Henny 
+*** TODO [[https://www.youtube.com/watch?v=SFv8Wm2HdNM][the forgotten art of structured programming]]
+** sean parent
+*** [[https://www.youtube.com/watch?v=QIHy8pXbneI][Better code : concurrency]]
+** Venkat Subramaniam
+** Jonathan Worthington
+   perl 6 implementor
+   https://www.youtube.com/watch?v=hGyzsviI48M
+* videos
+** [[https://www.youtube.com/watch?v=QNeu0wK92NE&t=29s][Jonathan Worthington. Perl 6 performance update]]
+** TODO https://www.youtube.com/watch?v=EF3fq2Z-qdw&t=51s
+** TODO https://www.youtube.com/watch?v=oeBrjmMMySM
+** TODO [[https://www.youtube.com/watch?v=vvhC64hQZMk][whats app messaging system]]
+** [[https://www.youtube.com/watch?v=zG09oyAGbUA][what happens if Arthor follows Saidy into shop]] 
+** TODO [[https://www.youtube.com/watch?v=oJNHXPs0XDk][architecture of neural network]]
+** https://www.youtube.com/watch?v=lCHQDo-vPbI
+** TODO [[https://www.youtube.com/watch?v=Ci1hKIHL9VY][Performance tuning Twitter services with GraalVM and Machine Learning]]
+** TODO [[https://www.youtube.com/watch?v=kG2SEcl1aMM][java scream vs reactive stream]]
+** TODO [[https://www.youtube.com/watch?v=j6ow-UemzBc][design microservice the right way]]
+** TODO [[https://www.youtube.com/watch?v=ho9QSSPVJVU][building reactive microservice with vert.x]]
+** [[https://www.youtube.com/watch?v=delFFgde9aU][THE WITCHER 3 GLITCH 2020 ! UNLIMITED MONEY FOR EARLY LVL (NEW)]]
+** TODO [[https://www.youtube.com/watch?v=cISNDnwlSgw][When Microservices Meet Event Sourcing]]
+** [[https://www.youtube.com/watch?v=Grveezn0zhU][named parameter from scatch in c++]]
+   in a span of an hour using different c++ technique and boost hana library 
+   and user defined types to create named argument like python
+   the library is called ARGO
+   https://github.com/atomgalaxy/Argo
+** TODO [[https://www.youtube.com/watch?v=ZbVCGCy3mGQ][CppCon 2018: Richard Powell “How to Argue(ment)"]]
+   discuss what is the effect of different input parameters in c++
+   & && const & * ...
+** post modern immutable data structure
+** [[https://www.youtube.com/watch?v=QyjyWUrHsFc][a breife history of graphics]]
+** tony van eerd word of wisdom
+** al the lonely people
+** Las ketchup the song
+** Neal Ford evolutionary software architecture
+** ten sql tricks that you didn't think were possible by lukas eder
+** the world after silicon from vacuum tubes to quantum
+** the future of computing performance
+** spiNNaker 1 million core neuomorphic platform
+** neuromorphic omputing with emergin memory device
+** scaling postgres for time series data with the citus database
+** The ps5 chip changes everthing
+   19:33
+   power required to move data
+   2019-10-07 01-09-53.png
+** using flamegraph to illuminate the jvm by nitsan wakart
+** 1D convolutional neural network for time series modeling nathan janos
+** 5 simple exercises that will transform your body in just one month
+** cppcon 2019 marc gregoire c++20 what's in it for you?
+** speed is found in the minds of people
+** memory tagging and how to improve C/C++ memory safety
+** cppCon 2019 timur doumler type punning in modern C++
+** authur o dwyer back to basic type erasure
+** org mode and spcemacs the absolute minimum you need to know
+** The performance addict toolbox
+** hot to get started with machin learning
+** think outside the synchronisation quadrant
+   10:50
+   number of cpu cycles for each operation
+** cppcon 2015 David sankel functional design explaned
+** zach laine writing great libraries : 89 easy steps
+** functional c++ for fun and profit by Phil Nash
+** fun never stops introduction to haskell programming language
+** fantastic algorithm and where to find them nicholas ormrod meeting c++ 2017
+   heavy hitter algorithm
+** charles bailey enough x86 assembly to be dangerous
+** spaceX merlin(& raptor ) engine r&D gpu-powered
+   adaptive grid
+   sparse grid point lookup
+   an efficeint hierarchical data structure for volumetric data
+** four distributed system architectural pattern by tim berglund
+   https://www.youtube.com/watch?v=tpspO9K28PM
+   https://academy.datastax.com/ about casandra
+** Stephan T. Lavavej “Floating-Point ＜charconv＞: Making Your Code 10x Faster With C++17's Final Boss”
+** reflection and code generation
+   [[https://www.youtube.com/watch?v=kjQXhuPX-Ac][CppCon 2019: Andrew Sutton “Meta++: Language Support for Advanced Generative Programming”]]
+   [[https://www.youtube.com/watch?v=ARxj3dfF_h0][CppCon 2019: Andrew Sutton “Reflections: Compile-time Introspection of Source Code”]]
+** [[https://www.youtube.com/watch?v=uEHJ5CHaF08][Writing cleancode withmodern Java. Miro Cupak, Dnastack]]
+** [[https://www.youtube.com/watch?v=9wJm8g83vqA][Kubernetes Native Spring apps on Quarkus by Georgios Andrianakis]]
+** [[https://www.youtube.com/watch?v=8wHx31mvSLY][Everything I Ever Learned About JVM Performance Tuning at Twitter (Attila Szegedi, Hungary)]]
+   protobuf
+   garbage collector
+** [[https://www.youtube.com/watch?v=azcrPFhaY9k][how to think like a programmer]]
+
+* movies
+** now is good
+* books
+** elon musk
+   Elon Musk's Book recommendations:
+1: "The Hitchhiker's Guide to the Galaxy" by Douglas Adams - https://amzn.to/2nbyX6N
+
+2: "Structures: Or Why Things Don't Fall Down" by J.E. Gordon - https://amzn.to/2nec1nK
+
+3: "Benjamin Franklin: An American Life" by Walter Isaacson - https://amzn.to/2AIKy72
+
+4: "Superintelligence: Paths, Dangers, Strategies" by Nick Bostrom - https://amzn.to/2AGtKNX
+
+5: "Our Final Invention" by James Barrat - https://amzn.to/2vmUduQ
+
+6: "Ignition: An Informal History of Liquid Rocket Propellants" by John D. Clark - https://amzn.to/2AJ4OWh
+
+7: The "Foundation" trilogy by Isaac Asimov - https://amzn.to/2KuMzUd
+
+8: "Life 3.0: Being Human in the Age of Artificial Intelligence" by Max Tegmark - https://amzn.to/2LSjgR1
+
+9: "The Lord of the Rings" by J.R.R. Tolkien - https://amzn.to/2ndU20H
+
+10: 'Zero to One: Notes on Startups, or How to Build the Future' by Peter Thiel - https://amzn.to/2ndU4FR
+
+11: "The Moon Is a Harsh Mistress" by Robert Heinlein - https://amzn.to/2M4N7ov
+
+12: "Merchants of Doubt" by Naomi Oreskes and Erik M. Conway - https://amzn.to/2KoYdjj
+
+13: 'Einstein: His Life and Universe' by Walter Isaacson - https://amzn.to/2OcCld0
+
+14: 'Howard Hughes: His Life and Madness' by Donald L. Barlett and James B. Steele - https://amzn.to/2KsISy8
+
+15: The 'Culture' series by Iain M. Banks - https://amzn.to/2MhWaPL
+** how to win friends and influence people
+** what every body is saying
+** models attract women through honesty
+** rich dad poor dad
+** the power of habbit
+** the power of now
+** Enterprise Integration pattern
+** build microservice
+** SOA pattern
+** Domain Driven Design
+** SQL performance Explained
+** the cocktail party

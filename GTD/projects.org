@@ -1,0 +1,344 @@
+* truvaillers
+* stockMarket
+* LinkedIn
+* Blog
+* instagram
+* preparing sajad marriage ceremony pictures
+* fix the bank 
+* Dr hosseini project
+** DONE call him regarding the project				      :calls:
+   SCHEDULED: <2019-06-30 Sun>
+   - State "DONE"       from "TODO"       [2019-06-30 Sun 18:57]
+   - State "TODO"       from ""           [2019-06-30 Sun 01:23]
+** install linux on your pc
+** install android sdk
+** CANCELLED find the project location				  :cancelled:
+   CLOSED: [2019-06-30 Sun 18:58]
+   - State "CANCELLED"  from ""           [2019-06-30 Sun 18:58] \\
+     could not find the location of project
+* learning spring
+* learning hibernate
+* learning SQL
+* learning postgres
+* Finding a suitable job
+* learning German language
+* finishing mapsa
+** DONE prepare payment document				  :@computer:
+   CLOSED: [2019-06-30 Sun 14:42] SCHEDULED: <2019-06-30 Sun>
+   - State "DONE"       from "TODO"       [2019-06-30 Sun 14:42]
+   - State "TODO"       from ""           [2019-06-30 Sun 01:29]
+** ask navid about the payment					      :calls:
+   - State "TODO"       from ""           [2019-06-30 Sun 02:19]
+* check the military sales project
+  - kosar karimi pour
+** DONE check emails to find her name				  :@computer:
+   CLOSED: [2019-07-07 Sun 07:46] SCHEDULED: <2019-06-30 Sun>
+   - State "DONE"       from "TODO"       [2019-07-07 Sun 07:46]
+   - State "TODO"       from ""           [2019-06-30 Sun 01:26]
+     
+** TODO call kosar karimipour on military sales project to check what is going on :calls:
+   - State "TODO"       from ""           [2019-07-07 Sun 07:46]
+* prepare your future
+** create a list of things you need to take care of
+* find out how you are going to find a partner
+* DAS clean up
+** CANCELLED call arab pour and check what is going on	    :calls:cancelled:
+   CLOSED: [2019-07-07 Sun 07:47] SCHEDULED: <2019-06-30 Sun>
+   - State "CANCELLED"  from "TODO"       [2019-07-07 Sun 07:47] \\
+     he send me text for this week meeting and i was supposed to respond but forgot to do so
+   - State "TODO"       from ""           [2019-06-30 Sun 01:32]
+** TODO call arabpour						      :calls:
+   - State "TODO"       from ""           [2019-07-07 Sun 08:22]
+* Sweedish project small one
+** clean up controllers
+** implement ACL(just each user coult edit )
+** 24 hours time left to expire
+   add this to the request
+** Controllers
+*** DONE price controller
+    CLOSED: [2019-07-15 Mon 16:58]
+    - State "DONE"       from "TODO"       [2019-07-15 Mon 16:58]
+    - State "TODO"       from ""           [2019-07-15 Mon 16:57]
+**** DONE register new price for each day for each currency
+     CLOSED: [2019-07-15 Mon 16:57]
+     - State "DONE"       from "TODO"       [2019-07-15 Mon 16:57]
+     - State "TODO"       from ""           [2019-07-15 Mon 16:57]
+**** DONE get histrory of prices for each currency(range date)
+     CLOSED: [2019-07-15 Mon 16:57]
+     - State "DONE"       from "TODO"       [2019-07-15 Mon 16:57]
+     - State "TODO"       from ""           [2019-07-15 Mon 16:57]
+*** DONE Request
+    CLOSED: [2019-07-24 Wed 10:04]
+    - State "DONE"       from "NEXT"       [2019-07-24 Wed 10:04]
+    - State "NEXT"       from "TODO"       [2019-07-24 Wed 10:04]
+    - State "TODO"       from ""           [2019-07-24 Wed 10:04]
+**** DONE updateRequest
+     CLOSED: [2019-07-15 Mon 17:32]
+     - State "DONE"       from "NEXT"       [2019-07-15 Mon 17:32]
+     - State "NEXT"       from "TODO"       [2019-07-15 Mon 17:32]
+     - State "TODO"       from ""           [2019-07-15 Mon 17:32]
+**** show list of pending requests (admin)
+*** User
+**** balance(show balance for each currency)
+**** forget password email
+*** DONE Transactions
+    CLOSED: [2019-07-17 Wed 10:26]
+    - State "DONE"       from ""           [2019-07-17 Wed 10:26]
+*** DONE reciet
+    CLOSED: [2019-07-24 Wed 10:04]
+    - State "DONE"       from "NEXT"       [2019-07-24 Wed 10:04]
+    - State "NEXT"       from "TODO"       [2019-07-24 Wed 10:04]
+    - State "TODO"       from ""           [2019-07-24 Wed 10:04]
+*** TODO fileUpload
+*** DONE paymentTarget
+    CLOSED: [2019-07-24 Wed 08:10]
+    - State "DONE"       from "NEXT"       [2019-07-24 Wed 08:10]
+    - State "NEXT"       from "TODO"       [2019-07-24 Wed 08:10]
+    - State "TODO"       from ""           [2019-07-24 Wed 08:10]
+*** DONE MessageController
+    CLOSED: [2019-07-24 Wed 10:04]
+    - State "DONE"       from "NEXT"       [2019-07-24 Wed 10:04]
+    - State "NEXT"       from "TODO"       [2019-07-24 Wed 10:04]
+    - State "TODO"       from ""           [2019-07-24 Wed 10:04]
+**** all messages for parent to a message
+*** reports
+**** DONE list of request in dateRange
+     CLOSED: [2019-07-15 Mon 21:25]
+     - State "DONE"       from "NEXT"       [2019-07-15 Mon 21:25]
+     - State "NEXT"       from "TODO"       [2019-07-15 Mon 21:25]
+     - State "TODO"       from ""           [2019-07-15 Mon 21:25]
+**** DONE num request in dateRange
+     CLOSED: [2019-07-15 Mon 21:26]
+     - State "DONE"       from ""           [2019-07-15 Mon 21:26]
+**** DONE num request in dateRange per day
+     CLOSED: [2019-07-15 Mon 22:22]
+     - State "DONE"       from "NEXT"       [2019-07-15 Mon 22:22]
+     - State "NEXT"       from "TODO"       [2019-07-15 Mon 22:22]
+     - State "TODO"       from ""           [2019-07-15 Mon 22:22]
+**** DONE list of transactions in dateRange
+     CLOSED: [2019-07-17 Wed 10:25]
+     - State "DONE"       from "NEXT"       [2019-07-17 Wed 10:25]
+     - State "NEXT"       from "TODO"       [2019-07-17 Wed 10:25]
+     - State "TODO"       from ""           [2019-07-17 Wed 10:25]
+**** DONE num transactions in dateRange
+     CLOSED: [2019-07-17 Wed 10:25]
+     - State "DONE"       from "NEXT"       [2019-07-17 Wed 10:25]
+     - State "NEXT"       from "TODO"       [2019-07-17 Wed 10:25]
+     - State "TODO"       from ""           [2019-07-17 Wed 10:25]
+**** num transactions in dateRange per day
+** DONE implement JWT
+   CLOSED: [2019-07-01 Mon 14:51]
+   - State "DONE"       from ""           [2019-07-01 Mon 14:51]
+** DONE implement password hashing
+   CLOSED: [2019-07-01 Mon 14:51]
+   - State "DONE"       from ""           [2019-07-01 Mon 14:51]
+* Sweedish project the bigOne
+* Mesmerizing
+** TODO clean up mesmerizing deployment
+   - State "TODO"       from ""           [2019-07-01 Mon 14:53]
+** TODO create a systemd script to automatically reload services
+   - State "TODO"       from ""           [2019-07-01 Mon 14:53]
+* TehranExchangeProject
+** Getting to start
+*** increase simulation speed
+**** clean up the database [2/4]
+***** DONE find a way to automatically generate this partitions
+      - pg_partman https://github.com/pgpartman/pg_partman
+***** TODO actually partition the tables in laptop
+***** DONE implement in memory database to speed up 
+***** TODO download the database for all the stocks in the past 2 month
+*** Create a buyer
+*** Create a seller
+** info
+*** [[https://github.com/ta4j/ta4j][A Java library for technical analysis.]]
+** do some refactoring
+*** DONE make the project to produce telegram bot handler jar
+    CLOSED: [2019-08-03 Sat 18:18]
+    - State "DONE"       from ""           [2019-08-03 Sat 18:18]
+*** TODO clean up Telegram bot
+    - State "TODO"       from ""           [2019-08-03 Sat 18:19]
+*** DONE connect to bids_row_copy table
+    CLOSED: [2019-08-04 Sun 01:46]
+    - State "DONE"       from ""           [2019-08-04 Sun 01:46]
+** create Agah sell/buy request
+** check request status
+** Getting to start
+*** Create tradinb bot
+**** create a proper buyer
+**** create position manager
+**** Write the live trading run profile
+**** complete buyOpertunityFinder
+***** logic to know how many position has already been taken
+***** logic to prevent multiple position be taken at the same point
+**** create seller
+**** do a unification of dates
+**** fix the bug
+     for some reason sellers become duplicated and it's not just happening here, it's just an example of a location
+     t: 10:48:47 CP: 12060 previousDayLastPrice:11850,numTransaction:194,volume:360702 sell:12099:1000,12099:1000,12120:5776  buy: 12060:1649,12031:100,12001:1659
+     private String [] timeStops;
+     private String date="20190803";
+     private String previousWorkingDay;
+     private String time="10:16:00";
+     private int timeAsked=0;
+     private int timesRepeat=2;
+     private String stockId="15259343650667588";
+
+** todos
+*** TODO [#A] [0/4] complete the cycle of buy/sell in agah and following each sell/buy order
+    - State "TODO"       from ""           [2019-08-14 Wed 02:47]
+**** TODO check specific order if it's completed
+     - State "TODO"       from ""           [2019-08-16 Fri 11:39]
+**** TODO cancel an order
+     - State "TODO"       from ""           [2019-08-16 Fri 11:39]
+**** TODO update an order
+     - State "TODO"       from ""           [2019-08-16 Fri 11:39]
+**** TODO check buy date of an order
+     - State "TODO"       from ""           [2019-08-16 Fri 11:39]
+*** buyer logic
+**** Create Volume tracker
+**** create candle stick creator
+*** DONE [#A] do check [[http://cdn.tsetmc.com/Loader.aspx?ParTree=15131P&i=34540569618314880&d=20190814][tsetmc historical data]] to see if it updates during
+    CLOSED: [2019-08-14 Wed 10:31]
+    - State "DONE"       from "TODO"       [2019-08-14 Wed 10:31]
+    - State "TODO"       from ""           [2019-08-14 Wed 02:41]
+      No it does't sadly
+*** DONE [#A] update Data on the market for every stock we care about
+    CLOSED: [2019-08-15 Thu 16:07]
+    - State "DONE"       from "TODO"       [2019-08-15 Thu 16:07]
+*** TODO [#A] Create api to give current offers for each stock at any moment
+    - State "TODO"       from ""           [2019-08-14 Wed 02:45]
+*** TODO [#A] Create api to give similar experience to LiveBidsService from historical data
+    - State "TODO"       from ""           [2019-08-14 Wed 02:46]
+*** TODO [#A] Create a performance test
+    - for now use a file to stream data and see what will happen
+*** DONE create Candle stick data based on LiveBidsService and historical data
+*** [#B] Do research about graph tools in java/qt/...
+    - State "TODO"       from ""           [2019-08-14 Wed 03:00]
+
+***  create Buyer and seller based on equilibrium
+    - State "TODO"       from ""           [2019-08-13 Tue 05:07]
+      i did check it out and it needs more thinking
+*** create daily feed which can be like tsefastapi
+*** create position manager(list of positions and ...)
+*** create a controller for managing positions
+*** test your buyer/ seller performance for different days
+*** create candle sticks for different time tables for different sources
+    - candle stick from raw trade data
+    - candle stick from price time series
+*** compare different moment hierarchy performance
+*** create rest api to add agah credential
+*** [#C] create a way to get every credential needed from user and password
+*** create a trend follower bot
+*** create neural network which could predict next movement in market
+*** read the rules for irans market
+*** check your algorithm on other markets
+*** learn more about goods market and other markets available
+*** learn more about investment rules
+
+** APIs
+*** [#A] an api to set good buy and sell location for each stock and each
+*** [#A] an api to give liveStockBid for date,time,stock
+*** an api to add interest locations
+*** 
+** UI
+*** a page to show information on stock
+*** TODO [#A] Fix price views
+    lines are not connecting actual prices but an approximation of them.
+*** TODO [#A] show all buy and sell positions
+*** TODO [#B] show different kinds of buy or sale positions
+    - ability to show them with different simbols or colors
+    - ability to select a number of points based on a criteria and view them
+*** TODO [#A] 
+*** show bids for each positions
+*** show volume on 
+* Stock exchange
+** things to do tomorrow
+*** DONE complete candle stick generator from trade data
+*** DONE add log4j to output logs into files
+*** TODO create trading based on tendlines
+**** DONE create swing point finder
+**** DONE create tend line drawer
+**** DONE create trend line interaction finder
+**** create a logic module to program 
+**** create an api to scadule tests
+*** TODO implement trade profit tracker
+*** check your patters finders
+**** mexican stand off
+**** stupid seller
+**** suden drop
+*** TODO fix bug of candle stick generator for live market
+    it produces different results from the trade candle stick creator
+    i also checked the output of marktet live stock , it produced transactions before 9
+** things to be done for the next week or so
+*** work on buy and sale algorithm
+**** 
+*** update database
+*** create command executer
+**** TODO buy order at the lowest possible position at the day
+**** TODO sell order to sell the stock at the highest point in the day
+**** TODO 
+*** Live trend monitoring
+    - i want to be able to tell what is happening in the market in one glance
+    - i need to see candle sticks which update regularly for different time scales
+    - i need to see the volume of trades in each stock
+    - i need to see market coordinations(if there is such thing) 
+**** show the current trends for every stock you are interested as a window
+     what fatemeh has already created just add a long pooling api to it so it will update
+     - it also needs 
+**** create a monitoring system which collect live data for the day
+**** create an api based on long pooling for current information
+**** 
+*** Extract codal information
+* metatrader
+** things that i want
+   - automatically mark begining and end of each market day
+   - candle stick for custom time frame
+   - 
+* Tahere
+** Write the function which calculates the zero point for equation
+
+* to watch							   :to_watch:
+** TODO [[https://www.youtube.com/watch?v=929OrIvbW18][Adventures with concurrent programming in Java: A quest for predictable latency by Martin Thompson]]
+   - State "TODO"       from ""           [2019-06-30 Sun 21:25]
+** TODO [[https://www.youtube.com/watch?v=EMv_8dxSqdE][New Concurrency Models on the JVM: Fibres, Verticles, Agents and Actors. by Lutz Huehnken]]
+   - State "TODO"       from ""           [2019-06-30 Sun 21:27]
+** TODO https://www.youtube.com/watch?v=q6zF3vf114M
+   - State "TODO"       from ""           [2019-06-30 Sun 21:29]
+** TODO https://www.youtube.com/watch?v=03GsLxVdVzU
+   - State "TODO"       from ""           [2019-06-30 Sun 21:29]
+** TODO https://www.youtube.com/watch?v=wgQBz2Ldhvk
+   - State "TODO"       from ""           [2019-06-30 Sun 21:29]
+** TODO https://www.youtube.com/watch?v=tpspO9K28PM
+   - State "TODO"       from ""           [2019-06-30 Sun 21:29]
+** TODO https://www.youtube.com/watch?v=OMk5KoUIOy4
+   - State "TODO"       from ""           [2019-06-30 Sun 21:29]
+** TODO https://www.youtube.com/watch?v=X0tjziAQfNQ
+   - State "TODO"       from ""           [2019-06-30 Sun 21:29]
+* trouvaillers
+** create a way so that each request could search multiple pages in booking
+   bookingRequestToSearchLinkConvertor
+   sb.append("&order=price&rows=40&offset=0");
+** TODO check why we dont have some of the destinations
+   - State "TODO"       from ""           [2019-09-04 Wed 15:36]
+** TODO check why torento and vancover do not have the same number of packages
+   - State "TODO"       from ""           [2019-09-04 Wed 15:37]
+** TODO create custom query to create 
+   - State "TODO"       from ""           [2019-09-04 Wed 15:50]
+*** create complete link
+*** sum stop
+*** duration leave and return
+*** sum price to USD
+*** trip day number
+*** number of people in each packages
+*** flight link
+*** flight time
+** TODO create seperate packages for one and two people
+   - State "TODO"       from ""           [2019-09-04 Wed 16:17]
+** TODO do search two pages 
+   - State "TODO"       from ""           [2019-09-04 Wed 16:24]
+** sanity Check tests
+*** check number of hotels for each day in each place in each category
+*** check number of flights for each day for each destination and departure location
+*** check number of hotels for each category(1 adult, 2 adults)
+*** check number of same hotels that apear on both 1 adult and 2 adults
+*** 

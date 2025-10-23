@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       88A87AD8-776A-4CC1-B650-4E45AE1EF1F3
+:END:
+#+title: rubic qube
+
+[[https://www.youtube.com/watch?v=7Ron6MN45LY][Learn How to Solve a Rubik's Cube in 10 Minutes (Beginner Tutorial)]]
+
+
+[[https://www.youtube.com/watch?v=IWXpkfwimo0][Rubik's Cube: 7 Tips For An Efficient Cross Every Solve (CFOP)]]
+
+
+https://www.speedcube.us/pages/how-to-solve-a-rubiks-cube?shpxid=f3944a6b-d06f-4ac5-9a0b-d0e92e8a2ae9#step1

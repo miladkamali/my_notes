@@ -1,0 +1,7 @@
+* virus names
+** ebola
+** HIV
+** influenza
+** smallpox
+** hanta virus
+** marburg

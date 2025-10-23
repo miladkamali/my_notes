@@ -1,0 +1,11 @@
+* swagger 
+  https://app.swaggerhub.com/apis/dlacroix01/CUFX/4.0#/AccessProfileMessage/postAccessProfileMessage
+* mocking 
+  prism mock 1.yml
+** mocking with data
+   https://medium.com/@n_yayoshi/swagger-to-mock-generates-mock-data-5ca3aa3f66c4
+* services
+** card
+   CUFXCardDataModelandServices.docx
+** transfer
+   CUFXTransfersandPaymentsServices.docx

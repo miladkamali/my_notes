@@ -1,0 +1,74 @@
+:PROPERTIES:
+:ID:       537c4759-f7ff-47d9-8df9-376be4c2409d
+:END:
+#+title: uid issues
+* my issues
+** [#A] پرداختی‌های ماه شهریور
+3 hours kasr kar
+6 hours ezafeh kari
+why the fuck this is happening?
+*** off-days work calculation
+since this was related to the month before and due to mis-management it has been
+moved to this month, base salary has changed since the last month so the effect
+*** Why the fuck do i have 3 hours less work when i have 6 hours of overwork
+** [#A] my insurance for farvardin
+why you 
+** [#A] behnam bahman insurance
+** [#A] behnam farvardin insurance
+* things we have achieved
+** Afta
+*** develop integrity test for android SDK
+*** investigate usage of temporal execution engine
+*** integration of proper security measures
+** Labour
+*** prevent direct upload of video
+*** protect otp service
+*** fixing architecture issues which prevented actual lunch
+*** making the service stable
+*** major overhaul of the service
+**** adding session
+**** changing the SMS flow
+**** adding 
+** Sana
+*** prevent direct upload of video
+*** protect otp service
+*** fixing the issue with database
+*** making the service stable
+*** upgrade logs
+*** fixing issue with upload loads
+** Crypto
+*** prevent direct upload of video
+*** protect otp service
+*** fix direct access to videos
+*** supporting aban teter and all the bugs reports
+*** major overhaul of the flow
+**** adding session
+**** removing land otp
+**** removing address
+**** customizing 
+*** logs
+*** monitoring
+** Authentication
+*** ghoghnos election
+** Sajam
+*** fixing issue with database
+*** support PWA effort ( almost 40 man/day effort)
+** AI services
+*** new generation of liveness and facematching services based on grpc
+*** 
+** Architeture
+*** setup unified service access through gRPC
+*** introduction of workflow engine
+*** dynamic workflow and 
+** Infrastructure
+*** move all the infrastructure to asiatech
+*** set up CI/CD
+*** Set up monitoring for our services
+*** Containterise all the services
+* ai 
+** offline report for CPA
+***  list all the users in the past x month that ai has detected as not live but operators said live with the video sample
+** Sana update for liveness and face verification
+** check version of cpa and crypto liveness,
+** check latest update for liveness and facematching
+** Update the liveness and face-matching

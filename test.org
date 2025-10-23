@@ -1,0 +1,171 @@
+#+OPTIONS: ^:nil
+* UID authentication Documentation
+We provide a very flexible eKYC solution to authenticate users for our
+customers. User authentication journey begins by user redirection to our website
+which depending on the business requested authentication flow we will request
+series of information from the user and at the end we will redirect the user to
+business defined return url with status of how the user completed it's journey
+in our website. At the end we will provide the final authentication results
+directly to the business backend.
+
+process rough flow diagram is presented bellow.
+file:./flow.drawio.svg
+** Front-end
+*** start of user journey
+Redirect your user to our website with the following query
+parameters
+ - business_id businessId is provided by the UID to your business and is used to
+   identify your business and it's requirements in PWA  
+ - business_token a token which will be used to identify the user by the
+   business, In case of backend communication between us and business this token
+   will be used to identify the user. This token has to be unique. 
+ - business_meta_data optionally business can send us up to 255 characters of
+   meta data which can be used internally by the business. It's not required to
+   be unique.
+ - business_return_url is the return url which will be used to redirect the user
+   to the business, this field has to be url encoded
+ - business_signature in order to ensure users are being sent by business, we
+   require the this field which is a digital signature of the query parameters.
+   (business_id+business_token+business_meta_data+business_return_url) signature
+   should be provided here which we will check against business public key
+
+
+
+ an example of
+
+#+BEGIN_EXAMPLE
+  https://{customDomain}/?business_id=d5162891-c1e2-409c-b4b1-852cecb59763&business_signature=iEYEARECAAYFAjdYCQoACgkQJ9S6ULt1dqz6IwCfQ7wP6i%2Fi8HhbcOSKF4ELyQB1%0AoCoAoOuqpRqEzr4kOkQqHRLE%2Fb8%2FRw2k%0A%3Dy6kj&business_token=a592-597f1fedc5d3&business-meta-date=4666&business_return_url=https%3A%2F%2Fu-id.net%2Fauthentication%2F
+#+END_EXAMPLE
+ 
+ 
+*** end of user journey
+At the end of authentication process users will be redirected to the business return url provided by the business with the following query parameters
+ - status
+| code | result code                    | Description                               |
+|------+--------------------------------+-------------------------------------------|
+|    1 | SUCCESS                        | user has completed authentication journey |
+|    2 | RESULT_CAMERA_NOT_SUPPORTED    | unsupported camera                        |
+|    3 | RESULT_PERMISSIONS_NOT_GRANTED | permission was not granted to view camera |
+|    4 | RESULT_UNKNOWN_ERROR           | unknown error                             |
+|    5 | RESULT_INVALID_PARAMETERS      | invalid query parameters                  |
+|    6 | RESULT_PAYMENT_FAILED          | user failed to complete payment           |
+|    7 | RESULT_USER_CANCELED_PROCESS   | user has canceled the process             |
+   
+ - business_meta_data
+ - business_token
+ - verification_signature (statusCode+business_token+business_meta_data) is signed by our private key to ensure authenticity of data
+
+
+
+
+
+example url would be as follows
+#+BEGIN_EXAMPLE
+  https://redirectUrl/?status=1&business_meta_data=4666&business_token=a592-597f1fedc5d3&verification_signature=iEYEARECAAYFAjdYCQoACgkQJ9S6ULt1dqz6IwCfQ7wP6i%2Fi8HhbcOSKF4ELyQB1%0AoCoAoOuqpRqEzr4kOkQqHRLE%2Fb8%2FRw2k%0A%3Dy6kj
+#+END_EXAMPLE
+
+
+
+
+
+
+
+
+
+
+** backend
+*** image service
+In order to receive reference images for each user we require business to provide
+us with the reference images that will be compared with liveness image obtained
+from the video. This endpoint should be post which as input receives user token
+and in output returns base64 encoded images of reference and profile. Endpoint
+authentication or IP white listing is business decision.
+
+#+BEGIN_EXAMPLE
+ HTTP method POST
+#+END_EXAMPLE
+
+#+BEGIN_SRC javascript
+  {
+      token: 'usertoken'
+  }
+#+END_SRC
+
+
+#+BEGIN_SRC javascript
+  {
+      referenceImage: 'base64 of image',
+      profileImage:'base64 of image'
+  }
+#+END_SRC
+*** final authentication response
+To get final authentication response 20 minutes after user has been redirected back to your website, you should call the below endpoint 
+**** login
+first you need to login with the credential provided to you by UID in the bellow domain
+
+#+BEGIN_EXAMPLE
+  https://{customDomain}/business/login
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+ HTTP method POST
+#+END_EXAMPLE
+
+***** request input
+#+BEGIN_SRC javascript
+  {
+      userName:'username',
+      password:'password'
+  }
+#+END_SRC
+***** response 
+#+BEGIN_SRC javascript
+{
+  "access_token" : "4484e52dc4744374aced826a4543cd28948816ff",
+  "token_type" : "Bearer",
+  "expires_in" : 1295999
+}
+#+END_SRC
+
+**** get response
+using the token from business/login as 'authorization: Bearer 4484e52dc4744374aced826a4543cd28948816ff' header 
+#+BEGIN_EXAMPLE
+  https://{customDomain}/business/get-final-authentication-response
+#+END_EXAMPLE
+ 
+#+BEGIN_EXAMPLE
+ HTTP method POST
+#+END_EXAMPLE
+
+
+#+BEGIN_SRC javascript
+  {
+      businessToken:'a592-597f1fedc5d3'//business token to identify users with
+  }
+#+END_SRC
+
+
+
+#+BEGIN_SRC javascript
+  {
+      status: enum
+      successfulPayment: boolean,
+      authenticationStartTime: '2023‐07‐15T04:05:07Z',
+      authenticationEndTime:'2023‐07‐15T04:06:07Z',
+      referenceSimilarity: boolean,
+      profileSimilarity: boolean,
+      livenessImageLink:'downloadLink',
+      livenessVideoLink:'downloadLink'
+  }
+#+END_SRC
+| code | result code           | description                                            |
+|------+-----------------------+--------------------------------------------------------|
+|    1 | AuthenticationStarted | user has landed with appropriate data in our website   |
+|    2 | PaymentStarted        | user has been sent to IPG provider to complete payment |
+|    3 | PaymentCompleted      | user has return from payment portal to our website     |
+|    4 | RedirectedToBusiness  | user has been redirected to business landing page      |
+|    5 | Waiting               | waiting for operator response                          |
+|    6 | authenticated         | User identity has been confirmed                       |
+|    7 | rejected              | user identity has been rejected                        |
+
+

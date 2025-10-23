@@ -1,0 +1,20 @@
+* concepts 
+** exception handling
+** Exception hiearchy
+** what methods you can not override (final and abstract)
+** what is the concept of interface and abstract class
+** ACIP principles
+** transction concept
+** what spring dose as a container 
+** Collections
+*** Arraylist
+** Hibernate
+*** what is ORM
+* milad aminzadeh 
+** very bad explanation of Exception hiarchy
+** polymorphism
+   - in explanation he explains overload along side polymorphism
+** interface vs abstract class
+   - wrong answer, shape should be abstract class not interface
+* ashkan
+** bad answer for ORM( what is orm) 

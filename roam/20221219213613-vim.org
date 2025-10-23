@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       ecf5f5a4-e526-4683-8707-e2333fbda2f6
+:END:
+#+title: vim
+https://www.youtube.com/watch?v=stqUbv-5u2s

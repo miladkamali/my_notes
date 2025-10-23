@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       27E01EF1-C49F-4B1E-B789-6637CBB844A4
+:END:
+#+title: body measurements
+* <2022-09-10 Sat>
+ - weight : 111.6
+ - waist : 115
+ - checst 113.5

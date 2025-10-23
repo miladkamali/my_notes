@@ -1,0 +1,19 @@
+* unified identification system
+  AADHAAR in india
+* baqnking system use apachefineract
+** novaPay
+   india
+** mines.io
+    [[file:./images/mines_io.png][mines.io]]
+    [[file:./images/mines_io_architecture.png][architecture]]
+** Gentera
+   [[file:./images/Gentera_mexico_market.png][market size]]
+   [[file:./images/Gentera_mexico_architecture1.png][architecture ]]
+   [[file:./images/Gentera_mexico_architecture2.png][architecture]]
+** landesbanken
+   [[file:./images/germanBank_market.png][market]]
+* mifos
+* psd2
+* apache fineract
+** https://cwiki.apache.org/confluence/display/FINERACT/How+To+Build+Apache+Fineract+CN
+** https://github.com/apache/fineract-cn-demo-server

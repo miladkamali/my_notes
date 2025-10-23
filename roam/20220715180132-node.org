@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       F2C4B263-8141-4A35-8543-7787A62B3A05
+:END:
+#+title: node
+* TODO search about nodemon
+a running system for node

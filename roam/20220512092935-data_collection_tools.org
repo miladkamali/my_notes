@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       AADBF31F-23CF-4DF9-AEAD-B904AF81C12B
+:END:
+#+title: data collection tools
+* curl
+* curl.js
+* pupetteer 
+* gpcurl
+* jq

@@ -1,0 +1,20 @@
+* key bindings
+** open file
+   SPC ff
+** save file
+   Spc fs
+** resize font
+   spc zf
+** uncomment a line
+   spc cl
+** reload spacemacs 
+   spc feR
+** find file  
+   spc pf
+** tree view of project
+   spc p t
+* code
+** all symbols in a file 
+   spc ji
+* TODO test 
+  SCHEDULED: <2020-03-24 Tue>

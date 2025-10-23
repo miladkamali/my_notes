@@ -1,0 +1,208 @@
+* status reports
+** first week
+   During this week, the very first project that i assigned to Siamak was to
+   create mock server for KYC services, within 3 days the initial version of
+   mock server was ready, however it's was not what i was expecting. Even though
+   i did not consider him a veteran java developer, the initial version showed
+   his talent for engineering. He has basically created a JSON and header
+   validation library using reflection to not repeat himself in the code. I was
+   facinated by the complexity of the design and how he had used the reflection
+   system(even though i would have not used it that way). however it wasn't what
+   we needed and i explained to him that level of complexity is not acceptable
+   for us in project, our moto is to keep things simple. something else that was
+   interesting in the result was even though he had not followed most of the
+   conventions we have in java but he was eagerly looking for conventions to
+   follow. during this phase he had no input from me and Alireza because i
+   wanted to see how he would handle the problem. i only gave him a postman
+   collection for KYC services.
+   
+   next step was to rewrite the code, but this time i wanted 3 versions of the
+   code, one with in memory storage like hash-map, one with database
+   back-end(Postgres) one with Redis back-end. This time familiarity with
+   Hibernate, Redis was a factor. Two version of project was completed before
+   end of week and we get to compare response times of each system. The result
+   of this section was ready to be used in our system and i announced it in
+   group that mock services are back again. However KYC started to change, and
+   our frustration with KYC service begun. In the weekend he was focused on
+   Hibernate and Spring Data projects for learning. Over all i am highly
+   satisfied with his level of enthusiasm for learning and the speed he is
+   learning.
+  
+
+   TLDR: He showed very good engineering talent in his first attempt, however he
+   needed to learn how to reduce complexity. He produced a production ready code
+   for our mock sever, however due to changes in KYC services we were not able
+   to use it for the next two weeks. he was also very punctual, with the time he
+   started and finished work.
+** second week
+   from the second week we were forced to used Siamak's mock server because kyc
+   services were no longer accessible from outside, basically that mock server
+   become the only means the clients could test our kyc APIs from the outside.
+   In the beginning of this week we had a working mock but rapid changes forced
+   almost a complete rewrite of the mock server to keep up with kyc.
+
+   TLDR: He managed to keep up with very fast changing APIs, Both myself and
+   Alireza were available during this time, however we did not directly
+   contribute to the Kyc mock server's code. He proved to be reliable in tasks
+   that are assigned to him. He is also start work on timely manner.
+** third week
+   during this week we are wasting lots of time with KYC's APIs and changes and
+   conflicts are a common occurrence to the point of head ache for every one in
+   blue back-end. Siamak was forced Mock IAM along side the KYC because they are
+   entangled now. This week was characterized by lots of dirty hacking just to
+   keep thing moving forward. due to this pressure siamak was almost left on his
+   own to manage every required changes for KYC and IAM, he received very
+   minimum input but with very little input the mock server remained
+   operational. This mock sever definitely saved a lots of times and headache for our Android and IOS clients.
+
+   TLDR: due to work overload on Me and Alireza, siamak was forced to operate
+   almost independent and keep working on maintaining API consistency with KYC.
+** 4th 
+   the trend from the previous week continued to this week, in the middle of
+   this week we stopped working on KYC, and left it in a broken state due to the
+   latest changes, however we kept the mock server and it kept our clients
+   operational.
+   
+   we start working on bill inquiry and payment, and siamak was given two of the
+   more complex API atoms task which were not immediately needed. during this
+   week every one was working from home and this proved challenging for siamak.
+   his performance suffered almost 50% during this week, and he openly express
+   his problem.  
+
+   TLDR: Siamak is actively writing production code, He is open about his
+   performance, and he needs to work from company to have optimum performance.
+
+** 5th week
+   Siamak is still working from home but in order to become more productive he
+   is working in nights instead of days, and still participate in daily
+   meetings. this change bring back his performance to an acceptable level. from
+   this week we do have daily logs of siamak in jira. So far he has proven quite
+   capable of handling relatively unknown situations with minimal guidance.  
+   
+** overall 
+   He is proven to be an effective member of the team and as of now is caring
+   his fare share of work load. He is proven to be reliable in the tasks and
+   quite good communicator when facing problems. He needs to be present in the
+   company space and working from home proved to be very ineffective, however he
+   managed to control the situation when it prolonged to two weeks. He aptitude
+   and extra knowledge already proved useful in discussing architecture and
+   security measures (He has good knowledge about cryptography and related
+   practices). He is proven to be punctual and has never missed a daily.
+
+* second resport
+** things he had worked on
+*** Mobile top-up
+*** Set password atom
+*** Change password flow
+*** bank list
+*** Merchant entity
+*** 
+*** force update ( rewrite 0% )
+*** internet package (rewrite 40%)
+*** buy internet package (rewrite 10%)
+*** QR inquiry (rewrite 0%) 
+*** QR payment (rewrite 0%)
+*** Types 
+*** different atoms (rewrite/refactoring 20%)
+*** Bank information (rewrite 0%)
+*** Asset managements (rewrite 0%)
+*** KYC 1003
+*** research 
+** things he had learned
+*** Full spring course beginner to guru
+** improvements
+*** i can 
+** report sections
+*** code quality
+    When siamak started working on tasks initially i would check every lines of
+    code that he wrote to ensure quality and avoid possible mistakes however, as
+    the time passed it become clear that i could rely on the quality of the code
+    to the extend that in the QR and force update i had very minimal oversight
+    on his code. Something interesting that is happening 
+*** design
+*** learning
+*** task handling
+
+
+  This is report related to Siamak's evaluations during the past two month, He
+  has been an active contributor to the project, and had works on several
+  features. The quality of code and amount of refactor that is required for his
+  contributions is something that i will discuss further in the report. I can
+  describe his progress as quite remarkable during our very turbulent and high
+  pressure times leading to soft-lunch . According to several conversations we
+  had, he is not satisfied with rate of his progress which is a very good sign
+  in my book.
+
+  he has gone from very low confidence in coding where he would try to receive
+  confirmation on almost all the coding decisions to almost independent coding.
+  He still requires input on general design decisions which is actually
+  preferable in current mode of our code base.
+
+  two month a go i would have had to check every lines of code that siamak
+  wrote, to ensure it is acceptable however over time this overhead has
+  dramatically reduced to the extend that i almost feel confident in quality of
+  code that he is producing. Specially in QR-inquiry and payment and force
+  update this became almost zero. Something that really caught my eyes is change
+  in his attitude in accepting design decisions. Initially he would accept every
+  design decisions and would not question or suggest alternatives. However in
+  the past month this change has become quite noticeable where he has become
+  quite active participant in design decisions and challenge designs where he
+  can suggest alternatives. 
+
+  Siamak was actively learning spring in depth by following along with a very in
+  depth and comprehensive tutorial on spring ( almost 500 videos) where he had
+  made more than 50% progress so far. He had also been very involved in leaning
+  about different testing methods and testing methodologies in general which had
+  lead to several in depth conversions.
+
+
+  Over all I would say he had become a valuable member of team which and has
+  shown to be an avid learner with high degree of progress.
+
+  here is list of the features that siamak had works on:
+
+*** Mobile top-up ( no rewrite ) 
+*** Set password atom (no rewrite)
+*** Change password flow ( no rewrite)
+*** bank list (no rewrite)
+*** Merchant entity (no rewrite) 
+*** force update ( rewrite 0% )
+*** internet package (rewrite 40% due to changes in design) 
+*** buy internet package (rewrite 10%)
+*** QR inquiry (rewrite 0%) 
+*** QR payment (rewrite 0%)
+*** Types ( no rewrite)
+*** different atoms (rewrite/refactoring 20% due to changes in error handling )
+*** Bank information (rewrite 0%)
+*** Asset managements (rewrite 0%)
+*** KYC 1003 (no rewrite)
+*** KYC 2006
+*** KYC 2003
+* third report
+
+  Dear Dr. Mousavian
+
+  As you have previously requested, i present to you Mr Dehbod evaluation
+  status report so far as a member of back-end team in Blu project and my
+  recommendation.
+
+  He has been an active contributor to the project and had worked on several
+  features. Professionally he has gone from a very low confidence in coding
+  where he required feedback and confirmation on his code to almost independent
+  coder only seeking large scale guidance on code structure and
+  architecture. During the time between soft-lunch and public-lunch of the
+  project our team has experienced quite high pressure, which has tested every
+  one on soft-skills related to handling pressure and meeting deadline. This
+  test also proves we can count on him as long term member of our team.
+
+
+ Over all i can confirm his progress from a junior java developer despite being
+ a relatively good programmer in other languages to between mid-level and
+ pre-senior programmer in java. He has shown to be an avid learner and he is
+ well on his way to becoming a senior java developer in a few month. I would
+ recommend a promotion as a recognition of this level of progress.
+
+ Best Regards
+ M.Z.Kamali
+ Lead Back-end Developer in Blu Project
+  

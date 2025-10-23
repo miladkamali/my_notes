@@ -1,0 +1,18 @@
+* openGL
+** basic OpenGL
+** GLSL
+* Machine Learning
+** basic techniques 
+* OpenCL
+* Blender
+* Rendering pipeline
+* Kafka
+* Rabbit MQ
+* Drawing
+* Graph Algorithms
+* Math
+* Physics
+** General relativity
+** QCD
+** Quantum mechanics 
+* reading music

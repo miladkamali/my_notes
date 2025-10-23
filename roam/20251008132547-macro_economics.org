@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       b6d5cfc2-475c-4849-9769-bd8008f06999
+:END:
+#+title: macro economics
+* indicators
+** ISM
+ISM manufacturing index
+** ISM PMI
+** money suply
+*** M0
+*** M!
+*** M2
+** treasury maturity 

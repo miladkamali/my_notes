@@ -1,0 +1,5 @@
+* taking over infrastructure
+** connecting to all the machines
+*** management7 is offline
+*** connect to ESX
+** 

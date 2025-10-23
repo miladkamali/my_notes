@@ -1,0 +1,68 @@
+* Authentication API
+** introduction
+UID Authentication API documentation that you are viewing, is combination
+service which is used to authenticate users using their National registry
+information and a liveness video. The liveness video is used to ensure presence
+of the user. These services are exposed using [[https://grpc.io/][gRPC]] and final results are posted
+to a call back url defined by the business. Using [[https://grpc.io/docs/protoc-installation/][protoc]] compiler you can
+compile client stubs to communicate with the server. Due to security
+measures(encryption and key-exchange) for each session testing with tools like
+[[https://github.com/fullstorydev/grpcurl][grpcurl]] or [[https://github.com/bloomrpc/bloomrpc][bloomrpc]] can not be used.
+** definitions
+*** Diffie–Hellman key exchange
+For each user flow you need to use diffie-Hellman to generate a shared secret
+for session, liveness video will be encrypted using AES key derived from this shared secret.
+*** liveness
+A video is considered to be live when, it has been captured directly by a camera
+from actual scene. A video recording of image or screen is considered not to be
+live. In UID SDK the responsibility of ensuring that this video is being
+captured by phone camera is on the SDK, however in the API, we do not have any
+way of ensuring that the video is actually recorded by phone camera, so the only
+criteria that is being checked is whether the video is a recording of actual
+scene or not.
+** requirements
+ - User is required to have National Registry image in case National registry
+   inquiry fails the authentication process can not be completed and an early error is returned.
+ - Liveness video is required to be at least 720P resolution and in good
+   lighting condition. Camera lens should be clean and only one person should be
+   present in the video. The video length should be at least 80 frames
+   containing a person. roughly a 5 seconds video should be sufficient if the
+   person is within the frame from the beginning. Preferred Video codec is
+   AVC(h.264) with MP4 container.
+** Sequence Diagram for each Endpoint
+[[file:./Authentication_API.svg]]
+*** KeyExchange
+KeyExchange endpoint is used for each user to create a shared secret which be
+used to encrypt sensitive data during the session. Elliptic Curve Diffie-Hellman
+is method that is used to generate session shared secret. Public key for the
+client and server are Ephemeral P-384 (secp384r1) which are encoded ASN.1 in
+binary DER format. In key exchange response server sends their session public
+key and a challenge token. Challenge is encrypted with "AES/GCM/NoPadding"
+cipher method and a key derived from SHA-256 hash of the shared secret.
+Decrypted challenge along with step token that is located in ResponseContext is
+used for the CheckChallenge endpoint.
+*** CheckChallenge
+CheckChallenge is used to ensure correctness of shared secret and generated keys
+that are being used for duration of session. If challenge is properly decrypted,
+a step token for RegisterUserSession is given to the client
+*** RegisterUserSession
+RegisterUserSession is beginning of use session, User 
+*** RequestUpload
+After registration of user session an upload link is obtained from this
+endpoint. In this endpoint SHA-512 Hash of unencrypted file is a required
+parameter of the request. Server will respond with minio presigned URL which
+will be used to upload encrypted video file.
+*** upload
+Upload encrypted video file to the presigned URL.
+*** VerifyUpload
+This endpoint is called directly after upload video, server will attempt to
+decrypt uploaded file and will check registered hash code, in case of success
+you will receive a success otherwise response redirects client to RequestUpload
+with a new step token.
+*** callback response
+At the end of authentication flow, a post request is sent to business specified
+callback containing JSON representation of UserAuthenticationReport object. In
+case of non 200 response from the callback endpoint this endpoint will be called
+two more time with fixed 30 second delay.
+** [[file:./API-Doc.html][gRPC documentation]]
+** [[file:./proto-definitions.zip][grpc definitions]]

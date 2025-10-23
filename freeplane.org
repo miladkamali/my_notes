@@ -1,0 +1,2 @@
+* finding the parser section 
+  - C:\Users\milad\Desktop\FreePlane\freeplane\freeplane\src\main\java\org\freeplane\core\io\xml\XMLParser.java

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       cfc47c0b-b21a-4233-b094-5b282b29ba27
+:END:
+#+title: imageio
+a library in python which can be used to do image and video operations on images and videos
+https://imageio.readthedocs.io/en/stable/examples.html

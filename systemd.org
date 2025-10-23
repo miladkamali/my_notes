@@ -1,0 +1,7 @@
+* defining script
+* running a service for user
+  systemctl --user start foo-daemon
+* running a service that depends on XOrg
+  https://superuser.com/questions/759759/writing-a-service-that-depends-on-xorg
+* list all user services
+  systemctl --user list-unit-files

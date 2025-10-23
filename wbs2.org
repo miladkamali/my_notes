@@ -1,0 +1,31 @@
+* phase 2
+** Middle ware
+*** restructure model writer code ( 2 weeks )
+The goal is to use proper software engendering practices for our prototype
+*** user interface
+**** design how user is supposed to interact with the plugin
+At the moment we have specified a command that would prompt the user to select a
+component and port
+**** understand plant3d UI components ( 2 weeks)
+Depending on the design of the previous, to implement required UI, we need to
+investigate how plant3d custom UI system works. If we continue using command
+interface we can skip this step
+**** implement the user interface( 3 days - 3 weeks depending on the level of complexity of the UI )
+In case of continuation of command interface there is fairly little time required in this section
+*** scene data extraction module (6 weeks)
+The goal of this module is to export scene information for solver
+**** Query/list scene components ( 1.5 week )
+**** define export interface for all the components types ( 1 week)
+for some basic components like pipe, bend this interface has already been
+defined however for more complex components types and supports we need to design
+this interface.
+**** implement export interface (1.5 week)
+**** Mapping scene components to their p&id counterparts (2 weeks)
+***** identify related component
+***** identify related ports
+*** export information from P&Id (4 weeks)
+**** investigate P&ID plant3d interface(2 weeks)
+**** extract p&id information (2 weeks)
+***** query/list components***** phenotype generation module
+***** gene mutation/crossover module
+***** fitness evaluation module

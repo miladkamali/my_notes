@@ -1,0 +1,94 @@
+* mapsa java training report
+** define the goals of 3 month training
+*** Become a competent programmer
+**** solving lots of small problems
+**** implementing data structures
+**** understand Debugging
+**** understand time and memory complexity of algorithms.
+**** understand how a computer works 
+**** understand compiler / binary / bytecode / JRE ...
+**** Learn Object Oriented programming and concepts
+**** Learn to identify bad code and strive to fix it( do research on what are the better patterns of programming ). 
+*** Learn enough java to pass Java SE certificate
+    https://education.oracle.com/oracle-certified-professional-java-se-8-programmer/trackp_357
+**** learn concepts of java SE through projects
+*** Understand and use different design patterns
+**** understand and learn design patterns through project involvement
+*** create a portfolio of works so they are easily represented to customers
+*** Learn parts of java EE course including Hibernate socket programming network-communication, ...
+*** understand development process of a software and be able to collaborate on a project
+**** git
+**** scrum
+**** TDD
+**** clean code
+**** Documentation
+** create a list of things they are going to learn
+*** list of java SE
+*** list of Design patterns
+*** list of hibernate
+** program
+*** first month
+    - main goal is becomming a competent programmer
+**** first week
+     - we expect them to know basic programming in Java
+       - loops
+       - conditionals
+       - basic types
+       - conditionals 
+     - start programming from zero
+***** No Function programs
+****** project0:hello world
+****** project1
+       greet the user 
+****** project1.1
+****** decimalOP
+****** MArrayList
+****** fibo
+****** Logger
+****** project8.3                                                    :Arrays:
+       get 10 element from input and put them in reverse order from the end in an 15 element array and print it
+****** project8.2                                                    :Arrays:
+       get unknown number of input from user until the user insert -1 and print them 
+       do not use string
+****** project8.1                                                    :Arrays:
+       get N numbers from user and print them on screen
+****** project9
+       get nth big number in a list
+****** project7_sum                                        :RecursiveFuncion:
+       calculate sum of a list recursively
+****** project7_sumOdd                                    :RecursiveFuncion:
+****** project7_multiply                                  :RecursiveFuncion:
+****** project7_isPrime                                    :RecursiveFuncion:
+****** project4.1
+       trim white space around the string
+****** project4.2
+       convert string to lower case
+****** project4.3
+       given a string containing a paragraph, make sure every sentence starts with upper case letter. and there is a space between each sentence.
+       "this is a test sentence.you should make sure it is correctly formatted."
+       to
+       "This is a test sentence. You should make sure it is correctly formatted."
+****** permutation of uniq elements
+****** permutation of non uniq elements
+**** second week
+**** third week
+***** projects
+****** Creating a ArrayList
+****** implement it based on delete from array
+****** implement array List based on flags
+****** implement array list based 
+****** implement Linked list
+****** implement a double linked list
+****** implement a binary tree
+****** implement a heap
+**** forth week
+*** second month
+*** third month
+* tasks
+** DONE write the introduction
+** DONE write the list of JavaSE
+** TODO write list of Design patterns that they are going to learn
+** DONE write the list of hibernate
+** DONE design the first month program
+** TODO design the second month program
+** TODO design the third month program

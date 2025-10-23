@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       9fb12a47-cbdf-4c31-adcb-7b5255ffa611
+:END:
+#+title: eglin steel
+* [[steel is a high-strength, high-performance, low-alloy, low-cost steel, developed for a new generation of bunker bu][eglin steel]]

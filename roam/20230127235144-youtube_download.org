@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       2AFBF88F-A796-44CE-9F45-3ED5EEFC9BD6
+:END:
+#+title: youtube download
+
+https://youtube-dl.org/
+
+
+https://github.com/yt-dlp/yt-dlp
+
+
+to download subtitle without download the video
+--write-subs --no-download

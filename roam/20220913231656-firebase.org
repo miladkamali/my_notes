@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       14E3E119-18E9-4810-AC81-3D5AAFBD6D4C
+:END:
+#+title: firebase
+* alternative
+[[https://www.youtube.com/watch?v=Wqy3PBEglXQ][PocketBase... The Ultimate Side-Hustle Backend?]]
+** superbase
+https://supabase.com
+** Pocket base
+https://pocketbase.io

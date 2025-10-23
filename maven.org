@@ -1,0 +1,26 @@
+* git
+** documentation
+   https://github.com/git-commit-id/git-commit-id-maven-plugin/blob/master/maven/docs/using-the-plugin.md
+** plugin info
+             <plugin>
+                 <groupId>pl.project13.maven</groupId>
+                 <artifactId>git-commit-id-plugin</artifactId>
+                 <version>3.0.1</version>
+                 <executions>
+                     <execution>
+                         <id>get-the-git-infos</id>
+                         <goals>
+                             <goal>revision</goal>
+                         </goals>
+                         <phase>initialize</phase>
+                     </execution>
+                 </executions>
+                 <configuration>
+                     <verbose>true</verbose>
+                     <generateGitPropertiesFile>true</generateGitPropertiesFile>
+                     <failOnNoGitDirectory>true</failOnNoGitDirectory>
+                     <injectAllReactorProjects>true</injectAllReactorProjects>
+                     <dotGitDirectory>${project.basedir}/../../.git</dotGitDirectory>
+                 </configuration>
+             </plugin>
+* 

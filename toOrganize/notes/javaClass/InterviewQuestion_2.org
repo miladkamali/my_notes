@@ -1,0 +1,94 @@
+* Java general questions
+  :LOGBOOK:
+  CLOCK: [2019-05-05 Sun 14:01]
+  :END:
+** [#B] What is java
+** [#A] What is a platform
+** [#C] What is the process of creating java program 
+   javac is in jdk not jre
+** [#C] interpreted/compiled
+** [#C] what do you know about JRE/JDK
+   - take a look at JDK in windows
+** what is JVM
+** explain how a java program runs
+   all the memory 
+** what is JIT
+   - need more review 
+** how java manages memory
+   garbage collector
+** how many types of memory do we have in java
+   - good 
+** what do you know about Garbage collector
+* OOP
+  :LOGBOOK:
+  CLOCK: [2019-05-01 Wed 14:36]--[2019-05-01 Wed 14:57] =>  0:21
+  :END:
+** what is the OOP
+** how many programing paradime do you know
+   - Procedural ( Read more about procedural code )
+   - functional
+   - Logic
+   - OO
+** What are the OOP concepts
+   think more about how you are going to explain them
+  - Abstraction.
+  - Encapsulation.
+  - Inheritance.
+    is only used to stop code duplication
+  - Polymorphism
+    come up with better explanation
+** what is a class
+** Is java a pure Object Oriented programming language
+** what is an object
+** what is polimorphism
+** what is the difference between runtime polimorphism and 
+   override
+   think more about the example
+** what is the constructor
+** what happens with new keyword
+* OOD
+** lets say i 
+** lets say i wanna create a notification system which notifies using email/sms/telegram/phonecall/... how would you do that?
+* JAVA SE
+  create a list of things to say
+** Concurrency in java
+*** difference of concurrency and parallelism
+*** how can we start a new thread in java
+    good
+*** why we might use thread or runnable
+*** Do you know of any other method of doing multiple things simultaniously
+*** imaging you were going to handle lots of events ( 10000 different types ) how do you go about it 
+    event loop
+    do implement this
+*** how can you ensure not too many threads are being run simultaniously
+*** What is Wait/Notify and where do they belong?
+    observer pattern
+    wait and notify are for object
+*** TODO what is a future or a promise
+    study these
+** Socket programming
+** Java Collections
+*** hierarchy of collections
+** Java Exceptions
+*** Hierarchy of Exceptions
+    good
+*** difference between checked and unchecked exception
+*** how can you define an exception
+    you have not
+*** why should you throw and exception
+*** is any other way of communicating errors in program
+    calculating average
+*** have you heard about Optional
+* Hibernate
+  https://www.onlineinterviewquestions.com/hibernate-interview-questions-answers/
+** what is hibernate
+** how it is configured
+** what is HQL
+** is every thing put into database ever
+** Lazy vs Eager
+** cache levels 
+** what are these annotations for
+*** @Entity
+*** @Inheritance
+*** @Embedable
+*** @MappedSupperClass

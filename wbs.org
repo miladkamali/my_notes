@@ -1,0 +1,84 @@
+* Demo
+A minimal working prototype connecting a solver to the plant3D which export a
+simple scene  and connects them using specific pipes
+** stage one
+a simple scene with only two components each of which has only one input. This
+stage requires almost no setup in plant3D and it's the fastest way of achiving
+proof of concept.
+*** document manual process involve in this scenario
+**** manually export components and their inputs into a excel file
+**** manually import this PCF structure into plant3D
+*** define gRPC routing request/response interface                   :design:
+*** implement a mock solver which returns specific response
+*** implement simple solver
+**** solver implementation in any possible language
+**** implement solver gRPC stubs to communicate with server
+*** a simple gRPC server which handles communication between solver
+**** setup gRPC server/client stubs
+**** convert the export excel into a routing request
+**** communicate with solver to get the routing response
+**** convert the roating response into PCF format
+** stage two
+this stage requires very basic understanding and set up in plant3D, however it's
+the foundation of furthure development. here we want very simple plugin that
+eithre using a simple time or a simple button in the screen dose the import and export of the pcf
+*** set up a minimal plant3D
+**** install a working version of plant3D on windows
+**** setup Visual studio to develop plant3D plugin
+**** setup required SKD in visual studio
+**** write a hello word plugin in plant3D
+*** write a simple plugin that comminicates with the server that is developed in previous stage
+**** write a simple component that export component list into excel file in specific folder
+***** find the appropriate documentation regarding component export in SDK
+***** define proper interface for the component
+***** component implementation
+**** write a simple component that automatically imports PCF from specific folder
+***** find the appropriate documentation
+***** define proper interface for the component
+***** component implementation
+**** write a simple UI with two buttons to export components and import PCF from server 
+***** Research about creating UI window and elements and event handling
+***** Implement the popup window and connect it to the components
+** stage three
+the goal of this stage is to provide improved UI/UX for the user and this the
+begining stage of actaully providing a proper plugin that can be given to
+customers. in this stage a series of module for proper architecture and
+separation of tasks are introduced.
+*** define the basic workflow of the user
+goal here is to specify how the user is going to interact with our system, for
+instance we could ask the user to chose the starting point and click on a button
+then select the target and click on a button then press an other button to view
+a preview of the routing. This task requires some UI/UX design
+*** implement export module
+**** design export module interfaces
+***** interface for exporting scene components
+***** interface for exporting component information
+***** interface for exporting component exclusion or proximity zones
+***** interface for exporting exclusion zones of the scene
+***** interface for checking collisions with the exclusion zones
+***** interface for listing all the objects in the scene
+***** interface for interrogating an object
+*** implement scene interaction module
+this module is supposed to separate object and scene manipulation actions from
+the rest of the plugin
+**** design scene interaction module interface
+***** interface to update an object property
+***** interface to move/rotate objects
+***** ...
+*** implement user interface module
+**** research and document plant3D user interface
+**** design user interface elements and signals for user interface module
+**** design module interface
+this supposed to separate detail implementation of plant3D SDK from the rest of the plugin
+*** implement basic communication module
+*** implement basic Data conversion module
+*** implement basic orchestrator
+this module is supposed to handles events and communication between solver
+plant3D and other modules
+**** design orchestrator workflow based on user interactions
+**** connect export module to the workflow
+**** connect user interface module to the orchestrator
+**** connect scene interaction module to the orchestrator
+**** connect communication module to the orchestrator
+**** implement orchestrator workflow
+

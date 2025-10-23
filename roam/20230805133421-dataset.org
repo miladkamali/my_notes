@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       4C75F0BF-876A-4A24-B45C-DEE7747DFE6D
+:END:
+#+title: dataset
+* voice
+** [[https://commonvoice.mozilla.org/en][common voice]]
+** 

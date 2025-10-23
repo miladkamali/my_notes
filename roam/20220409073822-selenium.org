@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       8027af4c-52a4-4b3f-8288-213861795ac5
+:END:
+#+title: selenium
+* capture request within selenium
+https://www.dilatoit.com/2020/12/17/how-to-capture-http-requests-using-selenium.html

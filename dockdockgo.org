@@ -1,0 +1,5 @@
+* search api
+** https://duckduckgo.com/api
+** http://api.duckduckgo.com/?q=DuckDuckGo&amp;format=json&atb=v256-1
+* image search
+** https://github.com/deepanprabhu/duckduckgo-images-api

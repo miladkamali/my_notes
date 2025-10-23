@@ -1,0 +1,34 @@
+* bugs / major issues
+** DONE [#A] critical : feature implement multiple choice filter system
+** DONE [#A] critical : clarify concepts of votes/ responses in APIs
+** [#A] update APIs according to proper concepts of Votes/Responses
+** [#A] critical : database syncing performance cause failed queries in analytics   
+** DONE [#A] Overhaul filter system
+*** DONE Split filtering system into sections
+*** DONE Drop the manual query generator
+*** DONE remove design limit of THIS/THAT matching in filtering 
+** [#A] critical : unification of response/ completed response , ... so that we have single source of truth
+** [#A] critical : bug : find and fix elusive UUID collision that interfere with response collection 
+** [#A] critical : feature : introduce system metric to understand system performance
+** [#A] critical : feature : introduce ELK stack to properly manage logs in our system
+** [#A] infrastructure change : Separate data gathering from calculation
+** [#A] clean up Queries logic
+*** [#A] Split large queries into database into smaller ones
+*** [#B] Investigate possibility of using ORM for these queries
+*** [#B] prepare plan to change database structure without breaking things
+** [#A] Remove house keeping and calculating triggers in database
+** [#B] critical : introduce concept of session into back-end
+** [#B] move gathering impressions into our back-end instead of firebase to have impressions for trackable-links as well
+** [#B] improve filtering performance
+** [#B] check if thisThat user has the capability of using analytics section
+** [#A] proper implementation of ACL
+** [#C] update APIs to have single responsibility for each filter
+** [#B] :performance: update surveyRespondants table with proper data after survey freeze 
+** [#B] :performance: use surveyRespondants table in analytics calculations
+** [#C] :design: unify API designs
+* Flow changes
+** Bug report flow
+** Set up log monitoring system to identify issues that are poping up.
+** Maintenance requests flow
+** Deployment flow
+** Almost critical : introduce tests or QA to ensure  

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       3D1CF06F-D155-4154-AFAC-C6BEC46E1F53
+:END:
+#+title: smp901
+[[https://www.youtube.com/watch?v=PYU9URvXCr0&t=1s][Fix Samsung E failed to mount /efs (invalid argument) - Repair IMEI/SN - Fix Hang On Logo - SM-P901]]
+
+[[https://www.youtube.com/watch?v=RMU2_-kmqDE&t=323s][Samsung SM-P901 Note Pro 12.2 Custom Firmware Upgrade - Root + Recovery - Complete Guide]]

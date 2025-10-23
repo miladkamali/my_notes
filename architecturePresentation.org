@@ -1,0 +1,17 @@
+* 
+  [[https://medium.com/ingeniouslysimple/choreography-vs-orchestration-a6f21cfaccae][choreography]]
+
+* videos
+** microservice
+*** [[https://www.youtube.com/watch?v=tpspO9K28PM][four distributed system architecture pattern]] 
+*** [[https://www.youtube.com/watch?v=wgdBVIX9ifA][GOTO 2014 • Microservices • Martin Fowler]]
+*** [[https://www.youtube.com/watch?v=d_3-EUs_gBo][Beyond Microservices: Streams, State and Scalability]]
+* presentation tools
+** diagrams library
+** go diagrams
+** mermaidjs
+** plantUML
+** ascii based output
+*** ASCIIFLOW
+*** monodraw
+*** markmap

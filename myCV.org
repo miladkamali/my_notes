@@ -1,0 +1,655 @@
+* projects that i have worked on
+** DONE Writing crystal structure visualization in OpenGL  2008 ShahidBeheshti University
+   CLOSED: [2019-05-09 Thu 20:31]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:31]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:31]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:31]
+   :LOGBOOK:
+   CLOCK: [2008-05-01 Thu 11:45]--[2008-05-31 Sat 11:45] => 720:00
+   :END:
+   Done for Shahid Beheshti Physics Department, it was used to
+   illustrate Crystal Structures, this project was written in C++,
+   using GLUT as a window manager for openGL it was released
+   internally as teaching asistat software for SolidState physics
+   class
+
+   - C++
+   - GLUT
+   - OpenGL
+
+** DONE Data collection for Football League that idiot 2008 Freelance
+   CLOSED: [2019-05-09 Thu 20:35]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:35]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:35]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:35]
+   :LOGBOOK:
+   CLOCK: [2009-04-03 Fri 11:53]--[2019-05-03 Fri 11:53] => 88368:00
+   :END:
+   this was a data Scraping project which constumer required a faster
+   alternative to collect game data on different footbal legues, their
+   php solution took about 1 hour to collect data due to sequencial
+   execution, I created a BASH script and a python script which
+   managed to collect data in less than a minute and updated MYSQL
+   database.
+
+   - Bash
+   - python
+   - MySQL
+   
+** DONE Mysql database sync to connect sales shop and warehouse 2008
+   CLOSED: [2019-05-09 Thu 20:35]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:35]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:35]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:35]
+   :LOGBOOK:
+   CLOCK: [2009-08-03 Mon 11:58]--[2009-09-03 Thu 11:58] => 744:00
+   :END:
+   costumer wanted to sync shop database with ware house over
+   unreliable internet connection which replication was not an option.
+   we end up writing a costume backend which managed sync changes when
+   ever the connection was available and get updates from warehouse to
+   the sales shop.
+   backend was written in php, database was MySQL
+   - php
+   - jQuerry
+   - MySQL
+** DONE Laser welding simulation 2009
+   CLOSED: [2019-05-09 Thu 20:32]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:32]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:32]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:32]
+   Simulation of temprature of surface using heat transfer from laser
+   beam and heat exchange in metal
+   - C++
+
+** DONE Simulating Rocket tragectory to mars Python 2009 ShahidBeheshti University
+   CLOSED: [2019-05-09 Thu 20:33]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:33]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:32]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:32]
+   :LOGBOOK:
+   CLOCK: [2009-07-03 Fri 11:48]--[2009-08-03 Mon 11:48] => 744:00
+   :END:
+   a simulation program which was completed in computational
+   course in summer. using python i created solar system movement
+   simulator and then using Dynamic Programming techniques i
+   calculated tragectory for rocket leaving earth to enter mars orbit
+   - python
+** DONE Collecting Irans publication network from Scopus 2010 shahid Beheshti
+   CLOSED: [2019-05-09 Thu 20:30]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:30]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:30]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:29]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:29]
+   :LOGBOOK:
+   CLOCK: [2010-09-03 Sun 13:44]--[2011-01-03 Mon 13:44] => 2929:00
+   :END:
+   In this project we collected publication information and abstract
+   of all published papers in iran from Scopus website. Using
+   Sentimental analysis and Natural Language processing we extracted
+   irans scientific communities and key players in that network.
+   - Python
+   - NLTK
+   - Scipy
+   - numpy
+   - sqlite
+** DONE Collecting 1.8 TB of data from science Direct 2011
+   CLOSED: [2019-05-09 Thu 20:30]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:30]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:30]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:29]
+   in this project we managed to gather 1.8 TB of data from
+   ScineceDirect, It's a dirty job, partial hacking, not sure how we should spin it
+   
+   maybe as Article Download system which people payed for Articles
+   and we bought them from ScienceDirect?
+
+   - Bash
+   - python
+   - selenium
+   - Sqlite
+   
+** DONE working on fraud detection ( Shahid beheshti Cyber space center) 2012
+   CLOSED: [2019-05-09 Thu 20:31]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:31]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:31]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:31]
+   :LOGBOOK:
+   CLOCK: [2012-05-01 Tue 12:05]--[2012-11-03 Sat 12:05] => 4465:00
+   :END:
+   Working on a java based platform for detecting plagiarism in Thesis
+   for ShahidBeheshti University.
+   I was first introduced to java there.
+   - Java
+** DONE Serial Tracker and Downloader 2014 			       :hold:
+   - State "HOLD"       from "WAITING"    [2019-05-09 Thu 20:35]
+   - State "WAITING"    from "DONE"       [2019-05-09 Thu 20:35]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:35]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:35]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:35]
+   :LOGBOOK:
+   CLOCK: [2014-01-03 Fri 15:10]--[2014-03-03 Mon 15:10] => 1416:00
+   :END:
+   It was a personal system which followed relased date of series i
+   was following on imdb and downloaded torrent of the said series
+   episods. It started as a simple notification program to track when
+   each episod is released then over time Automatic Download from
+   Torrentz website was added, Then Decision for download based on
+   comment analysis was added to the project.
+
+
+   Python 
+   Bittorrent
+   BeautifulSoap
+   NLTK -> sentimental Analysis based on Bag of words
+** DONE Tahere analysis of crystal forming structures PHD thesis 2014
+   CLOSED: [2019-05-09 Thu 20:30]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:30]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:30]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:29]
+   Wrote kolakaski simulation for crystals as a part of phd thesis of
+   tahere, and help her run it in shahid beheshti cluster
+   - c++
+   - OpenMP
+** DONE Collect IMDB Data 2015
+   CLOSED: [2019-05-09 Thu 20:30]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:30]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:30]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:29]
+   I collected all Imdb data related to actors and which movies they
+   have played in. Based on these data we published a paper on dynamic
+   of networks.
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0154983
+   
+** DONE Youtube Comment analysis 2015
+   CLOSED: [2019-05-09 Thu 20:30]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:30]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:30]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:29]
+   a program to monitor comments on a youtube video and assess whether
+   the majority of comments are positive or negative
+   - python
+   - beautifuSoup
+   - NLTK
+   - Pandas
+** DONE Twitter Acitvity monitoring bot 2015
+   CLOSED: [2019-05-09 Thu 20:30]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:30]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:30]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:29]
+   a program to monitor your Twitter feed and post tweets.
+
+   selenium
+   java
+** DONE Sepand and DAS 2016 Sepand
+   CLOSED: [2019-05-09 Thu 20:43]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:43]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:43]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:43]
+   Data accusition software writing a user space usbdriver to
+   communicate with MPA3000 and gather data.
+   - C++
+   - QT
+   - libusb
+** DONE RSCO project 2016
+   CLOSED: [2019-05-09 Thu 20:45]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:45]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:45]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:45]
+   A mobile application to help with realstate sales of big and medium
+   scale projects. in this Mobile application a user could view
+   different section of the project and recive staus report on progress.
+   - Ionic
+   - Cordova
+   - cardborad
+   - Unity3d
+   - C# dotnet Core
+** DONE Collecting data on stock markets from yahoo,google, blumberg : 2016 shahid beheshti
+   CLOSED: [2019-05-09 Thu 21:07]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 21:07]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 21:07]
+   - State "TODO"       from ""           [2019-05-09 Thu 21:07]
+   resulted in publication collected stock markets data from
+   yahoo,google,and blumberg using webscraping techniques. Then
+   normalizing data and calculating different measures on the resulted
+   data.
+   - python
+   - matlab
+   - R
+** DONE open source pipline image stacking 2017
+   CLOSED: [2019-05-09 Thu 20:46]
+   - State "DONE"       from "WAITING"    [2019-05-09 Thu 20:46]
+   - State "WAITING"    from "DONE"       [2019-05-09 Thu 20:46]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:46]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:46]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:46]
+   a hobby project which was written to create blend lots of pictures
+   taken from sky into one image
+   - bash
+   - openCV
+** DONE File management system 2017
+   CLOSED: [2019-05-09 Thu 20:46]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:46]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:46]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:46]
+   a very fast catalog system writen in c++ with boost filesystem
+   which could catlog all the files in a 1 Tb drive in about 10 seconds
+   it could find duplicate files, 
+   - C++
+   - Boost Library
+   - QT
+** DONE Interactive Cataloge for hatampour 2017
+   CLOSED: [2019-05-09 Thu 20:51]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:51]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:51]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:51]
+   :LOGBOOK:
+   CLOCK: [2017-07-01 Sat 15:55]--[2017-10-08 Sun 15:55] => 2377:00
+   :END:
+   augmented reality based project which superimposed  3d models of buildings
+   with animation to the image feed.
+   - Unity 3d
+   - ARCore
+   - Vuforia
+   - Mobile
+** DONE telegram bot 2017
+   CLOSED: [2019-05-09 Thu 20:54]
+   - State "DONE"       from "WAITING"    [2019-05-09 Thu 20:54]
+   - State "WAITING"    from "DONE"       [2019-05-09 Thu 20:54]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:54]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:54]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:54]
+   a telegram bot which informed usre when new episod of tv series
+   were released
+   - python
+   - telegram bot API
+     
+** DONE Unity project for Hatampour 2017 Meta Game Engine
+   CLOSED: [2019-05-09 Thu 20:54]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 20:54]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 20:54]
+   - State "TODO"       from ""           [2019-05-09 Thu 20:54]
+   this project aim was to create a framework based on unity to create
+   costume made building virtual tours for clients. In other words it
+   was a meta Game engine which was customizable for specific need of
+   each customer. 
+   - capabilities
+     - recording walk throughs and play back
+     - jumping into different location in building
+     - search functionality for places in the building( ie different appartment based on floor, location, area, number of bedrooms, ...)
+     - minimal work for integrating 3dsMax models into game Engine
+
+** DONE Tehran city structure analysis 2018 shahid beheshti and tehran municipal
+   CLOSED: [2019-05-09 Thu 21:06]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 21:06]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 21:06]
+   - State "TODO"       from ""           [2019-05-09 Thu 21:06]
+   - tehran municipal
+   - shahid beheshti 2018
+
+     in this project we collected travel data from google map api and
+     gathered how important each street is in general transportation
+     of tehran, and if we can create alternative routes to reduce traffic.
+
+     technologies used
+     openCV
+     python
+     google map API
+     Sqlite
+** DONE Mohsen AI 2018
+   CLOSED: [2019-05-09 Thu 21:03]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 21:03]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 21:03]
+   - State "TODO"       from ""           [2019-05-09 Thu 21:03]
+   analysis of peoples perception of different products on market
+   based on the comments they leave at online stores.
+   - Python
+   - NLTK
+   - Scipy
+   - pandas
+** DONE Mohsen backend Development 2018
+   CLOSED: [2019-05-09 Thu 21:03]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 21:03]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 21:03]
+   - State "TODO"       from ""           [2019-05-09 Thu 21:03]
+   developmetn of backend of ChiCheraa projcet
+   - C#
+   - Dotnet Core
+   - Rest API
+   - SQLserver
+   
+** DONE eye tracking 2018
+   CLOSED: [2019-05-09 Thu 21:03]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 21:03]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 21:03]
+   - State "TODO"       from ""           [2019-05-09 Thu 21:03]
+** DONE Collect Isri Data for Weapons trade 2018 shahidBeheshti university
+   CLOSED: [2019-05-09 Thu 21:06]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 21:06]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 21:06]
+   - State "TODO"       from ""           [2019-05-09 Thu 21:06]
+   collecting and analysis of weopons trade network in a conjuction
+   effort with shahid beheshti university
+
+   in this project data from isiri website was collected and analysed
+
+   technologies
+   - python
+   - scipy
+   - numpy
+   - octave
+   - R
+   - sqlite
+** DONE User monitoring Bot 2019 Mapsa
+   CLOSED: [2019-05-09 Thu 21:09]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 21:09]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 21:09]
+   - State "TODO"       from ""           [2019-05-09 Thu 21:09]
+   First phase of this project was A user tracker software written in
+   java which tracks how user is interacting with computer. This
+   program collects how much time user spend working in different
+   program and what they are doing. It also tracks user actions and
+   could determin if user is actually working with the system or
+   not. These informations are stored locally in database. This
+   program could collect data in windows and linux.
+   
+   - Java
+   - JNA
+   - JPA
+   - Hibernate
+   - Log4j2
+   - SLF4J
+   - H2
+
+   Second phase of the project was creating backend so that the data
+   from first phase is automatically collected in a centralized
+   location.  in this phase i created a restAPI using spring boot
+   which program perioudicly sends data to it. It also had a dashboard
+   for viewing information on users.
+   - Spring boot
+   - JPA
+   - Hibernate
+   - ReactJS(for dashboard front)
+** DONE Mezmerizing backend 2019
+   CLOSED: [2019-05-09 Thu 21:06]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 21:06]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 21:06]
+   - State "TODO"       from ""           [2019-05-09 Thu 21:06]
+   backend for MezmerizingHotels.com which is written by DotnetCore
+   2.1 and setting up servers for it. Front is based on ReactJS.
+   EFCore
+   DotnetCore
+   nginx
+   nodejs
+** TODO  swidish exchange
+** swidish project tracking system
+** DONE Reddit controller 2019
+   CLOSED: [2019-05-09 Thu 21:11]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 21:11]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 21:11]
+   - State "TODO"       from ""           [2019-05-09 Thu 21:11]
+   A library to interact with reddit website
+** DONE Tehran Stock Exchange automatic monitoring and purchase 2019
+   CLOSED: [2019-05-09 Thu 21:11]
+   - State "DONE"       from "NEXT"       [2019-05-09 Thu 21:11]
+   - State "NEXT"       from "TODO"       [2019-05-09 Thu 21:11]
+   - State "TODO"       from ""           [2019-05-09 Thu 21:11]
+** Trouvaillers
+*  work experiance
+** ipm research center 2010
+*** Research assistant
+**** Collecting Iran's publication network from Scopus 2010--2011 IPM
+     :LOGBOOK:
+     CLOCK: [2010-09-03 Sun 13:44]--[2011-01-03 Mon 13:44] => 2929:00
+     :END:
+     In this project all publication affiliated with iran  was collected
+     from scopus website. Using these information scientific network
+     of iran was mapped and key researchers and hot research topics
+     were identified. 
+
+     Main tools used in this project are Python, NLTK, SciPy, NumPy
+     and sqlite database.
+** cyberspace reseach center of shahid beheshti 2011-2012
+   - working on fraud detection system created for Thesis
+*** Java Developer
+**** Plagiarism Detection System
+     :LOGBOOK:
+     CLOCK: [2012-05-01 Tue 12:05]--[2012-11-03 Sat 12:05] => 4465:00
+     :END:
+     The system was designed to receive Thesis in different formats
+     and analyse them based on different similarity metrics to detect
+     plagiarism.
+** TODO moshar system
+*** Python Developer // Alameh Fucker
+      Lead developer of a Data harvesting system to crawl ScienceDirect
+      website 
+      Python,Selenium,and sqlite are also used in
+      this project.
+*** Python Developer
+    Development of Website template engine using artisteer software as
+    template generator.
+    - running multiple instances of artisteer in virtual machines.
+    - simulating user input for each virtual machine which managed
+      user requests
+    - exporting output template and sending it to user.
+** shahid beheshti
+*** C++ developer
+**** Crystal Structure Visualization
+     Developing teaching asistat software for SolidState
+     physics class.
+     - C++
+     - GLUT
+     - OpenGL
+*** Others
+**** Laser welding simulation 2009
+     I collected all Imdb data related to actors and which movies they
+     have played in. Based on these data we published a paper on dynamic
+     of networks.
+     https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0154983
+     
+**** Youtube Comment analysis 2015
+     a program to monitor comments on a youtube video and assess whether
+     the majority of comments are positive or negative
+     - python
+     - beautifuSoup
+     - NLTK
+     - Pandas
+**** Twitter Acitvity monitoring bot 2015
+     a program to monitor your Twitter feed and post tweets.
+
+     selenium
+     java
+
+**** Collect Isri Data for Weapons trade 2018 shahidBeheshti university
+     collecting and analysis of weopons trade network in a conjuction
+     effort with shahid beheshti university
+
+     in this project data from isiri website was collected and analysed
+
+     technologies
+     - python
+     - scipy
+     - numpy
+     - octave
+     - R
+     - sqlite
+**** Tehran city structure analysis 2018 shahid beheshti and tehran municipal
+     - tehran municipal
+     - shahid beheshti 2018
+
+       in this project we collected travel data from google map api and
+       gathered how important each street is in general transportation
+       of tehran, and if we can create alternative routes to reduce traffic.
+
+       technologies used
+       openCV
+       python
+       google map API
+       Sqlite
+**** Collecting data on stock markets from yahoo,google, blumberg : 2016 shahid beheshti
+     resulted in publication collected stock markets data from
+     yahoo,google,and blumberg using webscraping techniques. Then
+     normalizing data and calculating different measures on the resulted
+     data.
+     - python
+     - matlab
+     - R
+** Sepand 2015
+*** Sepand and DAS 2016 Sepand
+    Creating a high throuput usb driver which communicate with 
+    Data accusition software writing a user space usb driver to
+    communicate with MPA3000.
+    - C++
+    - QT
+    - libusb
+** RSCO
+*** RSCO project 2016 						
+    A mobile application to help with realstate sales of big and medium
+    scale projects. in this Mobile application a user could view
+    different section of the project and recive staus report on progress.
+    - Ionic
+    - Cordova
+    - cardborad
+    - Unity3d
+    - C# dotnet Core
+*** Interactive Cataloge for hatampour 2017
+    :LOGBOOK:
+    CLOCK: [2017-07-01 Sat 15:55]--[2017-10-08 Sun 15:55] => 2377:00
+    :END:
+    augmented reality based project which superimposed  3d models of buildings
+    with animation to the image feed.
+    - Unity 3d
+    - ARCore
+    - Vuforia
+    - Mobile
+*** Unity project for Hatampour 2017 Meta Game Engine
+    this project aim was to create a framework based on unity to create
+    costume made building virtual tours for clients. In other words it
+    was a meta Game engine which was customizable for specific need of
+    each customer. 
+    - capabilities
+      - recording walk throughs and play back
+      - jumping into different location in building
+      - search functionality for places in the building( ie different appartment based on floor, location, area, number of bedrooms, ...)
+      - minimal work for integrating 3dsMax models into game Engine
+
+** ChiChera 
+*** Mohsen AI 2018
+    analysis of peoples perception of different products on market
+    based on the comments they leave at online stores.
+    - Python
+    - NLTK
+    - Scipy
+    - pandas
+*** Mohsen backend Development 2018
+    developmetn of backend of ChiCheraa projcet
+    - C#
+    - Dotnet Core
+    - Rest API
+    - SQLserver
+    
+** Mapsa
+*** Java BootCamp mentor and organizer
+    
+*** User monitoring Bot 2019 Mapsa
+   First phase of this project was A user tracker software written in
+   java which tracks how user is interacting with computer. This
+   program collects how much time user spend working in different
+   program and what they are doing. It also tracks user actions and
+   could determin if user is actually working with the system or
+   not. These informations are stored locally in database. This
+   program could collect data in windows and linux.
+   
+   - Java
+   - JNA
+   - JPA
+   - Hibernate
+   - Log4j2
+   - SLF4J
+   - H2
+
+   Second phase of the project was creating backend so that the data
+   from first phase is automatically collected in a centralized
+   location.  in this phase i created a restAPI using spring boot
+   which program perioudicly sends data to it. It also had a dashboard
+   for viewing information on users.
+   - Spring boot
+   - JPA
+   - Hibernate
+   - ReactJS(for dashboard front)
+*** Java BootCamp 
+** freelance
+*** Data collection for Football League that idiot 2008 Freelance
+    :LOGBOOK:
+    CLOCK: [2009-04-03 Fri 11:53]--[2019-05-03 Fri 11:53] => 88368:00
+    :END:
+    this was a data Scraping project which constumer required a faster
+    alternative to collect game data on different footbal legues, their
+    php solution took about 1 hour to collect data due to sequencial
+    execution, I created a BASH script and a python script which
+    managed to collect data in less than a minute and updated MYSQL
+    database.
+
+    - Bash
+    - python
+    - MySQL
+    
+*** Mysql database sync to connect sales shop and warehouse 2008
+    :LOGBOOK:
+    CLOCK: [2009-08-03 Mon 11:58]--[2009-09-03 Thu 11:58] => 744:00
+    :END:
+    costumer wanted to sync shop database with ware house over
+    unreliable internet connection which replication was not an option.
+    we end up writing a costume backend which managed sync changes when
+    ever the connection was available and get updates from warehouse to
+    the sales shop.
+    backend was written in php, database was MySQL
+    - php
+    - jQuerry
+      - MySQL
+*** Serial Tracker and Downloader 2014
+    :LOGBOOK:
+    CLOCK: [2014-01-03 Fri 15:10]--[2014-03-03 Mon 15:10] => 1416:00
+    :END:
+    It was a personal system which followed relased date of series i
+    was following on imdb and downloaded torrent of the said series
+    episods. It started as a simple notification program to track when
+    each episod is released then over time Automatic Download from
+    Torrentz website was added, Then Decision for download based on
+    comment analysis was added to the project.
+
+
+    Python 
+    Bittorrent
+    BeautifulSoap
+    NLTK -> sentimental Analysis based on Bag of words
+*** open source pipline image stacking 2017
+    a hobby project which was written to create blend lots of pictures
+    taken from sky into one image
+    - bash
+    - openCV
+*** File management system 2017
+    a very fast catalog system writen in c++ with boost filesystem
+    which could catlog all the files in a 1 Tb drive in about 10 seconds
+    it could find duplicate files, 
+    - C++
+    - Boost Library
+    - QT
+*** telegram bot 2017
+    a telegram bot which informed usre when new episod of tv series
+    were released
+    - python
+    - telegram bot API
+      
+*** eye tracking 2018
+*** Mezmerizing backend 2019
+    backend for MezmerizingHotels.com which is written by DotnetCore
+    2.1 and setting up servers for it. Front is based on ReactJS.
+    EFCore
+    DotnetCore
+    nginx
+    nodejs
+** others
+*** Reddit controller 2019
+    A library to interact with reddit website
+*** Tehran Stock Exchange automatic monitoring and purchase 2019

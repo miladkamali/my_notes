@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       4c8bce5f-7c84-45ae-8894-ec316f095025
+:END:
+#+title: git
+* git custom commands
+** distance between two commits
+#+begin_src bash
+  git log commitA..commitB --pretty=oneline | wc -l
+  git rev-list --count commitA..commitB
+#+end_src
+** difference between two commits
+#+begin_src bash
+  git diff commitA commitB --stat
+#+end_src
+
+
+4b4603a3cd16..a56e6fe3969
+* git presentation
+** [[https://git-school.github.io/visualizing-git/][a very good visual presentation for each git commands]]
+* alternative
+https://github.com/jj-vcs/jj

@@ -1,0 +1,6 @@
+
+* TLA+
+  lamport.azurewebsites.net/tla/tla.html
+  lamport.azurewebsites.net/video/videos.html
+* alloy
+  https://github.com/AlloyTools/org.alloytools.alloy

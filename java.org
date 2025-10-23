@@ -1,0 +1,346 @@
+* libs
+** java tuple
+   provide tuples
+   [[https://howtodoinjava.com/java/basics/java-tuples/][tutorials]]
+   - maven
+     <dependency>
+     <groupId>org.javatuples</groupId>
+     <artifactId>javatuples</artifactId>
+     <version>1.2</version>
+     </dependency>
+** time
+*** joda time
+   - maven
+     <dependency>
+     <groupId>joda-time</groupId>
+     <artifactId>joda-time</artifactId>
+     <version>2.10.1</version>
+     </dependency>
+*** time4J
+    https://github.com/MenoData/Time4J
+*** threeten-extra
+    https://github.com/ThreeTen/threeten-extra
+** Jsoup
+   parsing html
+   - maven
+     <dependency>
+     <groupId>org.jsoup</groupId>
+     <artifactId>jsoup</artifactId>
+     <version>1.11.3</version>
+     </dependency>
+** jaxb
+   https://jesperdj.com/2018/09/30/jaxb-on-java-9-10-11-and-beyond/
+<dependency>
+  <groupId>javax.xml.bind</groupId>
+  <artifactId>jaxb-api</artifactId>
+  <version>2.3.0</version>
+</dependency>
+<dependency>
+  <groupId>com.sun.xml.bind</groupId>
+  <artifactId>jaxb-core</artifactId>
+  <version>2.3.0</version>
+</dependency>
+<dependency>
+  <groupId>com.sun.xml.bind</groupId>
+  <artifactId>jaxb-impl</artifactId>
+  <version>2.3.0</version>
+</dependency>
+<dependency>
+    <groupId>org.glassfish.jaxb</groupId>
+    <artifactId>jaxb-runtime</artifactId>
+    <version>2.3.1</version>
+    <scope>runtime</scope>
+</dependency>
+** HttpClient
+   
+   https://stackoverflow.com/questions/52315472/how-to-customise-host-header-in-java-http-client
+   java -Djdk.httpclient.allowRestrictedHeaders=host   
+* code analysis tools
+** Checkstyle
+** PMD
+** FindBugs
+** JaCoCo
+** SonarQube
+* online tools
+** json to pojo
+   http://www.jsonschema2pojo.org/
+* techniques
+** state machines
+   https://www.baeldung.com/java-enum-simple-state-machine
+   https://www.baeldung.com/java-state-design-pattern
+   https://www.baeldung.com/spring-state-machine
+** resources
+   https://www.javaguides.net/p/core-j2ee-patterns.html
+* problems
+** list of places to get problems
+   https://adriann.github.io/programming_problems.html
+** https://programmingbydoing.com/
+** euiler project
+*** [#B] problem 18 Maximum path sum I
+*** [#A] problem 67 Maximum path Sum II
+*** [#B] problem 26 (reciprocal cycles) 
+**** requires large number division
+*** problem 23
+*** [#C] problem 8
+*** [#B] problem 13 ( Large Sum )
+**** require large numbers calculation
+*** [#A] problem 15 ( lattice path )
+*** [#B] hangman problem
+*** [#A] tower of hanoi
+*** [#B] problem 27 Quadratic primes
+*** [#A] problem 25 1000-digit Fibonacci number
+**** require large numbers sums
+*** [#C] problem 28 Number spiral diagonals
+**** just clever thinking on how to arange numbers
+*** problem 30 dogot fifth power
+**** exhustive search
+*** problem 31 Coin sums
+**** count the different permutation
+*** problem 29 Distinct powers 
+**** require large number calculations( power)
+*** [#A] problem 33 digit cancling
+**** understanding digits 
+**** exhustive search for all possible numbers
+*** nim
+    https://programmingbydoing.com/a/nim.html
+*** problem 45
+    https://projecteuler.net/problem=45
+*** problem 34 Truncatable primes
+    -
+*** project 50 Consecutive Prime sum
+    - 
+* program
+** old project(mapsa hr)
+*** Login
+*** sending and reciving data(files)
+*** UI
+**** modular UI
+**** JavaFX
+**** get UI structure
+*** database module
+    begin with a
+*** Authentication and Role module
+    ability to understand 
+*** Resume functionality
+    user should be able to resume work
+*** Encryption Module Local Files
+*** Sync module to continue work completely offline
+*** JsonEvaluation
+*** JsonParsing to model
+*** Data harvesting
+    connect to jobinja or jobvision
+**** selenium Driver
+**** parsing PDF
+*** chat program
+*** network discovery module
+*** messageing 
+*** Internal webBrowser?
+*** Test System
+** banking system
+*** watch
+    - [[https://www.youtube.com/watch?v=o_TH-Y78tt4][The Principles of Clean Architecture by Uncle Bob Martin]]
+    - https://www.youtube.com/watch?v=cgVVZMfLjEI
+    - https://www.youtube.com/playlist?list=PLjDV9E1W_LB7GPESSLraIo3w9PK1cLFeV
+*** event sourcing system
+    - https://www.youtube.com/watch?v=rUDN40rdly8
+    - https://www.youtube.com/watch?v=holjbuSbv3k
+    - https://www.youtube.com/watch?v=B-reKkB8L5Q
+    - https://www.youtube.com/watch?v=rsSld8NycCU
+    - https://www.youtube.com/watch?v=A0goyZ9F4bg
+    - https://www.youtube.com/watch?v=8JKjvY4etTY
+    - https://www.youtube.com/watch?v=rUDN40rdly8
+    - https://www.youtube.com/watch?v=aweV9FLTZkU
+    - https://www.youtube.com/watch?v=48jPkm_Or4A
+    - https://www.youtube.com/watch?v=bsq-7UViekk
+    -
+*** cqRS
+    - https://microservices.io/patterns/data/cqrs.html
+    - https://www.youtube.com/watch?v=cUXi9fUqWQ0
+*** banking
+    - [[https://www.youtube.com/watch?v=OMh8nzqYjHw][using event Driven architecture to transform core banking]]
+    - [[https://www.youtube.com/watch?v=y2j_TB3NsRc][building a bank with Go]]
+    - [[https://www.youtube.com/watch?v=wYof1ZfqqkI&index=23&list=PLjDV9E1W_LB7GPESSLraIo3w9PK1cLFeV][Jason Maude, Starling Bank, Senior Developer]]
+    - [[https://www.youtube.com/watch?v=_md007gns9g&index=24&list=PLjDV9E1W_LB7GPESSLraIo3w9PK1cLFeV][they said it could't be done]]
+    - https://www.youtube.com/watch?v=7kX3fs0pWwc&index=40&list=PLjDV9E1W_LB7GPESSLraIo3w9PK1cLFeV
+    - https://www.youtube.com/watch?v=FaAEvYf5-PY&index=41&list=PLjDV9E1W_LB7GPESSLraIo3w9PK1cLFeV
+*** principles
+**** Idempotence
+     make sure if a request is sent twice it will only execute once
+***** Ditto architecture
+      do idempotent things to each other
+      - do every thing at least once and at most once
+      - async _ idempotence + retry
+      - each service constantly working toward correctness
+      - no distributed transaction
+      - dont trust other services
+      - developer.starlingbank.com
+      - https://www.youtube.com/watch?v=wYof1ZfqqkI&index=23&list=PLjDV9E1W_LB7GPESSLraIo3w9PK1cLFeV
+*** distributed systems
+    - https://www.youtube.com/watch?v=tpspO9K28PM
+** servlen and jsp
+   https://www.youtube.com/playlist?list=PLsyeobzWxl7pUPF2xjjJiG4BKC9x_GY46
+* what they are going to learn
+** git
+** scrum
+   - [[https://www.youtube.com/watch?v=XU0llRltyFM][scrum in 10 minutes]]
+   - [[https://www.youtube.com/watch?v=Hwu438QSb_g][learn agile estimation in 10 minutes]]
+   - [[https://www.youtube.com/watch?v=9TycLR0TqFA][introduction to scrum in 7 minutes]]
+** gitlab
+** Documentation
+** Progress report
+** Code quality
+** java
+* bootcamp program
+  - Goals:
+    - learn to generate progress report
+      - create a report system
+	- comming and going times should be tracked
+	- 
+    - become Competent Git user
+      - understand git
+      - understand git workflow
+      - git merge/branch/remote branch/reconfigure commits
+      - and a bunch of other things
+    - understand team work
+    - learn to become active in scrum environment -> Mohammad Ali
+    - Solid understanding of java SE
+      - understand how to compile and use java without ides
+      - understand JVM
+      - understand Object oriented design
+      - understand SRP principle
+      - understand KISS principle
+      - learn available data structure in java
+      - introduction to design principles
+      - introduction to design patterns
+	- singleton
+	- fecade
+	- observer ? 
+	- builder ? 
+	- factory ?
+      - learn javaFX
+	- abitlity to create dynamic UI in javaFX
+    - understand code quality
+      - naming convention
+      - code smells
+    - understand Documentation
+    - understand testing system
+    - Understanding UML
+    - ? should they read other projects
+    - Creating RestAPI
+    - working with Hybernate
+    - Server and servlet
+    - apachee
+** beginner
+*** month 1
+    - goals
+      - GIT
+      - Gitlab
+      - project workflow
+      - JAVA
+	- become familiar with java
+	  - do a lot of small projects x40 ( 1-3 hours ) 
+	  - do number of projects which challenge them x4
+	- learn about available Data structures
+**** week 1
+***** create their gitlab account
+      - create a project which every one becomes a member of
+      - introduction to task and issue system
+***** introduction to Git
+      - learn about how git works and what problems it solves
+      - learn basic work flow of git
+      - start a basic
+***** learn java basic
+      - variables
+      - methods
+      - class
+      - 
+**** week 2
+***** learn about object oriented design
+      - inheritence
+      - public private protected
+      - static
+**** exam
+     - notes
+       - you are not allowed to use datastructures  other than array
+       - no import other than scanner
+***** a hello word program which asks the user for their name, greets them. and give them the option of summing numbers from 1 to n or multiplying 1 to n
+***** get a list of numbers from user and calculate it's mean, sum,variance
+***** sum all the prime numbers between 1000 and 10000 and return the results
+***** get a list of numbers from user and print them in ascending order
+***** print multiplication table 1-12,20-30
+***** get two strings from user(assume only digits) and see if they are equal No function of String except for size()
+      "1234" "1234"
+      "001234" "1234"
+      "   1234" "1234"
+***** sum two numbers as strings
+***** convert a binary string to a number(string is not going to be more that 64 chars)
+**** week 3
+***** learn about files and filesystems
+****** Read and write to files
+******* projects
+******** reading a file and print it to the console
+******** get user info from console and write them to the file
+******** Check if the userInfo file exist and if it exist load info otherwise do step2
+******** copy a file into an other file
+******** Read a list of different numbers taged by ':' and calculate mean sum variance of different types and output them to a file
+******* Filesystem
+******** check if a file exist somewhere
+******** check if a directory exist somewhere
+******** print the content of directory and identify types ( files, folders)
+******** print the content of a directory recursively and count the number of files
+******** find a file in a directory
+******** find duplicate files in a directory structure
+******* XML
+******** jDOM
+	 https://www.tutorialspoint.com/java_xml/java_dom_parse_document.htm
+********* read files 
+******** StAX
+	 http://www.vogella.com/tutorials/JavaXML/article.html
+	 https://www.tutorialspoint.com/java_xml/java_stax_parser.htm
+***** learn about xml Readers writers
+***** learn about Java data structures
+****** 
+***** first dotin project
+***** introduction to JUnit and testing
+**** week 4
+*** month 2
+**** week 1
+**** week 2
+**** week 3
+**** week 4
+*** month 3
+**** week 1
+**** week 2
+**** week 3
+**** week 4
+** intermediate
+* generics
+** intersection Type
+   <T extends A> 
+   <T extends A & B >
+
+   private static <I extends DataInput & Closable> Person read(I source){...}
+
+   <T extends Object & Comparable< ? super T>> T max ( Collection<? extends T > coll)
+
+
+   <T, U extends Comparable<? super U>> Comparator<T> comparing (Function<? super T, ? extends U> keyExtractor){
+                        Objects.requireNonNull(keyExtractor);
+                        return (Comparator<T> & Serializable ) 
+                                              (c1,c2 ) -> 
+                                                      keyExtractor.apply(c1).compareTo(KeyExtractor.apply(c2));
+   }
+
+
+   class Enum < E extends Enum<E>>
+ 
+   Covariant/invariant/contra-variant  relation
+
+   Consumer<T> -> accept(T t);
+   Predicate<T> -> boolean test(T t); 
+   Comparator<T> -> int compare (T o1, T O2);
+
+   ? extends B means what ever that is a subset of B including B
+   ? super B  what ever that is super class of B including B
+* SynchronizedMap vs ConcurrentMap
+  https://www.javainuse.com/java/javaConcurrentHashMap

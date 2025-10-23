@@ -1,0 +1,385 @@
+#+TAGS: people vahid(v) amirAbas(a)
+#+TAGS: talk(t) documentation
+#+TAGS: exposedToLog(e) internalClass(i) unknownExposure(u)
+#+TAGS: notInLogs(n)
+* rules
+** no default value, It's better to fail fast
+* understanding code
+** helper script
+*** get files with the same name
+#+BEGIN_SRC sh
+for name in `find ./ -name *.java|tr '/' '\n'|grep ".java$"`
+do
+  num=`find ./ -name "$name" |wc -l`
+  echo "$name : $num"
+done
+#+END_SRC
+** mobilet_java_server
+*** TODO understand the pom
+*** TODO understand the properties
+**** DONE get information on database connection                      :vahid:
+*** TODO undersand the build and start process
+**** DONE BUILD the WAR file
+     mvn package -DskipTests
+**** TODO get information on how to lunch the program [2/3]
+     talk to vahid about it
+***** DONE Apis are not visible after i ran the application
+      my mistake 8080
+***** DONE how can i run the entire echo system if it's possible to do it in my machine alone
+      just run yaghut and every thig shoud be ok  
+***** TODO Get test user names from vahid                             :vahid:
+*** understand loging system
+**** removing critical/confidential fields before putting every thing into logs
+     LogUtil class is used to remove critical fields from models before logging them into system
+     package run.wing.mobillet.util;
+***** removed fields from request 
+      - password
+      - pin
+      - pin2
+      - cvv2
+      - ubaPassword
+      - payment
+      - newPin
+***** removed fields from response
+      - authentication
+      - accessHash
+      - amount
+      - balance
+*** TODO Util Models [0/1]
+**** TODO <<MobilletRequestHeader>> MobilletRequestHeader
+***** fields
+****** <<user_id>> user_id
+= "userId";
+****** <<session_id>> session_id
+= "session_id";
+****** <<tracker_id>> tracker_id
+= "tracker_id";
+****** <<uba_id>> uba_id
+= "ubaId";
+****** <<access_hash>> access_hash
+= "accessHash";
+****** <<device_id>> device_id
+= "deviceId";
+****** <<authorization>> authorization
+= "Authorization";
+****** <<signature>> signature
+= "signature";
+****** <<offset>> offset
+= "offset";
+****** <<length>> length
+= "length";
+****** <<card_id>> card_id
+= "cardId";
+****** <<category>> category
+= "category";
+****** <<index>> index
+= "index";
+****** <<deposit_id>> deposit_id
+= "depositId";
+****** <<deposit_ids>> deposit_ids
+= "depositIds";
+****** <<billId>> billId
+= "billId";
+****** <<payId>> payId
+= "payId";
+****** <<device_uid>> device_uid
+= "deviceUid";
+****** <<has_detail>> has_detail
+= "hasDetail";
+****** <<cheque_book_number>> cheque_book_number
+= "chequeBookNumber";
+****** <<deposit_number>> deposit_number
+= "depositNumber";
+****** <<blocked_cheque_reason>> blocked_cheque_reason
+= "blockedChequeReason";
+****** <<cheque_numbers>> cheque_numbers
+= "chequeNumbers";
+****** <<branch_code>> branch_code
+= "branchCode";
+****** <<devisee_bank_code>> devisee_bank_code
+= "deviseeBankCode";
+****** <<from_balance>> from_balance
+= "fromBalance";
+****** <<from_number>> from_number
+= "fromNumber";
+****** <<include_status>> include_status
+= "includeStatus";
+****** <<include_type>> include_type
+= "includeType";
+****** <<order_method>> order_method
+= "orderMethod";
+****** <<order_type>> order_type
+= "orderType";
+****** <<to_balance>> to_balance
+= "toBalance";
+****** <<from_Due_date>> from_Due_date
+= "fromDueDate";
+****** <<to_due_date>> to_due_date
+= "toDueDate";
+****** <<from_pass_date>> from_pass_date
+= "fromPassDate";
+****** <<to_pass_date>> to_pass_date
+= "toPassDate";
+****** <<from_register_date>> from_register_date
+= "fromRegisterDate";
+****** <<to_register_date>> to_register_date
+= "toRegisterDate";
+****** <<loan_number>> loan_number
+= "loanNumber";
+****** <<platform>> platform
+= "platform";
+****** <<appVersion>> appVersion
+= "appVersion";
+****** <<transaction_id>> transaction_id
+= "transactionId";
+****** <<transaction_type>> transaction_type
+= "transactionType";
+****** <<transaction_type_id>> transaction_type_id
+= "transactionTypeId";
+****** <<merchant_id>> merchant_id
+= "merchantId";
+****** <<id>> id
+= "id";
+****** <<amount>> amount
+= "amount";
+****** <<redirect_url>> redirect_url
+= "redirectUrl";
+****** <<uba_username>> uba_username
+= "ubaUsername";
+****** <<payment_transaction_typ>> payment_transaction_typ
+e="paymentTransactionType";
+****** <<iban_numbe>> iban_numbe
+r="ibanNumber";
+****** <<paya_reference_id>> paya_reference_id
+= "payaReferenceId";
+****** <<transfer_type>> transfer_type
+= "transferType";
+****** <<payment_card_id>> payment_card_id
+= "paymentCardId";
+****** <<ec_public_key>> ec_public_key
+= "ecPublicKey";
+****** <<terminal_id>> terminal_id
+= "terminalId";
+****** <<from_date>> from_date
+= "fromDate";
+****** <<to_date>> to_date
+= "toDate";
+****** <<public_key>> public_key
+= "publicKey";
+
+** mobilet_java_yaghut_api
+*** setting up and starting
+    set thirdPartyWsdlURL to http://77.104.67.20:8080/api/yaghut990/soap/soap_saman?wsdl
+    uncomment maven-jaxb2-plugin and in yaghout plugin jaxb2 pluging run generate
+    set spring.profiles.active to dev in application.properties
+
+** Documentation
+*** define the details of task
+*** TODO read the current available documentation
+** learning
+*** TODO what is Diffie-Hellman
+*** TODO learn HMAC hash based message authentication code
+*** TODO learn more about elliptic curve
+** general info about people
+*** masoud CEO
+    - National ID 1756797633
+    - test terminal 11593145
+* API removed
+** DONE =POST= pwa/ [0/0]                                      :internalClass:
+*** getConfig ->
+    /config/
+*** registerPhone -> /register/phone
+*** registerActivation -> /register/activation
+*** registerUser -> /register/user
+*** getUser -> /user/
+*** userUpdate -> /user/update
+*** login -> /user/login
+*** logout -> /user/logout
+*** changeUserPassword -> /user/changePassword
+*** getChangeLog -> /config/changeLog
+*** getCards -> /account/cards
+*** getCard -> /account/card
+*** addCard -> /account/card/add
+*** updateCard -> /account/card/update
+*** changeCardPin -> /account/card/changePin
+*** deleteCard -> /account/card/delete
+*** suspendCard -> /account/card/suspend
+*** getCardsCategorized -> /iban/card/categorize
+*** getDeposits -> /account/deposits
+*** favoriteDeposits -> /account/deposits/favorite
+*** getDepositsCategorized -> /account/deposits/categorize
+*** getDepositsCategorizedIban -> /iban/deposits
+*** getDepositIban -> /iban/deposit
+*** getCardTransactions -> /transaction/card
+*** getDepositTransactions -> /transaction/deposit
+*** getTransactionsCategorized -> /transaction/category
+*** getPaymentTransactions -> /transaction/payment
+*** editTransaction -> /transaction/edit
+*** getTransactionDetail -> /transaction/detail
+*** getCardOwner -> /transfer/destination/card
+*** getDepositOwner -> /transfer/destination/deposit
+*** getIbanOwner -> /transfer/destination/iban
+*** getAvailableBanks -> /transfer/availableBanks
+*** transfer -> /transfer/
+*** getTransfersHistory -> /transfer/history
+*** getRecentCards -> /transfer/recent/card
+*** getRecentDeposits -> /transfer/recent/deposit
+*** getRecentIbans -> /transfer/recent/iban
+*** deleteMostReferred -> /transfer/destination/mostReferred
+*** cancelPayaTransaction -> /paya/cancel/transaction
+*** resumePayaTransaction -> /paya/resume/transaction
+*** suspendPayaTransaction -> /paya/suspend/transaction
+*** cancelPayaTransfer -> /paya/cancel/transfer
+*** resumePayaTransfer -> /paya/resume/transfer
+*** suspendPayaTransfer -> /paya/suspend/transfer
+*** getChequeBooksAndSheets -> /cheque/bookSheet
+*** getChequeBooks -> /cheque/book
+*** getChequeSheets -> /cheque/sheet
+*** blockChequeSheet -> /cheque/block
+*** getLoans -> /loan/
+*** getLoanDetails -> /loan/detail
+*** loan -> /loan/pay
+*** changeUsername -> /user/changeUsername
+*** getCardIban -> /iban/card
+*** getCardsAndDeposits -> /account/cardsAndDeposits
+*** getGeneralReport -> /accountStatement/generalReport
+*** payBill -> /bill/pay
+*** password_validateCustomerInfo -> /password/validateCustomerInfo
+*** password_validateOTP -> /password/validateOTP
+*** password_validateCard -> /password/validateCard
+*** generatePassword -> /password/generate
+*** getDownloadLink -> /account/downloadlink/ios
+*** getCartableCount -> /cartable/count
+*** getCartableList -> /cartable/list
+*** getCartableDetails -> /cartable/details
+*** doCartableAction -> /cartable/action
+** DONE =POST= pwa/test                                        :internalClass:
+*** explanation
+*** input
+**** headers
+**** parameters
+*** respone     
+** DONE =GET= user/device                                      :internalClass:
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =GET= user/image/{image_name:.+}                       :internalClass:
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =GET= transaction/history/payment                      :internalClass:
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =POST= password/validateCard
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =POST= password/validateCustomerInfo
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =POST= password/validateOTP
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =POST= password/generate
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =GET= server/flush-cache                               :internalClass:
+   - input
+    - headers
+    - parameters
+   - respone
+
+** DONE =POST= contact/update
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =GET= contact/ || /contact
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =GET= contact/favorite
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =POST= contact/favorite/add
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =POST= contact/favorite/delete
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =POST= contactUs
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =POST= loan/pay
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =GET= merchant/image/{merchantId}
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =GET= account/paymentCards
+   - input
+    - headers
+     - implicit
+       - [[user_id][user_id]]
+       - [[device_id][device_id]]
+       - [[appVersion][appVersion]]
+       - [[platform][platform]]
+    - parameters
+   - respone
+    [[CardResponse][CardResponse]]
+** DONE =POST= bill/pay_old
+   - input
+    - headers
+    - parameters
+   - respone
+** DONE =GET= branch/location
+   - input
+    - headers
+    - parameters
+   - respone
+    [[BranchDetailResponse][BranchDetailResponse]]
+** DONE =GET= branch/location/version
+   - input
+    - headers
+    - parameters
+   - respone
+    [[BranchLocationVersionResponse][BranchLocationVersionResponse]]
+
+* https://www.reddit.com/r/orgmode/comments/8n45ds/why_highlighting_text_is_so_painful_in_orgmode/
+
+* Questions
+** TODO why regex validation patterns in CardChangePinRequest are commented out
+** DONE check if @ResponseBody is necessory
+** TODO make sure {@linkplain #favoriteDeposits} is list of deposit ids
+** TODO check how we are collecting infrastructure failiures like database and .. 
+** DONE what is /deposit/categorize ? 
+** TODO [#A] Take a look at "/merchant" "/image/{merchantId}"
+** TODO take a look at Transactionals in RegisterController
+** right not questions
+*** DONE CardAuthorizeParams what is track2 field?
+*** DONE what is the format of expDate in CardAuthorizeParams
+*** TODO why are we not making BaseYaghutResponse class abstract

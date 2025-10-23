@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       540B4FBB-3B85-4E56-87A8-7E0ACCC05593
+:END:
+#+title: insulin resistance
+
+HOMA-IR  is a test to measure insulin resistance

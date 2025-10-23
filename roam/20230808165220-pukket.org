@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       AA261D3B-F4ED-4D77-BD3D-3062A1B5EFC9
+:END:
+#+title: pukket
+https://www.figma.com/file/3Fvfza9cVLa161z9B2y6L2/Quench%2Fpukket?type=design&node-id=22-5718&mode=design&t=Aq7MPbnuYNc8GrQy-0
+* send email
+* verify otp
+* get reward information
+
+
+every thing is kept by session which is associated with device id "dicode"
+
+hosting is done by firebase
+
+
+
+message center project
+* delivering basic tracking
+** figure out service corresponding to https://pukket.co.uk/api
+** find out login command in api
+** promoter link and how it works
+https://to.quen.ch/campaign/n001cps57BoryLlw
+** what the fuck is happening with this referral code
+https://to.quen.ch/pk-8r4-7se
+
+
+
+backend do not have a staging or test environment
+- staging for frontend
+  staging is being handled by firebase
+ 
+  https://console.firebase.google.com/project/founder-gym/hosting/sites
+
+
+https://pukket.atlassian.net/wiki/spaces/PKTCH/pages/30539781/stat+available+products+val
+
+
+https://p.pukket.app/login?redirectUrl=%2Fdocs
+
+
+
+https://pukket.app/authentication/forgotpassword
+
+
+
+
+{"cmd":"login","user_token":"0","args":"[\"signin\",\"mak4c8@gmail.com\",\"\",\"8c51c9e1-b37c-419f-a69c-d2a4e1afaeb7\",\"direct\",\"\",-1]"}
+Mahyar Karami1:19 PM
+{"cmd":"login","user_token":"0","args":"[\"signInAcode\",\"mak4c8@gmail.com\",\"2862\",\"dqe1JH5D\",\"8c51c9e1-b37c-419f-a69c-d2a4e1afaeb7\",\"\",-1]"}
+Mahyar Karami1:20 PM
+[
+  "200",
+  "n001dcXzM7crCJvN0KBzwUB1hS4ycopocd823q2geP6LagTfOTq767n1NuL2IBtA"
+]
+
+
+
+what is the device code

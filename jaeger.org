@@ -1,0 +1,1 @@
+https://signoz.io/blog/jaeger-vs-elastic-apm/

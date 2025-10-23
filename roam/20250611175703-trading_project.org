@@ -1,0 +1,93 @@
+:PROPERTIES:
+:ID:       2dad9048-691e-4457-8ccc-452486cea765
+:END:
+#+title: trading_project
+
+* algorithm to check
+
+** 
+claims to have 95% win rate
+https://www.youtube.com/shorts/qsysuq0Socw
+MACD+ SMA 200 strategy
+Pivot Point supertrend   LonesomeTH
+
+** lowest tick of highest bar and highest tick of lowest bar
+https://www.youtube.com/shorts/tS9o8aQjADY
+
+** refining your entries on smaller time frames
+https://www.youtube.com/watch?v=BI_W4URQ7U0
+
+** ranged filtered trend signals algoAlpha
+https://www.youtube.com/watch?v=iTx6osnC2F0
+
+** looking at multiple time frames
+https://www.youtube.com/watch?v=zjHv3vpo9T0
+
+** probability grid luxAlgo
+https://www.youtube.com/watch?v=RLgwbxKNiFM
+
+** [[https://www.youtube.com/watch?v=9JEmsSItdt4][The Strategy That Made Him $1.1 Million In 12 Months]]
+
+** [[https://www.youtube.com/watch?v=ZcxOPS_9RCc][The Trend Indicator with NO Lag and NO Noise]]
+
+** [[https://www.youtube.com/watch?v=_rpogL1EHAA][ Rust + Jesse = Match made in heaven ]]
+
+* planning
+** start accessing your wallet safely from the APIs and a fixed server
+*** get a server from contabo
+*** prepare your software
+**** make sure you can read the encrypted credential from terminal
+**** 
+**** add managing endpoint for your wallets
+***** [#A] list all accounts
+***** [#A] list account information
+***** DONE taking a position in market with or without stop loss
+CLOSED: [2025-07-11 Fri 22:41]
+:LOGBOOK:
+CLOCK: [2025-07-11 Fri 19:37]--[2025-07-11 Fri 21:51] =>  2:14
+:END:
+***** taking a position at price with or without  stop loss
+***** making order based on account size and risk amount
+***** adding stop loss and take profit to position
+***** list positions and status of each position
+***** list all pending orders
+***** cancel pending order
+***** close position
+***** add trailing stop loss for a position
+*** preparing your algorithm
+**** identify proper backtesting environment
+***** Trading view
+***** Jessie
+**** turtle method
+*** Running your algorithm
+
+* algorithm
+** https://www.youtube.com/watch?v=3iAZw292Tmg
+
+** [[https://www.youtube.com/watch?v=Htt0Pu8q2-8][The Channel Indicator That Spots Reversals Before They Happen!]]
+
+** [[https://www.youtube.com/watch?v=QS2Lo3z2PdU][This Indicator Reveals Both The Direction & Speed Of Trends]]
+
+** [[https://www.youtube.com/watch?v=g8XHUYVOPkU][How to Trade the Turtle Strategy: A Full Guide to Beating Day & Swing Traders in 2025 - Curtis Faith]]
+
+** [[https://www.youtube.com/watch?v=FxTLkyjYOAc][i tested 100 trading algorithm]]
+
+** https://www.youtube.com/watch?v=NutxiC29Sv4
+
+** https://www.youtube.com/watch?v=tSQJlgr9Ktg
+
+** [[https://www.youtube.com/shorts/2A2CqCmDbl0][finding reversals using long wicks]]
+
+
+* platforms to check
+
+** https://tradersync.com/
+
+* indicator
+** open interest
+** cvd
+=======
+* concepts
+** [[https://www.youtube.com/watch?v=9HD6xo2iO1g][sharp ratio]]
+
+

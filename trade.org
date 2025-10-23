@@ -1,0 +1,78 @@
+* resource
+** [[https://www.youtube.com/watch?v=-MHhA-Y3DSk][I Coded A Trading Bot And Gave It $1000 To Trade!]]
+* 20 habits of highly successful traders
+** be patient with winners and impatient with losers
+   cut your losses fast. let your wins continue.
+** making money is more important than being right
+ well he says that market can stay wrong longer than you can stay solvent.
+ i dont think this applies to correct fundemental analysis.
+** anticipate what other traders will do by looking at the charts
+** before entering a trade you should know where you exit with a gain or a loss 
+** do not let the history effect your judgment ( approach trade number 5 with same mindset as the 4 losing trades before it)
+   you should keep a good track of the history so that you can track
+   your system efficiency but you should not let few bad trades effect your 
+   mental status.
+**  get used to watching price and price only
+** being uncomfortable trading is OK
+** trade with trend
+   buying low and selling hight is very tough and very rare,
+   you should be able to use the trends in you advantage.
+** there is no such thing as cheep or expensive stock
+   if some one is going to pay more money for the thing you are buying
+   now some time in future it is a good buy otherwise it's not.
+** be willing to change side if the market tells you so.
+   be willing to accept that you are wrong.
+   check you bias.
+** trade aggressively when you are trading well and modestly when you are not
+** the market will be open again tomorrow.
+   there will be opportunities comming your way again and again.
+   do not have fear of missing out.
+** Do not add to a losing trade( need to think more about it)
+** cash is the goal but never the measure of success
+   by assuming you need to get certain amount of money every day you
+   will make mistake just to fill that quota
+** Read about mombs and riots
+   - the wisdom of crowds  James surowiecki
+   - the art of strategy  Barry J nale...
+   - market mobs and mayham Robert Menschel
+   -
+** become a market maker?
+** have a way to gauge fear greed and speed of market tick charts
+** read the right side of the chart not the left 
+** have an edge that you can explain to some one else 
+** your position side should be calculated exactly on risk tolerance
+   calculate your risk
+   if you are going to accept 2% risk on any trade and your current balance is 
+   1000 $ you can not lose more than 20 dollors on any trade.
+   you could buy 10 100$ shares but if it drops by 2 dollors you are at your limit.
+   or you can buy a single share and you can afford to let the price goes down to 80 dollors
+   
+   it is important to manage your risk. know when you are going in and when you are comming out.
+** profit targets are based on average ranges not fixed things
+   when some stock on average is giving a dollor you can not expect it
+   to give five.
+   your profit target should be based on objective measures
+** one or two trades a month make their month
+   you can only expect very few big wins in each month, there will be
+   lots of losers and small winers.
+** be confident decision maker in face of incomplete information
+** a losing trade does't make you a loser
+** buy higher highs and sell lower lows ?
+   most people are doing the oposit and they are losing money. maybe
+   you should consider doing the oposit?
+** your business is not trading your business is finding the right trade.
+** record evey trade price thoughts news attitude
+** keep your conviction on active trades unless something major changes
+** a winning trade should not result in taking extra risk the next trade
+* 10 minute talk that every trader needs to hear
+** preserving your capital
+*** easy ways to add up loss
+**** taking excessive risk
+**** taking on marginal trade 
+**** adding to losing trade
+** do not be stubborn
+** take a look at them
+*** drys
+    https://www.marketwatch.com/investing/stock/drys
+*** KBIO stock ?
+** have a free and clear mind

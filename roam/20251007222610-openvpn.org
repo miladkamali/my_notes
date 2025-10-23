@@ -1,0 +1,26 @@
+:PROPERTIES:
+pen
+:ID:       8ae95a67-5d39-45f0-8376-44038e36bf15
+:END:
+#+title: openvpn
+* install openvpn3 on fedora
+
+sudo  yum copr enable dsommers/openvpn3
+sudo yum install openvpn3-client
+
+openvpn3 config-import --persistent --name bentoak --config ~/Downloads/bentoak.ovpn
+openvpn3 session-start --dco true --config bentoak
+
+openvpn3 session-manage --config bentoak --disconnect
+
+openvpn3 sessions-list
+
+user ovpn-1136
+
+password: sgkzga
+
+private key password: 87654321
+printf "ovpn-1136\nsgkzga\n87654321\n"|openvpn3 session-start --dco true --config bentoak
+
+
+

@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       1c8e448a-0109-4b36-a8fc-e6c911eac1e3
+:END:
+#+title: credit-card
+
+* credit card number
+is comprised of three sections
+** section one which indicate the issuer
+*** first digit specify the industry
+   - 1 2 airline
+   - 3 travel and entertainment 
+   - 4 5 for banking
+   - 6 banking and merchendise
+   - 7 petroleum industry
+   - 8 health care and communication
+   - 9 national government purpose
+   - 0 international organization for standardization
+
+** 

@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       021D28AD-37E8-4015-8A0A-7E9D2E8BCF36
+:END:
+#+title: uid-panel
+
+* 33 days backend + 21 days front + 20 days backend optional 
+** [#A] panel backend  31 days backend and 21 days front
+*** communicate with authentication 4 days                             :back:
+*** communicate with BFF 4 days                                        :back:
+*** workflow for gathering statistic 3 days                            :back:
+*** service list 2 days                                                :back:
+*** service price for business 3 days                                  :back:
+*** transaction tracking system  10 days                               :back:
+*** timescale database for analysis of data 5 days                     :back:
+*** user registration frontend/backend  7 days                   :back:front:
+*** front of the panel 3 weeks                                        :front:
+** [#B] business registration service 5 days optional                  :back:
+** [#B] user Registration service  5 days optional                     :back:
+*** using keycloak to authenticate users
+*** user registration process
+** [#A] authentication changes 7 days                                  :back:
+*** implement limitation
+*** implement change in token system
+** [#A] bff changes 5 days                                             :back:
+** [#B] openFGA authorization service 10 days
+

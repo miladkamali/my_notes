@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a46f0c76-6e7b-47ad-8d79-60610d7b92dc
+:END:
+#+title: dot
+* polkadot DOT
+designed to connect multiple blockchains 
+** history
+- creator Gavin wood cofounder of etherium
+** 

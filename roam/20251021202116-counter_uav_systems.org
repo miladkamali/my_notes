@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       4abcddd6-1a76-4483-a983-aaeb8182661b
+:END:
+#+title: counter uav systems
+* drones that intercept drones
+** roadrunner-m
+*** features
+- reusability
+- autonomy
+- selective engagement and fast decision making
+- vertical takeoff and landing
+** cayote
+*** block 1
+*** block 2
+*** block 3
+* electronic warfare system to combat drones
+** pulsar

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e54b9355-f4a8-4a87-9503-8152ea63b7c7
+:END:
+#+title: time series database
+
+https://questdb.io/tutorial/2021/07/05/comparing-questdb-timescaledb-influxdb/
+https://questdb.io/img/tutorial/2021-07-05/db-engines-ranking.png
+influxDB
+timescaledb

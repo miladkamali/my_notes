@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       de769340-83d8-4e6b-a3d3-5a40c27a99fb
+:END:
+#+title: ada
+* cardano ADA

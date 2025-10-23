@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       E5719B26-8A16-43FF-8685-0734791395CE
+:END:
+#+title: keycloak
+https://www.youtube.com/watch?v=0xsbf2SKYEg
+
+https://www.youtube.com/watch?v=4HgTnzQoD_4
+
+
+https://github.com/dasniko/keycloak-2fa-sms-authenticator

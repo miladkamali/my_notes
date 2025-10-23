@@ -1,0 +1,31 @@
+* information
+  https://www.youtube.com/watch?v=nvluJ9yf4ho
+  https://www.youtube.com/watch?v=OIg9lNpMJew
+  https://www.youtube.com/watch?v=h0educ2nosg
+  https://www.youtube.com/watch?v=Xv5UXGhfgMU
+  https://www.youtube.com/watch?v=2_Bvi5mz1-k
+* concepts
+** timestamp
+   also called unix epoch time 
+** Date
+   Date now = new Date();
+   date has no concept of time zone so it will use the default timezone  
+** LocalDate
+   LocalDate d = localDate.now();
+   LocalDate d = localDate.of(1989,Month.SEPTEMBER,10);
+** Zoneid
+** LocalTime
+** LocalDateTime
+** Month
+   
+** timezone
+** calendar
+   
+   Calendar cal = new GregorianCalendar();
+   cal.set(Calendar.MILLISECOND,0)
+   cal.setTimeZone(TimeZone.getTimeZone("UTC"))
+*** TODO what are the different implementation of calendar
+**** GregorianCalander
+**** 
+** date Format
+   DateFormat dateFormatter = new SimpleDateFormat("yyy-MM-dd HH:mm:ss Z")

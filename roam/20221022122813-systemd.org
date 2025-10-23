@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       cb43e333-253d-40e5-af7d-290fc407c38e
+:END:
+#+title: systemd
+systemctl daemon-reload
+systemctl stop shadowsocks-libev.service
+systemctl start shadowsocks-libev.service
+systemctl status shadowsocks-libev.service

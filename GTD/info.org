@@ -1,0 +1,43 @@
+* info
+** LG 32UD59-B 32 Inch Class 4K UHD LED Monitor                 :unprocessed: 
+   https://meghdadit.com/product/65295/32ud59-b-32-inch-class-4k-uhd-led-monitor/%D9%85%D8%A7%D9%86%DB%8C%D8%AA%D9%88%D8%B1-32-%D8%A7%DB%8C%D9%86%DA%86-%D8%A7%D9%84-%D8%AC%DB%8C-%D9%85%D8%AF%D9%84-32-%DB%8C%D9%88-%D8%AF%DB%8C-59-%D8%A8%DB%8C/
+** jira rest integration                                        :unprocessed: 
+   https://pypi.org/project/jira/
+   https://jira.readthedocs.io/en/master/examples.html#issues
+** the girl with white belt and a tie                           :unprocessed: 
+   https://www.xvideos.com/video29400209/wild_and_salacious_dorm_joy
+   dare dorm 2257
+   https://landing.daredorm.com/join
+** ssh reverse tunneling                                        :unprocessed: 
+https://www.howtogeek.com/168145/how-to-use-ssh-tunneling/
+https://serverfault.com/questions/97378/ssh-tunneling-to-box-behind-firewall
+https://www.howtogeek.com/428413/what-is-reverse-ssh-tunneling-and-how-to-use-it/
+https://www.howtoforge.com/reverse-ssh-tunneling
+
+
+https://medium.com/@ivan1697/ssh-tunnel-as-systemd-service-3c53bd157ac1
+
+ssh -R 50000:localhost:22 root@62.171.134.30
+in server
+ssh milad@localhost -p 50000
+**  https://github.com/rouzwawi/grpc-kotlin                                                          :unprocessed: 
+** [[https://www.youtube.com/watch?v=6avJHaC3C2U][the art of code]]                                              :unprocessed: 
+** protogen compiler                                            :unprocessed: 
+   https://developers.google.com/protocol-buffers/docs/reference/cpp/google.protobuf.compiler.plugin
+   https://developers.google.com/protocol-buffers/docs/proto
+   https://stackoverflow.com/questions/41432876/how-to-write-a-custom-protobuf-codegenerator-in-java
+   https://stackoverflow.com/questions/22247951/android-protobuf-nano-documentation
+** java code generation                                         :unprocessed: 
+   poet framework
+** fixing java ssl issue                                        :unprocessed: 
+   - extract certificate 
+     openssl s_client -showcerts -connect 172.16.2.22:8244 </dev/null 2>/dev/null|openssl x509 -outform PEM >mycertfile.pem
+   - import cert into java certificate
+     keytool -import -alias "idiots" -keystore cacerts -file ./mycertfile.pem
+** juggle physics                                               :unprocessed: 
+   https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=2ahUKEwiqjr3E8aTpAhXHMMAKHaAJANsQtwIwAXoECA0QAQ&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D-m0LyMiN-Ik&usg=AOvVaw3VHAujNWovyKK4hsaDgn2j
+**  https://blog.panicsoftware.com/coroutines-introduction/     :read:unprocessed: 
+** read about Conflict-free replicated data type                :unprocessed: 
+** [[https://www.youtube.com/watch?v=SD4KgwdjmdI][How I Built The Internet's Best Performing Code Execution Engine]] :unprocessed: 
+https://github.com/engineer-man/piston
+** learn about candida auris and covid-19                                                 :unprocessed: 

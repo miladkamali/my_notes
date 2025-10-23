@@ -1,0 +1,2 @@
+fix and ntfs file system which refuse to mount
+ntfsfix /dev/sdb1

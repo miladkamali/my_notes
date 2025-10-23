@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       23324810-AD6F-47A7-9D00-347BF6D28FD1
+:END:
+#+title: triad calender system
+* yearly view
+* month view
+* day view

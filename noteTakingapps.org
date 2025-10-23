@@ -1,0 +1,46 @@
+* notes to clean up
+  confrences.org
+codeSmells.org
+architecture.org
+performance.org
+micrometer.org
+loadBalancer.org
+java.org
+interesting.org
+eventSource.org
+emacs.org
+designPatterns.org
+DataStructures.mm
+
+* taking note
+  - avoid distraction( disable notification,...)
+  - avoid transcribing verbatum
+  - take advantage of figures and picture
+  - use a tablet
+  - 
+
+** note taking mathods
+*** cornell method
+    [[file:./images/noteTaking/cornellMethod.png][cornellMethod]]
+*** outline
+** note interacting and reflection
+*** fact heavy
+**** summry sheets 
+     notes you take from your notes
+     the subject should be concept heavy
+*** concept heavy
+** synthesis questions
+** flash cards
+* software
+** evernote
+** notability
+** oneNote
+** Bear
+** google keep
+** notion
+** standard note
+** slite
+** Ulysses
+** typora
+* methods
+** markdown

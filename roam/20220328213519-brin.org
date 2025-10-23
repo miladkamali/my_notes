@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       6c6bd2f2-c782-4b41-b58d-a9576187f0f7
+:END:
+#+title: BRIN
+
+[[https://en.wikipedia.org/wiki/Block_Range_Index][Block Range Index]] is used to improve performance for extremely large tables it
+provides similar benefits to [[id:14bace23-d757-45a2-876e-55b8841f17bf][sharding]] but without needing to explicitly declare
+partitions.
+
+
+BRIN essentially acts as a negative index eliminating block that do not need to
+be searched early on

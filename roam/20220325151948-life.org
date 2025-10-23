@@ -1,0 +1,76 @@
+:PROPERTIES:
+:ID:       a7273376-601d-4412-9114-9d16647b551b
+:END:
+#+title: life
+* things i enjoy doing
+** Photography
+*** [[id:9424c217-d3e3-4c99-be2f-92ccf38ef1ce][computational photography]]
+** Going out in the city
+** Going out of the city
+** Drawing
+** Reading poem
+*** [[id:05b5b53d-fdf7-4df6-af76-eb88868e0eaf][poets]]
+** Reading books
+*** [[https://sive.rs/book][Derek sivers]]
+*** [[id:c874e322-7b34-4cc4-9a12-fb47918c94c0][books]]
+** Watching movies/series
+*** [[id:69115fd3-204b-488e-865f-28ad56403709][movies]]
+*** [[id:bd32cb60-9a73-4cb0-8174-88a00d56f559][series]]
+*** [[id:a727ff90-b9fe-43e4-ab6e-87e955226b7b][anime]]
+** Listening to music
+** Learning and Problem solving
+** Cooking
+** Dining out
+** Having a high quality conversation
+* thinks that are good if i enjoy them
+** Exercise
+*** How to make exercise fun ? 
+* things i want to try
+** Learn to shoot compound bow
+** Learn to shoot gun
+** writing
+** Going out to galleries
+** Going out to theater
+** Scuba diving
+** Get life-guard certificate
+** Fly with para-glider
+** Bungee jumping
+** Zip-line
+** Learn to play an instrument
+** Learn to sing
+** Learn to do electronics
+** Start a social presence
+** Mountain cycling
+** Fly in a helicopter
+** Rock climbing
+** Do nude photo-shoot with a model
+** Sexual experiments
+*** threesome
+* things that i want to achieve
+** Physical fitness
+*** Reach 90 KG
+*** Get a nice 6 pack
+*** Capable of doing a 180 with my legs
+*** Can hang from an edge
+** Learn to fight
+*** Learn JUDO
+*** Learn Boxing
+*** Learn self defense
+** Learn new languages
+*** German
+*** French
+*** Russian
+** Reach financial independence
+** Have a foreign passport
+* learning
+** improve your note taking skills
+** increase attention span
+*** [[id:340377a0-aee8-4300-8094-a2d56498a191][Dopamine fasting]]
+* imoprove my life
+** do one year defining thing every year
+** do a mini adventure every other month
+** add a wining habit every quarter
+* to view
+** TODO [[https://www.youtube.com/watch?v=hAvskHhvDis][The One Habit That Is Changing My Life]]                        :watch:
+** [[https://www.youtube.com/watch?v=RMB3NsQotvM][How to Force Your Brain To Be Motivated (when you don’t feel like it)]] :watch:
+** [[https://www.youtube.com/watch?v=-wC_Oosh1Mw][Get Ahead of 99% of People by Thinking Backwards (Inversion Explained)]] :watch:

@@ -1,0 +1,36 @@
+* maps
+** create one click routing system
+in this method designer would select  the start and end port and it will deliver
+some optimal solution considering the constraints and other pipes
+*** things to be done
+**** clean up current implementation
+***** add direction of ports to the solver
+***** fix leaks between each joints
+***** fix bent calculation
+**** fixing ui
+***** come up with a way to show the designer which port is whitch
+***** implement the 
+**** packageing the system ( 1 week )
+***** the plugin should be added directly to the plant 3d
+****** automatic load of dll
+****** automatic load of matlab runtime
+***** create documents on how to set up the system
+*** goal posts
+**** create complete demo connecting the current version of
+**** creating a proper solver instead of path finder
+**** create a proper ui
+***** selecting start and end port
+**** integrate solver server 
+** create an interactive routing system
+in this method instead of plotting start to end position it will do so
+interactively, suggesting different ways, updating using operator feed back,
+and possibly ask the operator for general directions.
+
+in this way our choice is to be as helpful as possible and automate as much task
+that the operator need to do. in the background we can use this position to better
+train our models to interact flawlessly with the designer. 
+*** gether information about the problems we can solve using our system
+*** 
+*** data gathering
+*** improvement the model
+** create a whole project input and output system

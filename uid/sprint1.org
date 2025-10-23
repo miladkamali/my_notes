@@ -1,0 +1,118 @@
+* backend                                                           :backend:
+** security
+*** key-exchange
+*** session
+*** HMAC
+*** Business security
+** flow
+*** create sequence diagram for labour
+*** design basic information endpoints
+**** Logo, ... endpoint
+**** city and province endpoint
+*** unify profile information endpoints
+the goal is to have one endpoint to receive different profile information like
+*** implement dynamic page flow
+** temporal
+*** dispatcher
+*** child workflows
+*** business configuration service
+get configuration for each business
+** information gathering
+*** database design
+*** mongo db design 
+** panel APIs
+*** get user info
+*** accept/reject
+*** statistic
+*** user intospection
+**** status in labour
+**** status in uid
+*** 
+** Observability
+*** grpc logs
+the problem we have right now is if we are crashing in grpc we will not have the
+logs
+**** investigate the issue
+*** prometheus
+*** Observation spring
+generate traces for different services
+** error handling
+*** defining error types and general responses
+*** 
+** ACL
+** external services
+*** labour service
+*** payment service
+**** parsian service
+**** ap service
+***** investigate 517 issue
+** data migration
+** proper sms messages
+* front-end
+** panels
+*** TODO send the changes to face-matching status enum to the production
+*** list of users
+*** user information
+when we are searching for a user and we want to get the information in
+call-center we need to show user information related to payment, labour status, name and ...
+in the general sense we want to present all the data that we have from the user
+
+at the end all these data would be served encrypted to the front-end
+**** TODO define the proper interface for it
+**** investigate the proper UX for viewing the information
+*** adding font
+*** adding validation for search boxes
+*** accept and reject
+*** proper message management
+*** ACL
+**** TODO what is the condition of the ACL                            :hamed:
+** web app
+*** errors in frontend
+**** communication issues
+***** slow connection
+upload taking too long
+***** server unreachable
+***** time out
+**** server specific error 
+***** 500 server
+***** validation error
+***** security errors
+****** token expiration
+**** general error with message
+*** logic
+**** get next page from server
+**** configuration from server
+***** get basic information from server
+****** city and province
+****** logo address
+***** front specific configuration
+- liveness time
+- liveness message( liveness title)
+- timeout
+**** implement key-exchange
+key exchange is done but actually encryption and decryption using AES is not completed
+**** implement HMAC
+**** encrypt sensitive information
+**** update user profile information endpoint
+we are going to unify all the information gathering mechanism into a single endpoint
+*** page
+**** [#A] complete information page
+the page that we get marital status and religious status and ...
+to have something that indicates we are waiting on a response from server
+*** components
+**** progress bar
+when uploading something we need to have progress bar
+**** add timer logic for otp page
+**** waiting spinner
+*** validation
+**** TODO get a list of all the places that we need validation
+*** code cleanup
+**** advance redux
+**** check the code smells
+*** error handling
+**** [#A] refactor into single component to handle all the errors
+*** testing 
+**** testing liveness camera
+since we have rewritten the module we might experience some issue.
+**** testing picture taking with different devices
+specifically we are concerned with devices that have too many cameras

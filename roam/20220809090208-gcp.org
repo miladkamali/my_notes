@@ -1,0 +1,48 @@
+:PROPERTIES:
+:ID:       43A10C72-FBE2-4A1D-88DD-F79B80AF3BF1
+:END:
+#+title: gcp
+Deploy a Serverless NodeJS App to Google Cloud Run-aUBq-oQFHr8
+Cloud Build - Create a CI_CD Pipeline-Zd014DjonqE
+Google Cloud Platform (GCP) - Cloud Build-rWEd9CYw9_s
+Lesson #4 - How to create docker container on google cloud platform (gcp) _ Step by Step (2020)-LxHiCZCKwa8
+
+
+
+
+
+
+https://cloud.google.com/appengine/docs/flexible/python/reference/app-yaml#services
+
+
+
+
+docker build -t tiger:v3 .
+
+gcloud builds submit --tag gcr.io/thisthat-37376/api-v1
+
+wgcloud run deploy --image gcr.io/thisthat-37376/api-v6 
+
+
+
+https://cloud.google.com/sql/docs/mysql/connect-admin-proxy#connecting-docker
+https://codelabs.developers.google.com/codelabs/cloud-sql-connectivity-gce-private#0
+
+https://cloud.google.com/database-migration/docs/mysql/configure-connectivity-ip-allowlists
+
+https://cloud.google.com/database-migration/docs/mysql/configure-connectivity-ip-allowlists
+
+
+
+
+
+
+
+https://stackoverflow.com/questions/53523524/how-to-push-existing-docker-image-to-google-app-engine
+https://cloud.google.com/artifact-registry/docs/integrate-app-engine
+https://cloud.google.com/appengine/docs/flexible/python/configuring-your-app-with-app-yaml
+
+
+
+
+gcloud app deploy app.yaml  --version 2

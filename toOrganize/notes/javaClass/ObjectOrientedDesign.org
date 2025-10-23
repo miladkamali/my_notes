@@ -1,0 +1,24 @@
+* SOLID
+** Single Responsibility principle
+** Open/Close principle
+** Linkov substitution principle
+** Interface Segregation principle
+** Dependency inversion principle
+* KISS
+  - Keep It Simple, Stupid
+* Inheretence
+** problems
+*** singleness
+    an object can only be student or Employee not both
+*** static
+    an object can not change role, student can not be changed to Employee
+*** visibility
+    passing an object will expose it's not public field to others
+    outside of package that is why we have protected in java 
+* composition over inheretence
+* Don't repeate yourself
+* Do not repeat yourself
+* Unix philosopy
+* worse is better
+* links
+  https://en.wikipedia.org/wiki/List_of_software_development_philosophies

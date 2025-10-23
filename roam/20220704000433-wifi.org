@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       17610E19-209F-422D-850A-46E45E9CE620
+:END:
+#+title: wifi
+* wifi probe request
+https://www.youtube.com/watch?v=poaqwozBqHY
+* https://www.reddit.com/r/mikrotik/comments/lgf2we/lhgg_lte6_kit_experience/
+* https://www.wikarekare.org/Antenna/biquad.html
+* 
+* home
+** https://mikrotik.com/product/lhg_lte6_kit
+** LHG LTE18 kit
+https://irmikro.com/product/lhg-lte18-kit/
+Lhg lte kit.   13800
+Lhg lte 6kit.   14800
+** https://shabakecenter.com/mikrotik-lhgg-lte6-kit
+https://www.digikala.com/product/dkp-8189503/روتر-lte-میکروتیک-مدل-sxt-lte-kit/
+https://www.youtube.com/watch?v=RkRsotbtn-o
+
+https://mikrotik.com/product/ltap

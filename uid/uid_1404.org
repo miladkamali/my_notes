@@ -1,0 +1,18 @@
+* clean up protobufs
+** create exposed APIs Protobufs
+*** DONE define repository
+CLOSED: [2025-05-07 Wed 13:25]
+*** TODO move authentication protobufs from repo to this repo        :behnam:
+*** TODO create jarfile dependency which will be loaded into project
+*** TODO deploy the updated version with the jarfile                 :behnam:
+** Create internal services protobufs
+*** DONE create repo
+CLOSED: [2025-05-07 Wed 13:26]
+*** create a jarfile dependency to be imported
+*** create new version of internal APIs 
+*** remove divar service and move every thing into BFF                :hasan:
+*** remove jbit from internal services and remove the jibit service
+*** should we move AI calls behind dispatcher ?
+*** remove naji service
+*** should we make human operator into it's own project?
+** Create BFF protobuf

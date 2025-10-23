@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       41D8293A-E2DF-4433-824B-3AD9891D72C7
+:END:
+#+title: photo editing
+
+* DSC_4915 [0/7]
+** TODO clean my under eye 
+** TODO clean up sepideh under eye
+** TODO clean up my skin
+** TODO make my tie look complete on the left side
+** TODO sharpen the eyes and hairs
+** TODO ceam up my eye brows gaps
+** TODO possibly change the color of samaneh finger nails
+
+* dsc_4929 [0/6]
+** TODO clean up faces
+** TODO remove the shadow on the wall
+** TODO make my tie look complete on the left side
+** TODO remove the foreground candles
+** TODO clean up your eye brow
+** TODO make your hair look thicker
+* DSC_4939[0/8]
+** TODO Clean up my skin
+** TODO clean up my tie
+** TODO remove folds from shirt
+** TODO Lighten up fatemeh under eyes
+** TODO Ligten up my under eyes
+** TODO clean fatemeh forehead
+** TODO change the light sources colors
+** TODO try to recunstruct over exposed skin on my forehead

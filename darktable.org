@@ -1,0 +1,8 @@
+* download
+  https://software.opensuse.org/download.html?project=graphics:darktable&package=darktable
+* darktable alternative
+  https://github.com/hanatos/vkdt/blob/master/TODO
+* darktable shortcuts
+** lighttable full preview
+*** sticky Alt+W 
+*** fast W

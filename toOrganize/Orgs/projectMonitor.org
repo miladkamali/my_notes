@@ -1,0 +1,10 @@
+* JNA 
+** https://stackoverflow.com/questions/6391439/getting-active-window-information-in-java/6393901
+* selenium
+** http://www.teachmeselenium.com/2018/08/11/how-to-connect-selenium-to-an-existing-browser-that-was-opened-manually/
+* Registry
+** https://stackoverflow.com/questions/62289/read-write-to-windows-registry-using-java
+* lnk files
+** https://stackoverflow.com/questions/309495/windows-shortcut-lnk-parser-in-java
+** [[https://github.com/DmitriiShamrikov/mslinks][creating Links]]
+** [[https://msdn.microsoft.com/en-us/library/dd871305.aspx][Microsoft lnk binary format]]

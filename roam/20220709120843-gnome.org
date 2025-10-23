@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       53525a3e-3854-473d-8492-c6806cbb06bd
+:END:
+#+title: gnome
+* useful plugins
+** [[https://extensions.gnome.org/extension/517/caffeine/][caffeine]]
+prevents system to go to sleep
+https://github.com/eonpatapon/gnome-shell-extension-caffeine

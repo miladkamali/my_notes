@@ -1,0 +1,63 @@
+:PROPERTIES:
+:ID:       a67adb45-45c9-48dd-a039-e95fdc8b1620
+:END:
+#+title: brain
+
+brain cells do regenerate
+the rate of cell regeneration is important
+[[https://www.youtube.com/watch?v=iACtQUWPg3g][Neuroscientist: "You Will NEVER Feel TIRED Again"]]
+* brain sections
+** hippocampus
+is involved in relay of information involved in
+- memory
+- learning
+- spatial navigation
+- problem solving
+- reasoning
+- object in place memory
+* [[id:4c5bbc26-2730-4817-a241-df3b2809fa55][neurogenisis]]
+* improve brain health
+** Exercise
+brain consumes 20% of all the body oxygen aerobic exercises and high intensity
+exercises combined generate the best outcome
+** fasting
+intermittent fasting which you fast for 14-18 hours a day is very beneficial for
+your brain. on the opposite side eating frequent snacks not only very bad for
+the body it also damages brain.
+** cold therapy
+cold shower, ice bath 
+** omega-3
+cod liver oil
+
+
+oxidized oils are very bad for brain  
+** low-carb diet(KETO)
+[[id:f13a8131-9851-417d-98aa-36123b98fade][glucose hypometabolism]]
+** heat therapy
+** vitamin B1
+[[id:336c7b8c-1e54-44f0-a16f-521ac726f536][wernicke-korsakoff syndrome]] is cause by B1 deficiency
+** probiotic
+antibiotic effects mood and cognition because it's effecting gut microbes
+** infrared from the sun
+increase melatonin which is antioxydant 
+** plant based phytonutreient
+** food high in choline
+egg yolks
+organ meats
+fish
+** grass fed animal products
+** sufficient sleep
+** coffee
+** zinc 
+* TODO [[https://www.youtube.com/watch?v=XIMq-ieHaaA][These 5 Pills Upgraded my Brain]]
+* TODO [[https://www.youtube.com/watch?v=lSwHXE9LohA][5X Your BRAIN CELLS]]                                         :to_watch:
+* TODO https://www.youtube.com/watch?v=vQvQTsHQLEU
+* DONE [[https://www.youtube.com/watch?v=D7mwlpCGG8s][4 simple brain exercise to boost your brain power and focus]] :to_watch:
+CLOSED: [2025-09-06 Sat 23:16]
+** https://schultetable.web.app/
+** doing simple task with your eyes closes 2 min daily
+*** write your name
+** non dominant hand power
+** color word challenge
+* TODO [[https://www.youtube.com/watch?v=8GUNhGRlQDU][how to reprogram your dopamin to crave hard work]]
+* TODO [[https://www.youtube.com/watch?v=5vMFvPyfoII][Train your brain for maximum descipline]]                     :to_watch:

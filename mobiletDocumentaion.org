@@ -1,0 +1,1124 @@
+#+TAGS: people vahid(v) amirAbas(a)
+#+TAGS: talk(t) documentation
+#+TAGS: exposedToLog(e) internalClass(i) unknownExposure(u)
+#+OPTIONS: ^:nil
+* search
+** TODO search for custom serialization in spring boot
+*** Jackson cusom serrialization
+    - register serializer
+      https://medium.com/@alexthered/how-to-register-a-custom-list-serializer-with-spring-boot-jackson-45f0d1ae3a27
+    - 
+    https://www.baeldung.com/jackson-serialize-dates
+    https://www.baeldung.com/spring-boot-jsoncomponent
+*** GSON vs Jackson 
+    - [[http://www.doublecloud.org/2015/03/gson-vs-jackson-which-to-use-for-json-in-java/][gson vs jackson performance]]
+      6x better performance for GSON
+    - [[https://www.baeldung.com/jackson-vs-gson][gson vs jackson]]
+      custom serialization and ...
+*** serialization name
+    https://www.baeldung.com/jackson-name-of-property
+*** spring boot 2 GSON
+    - https://www.baeldung.com/spring-rest-http-headers
+    - https://howtodoinjava.com/spring-boot2/gson-with-spring-boot/
+    - https://www.callicoder.com/configuring-spring-boot-to-use-gson-instead-of-jackson/
+*** jackson custom serialization
+    https://www.baeldung.com/jackson-custom-serialization
+*** custom serilization java
+    https://www.baeldung.com/jackson-custom-serialization
+    https://www.algosome.com/articles/java-custom-serialization.html
+** TODO JSON test
+   https://json-schema.org/learn/file-system.html
+   https://json-schema.org/learn/
+   https://json-schema.org/implementations.html
+** TODO Think about unit test and how to improve it
+* Documentation
+** End Points
+*** =GET= account/cardsAndDeposits
+    - input
+    - headers
+      - implicit
+        - [[uba_id][uba_id]]
+        - [[session_id][session_id]]
+      - parameters
+    - response
+     [[CardAndDepositResponse][CardAndDepositResponse]]     
+*** =GET= account/card
+    - input
+     - headers
+      - explicit
+        - [[card_id][card_id]]
+      - implicit
+        - [[uba_id][uba_id]]
+        - [[session_id][session_id]]
+     - parameters
+    - respone
+     [[CardResponse][CardResponse]]
+*** =GET= account/cards
+    - input
+     - headers
+      - implicit
+        - [[uba_id][uba_id]]
+        - [[session_id][session_id]]
+     - parameters
+    - respone
+    [[CardResponse][CardResponse]]
+*** =POST= account/card/add
+    - input
+     - headers
+      - implicit
+        - [[uba_id][uba_id]]
+        - [[session_id][session_id]]
+     - parameters
+    - respone
+     [[CardResponse][CardResponse]]
+*** =POST= account/card/update
+    - input
+     - headers
+      - implicit
+        - [[uba_id][uba_id]]
+        - [[session_id][session_id]]
+     - parameters
+      [[UpdateCardRequest][UpdateCardRequest]]
+    - respone
+     [[CardResponse][CardResponse]]
+*** =DELETE= account/card/delete
+    - input
+     - headers
+      - explicit
+        - [[payment_card_id][payment_card_id]]
+        - [[card_id][card_id]]
+      - implicit
+        - [[user_id][user_id]]
+        - [[device_id][device_id]]
+        - [[appVersion][appVersion]]
+        - [[platform][platform]]
+     - parameters
+    - respone
+    [[BaseStatusResponse][BaseStatusResponse]]
+*** =POST= account/card/suspend
+    - input
+     - headers
+      - implicit
+        - [[session_id][session_id]]
+        - [[user_id][user_id]]
+     - parameters
+      [[SuspendCardRequest][SuspendCardRequest]]
+    - respone
+     [[BaseStatusResponse][BaseStatusResponse]]
+*** =POST= account/card/changePin
+    - input
+     - headers
+      - explicit
+        - [[device_uid][device_uid]]
+      - implicit
+        - [[user_id][user_id]]
+        - [[session_id][session_id]]
+     - parameters
+      [[CardChangePinRequest][CardChangePinRequest]]
+    - respone
+     [[BaseStatusResponse][BaseStatusResponse]]
+*** =GET= account/deposits
+    - input
+     - headers
+      - implicit
+        - [[session_id][session_id]]
+        - [[uba_id][uba_id]]
+     - parameters
+    - respone
+     [[DepositResponse][DepositResponse]]
+*** =POST= account/deposits/favorite
+    - input
+     - headers
+      - implicit
+        - [[uba_id][uba_id]]
+     - parameters
+      [[FavoriteDepositRequest][FavoriteDepositRequest]]
+    - respone
+     [[DepositResponse][DepositResponse]]
+*** =GET= account/deposits/categorize
+    - input
+     - headers
+      - implicit
+        - [[uba_id][uba_id]]
+        - [[session_id][session_id]]
+     - parameters
+    - respone
+     [[CategorizeDepositsResponse][CategorizeDepositsResponse]]
+*** =GET= accountStatement/generalReport
+    - input
+     - headers
+      - explicit
+        - [[index][index]]
+        - [[deposit_ids][deposit_ids]]
+     - parameters
+    - respone
+     [[AccountStatementReportResponse][AccountStatementReportResponse]]
+*** =POST= bill/pay
+    - input
+     - headers
+      - explicit
+        - [[billId][billId]]
+        - [[payId][payId]]
+      - implicit
+        - [[session_id][session_id]]
+     - parameters
+      [[PayBillRequest][PayBillRequest]]
+    - respone
+     [[PaidBillResponse][PaidBillResponse]]
+*** =GET= bill/info
+    - input
+     - headers
+      - explicit
+        - [[billId][billId]]
+        - [[payId][payId]]
+      - implicit
+        - [[session_id][session_id]]
+     - parameters
+    - respone
+     [[BillInfoResponse][BillInfoResponse]]
+*** TODO =POST= cardlessPayment/payment
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= cartable/details
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= cartable/action
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= cartable/count
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= cartable/list
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= charge/deposit/pay
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= charge/mostReferredDestinations
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =DELETE= charge/deleteMostReferredDestinations
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= cheque/book
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= cheque/bookSheet
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= cheque/block
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= cheque/availableBookSheets
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= cheque/transfer
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= cheque/sheet
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= config/changeLog
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= config/ || /config
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= iban/deposits
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= iban/card
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= iban/card/categorize
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= iban/deposit
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= internet/mostReferredDestinations
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =DELETE= internet/deleteMostReferredDestinations
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= ios/downloadlink
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= loan/
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= loan/detail
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= merchant/transactions
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= merchant/terminals
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= merchant/summary
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= paya/cancel/transfer
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= paya/resume/transfer
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= paya/suspend/transfer
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= paya/cancel/transaction
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= paya/resume/transaction
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= paya/suspend/transaction
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= register/phone
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= register/activation
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= register/user
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO [#A] =GET= server/health
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= transaction/detail
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= transaction/card
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= transaction/deposit
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= transaction/category
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= transaction/payment
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= transaction/edit
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= transfer/destination/card
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =DELETE= transfer/destination/mostReferred
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= transfer/destination/deposit
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= transfer/recent/card
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO [#A] =POST= transfer/
+    - input
+     - headers
+     - parameters
+       [[TransferRequest][TransferRequest]]
+    - respone
+      [[TransferResponse][TransferResonse]]
+*** TODO =GET= transfer/recent/iban
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= transfer/recent/deposit
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= transfer/destination/iban
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= transfer/history
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= transfer/availableBanks
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= user/ || /user
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= user/update
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= user/device/disconnect
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= user/logout
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= user/requestEmailVerification
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =GET= user/getCred
+    - input
+     - headers
+     - parameters
+    - respone
+*** [#A] =POST= user/login
+    - input
+     - headers
+      - explicit
+        - [[device_uid][device_uid]]
+        - [[appVersion][appVersion]]
+        - [[platform][platform]]
+      - implicit
+        - x-forwarded-for
+     - parameters
+      [[LoginRequest][LoginRequest]]
+    - respone
+     [[LoginResponse][LoginResponse]]
+*** TODO =POST= user/changePassword
+    - input
+     - headers
+     - parameters
+    - respone
+*** TODO =POST= user/changeUsername
+    - input
+     - headers
+    - parameters
+    - respone
+** Models
+*** <<DepositType>> DepositTdeype
+    - fields
+     - code
+      - description : deposit type code
+      - type : String
+     - title
+      - description : deposit type title UTF8 encoding
+      - type : String
+     - +number+
+      - description : useless parameter
+      - type : String
+*** <<Deposit>> Deposit
+    This represents an Deposit Account in a bank
+    - package : package run.wing.mobillet.model.rest.account.deposit
+    - yaghut documentation : [[http://77.104.67.20:8080/api/yaghut982/samanIB/doc/xml_ns2_depositBean.html][link]]
+    - fields
+      - id
+        - description : 
+        - type :  Long
+      - number
+        - description : Deposit account number
+        - type :  String
+      - firstname
+        - description : first name of desposit account owner
+        - type :  String
+      - lastname
+        - description : last name of deposit account owner
+        - type :  String
+      - fullName
+        - description : full name of deposit account owner
+        - type :  String
+      - +owner+
+        - description : useless parameter
+        - type :  String
+      - signaturet
+        - description : describe type of signature of the account types are DEPOSIT_OWNER,OWNER_OF_DEPOSIT_AND_SIGNATURE,SIGNATURE_OWNER,BROKER [[http://77.104.67.20:8080/api/yaghut990/samanIB/doc/xml_ns2_signatureOwnerStatus.html][yaghut documentation]]
+        - type :  String
+      - blockAmount
+        - description : minimum balance for the deposit account which can not be withdrawn with out canceling it.
+        - type :  BigDecimal
+      - bankGroupType
+        - type :  String
+        - description : [[http://77.104.67.20:8080/api/yaghut990/samanIB/doc/xml_ns2_depositGroupTypeWS.html][yaghut]]
+      - personality
+        - description : [[http://77.104.67.20:8080/api/yaghut990/samanIB/doc/xml_ns2_personalityType.html][link]]
+        withdraw from or something like that.
+          - type :  String
+      - withdrawOption
+        - description : methods of withdrawal accepted by the owener
+        - type :  String
+      - createdDate
+        - description : 
+        - type :  Timestamp
+      - expireDate
+        - description :
+        - type :  Timestamp
+      - currency
+        - description : Currency type of the Deposit account
+        - type :  String
+      - balance
+        - description : current balance of the Deposit Account
+        - type :  BigDecimal
+      - eBankingConnected
+        - description : is connected to ebanking
+        - type :  Boolean
+      - TODO depositStatus
+        - description : i persume it related to being blocked or not or other types of status
+        - type :  String
+      - depositStatusCause
+        - description : the reason the deposit account is in the current status
+        - type :  String
+      - title
+        - description : title of Deposit Account
+        - type :  String
+      - TODO isPrivate
+       what is this?
+        - type :  Boolean
+      - bank
+        - type :  [[BankInfo][BankInfo]]
+      - iban
+        - description : International Bank Account Number
+        - type :  String
+      - TODO rawNumber
+       no idae
+        - type :  String
+      - TODO isFavorite
+       mark an deposit account as favorit
+        - type :  Boolean
+      - depositType
+        - type :  [[DepositType][DepositType]]
+      - inaugurationDate
+        - description : oppening date for account
+        - type :  Date
+      - transferable
+        - description : is it possible to transfer funds using our backedn
+        - type :  Boolean
+      - +paymentable+
+        - description : useless parameter
+        - type :  Boolean
+      - hasChequeBook
+        - description : has a chequeBook connected to Deposit Account
+        - type :  Boolean
+      - restriction
+        - description : restriction on accont
+        - type :  [[Restriction][Restriction]]
+*** <<BankInfo>> BankInfo
+    - yaghut : [[http://77.104.67.20:8080/api/yaghut982/samanIB/doc/xml_ns2_bankInfoBean.html][link]]
+    - fields
+      - name
+        - description :  name of the bank
+        - type : String
+      - logoUrl
+        - description : url of bank logo
+        - type : String
+      - largeLogoUrl
+        - description : url of bank large logo
+        - type : String
+*** <<Restriction>> Restriction
+    - fields
+     - TODO min
+      - description : minimum amount that can be transfered
+      - type : long
+     - max
+      - description :  maximum amount that can be transfered
+      - type : long
+     - dailyRemaining
+      - description : daily transfer  limit
+      - type : long
+     -  monthlyRemaining
+       - description : monthly transfer limit 
+       - type : long
+     - message
+      - description : explanation about the restriction
+      - type : String
+*** <<Card>> Card
+    - yaghut : [[http://77.104.67.20:8080/api/yaghut982/samanIB/doc/xml_ns2_cardBean.html][link]]
+    - package : package run.wing.mobillet.model.rest.account.card
+    - fields
+      - id
+        - description :
+        - type :  Long
+      - pan
+        - description : 16 or 20 digit card number printed on the physical card
+        - type :  String
+      - TODO paymentId 
+        - description :
+        - type :  String
+      - TODO securePan
+        - description : the obsecured pan by six characters in middle
+        - type :  String
+      - firstname
+        - description : first name of card owner
+        - type :  String
+      - lastname
+        - description : last name of card owner
+        - type :  String
+      - fullName
+        - description : full name of card owner
+        - type :  String
+      - issueDate
+        - description : issue date for card
+        - type :  Timestamp
+      - expireDate
+        - description : expriation date of card
+        - type :  String
+      - currency
+        - description : currency type of card
+        - type :  String
+      - TODO:balance
+        - description : 
+        - type :  BigDecimal
+      - cardType
+        - description : describe card type DEBIT,CREDIT,GIFT,CORPORATION,LOAN,DEPOSIT    [[http://77.104.67.20:8080/api/yaghut990/samanIB/doc/xml_ns2_cardTypeResponse.html][cardTypes yaghut]]
+        - type :  String
+      - cardStatus
+        - description : discribe the status of card values are : OK HOT WARM BLOCKED CAPTURED EXPIRED INACTIVE SETTLEMENT CLOSED  [[http://77.104.67.20:8080/api/yaghut990/samanIB/doc/xml_ns2_cardStatus.html][card status]]
+        - type :  String
+      - cardStatusCause
+        - description : reason for card status values are OK,STOKEN_CARD,ARBITRATION_FIAT,REPLICATED_CARD,EXPIRED_CARD,PIN_TRYIES_EXCCEDED,REPLICATED_CARD_CAPTURED,OTHER
+        - type :  String
+      - TODO isPinSaved
+        - description :
+        - type :  Boolean
+      - TODO isPrivate
+        - description :
+        - type :  Boolean
+      - TODO eBankingConnected
+        - description : can be used online
+        - type :  Boolean
+      - TODO canConnect
+        - description : can connet to what?
+        - type :  Boolean
+      - TODO needUpdate
+        - description : a card need update? means it's about to expire?
+        - type :  Boolean
+      - bank
+        - description : name and logo for bank that issued the card
+        - type : [[BankInfo][BankInfo]]
+      - transferable
+        - description : do we have money transfer options on this card
+        - type :  Boolean
+      - +paymentable+
+        - description : useless parameter
+        - type :  Boolean
+      - depositIban
+        - description : International Bank Account Number
+        - type :  String
+      - restriction
+        - description :
+        - type :  [[Restriction][Restriction]]
+*** <<CardAndDepositResponse>> CardAndDepositResponse
+    - fields
+     - deposits
+        - type : [[Deposit][Deposit]]
+     - cards
+        - type : [[Card][Card]]
+     - TODO showSelectedDepositPage
+        - description :  no idae what that is
+        - type: boolean
+*** <<CardResponse>> CardResponse
+    this class return list of cards
+    - package : package run.wing.mobillet.model.rest.account.card
+    - yaghut : [[http://77.104.67.20:8080/api/yaghut990/samanIB/doc/xml_ns2_cardResponseBean.html][link]]
+    - fields
+     why do we have a single card and a list of cards?
+      - card
+        - description :
+        - type : [[Card][Card]]
+      - cards
+        - description :
+        - type : List<[[Card][Card]]>
+*** <<BaseStatusResponse>> BaseStatusResponse
+    - fields
+     - status
+       - type : [[Status][Status]]
+*** <<Status>> Status
+    - fields
+     - code
+       - description : 
+       - type : Integer
+     - name
+       - description :
+       - type : String
+     - TODO message
+       - description :
+       - type : String
+     - TODO exceptionMesage
+       - description :
+       - type : String
+*** TODO <<UpdateCardRequest>> UpdateCardRequest
+*** TODO <<SuspendCardRequest>> SuspendCardRequest
+*** TODO <<CardChangePinRequest>> CardChangePinRequest
+*** TODO <<DepositResponse>> DepositResponse
+*** TODO <<FavoriteDepositRequest>> FavoriteDepositRequest
+*** TODO <<CategorizeDepositsResponse>> CategorizeDepositsResponse
+*** TODO <<PieReport>> PieReport
+*** TODO <<AccountStatementReportResponse>> AccountStatementReportResponse
+*** TODO <<BillInfoResponse>> BillInfoResponse
+*** TODO <<PaidBillResponse>> PaidBillResponse
+*** TODO <<PayBillRequest>> PayBillRequest
+*** <<BranchDetailResponse>> BranchDetailResponse
+    a response containing a list of branch detail
+**** fields
+***** branchDetails
+      - type : list<[[BranchDetail][BranchDetail]]>
+*** <<BranchLocationVersionResponse>> BranchLocationVersionResponse
+    return version of BranchLoaction information
+**** fields
+***** version
+      - type : Long
+*** <<BranchDetail>> BranchDetail
+    - Yaghut : [[http://77.104.67.20:8080/api/yaghut990/samanIB/doc/xml_ns2_branchInfoBean.html][link]]
+    - fields
+      - branchCode
+        - description :
+        - type : Long
+      - latitude
+        - description : gps coordinate latitude
+        - type : Double
+      - longitude
+        - description : gps coordinate longitude
+        - type : Double
+      - z
+        - description : gps coordinate elevation from sea level
+        - type : Double
+      - workingHours
+        - description : working hour of branch
+        - type : String
+      - atmCount
+        - description : number of atms available in the branch
+        - type : Integer
+      - city
+        - description : location city of branch
+        - type : String
+      - branchName
+        - description : branch name
+        - type : String
+      - phone
+        - description : branch phone number/numbers
+        - type : String
+      - fax
+        - description : branch fax number/numbers
+        - type : String
+      - address
+        - description : branch address
+        - type : String
+      - zipcode
+        - description : branch zipcode 
+        - type : String
+      - exchange
+        - description : branch handles currency exchange
+        - type : Boolean
+      - insurance
+        - description : branch handles insurance policies
+        - type : Boolean
+*** <<LoginType>> LoginType
+    - STATIC
+      login using username and password. 
+    - OTP1
+      one time password used to login
+*** <<Device>> Device
+**** fields
+***** brand
+      device brand like Samsung LG Apple
+      - type : String
+***** brandModel
+      device model like  MT3V2, MT2N2, MT382, MT4J2 
+      - type : String
+***** os
+      device operating system like IOS,Android
+      - type : String
+***** osVersion
+      verson of device operating system
+      - type : String
+***** appVersion
+      version of mobillet app the user is using
+      - type : String
+***** ip
+      ip address of mobillet app
+      - type : String
+***** accessHash                                                  :notInLogs:
+      - type : String
+*** <<Captcha>> Captcha
+**** fields
+***** captchaId
+      - type : String
+***** userEnteredCaptchaCode
+      - type : String
+*** <<LoginRequest>> LoginRequest
+**** fields
+***** ubaUsername
+      user bank access user name
+      - type : String
+***** ubaPassword                                                 :notInLogs:
+      - type : String
+***** loginType
+      login method by the user
+      - type : [[LoginType][LoginType]]
+***** token                                                       :notInLogs:
+      - type : String
+***** deviceInfo
+      type of device used by the user
+      - type : [[Device][Device]]
+***** captcha
+      - type : [[Captcha][Captcha]]
+***** session                                                     :notInLogs:
+ :       - type : [[Session][Session]]
+*** <<UserMini>> UserMini
+**** fields
+***** id
+      - type : Long
+***** tempId
+      - type : Long
+***** firstname
+      user first name
+      - type : String
+***** lastname
+      user last name
+      - type : String
+***** email
+      user email
+      - type : String
+***** fullName
+      user full name
+      - type : String
+***** imageUrl
+      - type : String 
+***** mobileNumber
+      user mobile number
+      - type : String
+***** TODO hasBankingAccess                                            :talk:
+      - type : boolean
+***** TODO isBankServiceAvailable                                      :talk:
+      -type : boolean
+***** TODO isMostReferred                                              :talk:
+      - type : boolean
+***** cif
+      customer id
+      - type : String 
+*** <<LoginResponse>> LoginResponse
+**** fields
+***** userMini
+      - type : [[UserMini][UserMini]]
+***** authentication                                              :notInLogs:
+      - type : Authentication
+*** <<TransferRequest>> TransferRequest
+    - fields
+      - sourceAccount
+        - description : account that transfer starts from
+        - type : [[AccountDetail][AccountDetail]]
+      - destinationAccount
+        - description : account that transfer ends in
+        - type : [[AccountDetail][AccountDetail]]
+      - amount
+        - description : amount of transfer
+        - type : BigDecimal
+      - isMostReferredDestination
+        - description : 
+        - type : boolean
+      - currency
+        - description : type of currency that is being transfered
+        - type : [[CurrencyType][CurrencyType]]
+      - pin2
+        - description : card pin 2, this field is removed before logging
+        - type : String
+      - cvv2
+        - description : Card Verification Value 2, this field is removed before logging
+        - type : String
+      - expireDate
+        - description : expiration date of card
+        - type : String
+      - trackerId
+        - description : 
+        - type : String
+      - userDescription
+        - description :
+        - type : String
+*** <<TransferType>> TransferType 
+    - enum fields
+      - CARD(0)
+      - DEPOSIT(1)
+      - IBAN(2)
+      - PAYA(3)
+      - SATNA(4)
+      - Unknown(5)
+      - CHARGE(6)
+      - INTERNET(7)
+      - BILL(8)
+
+** <<AccountDetail>> AccountDetail
+   - fields
+     - typeId
+       - description : 
+       - type : Integer
+     - type
+       - description :
+       - type : String
+   - transferType
+     - description : 
+     - type : [[TransferType][TransferType]]
+   - TODO number
+     -  description :
+     - type : String
+   - fullName
+     - description:
+     - type : String
+   - bank
+     - description : 
+     - type :  [[BankInfo][BankInfo]]
+*** <<CurrencyType>> CurrencyType
+    - enum
+      - IRR
+*** <<TransferResponse>> TransferResponse
+    - fields
+      - tramsferDetail
+        - type : [[TransferDetail][TransferDetail]]
+*** TODO <<TransferDetail>> TransferDetail
+    - yaghut : [[http://77.104.67.20:8080/api/yaghut982/samanIB/doc/xml_ns2_transferDetailBean.html][link]]
+    - fields
+      - id
+        - description :
+        - type : Long
+      - amount
+        - description :
+        - type :
+      - currency
+        - description :
+        - type :
+      - paidDate
+    protected BigDecimal amount;
+    protected String currency= "﷼";
+    protected Timestamp paidDate;
+    protected String trackingCode;
+    protected UserMini destinationUser;
+    protected AccountDetail sourceAccount;
+    protected AccountDetail destinationAccount;
+    protected BankInfo sourceBank;
+    protected BankInfo destinationBank;
+
+** TODO Util Models [0/1]
+*** TODO <<MobilletRequestHeader>> MobilletRequestHeader
+**** fields
+***** <<user_id>> user_id
+= "userId";
+***** <<session_id>> session_id
+= "session_id";
+***** <<tracker_id>> tracker_id
+= "tracker_id";
+***** <<uba_id>> uba_id
+= "ubaId";
+***** <<access_hash>> access_hash
+= "accessHash";
+***** <<device_id>> device_id
+= "deviceId";
+***** <<authorization>> authorization
+= "Authorization";
+***** <<signature>> signature
+= "signature";
+***** <<offset>> offset
+= "offset";
+***** <<length>> length
+= "length";
+***** <<card_id>> card_id
+= "cardId";
+***** <<category>> category
+= "category";
+***** <<index>> index
+= "index";
+***** <<deposit_id>> deposit_id
+= "depositId";
+***** <<deposit_ids>> deposit_ids
+= "depositIds";
+***** <<billId>> billId
+= "billId";
+***** <<payId>> payId
+= "payId";
+***** <<device_uid>> device_uid
+= "deviceUid";
+***** <<has_detail>> has_detail
+= "hasDetail";
+***** <<cheque_book_number>> cheque_book_number
+= "chequeBookNumber";
+***** <<deposit_number>> deposit_number
+= "depositNumber";
+***** <<blocked_cheque_reason>> blocked_cheque_reason
+= "blockedChequeReason";
+***** <<cheque_numbers>> cheque_numbers
+= "chequeNumbers";
+***** <<branch_code>> branch_code
+= "branchCode";
+***** <<devisee_bank_code>> devisee_bank_code
+= "deviseeBankCode";
+***** <<from_balance>> from_balance
+= "fromBalance";
+***** <<from_number>> from_number
+= "fromNumber";
+***** <<include_status>> include_status
+= "includeStatus";
+***** <<include_type>> include_type
+= "includeType";
+***** <<order_method>> order_method
+= "orderMethod";
+***** <<order_type>> order_type
+= "orderType";
+***** <<to_balance>> to_balance
+= "toBalance";
+***** <<from_Due_date>> from_Due_date
+= "fromDueDate";
+***** <<to_due_date>> to_due_date
+= "toDueDate";
+***** <<from_pass_date>> from_pass_date
+= "fromPassDate";
+***** <<to_pass_date>> to_pass_date
+= "toPassDate";
+***** <<from_register_date>> from_register_date
+= "fromRegisterDate";
+***** <<to_register_date>> to_register_date
+= "toRegisterDate";
+***** <<loan_number>> loan_number
+= "loanNumber";
+***** <<platform>> platform
+= "platform";
+***** <<appVersion>> appVersion
+= "appVersion";
+***** <<transaction_id>> transaction_id
+= "transactionId";
+***** <<transaction_type>> transaction_type
+= "transactionType";
+***** <<transaction_type_id>> transaction_type_id
+= "transactionTypeId";
+***** <<merchant_id>> merchant_id
+= "merchantId";
+***** <<id>> id
+= "id";
+***** <<amount>> amount
+= "amount";
+***** <<redirect_url>> redirect_url
+= "redirectUrl";
+***** <<uba_username>> uba_username
+= "ubaUsername";
+***** <<payment_transaction_typ>> payment_transaction_typ
+e="paymentTransactionType";
+***** <<iban_numbe>> iban_numbe
+r="ibanNumber";
+***** <<paya_reference_id>> paya_reference_id
+= "payaReferenceId";
+***** <<transfer_type>> transfer_type
+= "transferType";
+***** <<payment_card_id>> payment_card_id
+= "paymentCardId";
+***** <<ec_public_key>> ec_public_key
+= "ecPublicKey";
+***** <<terminal_id>> terminal_id
+= "terminalId";
+***** <<from_date>> from_date
+= "fromDate";
+***** <<to_date>> to_date
+= "toDate";
+***** <<public_key>> public_key
+= "publicKey";

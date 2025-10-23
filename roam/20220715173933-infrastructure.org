@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       BD5A2816-A5F1-4CBD-A3E7-AF4A92961575
+:END:
+#+title: infrastructure
+* infrastructure
+** infrastructure as a service
+** owning your own infrastrucure
+* performance scaling 
+** vertical scalling 
+** horizental scalling
+* providers
+[[https://www.youtube.com/watch?v=kK-iR6g-V1g][some youtube video comparing things against aws]]

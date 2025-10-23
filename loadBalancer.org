@@ -1,0 +1,15 @@
+* algorithm for load balancind
+** sources
+   Tyler_McMullen_Load_Balancing_is_Impossible
+** random algorithm
+** power of two choices
+** join idle queue
+** articles
+*** Power of two choices in randomized load balancing 
+*** Join-Idle-Queue a novel load balancing algorithm for dynamically scalable web services
+*** cutting tail latency in cload data stores via adaptive replica selection
+*** Interpreting stale load information
+** comparision
+   [[file:./ComparingDifferentAlgorithmForLoadBalancingAndTheirLatency.png][comparision image]]
+* load balancer
+** F5

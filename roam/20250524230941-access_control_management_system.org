@@ -1,0 +1,271 @@
+:PROPERTIES:
+:ID:       8bc86c53-d0a8-4884-878f-96d021a353b7
+:END:
+#+title: access control management system
+* OpenFGA
+
+https://openfga.dev/
+* Casbin
+* Open Policy Agent
+https://www.openpolicyagent.org/
+* Permit.io
+* Keycloak
+* gemeni conversation
+1. Open Policy Agent (OPA)
+Best for: A general-purpose, high-performance policy engine that can be used across your stack.
+
+OPA is an open-source, general-purpose policy engine that has become an industry standard for unified policy enforcement across various technologies and systems. It's a graduated project of the Cloud Native Computing Foundation (CNCF), which speaks to its maturity and community support.
+
+
+Key Features:
+
+Decoupled Policy: OPA decouples policy decisions from your application logic. Your application queries OPA for an access decision (e.g., "Can user X do Y on resource Z?") and OPA returns a simple "allow" or "deny."
+
+Rego Policy Language: Policies are written in a declarative language called Rego. This makes policies easy to read and write.
+Variety of Integrations: OPA can be integrated with a wide range of systems, including microservices, Kubernetes, CI/CD pipelines, and API gateways.
+Excellent Performance: OPA is designed for high performance and low latency.
+Tooling and Ecosystem: It has a rich ecosystem of tools for testing, debugging, and managing policies.
+How to integrate: You typically run OPA as a sidecar container or a host-level daemon. Your application makes API calls to OPA for policy decisions.
+
+
+2. Casbin
+Best for: A lightweight and versatile authorization library that supports multiple access control models.
+
+Casbin is a powerful and flexible open-source authorization library that supports various access control models, including ABAC, RBAC (Role-Based Access Control), and ACL (Access Control Lists).
+
+Key Features:
+
+Multiple Models: While it's great for ABAC, you can also use it for simpler models and even mix and match them.
+Language Support: Casbin has libraries for virtually every popular programming language, including Go, Java, Python, Node.js, .NET, and more. This makes it easy to integrate directly into your application.
+Pluggable Architecture: You can use various storage backends (called "adapters") to store your policies, such as databases (PostgreSQL, MySQL), CSV files, or even NoSQL databases.
+Policy Enforcement: Casbin provides a simple enforce() function that you call from your code to check for permissions.
+How to integrate: You typically use the Casbin library for your specific programming language directly in your application code.
+
+3. Permit.io
+Best for: A comprehensive authorization-as-a-service platform with a generous free tier, built on top of OPA and other open-source components.
+
+While Permit.io offers a commercial product, its core is built around open-source components, and it provides a very generous free tier that is suitable for many projects. It aims to provide a full-stack authorization solution that is easy to use for developers.
+
+Key Features:
+
+User-Friendly Interface: Permit.io provides a web-based interface for managing policies, users, and roles, which can be much easier than writing raw Rego or managing policies in a database.
+Policy Editor: It offers a low-code/no-code policy editor, which simplifies the process of creating and managing ABAC policies.
+Auto-generated SDKs: It provides SDKs for various programming languages to make integration straightforward.
+Built on OPA: Under the hood, Permit.io uses OPA for policy evaluation, so you get the performance and reliability of OPA without having to manage it yourself.
+How to integrate: You integrate the Permit.io SDK into your application. The SDK communicates with the Permit.io backend to get access control decisions.
+
+Comparison at a Glance
+Feature	Open Policy Agent (OPA)	Casbin	Permit.io (Free Tier)
+Primary Use Case	General-purpose policy engine	Authorization library for applications	Full-stack authorization-as-a-service
+Policy Language	Rego	Configuration-based models	Low-code/no-code UI and Rego
+Integration	API calls to OPA sidecar/daemon	Language-specific library in your app	SDK calls to Permit.io backend
+Ease of Use	Steeper learning curve (Rego)	Easier to get started	Very easy to get started
+Flexibility	Extremely flexible and powerful	Very flexible with multiple models	Flexible, with a focus on ease of use
+Community	Large and active (CNCF)	Strong and active	Growing community
+
+Export to Sheets
+Which One Should You Choose?
+For a powerful, cloud-native solution and you're comfortable with a steeper learning curve: Open Policy Agent (OPA) is an excellent choice. It's the industry standard for a reason.
+For a straightforward, language-native library that you want to embed directly in your application: Casbin is a fantastic option, especially if you want the flexibility to switch between different access control models.
+For the fastest and easiest way to get started with a robust ABAC solution, with a user-friendly interface for managing policies: Permit.io is a great choice, especially for teams that want to offload the complexity of managing the authorization infrastructure.
+Before making a final decision, I recommend looking at the documentation and getting-started guides for each of these options to see which one best fits your team's skills and your project's requirements.
+Integrating a robust Attribute-Based Access Control (ABAC) system into your software can be a complex task. Fortunately, there are several powerful open-source implementations that can save you significant development time and provide a solid foundation for your authorization needs.
+
+Here are some of the most popular and well-regarded open-source ABAC implementations you can use:
+
+Policy Engines
+These are general-purpose authorization engines that can be adapted for ABAC. They decouple your authorization logic from your application code.
+
+Open Policy Agent (OPA)
+OPA is a very popular and powerful open-source, general-purpose policy engine. It's a graduated project of the Cloud Native Computing Foundation (CNCF), which speaks to its maturity and community support.
+
+
+How it works: You write policies in a high-level declarative language called Rego. Your application queries the OPA engine with a JSON object containing the attributes of the user, resource, action, and environment. OPA evaluates the policies and returns a decision.
+Key Features:
+Decoupled: Keep your authorization logic separate from your application code.
+Unified Tooling: Use the same engine and language for a variety of services and protocols (e.g., microservices, Kubernetes, CI/CD pipelines).
+Expressive Policy Language (Rego): Capable of handling complex, attribute-based rules.
+Excellent Performance: Designed for high-performance, low-latency decisions.
+Extensive Integrations: A large ecosystem of integrations with various tools and platforms.
+Best for: Organizations that need a flexible and powerful policy engine to enforce authorization across a diverse set of systems and applications.
+Casbin
+Casbin is an authorization library that supports multiple access control models, including ACL, RBAC, and ABAC. It's available in many programming languages.
+
+How it works: You define your access control model in a configuration file and your policies in a policy file. Casbin provides an API to enforce these policies in your application.
+Key Features:
+Multi-language Support: Libraries available for Go, Java, Python, Node.js, and more.
+Flexible Model: You can define a custom access control model to fit your specific needs.
+Policy Storage Adapters: Supports storing policies in various databases and file formats.
+Lightweight: Can be embedded directly into your application.
+Best for: Developers who want a flexible, in-process authorization library with support for various access control models.
+OpenFGA (by Okta)
+Inspired by Google's Zanzibar, OpenFGA is a fine-grained authorization system that excels at relationship-based access control (ReBAC) but can also be used for ABAC.
+
+How it works: You create a clear and readable authorization model. Your application then writes relationship tuples (e.g., "user 'anne' is a 'writer' on document 'report'") and checks for permissions via an API.
+Key Features:
+Scalability and Performance: Designed for high-scale, low-latency environments.
+Relationship-Based: Particularly strong at modeling complex relationships between users and objects.
+Cloud-Native: Built to be deployed in modern, distributed systems.
+Community and Backing: Backed by Okta, a major player in the identity and access management space.
+Best for: Applications that require fine-grained access control based on complex relationships, especially in a microservices architecture.
+Identity and Access Management (IAM) Platforms with ABAC capabilities
+These are more comprehensive solutions that often include user management, authentication, and authorization features.
+
+Keycloak
+Keycloak is a very popular open-source Identity and Access Management (IAM) solution that provides extensive features for both authentication and authorization.
+
+How it works: Keycloak has a rich administration console and REST API for managing users, roles, and permissions. It can act as a centralized authorization server for your applications.
+Key Features:
+Fine-Grained Authorization Services: Allows you to define policies based on user attributes, roles, and context.
+User Federation: Can connect to existing user directories like LDAP or Active Directory.
+Single Sign-On (SSO): Provides SSO capabilities for your applications.
+Standards-Based: Supports standards like OpenID Connect, OAuth 2.0, and SAML.
+Best for: Organizations that need a full-featured, self-hosted IAM solution with strong ABAC capabilities.
+How to Choose
+When selecting an open-source ABAC implementation, consider the following factors:
+
+Your existing technology stack: Choose a solution that integrates well with your programming languages and frameworks.
+The complexity of your authorization rules: For very complex and dynamic policies, a powerful engine like OPA might be the best fit.
+Your operational model: Do you want a standalone service (like OPA or OpenFGA) or an embedded library (like Casbin)?
+The need for a full IAM solution: If you also need user management, SSO, and other identity features, a comprehensive platform like Keycloak could be a good choice.
+Community and documentation: A strong community and good documentation will make integration and troubleshooting much easier.
+By carefully evaluating these options, you can select an open-source ABAC implementation that will provide a secure, flexible, and scalable foundation for your software's access control needs.
+** keycloak as ABAC
+Yes, absolutely. Keycloak is a powerful open-source Identity and Access Management (IAM) solution that can certainly be used as an Attribute-Based Access Control (ABAC) engine. While it's widely known for its robust Role-Based Access Control (RBAC) capabilities, its fine-grained authorization services are specifically designed to support ABAC and other flexible policy models.
+
+Here's a breakdown of how Keycloak functions as an ABAC engine and the key components you would use:
+
+### Keycloak's Authorization Services: The Core of its ABAC Capabilities
+
+The heart of Keycloak's ABAC functionality lies within its **Authorization Services**. When you enable authorization for a client in Keycloak, you unlock a comprehensive suite of tools to create detailed, attribute-based policies.
+
+Here are the essential components you'll work with in the Keycloak admin console:
+
+#### 1. **Resources**
+These are the objects in your system that you want to protect. This could be anything from a specific API endpoint (e.g., `/reports/{id}`) to a UI component or a file. You can also associate attributes with these resources (e.g., a "sensitivity" attribute with a value of "confidential").
+
+#### 2. **Scopes**
+Scopes represent the actions that can be performed on a resource. Common examples include "view," "edit," "delete," or "approve."
+
+#### 3. **Policies**
+This is where the core ABAC logic is defined. Keycloak offers a variety of policy types that allow you to create rich, attribute-based rules:
+
+ * **Attribute-Based Policy:** This is the most direct way to implement ABAC. You can create rules based on user attributes (e.g., `department`, `jobTitle`), resource attributes, or even attributes of the request itself.
+ * **User-Based Policy:** Grants access to specific users.
+ * **Role-Based Policy:** The classic RBAC approach, where you can grant access based on a user's role. You can also specify that a certain role is required for a policy to pass.
+ * **Time-Based Policy:** Restricts access to certain times of the day or specific dates. This is a form of environmental attribute in ABAC.
+ * **JavaScript-Based Policy:** For highly complex or dynamic rules, you can write custom policies in JavaScript. This gives you immense flexibility to access user attributes, roles, and contextual information to make an authorization decision.
+ * **Aggregated Policy:** This allows you to combine multiple policies to create more complex rules. For example, you could require that both a role-based policy AND an attribute-based policy pass for access to be granted.
+ * **Group-Based Policy:** Grants access to users who are members of a specific group.
+
+#### 4. **Permissions**
+Permissions tie everything together. A permission associates one or more resources and scopes with a set of policies. For instance, you could create a permission that states: "A user is granted the 'view' scope on the 'Financial Reports' resource if the 'Finance Department Policy' is satisfied."
+
+### The ABAC Workflow with Keycloak
+
+Here's a typical flow of how an ABAC decision is made using Keycloak:
+
+1.  **A user attempts to access a protected resource** in your application.
+2.  Your application, acting as a **Policy Enforcement Point (PEP)**, intercepts this request.
+3.  The application sends an authorization request to the Keycloak server, which acts as the **Policy Decision Point (PDP)**. This request includes information about the user (typically via an access token), the resource being accessed, and the action (scope) being attempted.
+4to the Keycloak server.
+5.  Keycloak evaluates the policies associated with the requested permission. It will look at the user's attributes, their roles, the resource's attributes, and any other contextual information defined in the policies.
+6.  **Keycloak returns a decision** (grant or deny) to your application.
+7.  Your application then **enforces the decision**, either allowing the user to proceed or returning an access denied error.
+
+### When to Use Keycloak as an ABAC Engine
+
+Keycloak is an excellent choice for an ABAC engine if:
+
+ * You need a comprehensive, self-hosted IAM solution that includes user management, authentication, and authorization.
+ * Your authorization rules are primarily based on user attributes, roles, groups, and time-based constraints.
+ * You are building applications and services within a Java-based ecosystem (though Keycloak works well with many other languages).
+ * You want a graphical user interface to manage your authorization policies.
+
+In summary, Keycloak's authorization services provide a rich and flexible framework for implementing Attribute-Based Access Control, allowing you to move beyond simple role-based permissions and build more dynamic and secure applications.
+* QC presentation
+** attributes
+*** Holding
+*** Company
+*** Workstation
+*** Role
+*** Department
+
+
+
+model
+    schema 1.1
+  type company
+    relations
+      define workshop : [workshop]
+      define workstation: [workstation]
+      define machinary : [machinary]
+      define tool : [tool]
+      define provider : [provider]
+      define product : [product]
+      define user : [user]
+      define document:[document]
+
+  
+  type holding
+    relations
+      define companie : [company]
+      define provider : [provider]
+      define product : [product]
+      define user : [user]
+      define document:[document]
+
+      
+      
+  type workshop
+    relations
+      define workstation: [workstation]
+      define user : [user]
+      define document:[document]
+      define supervisor : [user]
+  
+  type workstation
+    relations
+        define user : [user]
+        define document:[document]
+  
+  
+  type machinary
+  
+  type tool
+  
+  type report
+  
+  
+  type product
+    relations
+      define provider: [provider]
+  
+  type provider
+    relations
+      define product:[product]
+      
+  type workgroup
+  
+  type shift
+  
+  type user
+  
+  type department
+    relations
+      define user: [user]
+      define role: [role]
+      define workflow : [workflow]
+  
+  type role
+  
+  
+  type workflow
+    relations
+      define document:[document] 
+  
+  type document
+
+  # We need a global Bank type where we define all customers and the transfer limit policy 
+  # assigned to them
+

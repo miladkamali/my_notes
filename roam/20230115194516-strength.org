@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       2F8F3545-4C5D-4A32-967F-410E7B8BA900
+:END:
+#+title: strength
+
+* types of strength
+https://www.crossfitinvictus.com/blog/4-types-strength/
+** explosive strength
+
+** relative strength
+** endurance strength
+** speed strength
+** agile strength
+** starting strength
+** absolute strength

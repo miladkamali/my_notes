@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       3F426271-072E-48D3-9C49-9084896176CA
+:END:
+#+title: collagen
+
+collagen is structual protein found in connective tissue. It's made of amino
+acids that are essential for hair nail and skin health
+
+collagen is what gives skin elasticity, firmness and bounce when we are young
+but as we age collagen production reduce significantly which lead to skin wrinkles 

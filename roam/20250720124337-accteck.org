@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       1B5CA70B-D27B-4E7F-BA5F-3D4408A08C4D
+:END:
+#+title: accteck
+ a portal for personel to login into,
+* integration                                                      :@bentoak:
+** vpn
+** remote machine
+** git
+*** TODO ask for user and address of git repo
+SCHEDULED: <2025-10-26 Sun>
+- State "TODO"       from              [2025-10-21 Tue 20:12]

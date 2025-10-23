@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       c54ee2b9-a683-41fa-8dc4-755b15ea0ecf
+:END:
+#+title: image processing
+* libraries
+** [[id:cfc47c0b-b21a-4233-b094-5b282b29ba27][imageio]]
+* compression algorithm
+** [[https://www.youtube.com/watch?v=_WjU5d26Cc4][ Intel Just Changed Computer Graphics Forever! ]]
+
+https://www.sdiolatz.info/publications/00ImageGS.html

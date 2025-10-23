@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       D4573FBC-694F-4AE8-8214-0586057D372C
+:END:
+#+title: divar project
+* things to be done
+** create one endpoint to receive all the data
+** create proper handling of user cancel flow
+** 
+** backend needs
+*** kavehnegar service in workflow
+*** 
+** front end

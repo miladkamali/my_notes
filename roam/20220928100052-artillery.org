@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       3B66E5F5-4A93-4862-9F85-3E7CAE011A1F
+:END:
+#+title: artillery
+[[https://www.youtube.com/watch?v=Kux_4KGuj1w][How artillery works - Featuring the M777 Howitzer]]

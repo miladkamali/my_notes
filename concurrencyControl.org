@@ -1,0 +1,35 @@
+* Concurrency
+  correctness is detemined by the domain
+  [[file:./images/parallel/ConcurrencyModels.png][event processing vs parallel object]]
+** concurrent object
+** event processing
+* Parallelism
+  is correct when results are equivalent to the serial execution
+  [[file:./images/parallel/taskParallelDataParallel.png][task parallel vs data parallel]]
+** task parallel
+*** promise and future
+** data parallel
+* constructs
+** promise
+   a single asynchronous produced value
+** supply
+   a stream of asynchronously produced values
+*** network packets
+*** websocket messages
+*** filesystem notification
+*** child process output
+*** ui events
+*** domain events
+*** timer ticks
+** await
+   suspend the current high level task until the thing that it needs become
+   awailable
+* locks
+  - infos
+    - http://www.agiledata.org/essays/concurrencyControl.html
+    - https://www.baeldung.com/jpa-optimistic-locking?__cf_chl_captcha_tk__=b527ab347f9b29d36f8660571ca3812d8358e5d0-1582806535-0-AZ3QKATyy17nrhBPso2hmy69gtYGrm4x-YuHuFuHex9MuLa9Urt2XAmKQrQ0Yag1qQN-NOdjOqqpuJV9AlzvFk_s3AMsdkxRFWPjYFO_rDTWLSDDmqArbAE23N9EjQzr7XzYlzyAzup6jyoLOr8M9pBZ8lMNsiIC591Nb3M1tOTIt590mKRlfuKUwB1Wuh3mV-TWZklinlt9hMRVdDQaJgtNKr5MIbpHmfi42EXuOFY43aECz4x_Z5O29N8dEjHdnx07g3nFwvQOmYzljG0bopQ892PsWc83e90Et1eTZ-Nbw8ZnQ2i9o71BZgY-cdPgTT0QEUg2kuSd_9C0zbUGrn5nmBb4EO4KdUVxwKk7VJNrz7M1P_2j7L4Ff5FOV3wGxm10YGrjmSobXMN9FVAP4FvP3qfJyt9yFajDkRSPvIDk-TlXhS06ZiQoVhgEvvb3Zgc4Y6ZTByby-mse1UB5sVFYHv10xRtAmOcMWlFTIj2O
+    - https://www.logicbig.com/tutorials/spring-framework/spring-data/optimistic-lock.html
+    - https://medium.com/slalom-build/optimistically-locking-your-spring-boot-web-services-187662eb8a91
+    - https://github.com/EvgeniGordeev/spring-jpa-optimistic-lock
+** Pesimistic locking
+** optimistic locking

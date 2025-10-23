@@ -1,0 +1,3 @@
+* protonDB
+  special port of wine from valve
+  https://www.protondb.com/app/863550

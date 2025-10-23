@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       811A9E45-189A-4CD7-8B68-CDAF606178CA
+:END:
+#+title: learning to program
+* sites
+** https://www.freecodecamp.org/news/the-10-most-popular-coding-challenge-websites-of-2016-fb8a5672d22f/
+** https://www.geeksforgeeks.org/7-best-coding-challenge-websites-in-2020/
+** https://flatironschool.com/blog/best-websites-to-practice-coding-for-beginners/
+* sites that offers exercise
+** https://www.spoj.com
+** https://exercism.org
+** https://www.hackerrank.com
+** https://www.hackerearth.com
+** https://projecteuler.net
+** https://www.codechef.com
+** https://www.codewars.com
+** https://leetcode.com
+** https://www.codingame.com/start
+* senior programmers
+[[https://www.youtube.com/watch?v=oJbfMBROEO0][How Senior Programmers ACTUALLY Write Code]]
+** finish what you have started
+every time you write code some one else will look at it down the road and measure you by it
+** enforce coding standard
+** documenting chosen pattern
+** review new patterns early on
+** never create a ticket or jira task representing refactoring
+management will take out these in order to save time.
+incremental refactoring is the way to go.
+** assume unexpected changes

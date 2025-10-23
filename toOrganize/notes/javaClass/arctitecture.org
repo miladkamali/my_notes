@@ -1,0 +1,273 @@
+﻿* people
+** Kevlin Henney
+*** videos
+**** [[https://www.youtube.com/watch?v=YyhfK-aBo-Y][GOTO 2017 • Code as Risk • Kevlin Henney]]
+     - security
+     - user experience
+     - 
+**** [[https://www.youtube.com/watch?v=tMW08JkFrBA][The SOLID Design Principle Deconstructed]]
+     here he talks about solid principles ,basically he boils all of
+     them to SRP which makes the distinction between what every body
+     consider SRP and what Uncle BOB meant by SRP.
+     - he talks about difference between public and published interface
+**** [[https://www.youtube.com/watch?v=JiQct3QixMo][Full Stack Developer]]
+**** [[https://www.youtube.com/watch?v=yl25p91flLY][thinking outside of synchronization quadrant]]
+**** TODO [[https://www.youtube.com/watch?v=nrVIlhtoE3Y][Declaritive Thinking ]]
+**** [[https://www.youtube.com/watch?v=FyCYva9DhsI][Clean Coders Hate What Happens to Your Code When You Use These Enterprise Programming Tricks]]
+**** [[https://www.youtube.com/watch?v=_M4o0ExLQCs][get kata]]
+*** books
+** Robert C Martin(uncle bob)
+*** TODO [[https://www.youtube.com/watch?v=o_TH-Y78tt4&t=7s][clean architecture]]
+** Martin Fowler
+** Robert B Murray
+*** videos
+**** [[https://www.youtube.com/watch?v=eisuQefYw_o][YOW! 2016 Robert C. Martin - Effective Estimation (or: How not to Lie)]]
+** sean parent
+*** videos
+**** [[https://www.youtube.com/watch?v=QtzVd0MT3R0][better code]]
+** Sandi Metz
+** Scott Hanselman
+*** [[https://www.youtube.com/watch?v=FS1mnISoG7U&t=1134s][scaling yourself]]
+** Felix Petriconi
+*** [[https://www.youtube.com/watch?v=WZdKFlH7qxo][there is a better future]]
+    - std future
+    - boost future
+    - stlab future
+** Trisha Gee
+*** [[https://www.youtube.com/watch?v=LlAn452X4Lc][ Career Advice for Programmers]]
+* Concepts
+** Microservice
+*** [[https://www.youtube.com/watch?v=1xo-0gCVhTU][Introduction to Microservices Docker, and kubernettes]]
+*** [[https://www.youtube.com/watch?v=MjIfWe6bn40][Greg Young - The Long Sad History of MicroServices TM]]
+*** [[https://www.youtube.com/watch?v=vs_XiP5Lkgg][The Entity Microservie Trap you may be doing it wrong]]
+** Code Smells
+*** [[https://www.youtube.com/watch?v=D4auWwMsEnY][Code Refactoring: Learn Code Smells And Level Up Your Game!]]
+    - very good talk
+*** [[https://www.youtube.com/watch?v=7oyiPBjLAWY][Code smells and feel]]
+*** [[https://www.youtube.com/watch?v=aKSd9DaD_Os&t=479s][Identify and Correct Common Code Smells]]
+*** [[https://www.youtube.com/watch?v=lbp6vwdnE0k][Avoiding Code Smells]]
+** Agile
+*** Agile samurai
+    - https://www.youtube.com/watch?v=zIPv-Ym2n1E
+    - https://www.youtube.com/watch?v=LvRVnFmLpSA
+    - https://www.youtube.com/watch?v=sCCUEtjCpCs&t=206s
+    - https://www.youtube.com/watch?v=MSMBYm9dHso
+    - https://www.youtube.com/watch?v=xQmm_K7Wz_E
+    - https://www.youtube.com/watch?v=YajHqROVsKo
+*** David Griffiths
+    - [[https://www.youtube.com/watch?v=Hwu438QSb_g][lean agile estimation in 10 minutes]]
+** Event Driven
+*** [[https://www.youtube.com/watch?v=H_ang8BatXQ][Moving from lagacy to event-driven with kafka]]
+* bash
+** [[https://www.youtube.com/watch?v=oxuRxtrO2Ag][Beginner's Guide to bash terminals]]
+* project estimation
+  - best case 95% chanse of missing
+  - worst case 5% chanse of missing
+  - nominal case 50% chance of missing
+  - std dev = (W-B)/6
+  - mean(B+W+4N)/6
+  - project mean = sum(mean)
+  - project std dev =sqrt(sum(stddev^2))
+* testing
+** [[https://www.youtube.com/watch?v=VD51AkG8EZw][RubyConf 2015 - How to Stop Hating your Test Suite by Justin Searls]]
+   22:07 audio becomes out of sync
+** TestFrameWork
+*** Arquillian
+**** [[https://www.youtube.com/watch?v=_s_kL6V8pUI][Rule Your Tests with Arquillian]]
+* microservice
+** [[https://www.youtube.com/watch?v=2yko4TbC8cI][martin fowler - microservices]]
+** [[https://www.youtube.com/watch?v=Rzdxgx3RC0Q][caching at netflix]]
+** [[https://www.youtube.com/watch?v=YI34UIMgkxs][Keynote NDC Sydney 2016: If I knew then what I know now - Scott Hanselman]]
+   using cloud is much better
+** [[https://www.youtube.com/watch?v=mDBa_89qnuE][the Enterprise Architects Intro To Microservices Part 1]]
+** [[https://www.youtube.com/watch?v=eBVuF5Xbj2w][The Enterprise Architects Intro To Microservices Part 2]]
+** [[https://www.youtube.com/watch?v=0TUFb7YCxo4][The Enterprise Architects Intro To Microservices Part 3]]
+** TODO [[https://www.youtube.com/watch?v=sSm2dRarhPo&t=743s][Microservices + Events + Docker = A Perfect Trio]]
+** [[https://www.youtube.com/watch?v=E8-e-3fRHBw&t=4s][managing data in microservices]]
+* Docker
+** [[https://www.youtube.com/watch?v=i7yoXqlg48M][Docker, FROM scratch - Aaron Powell]]
+** [[https://www.youtube.com/watch?v=YFl2mCHdv24][Learn Docker in 12 minutes]]
+* kafka
+** [[https://www.youtube.com/watch?v=UEg40Te8pnE][introduction to kafka]]
+   - talks about usage
+   - introduce Avro and protobuf
+   - flink framework
+** DONE [[https://www.youtube.com/watch?v=1vLMuWsfMcA][Lesson leaned from kafka in production]]
+   - https://aphyr.com/posts/293-jepsen-kafka
+   - https://jepsen.io/analyses
+** https://www.youtube.com/watch?v=NjHYWEV_E_o
+** https://www.youtube.com/watch?v=IncG0_XSSBg
+** [[https://www.youtube.com/watch?v=pfYvaEd39oA][Visualizing Kafka Security]]
+** TODO check kyle kingsbury test
+   - https://www.google.com/search?rlz=1C1ASUM_enIR818IR821&biw=1920&bih=969&ei=vK4xXIyqPPKc_Qan1LCwDQ&q=kyle+kingsbury+test&oq=kyle+kingsbury+test&gs_l=psy-ab.3..33i160.1467.3050..4667...0.0..0.302.1453.2-2j3......0....1..gws-wiz.......0j0i67j0i20i263j0i22i30.FJn0gKAk9Yo
+* unknown
+** [[https://www.youtube.com/watch?v=EMv_8dxSqdE][new concurrency model on jvm fiber , ...]]
+** [[https://www.youtube.com/watch?v=L3_pCSGGiek][Fibers - blocking is cheap in a parallel univers]]
+** [[https://www.youtube.com/watch?v=nP-UeleMgE4][exploring reactive programming in java]]
+** [[https://www.youtube.com/watch?v=Nmob2MB2Qo8][Quasar :Efficient and Elegant Fibers,....]]
+** [[https://www.youtube.com/watch?v=786iemaCJHU][var with Style: local variable type inference in java 10]]
+* java concurency
+** https://www.youtube.com/playlist?list=PLhfHPmPYPPRk6yMrcbfafFGSbE2EPK_A6
+* Git/development
+** [[https://www.youtube.com/watch?v=ykZbBD-CmP8][git patterns and anti patterns]]
+** [[https://www.youtube.com/watch?v=aoMfbgF2D_4][continuous delivery]]
+** [[https://www.youtube.com/watch?v=URlnxbaHhTs][agile essence and fluency]]
+* garbage collector
+** TODO [[https://www.youtube.com/watch?v=8wHx31mvSLY][Everything I Ever Learned About JVM Performance Tuning at Twitter (Attila Szegedi, Hungary)]]
+** [[https://www.youtube.com/watch?v=UnaNQgzw4zY][Garbage collection in Java, with Animation and discussion of G1 GC]]
+** [[https://www.youtube.com/watch?v=we_enrM7TSY][Understanding Java Garbage Collection and what you can do about it]]
+* event source
+** https://www.youtube.com/watch?v=aweV9FLTZkU&t=26s
+** TODO [[https://www.youtube.com/watch?v=Avs70dZ3Vlk][Martin Fowler – What Does Tech Excellence Look Like? | TW Live Australia 2016]]
+* computer 
+** [[https://www.youtube.com/watch?v=seM9SqTsRG4][The basics of BASIC, the programming language of the 1980s.]]
+** [[https://www.youtube.com/watch?v=cNN_tTXABUA][how cpu works]]
+** [[https://www.youtube.com/playlist?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo][crash course computer science]]
+** [[https://www.youtube.com/watch?v=oLlOv8Ln0VE][apache maven]]
+** [[https://www.youtube.com/watch?v=grEKMHGYyns][java from begining in 9 hours]]
+** [[https://www.youtube.com/watch?v=ot3PESmNXhE][java at speed]]
+   talks about microbenchmark jvm optimizations and Zing jvm
+   https://go.azul.com/zing-trial-download
+** java mucro benchmark
+   http://tutorials.jenkov.com/java-performance/jmh.html
+
+* courses
+** http://web.cecs.pdx.edu/~whitlock/
+* c++/template
+** [[https://www.youtube.com/watch?v=ZpVPexZHYrQ][code::dive 2017 – Odin Holmes – The fastest template metaprogramming in the West]]
+** [[https://www.youtube.com/watch?v=sPhpelUfu8Q][CppCon 2017: Juan Pedro Bolivar Puente “Postmodern immutable data structures”]]
+** [[https://www.youtube.com/watch?v=ta3S8CRN2TM][CppCon 2016: David Sankel “Building Software Capital: How to write the highest quality code and why"]]
+* negotiation
+** TODO [[https://www.youtube.com/watch?v=guZa7mQV1l0][Chris Voss: "Never Split the Difference" | Talks at Google]]
+** [[https://www.youtube.com/watch?v=llctqNJr2IU][An FBI Negotiator’s Secret to Winning Any Exchange | Inc.]]
+* design patterns
+** [[https://www.youtube.com/watch?v=v9ejT8FO-7I&t=1513s][that crazy guy]]
+* functional architecture
+** [[https://www.youtube.com/watch?v=US8QG9I1XW0][Functional architecture - The pits of success - Mark Seemann]]
+** [[https://www.youtube.com/watch?v=cxs7oLGrxQ4][From Dependency injection to dependency rejection - Mark Seemann]]
+** [[https://www.youtube.com/watch?v=vDe-4o8Uwl8][The Power of Composition - Scott Wlaschin]]
+* data Structures
+** [[https://www.youtube.com/watch?v=YWnBbNj_G-U][Data Structures and Algorithms Complete Tutorial Computer Education for All]]
+** TODO [[https://www.youtube.com/watch?v=zgCnMvvw6Oo&list=PLpPXw4zFa0uKKhaSz87IowJnOTzh9tiBk][data structures very good source]]
+* SQL
+** [[https://www.youtube.com/watch?v=HXV3zeQKqGY][SQL - Full course for beginners]]
+* security
+** [[https://www.youtube.com/watch?v=ZLZkf8FVcsU][Low-Level Software Security: Attacks and Countermeasures - Frank Piessens]]
+** [[https://www.youtube.com/watch?v=j82iw03aOgM][C/C++ vs Security! - Gynvael Coldwind - code::dive 2018]]
+* AOP
+** https://www.youtube.com/playlist?list=PLE37064DE302862F8
+** https://www.youtube.com/watch?v=Og9Fyew8ltQ
+* Neural Network
+** https://www.youtube.com/watch?v=vq2nnJ4g6N0
+* measuring performance java
+** ByCounter
+   https://www.cs.york.ac.uk/ActiveVision/papers/store/Paper6.pdf
+   https://sdqweb.ipd.kit.edu/wiki/ByCounter
+** InsCounter
+   https://github.com/lvxiaoxin/Java-ByteCode-Counter
+** Jawa
+   https://stackoverflow.com/questions/42215583/java-count-individual-bytecode-instructions-executed/42216515
+* OAuth
+** [[https://www.youtube.com/watch?v=996OiexHze0][OAuth 2.0 and OpenID Connect (in plain English)]]
+** openid connect
+** jwt
+   json web token
+** https://developer.okta.com/
+** [[https://www.oauth.com/][ebook for oauth]]
+** [[https://medium.com/@darutk/spring-oauth-2-0-openid-connect-3341a6ed1f92][Spring + OAuth 2.0 + OpenID Connect]]
+** [[https://www.baeldung.com/spring-security-openid-connect][Spring Security and OpenID Connect]]
+** [[https://openid.net/developers/certified/][Certified OpenID Connect Implementations]]
+** https://github.com/spring-projects/spring-security/wiki/OAuth-2.0-Features-Matrix
+** 
+* Caching
+** [[https://www.youtube.com/watch?v=EAUlxpdj3fY][Caching In: Understand, Measure, and Use Your CPU Cache More Effectively]]
+** [[https://www.youtube.com/watch?v=WDIkqP4JbkE][code::dive conference 2014 - Scott Meyers: Cpu Caches and Why You Care]]
+* data oriented design
+** [[https://www.youtube.com/watch?v=rX0ItVEVjHc&pbjreload=10][CppCon 2014: Mike Acton "Data-Oriented Design and C++]]
+* computer science
+** [[https://www.youtube.com/watch?v=SzJ46YA_RaA][Map of Computer Science]]
+** https://www.youtube.com/watch?v=eJBOU23L720
+** [[https://www.youtube.com/watch?v=RPQD7-AOjMI][turing complete]]
+** [[https://www.youtube.com/watch?v=sqV3pL5x8PI][Programming Paradigms - Computerphile]]
+** [[https://www.youtube.com/watch?v=Mv9NEXX1VHc&t=25s][What on Earth is Recursion? - Computerphile]]
+** [[https://www.youtube.com/watch?v=DyG9S9nAlUM][Arrays vs Linked Lists - Computerphile]]
+** turing maching
+*** [[https://www.youtube.com/watch?v=RPQD7-AOjMI][turing complete]]
+*** [[https://www.youtube.com/watch?v=DILF8usqp7M&t=0s&list=PLUTypj9XuPp4YBaHucPvr-zisHwfEGIEq&index=31][Turing Machine Primer - Computerphile]]
+*** [[https://www.youtube.com/watch?v=i7sm9dzFtEI&t=9s&list=PLUTypj9XuPp4YBaHucPvr-zisHwfEGIEq&index=28][The Most Difficult Program to Compute? - Computerphile]]
+*** [[https://www.youtube.com/watch?v=CE8UhcyJS0I&t=0s&list=PLUTypj9XuPp4YBaHucPvr-zisHwfEGIEq&index=30][Busy Beaver Turing Machines - Computerphile]]
+*** [[https://www.youtube.com/watch?v=DILF8usqp7M&t=0s&list=PLUTypj9XuPp4YBaHucPvr-zisHwfEGIEq&index=31][Turing Machine Primer - Computerphile]]
+** [[https://www.youtube.com/watch?v=YX40hbAHx3s][P vs NP]]
+** [[https://www.youtube.com/watch?v=cgVVZMfLjEI][4 Programming Paradigms In 40 Minutes]]
+** [[https://www.youtube.com/playlist?list=PLC-8dKj3F0NUnR8LeBGH3utAI9aQjFbi5][Partial Recursive Functions]]
+** hashmap
+*** [[https://www.youtube.com/watch?v=c3RVW3KGIIE][How HashMap works in Java? With Animation!! whats new in java8 tutorial]]
+*** [[https://www.youtube.com/watch?v=KyUTuwz_b7Q][Hash Tables and Hash Functions]]
+** TODO [[https://www.youtube.com/playlist?list=PLC-8dKj3F0NUnR8LeBGH3utAI9aQjFbi5][Partial Recursive Functions]]
+* cources 
+** [[https://www.youtube.com/playlist?list=PLAwxTw4SYaPkbWSEj_1iO7rILlWDJImW4][Computability, Complexity, Theory: Algorithms]]
+** [[https://www.youtube.com/playlist?list=PLUTypj9XuPp4YBaHucPvr-zisHwfEGIEq][Professor D Brailsford - Computerphile]]
+** [[https://www.youtube.com/playlist?list=PLXsCxuYy4Rn4-TrdQruQn_g9mDl8NZTdN][introduction to theory of computability]]
+** TODO [[https://www.youtube.com/channel/UCVPASNJQ98XbpQM8Oy3qZJg/videos][java info]]
+* hadoop
+** [[https://www.youtube.com/watch?v=xYnS9PQRXTg][Hadoop - Just the Basics for Big Data Rookies]]
+* large scale app
+** [[https://www.youtube.com/watch?v=zwBLgQ1_WuE][Virtualizing and Tuning Large Scale Java Applications]]
+** [[https://www.youtube.com/watch?v=IGS-rqSjmFk][Building and Tuning High Performance Java Platforms]]
+** [[https://www.youtube.com/watch?v=mzT7etWjj0Q][Troubleshooting Live Java Web Applications]]
+* Akka
+** [[https://www.youtube.com/watch?v=PRHhkdRvEeE][Reactive stream processing with Akka Streams (Johan Andrén, Sweden)]]
+* Hashmap
+** [[https://www.youtube.com/watch?v=7PuZOsxe-mo][Hashes 10 Rehashing]]
+** [[https://www.youtube.com/watch?v=fwYHX2hWgag][What is Load factor and Rehashing in Hashmap? | Why Rehashing is required?]]
+* concurency
+** [[ https://www.youtube.com/watch?v=cEcNLfXEaZs&list=PLhfHPmPYPPRk6yMrcbfafFGSbE2EPK_A6&index=17][Java Concurrency]]
+** [[https://www.youtube.com/watch?v=ADxUsCkWdbE][Concurrency Concepts in Java by Douglas Hawkins]]
+** [[https://www.youtube.com/watch?v=EIGkKV49lt8][Background on Java Concurrency and Parallelism]]
+* webSocket
+** concepts
+   is application layer protocol in internet protocol suit
+*** internet protocol suit
+**** Application Layer
+     HTTP webSocket SSL IMAP POP
+**** Intertet Layer
+     ipv4 ipv6
+**** Transport Layer
+     TCP UDP
+*** difference with http
+    - http is stateless, after the initial request is done the
+      server-client communication is lost
+    - clients specify actions
+      - get
+      - post
+      - put
+      - Delete
+    - data sent with headers, headers sent with request and response
+*** ajax
+    asynchronously send data to server with out refreshing
+*** websocket
+    - full-duplex bi-directional communication
+    - websoceket is an http upgrade, uses tge same tcp connections
+      over ws:// or wss://
+    - easy to implement and standardise
+    - only send headers once
+    - [[www.caniuse.com][browser support]]
+*** Polling
+    send ajax request every x seconds
+*** long polling
+    send request to server and keep connection open until new data
+    comet programming
+    [[https://en.wikipedia.org/wiki/Comet_(programming)][comet programming]]
+** TODO [[https://www.youtube.com/watch?v=zgI0H28AgGY][high performance webSocket]]
+** read OSI network model
+** [[https://www.devglan.com/spring-boot/spring-boot-websocket-integration-example][spring socket client]]
+** [[https://www.programcreek.com/java-api-examples/index.php?api=org.springframework.web.socket.client.standard.StandardWebSocketClient][Java Code Examples for ]]
+** jetty
+*** [[https://examples.javacodegeeks.com/enterprise-java/jetty/jetty-websocket-example/][jetty websocket]]
+*** https://www.eclipse.org/jetty/documentation/9.4.x/jetty-websocket-server-api.html
+*** https://github.com/jetty-project/embedded-jetty-websocket-examples
+*** http://zetcode.com/java/jetty/websocket/
+** SocketIO js
+* rust
+** https://www.youtube.com/watch?v=HgtRAbE1nBM
+** https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ/videos

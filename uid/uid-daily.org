@@ -1,0 +1,153 @@
+* bugs                                                                  :bug:
+** in crypto when liveness detects false but operator says otherwise  :hasan:
+** check why we have a jump in user ids in sana                 :unprocessed:sana:
+   Inserted on: <2021-12-25 Sat> 
+* check request
+** check why we have a jam about 500 in user id                       :hasan:
+** TODO taghir address token wixbeta                                  :hasan:
+   SCHEDULED: <2021-12-29 Wed>
+* tasks
+** DONE sana database clean up
+CLOSED: [2022-04-05 Tue 12:58]
+*** 13 march 2022
+    oauth_refresh_token = 431401
+    oauth_access_token = 347612
+
+    information_schema	0.19
+    uid_core_justice	5959.77
+
+
+    oauth_access_token	3386.86
+    oauth_refresh_token	1896.64
+    uid_justice_result	348.91
+    uid_user	152.02
+    uid_result	73.73
+    uid_last_result	72.23
+    uid_supervise_result	29.06
+    users_roles	0.05
+    roles_privileges	0.05
+    oauth_client_token	0.02
+    last_result_seq	0.02
+    result_seq	0.02
+    justice_seq	0.02
+    oauth_approvals	0.02
+    supervise_seq	0.02
+    hibernate_sequence	0.02
+    uid_result_counter	0.02
+    oauth_code	0.02
+    user_seq	0.02
+    uid_role	0.02
+    uid_config_date	0.02
+    uid_privilege	0.02
+    oauth_client_details	0.02
+*** 14 march 2022
+    access token : 328814 
+    refresh token : 412597
+
+    oauth_access_token	3328.41
+    oauth_refresh_token	2180.89
+    uid_justice_result	348.91
+    uid_user	58.59
+    uid_result	35.56
+    uid_last_result	31.56
+    uid_supervise_result	20.55
+    oauth_approvals	0.02
+    uid_role	0.02
+    oauth_client_details	0.02
+    oauth_code	0.02
+    justice_seq	0.02
+    uid_config_date	0.02
+    user_seq	0.02
+    users_roles	0.02
+    oauth_client_token	0.02
+    uid_privilege	0.02
+    supervise_seq	0.02
+    roles_privileges	0.02
+    last_result_seq	0.02
+    hibernate_sequence	0.02
+    result_seq	0.02
+    uid_result_counter	0.02
+    
+** security update
+*** crypto
+**** DONE implement backend                                           :hasan:
+**** DONE implement fronend                                           :hamed:
+***** DONE respond to request from bankId                             :hamed:
+***** TODO fixing arrayBuffer conversion issue on safari          :hamed:bug:
+**** deploy in crypto
+**** change algorithm
+***** deploy backend
+***** deploy front 
+*** sana
+** Infrastructure
+*** database
+**** back up
+***** TODO 8 times backup per day for project data                    :navid:
+***** TODO at least one time back up for database configuration daily :navid:
+***** TODO checking integrity of backups                              :navid:
+****** TODO manually check daily backups
+****** TODO write a program which manages backups and report back to prometheous :milad:
+***** TODO create fast recovey plan for starting from scratch for each project
+**** seperation of database instances
+***** dockerize the database instances
+****** create a docker instance for mysql
+******* understand back up and persistance for it
+******* add database monitoring to the promethus   
+****** create docker instance 
+*** monitoring
+**** setup prometheus
+**** setup alerting system based on prometheus
+**** set up prometheus monitoring for each service from container
+     https://docs.docker.com/config/daemon/prometheus/
+**** set up prometheus monitoring for asiatec servers                 :navid:
+**** add spring acturator and prometheus for each service           :backend:
+*** log infrastructure
+**** set up ELK stack to collect
+**** set up monitoring based on logs
+*** configurations
+**** move infrastructure dependent configuration to environment variable :hasan:hamed:navid:
+**** change the run environment by environment variables
+     same jar file should run in different palaces
+** DONE UP issues with pwa 
+** work ministray project                                     :work_ministry:
+*** DONE deploy main test deployment
+*** DONE deploy panel in test
+*** DONE logs in work ministrary project                :hasan:work_ministry:
+**** DONE interceptor for restTemplate
+**** TODO filter for request response 
+**** TODO ensure log seperation into files
+**** TODO ensure one line logs and json all around
+*** TODO active health check in work ministray project
+*** DONE passive health check
+** auto deployment
+*** DONE upgrade git
+*** TODO move git projects to new git
+*** set up SSL
+*** DONE initial set up
+*** set up git hook
+*** move jenkinfiles outsied 
+** set up ELK stack
+** generate crypto report
+*** DONE hasan has to collect the initial data
+CLOSED: [2022-04-05 Tue 12:59]
+*** DONE hasan has to update the format
+CLOSED: [2022-04-05 Tue 12:59]
+*** implement 
+** create crashlytics                                               :android:
+** project afta
+*** design new APIs
+*** Security
+**** DONE KeyExchange
+CLOSED: [2022-04-05 Tue 13:33]
+**** DONE SDK integrity check
+**** HMAC
+**** SSL Pinning
+*** atoms
+**** Liveness -> 3 days remaining
+**** FaceMatching -> 3 days remaining
+**** 
+*** Client security
+**** ssl pinning  0%
+**** obfuscate 90%
+**** Security advice related tasks -> semi-canceled
+**** 

@@ -1,0 +1,10 @@
+* thread
+** extend Thread
+   the object itself will have run and start method
+   run method has to be overwriten
+** implement Runnable
+   objects only has run method
+** semantic
+*** thread start
+    when you call start method of a thread it will start,
+    and run the function run of the object

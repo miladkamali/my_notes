@@ -1,0 +1,70 @@
+:PROPERTIES:
+:ID:       2C8D485F-5140-4723-9663-6DEAC1C3476A
+:END:
+#+title: ai
+https://openrouter.ai/chat?room=orc-h21vfjnQAhLtEAg0xIgehkI3DEGx
+autogpt
+google bard
+chatgpt 4
+lama2
+
+midjourney ai 
+
+[[https://www.youtube.com/watch?v=Gaf_jCnA6mc][ChatGPT Tutorial: How to Use Chat GPT For Beginners 2023]]
+
+
+
+
+[[https://www.youtube.com/watch?v=YQ-jgBJ7Evs][How To Use Chat GPT-4 For Free (Without ChatGPT Plus)]]
+
+
+
+https://hexmos.com/lama2/tutorials/installation.html
+* lama
+https://github.com/jmorganca/ollama
+https://huggingface.co/jarradh/llama2_70b_chat_uncensored
+https://huggingface.co/TheBloke/llama2_70b_chat_uncensored-GGML
+
+
+
+
+[[https://github.com/facebookresearch][facebookresearch]]
+
+
+
+https://gilas.io
+
+https://aimlapi.com/app/sign-in
+
+
+https://huggingface.co/xtuner/llava-llama-3-8b-v1_1-gguf
+
+
+
+V-JEPA  https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/
+
+
+https://www.deepseek.com
+
+flux pro 1.1
+
+image flux.1
+https://blackforestlabs.ai
+https://www.google.com/search?q=how+to+run+flux+1&client=safari&sca_esv=639d0eebad58d522&rls=en&biw=1324&bih=785&sxsrf=ADLYWIITWviCqTFt_8saHRh6ShUdQJ8X1w%3A1724645741600&ei=bQHMZpqtJKHAhbIPoojHIA&ved=0ahUKEwjal6qG5pGIAxUhYEEAHSLEEQQQ4dUDCA8&uact=5&oq=how+to+run+flux+1&gs_lp=Egxnd3Mtd2l6LXNlcnAiEWhvdyB0byBydW4gZmx1eCAxMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyChAAGIAEGBQYhwIyBRAAGIAEMgUQABiABDIKEAAYgAQYFBiHAjIFEAAYgARIky5Q_hBYySxwA3gAkAEBmAGtBKABhiCqAQswLjYuNy4yLjAuMbgBA8gBAPgBAZgCEaAC4xrCAggQABiABBiwA8ICCxAAGIAEGLADGKIEwgILEAAYsAMYogQYiQXCAgQQIxgnwgIKECMYgAQYJxiKBcICChAAGIAEGEMYigXCAgsQABiABBiRAhiKBcICERAuGIAEGLEDGNEDGIMBGMcBwgILEAAYgAQYsQMYgwHCAggQABiABBixA8ICCxAAGIAEGLEDGIoFwgILEC4YgAQYsQMYgwHCAgUQLhiABJgDAIgGAZAGBpIHBzMuNS43LjKgB6OPAQ&sclient=gws-wiz-serp
+
+
+Qwen very good for https://huggingface.co/Qwen
+* interesting talks
+** [[https://www.youtube.com/watch?v=3A-gqHJ1ENI][I Didn’t Believe that AI is the Future of Coding. I Was Right.]]
+** [[https://www.youtube.com/watch?v=tTG_a0KPJAc&pp=ygUJYXBwbGUgbGxt][Apple DROPS AI BOMBSHELL: LLMS CANNOT Reason]]
+* free tials
+** fal.ai
+* phi4
+* to investigate
+** [[https://www.youtube.com/watch?v=YOJDAkgLn80][mistral ocr]]
+** [[https://www.youtube.com/watch?v=xM18EOiK0Wk][QwQ 32B is Beating Deepseek-R1]]
+** [[https://www.youtube.com/watch?v=CZeot5H7Ilk][deepseek R2 and Wan 2.1]]
+* findmypapaer.ai
+* world generation
+** veo
+** genie 3

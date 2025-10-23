@@ -1,0 +1,163 @@
+* info
+** connecting to fileserver
+   apt install cifs-utils
+   mount -t cifs -o username=m.kamali@uidco.ir //10.4.2.30/FileServer /mnt/share
+
+
+alias mountShareFolder='mount -t cifs -o username=m.kamali@uidco.ir //10.4.2.30/FileServer /mnt/share'
+alias unmountShareFolder='umount /mnt/share'
+* https://lh252.irandns.com
+** m.kamali@uid.ir
+** Bro3886Bro3886Bro3886
+* 
+
+* major issues
+** infrastructure control
+   DEADLINE: <2022-02-01 Tue>
+   our infrastructure is very succeptable to sabatage, it seems access is quite
+   sporadic. Different people have different access. the main person in charge
+   of our infrastructure is not stable. Our process are quite manual which
+   creates contention points between people.
+*** TODO postpone new dev ops hiring to after clean up
+*** TODO [1/2] clean up deployment process
+**** TODO set up automatic deployment
+**** DONE organize our git repositories
+***** gain masteri
+** infrastructure control
+   DEADLINE: <2022-02-01 Tue>
+   our infrastructure is very succeptable to sabatage, it seems access is quite
+   sporadic. Different people have different access. the main person in charge
+   of our infrastructure is not stable. Our process are quite manual which
+   creates contention points between people.
+*** TODO postpone new dev ops hiring to after clean up
+*** TODO [0/3] clean up deployment process
+**** TODO[0/2] set up automatic deployment
+***** TODO [#A] setup jenkins
+      SCHEDULED: <2021-12-12 Sun>
+***** TODO [#A] set up develop and production environment deployment for Work Ministry project
+      SCHEDULED: <2021-12-12 Sun>
+**** TODO organize our git repositories
+***** gain master access to git
+***** group repositories into projects/groups
+***** create template for each repository
+**** TODO 
+*** TODO become the second devOps 
+*** TODO Set up hashicorp vault and boundry to manage access
+** technical
+*** task defnition
+**** Business flows need proper evaluation before handover to technical team
+**** Single source of task for technical team
+***** take a sample of the tasks that reach technical team for about a month
+*** technical debt
+** support 
+*** Log system
+*** Identify 
+** QA process
+*** set up manual testing for each project using test case and user flows
+**** TODO ask masoud for test case for each project
+*** Create a budget for manual testing of each project
+*** Create automatic testing using selenium for user cases
+** HR
+*** create a seperate space for eating
+*** get jetbrains certificate for people
+*** Add some office flowers that collect poisons from air
+** People
+*** Hire new Java developer
+    SCHEDULED: <2021-12-25 Sat>
+*** Hire new fronted developer
+    SCHEDULED: <2022-01-15 Sat>
+* project CLEAN UP
+** infrastructure
+*** learning about kubernates
+*** implement CI/CD
+*** 
+** Leaning about temporal
+** learning about quarkus
+** learning about KeyCloak
+** learning about grpc
+** clean up Liveness
+** clean up FaceMatching
+** 
+* info
+** flask
+   flask uwsgi nginx
+   https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04
+* my computer
+** case
+*** https://fafait.net/product/case/awest-gaming-gt-av02-bg?id=26126&utm_medium=af-product&utm_source=torob#specs
+*** https://www.digikala.com/product/dkp-3073085/%DA%A9%DB%8C%D8%B3-%DA%A9%D8%A7%D9%85%D9%BE%DB%8C%D9%88%D8%AA%D8%B1-%DA%AF%D8%B1%DB%8C%D9%86-%D9%85%D8%AF%D9%84-pars-evo
+*** https://www.lioncomputer.com/product/n55l2/Awest-GT-AV02-BG-ARGB-Mid-Tower-Case
+*** https://www.digikala.com/product/dkp-3073085/%DA%A9%DB%8C%D8%B3-%DA%A9%D8%A7%D9%85%D9%BE%DB%8C%D9%88%D8%AA%D8%B1-%DA%AF%D8%B1%DB%8C%D9%86-%D9%85%D8%AF%D9%84-pars-evo
+*** https://www.digikala.com/product/dkp-3058335/%DA%A9%DB%8C%D8%B3-%DA%A9%D8%A7%D9%85%D9%BE%DB%8C%D9%88%D8%AA%D8%B1-%D9%85%D8%B3%D8%AA%D8%B1-%D8%AA%DA%A9-%D9%85%D8%AF%D9%84-t500-gaming
+** cooler
+   https://www.perfecttechreviews.com/cpu-coolers/best-cpu-cooler-for-ryzen-7-5800x/
+*** Deepcool Assassin III Review
+**** review 
+     https://www.tomshardware.com/uk/reviews/deepcool-assassin-iii-gamer-storm-cpu-air-cooler
+**** buy link
+     https://www.poromix.com/fan-cpu-deepcool/3705-assassinlll.html?utm_medium=PPC&utm_source=Torob
+     https://torob.com/p/224d70ed-897e-4461-8e3c-14120c8091a3/%D8%AE%D9%86%DA%A9-%DA%A9%D9%86%D9%86%D8%AF%D9%87-%D9%BE%D8%B1%D8%AF%D8%A7%D8%B2%D9%86%D8%AF%D9%87-deepcool-%D9%85%D8%AF%D9%84-gamer-storm-assassin-iii/
+*** GLC360-EVO
+**** buy link
+     https://www.itbazar.com/p_57139.aspx
+***  سیستم خنک کننده بادی گرین مدل NOTOUS 400-PWM 
+    https://www.digikala.com/product/dkp-193384/%D8%B3%DB%8C%D8%B3%D8%AA%D9%85-%D8%AE%D9%86%DA%A9-%DA%A9%D9%86%D9%86%D8%AF%D9%87-%D8%A8%D8%A7%D8%AF%DB%8C-%DA%AF%D8%B1%DB%8C%D9%86-%D9%85%D8%AF%D9%84-notous-400-pwm
+* licence
+** https://dieglocke.org/
+* Thinks to be done
+** services that need to be developed
+*** liveness service v2 2 week ( AI )
+*** face matching service v2 2 week (AI)
+*** National Registery ID service 1 week
+*** Jbit service 1-2 weeks
+*** Sana service 2 week
+*** Estelam service 1 week
+*** Labour ministry service 2 week 
+** panel development
+*** internal panel
+**** get basic design of the panel
+**** review requirements
+*** panel api design
+*** keycloak integration
+** technologies to tame
+*** HA proxy
+**** infrastructure 
+*** Temporal
+**** development
+**** Infrastructure
+*** GRPC
+**** development
+**** infrastructure
+*** MongoDB
+**** development
+**** infrastructure
+*** Redis
+**** development
+**** infrastructure
+*** Key cloak
+**** development
+**** Infrastructure
+** infrastructure
+*** Set up monitoring
+**** docker status
+***** network read/write
+***** network request
+***** network request status
+**** resource usage
+***** cpu/ram/IO
+**** database
+***** connections
+***** transactions
+***** transaction times
+***** IO
+***** cpu
+***** transaction time with query **
+***** 
+**** projects
+***** request per endpoint
+***** number of concurrent users
+***** number of users per minute
+***** request status per endpoint
+*** set up log monitoring
+*** set up auto deployment
+*** set up s

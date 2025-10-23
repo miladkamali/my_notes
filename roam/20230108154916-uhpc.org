@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       91e1dbc1-e62a-41ad-a30f-1f6baca0bcc6
+:END:
+#+title: UHPC
+Ultra High performance Concrete
+
+this type of concrete contains fibers of high cabon steel or fiber glass which stops cracks from propagating
+
+UHPC is 4x stronger that the traditional high strength concrete(tensile strength of 5-10*1000 psi) by almost 40000 PSI
+

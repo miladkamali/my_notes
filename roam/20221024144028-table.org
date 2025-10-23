@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       4a5cb504-9db9-41cd-84b2-250d60eef3aa
+:END:
+#+title: table
+* insert/remove column
+Alt Shift right
+Alt Shift Left
+* manual insert of line
+|-  + tab
+* automatic insert of line
+Ctrl+c - 
+* move all row
+Alt+up/down
+* move cell
+Shft+up/down
+* convert csv to table
+
+
+
+    Select lines you want to add to the table.
+
+    Press C-c | (org-table-create-or-convert-from-region). This will give you:
+
+    | line1 |
+    | line2 |
+    | line3 |
+
+Now all you need to do is add the header line. Here's one way of doing that:
+
+    With point (the cursor) on line1, press C-o (org-open-line), then enter C1.
+
+    Press C-c - (org-ctrl-c-minus) to insert the separator.

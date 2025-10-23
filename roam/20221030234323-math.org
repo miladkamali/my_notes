@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       AB6BCEE9-0B3C-4A9B-AB9D-6C9D6C8586B2
+:END:
+#+title: math
+* [[https://youtube.com/shorts/bfI7fWGSWOw?feature=share][kaperkar constant]]

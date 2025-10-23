@@ -1,0 +1,242 @@
+* criteria
+** programming skills 
+*** Java programming                                                 :junior:
+*** spring framework                                                 :junior:
+*** Hibernate JPA                                                    :junior:
+*** Database                                                       :midlevel:
+*** redis                                                          :midlevel:
+*** Tests                                                          :midlevel:
+*** Test framework JUnit                                           :midlevel:
+** knowledge
+*** how systems work
+**** Understand Java echo-system                              :midlevel:
+**** Understand how Spring framework works                    :midlevel:
+**** Understand algorithm complexity                          :midlevel:
+**** Understanding of JVM and how it works                    :midlevel:
+**** understand how logging work                              :midlevel:
+*** Codding standards
+**** Fault tolerant code                                      :midlevel:
+**** Error handling practices                                 :midlevel:
+**** resource management practices                            :midlevel:
+**** Familiar with some test practices                        :midlevel:
+**** Understand difference between different testing methodology :senior:
+**** Fail fast concept and it's implementation                :midlevel:
+**** practical understanding of different type of tests and their usage :senior:
+*** architecture
+**** understand common code structure                         :midlevel:
+**** understand dependency and it's side effects                :senior:
+**** Clean Code                                               :midlevel:
+**** understand and implement design patterns                 :midlevel:
+**** Correctly identify usage of design patters                 :senior:
+**** Refactoring                                              :midlevel:
+**** Code Smells                                              :midlevel:
+**** refactoring recipe                                         :senior:
+**** Understand Testable design                                 :senior:
+**** Understand Conformance test/criteria                       :senior:
+**** practical understanding of monitoring                    :midlevel:
+**** practical understanding of logging system                :midlevel:
+**** ability to compare architectures                           :senior:
+**** ability to design Architecture                             :senior:
+*** Operational requirements
+**** Understand fin-tech coding standards                     :midlevel:
+**** Understand fin-tech operational standard                 :midlevel:
+**** Understand fin-tech monitoring standard                    :senior:
+**** Understand Data policies                                   :senior:
+**** Understand Audit policies and Auditable system             :senior:
+**** Understand security implication and policies             :midlevel:
+**** Understand Backward compatibility                        :midlevel:
+*** Fin-tech 
+**** understand banking infrastructure and services               :lead:
+*** ability to design testable code                               :lead:
+*** Ability to find bottle-necks in the system                  :senior:
+*** practical understanding of how database works             :midlevel:
+*** deep understanding of how database works                    :senior:
+** stress handling
+*** Work reliably under stress and time constraint            :midlevel:
+*** Ability to prioritize tasks under stress                  :midlevel:
+** soft-skills
+*** communicate with clients and service providers            :midlevel:
+*** patience                                                  :midlevel:
+*** Growth Mentality                                            :junior:
+*** avid learner                                                :junior:
+*** taking responsibility for their action and consequences     :junior:
+*** communication skills                                      :midlevel:
+*** lead teaching skills                                          :lead:
+* levels
+** junior
+*** programming skills 
+**** Java programming                                                :junior:
+**** spring framework                                                :junior:
+**** Hibernate JPA                                                   :junior:
+*** soft-skills
+**** Growth Mentality                                                :junior:
+**** avid learner                                                    :junior:
+**** taking responsibility for their action and consequences         :junior:
+** midlevel
+*** programming skills 
+**** Java programming                                                :junior:
+**** spring framework                                                :junior:
+**** Hibernate JPA                                                   :junior:
+**** Database                                                      :midlevel:
+**** redis                                                         :midlevel:
+**** Tests                                                         :midlevel:
+**** Test framework JUnit                                          :midlevel:
+*** knowledge
+**** how systems work
+***** Understand Java echo-system                                  :midlevel:
+***** Understand how Spring framework works                        :midlevel:
+***** Understand algorithm complexity                              :midlevel:
+***** Understanding of JVM and how it works                        :midlevel:
+***** understand how logging work                                  :midlevel:
+**** Codding standards
+***** Fault tolerant code                                          :midlevel:
+***** Error handling practices                                     :midlevel:
+***** resource management practices                                :midlevel:
+***** Familiar with some test practices                            :midlevel:
+***** Fail fast concept and it's implementation                    :midlevel:
+**** architecture
+***** understand common code structure                             :midlevel:
+***** Clean Code                                                   :midlevel:
+***** understand and implement design patterns                     :midlevel:
+***** Refactoring                                                  :midlevel:
+***** Code Smells                                                  :midlevel:
+***** practical understanding of monitoring                        :midlevel:
+***** practical understanding of logging system                    :midlevel:
+**** Operational requirements
+***** Understand fin-tech coding standards                         :midlevel:
+***** Understand fin-tech operational standard                     :midlevel:
+***** Understand security implication and policies                 :midlevel:
+***** Understand Backward compatibility                            :midlevel:
+**** practical understanding of how database works                 :midlevel:
+*** stress handling
+**** Work reliably under stress and time constraint                :midlevel:
+**** Ability to prioritize tasks under stress                      :midlevel:
+*** soft-skills
+**** communicate with clients and service providers                :midlevel:
+**** patience                                                      :midlevel:
+**** Growth Mentality                                                :junior:
+**** avid learner                                                    :junior:
+**** taking responsibility for their action and consequences         :junior:
+**** communication skills                                          :midlevel:
+
+** senior
+*** programming skills 
+**** Java programming                                                :junior:
+**** spring framework                                                :junior:
+**** Hibernate JPA                                                   :junior:
+**** Database                                                      :midlevel:
+**** redis                                                         :midlevel:
+**** Tests                                                         :midlevel:
+**** Test framework JUnit                                          :midlevel:
+*** knowledge
+**** how systems work
+***** Understand Java echo-system                                  :midlevel:
+***** Understand how Spring framework works                        :midlevel:
+***** Understand algorithm complexity                              :midlevel:
+***** Understanding of JVM and how it works                        :midlevel:
+***** understand how logging work                                  :midlevel:
+**** Codding standards
+***** Fault tolerant code                                          :midlevel:
+***** Error handling practices                                     :midlevel:
+***** resource management practices                                :midlevel:
+***** Familiar with some test practices                            :midlevel:
+***** Understand difference between different testing methodology    :senior:
+***** Fail fast concept and it's implementation                    :midlevel:
+***** practical understanding of different type of tests and their usage :senior:
+**** architecture
+***** understand common code structure                             :midlevel:
+***** understand dependency and it's side effects                    :senior:
+***** Clean Code                                                   :midlevel:
+***** understand and implement design patterns                     :midlevel:
+***** Correctly identify usage of design patters                     :senior:
+***** Refactoring                                                  :midlevel:
+***** Code Smells                                                  :midlevel:
+***** refactoring recipe                                             :senior:
+***** Understand Testable design                                     :senior:
+***** Understand Conformance test/criteria                           :senior:
+***** practical understanding of monitoring                        :midlevel:
+***** practical understanding of logging system                    :midlevel:
+***** ability to compare architectures                               :senior:
+***** ability to design Architecture                                 :senior:
+**** Operational requirements
+***** Understand fin-tech coding standards                         :midlevel:
+***** Understand fin-tech operational standard                     :midlevel:
+***** Understand fin-tech monitoring standard                        :senior:
+***** Understand Data policies                                       :senior:
+***** Understand Audit policies and Auditable system                 :senior:
+***** Understand security implication and policies                 :midlevel:
+***** Understand Backward compatibility                            :midlevel:
+**** Ability to find bottle-necks in the system                      :senior:
+**** practical understanding of how database works                 :midlevel:
+**** deep understanding of how database works                        :senior:
+*** stress handling
+**** Work reliably under stress and time constraint                :midlevel:
+**** Ability to prioritize tasks under stress                      :midlevel:
+*** soft-skills
+**** communicate with clients and service providers                :midlevel:
+**** patience                                                      :midlevel:
+**** Growth Mentality                                                :junior:
+**** avid learner                                                    :junior:
+**** taking responsibility for their action and consequences         :junior:
+**** communication skills                                          :midlevel:
+
+** lead
+*** programming skills 
+**** Java programming                                                :junior:
+**** spring framework                                                :junior:
+**** Hibernate JPA                                                   :junior:
+**** Database                                                      :midlevel:
+**** redis                                                         :midlevel:
+**** Tests                                                         :midlevel:
+**** Test framework JUnit                                          :midlevel:
+*** knowledge
+**** how systems work
+***** Understand Java echo-system                                  :midlevel:
+***** Understand how Spring framework works                        :midlevel:
+***** Understand algorithm complexity                              :midlevel:
+***** Understanding of JVM and how it works                        :midlevel:
+***** understand how logging work                                  :midlevel:
+**** Codding standards
+***** Fault tolerant code                                          :midlevel:
+***** Error handling practices                                     :midlevel:
+***** resource management practices                                :midlevel:
+***** Familiar with some test practices                            :midlevel:
+***** Understand difference between different testing methodology    :senior:
+***** Fail fast concept and it's implementation                    :midlevel:
+***** practical understanding of different type of tests and their usage :senior:
+**** architecture
+***** understand common code structure                             :midlevel:
+***** understand dependency and it's side effects                    :senior:
+***** Clean Code                                                   :midlevel:
+***** understand and implement design patterns                     :midlevel:
+***** Correctly identify usage of design patters                     :senior:
+***** Refactoring                                                  :midlevel:
+***** Code Smells                                                  :midlevel:
+***** refactoring recipe                                             :senior:
+***** Understand Testable design                                     :senior:
+***** Understand Conformance test/criteria                           :senior:
+***** practical understanding of monitoring                        :midlevel:
+***** practical understanding of logging system                    :midlevel:
+***** ability to compare architectures                               :senior:
+***** ability to design Architecture                                 :senior:
+**** Operational requirements
+***** Understand fin-tech coding standards                         :midlevel:
+***** Understand fin-tech operational standard                     :midlevel:
+***** Understand fin-tech monitoring standard                        :senior:
+***** Understand Data policies                                       :senior:
+***** Understand Audit policies and Auditable system                 :senior:
+***** Understand security implication and policies                 :midlevel:
+***** Understand Backward compatibility                            :midlevel:
+**** Ability to find bottle-necks in the system                      :senior:
+**** practical understanding of how database works                 :midlevel:
+**** deep understanding of how database works                        :senior:
+*** stress handling
+**** Work reliably under stress and time constraint                :midlevel:
+**** Ability to prioritize tasks under stress                      :midlevel:
+*** soft-skills
+**** communicate with clients and service providers                :midlevel:
+**** patience                                                      :midlevel:
+**** Growth Mentality                                                :junior:
+**** avid learner                                                    :junior:
+**** taking responsibility for their action and consequences         :junior:
+**** communication skills                                          :midlevel:

@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       853F431E-4DE1-436F-BC1F-6366C63BDA6A
+:END:
+#+title: face detection
+* algorithm
+** mtcnn
+** deep face
+** dlib
+** facenet pytourch
+** vggface2
+* info
+** [[https://www.kaggle.com/code/timesler/comparison-of-face-detection-packages/notebook][comparision of speed]]
+** [[https://machinelearningmastery.com/how-to-perform-face-detection-with-classical-and-deep-learning-methods-in-python-with-keras/][mtcnn usage in python]]
+** https://towardsdatascience.com/face-detection-models-which-to-use-and-why-d263e82c302c

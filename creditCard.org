@@ -1,0 +1,21 @@
+i
+* credit card number
+** section one
+first 6 - 8 digit specify the issuer
+*** fist digit specify the industry
+   - 1 2 airline
+   - 3 travel and entertainment 
+   - 4 5 for banking
+   - 6 banking and merchendise
+   - 7 petroleum industry
+   - 8 health care and communication
+   - 9 national government purpose
+   - 0 international organization for standardization
+*** next 5 - 7 digit narrow the credit network
+https://en.wikipedia.org/wiki/Payment_card_number
+** section two generally less than 12 digit
+8-12 digit for account identification
+** check digit
+*** luhn algorithm 
+** 
+** 

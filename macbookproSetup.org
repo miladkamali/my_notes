@@ -1,0 +1,4 @@
+* record screen 
+** video-graphic memory
+ start recording screen command+shift+5
+** 

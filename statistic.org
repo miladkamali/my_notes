@@ -1,0 +1,27 @@
+#+STARTUP: latexpreview
+* statistic
+** descriptive
+   describe the shape of data without actually giving the data to the parties
+   set of numbers which represent data
+*** average
+    central tendencie of data
+**** mean
+     - population mean $\mu$
+       $\frac{\sum_{i=1}^{N}{x_i}}{N}$
+       N referes to number of population
+     - sample mean $\bar{X}$
+       $\frac{\sum_{i=1}^{n}{x_i}}{n}$
+       n is number of sample
+**** arithmetic mean
+     add all the number and devide by count
+     $\frac{1}{N}\sum_{i}^{N}{x_i}$
+
+**** geometric mean
+**** harmonic mean
+**** median
+**** mode
+*** dispersion
+**** variance
+     $\sigma^2=\frac{\sum_{i=0}^{N}{(x-\mu)^2}}{N}$
+** inference
+   get conclusions aboutff the population

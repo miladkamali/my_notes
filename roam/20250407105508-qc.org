@@ -1,0 +1,65 @@
+:PROPERTIES:
+:ID:       AF6B688F-713D-4EB7-96C4-A0AF45445F6E
+:END:
+#+title: qc
+
+* archive
+** qc                                                              :@bentoak:
+- State "TODO"       from              [2025-10-21 Tue 13:37]
+*** Code quality
+**** reviewing codes that are being generated
+***** automatic
+****** set up sonar sonarqube for our projects                        :arash:
+****** check code linter that i can use to monitor
+**** review codes that are being generated
+***** c
+*** architecture
+**** create architecture diagram
+**** create db diagram
+***** 
+**** create access management diagram with OpenFGA
+***** TODO first stage of design                             :@bentoak:armin:
+****** TODO review OpenFGA design                              :review:milad:
+***** refine first stage of design
+*** design
+**** labratory design
+**** TODO getting the required forms                                   :neda:
+***** list of all the forms that are required
+**** workflow and form maker design
+***** DONE finalize the requirements with adib                         :adib:
+CLOSED: [2025-10-16 Thu 08:52] SCHEDULED: <2025-06-16 Mon>
+at the moment i have created a task for Front team to investigate the bpmn.js
+and how we can extend and fix the issues that we have with it
+****** adding jalali calendar
+****** adding two language support
+****** adding ui/theme customization to the library
+*** goals
+f
+** issues with QC and how it's going to fail
+*** acktech cancels project
+**** project not meeting the milestones
+***** we are behind the first 9 milestones Laboratory profile and Listذ
+***** the feel we have not done anything
+****** TODO to fix this we need a demo
+*** we fail to deliver project
+**** we can not set the correct path for the project
+***** design
+***** technical
+**** we do not meet the required throughput
+***** people
+****** armin
+****** saleh
+****** arash
+****** adib
+****** basir
+****** mohamad
+****** mohamad design
+**** we face issues with Internet
+***** already working on it with Hamed
+*** we lose critical aspect of the team
+**** losing people
+***** arash might be leaving US
+***** Saleh might not be quite happy with our situation
+* QC revival
+** defining the scope and flow of the project
+** defining the updated road-map for the project

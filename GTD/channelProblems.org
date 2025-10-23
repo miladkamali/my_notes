@@ -1,0 +1,48 @@
+
+* depositMessage/get
+** no validation on  message context
+   basically what ever you send it returned back to you
+*** userId is passed by value "string" and is basically ignored by the api
+*** partyId is passed by value "string"
+*** SessionId is passed by value "string" and is basically ignored by the API
+    sessionId is sent as bearer token instead
+*** all the other parameters in messageContext is also being ignored
+** list viewing issues
+   when ever there is json list it is separated into a pagination type list and
+   every thing about it is ignored. based on discussions and actual CUFX pdf
+   documentation it's not supposed to be like this. in CUFX swagger document
+   list are presented this way due to issue in auto generation.
+** StatusList
+   "statusType": "Success",
+	 "statusCode": "ValueOutOfRangeError",
+	 "statusSubCode": "string",
+	 "statusMessage": "string",
+* transfer occurrence Message
+** the user was "a.farshchi" !
+                   "user": [
+                    {
+                        "userId": "admin",
+                        "processorSessionId": "string",
+                        "userIdType": "EmployeeId",
+                        "partyId": "string",
+                        "customData": {
+                            "currentPage": 0,
+                            "totalPages": 0,
+                            "pageSize": 0,
+                            "positionIndex": "string",
+                            "returnPage": 0,
+                            "returnPositionIndex": "string",
+                            "valuePair": [
+                                {
+                                    "name": "string",
+                                    "value": "string"
+                                }
+                            ]
+                        }
+                    }
+                ]
+** no occurrenceId is generated
+** actual transfer issues
+*** there is a bug in transfer it actually ignores anything after decimal point
+*** transfer crashes if transfer request is less than 1 with no error only timeout!
+

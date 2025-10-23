@@ -1,0 +1,200 @@
+:PROPERTIES:
+:ID:       23AADB3D-CAAF-4C1D-85C1-B7D129FD7FBC
+:END:
+#+title: internet
+* bypassing iran
+
+ssh -i "~/Downloads/ar-Bentoak-privatekey.pem" -L 1194:localhost:1194 ubuntu@37.32.27.33
+* shadow socks setup
+** linux
+apt install simple-obfs
+
+open  /etc/shadowsocks-libev/config.json
+and set
+
+#+BEGIN_SRC js
+  {
+      "server":"212.33.198.15",
+      "mode":"tcp_and_udp",
+      "server_port":8340,
+      "local_port":1080,
+      "password":"C4hDm5LS",
+      "timeout":60,
+      "fast_open":true,
+      "method":"chacha20-ietf-poly1305",
+      "plugin":"obfs-local",
+      "plugin_opts":"obfs=http;obfs-host=www.bing.com"
+  }
+#+END_SRC
+
+
+#+begin_src c++
+  public void main(){
+    std::cout<<"hello world"<<std::endl;
+  }
+#+end_src
+
+
+
+
+go to /lib/systemd/system/shadowsocks-libev.service
+
+change
+ExecStart=/usr/bin/ss-server -c $CONFFILE $DAEMON_ARGS
+
+to
+
+ExecStart=/usr/bin/ss-local -c $CONFFILE $DAEMON_ARGS
+
+
+install [[https://github.com/cyfdecyf/cow][COW]] proxy
+
+
+https://www.youtube.com/watch?v=Nzc0VXzJe8Y
+https://www.youtube.com/watch?v=Sgqnznm6SEY
+
+https://seakfind.github.io/2021/10/10/X-UI/
+
+
+https://www.v2ray.com/en/configuration/protocols/socks.html
+
+
+
+
+
+https://github.com/vpnhood/VpnHood
+
+
+
+v2ray on mac
+
+/opt/homebrew/etc/v2ray/config.json
+
+
+ brew services stop v2ray
+ brew services start v2ray
+ brew services info v2ray
+
+
+
+
+ root@149.102.153.185
+
+Qac&VUd98mJMS,
+
+root@149.102.155.68
+
+PAnxN5GoEE=q4!
+[09:18]
+روی هر دوی این سرورها پورت ۸۰۸۲ برای وردپرس و پورت ۱۱۹۴ برای openVPN در حال استفاده است
+
+
+
+https://github.com/XTLS/Xray-examples
+
+
+https://v2.gost.run/en/getting-started/
+https://github.com/XTLS/Xray-core
+https://github.com/XTLS/Xray-install
+https://github.com/XTLS/Xray-examples
+
+
+
+nohup gost -L=ss+ohttp://chacha20-ietf-poly1305:q38wDw9gcyUjus@:7865 -L socks5://:54321 -F="ssh://62.171.168.171:2222?ssh_key=/root/gost/gost_key"
+
+
+ssh -D 1337 -f -q -C -N root@188.40.168.66 -p 63251
+
+
+
+
+ add gnome-extension for browser
+
+
+ proxy switcher for gnome
+
+ proxy omega switcher for browser
+
+
+
+
+
+
+
+
+ Trojan Panel 安装成功
+MariaDB root的密码(请妥善保存): Bro3886Bro3886Bro3886
+Redis的密码(请妥善保存): Bro3886Bro3886Bro3886
+管理面板地址: https://curiositylab.ir:6969
+系统管理员 默认用户名: sysadmin 默认密码: 123456 请及时登陆管理面板修改密码
+Trojan Panel私钥和证书目录: /tpdata/caddy/cert/
+
+
+
+https://curiositylab.ir:6969/api/auth/clash/dEZqRDJYMUY2aTlGZldwMkdEVTVWYmkxY29udWFDaERLSVlidzl6TUZycXZNb1N6
+
+
+https://github.com/p4gefau1t/trojan-go
+
+
+
+https://github.com/apernet/hysteria
+
+
+
+
+
+https://www.softether.org
+
+https://t.me/keriomaker_help
+
+
+
+
+Germany 
+777 / 778 / 805 / 808 / 804 / 806 / 807
+
+Estonia #59
+United Kingdom #2152 
+United Kingdom #2151
+
+
+uk #2222
+uk #2151 #2152
+estony #59
+#1067
+* prividers
+** https://iranfttx.ir/coverage
+* modems
+** https://www.mahdigit.ir/x28-2
+** HA5420 5G
+** https://www-uiblog-it.translate.goog/2021/02/modifica-modulo-lte-della-mikrotik-lhgg-lte6-kit/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp
+https://www.quectel.com/content/uploads/2024/09/Quectel_Product_Brochure_V8.1.pdf
+RM500Q-
+
+https://www-uiblog-it.translate.goog/2021/02/mikrotik-lhgg-lte6-kit-recensito-per-voi/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp
+
+
+https://malltina.com/product/mlt-18588132
+
+
+
+use https://github.com/MatsuriDayo/nekoray/releases for android and linux to connect
+
+https://github.com/MatsuriDayo/nekoray/releases
+
+./gost -L=ss+ohttp://chacha20-ietf-poly1305:123456@:8338
+gost -L=:8080 -F=ss+ohttp://chacha20:123456@149.102.153.185:8338
+
+
+
+
+
+
+
+
+
+
+
+
+

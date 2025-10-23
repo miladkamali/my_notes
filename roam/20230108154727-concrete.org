@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       479727d1-ce88-4ce4-ae43-c5dcf0e83304
+:END:
+#+title: concrete
+* special kinds of concrete
+** UHPC(Ultra High Performance Concrete )
+** [[id:91e1dbc1-e62a-41ad-a30f-1f6baca0bcc6][UHPC]]
+** Micro reinforce UHPC
+in 2007 tehran university made several blocks of concrete with 50-70*1000 PSI
+** FGCC (Functionally graded Cementitious Composite)
+laying different type of UHPC to achieve a concrete that is tougher than any single type

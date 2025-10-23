@@ -1,0 +1,14 @@
+* videos
+** TODO [[https://www.youtube.com/watch?v=BTdTEe9QL5k][High-Performance Hibernate (Vlad Mihalcea)]]
+* spring
+** activate h2 console access
+   spring.h2.console.enable=true
+* annotations
+** @Entity
+** @Id
+** @GeneratedValue
+   @GenerateValue(strategy=GenerationType.AUTO)
+** @ManyToMany
+** @JoinTable
+   @JoinTable(name="name",joinColumns=@JoinColumn(name="book_id"),inverseJoinColumn=@JoinColumn("author_id"))
+** @ElementCollection

@@ -1,0 +1,6 @@
+* download a youtube playlist into a series
+youtube-dl -o "%(playlist_index)s-%(title)s.%(ext)s" <playlist_link>
+* ./youtube-dl -f 249 "https://www.youtube.com/watch?v=HZ72KFzdz1U"
+youtube-dl --list-formats
+* download with proxy 
+  --proxy socks5://127.0.0.1:1080

@@ -1,0 +1,4 @@
+* [[https://www.youtube.com/watch?v=Dbytx0ivH7Q][rust concurency]]
+* Rust libraries
+** Tokio
+   http library

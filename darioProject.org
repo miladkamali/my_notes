@@ -1,0 +1,49 @@
+* Dario project
+** project definition
+before publishing a content we want to predict how the publishing will effect
+it's reach
+
+part of it is SEO and part of it is
+
+combination of AI and CI(Cultural inteligence)
+** implemetation
+*** ACL
+**** team
+**** role
+*** ticketing system
+*** Sign-in (user registration)
+*** dashboard
+**** list of projects and contents
+***** draft
+***** published
+***** unsaved draft
+**** smart content
+***** text analysis based on the input text
+***** compare content reach
+***** sugest title
+***** sentimental analysis
+*** Data collection
+**** facebook
+**** tictok
+**** twitter
+**** facebook
+*** booking time for CI [[https://calendly.com][calendly]]
+*** recommendation
+* estimation
+** setup with cloud services 3-5 days
+** API/system design ( 3-5 days ) 
+** user management ( 3 days)
+*** register users
+*** loging/logout
+*** token management
+** team/project management (3 days)
+** ACL system (4 days)
+** ticketing system ( 4 days )
+*** register tickets
+*** response to tickets
+** report system (7 days)
+** report services( 14-21 days)
+* sentimental analysis input text -> (keywords, headline)
+* prediction (text+ keyword + region+ platform) 
+* recomendation ( text + platform )
+* texsonomy

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       E44F63E2-8AAA-4651-BF99-9A2B8E9B4969
+:END:
+#+title: hacks
+* interesting hacks

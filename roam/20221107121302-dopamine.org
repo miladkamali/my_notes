@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       edcaa58c-ed9c-4485-ad4a-ce051a786208
+:END:
+#+title: dopamine
+* sources
+** [[https://www.youtube.com/watch?v=QmOF0crdyRU][ Controlling Your Dopamine For Motivation, Focus & Satisfaction | Huberman Lab Podcast #39 ]]

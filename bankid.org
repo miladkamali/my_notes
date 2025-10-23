@@ -1,0 +1,77 @@
+* documentation of SDK
+** phase One
+*** TODO what is already available documents                         :azadeh:
+*** TODO create a sequence diagram of the process                     :hamid:
+*** TODO create a postman collection of the APIs
+*** TODO document the error status
+* Dockerization project
+** getting the appropriate resources in development environment
+*** create a proper architecture document
+*** create a sequence diagram of the services
+*** create machine communi
+** technology transfer from UID to bank id
+move gRPC docker containter and protobuf definitons to the 
+*** knowledge
+*** technology
+*** TODO check with application security if it's ok that we use gRPC :email:azadeh:milad:
+* project gaining access to logs
+** TODO Obfescated log
+*** DONE develop the obfuscated log
+CLOSED: [2023-05-14 Sun 13:00]
+*** get security go head for this log
+**** DONE get log sample and documents                                :hamid:
+CLOSED: [2023-06-26 Mon 14:51]
+**** DONE send email to confirm with security                         :email:
+CLOSED: [2023-06-26 Mon 14:51]
+** TODO send an email to request our daily endpoint reports           :email:
+* setting up backup for liveness and facemaching
+** request resources for 
+* Operationional needs
+** DONE send an email to request 150GB storage for our core server    :email:
+CLOSED: [2023-06-14 Wed 12:35]
+** TODO wait for email response for 150GB storage
+** TODO prepare overview of endpoints 
+** TODO send an email for clean up script in database that needs running daily [2/2] :email:
+*** DONE get the script from amir                                     :hamid:
+CLOSED: [2023-06-14 Wed 12:38]
+*** DONE send email to azadeh
+CLOSED: [2023-06-14 Wed 12:38]
+** TODO increase hikarry connection poll to 100
+SCHEDULED: <2023-06-14 Wed>
+** TODO specify backup policies for each database 
+** Documentations
+*** create reboot document
+*** create sequence diagram
+** TODO Create an endpoint to call hamoon register again for a user   :hamid:
+SCHEDULED: <2023-06-20 Tue>
+** TODO [#A] endpoints to change the status of users
+** TODO [#A] endpoints to update
+** TODO setup dataguard for database
+*** understand policies for setting up dataguard in database
+** 
+* certificate update in production
+* Create Document for list of errors
+SCHEDULED: <2023-07-04 Tue>
+the goal is to check different senarios manually and observe the 
+** Android Host application
+*** TODO Lid auto generation
+*** TODO list of hosts
+*** TODO set up ssl pinning configuration
+** IOS host app
+*** create the host application
+* [#A] create backup machine for liveness and facemaching
+SCHEDULED: <2023-06-14 Wed>
+** get machine information to create these machines
+* Update UI
+** [#A] add required payment 
+** [#C] show how long the user has time to complete the process
+** TODO reset the mobile number each time you open the sdk
+* Generating reports 
+  - how many users have touched us
+  - how many users have been accepted/rejected
+  - how many users have finished the process
+  - which step each user is located at
+** a report to have at the end of each month to get number of people accept/reject
+* مغایرت گیری
+** 
+

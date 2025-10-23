@@ -1,0 +1,14 @@
+* get cards (IT is MOCK)
+** JWT token is useless, it's not being checked 
+** how are we supposed to request for other accounts cards
+   just using JWT token is not enough, we should pass in customer id(parti_id) or username
+** removing host header return HTML error
+** removing x-request-id return 
+   {
+    "path": "/api/v1/cards/info",
+    "message": "Missing request header 'x-request-id' for method parameter of type String"
+   }
+* order card
+** x-request-id is not mandatory
+** removing host results in HTML error
+** 

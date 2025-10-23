@@ -1,0 +1,16 @@
+* nice
+  https://www.deviantart.com/dmitryelizarov/gallery
+  https://www.deviantart.com/dmitryelizarov/art/Maria-Lisovaya-870315996
+  https://www.deviantart.com/louisdemirabert
+** https://www.deviantart.com/sergezhodik/gallery
+*** https://www.deviantart.com/sergezhodik/art/Great-view-867116914
+** https://www.deviantart.com/darkelfphoto/gallery
+** https://www.deviantart.com/bad---ass/gallery
+* scraper
+** https://github.com/Kent-Lee/deviantart-scraper
+** https://github.com/Romitas/DeviantArtScraper
+** https://gist.github.com/dmasad/809038
+** https://mlvnt.com/blog/tech/code/03/
+* apis
+** https://www.deviantart.com/developers/http/v1/20200519
+** https://github.com/Kent-Lee/deviantart-scraper

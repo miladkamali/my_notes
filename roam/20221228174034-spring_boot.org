@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       52a5db92-fa16-46e0-8a12-f27bfb201dca
+:END:
+#+title: spring boot
+[[https://www.youtube.com/watch?v=mPPhcU7oWDU][ Spring Boot Microservice Project Full Course in 6 Hours 🔥🔥🔥 ]]

@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       a8e7591e-a8c8-4540-a016-661525b4b202
+:END:
+#+title: org-roam
+* install org-roam
+set up spacemacs and org-roam
+
+#+begin_src shell
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+git clone https://github.com/org-roam/org-roam.git
+#+end_src
+
+
+open spacemacs configuration with space f e d
+
+insert the following into (defun dotspacemacs/user-config () section
+#+begin_src emacs-lisp
+(use-package org-roam
+    :load-path "~/org-roam"
+    :custom
+    (org-roam-directory "~/orgs/roam") ; replace with your path
+    :bind (
+           ("C-c n l" . org-roam-buffer-toggle)
+           ("C-c n f" . org-roam-node-find)
+           ("C-c n i" . org-roam-node-insert)
+           ("C-c n g" . org-roam-graph)
+           ("C-c n c" . org-roam-capture)
+           ;; dailies
+           ("C-c n j" . org-roam-dailies-capture-today)
+           )
+                                        ; global-page-break-lines-mode will break the org-roam buffer
+    :hook ( org-roam-mode . (lambda () (global-page-break-lines-mode -1)))
+    :config
+
+    (org-roam-setup)
+    (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
+    (org-roam-db-autosync-mode)
+    ;; If using org-roam-protocol
+    ;;(require 'org-roam-protocol)
+    )
+ #+end_src
+* possible alternative
+https://github.com/meedstrom/org-node

@@ -1,0 +1,4 @@
+* [[https://www.youtube.com/watch?v=0uejy9aCNbI][HOW FRCKN' HARD IS IT TO UNDERSTAND A URL?! - uXSS CVE-2018-6128]]
+* [[https://www.youtube.com/watch?v=eQFbG6CwwdI][Identifying Good Research to actually Learn Something - Cross-site Scripting]]
+* [[https://www.youtube.com/watch?v=HcrQy0C-hEA][XS-Search abusing the Chrome XSS Auditor - filemanager 35c3ctf]]
+* http://captf.com/practice-ctf/

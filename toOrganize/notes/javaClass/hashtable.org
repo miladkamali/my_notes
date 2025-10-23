@@ -1,0 +1,16 @@
+* 
+** methods to alivieate collision
+*** open addressing 
+    - linear probing
+      putting item in the next available position
+    - plus 3 rehash
+    - quadratic probing
+    - double hasing
+*** Closed addressing  
+    - chaining method
+    faster lookup 
+** requirements of good hashtable
+*** minimize collision
+*** uniform distrubution of hash table
+*** easy to calculate
+*** resolve 

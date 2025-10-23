@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       dc18b1ac-474e-4d4e-853d-0b50521003cb
+:END:
+#+title: us economy
+* treasury
+** types of security
+*** Treasury Bills (T-Bills):
+These are short-term securities with maturities of one year or less. Common maturities are 4, 8, 13, 17, 26, and 52 weeks.
+*** Treasury Notes (T-Notes)
+These have maturities ranging from two to ten years. Common maturities are 2, 3, 5, 7, and 10 years.
+*** Treasury Bonds (T-Bonds)
+These are the longest-term securities, with maturities of 20 or 30 years.
+*** Treasury Inflation-Protected Securities (TIPS)
+These are available as notes and bonds with maturities of 5, 10, and 30 years.
+*** Floating Rate Notes (FRNs)
+These have a maturity of two years.
+*** 
+* sources of information
+** [[https://fred.stlouisfed.org/][FRED federal reserve bank of ST. louis]]
+** [[https://www.federalreserve.gov/releases/h15/][Selected Interest Rates (Daily) - H.15]]
+** [[https://tradingeconomics.com/united-states/money-supply-m0][m0 money supply]]
+** tradomg economic
+*** https://tradingeconomics.com/analytics/pricing.aspx?source=nav
+** [[https://fiscaldata.treasury.gov/datasets/monthly-statement-public-debt/summary-of-treasury-securities-outstanding][Monthly Statement of the Public Debt (MSPD)]]
+** ISM the institue for suply management's manufacturing index
+** https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/treasury-securities-auctions-data

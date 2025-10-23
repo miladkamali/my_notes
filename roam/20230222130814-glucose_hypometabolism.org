@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       f13a8131-9851-417d-98aa-36123b98fade
+:END:
+#+title: glucose hypometabolism
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9125423/#:~:text=Glucose%20hypometabolism%2C%20likely%20related%20to,PD%20patients%20(%20Table%203%20)
+https://www.psychiatryadvisor.com/home/topics/geriatric-psychiatry/glucose-hypometabolism-neuropsychiatric-symptoms-cognitive-impairment/
