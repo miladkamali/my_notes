@@ -17,16 +17,30 @@ https://www.figma.com/proto/8xmjic6RtnoA27dV9Vp78x/Applicant-Tracking-System?pag
 ** Integration issues
 * delivery process for ATS                                         :@bentoak:
 ** finalizing the project[0/6]
-*** TODO finalizing authorization model and implementation [0/4]
+*** TODO finalizing authorization model and implementation [2/3]
 - State "TODO"       from              [2025-10-21 Tue 14:04]
-**** TODO check authorization model with saleh                        :saleh:
-SCHEDULED: <2025-10-22 Wed>
+**** DELEGATED check authorization model with saleh                   :saleh:
+DEADLINE: <2025-10-24 Fri> SCHEDULED: <2025-10-22 Wed>
+:LOGBOOK:
+- State "DELEGATED"  from "TODO"       [2025-10-23 Thu 15:25]
+:END:
 - State "TODO"       from              [2025-10-21 Tue 14:04]
-**** TODO check tuple insertion with armin
+***** a review meeting with saleh                                  :@meeting:
+**** DONE check tuple insertion with armin
+CLOSED: [2025-10-23 Thu 15:39]
+:LOGBOOK:
+- State "DONE"       from "DOINGNOW"   [2025-10-23 Thu 15:39]
+- State "DOINGNOW"   from "TODO"       [2025-10-23 Thu 15:38]
+:END:
 - State "TODO"       from              [2025-10-21 Tue 14:05]
-**** TODO create remaining endpoints for getting the role
+**** DONE create remaining endpoints for getting the role
+CLOSED: [2025-10-23 Thu 15:40]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-10-23 Thu 15:40]
+:END:
 - State "TODO"       from              [2025-10-21 Tue 14:49]
-*** TODO update documents on the project
+*** TODO update documents on the project                              :arash:
+SCHEDULED: <2025-10-27 Mon>
 *** DELEGATED add extra users to user seed for setup                  :saleh:
 DEADLINE: <2025-10-23 Thu>
 :LOGBOOK:
@@ -49,8 +63,18 @@ SCHEDULED: <2025-10-28 Tue>
 :LOGBOOK:
 - State "TODO"       from              [2025-10-23 Thu 13:36]
 :END:
-** deploy new environment for testing[0/2]
-*** DELEGATED create appropriate environment variable in front-end :adib:basir:
+** deploy new environment for testing[0/1]
+*** set up appropriate environment variables[0/2]
+:LOGBOOK:
+- State "TODO"       from              [2025-10-23 Thu 15:43]
+:END:
+**** NEXT move bucket name into environment                           :saleh:
+SCHEDULED: <2025-10-23 Thu>
+:LOGBOOK:
+- State "NEXT"       from "TODO"       [2025-10-23 Thu 15:42]
+- State "TODO"       from              [2025-10-23 Thu 15:42]
+:END:
+**** DELEGATED [#A] create appropriate environment variable in front-end :adib:basir:
 DEADLINE: <2025-10-23 Thu>
 :LOGBOOK:
 - State "DELEGATED"  from "TODO"       [2025-10-23 Thu 13:08]
@@ -61,7 +85,7 @@ DEADLINE: <2025-10-23 Thu>
 - State "DELEGATED"  from              [2025-10-23 Thu 13:09]
 :END:
 ** create data entry endpoint
-*** DELEGATED create an endpoint that                                 :saleh:
+*** DELEGATED create an endpoint that can be used to insert data      :saleh:
 SCHEDULED: <2025-10-26 Sun>
 :LOGBOOK:
 - State "DELEGATED"  from              [2025-10-23 Thu 13:30]
