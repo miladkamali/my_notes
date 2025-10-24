@@ -1,0 +1,1087 @@
+* State Monitoring Service - Code Review Issues
+** Overview
+This document contains a comprehensive review of the state-monitoring-service project, identifying critical security vulnerabilities, code quality issues, and architectural problems with detailed examples and fixes.
+** Critical Security Issues
+*** 1. SQL Injection Vulnerabilities
+**** Examples:
+
+***** Example 1 - Table Name Injection in SqlCommandGenerator.cs:**
+#+begin_src csharp
+// Line 10 - Vulnerable code
+public static string GenerateCheckTableNameSqlCommand(string tableName)
+{
+    return $"SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'dbo' AND TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = \'{tableName}\'";
+}
+#+end_src
+
+***** Example 2 - Drop Table Injection:**
+#+begin_src csharp
+// Line 14 - Vulnerable code
+public static string GenerateDropTable(string tableName)
+{
+    return $"DROP TABLE \"{tableName}\"";
+}
+#+end_src
+
+***** Example 3 - Column Name Injection:**
+#+begin_src csharp
+// Line 21 - Vulnerable code
+public static string GenerateColumnNameAndDataTypeSqlCommand(string tableName)
+{
+    return $"SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N\'{tableName}\'";
+}
+#+end_src
+
+***** Example 4 - Update Query Injection in BffSqlCommandGenerator.cs:**
+#+begin_src csharp
+// Line 79 - Vulnerable code
+return $"{fieldName} {conditionOperator} {value}";
+#+end_src
+
+***** Example 5 - CREATE TABLE Injection in SqlCommandGenerator.cs:**
+#+begin_src csharp
+// Lines 24-50 - Vulnerable CREATE TABLE generation
+public static string GenerateCreateTableSqlCommand(string tableName,
+    List<Dictionary<string, object>> tableColumnInfoList)
+{
+    var sb = new StringBuilder($"CREATE TABLE \"{tableName}\" (");
+    for (int i = 0; i < tableColumnInfoList.Count; i++)
+    {
+        if (i != 0) sb.Append(",\n");
+        var row = tableColumnInfoList[i];
+        var columnName = $"{row["COLUMN_NAME"]}";  // Direct injection
+        var dataType = $"{row["DATA_TYPE"]}";      // Direct injection
+        var characterMaxLength = $"{row["CHARACTER_MAXIMUM_LENGTH"]}"; // Direct injection
+        // ... rest of vulnerable code
+    }
+    sb.Append(");");
+    return sb.ToString();
+}
+#+end_src
+
+***** Example 6 - INSERT Statement Injection in SqlCommandGenerator.cs:**
+#+begin_src csharp
+// Lines 71-100 - Vulnerable INSERT generation
+public static List<string> GenerateInsertDataSqlCommand(string tableName, List<string> columnNameList,
+    List<Dictionary<string, object>> selectResultList)
+{
+    List<string> insertSqlCommandList = new List<string>();
+    foreach (var row in selectResultList)
+    {
+        // ... vulnerable code that directly concatenates values
+        insertSqlCommandList.Add($"INSERT INTO \"{tableName}\" {columnNameSql} VALUES {columnDataSql}");
+    }
+    return insertSqlCommandList;
+}
+#+end_src
+
+***** Example 7 - UPDATE Statement Injection in SqlCommandGenerator.cs:**
+#+begin_src csharp
+// Lines 124-141 - Vulnerable UPDATE generation
+public static string GenerateUpdateRowSqlCommand(string tableName, KeyValuePair<string, object> uniqueField,
+    Dictionary<string, object> newColumnDataDic)
+{
+    var columnNameList = newColumnDataDic.Keys.ToList<string>();
+    StringBuilder sb = new StringBuilder($"UPDATE {tableName} SET ");
+    for (int i = 0; i < columnNameList.Count; i++)
+    {
+        var columnName = columnNameList[i];  // Direct injection
+        var columnData = CommonSqlUtils.FixColumnData(newColumnDataDic[columnName]);
+        if (i != 0) sb.Append(",\n");
+        sb.Append($"{columnName} = {columnData}");  // Vulnerable concatenation
+    }
+    var uniqueFieldName = uniqueField.Key;  // Direct injection
+    var uniqueFieldData = CommonSqlUtils.FixColumnData(uniqueField.Value);
+    sb.Append($"WHERE {uniqueFieldName} = {uniqueFieldData}");  // Vulnerable WHERE clause
+    return sb.ToString();
+}
+#+end_src
+
+***** Example 8 - DateTime Injection in CommonSqlUtils.cs:**
+#+begin_src csharp
+// Lines 35-40 - Vulnerable DateTime handling
+public static string ConvertAmPmTo24hDateTime(string amPmString)
+{
+    string outputFormat = "MM/dd/yyyy HH:mm:ss";
+    DateTime dateTime = DateTime.Parse(amPmString);  // No validation
+    return dateTime.ToString(outputFormat);  // Direct injection into SQL
+}
+#+end_src
+
+***** Example 9 - String Data Injection in CommonSqlUtils.cs:**
+#+begin_src csharp
+// Lines 10-27 - Vulnerable string handling
+public static string FixColumnData(object value)
+{
+    switch (value.GetType().Name)
+    {
+        case "String": return $"\'{fixString(value.ToString())}\'";  // Inadequate escaping
+        case "DateTime": return $"\'{ConvertAmPmTo24hDateTime($"{value}")}\'";  // Double injection
+        case "Guid": return $"\'{value}\'";  // Direct injection
+        // ... other cases
+    }
+    return "NULL";
+}
+
+private static string fixString(string? input)
+{
+    if (input == null) throw new ArgumentNullException("Input is null !!!");
+    return input.Replace("\'", "");  // Inadequate escaping - only removes single quotes
+}
+#+end_src
+
+***** Example 10 - SELECT with WHERE Clause Injection in SqlCommandGenerator.cs:**
+#+begin_src csharp
+// Lines 65-69 - Vulnerable SELECT with condition
+public static string GenerateSelectAllWithConditionSqlCommand(string tableName,
+    KeyValuePair<string, object> uniqueField)
+{
+    return $"SELECT * FROM \"{tableName}\" WHERE \"{uniqueField.Key}\"={uniqueField.Value}";
+    //                                                                  ^^^^^^^^^^^^^^^^^^^^
+    //                                                                  Direct injection
+}
+#+end_src
+
+**** Fixes:
+***** Fix 1 - Use Parameterized Queries:**
+:LOGBOOK:
+- State "TODO"       from              [2025-10-24 Fri 13:15]
+:END:
+#+begin_src csharp
+public static string GenerateCheckTableNameSqlCommand(string tableName)
+{
+    return "SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'dbo' AND TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = @tableName";
+}
+
+// In DatabaseHelper.cs, modify ExecuteReader to support parameters:
+public static List<Dictionary<string, object>> ExecuteReader(string connectionString, string sqlCommand, Dictionary<string, object> parameters = null)
+{
+    using (SqlConnection connection = getConnection(connectionString))
+    {
+        using (SqlCommand command = new SqlCommand(sqlCommand, connection))
+        {
+            if (parameters != null)
+            {
+                foreach (var param in parameters)
+                {
+                    command.Parameters.AddWithValue(param.Key, param.Value);
+                }
+            }
+            connection.Open();
+            var sqlDataReader = command.ExecuteReader();
+            return generateResultDic(sqlDataReader);
+        }
+    }
+}
+#+end_src
+
+***** Fix 2 - Input Validation:**
+#+begin_src csharp
+public static string GenerateCheckTableNameSqlCommand(string tableName)
+{
+    // Validate table name format
+    if (!Regex.IsMatch(tableName, @"^[a-zA-Z_][a-zA-Z0-9_]*$"))
+        throw new ArgumentException("Invalid table name format");
+    
+    return "SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'dbo' AND TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = @tableName";
+}
+#+end_src
+
+***** Fix 3 - Use SQL Server's QUOTENAME function:**
+#+begin_src csharp
+public static string GenerateDropTable(string tableName)
+{
+    // Validate and sanitize
+    if (!IsValidIdentifier(tableName))
+        throw new ArgumentException("Invalid table name");
+    
+    return $"DROP TABLE {SqlServerHelper.QuoteIdentifier(tableName)}";
+}
+
+private static bool IsValidIdentifier(string identifier)
+{
+    return !string.IsNullOrEmpty(identifier) && 
+           Regex.IsMatch(identifier, @"^[a-zA-Z_][a-zA-Z0-9_]*$") &&
+           identifier.Length <= 128;
+}
+#+end_src
+
+*** 2. Hardcoded Database Credentials
+
+**** Examples:
+***** Example 1 - Plaintext Passwords in appsettings.json:**
+#+begin_src json
+{
+  "ConnectionStrings": {
+    "PrimaryDatabase": "Server=.;Database=Primary;User Id=sa;Password=Uid@123456;TrustServerCertificate=True;",
+    "SecondaryDatabase": "Server=.;Database=Secondary;User Id=sa;Password=Uid@123456;TrustServerCertificate=True;"
+  }
+}
+#+end_src
+
+***** Example 2 - Hardcoded Connection Strings in Code:**
+#+begin_src csharp
+// In DataService.cs - Lines 17-26
+public DataService(IOptions<List<TableInfo>> tablesOptions,
+    IOptions<ConnectionStringConfigs> connectionStringOptions,
+    DataRepository dataRepository)
+{
+    _dataRepository = dataRepository;
+    _tableInfoList = tablesOptions.Value;
+    _connectionStringConfigs = connectionStringOptions.Value;  // Contains hardcoded passwords
+    ILoggerFactory factory = LoggerFactory.Create(builder => builder.AddConsole());
+    _logger = factory.CreateLogger("DataService");
+}
+#+end_src
+
+***** Example 3 - Insecure Connection String Configuration:**
+#+begin_src csharp
+// In ConnectionStringConfigs.cs - No encryption or security measures
+public class ConnectionStringConfigs
+{
+    [Required] public string PrimaryDatabase { set; get; }    // Plaintext connection string
+    [Required] public string SecondaryDatabase { set; get; } // Plaintext connection string
+}
+#+end_src
+
+***** Example 4 - TrustServerCertificate=True in Production:**
+#+begin_src json
+{
+  "ConnectionStrings": {
+    "PrimaryDatabase": "Server=.;Database=Primary;User Id=sa;Password=Uid@123456;TrustServerCertificate=True;",
+    "SecondaryDatabase": "Server=.;Database=Secondary;User Id=sa;Password=Uid@123456;TrustServerCertificate=True;"
+  }
+}
+// TrustServerCertificate=True bypasses SSL certificate validation - security risk
+#+end_src
+
+***** Example 5 - Same Password for Multiple Databases:**
+#+begin_src json
+{
+  "ConnectionStrings": {
+    "PrimaryDatabase": "Server=.;Database=Primary;User Id=sa;Password=Uid@123456;TrustServerCertificate=True;",
+    "SecondaryDatabase": "Server=.;Database=Secondary;User Id=sa;Password=Uid@123456;TrustServerCertificate=True;"
+  }
+}
+// Same password "Uid@123456" used for both databases - violates principle of least privilege
+#+end_src
+
+***** Example 6 - Weak Password Policy:**
+#+begin_src json
+{
+  "ConnectionStrings": {
+    "PrimaryDatabase": "Server=.;Database=Primary;User Id=sa;Password=Uid@123456;TrustServerCertificate=True;",
+    "SecondaryDatabase": "Server=.;Database=Secondary;User Id=sa;Password=Uid@123456;TrustServerCertificate=True;"
+  }
+}
+// Password "Uid@123456" is weak and predictable
+#+end_src
+
+***** Example 7 - SA Account Usage:**
+#+begin_src json
+{
+  "ConnectionStrings": {
+    "PrimaryDatabase": "Server=.;Database=Primary;User Id=sa;Password=Uid@123456;TrustServerCertificate=True;",
+    "SecondaryDatabase": "Server=.;Database=Secondary;User Id=sa;Password=Uid@123456;TrustServerCertificate=True;"
+  }
+}
+// Using 'sa' account (system administrator) - excessive privileges
+#+end_src
+
+**** Fixes:
+
+***** Fix 1 - Use Environment Variables:**
+#+begin_src json
+{
+  "ConnectionStrings": {
+    "PrimaryDatabase": "Server=${DB_SERVER};Database=${PRIMARY_DB};User Id=${DB_USER};Password=${DB_PASSWORD};TrustServerCertificate=True;",
+    "SecondaryDatabase": "Server=${DB_SERVER};Database=${SECONDARY_DB};User Id=${DB_USER};Password=${DB_PASSWORD};TrustServerCertificate=True;"
+  }
+}
+#+end_src
+
+***** Fix 2 - Use Azure Key Vault or similar:**
+#+begin_src csharp
+// In Program.cs
+builder.Configuration.AddAzureKeyVault(
+    new SecretClient(new Uri(builder.Configuration["KeyVault:VaultUri"]), 
+    new DefaultAzureCredential()),
+    new KeyVaultSecretManager());
+#+end_src
+
+**Fix 3 - Use User Secrets for Development:**
+#+begin_src csharp
+// In Program.cs
+if (builder.Environment.IsDevelopment())
+{
+    builder.Configuration.AddUserSecrets<Program>();
+}
+#+end_src
+
+**Fix 4 - Use Connection String Builder:**
+#+begin_src csharp
+public class SecureConnectionStringBuilder
+{
+    public static string BuildConnectionString(string server, string database, string userId, string password)
+    {
+        var builder = new SqlConnectionStringBuilder
+        {
+            DataSource = server,
+            InitialCatalog = database,
+            UserID = userId,
+            Password = password,
+            TrustServerCertificate = true,
+            Encrypt = true
+        };
+        return builder.ConnectionString;
+    }
+}
+#+end_src
+
+*** 3. Inadequate SQL Injection Protection
+
+**** Examples:
+
+***** Example 1 - Flawed Logic in SqlSafeUtil.cs:**
+#+begin_src csharp
+public static void CheckForSQLInjection(string userInput)
+{
+    bool isSQLInjection = false;
+    string[] sqlCheckList = { "--", ";--", ";", "/*", "*/", "@@", "@", "char", "nchar", "varchar", "nvarchar", "alter", "begin", "cast", "create", "cursor", "declare", "delete", "drop", "end", "exec", "execute", "fetch", "insert", "kill", "select", "sys", "sysobjects", "syscolumns", "table", "update" };
+
+    string CheckString = userInput.Replace("'", "''");
+
+    for (int i = 0; i <= sqlCheckList.Length - 1; i++)
+    {
+        if ((CheckString.IndexOf(sqlCheckList[i], StringComparison.OrdinalIgnoreCase) < 0))
+        {
+            isSQLInjection = true; // This logic is backwards!
+        }
+    }
+
+    if (!isSQLInjection) throw new BadRequestException(ErrorMessages.INVALID_INPUT);
+}
+#+end_src
+
+***** Example 2 - Incomplete Blacklist in SqlSafeUtil.cs:**
+#+begin_src csharp
+// Lines 14-15 - Missing critical SQL keywords
+string[] sqlCheckList = { 
+    "--", ";--", ";", "/*", "*/", "@@", "@", 
+    "char", "nchar", "varchar", "nvarchar", 
+    "alter", "begin", "cast", "create", "cursor", "declare", 
+    "delete", "drop", "end", "exec", "execute", "fetch", 
+    "insert", "kill", "select", "sys", "sysobjects", "syscolumns", 
+    "table", "update" 
+};
+// Missing: UNION, OR, AND, WHERE, HAVING, GROUP BY, ORDER BY, 
+//          INFORMATION_SCHEMA, xp_cmdshell, sp_executesql, etc.
+#+end_src
+
+***** Example 3 - Inadequate String Escaping:**
+#+begin_src csharp
+// Line 18 - Only replaces single quotes
+string CheckString = userInput.Replace("'", "''");
+// Missing: double quotes, backslashes, null bytes, unicode characters
+#+end_src
+
+***** Example 4 - Case-Insensitive Bypass:**
+#+begin_src csharp
+// Line 23 - Case-insensitive check can be bypassed
+if ((CheckString.IndexOf(sqlCheckList[i], StringComparison.OrdinalIgnoreCase) < 0))
+{
+    isSQLInjection = true;
+}
+// Attackers can use: SeLeCt, SELECT, select, etc.
+#+end_src
+
+***** Example 5 - Unicode and Encoding Bypass:**
+#+begin_src csharp
+// No handling of unicode characters or encoding
+// Attackers can use: %27 (single quote), %2D%2D (--), etc.
+// Or unicode equivalents: \u0027, \u002D\u002D, etc.
+#+end_src
+
+***** Example 6 - Inconsistent Usage in BffSqlCommandGenerator.cs:**
+#+begin_src csharp
+// Lines 13 and 72 - Only checks entityName and fieldName
+SqlSafeUtil.CheckForSQLInjection(entityName);  // Line 13
+SqlSafeUtil.CheckForSQLInjection(fieldName);   // Line 72
+// But doesn't check conditionOperator, value, or other parameters
+#+end_src
+
+***** Example 7 - No Protection for Numeric Values:**
+#+begin_src csharp
+// In BffSqlCommandGenerator.cs - Lines 88-89
+case Value.KindOneofCase.NumberValue: return $"{value.NumberValue}";
+case Value.KindOneofCase.BoolValue: return $"{value.BoolValue}";
+// Numeric and boolean values are not checked for SQL injection
+#+end_src
+
+***** Example 8 - Time-Based Blind SQL Injection:**
+#+begin_src csharp
+// The current protection doesn't prevent time-based attacks
+// Attackers can use: '; WAITFOR DELAY '00:00:05' --
+// Or: '; IF (1=1) WAITFOR DELAY '00:00:05' --
+#+end_src
+
+**** Fixes:
+
+***** Fix 1 - Proper Input Validation:**
+#+begin_src csharp
+public static class SqlSafeUtil
+{
+    private static readonly HashSet<string> AllowedIdentifiers = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+    {
+        "Customers", "Products", "Orders", "Users" // Whitelist approach
+    };
+    
+    public static void ValidateTableName(string tableName)
+    {
+        if (string.IsNullOrWhiteSpace(tableName))
+            throw new ArgumentException("Table name cannot be null or empty");
+            
+        if (!Regex.IsMatch(tableName, @"^[a-zA-Z_][a-zA-Z0-9_]*$"))
+            throw new ArgumentException("Invalid table name format");
+            
+        if (!AllowedIdentifiers.Contains(tableName))
+            throw new ArgumentException("Table name not in allowed list");
+    }
+    
+    public static void ValidateColumnName(string columnName)
+    {
+        if (string.IsNullOrWhiteSpace(columnName))
+            throw new ArgumentException("Column name cannot be null or empty");
+            
+        if (!Regex.IsMatch(columnName, @"^[a-zA-Z_][a-zA-Z0-9_]*$"))
+            throw new ArgumentException("Invalid column name format");
+    }
+}
+#+end_src
+
+***** Fix 2 - Use Parameterized Queries Instead:**
+#+begin_src csharp
+public class SecureSqlCommandGenerator
+{
+    public static (string sql, Dictionary<string, object> parameters) GenerateSecureSelectCommand(
+        string tableName, 
+        string whereClause = null, 
+        Dictionary<string, object> whereParameters = null)
+    {
+        ValidateTableName(tableName);
+        
+        var sql = $"SELECT * FROM [{tableName}]";
+        var parameters = new Dictionary<string, object>();
+        
+        if (!string.IsNullOrEmpty(whereClause))
+        {
+            sql += " WHERE " + whereClause;
+            if (whereParameters != null)
+            {
+                foreach (var param in whereParameters)
+                {
+                    parameters.Add(param.Key, param.Value);
+                }
+            }
+        }
+        
+        return (sql, parameters);
+    }
+    
+    private static void ValidateTableName(string tableName)
+    {
+        if (!Regex.IsMatch(tableName, @"^[a-zA-Z_][a-zA-Z0-9_]*$"))
+            throw new ArgumentException("Invalid table name");
+    }
+}
+#+end_src
+
+**Fix 3 - Use Entity Framework or Dapper:**
+#+begin_src csharp
+// Using Dapper for safe parameterized queries
+public class SecureDataRepository
+{
+    private readonly IDbConnection _connection;
+    
+    public async Task<IEnumerable<T>> QueryAsync<T>(string sql, object parameters = null)
+    {
+        return await _connection.QueryAsync<T>(sql, parameters);
+    }
+    
+    public async Task<T> QuerySingleAsync<T>(string sql, object parameters = null)
+    {
+        return await _connection.QuerySingleOrDefaultAsync<T>(sql, parameters);
+    }
+}
+#+end_src
+
+*** 4. Poor Error Handling
+
+**** Examples:
+***** Example 1 - Generic Exception Catching in StateMonitoringGrpcService.cs:**
+#+begin_src csharp
+public override async Task<EntitySearchResponse> EntitySearch(EntitySearchRequest request, ServerCallContext context)
+{
+    try
+    {
+        var entitySearchResult = _bffService.GetEntitySearchResult(entitySearchInfo);
+        // ... success response
+    }
+    catch (Exception e) // Too generic!
+    {
+        var status = ExceptionHandler.ExceptionTypeToGrpcStatus(e);
+        // ... error response
+    }
+}
+#+end_src
+
+***** Example 2 - Missing Null Checks in DataService.cs:**
+#+begin_src csharp
+public void CheckChangesTableDatabaseAndUpdate(TableInfo tableInfo)
+{
+    _logger.LogInformation($"{DateTime.Now} --- Check change table {tableInfo.TableName}.");
+    // No null check for tableInfo!
+    CheckNewInsertedRowsAndUpdateDatabase(_connectionStringConfigs.PrimaryDatabase, _connectionStringConfigs.SecondaryDatabase, tableInfo);
+}
+#+end_src
+
+***** Example 3 - Array Index Out of Bounds in DataService.cs:**
+#+begin_src csharp
+// Lines 58-59 - No bounds checking
+var lastInsertedDateTime =
+    CommonSqlUtils.ConvertAmPmTo24hDateTime($"{lastInsertedDateTimeList[0].Values.ToArray()[0]}");
+// Will throw IndexOutOfRangeException if list is empty or array is empty
+#+end_src
+
+***** Example 4 - Missing Exception Handling in DataRepository.cs:**
+#+begin_src csharp
+// Lines 96-108 - No exception handling in UpdateData method
+public void UpdateData(string dbConnectionString, string tableName, List<Dictionary<string, object>> data)
+{
+    foreach (var row in data)
+    {
+        var uniqueFieldName = row.Keys.ToArray()[0];  // Could throw IndexOutOfRangeException
+        var uniqueFieldValue = row[uniqueFieldName];
+        KeyValuePair<string, object> uniqueField =
+            new KeyValuePair<string, object>(uniqueFieldName, uniqueFieldValue);
+        var updateSqlCommand = SqlCommandGenerator.GenerateUpdateRowSqlCommand(tableName, uniqueField, row);
+        DatabaseHelper.ExecuteNonQuery(dbConnectionString, updateSqlCommand);  // No exception handling
+    }
+}
+#+end_src
+
+***** Example 5 - Generic Exception in WorkflowOrchestrator.cs:**
+#+begin_src csharp
+// Lines 58-66 - Generic exception handling
+try
+{
+    handle.TerminateAsync("Terminating all workflows from .NET SDK");
+    _logger.LogInformation($"{DateTime.Now} --- Workflow {workflowId} terminated.");
+}
+catch (Exception ex)  // Too generic!
+{
+    _logger.LogInformation($"{DateTime.Now} --- Error terminating workflow {workflowId}: {ex.Message}");
+}
+#+end_src
+
+***** Example 6 - Missing Validation in CommonSqlUtils.cs:**
+#+begin_src csharp
+// Lines 23-27 - No null or format validation
+private static string fixString(string? input)
+{
+    if (input == null) throw new ArgumentNullException("Input is null !!!");
+    return input.Replace("\'", "");  // No validation of input format
+}
+
+// Lines 35-40 - No DateTime format validation
+public static string ConvertAmPmTo24hDateTime(string amPmString)
+{
+    string outputFormat = "MM/dd/yyyy HH:mm:ss";
+    DateTime dateTime = DateTime.Parse(amPmString);  // Could throw FormatException
+    return dateTime.ToString(outputFormat);
+}
+#+end_src
+
+***** Example 7 - Inconsistent Error Handling in StateMonitoringGrpcService.cs:**
+#+begin_src csharp
+// Different error handling patterns across methods
+public override async Task<EntitySearchResponse> EntitySearch(EntitySearchRequest request, ServerCallContext context)
+{
+    try { /* ... */ }
+    catch (Exception e) { /* Generic handling */ }
+}
+
+public override async Task<CheckTableChangesResponse> CheckTableChanges(CheckTableChangesRequest request, ServerCallContext context)
+{
+    try { /* ... */ }
+    catch(BadRequestException e) { /* Specific handling */ }
+    // Missing catch for other exception types
+}
+#+end_src
+
+***** Example 8 - No Error Recovery in DatabaseHelper.cs:**
+#+begin_src csharp
+// Lines 9-19 - No connection retry or error recovery
+public static int ExecuteNonQuery(string connectionString, string sqlCommand)
+{
+    using (SqlConnection connection = getConnection(connectionString))
+    {
+        using (SqlCommand command = new SqlCommand(sqlCommand, connection))
+        {
+            connection.Open();  // Could fail - no retry logic
+            return command.ExecuteNonQuery();  // Could fail - no error handling
+        }
+    }
+}
+#+end_src
+
+***** Example 9 - Missing Input Validation in BffService.cs:**
+#+begin_src csharp
+// Lines 23-27 - No validation of EntitySearchInfo
+public List<Struct> GetEntitySearchResult(EntitySearchInfo entitySearchInfo)
+{
+    var result = _dataRepository.GetEntitySearchResultList(_dbConnectionString, entitySearchInfo);
+    return FillStructList(result);
+}
+// No null checks, format validation, or sanitization
+#+end_src
+
+***** Example 10 - Silent Failures in DataService.cs:**
+#+begin_src csharp
+// Lines 30-34 - Silent failure without proper logging
+if (_tableInfoList.Count == 0)
+{
+    _logger.LogWarning("{} --- Table list is empty !!!", DateTime.Now);
+    return;  // Silent failure - no exception thrown
+}
+#+end_src
+
+**** Fixes:
+
+***** Fix 1 - Specific Exception Handling:**
+#+begin_src csharp
+public override async Task<EntitySearchResponse> EntitySearch(EntitySearchRequest request, ServerCallContext context)
+{
+    try
+    {
+        if (request?.EntitySearchInfo == null)
+            throw new ArgumentNullException(nameof(request.EntitySearchInfo));
+
+        var entitySearchResult = _bffService.GetEntitySearchResult(request.EntitySearchInfo);
+
+        return new EntitySearchResponse
+        {
+            Results = { entitySearchResult },
+            ResponseContext = new ResponseContext()
+            {
+                Status = new Status
+                {
+                    Code = (int)Code.Ok,
+                    Message = "Success"
+                }
+            }
+        };
+    }
+    catch (ArgumentNullException ex)
+    {
+        _logger.LogWarning("Null argument in EntitySearch: {Message}", ex.Message);
+        return CreateErrorResponse(Code.InvalidArgument, "Invalid request parameters");
+    }
+    catch (SqlException ex)
+    {
+        _logger.LogError(ex, "Database error in EntitySearch");
+        return CreateErrorResponse(Code.Internal, "Database operation failed");
+    }
+    catch (UnauthorizedAccessException ex)
+    {
+        _logger.LogWarning("Unauthorized access in EntitySearch: {Message}", ex.Message);
+        return CreateErrorResponse(Code.PermissionDenied, "Access denied");
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError(ex, "Unexpected error in EntitySearch");
+        return CreateErrorResponse(Code.Internal, "An unexpected error occurred");
+    }
+}
+
+private EntitySearchResponse CreateErrorResponse(Code code, string message)
+{
+    return new EntitySearchResponse
+    {
+        ResponseContext = new ResponseContext()
+        {
+            Status = new Status
+            {
+                Code = (int)code,
+                Message = message
+            }
+        }
+    };
+}
+#+end_src
+
+***** Fix 2 - Input Validation:**
+#+begin_src csharp
+public void CheckChangesTableDatabaseAndUpdate(TableInfo tableInfo)
+{
+    if (tableInfo == null)
+        throw new ArgumentNullException(nameof(tableInfo));
+    if (string.IsNullOrWhiteSpace(tableInfo.TableName))
+        throw new ArgumentException("Table name cannot be null or empty", nameof(tableInfo));
+
+    if (string.IsNullOrWhiteSpace(tableInfo.InsertDateTimeColumnName))
+        throw new ArgumentException("Insert date time column name cannot be null or empty", nameof(tableInfo));
+
+    if (string.IsNullOrWhiteSpace(tableInfo.UpdateDateTimeColumnName))
+        throw new ArgumentException("Update date time column name cannot be null or empty", nameof(tableInfo));
+
+    try
+    {
+        _logger.LogInformation("Checking changes for table {TableName}", tableInfo.TableName);
+        CheckNewInsertedRowsAndUpdateDatabase(_connectionStringConfigs.PrimaryDatabase, _connectionStringConfigs.SecondaryDatabase, tableInfo);
+        CheckNewUpdateDataAndUpdateDatabase(_connectionStringConfigs.PrimaryDatabase, _connectionStringConfigs.SecondaryDatabase, tableInfo);
+    }
+    catch (SqlException ex)
+    {
+        _logger.LogError(ex, "Database error while checking changes for table {TableName}", tableInfo.TableName);
+        throw new DataAccessException($"Failed to check changes for table {tableInfo.TableName}", ex);
+    }
+}
+#+end_src
+
+***** Fix 3 - Custom Exception Types:**
+#+begin_src csharp
+public class DataAccessException : Exception
+{
+    public DataAccessException(string message) : base(message) { }
+    public DataAccessException(string message, Exception innerException) : base(message, innerException) { }
+}
+
+public class ValidationException : Exception
+{
+    public ValidationException(string message) : base(message) { }
+    public ValidationException(string message, Exception innerException) : base(message, innerException) { }
+}
+#+end_src
+
+*** 5. Resource Management Problems
+
+**** Examples:
+
+***** Example 1 - Missing Disposal in DatabaseHelper.cs:**
+#+begin_src csharp
+public static List<Dictionary<string, object>> ExecuteReader(string connectionString, string sqlCommand)
+{
+    using (SqlConnection connection = getConnection(connectionString))
+    {
+        using (SqlCommand command = new SqlCommand(sqlCommand, connection))
+        {
+            connection.Open();
+            var sqlDataReader = command.ExecuteReader(); // Not disposed!
+            return generateResultDic(sqlDataReader);
+        }
+    }
+}
+#+end_src
+
+***** Example 2 - No Connection Pooling in DatabaseHelper.cs:**
+#+begin_src csharp
+// Lines 51-54 - Creates new connection for each operation
+private static SqlConnection getConnection(string connectionString)
+{
+    return new SqlConnection(connectionString);  // No connection pooling
+}
+#+end_src
+
+***** Example 3 - Missing Async Operations in DatabaseHelper.cs:**
+#+begin_src csharp
+// All database operations are synchronous
+public static int ExecuteNonQuery(string connectionString, string sqlCommand)
+{
+    // Synchronous operation - blocks thread
+    return command.ExecuteNonQuery();
+}
+
+public static List<Dictionary<string, object>> ExecuteReader(string connectionString, string sqlCommand)
+{
+    // Synchronous operation - blocks thread
+    var sqlDataReader = command.ExecuteReader();
+}
+#+end_src
+
+***** Example 4 - No Connection Timeout Configuration:**
+#+begin_src csharp
+// Lines 51-54 - No timeout configuration
+private static SqlConnection getConnection(string connectionString)
+{
+    return new SqlConnection(connectionString);
+    // Missing: ConnectionTimeout, CommandTimeout, etc.
+}
+#+end_src
+
+***** Example 5 - Resource Leaks in DataService.cs:**
+#+begin_src csharp
+// Lines 54-66 - Multiple database operations without proper resource management
+var lastInsertedDateTimeList = _dataRepository.GetLastInsertDateTime(secondaryDatabaseConnectionString,
+    tableInfo.TableName, tableInfo.InsertDateTimeColumnName, tableInfo.UpdateDateTimeColumnName);
+// Each call creates new connection - no connection reuse
+var newInsertedRows = _dataRepository.GetInsertedRowsAfterDate(primaryDatabaseConnectionString,
+    tableInfo.TableName, tableInfo.InsertDateTimeColumnName, tableInfo.UpdateDateTimeColumnName, lastInsertedDateTime);
+#+end_src
+
+***** Example 6 - No Connection Retry Logic:**
+#+begin_src csharp
+// Lines 15-16 in DatabaseHelper.cs - No retry on connection failure
+connection.Open();
+return command.ExecuteNonQuery();
+// Missing: retry logic for transient failures
+#+end_src
+
+***** Example 7 - Memory Leaks in WorkflowOrchestrator.cs:**
+#+begin_src csharp
+// Lines 16-17 - Dictionary grows without cleanup
+private readonly Dictionary<string, string> _tablesWorkflowId = new();
+// No mechanism to clean up old workflow IDs
+#+end_src
+
+***** Example 8 - No Resource Limits in DataRepository.cs:**
+#+begin_src csharp
+// Lines 48-53 - No limits on data size
+public List<Dictionary<string, object>> SelectDataWithOutCondition(string dbConnectionString, string tableName, List<string> columnsName)
+{
+    var selectSqlCommand = SqlCommandGenerator.GenerateSelectWithOutConditionSqlCommand(tableName, columnsName);
+    return DatabaseHelper.ExecuteReader(dbConnectionString, selectSqlCommand);
+    // Could load entire table into memory - no pagination or limits
+}
+#+end_src
+
+***** Example 9 - Inefficient Data Processing in DataService.cs:**
+#+begin_src csharp
+// Lines 64-66 - Inefficient data processing
+var columnNameList = newInsertedRows[0].Keys.ToList();
+_dataRepository.InsertData(secondaryDatabaseConnectionString, tableInfo.TableName, columnNameList, newInsertedRows);
+// Processes all rows at once - no batching or streaming
+#+end_src
+
+***** Example 10 - No Connection Health Checks:**
+#+begin_src csharp
+// No connection health validation before use
+public static List<Dictionary<string, object>> ExecuteReader(string connectionString, string sqlCommand)
+{
+    using (SqlConnection connection = getConnection(connectionString))
+    {
+        // No health check - connection might be stale
+        connection.Open();
+        // ...
+    }
+}
+#+end_src
+
+**** Fixes:
+
+***** Fix 1 - Proper Resource Disposal:**
+#+begin_src csharp
+public static List<Dictionary<string, object>> ExecuteReader(string connectionString, string sqlCommand)
+{
+    using (SqlConnection connection = getConnection(connectionString))
+    {
+        using (SqlCommand command = new SqlCommand(sqlCommand, connection))
+        {
+            connection.Open();
+            using (var sqlDataReader = command.ExecuteReader()) // Properly disposed
+            {
+                return generateResultDic(sqlDataReader);
+            }
+        }
+    }
+}
+#+end_src
+
+***** Fix 2 - Async Resource Management:**
+#+begin_src csharp
+public static async Task<List<Dictionary<string, object>>> ExecuteReaderAsync(string connectionString, string sqlCommand)
+{
+    using (SqlConnection connection = getConnection(connectionString))
+    {
+        using (SqlCommand command = new SqlCommand(sqlCommand, connection))
+        {
+            await connection.OpenAsync();
+            using (var sqlDataReader = await command.ExecuteReaderAsync())
+            {
+                return await generateResultDicAsync(sqlDataReader);
+            }
+        }
+    }
+}
+#+end_src
+
+***** Fix 3 - Connection Pooling:**
+#+begin_src csharp
+public class DatabaseHelper
+{
+    private static readonly ConcurrentDictionary<string, SqlConnection> _connectionPool = new();
+    
+    public static async Task<List<Dictionary<string, object>>> ExecuteReaderAsync(string connectionString, string sqlCommand)
+    {
+        var connection = GetOrCreateConnection(connectionString);
+        using (SqlCommand command = new SqlCommand(sqlCommand, connection))
+        {
+            using (var sqlDataReader = await command.ExecuteReaderAsync())
+            {
+                return await generateResultDicAsync(sqlDataReader);
+            }
+        }
+    }
+    
+    private static SqlConnection GetOrCreateConnection(string connectionString)
+    {
+        return _connectionPool.GetOrAdd(connectionString, cs => new SqlConnection(cs));
+    }
+}
+#+end_src
+
+** Additional Issues Found
+
+*** Code Quality Issues
+
+**** 6. Inconsistent Logging
+- **Location**: Multiple services
+- **Issue**: Creating logger factories in constructors instead of using dependency injection
+- **Example**: 
+  ```csharp
+  ILoggerFactory factory = LoggerFactory.Create(builder => builder.AddConsole());
+  _logger = factory.CreateLogger("DataService");
+  ```
+
+**** 7. Poor Naming Conventions
+- **Examples**:
+  - `getConnection()` should be `GetConnection()`
+  - `generateResultDic()` should be `GenerateResultDictionary()`
+  - `fixString()` should be `SanitizeString()`
+
+*** Architecture Issues
+
+**** 8. Tight Coupling
+- **Location**: Throughout the codebase
+- **Issue**: Services directly instantiating dependencies instead of using DI properly
+
+**** 9. Missing Abstraction Layers
+- **Issue**: No interfaces for services, making testing difficult
+- **Impact**: Hard to mock dependencies for unit testing
+
+**** 10. Inconsistent Data Access Patterns
+- **Location**: `DataRepository.cs`
+- **Issue**: Mix of static and instance methods without clear pattern
+
+*** Configuration Issues
+
+**** 11. Missing Environment-Specific Configurations
+- **Issue**: `appsettings.Development.json` is nearly empty
+- **Impact**: No proper environment separation
+
+**** 12. Hardcoded Values
+- **Location**: Multiple files
+- **Issue**: Magic numbers and strings throughout codebase
+- **Example**: `TimeSpan.FromSeconds(tableInfo.CheckTableChangesInterval)`
+
+*** Performance Issues
+
+**** 13. Inefficient Database Operations
+- **Location**: `DataService.cs`
+- **Issues**:
+  - No connection pooling configuration
+  - Multiple database round trips for simple operations
+  - No caching mechanisms
+
+**** 14. Blocking Operations
+- **Location**: `Program.cs`
+- **Issue**: 
+  ```csharp
+  Task.Run(worker.RunWorker); // Fire-and-forget task
+  await workflowOrchestrator.RunWorkflow(); // Blocking call
+  ```
+
+*** Documentation Issues
+
+**** 15. Inadequate Documentation
+- **Location**: `README.md`
+- **Issue**: Contains only GitLab template content, no project-specific documentation
+
+**** 16. Missing Code Comments
+- **Issue**: Complex business logic lacks explanatory comments
+
+*** Dependency Issues
+
+**** 17. Outdated Dependencies
+- **Location**: `StateMonitoring.Data.csproj`
+- **Issue**: Some packages may have newer versions with security fixes
+- **Example**: `Microsoft.Data.SqlClient` version 6.0.2
+
+**** 18. Missing Dependency Validation
+- **Issue**: No version constraints or vulnerability scanning
+
+*** Data Handling Issues
+
+**** 19. Unsafe Type Conversions
+- **Location**: `CommonSqlUtils.cs`
+- **Issue**: Direct casting without validation
+- **Example**: `bool.Parse($"{value}")` without null checks
+
+**** 20. Inconsistent Data Formatting
+- **Location**: `CommonSqlUtils.cs`
+- **Issue**: Custom date formatting instead of using standard SQL date formats
+
+*** Temporal Workflow Issues
+
+**** 21. Workflow Management Problems
+- **Location**: `WorkflowOrchestrator.cs`
+- **Issues**:
+  - No proper workflow lifecycle management
+  - Potential memory leaks with workflow ID dictionary
+  - No error handling for workflow failures
+
+**** 22. Signal Handling Issues
+- **Location**: `MainWorkflow.cs`
+- **Issue**: Simple boolean flag for signal handling is not robust
+
+*** gRPC Service Issues
+
+**** 23. Inconsistent Response Handling
+- **Location**: `StateMonitoringGrpcService.cs`
+- **Issue**: Different error handling patterns across methods
+
+**** 24. Missing Input Validation
+- **Issue**: No validation of gRPC request parameters before processing
+
+** Recommendations for Immediate Action
+
+*** High Priority (Fix Immediately)
+1. **Fix SQL injection vulnerabilities** - Use parameterized queries
+2. **Remove hardcoded credentials** - Use environment variables or secure configuration
+3. **Fix the SQL injection check logic** in `SqlSafeUtil.cs`
+4. **Add proper error handling** and logging
+
+*** Medium Priority
+1. **Refactor to use proper dependency injection**
+2. **Add unit tests** with proper mocking
+3. **Implement proper resource disposal**
+4. **Add input validation** for all public methods
+
+*** Low Priority
+1. **Improve documentation**
+2. **Update dependencies**
+3. **Add performance monitoring**
+4. **Implement caching strategies**
+
+** Conclusion
+
+This project has significant security vulnerabilities that should be addressed immediately, particularly the SQL injection issues and hardcoded credentials. The codebase would benefit from a comprehensive refactoring to improve maintainability, testability, and security.
+
+The most critical fixes are:
+1. SQL injection prevention through parameterized queries
+2. Proper credential management using environment variables or secure vaults
+3. Comprehensive error handling with specific exception types
+4. Proper resource disposal patterns
+5. Input validation for all external inputs
+
+These changes will significantly improve the security posture and maintainability of the application.

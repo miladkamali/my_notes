@@ -1,0 +1,901 @@
+#+TITLE: BFF Service Project Review
+#+AUTHOR: Code Review
+#+DATE: 2024
+#+OPTIONS: toc:t num:t
+
+* Executive Summary
+
+This document provides a comprehensive review of the .NET BFF (Backend for Frontend) service project, identifying critical issues across security, configuration, code quality, architecture, and deployment readiness.
+
+* Critical Issues
+
+** Security Vulnerabilities
+
+*** Hardcoded Database Credentials
+- **Location**: =appsettings.json:16=
+- **Issue**: Connection string contains plaintext credentials
+- **Risk**: HIGH - Credentials exposed in source control
+- **Current Code**:
+#+BEGIN_SRC json
+"ConnectionStrings": {
+  "BffDatabase": "Server=.;Database=bff_service;User Id=sa;Password=Uid@123456;TrustServerCertificate=True;"
+}
+#+END_SRC
+
+- **Solution**: Use environment variables or Azure Key Vault
+#+BEGIN_SRC json
+"ConnectionStrings": {
+  "BffDatabase": "${DB_CONNECTION_STRING}"
+}
+#+END_SRC
+
+#+BEGIN_SRC csharp
+// In Program.cs or startup
+var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") 
+    ?? throw new InvalidOperationException("DB_CONNECTION_STRING not configured");
+#+END_SRC
+
+*** Insecure SQL Injection Protection
+- **Location**: =Utils/SqlSafeUtil.cs:24-30=
+- **Issue**: Logic is backwards - throws exception when input is NOT SQL injection
+- **Risk**: CRITICAL - Security bypass
+- **Current Code**:
+#+BEGIN_SRC csharp
+for (int i = 0; i <= sqlCheckList.Length - 1; i++)
+{
+    if (CheckString.IndexOf(sqlCheckList[i], StringComparison.OrdinalIgnoreCase) < 0)
+    {
+        isSQLInjection = true;  // This is backwards!
+    }
+}
+if (!isSQLInjection) throw new BadRequestException(ErrorMessages.INVALID_INPUT);
+#+END_SRC
+
+- **Solution**: Fix the logic to properly detect SQL injection
+#+BEGIN_SRC csharp
+public static void CheckForSQLInjection(string userInput)
+{
+    if (string.IsNullOrEmpty(userInput)) return;
+    
+    string[] sqlCheckList = {
+        "--", ";--", ";", "/*", "*/", "@@", "@", "char", "nchar", "varchar", "nvarchar",
+        "alter", "begin", "cast", "create", "cursor", "declare", "delete", "drop", 
+        "end", "exec", "execute", "fetch", "insert", "kill", "select", "sys", 
+        "sysobjects", "syscolumns", "table", "update"
+    };
+
+    string checkString = userInput.Replace("'", "''");
+    
+    foreach (string sqlKeyword in sqlCheckList)
+    {
+        if (checkString.IndexOf(sqlKeyword, StringComparison.OrdinalIgnoreCase) >= 0)
+        {
+            throw new BadRequestException(ErrorMessages.INVALID_INPUT);
+        }
+    }
+}
+#+END_SRC
+
+*** Missing Input Validation
+- **Location**: =Services/BffGrpcServerService.cs:28-30=
+- **Issue**: No proper validation on gRPC request parameters
+- **Risk**: MEDIUM - Potential injection attacks
+- **Current Code**:
+#+BEGIN_SRC csharp
+public override async Task<BffFormSubmissionResponse> FormSubmission(BffFormSubmissionRequest request, ServerCallContext context)
+{
+    var formSubmissionData = request.FormSubmissionData;
+    SqlSafeUtil.CheckForSQLInjection(formSubmissionData.CallbackUrl);
+    SqlSafeUtil.CheckForSQLInjection(formSubmissionData.FormName);
+    MapElementsValidator.CheckElements(formSubmissionData.Fields.ToDictionary());
+    // ... rest of method
+}
+#+END_SRC
+
+- **Solution**: Add comprehensive input validation
+#+BEGIN_SRC csharp
+public override async Task<BffFormSubmissionResponse> FormSubmission(BffFormSubmissionRequest request, ServerCallContext context)
+{
+    // Validate request
+    if (request?.FormSubmissionData == null)
+        throw new ArgumentNullException(nameof(request.FormSubmissionData));
+    
+    var formSubmissionData = request.FormSubmissionData;
+    
+    // Validate required fields
+    if (string.IsNullOrWhiteSpace(formSubmissionData.FormName))
+        throw new ArgumentException("FormName is required");
+    
+    if (string.IsNullOrWhiteSpace(formSubmissionData.CallbackUrl))
+        throw new ArgumentException("CallbackUrl is required");
+    
+    // Validate URL format
+    if (!Uri.TryCreate(formSubmissionData.CallbackUrl, UriKind.Absolute, out _))
+        throw new ArgumentException("Invalid CallbackUrl format");
+    
+    // Apply security checks
+    SqlSafeUtil.CheckForSQLInjection(formSubmissionData.CallbackUrl);
+    SqlSafeUtil.CheckForSQLInjection(formSubmissionData.FormName);
+    MapElementsValidator.CheckElements(formSubmissionData.Fields.ToDictionary());
+    
+    // ... rest of method
+}
+#+END_SRC
+
+** Configuration Issues
+
+*** Missing Configuration Binding
+- **Location**: =Extensions/ConfigsExtension.cs:11=
+- **Issue**: Tries to bind =GrpcServicesInfo= to =TemporalConfigs= section
+- **Current Code**:
+#+BEGIN_SRC csharp
+builder.Services.AddOptions<TemporalConfigs>().Bind(builder.Configuration.GetSection("GrpcServicesInfo"))
+    .ValidateDataAnnotations();
+#+END_SRC
+
+- **Solution**: Fix the binding to use correct type and section
+#+BEGIN_SRC csharp
+// CORRECT - Bind GrpcServicesInfo to GrpcServicesInfo section
+builder.Services.AddOptions<GrpcServicesInfo>().Bind(builder.Configuration.GetSection("GrpcServicesInfo"))
+    .ValidateDataAnnotations();
+
+// CORRECT - Bind TemporalConfigs to TemporalIO section  
+builder.Services.AddOptions<TemporalConfigs>().Bind(builder.Configuration.GetSection("TemporalIO"))
+    .ValidateDataAnnotations();
+#+END_SRC
+
+*** Inconsistent Configuration Sections
+- **Location**: =Extensions/ConfigsExtension.cs:13=
+- **Issue**: =BrokerConfigs= binding references ="BrokerConfigs"= but config has ="Broker"= section
+- **Current Code**:
+#+BEGIN_SRC csharp
+builder.Services.AddOptions<BrokerConfigs>().Bind(builder.Configuration.GetSection("BrokerConfigs"))
+    .ValidateDataAnnotations();
+#+END_SRC
+
+- **Solution**: Align configuration section names
+#+BEGIN_SRC csharp
+// Either change the binding to match config file
+builder.Services.AddOptions<BrokerConfigs>().Bind(builder.Configuration.GetSection("Broker"))
+    .ValidateDataAnnotations();
+
+// Or change config file section name from "Broker" to "BrokerConfigs"
+#+END_SRC
+
+* Code Quality Issues
+
+** Exception Handling Problems
+
+*** Incorrect Null Checks
+- **Location**: =Services/FormSubmissionRequestInfoService.cs:42=
+- **Issue**: Wrong null check syntax
+- **Current Code**:
+#+BEGIN_SRC csharp
+private async Task CheckDuplicateRequestId(string requestId)
+{
+    var formSubmissionRequestInfo = await _repository.FindByRequestId(requestId);
+    if (!formSubmissionRequestInfo.Equals(null))  // WRONG!
+    {
+        throw new BadRequestException(ErrorMessages.DUPLICATE_REQUEST_ID);
+    }
+}
+#+END_SRC
+
+- **Solution**: Use proper null check
+#+BEGIN_SRC csharp
+private async Task CheckDuplicateRequestId(string requestId)
+{
+    var formSubmissionRequestInfo = await _repository.FindByRequestId(requestId);
+    if (formSubmissionRequestInfo != null)  // CORRECT!
+    {
+        throw new BadRequestException(ErrorMessages.DUPLICATE_REQUEST_ID);
+    }
+}
+#+END_SRC
+
+*** Missing Exception Handling
+- **Location**: Multiple files - Database operations, gRPC calls, Kafka operations
+- **Issue**: No try-catch blocks around critical operations
+- **Risk**: Unhandled exceptions can crash the service
+- **Current Code Examples**:
+
+#+BEGIN_SRC csharp
+// In FormSubmissionRequestInfoService.cs - No exception handling
+public async Task SaveNewFormSubmissionRequest(string requestId, string responseTrackingId, FormSubmissionData formSubmissionData)
+{
+    await CheckDuplicateRequestId(requestId);
+    // ... database operations without try-catch
+    await _repository.Save(formSubmissionRequestInfo);
+}
+
+// In BrokerService.cs - No exception handling  
+public async Task ConsumeMessages()
+{
+    using (var consumer = new ConsumerBuilder<Null, byte[]>(_consumerConfig).Build())
+    {
+        consumer.Subscribe(_brokerConfigs.FormHandlerTopic);
+        while (true)  // Infinite loop without exception handling
+        {
+            var result = consumer.Consume();
+            // ... processing without try-catch
+        }
+    }
+}
+#+END_SRC
+
+- **Solution**: Add comprehensive exception handling
+#+BEGIN_SRC csharp
+public async Task SaveNewFormSubmissionRequest(string requestId, string responseTrackingId, FormSubmissionData formSubmissionData)
+{
+    try
+    {
+        await CheckDuplicateRequestId(requestId);
+        var formSubmissionRequestInfo = new FormSubmissionRequestInfo
+        {
+            RequestId = requestId,
+            RequestType = (RequestType)Enum.Parse(typeof(RequestType), Enum.GetName(formSubmissionData.RequestType)),
+            RequestObject = JsonFormatter.Default.Format(formSubmissionData),
+            ServiceType = FormHandlerServiceType.FORM_HANDLER_FORM_SUBMISSION,
+            ResponseTrackingId = responseTrackingId,
+            ServiceCalledAt = DateTime.Now
+        };
+        await _repository.Save(formSubmissionRequestInfo);
+    }
+    catch (InvalidOperationException ex)
+    {
+        _logger.LogError(ex, "Invalid operation while saving form submission request {RequestId}", requestId);
+        throw new BadRequestException("Invalid form submission data");
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError(ex, "Unexpected error while saving form submission request {RequestId}", requestId);
+        throw;
+    }
+}
+
+public async Task ConsumeMessages()
+{
+    using (var consumer = new ConsumerBuilder<Null, byte[]>(_consumerConfig).Build())
+    {
+        consumer.Subscribe(_brokerConfigs.FormHandlerTopic);
+        while (true)
+        {
+            try
+            {
+                var result = consumer.Consume();
+                var pair = Pair.Parser.ParseFrom(result.Message.Value);
+                _logger.LogInformation("Consumer new message !!!");
+                consumer.Commit(result);
+                await _bffWorkflowOrchestrator.FormSubmissionSyncResult(
+                    new KeyValuePair<string, ByteString>(pair.Key, pair.Value.BinaryValue));
+            }
+            catch (ConsumeException ex)
+            {
+                _logger.LogError(ex, "Error consuming message from Kafka");
+                // Implement retry logic or dead letter queue
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Unexpected error in message consumption");
+                // Consider breaking the loop for critical errors
+            }
+        }
+    }
+}
+#+END_SRC
+
+** Database Issues
+
+*** Missing Error Handling
+- **Location**: =Repoitories/FormSubmissionRequestInfoRepository.cs=
+- **Issue**: Repository methods don't handle database exceptions
+- **Current Code**:
+#+BEGIN_SRC csharp
+public async Task<FormSubmissionRequestInfo> FindByRequestId(string requestId)
+{
+    var formHandlerRequestInfo = await _context.FormSubmissionInfos
+        .Where(form => form.RequestId == requestId).FirstAsync();
+    return formHandlerRequestInfo;
+}
+
+public async Task<Guid> Save(FormSubmissionRequestInfo formSubmissionRequestInfo)
+{
+    var entityEntry = _context.FormSubmissionInfos.Update(formSubmissionRequestInfo);
+    await _context.SaveChangesAsync();
+    return entityEntry.Entity.Id;
+}
+#+END_SRC
+
+- **Solution**: Add proper exception handling
+#+BEGIN_SRC csharp
+public async Task<FormSubmissionRequestInfo> FindByRequestId(string requestId)
+{
+    try
+    {
+        var formHandlerRequestInfo = await _context.FormSubmissionInfos
+            .Where(form => form.RequestId == requestId).FirstOrDefaultAsync();
+        
+        if (formHandlerRequestInfo == null)
+            throw new NotFoundException($"Form submission with RequestId '{requestId}' not found");
+            
+        return formHandlerRequestInfo;
+    }
+    catch (InvalidOperationException ex)
+    {
+        throw new NotFoundException($"Form submission with RequestId '{requestId}' not found", ex);
+    }
+    catch (Exception ex)
+    {
+        throw new Exception($"Database error while finding form submission by RequestId '{requestId}'", ex);
+    }
+}
+
+public async Task<Guid> Save(FormSubmissionRequestInfo formSubmissionRequestInfo)
+{
+    try
+    {
+        var entityEntry = _context.FormSubmissionInfos.Update(formSubmissionRequestInfo);
+        await _context.SaveChangesAsync();
+        return entityEntry.Entity.Id;
+    }
+    catch (DbUpdateConcurrencyException ex)
+    {
+        throw new Exception("Concurrency conflict while saving form submission", ex);
+    }
+    catch (DbUpdateException ex)
+    {
+        throw new Exception("Database update error while saving form submission", ex);
+    }
+    catch (Exception ex)
+    {
+        throw new Exception("Unexpected error while saving form submission", ex);
+    }
+}
+#+END_SRC
+
+*** Inefficient Queries
+- **Location**: =Repoitories/FormSubmissionRequestInfoRepository.cs:20-21,34-35,41-42=
+- **Issue**: Using =FirstAsync()= without =FirstOrDefaultAsync()=
+- **Risk**: Throws exceptions instead of returning null
+- **Current Code**:
+#+BEGIN_SRC csharp
+// PROBLEMATIC - Will throw exception if not found
+var formHandlerRequestInfo = await _context.FormSubmissionInfos
+    .Where(form => form.RequestId == requestId).FirstAsync();
+
+var formHandlerRequestInfo = await _context.FormSubmissionInfos
+    .Where(form => form.Id == id).FirstAsync();
+
+var formSubmissionRequestInfo = await _context.FormSubmissionInfos
+    .Where(form => form.ResponseTrackingId == trackingId).FirstAsync();
+#+END_SRC
+
+- **Solution**: Use =FirstOrDefaultAsync()= and handle null results
+#+BEGIN_SRC csharp
+// BETTER - Returns null if not found
+var formHandlerRequestInfo = await _context.FormSubmissionInfos
+    .Where(form => form.RequestId == requestId).FirstOrDefaultAsync();
+
+if (formHandlerRequestInfo == null)
+    throw new NotFoundException($"Form submission with RequestId '{requestId}' not found");
+
+var formHandlerRequestInfo = await _context.FormSubmissionInfos
+    .Where(form => form.Id == id).FirstOrDefaultAsync();
+
+if (formHandlerRequestInfo == null)
+    throw new NotFoundException($"Form submission with Id '{id}' not found");
+
+var formSubmissionRequestInfo = await _context.FormSubmissionInfos
+    .Where(form => form.ResponseTrackingId == trackingId).FirstOrDefaultAsync();
+
+if (formSubmissionRequestInfo == null)
+    throw new NotFoundException($"Form submission with TrackingId '{trackingId}' not found");
+#+END_SRC
+
+* Architecture Issues
+
+** Dependency Injection Problems
+
+*** Incorrect Service Registration
+- **Location**: =Extensions/ServicesExtension.cs:35-40=
+- **Issue**: =TemporalClient.ConnectAsync()= returns =Task<TemporalClient>= but registered as singleton
+- **Current Code**:
+#+BEGIN_SRC csharp
+builder.Services.AddSingleton(sp =>
+{
+    var temporalConfigs = sp.GetRequiredService<IOptions<TemporalConfigs>>().Value;
+    return TemporalClient.ConnectAsync(new(
+        $"{temporalConfigs.Host}:{temporalConfigs.Port}") { Namespace = temporalConfigs.Namespace });
+});
+#+END_SRC
+
+- **Solution**: Properly handle async initialization
+#+BEGIN_SRC csharp
+// Option 1: Use factory pattern with async initialization
+builder.Services.AddSingleton<TemporalClient>(sp =>
+{
+    var temporalConfigs = sp.GetRequiredService<IOptions<TemporalConfigs>>().Value;
+    return TemporalClient.ConnectAsync(new(
+        $"{temporalConfigs.Host}:{temporalConfigs.Port}") { Namespace = temporalConfigs.Namespace }).Result;
+});
+
+// Option 2: Use hosted service for async initialization
+public class TemporalClientHostedService : IHostedService
+{
+    private readonly IServiceProvider _serviceProvider;
+    private TemporalClient _client;
+
+    public TemporalClientHostedService(IServiceProvider serviceProvider)
+    {
+        _serviceProvider = serviceProvider;
+    }
+
+    public async Task StartAsync(CancellationToken cancellationToken)
+    {
+        var temporalConfigs = _serviceProvider.GetRequiredService<IOptions<TemporalConfigs>>().Value;
+        _client = await TemporalClient.ConnectAsync(new(
+            $"{temporalConfigs.Host}:{temporalConfigs.Port}") { Namespace = temporalConfigs.Namespace });
+    }
+
+    public Task StopAsync(CancellationToken cancellationToken)
+    {
+        _client?.Dispose();
+        return Task.CompletedTask;
+    }
+}
+#+END_SRC
+
+** Async/Await Issues
+
+*** Fire-and-Forget Tasks
+- **Location**: =Program.cs:26,30=
+- **Issue**: =Task.Run()= calls without proper error handling
+- **Risk**: Silent failures
+- **Current Code**:
+#+BEGIN_SRC csharp
+// Run temporal worker
+var worker = app.Services.GetRequiredService<TemporalIoWorker>();
+Task.Run(worker.RunWorker);
+
+// Start consume messages.
+Task.Run(app.Services.GetRequiredService<BrokerService>().ConsumeMessages);
+#+END_SRC
+
+- **Solution**: Use proper async patterns with error handling
+#+BEGIN_SRC csharp
+// Use hosted services instead of fire-and-forget tasks
+builder.Services.AddHostedService<TemporalWorkerHostedService>();
+builder.Services.AddHostedService<BrokerConsumerHostedService>();
+
+// Or use proper async initialization with error handling
+var worker = app.Services.GetRequiredService<TemporalIoWorker>();
+var brokerService = app.Services.GetRequiredService<BrokerService>();
+
+// Start background tasks with proper error handling
+_ = Task.Run(async () =>
+{
+    try
+    {
+        await worker.RunWorker();
+    }
+    catch (Exception ex)
+    {
+        var logger = app.Services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Temporal worker failed");
+    }
+});
+
+_ = Task.Run(async () =>
+{
+    try
+    {
+        await brokerService.ConsumeMessages();
+    }
+    catch (Exception ex)
+    {
+        var logger = app.Services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Broker consumer failed");
+    }
+});
+#+END_SRC
+
+* Naming and Organization Issues
+
+** Inconsistent Naming
+
+*** Directory Typo
+- **Location**: =src/BffService.Core/Repoitories/=
+- **Issue**: =Repoitories= should be =Repositories=
+- **Current**: Directory name is misspelled
+- **Solution**: Rename directory to =Repositories=
+
+*** Inconsistent Namespaces
+- **Issue**: Mix of =BffService.Core= and =StateMonitoring.Data= namespaces
+- **Files affected**:
+  - =Utils/SqlSafeUtil.cs= (uses =StateMonitoring.Data.Utils=)
+  - =Utils/MapElementsValidator.cs= (uses =StateMonitoring.Data.Utils=)
+  - =Errors/BadRequestException.cs= (uses =StateMonitoring.Data.Errors=)
+  - =Errors/NotFoundException.cs= (uses =StateMonitoring.Data.Errors=)
+  - =Errors/DuplicateRecodeException.cs= (uses =StateMonitoring.Data.Errors=)
+  - =Errors/ExceptionHandler.cs= (uses =StateMonitoring.Data.Errors=)
+
+- **Current Code Examples**:
+#+BEGIN_SRC csharp
+// In Utils/SqlSafeUtil.cs
+namespace StateMonitoring.Data.Utils;  // WRONG namespace
+
+// In Errors/BadRequestException.cs  
+namespace StateMonitoring.Data.Errors;  // WRONG namespace
+#+END_SRC
+
+- **Solution**: Standardize all namespaces to =BffService.Core=
+#+BEGIN_SRC csharp
+// CORRECT - All files should use BffService.Core namespace
+namespace BffService.Core.Utils;
+namespace BffService.Core.Errors;
+namespace BffService.Core.Repositories;  // After renaming directory
+#+END_SRC
+
+*** Property Naming Inconsistency
+- **Issue**: Some properties use ={ set; get; }= while others use ={ get; set; }=
+- **Standard**: Should be ={ get; set; }=
+- **Current Code Examples**:
+#+BEGIN_SRC csharp
+// In Models/FormSubmissionRequestInfo.cs
+public string? RequestObject { set; get; }  // WRONG order
+public string? ResponseObject{ set; get; }  // WRONG order
+public string? RequestId { set; get; }     // WRONG order
+
+// In Models/Dto/Configs/TemporalConfigs.cs
+public string Host { get; set; }           // CORRECT order
+public int Port { get; set; }              // CORRECT order
+#+END_SRC
+
+- **Solution**: Standardize all properties to ={ get; set; }=
+#+BEGIN_SRC csharp
+// CORRECT - All properties should follow this pattern
+public string? RequestObject { get; set; }
+public string? ResponseObject { get; set; }
+public string? RequestId { get; set; }
+public string? ResponseTrackingId { get; set; }
+public FormHandlerServiceType ServiceType { get; set; }
+public RequestType RequestType { get; set; }
+public DateTime ServiceCalledAt { get; set; }
+public DateTime? ServiceReplayAt { get; set; }
+#+END_SRC
+
+* Performance Issues
+
+** Resource Management
+
+*** Missing Using Statements
+- **Location**: =Services/BrokerService.cs:39-45,50-63=
+- **Issue**: Kafka producer/consumer not properly disposed
+- **Risk**: Resource leaks
+- **Current Code**:
+#+BEGIN_SRC csharp
+public async Task ProduceMessages(string messageKey, ByteString protoMessage)
+{
+    var pair = new Pair();
+    pair.Key = messageKey;
+    pair.Value = new() { BinaryValue = protoMessage };
+    using (var producer = new ProducerBuilder<Null, byte[]>(config: _producerConfig).Build())
+    {
+        var deliveryResult = await producer
+            .ProduceAsync(topic: _brokerConfigs.BffTopic, new Message<Null, byte[]> { Value = pair.ToByteArray() });
+        _logger.Log(LogLevel.Information, $"Deliver status: {Enum.GetName(deliveryResult.Status)}");
+        _logger.Log(LogLevel.Information, $"Deliver time: {deliveryResult.Timestamp.UtcDateTime}");
+    }
+}
+
+public async Task ConsumeMessages()
+{
+    using (var consumer = new ConsumerBuilder<Null, byte[]>(_consumerConfig).Build())
+    {
+        consumer.Subscribe(_brokerConfigs.FormHandlerTopic);
+        while (true)  // Infinite loop - potential resource leak
+        {
+            var result = consumer.Consume();
+            var pair = Pair.Parser.ParseFrom(result.Message.Value);
+            _logger.Log(LogLevel.Information, $"Consumer new message !!!");
+            consumer.Commit(result);
+            Console.WriteLine(pair);
+            await _bffWorkflowOrchestrator.FormSubmissionSyncResult(
+                new KeyValuePair<string, ByteString>(pair.Key, pair.Value.BinaryValue));
+        }
+    }
+}
+#+END_SRC
+
+- **Solution**: Implement proper resource management and cancellation
+#+BEGIN_SRC csharp
+public async Task ProduceMessages(string messageKey, ByteString protoMessage)
+{
+    var pair = new Pair();
+    pair.Key = messageKey;
+    pair.Value = new() { BinaryValue = protoMessage };
+    
+    using var producer = new ProducerBuilder<Null, byte[]>(_producerConfig).Build();
+    try
+    {
+        var deliveryResult = await producer
+            .ProduceAsync(topic: _brokerConfigs.BffTopic, new Message<Null, byte[]> { Value = pair.ToByteArray() });
+        _logger.LogInformation("Message delivered with status: {Status} at {Timestamp}", 
+            Enum.GetName(deliveryResult.Status), deliveryResult.Timestamp.UtcDateTime);
+    }
+    catch (ProduceException<Null, byte[]> ex)
+    {
+        _logger.LogError(ex, "Failed to produce message to topic {Topic}", _brokerConfigs.BffTopic);
+        throw;
+    }
+}
+
+public async Task ConsumeMessages(CancellationToken cancellationToken = default)
+{
+    using var consumer = new ConsumerBuilder<Null, byte[]>(_consumerConfig).Build();
+    consumer.Subscribe(_brokerConfigs.FormHandlerTopic);
+    
+    try
+    {
+        while (!cancellationToken.IsCancellationRequested)
+        {
+            try
+            {
+                var result = consumer.Consume(cancellationToken);
+                var pair = Pair.Parser.ParseFrom(result.Message.Value);
+                _logger.LogInformation("Consumed new message with key: {Key}", pair.Key);
+                
+                await _bffWorkflowOrchestrator.FormSubmissionSyncResult(
+                    new KeyValuePair<string, ByteString>(pair.Key, pair.Value.BinaryValue));
+                
+                consumer.Commit(result);
+            }
+            catch (ConsumeException ex)
+            {
+                _logger.LogError(ex, "Error consuming message");
+                // Implement retry logic or dead letter queue
+            }
+        }
+    }
+    catch (OperationCanceledException)
+    {
+        _logger.LogInformation("Consumer cancelled");
+    }
+    finally
+    {
+        consumer.Close();
+    }
+}
+#+END_SRC
+
+** Logging Issues
+
+*** Inconsistent Logging
+- **Location**: =Services/BrokerService.cs:29-30,59,84=
+- **Issue**: Mix of =ILogger= and =Console.WriteLine=
+- **Current Code**:
+#+BEGIN_SRC csharp
+// In BrokerService constructor
+ILoggerFactory factory = LoggerFactory.Create(builder => builder.AddConsole());
+_logger = factory.CreateLogger("BrokerService");
+
+// In ConsumeMessages method
+_logger.Log(LogLevel.Information, $"Consumer new message !!!");
+
+// In BffWorkflowOrchestrator.cs
+Console.WriteLine(workflowExecutionStatus);
+#+END_SRC
+
+- **Solution**: Use structured logging consistently
+#+BEGIN_SRC csharp
+// Use dependency injection for logger instead of creating factory
+public class BrokerService
+{
+    private readonly ILogger<BrokerService> _logger;
+    
+    public BrokerService(IOptions<BrokerConfigs> brokerOptions, 
+        BffWorkflowOrchestrator bffWorkflowOrchestrator, 
+        ILogger<BrokerService> logger)  // Inject logger
+    {
+        _logger = logger;
+        // ... rest of constructor
+    }
+    
+    public async Task ConsumeMessages(CancellationToken cancellationToken = default)
+    {
+        // ... existing code
+        _logger.LogInformation("Consumed new message with key: {Key}", pair.Key);
+        // ... rest of method
+    }
+}
+
+// In BffWorkflowOrchestrator.cs - replace Console.WriteLine
+_logger.LogInformation("Workflow execution status: {Status}", workflowExecutionStatus);
+#+END_SRC
+
+* Missing Features
+
+** Monitoring and Observability
+- **Missing**: Health check endpoints
+- **Missing**: Application metrics
+- **Missing**: Distributed tracing
+- **Missing**: Correlation IDs
+- **Solution**: Add health checks and monitoring
+#+BEGIN_SRC csharp
+// Add health checks
+builder.Services.AddHealthChecks()
+    .AddDbContextCheck<FormSubmissionRequestInfoDbContext>()
+    .AddCheck("kafka", () => HealthCheckResult.Healthy("Kafka connection OK"))
+    .AddCheck("temporal", () => HealthCheckResult.Healthy("Temporal connection OK"));
+
+// Add metrics
+builder.Services.AddApplicationInsightsTelemetry();
+
+// Add distributed tracing
+builder.Services.AddOpenTelemetry()
+    .WithTracing(builder => builder
+        .AddAspNetCoreInstrumentation()
+        .AddEntityFrameworkCoreInstrumentation()
+        .AddHttpClientInstrumentation());
+#+END_SRC
+
+** Testing
+- **Missing**: Unit tests
+- **Missing**: Integration tests  
+- **Missing**: Test configuration files
+- **Solution**: Create comprehensive test suite
+#+BEGIN_SRC csharp
+// Create test project structure
+// Tests/
+//   Unit/
+//     Services/
+//       FormSubmissionRequestInfoServiceTests.cs
+//       BrokerServiceTests.cs
+//     Repositories/
+//       FormSubmissionRequestInfoRepositoryTests.cs
+//   Integration/
+//     Api/
+//       BffGrpcServerServiceIntegrationTests.cs
+//     Database/
+//       FormSubmissionRequestInfoDbContextTests.cs
+//   TestConfiguration/
+//     appsettings.Test.json
+//     TestStartup.cs
+#+END_SRC
+
+** Deployment
+- **Missing**: Dockerfile
+- **Missing**: CI/CD pipeline
+- **Missing**: Production configuration
+- **Solution**: Add containerization and CI/CD
+#+BEGIN_SRC dockerfile
+# Dockerfile
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["src/BffService.Core/BffService.Core.csproj", "src/BffService.Core/"]
+RUN dotnet restore "src/BffService.Core/BffService.Core.csproj"
+COPY . .
+WORKDIR "/src/src/BffService.Core"
+RUN dotnet build "BffService.Core.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "BffService.Core.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "BffService.Core.dll"]
+#+END_SRC
+
+#+BEGIN_SRC yaml
+# .github/workflows/ci-cd.yml
+name: CI/CD Pipeline
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+    - name: Publish
+      run: dotnet publish -c Release -o ./publish
+    - name: Build Docker image
+      run: docker build -t bff-service:${{ github.sha }} .
+#+END_SRC
+
+* Recommendations
+
+** Immediate Fixes (Priority 1)
+1. Fix SQL injection logic in =SqlSafeUtil= - CRITICAL security vulnerability
+2. Move database credentials to environment variables - HIGH security risk
+3. Fix configuration binding issues - Will cause runtime failures
+4. Add proper exception handling around database operations - Prevents crashes
+
+** Short-term Improvements (Priority 2)
+1. Add comprehensive error handling - Improves reliability
+2. Implement structured logging - Better debugging and monitoring
+3. Add health check endpoints - Essential for production
+4. Fix async/await patterns - Prevents deadlocks and resource leaks
+5. Add input validation - Security and data integrity
+
+** Long-term Enhancements (Priority 3)
+1. Add comprehensive testing suite - Quality assurance
+2. Implement monitoring and observability - Production readiness
+3. Add security scanning to CI/CD - Automated security checks
+4. Improve documentation - Maintainability
+5. Add performance monitoring - Performance optimization
+
+* Action Items
+
+** Security (CRITICAL)
+- [ ] Move credentials to environment variables
+- [ ] Fix SQL injection protection logic  
+- [ ] Add input validation for all gRPC endpoints
+- [ ] Implement security scanning in CI/CD
+- [ ] Add authentication and authorization
+- [ ] Encrypt sensitive data in transit and at rest
+
+** Code Quality (HIGH)
+- [ ] Fix null check logic in =FormSubmissionRequestInfoService.cs=
+- [ ] Add exception handling to all service methods
+- [ ] Fix async/await patterns in =Program.cs= and =BrokerService.cs=
+- [ ] Add proper resource disposal for Kafka consumers
+- [ ] Standardize property naming conventions
+- [ ] Fix namespace inconsistencies
+
+** Configuration (HIGH)
+- [ ] Fix configuration binding in =ConfigsExtension.cs=
+- [ ] Add environment-specific settings files
+- [ ] Implement configuration validation
+- [ ] Add configuration hot-reload support
+- [ ] Document all configuration options
+
+** Architecture (MEDIUM)
+- [ ] Fix dependency injection issues with =TemporalClient=
+- [ ] Add health checks for all external dependencies
+- [ ] Implement proper logging with correlation IDs
+- [ ] Add monitoring and metrics collection
+- [ ] Implement circuit breaker pattern for external calls
+- [ ] Add retry policies for transient failures
+
+** Testing & Deployment (MEDIUM)
+- [ ] Add unit tests for all services and repositories
+- [ ] Add integration tests for gRPC endpoints
+- [ ] Create Dockerfile for containerization
+- [ ] Set up CI/CD pipeline with automated testing
+- [ ] Add performance testing
+- [ ] Create staging and production environments
+
+** Documentation (LOW)
+- [ ] Create API documentation
+- [ ] Add setup and deployment guides
+- [ ] Document architecture decisions
+- [ ] Create troubleshooting guides
+- [ ] Add code comments and XML documentation
+
+* Conclusion
+**Priority Order**:
+1. Security fixes (SQL injection, credentials)
+2. Configuration fixes (binding issues)
+3. Exception handling (database operations)
+4. Async/await patterns (fire-and-forget tasks)
+5. Testing and monitoring (production readiness)
