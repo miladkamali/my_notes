@@ -3,59 +3,60 @@
 :END:
 #+title: cis
 
-* cis modules
-** State Monitoring Service
-*** write a method to check table exist with exactly the same column and types
-*** DONE investigate if views are same as tables                      :hasan:
-*** DONE write a method to check if table with associated view exist or not :hasan:
-*** create a technical document from technologies that are being used :milad:hasan:
-*** DONE Create DataMaker Project With Fake Data                                                             :armin:
+* archive
+** cis modules
+*** State Monitoring Service
+**** write a method to check table exist with exactly the same column and types
+**** DONE investigate if views are same as tables                     :hasan:
+**** DONE write a method to check if table with associated view exist or not :hasan:
+**** create a technical document from technologies that are being used :milad:hasan:
+**** DONE Create DataMaker Project With Fake Data                     :armin:
 this database has to have small(100-500) medium(2000-5000) and large(20000 - 50000) and huge( 200000 - 5000000 ) row tables
-*** create test infrastructure for replication methods                :arash:
-*** create a simple project to update data in sample project periodically to test performance of the system :armin:
-*** setup gRPC submodule                                              :hasan:
-*** setup temporal submodule                                          :hasan:
-*** finalize protobuf designs                                         :milad:
-*** implement list of entities rpc                                    :hasan:
-*** implement list entity search rpc                                  :hasan:
-*** DONE create docker compose to setup environment for the development :saleh:
-*** TODO investigate temporal simple project                          :hasan:
-*** setup CI/CD for the project                                       :arash:
-** BFF
+**** create test infrastructure for replication methods               :arash:
+**** create a simple project to update data in sample project periodically to test performance of the system :armin:
+**** setup gRPC submodule                                             :hasan:
+**** setup temporal submodule                                         :hasan:
+**** finalize protobuf designs                                        :milad:
+**** implement list of entities rpc                                   :hasan:
+**** implement list entity search rpc                                 :hasan:
+**** DONE create docker compose to setup environment for the development :saleh:
+**** TODO investigate temporal simple project                         :hasan:
+**** setup CI/CD for the project                                      :arash:
+*** BFF
 this is the orchestrator of the project
-*** set up project 
-**** set up temporal submodule
-**** set up grpc submodule
-*** set up keycloak integration
-*** setup open fga  integration
-*** design entity read workflows
-*** design form submission workflow
-*** design ERD
-*** design monitoring system
-*** implement Read workflow
-*** implement form submission workflow 
-*** implement access checking module
-*** implement monitoring system
-*** [#A] finalize proto designs                                       :milad:
-*** [#A] Verify Proto designs with Acctech                            :milad:
-** Fourm handler
-*** [#A] design protobuf for communication with acctech module
-*** [#A] finalize protobuf with acctech
-*** design ERD for the project
-*** design form workflow
-*** design monitoring system
-*** implement monitoring system
-*** implement form workflow
-*** create sample program to simulate Acctech software
+**** set up project 
+***** set up temporal submodule
+***** set up grpc submodule
+**** set up keycloak integration
+**** setup open fga  integration
+**** design entity read workflows
+**** design form submission workflow
+**** design ERD
+**** design monitoring system
+**** implement Read workflow
+**** implement form submission workflow 
+**** implement access checking module
+**** implement monitoring system
+**** [#A] finalize proto designs                                      :milad:
+**** [#A] Verify Proto designs with Acctech                           :milad:
+*** Fourm handler
+**** [#A] design protobuf for communication with acctech module
+**** [#A] finalize protobuf with acctech
+**** design ERD for the project
+**** design form workflow
+**** design monitoring system
+**** implement monitoring system
+**** implement form workflow
+**** create sample program to simulate Acctech software
 
-* open questions
-** gateway for communication with ERP
-*** how many services do gateway for communication is going to communicate with
-*** what are the rules regarding user management in that gateway
-*** we need comprehensive list of 
-** information microservices
-*** how many information microservices are we going to need at the moment its five including inventory customer profile product user and logistic
-** workflow 
+** open questions
+*** gateway for communication with ERP
+**** how many services do gateway for communication is going to communicate with
+**** what are the rules regarding user management in that gateway
+**** we need comprehensive list of 
+*** information microservices
+**** how many information microservices are we going to need at the moment its five including inventory customer profile product user and logistic
+*** workflow 
 * delivery phase                                                   :@bentoak:
 ** finalizing the project
 *** TODO [#A] review ERD of each service
@@ -63,17 +64,31 @@ SCHEDULED: <2025-10-23 Thu>
 :LOGBOOK:
 - State "TODO"       from              [2025-10-23 Thu 23:31]
 :END:
+*** TODO [#A] Review structure of communication
+SCHEDULED: <2025-10-24 Fri>
+:LOGBOOK:
+- State "TODO"       from              [2025-10-24 Fri 10:56]
+:END:
 *** Logging systems
 :LOGBOOK:
 - State "TODO"       from              [2025-10-23 Thu 23:31]
 :END:
-**** request-response log to a file
+**** DELEGATED request-response log to a file
+:LOGBOOK:
+- State "DELEGATED"  from "NEXT"       [2025-10-24 Fri 10:57]
+- State "NEXT"       from              [2025-10-24 Fri 10:57]
+:END:
 use nlog or serilog to log into files similar to 
+***** TODO remove all the Console.writeLines
+:LOGBOOK:
+- State "TODO"       from              [2025-10-24 Fri 12:26]
+:END:
 *** observibility
 **** monitor open workflows
 **** monitor average workflow start to finish time
 **** monitor number of call back failures
 **** monitor number of activity failures
+**** Monitor number of activity
 **** monitor number of request per endpoint
 **** monitor average response time per endpoint
 *** [#B] Testing[0/2]
@@ -96,6 +111,218 @@ SCHEDULED: <2025-10-23 Thu>
 make sure form validation are repeated
 *** caching system for forms in form handling module
 *** Dockerize all the projects and create a docker compose that lunches dependencies
+*** issues to fix based on AI on BFF module
+Based on my comprehensive review of this .NET BFF (Backend for Frontend) service project, I've identified several significant issues across multiple categories. Here's a detailed list of the problems I found:
+Critical Issues
+**** 1. Security Vulnerabilities
+Hardcoded Database Credentials: The connection string in appsettings.json contains plaintext credentials (User Id=sa;Password=Uid@123456)
+Insecure SQL Injection Protection: The SqlSafeUtil.CheckForSQLInjection() method has a critical logic flaw - it throws an exception when input is NOT SQL injection, which is backwards
+Missing Input Validation: No proper validation on gRPC request parameters
+Exposed Sensitive Data: Database credentials should be in environment variables or Azure Key Vault
+**** 2. Configuration Issues
+Missing Configuration Binding: In ConfigsExtension.cs, line 11 tries to bind GrpcServicesInfo to TemporalConfigs section, which is incorrect
+Inconsistent Configuration: BrokerConfigs binding references "BrokerConfigs" section but config file has "Broker" section
+Missing Environment-Specific Settings: Development settings are minimal and don't override production values
+**** 3. Code Quality Issues
+Exception Handling Problems
+Incorrect Null Checks: In FormSubmissionRequestInfoService.cs line 42: if (!formSubmissionRequestInfo.Equals(null)) should be if (formSubmissionRequestInfo != null)
+Missing Exception Handling: No try-catch blocks around database operations, gRPC calls, or Kafka operations
+Inconsistent Exception Types: Mix of custom exceptions and standard exceptions without proper mapping
+Database Issues
+Missing Error Handling: Repository methods don't handle EntityNotFoundException or database connection issues
+Inefficient Queries: Using FirstAsync() without FirstOrDefaultAsync() can throw exceptions
+Missing Transaction Management: No explicit transaction handling for multi-step operations
+**** 4. Architecture Issues
+Dependency Injection Problems
+Incorrect Service Registration: TemporalClient.ConnectAsync() returns a Task<TemporalClient> but is registered as singleton
+Missing Service Lifetime Management: Some services should be scoped, not singleton
+Circular Dependencies: Potential circular dependency between services
+Async/Await Issues
+Fire-and-Forget Tasks: In Program.cs, Task.Run() calls without proper error handling or cancellation
+Missing Cancellation Tokens: No cancellation token support in long-running operations
+Blocking Async Calls: Some async methods are not properly awaited
+**** 5. Naming and Organization Issues
+Inconsistent Naming
+Typo in Directory: Repoitories should be Repositories
+Inconsistent Namespace: Mix of BffService.Core and StateMonitoring.Data namespaces
+Inconsistent Property Naming: Some properties use { set; get; } while others use { get; set; }
+Missing Documentation
+No XML Documentation: Methods lack proper documentation
+Missing README: No project documentation or setup instructions
+No API Documentation: gRPC services lack proper documentation
+**** 6. Performance Issues
+Resource Management
+Missing Using Statements: Kafka producer/consumer not properly disposed
+Memory Leaks: Potential memory leaks in long-running services
+No Connection Pooling: Database connections not optimized
+Logging Issues
+Inconsistent Logging: Mix of ILogger and Console.WriteLine
+Missing Structured Logging: No correlation IDs or request tracing
+Sensitive Data Logging: Potential logging of sensitive information
+**** 7. Missing Features
+Monitoring and Observability
+No Health Checks: Missing health check endpoints
+No Metrics: No application metrics or performance counters
+No Distributed Tracing: No correlation between services
+Testing
+No Unit Tests: No test project found
+No Integration Tests: No API or database integration tests
+No Test Configuration: No separate test configuration files
+**** 8. Deployment Issues
+Production Readiness
+Missing Docker Configuration: No Dockerfile or containerization
+No CI/CD Pipeline: No build or deployment automation
+Missing Environment Configuration: No production-specific settings
+Recommendations
+**** Immediate Fixes:
+***** Fix the SQL injection logic in SqlSafeUtil
+***** Move database credentials to environment variables
+***** Fix the configuration binding issues
+***** Add proper exception handling
+**** Short-term Improvements:
+***** Add comprehensive error handling
+***** Implement proper logging
+***** Add health checks
+***** Fix async/await patterns
+**** Long-term Enhancements:
+***** Add comprehensive testing
+***** Implement monitoring and observability
+***** Add security scanning
+***** Improve documentation
+*** issues to fix based on AI on Form handler Module
+*** issues to fix based on AI on State monitoring Module
+**** 1. SQL Injection Vulnerabilities
+Location: SqlCommandGenerator.cs, BffSqlCommandGenerator.cs
+Issue: Direct string concatenation in SQL queries without proper parameterization
+Examples:
+
+  // Line 10 in SqlCommandGenerator.cs
+  $"SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'dbo' AND TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = \'{tableName}\'"
+  // Line 14 in SqlCommandGenerator.cs
+  $"DROP TABLE \"{tableName}\""
+
+### **Examples:**
+
+**** 2. Hardcoded Database Credentials
+Location: appsettings.json
+Issue: Plaintext database passwords in configuration
+Example: "Password=Uid@123456"
+**** 3. Inadequate SQL Injection Protection
+Location: SqlSafeUtil.cs
+Issue: The SQL injection check logic is fundamentally flawed
+Problems:
+Logic is inverted (throws exception when NO injection is detected)
+Blacklist approach is easily bypassed
+Only checks for specific patterns, not comprehensive
+Code Quality Issues
+**** 4. Poor Error Handling
+Location: Multiple files
+Issues:
+Generic exception catching without specific handling
+Missing null checks in critical paths
+Inconsistent error response patterns
+**** 5. Resource Management Problems
+Location: DatabaseHelper.cs
+Issue: Missing proper disposal patterns
+Example: No explicit disposal of SqlDataReader
+**** 6. Inconsistent Logging
+Location: Multiple services
+Issue: Creating logger factories in constructors instead of using dependency injection
+Example:
+**** 7. Poor Naming Conventions
+Examples:
+getConnection() should be GetConnection()
+generateResultDic() should be GenerateResultDictionary()
+fixString() should be SanitizeString()
+Architecture Issues
+**** 8. Tight Coupling
+Location: Throughout the codebase
+Issue: Services directly instantiating dependencies instead of using DI properly
+**** 9. Missing Abstraction Layers
+Issue: No interfaces for services, making testing difficult
+Impact: Hard to mock dependencies for unit testing
+**** 10. Inconsistent Data Access Patterns
+Location: DataRepository.cs
+Issue: Mix of static and instance methods without clear pattern
+Configuration Issues
+**** 11. Missing Environment-Specific Configurations
+Issue: appsettings.Development.json is nearly empty
+Impact: No proper environment separation
+**** 12. Hardcoded Values
+Location: Multiple files
+Issue: Magic numbers and strings throughout codebase
+Example: TimeSpan.FromSeconds(tableInfo.CheckTableChangesInterval)
+Performance Issues
+**** 13. Inefficient Database Operations
+Location: DataService.cs
+Issues:
+No connection pooling configuration
+Multiple database round trips for simple operations
+No caching mechanisms
+**** 14. Blocking Operations
+Location: Program.cs
+Issue:
+Documentation Issues
+**** 15. Inadequate Documentation
+Location: README.md
+Issue: Contains only GitLab template content, no project-specific documentation
+**** 16. Missing Code Comments
+Issue: Complex business logic lacks explanatory comments
+Dependency Issues
+**** 17. Outdated Dependencies
+Location: StateMonitoring.Data.csproj
+Issue: Some packages may have newer versions with security fixes
+Example: Microsoft.Data.SqlClient version 6.0.2
+**** 18. Missing Dependency Validation
+Issue: No version constraints or vulnerability scanning
+Data Handling Issues
+**** 19. Unsafe Type Conversions
+Location: CommonSqlUtils.cs
+Issue: Direct casting without validation
+Example: bool.Parse($"{value}") without null checks
+**** 20. Inconsistent Data Formatting
+Location: CommonSqlUtils.cs
+Issue: Custom date formatting instead of using standard SQL date formats
+Temporal Workflow Issues
+**** 21. Workflow Management Problems
+Location: WorkflowOrchestrator.cs
+Issues:
+No proper workflow lifecycle management
+Potential memory leaks with workflow ID dictionary
+No error handling for workflow failures
+22. Signal Handling Issues
+Location: MainWorkflow.cs
+Issue: Simple boolean flag for signal handling is not robust
+gRPC Service Issues
+**** 23. Inconsistent Response Handling
+Location: StateMonitoringGrpcService.cs
+Issue: Different error handling patterns across methods
+**** 24. Missing Input Validation
+Issue: No validation of gRPC request parameters before processing
+Examine project structure and configuration files
+Review code quality, patterns, and best practices
+Check for security vulnerabilities and issues
+Analyze dependencies and configuration
+Evaluate architecture and design patterns
+Compile comprehensive list of identified issues
+Recommendations for Immediate Action
+**** High Priority (Fix Immediately)
+***** Fix SQL injection vulnerabilities - Use parameterized queries
+***** Remove hardcoded credentials - Use environment variables or secure configuration
+***** Fix the SQL injection check logic in SqlSafeUtil.cs
+***** Add proper error handling and logging
+**** Medium Priority
+***** Refactor to use proper dependency injection
+***** Add unit tests with proper mocking
+***** Implement proper resource disposal
+***** Add input validation for all public methods
+**** Low Priority
+***** Improve documentation
+***** Update dependencies
+***** Add performance monitoring
+***** Implement caching strategies
+*** [[file:~/orgs/State-monnitoring-code-review-issues.org][state monitoring issues]]
+*** [[file:~/orgs/cis-bff-code-review-issues.org][bff issues]]
 ** handover process
 *** documentations
 **** create ERD and data dictionary
