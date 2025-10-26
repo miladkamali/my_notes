@@ -9,88 +9,154 @@ https://patricia.frank-capra.com/user/panel/
 * movies to watch
 ** TODO Jojo rabbit
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.8
+   :IMDB_URL: https://www.imdb.com/title/tt2584384/
+   :IMDB_VOTES: 309,000
+   :GENRE: Comedy, Drama, War
    :YEAR: 2019
    :END:
    Description: A young German boy in the Hitler Youth, whose hero and imaginary friend is the country's dictator, is shocked to discover that his mother is hiding a Jewish girl in their home.
 ** UNDER THE SILVER LAKE
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.2
+   :IMDB_URL: https://www.imdb.com/title/tt5690360/
+   :IMDB_VOTES: 73,000
+   :GENRE: Comedy, Drama, Mystery
    :YEAR: 2018
    :END:
    Description: Sam, a disenchanted young man, finds a mysterious woman swimming in his apartment's pool one night. The next morning, she disappears. Sam sets off across LA to find her, and along the way he uncovers a conspiracy far more bizarre.
 ** TODO The Worst Person in the World
    :PROPERTIES:
-   :IMDB_RATING: N/A
-   :YEAR: 2013
+   :IMDB_RATING: 7.9
+   :IMDB_URL: https://www.imdb.com/title/tt10370710/
+   :IMDB_VOTES: 105,000
+   :GENRE: Comedy, Drama, Romance
+   :YEAR: 2021
    :END:
-   Description: After doing something charitable, Seth Rogen decides it's okay to become the worst person in the world.
+   Description: The chronicles of four years in the life of Julie, a young woman who navigates the troubled waters of her love life and struggles to find her career path. Norwegian film directed by Joachim Trier.
 ** love rosie
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.2
+   :IMDB_URL: https://www.imdb.com/title/tt1638002/
+   :IMDB_VOTES: 120,000
+   :GENRE: Comedy, Drama, Romance
    :YEAR: 2014
    :END:
    Description: Rosie and Alex have been best friends since they were 5, so they couldn't possibly be right for each other--or could they? When it comes to love, life and making the right choices, these two are their own worst enemies.
 ** dr zhivago
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 8.0
+   :IMDB_URL: https://www.imdb.com/title/tt0059113/
+   :IMDB_VOTES: 86,000
+   :GENRE: Drama, Romance, War
    :YEAR: 1965
    :END:
    Description: The life of a Russian physician and poet who, although married to another, falls in love with a political activist's wife and experiences hardship during World War I and then the October Revolution.
 ** now is good
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.0
+   :IMDB_URL: https://www.imdb.com/title/tt1853563/
+   :IMDB_VOTES: 126,000
+   :GENRE: Drama, Romance
    :YEAR: 2012
    :END:
    Description: A teenage girl dying of leukemia compiles a list of things she would like to do before passing away. Topping the list is her desire to lose her virginity.
 ** TODO Brimstone
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.0
+   :IMDB_URL: https://www.imdb.com/title/tt3630800/
+   :IMDB_VOTES: 62,000
+   :GENRE: Drama, Thriller, Western
    :YEAR: 2016
    :END:
    Description: From the moment the new Reverend climbs the pulpit, Liz knows that she and her family are in great danger.
-** [[https://www.imdb.com/title/tt7984766/][the king]]
-** [[https://www.imdb.com/title/tt5478478/][hostiles]]
+** the king
+   :PROPERTIES:
+   :IMDB_RATING: 7.2
+   :IMDB_URL: https://www.imdb.com/title/tt7984766/
+   :IMDB_VOTES: 206,000
+   :GENRE: Biography, Drama, History
+   :YEAR: 2019
+   :END:
+   Description: Young Hal ascends the English throne after his brother dies. Now he must navigate palace politics, war, and treachery to stay alive.
+** hostiles
+   :PROPERTIES:
+   :IMDB_RATING: 7.4
+   :IMDB_URL: https://www.imdb.com/title/tt5478478/
+   :IMDB_VOTES: 95,000
+   :GENRE: Drama, Western
+   :YEAR: 2017
+   :END:
+   Description: In 1892, a legendary Army captain reluctantly agrees to escort a Cheyenne war chief and his family through dangerous territory.
 ** before i go to sleep
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.6
+   :IMDB_URL: https://www.imdb.com/title/tt1441220/
+   :IMDB_VOTES: 113,000
+   :GENRE: Mystery, Thriller
    :YEAR: 2014
    :END:
    Description: A woman wakes up every day, remembering nothing as a result of a traumatic accident in her past. One day, new terrifying truths emerge that force her to question everyone around her.
 ** 2:22
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 5.0
+   :IMDB_URL: https://www.imdb.com/title/tt1131724/
+   :IMDB_VOTES: 20,000
+   :GENRE: Thriller
    :YEAR: 2017
    :END:
    Description: A man's life is derailed when an ominous pattern of events repeats itself in exactly the same manner every day, ending at precisely 2:22 p.m.
 ** the wall
    :PROPERTIES:
-   :IMDB_RATING: N/A
-   :YEAR: 2013
+   :IMDB_RATING: 5.9
+   :IMDB_URL: https://www.imdb.com/title/tt4218696/
+   :IMDB_VOTES: 22,000
+   :GENRE: Action, Drama, Thriller, War
+   :YEAR: 2017
    :END:
    Description: Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.
-** [[https://www.imdb.com/title/tt1534089/][The Whore]]
+** The Whore
+   :PROPERTIES:
+   :IMDB_RATING: 7.9
+   :IMDB_URL: https://www.imdb.com/title/tt1534089/
+   :IMDB_VOTES: 2,000
+   :GENRE: Drama, Horror
+   :YEAR: 1998
+   :END:
+   Description: A young woman suffers brutal sexual abuse while on the run from gangsters.
 ** amerian honey
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.2
+   :IMDB_URL: https://www.imdb.com/title/tt3721936/
+   :IMDB_VOTES: 52,000
+   :GENRE: Drama
    :YEAR: 2016
    :END:
    Description: A teenage girl with nothing to lose joins a traveling magazine sales crew, and gets caught up in a whirlwind of hard partying, law bending and young love as she criss-crosses the Midwest with a band of misfits.
 ** how to lose a guy in 10 days
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.4
+   :IMDB_URL: https://www.imdb.com/title/tt0251127/
+   :IMDB_VOTES: 252,000
+   :GENRE: Comedy, Romance
    :YEAR: 2003
    :END:
    Description: An advertising executive and ladies' man, to win a big campaign, bets that he can make a woman fall in love with him in 10 days.
 ** the choice
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.2
+   :IMDB_URL: https://www.imdb.com/title/tt3797868/
+   :IMDB_VOTES: 68,000
+   :GENRE: Drama, Romance
    :YEAR: 2016
    :END:
    Description: Travis and Gabby first meet as neighbors in a small coastal town and wind up in a relationship that is tested by life's most defining events.
 ** Only the Brave
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.6
+   :IMDB_URL: https://www.imdb.com/title/tt3829920/
+   :IMDB_VOTES: 109,000
+   :GENRE: Action, Biography, Drama
    :YEAR: 2017
    :END:
    Description: Based on the true story of the Granite Mountain Hotshots, a group of elite firefighters who risk everything to protect a town from a historic wildfire.
@@ -103,13 +169,19 @@ https://patricia.frank-capra.com/user/panel/
 https://youtube.com/shorts/OmtpjKD3uCg?feature=share
 ** land of bad
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 5.7
+   :IMDB_URL: https://www.imdb.com/title/tt28251080/
+   :IMDB_VOTES: 17,000
+   :GENRE: Action, Thriller, War
    :YEAR: 2024
    :END:
-   Description: A Delta Force team fights for survival as an Air Force drone pilot becomes its eyes in the sky.
+   Description: A Delta Force team fights for survival as an Air Force drone pilot becomes its eyes in the sky. Starring Liam Hemsworth and Russell Crowe.
 ** Papillon
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.2
+   :IMDB_URL: https://www.imdb.com/title/tt5093026/
+   :IMDB_VOTES: 145,000
+   :GENRE: Biography, Crime, Drama
    :YEAR: 2017
    :END:
    Description: Wrongfully convicted for murder, Henri Charriere forms an unlikely relationship with fellow inmate and quirky convicted counterfeiter, Louis Dega, in an attempt to escape from the notorious penal colony on Devil's Island.
@@ -133,25 +205,37 @@ https://youtube.com/shorts/OmtpjKD3uCg?feature=share
    Description: No description available
 ** the outpost
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.8
+   :IMDB_URL: https://www.imdb.com/title/tt3830294/
+   :IMDB_VOTES: 70,000
+   :GENRE: Action, Drama, History, Thriller, War
    :YEAR: 2019
    :END:
    Description: A small team of U.S. soldiers battles against hundreds of Taliban fighters in Afghanistan.
 ** Once Upon a Time in Hollywood
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.7
+   :IMDB_URL: https://www.imdb.com/title/tt7131622/
+   :IMDB_VOTES: 754,000
+   :GENRE: Comedy, Drama
    :YEAR: 2019
    :END:
    Description: As Hollywood's Golden Age is winding down during the summer of 1969, television actor Rick Dalton and his stunt double Cliff Booth endeavor to achieve lasting success in Hollywood while meeting several colorful characters along the way.
 ** Tomb Raider from 2018
    :PROPERTIES:
-   :IMDB_RATING: N/A
-   :YEAR: 2020
+   :IMDB_RATING: 6.3
+   :IMDB_URL: https://www.imdb.com/title/tt1365519/
+   :IMDB_VOTES: 280,000
+   :GENRE: Action, Adventure, Fantasy
+   :YEAR: 2018
    :END:
    Description: After a sorcerer steals an artifact and kidnaps Lara Croft's friend, Lara must act quickly to stop an arcane ritual, but she finds herself outmatched and must help her friend help herself. A fan short.
 ** [#B] Hyena Road
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.0
+   :IMDB_URL: https://www.imdb.com/title/tt3317208/
+   :IMDB_VOTES: 17,000
+   :GENRE: Action, Drama, Thriller, War
    :YEAR: 2015
    :END:
    Description: Three different men, three different worlds, three different wars - all stand at the intersection of modern warfare - a murky world of fluid morality where all is not as it seems.
@@ -169,8 +253,11 @@ https://youtube.com/shorts/OmtpjKD3uCg?feature=share
    Description: David Cross makes a living as a Repo Man, but when he takes a car belonging to the bad guys, his wife is kidnapped and he has to do what he can to save her.
 ** Rebel Ridge
    :PROPERTIES:
-   :IMDB_RATING: N/A
-   :YEAR: 2024
+   :IMDB_RATING: 5.8
+   :IMDB_URL: https://www.imdb.com/title/tt32887998/
+   :IMDB_VOTES: 34,000
+   :GENRE: Action, Thriller
+   :YEAR: 2025
    :END:
    Description: A former Marine grapples his way through a web of small-town corruption when an attempt to post bail for his cousin escalates into a violent standoff with the local police chief.
 ** Subservience
@@ -181,19 +268,28 @@ https://youtube.com/shorts/OmtpjKD3uCg?feature=share
    Description: Follows a struggling father who purchases a domestic SIM to help care for his house and family, unaware she will gain awareness and turn deadly.
 ** Civil War
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.0
+   :IMDB_URL: https://www.imdb.com/title/tt17279496/
+   :IMDB_VOTES: 253,114
+   :GENRE: Action, Adventure, Thriller, Drama, War
    :YEAR: 2024
    :END:
-   Description: In a dystopian future, four journalists travel across the United States during a nation-wide conflict. While trying to survive, they aim to reach the White House to interview the president before he is overthrown.
+   Description: In a dystopian future, four journalists travel across the United States during a nation-wide conflict. While trying to survive, they aim to reach the White House to interview the president before he is overthrown. Directed by Alex Garland, starring Kirsten Dunst, Wagner Moura, and Cailee Spaeny.
 ** Samaritan
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 5.8
+   :IMDB_URL: https://www.imdb.com/title/tt5500216/
+   :IMDB_VOTES: 75,000
+   :GENRE: Action, Drama, Sci-Fi, Thriller
    :YEAR: 2022
    :END:
    Description: A young boy learns that a superhero who was thought to have died after an epic battle twenty-five years ago may in fact still be alive.
 ** Outside the Wire
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 5.4
+   :IMDB_URL: https://www.imdb.com/title/tt9701940/
+   :IMDB_VOTES: 52,000
+   :GENRE: Action, Sci-Fi, Thriller, War
    :YEAR: 2021
    :END:
    Description: In the near future, a drone pilot sent into a war zone finds himself paired with a top-secret android officer on a mission to stop a nuclear attack.
@@ -205,13 +301,19 @@ https://youtube.com/shorts/OmtpjKD3uCg?feature=share
    Description: Believe it or not the world community has written some rules for war. Since war is still a brutal business, the rules must cover some awfully nasty behavior.
 ** Tucker and Dale vs Evil (2010)
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.5
+   :IMDB_URL: https://www.imdb.com/title/tt1465522/
+   :IMDB_VOTES: 166,000
+   :GENRE: Comedy, Horror
    :YEAR: 2010
    :END:
    Description: Affable hillbillies Tucker and Dale are on vacation at their dilapidated mountain cabin when they are mistaken for murderers by a group of preppy college students.
 ** DONE [#A] dark tower
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 5.5
+   :IMDB_URL: https://www.imdb.com/title/tt1648190/
+   :IMDB_VOTES: 155,000
+   :GENRE: Action, Adventure, Fantasy, Horror, Sci-Fi, Western
    :YEAR: 2017
    :END:
    Description: A boy haunted by visions of a dark tower from a parallel reality teams up with the tower's disillusioned guardian to stop an evil warlock known as the Man in Black who plans to use the boy to destroy the tower and open the gates of Hell.
@@ -242,12 +344,6 @@ it's just too stupid
    :END:
    Description: Oancitizen pays his respects to Jim Jarmusch by reviewing one of his better known titles.
 ** THE MINISTRY OF UNGENTLEMANLY WARFARE (2024)
-** pingune
-   :PROPERTIES:
-   :IMDB_RATING: N/A
-   :YEAR: 1980
-   :END:
-   Description: Children's stop-motion series set in Antarctica and focusing around penguin families living and working in igloos. The main character, Pingu, belongs to one such family. He goes on various adventures with his little sister and his friends.
 ** babygirl
    :PROPERTIES:
    :IMDB_RATING: N/A
@@ -256,19 +352,28 @@ it's just too stupid
    Description: A high-powered CEO puts her career and family on the line when she begins a torrid affair with her much-younger intern.
 ** Replicas
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 5.5
+   :IMDB_URL: https://www.imdb.com/title/tt4154916/
+   :IMDB_VOTES: 60,000
+   :GENRE: Drama, Sci-Fi, Thriller
    :YEAR: 2018
    :END:
    Description: A scientist becomes obsessed with bringing back his family members who died in a traffic accident.
 ** The Lucky One"
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.6
+   :IMDB_URL: https://www.imdb.com/title/tt1707428/
+   :IMDB_VOTES: 67,000
+   :GENRE: Drama, Romance
    :YEAR: 2012
    :END:
    Description: A Marine travels to Louisiana after serving three tours in Iraq and searches for the unknown woman he believes was his good luck charm during the war.
 ** Miss Peregrine's Home for Peculiar Children
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.3
+   :IMDB_URL: https://www.imdb.com/title/tt1935859/
+   :IMDB_VOTES: 130,000
+   :GENRE: Adventure, Drama, Family
    :YEAR: 2016
    :END:
    Description: When Jacob discovers clues to a mystery that stretches across time, he finds Miss Peregrine's Home for Peculiar Children. But the danger deepens after he gets to know the residents and learns about their special powers.
@@ -290,10 +395,21 @@ it's just too stupid
    :YEAR: 2025
    :END:
    Description: Two operatives are appointed to posts in guard towers on opposite sides of a classified gorge.
-** [[https://www.imdb.com/title/tt0114787/][Underground]]
+** Underground
+   :PROPERTIES:
+   :IMDB_RATING: 8.1
+   :IMDB_URL: https://www.imdb.com/title/tt0114787/
+   :IMDB_VOTES: 48,000
+   :GENRE: Comedy, Drama, War
+   :YEAR: 1995
+   :END:
+   Description: A drama about three underground resistance fighters in Belgrade during WWII and their post-war experiences.
 ** Falcon Rising
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 5.6
+   :IMDB_URL: https://www.imdb.com/title/tt2393827/
+   :IMDB_VOTES: 10,000
+   :GENRE: Action, Drama
    :YEAR: 2014
    :END:
    Description: Chapman is an ex-marine in Brazil's slums, battling the yakuza outfit who attacked his sister and left her for dead.
@@ -303,32 +419,52 @@ it's just too stupid
    :YEAR: 2017
    :END:
    Description: A boy haunted by visions of a dark tower from a parallel reality teams up with the tower's disillusioned guardian to stop an evil warlock known as the Man in Black who plans to use the boy to destroy the tower and open the gates of Hell.
-** [[https://www.imdb.com/title/tt5442430/][life]]
+** life
+   :PROPERTIES:
+   :IMDB_RATING: 6.6
+   :IMDB_URL: https://www.imdb.com/title/tt5442430/
+   :IMDB_VOTES: 223,000
+   :GENRE: Drama, Horror, Sci-Fi, Thriller
+   :YEAR: 2017
+   :END:
+   Description: The six-member crew of the International Space Station is tasked with studying a sample from Mars that may contain the first evidence of extra-terrestrial life.
 ** The Brothers
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.5
+   :IMDB_URL: https://www.imdb.com/title/tt0232397/
+   :IMDB_VOTES: 13,000
+   :GENRE: Comedy, Drama, Romance
    :YEAR: 2001
    :END:
    Description: Four friends begin to question women and relationships when one of them announces impending nuptials.
 ** The 5th Wave
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 5.2
+   :IMDB_URL: https://www.imdb.com/title/tt2304933/
+   :IMDB_VOTES: 137,000
+   :GENRE: Action, Adventure, Sci-Fi, Thriller
    :YEAR: 2016
    :END:
    Description: Four waves of increasingly deadly alien attacks have left most of Earth in ruin. Cassie is on the run, desperately trying to save her younger brother.
 ** 22 miles
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.4
+   :IMDB_URL: https://www.imdb.com/title/tt4560436/
+   :IMDB_VOTES: 69,000
+   :GENRE: Action, Crime, Thriller
    :YEAR: 2018
    :END:
    Description: A small team of elite American intelligence officers, part of a top-secret tactical command unit, try to smuggle a mysterious police officer with sensitive information out of Indonesia.
 ** grimsby
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.2
+   :IMDB_URL: https://www.imdb.com/title/tt3381008/
+   :IMDB_VOTES: 124,000
+   :GENRE: Action, Adventure, Comedy
    :YEAR: 2016
    :END:
    Description: A new assignment forces a top spy to team up with his football hooligan brother.
-** 1.Too Old to Die Young
+** Too Old to Die Young
    :PROPERTIES:
    :IMDB_RATING: N/A
    :YEAR: 2019
@@ -336,62 +472,83 @@ it's just too stupid
    Description: Detective Martin Jones, who leads a double life as a killer for hire in Los Angeles' deadly underground, suffers an existential crisis which leads him deeper into a blood splattered world of violence.
 ** Kingsman: The Secret Service
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.7
+   :IMDB_URL: https://www.imdb.com/title/tt2802144/
+   :IMDB_VOTES: 580,000
+   :GENRE: Action, Adventure, Comedy, Thriller
    :YEAR: 2014
    :END:
    Description: A spy organisation recruits a promising street kid into the agency's training program, while a global threat emerges from a twisted tech genius.
 ** Zodiac
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.7
+   :IMDB_URL: https://www.imdb.com/title/tt0443706/
+   :IMDB_VOTES: 578,000
+   :GENRE: Crime, Drama, Mystery, Thriller
    :YEAR: 2007
    :END:
    Description: Between 1968 and 1983, a San Francisco cartoonist becomes an amateur detective obsessed with tracking down the Zodiac Killer, an unidentified individual who terrorizes Northern California with a killing spree.
 ** L'Immortel
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.4
+   :IMDB_URL: https://www.imdb.com/title/tt1327695/
+   :IMDB_VOTES: 18,000
+   :GENRE: Action, Crime, Drama
    :YEAR: 2010
    :END:
    Description: A retired mobster goes on a revenge spree after being left for dead with 22 bullets in his body by his former childhood friend.
 ** Polar
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.4
+   :IMDB_URL: https://www.imdb.com/title/tt4139584/
+   :IMDB_VOTES: 85,000
+   :GENRE: Action, Crime, Thriller
    :YEAR: 2019
    :END:
    Description: A retiring assassin suddenly finds himself on the receiving end of a hit, contracted by none other than his own employer seeking to cash in on the pensions of aging employees.
 ** The Forever Purge
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 5.3
+   :IMDB_URL: https://www.imdb.com/title/tt10323676/
+   :IMDB_VOTES: 69,000
+   :GENRE: Action, Horror, Sci-Fi, Thriller
    :YEAR: 2021
    :END:
    Description: All the rules are broken as a sect of lawless marauders decides that the annual Purge does not stop at daybreak and instead should never end.
 ** The Taking of Pelham 123
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.4
+   :IMDB_URL: https://www.imdb.com/title/tt1111422/
+   :IMDB_VOTES: 227,000
+   :GENRE: Action, Crime, Thriller
    :YEAR: 2009
    :END:
    Description: Armed men hijack a New York City subway train, holding the passengers hostage in return for a ransom, and turning an ordinary day's work for dispatcher Walter Garber into a face-off with the mastermind behind the crime.
 ** The Mist
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.2
+   :IMDB_URL: https://www.imdb.com/title/tt0884328/
+   :IMDB_VOTES: 304,000
+   :GENRE: Horror, Sci-Fi, Thriller
    :YEAR: 2007
    :END:
    Description: After a massive thunderstorm, an eerie, unwavering fog descends upon a Maine community. Locals seek refuge in a grocery store from the monstrous creatures now roaming the countryside killing everyone they encounter.
 ** Туман (The Fog)
 ** Fear Street Part 1: 1994
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.2
+   :IMDB_URL: https://www.imdb.com/title/tt6566576/
+   :IMDB_VOTES: 104,000
+   :GENRE: Horror, Mystery, Thriller
    :YEAR: 2021
    :END:
    Description: A circle of teenage friends accidentally encounter the ancient evil responsible for a series of brutal murders that have plagued their town for over 300 years. Welcome to Shadyside.
-** Narcos
-   :PROPERTIES:
-   :IMDB_RATING: N/A
-   :YEAR: 2015
-   :END:
-   Description: A chronicled look at the criminal exploits of Colombian drug lord Pablo Escobar, as well as the many other drug kingpins who plagued the country through the years.
 ** jarhead
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.0
+   :IMDB_URL: https://www.imdb.com/title/tt0418763/
+   :IMDB_VOTES: 268,000
+   :GENRE: Biography, Drama, War
    :YEAR: 2005
    :END:
    Description: A psychological study of Marine's state of mind during the Gulf War. Told through the eyes of a U.S. Marine sniper who struggles to cope with boredom, a sense of isolation, and other issues back home.
@@ -403,19 +560,28 @@ it's just too stupid
    Description: A single father and two women venture from the safety of their homes to face monstrous creatures to save the life of a young boy.
 ** Oldboy
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 8.4
+   :IMDB_URL: https://www.imdb.com/title/tt0364569/
+   :IMDB_VOTES: 621,000
+   :GENRE: Action, Drama, Mystery, Thriller
    :YEAR: 2003
    :END:
    Description: After being kidnapped and imprisoned for fifteen years, Oh Dae-Su is released, only to find that he must track down his captor in five days.
 ** anna
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.6
+   :IMDB_URL: https://www.imdb.com/title/tt7456312/
+   :IMDB_VOTES: 77,000
+   :GENRE: Action, Thriller
    :YEAR: 2019
    :END:
    Description: Beneath Anna Poliatova's striking beauty lies a secret that will unleash her indelible strength and skill to become one of the world's most feared government assassins.
 ** Groundhog day
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 8.1
+   :IMDB_URL: https://www.imdb.com/title/tt0107048/
+   :IMDB_VOTES: 714,000
+   :GENRE: Comedy, Drama, Fantasy, Romance
    :YEAR: 1993
    :END:
    Description: A narcissistic, self-centered weatherman finds himself in a time loop on Groundhog Day.
@@ -427,55 +593,82 @@ it's just too stupid
    Description: After suffering a tragedy at the hand of invading soldiers in Donbas, an Ukrainian physics teacher seeks revenge. He sets his sights on an elite Russian sniper whose elimination could change the tide of the conflict.
 ** Crown for Christmas
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.6
+   :IMDB_URL: https://www.imdb.com/title/tt5119860/
+   :IMDB_VOTES: 7,000
+   :GENRE: Drama, Romance
    :YEAR: 2015
    :END:
    Description: After getting fired from her job as a maid at a ritzy New York City hotel, Allie reluctantly accepts a temporary gig as the governess to a young girl who is part of a powerful family in Europe that lives in a castle.
 ** cold in july
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.6
+   :IMDB_URL: https://www.imdb.com/title/tt1179034/
+   :IMDB_VOTES: 35,000
+   :GENRE: Crime, Drama, Thriller
    :YEAR: 2014
    :END:
    Description: When a protective father meets a murderous ex-con, both need to deviate from the path they are on as they soon find themselves entangled in a downwards spiral of lies and violence while having to confront their own inner psyche.
 ** Centurion
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.3
+   :IMDB_URL: https://www.imdb.com/title/tt1020558/
+   :IMDB_VOTES: 89,000
+   :GENRE: Action, Adventure, Drama, History, Thriller, War
    :YEAR: 2010
    :END:
    Description: A splinter group of Roman soldiers fight for their lives behind enemy lines after their legion is devastated in a guerrilla attack.
 ** Rise of the Guardians
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.3
+   :IMDB_URL: https://www.imdb.com/title/tt1446192/
+   :IMDB_VOTES: 169,000
+   :GENRE: Animation, Action, Adventure, Family, Fantasy
    :YEAR: 2012
    :END:
    Description: When the evil spirit Pitch launches an assault on Earth, the Immortal Guardians team up to protect the innocence of children all around the world.
 ** The Covenant
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.4
+   :IMDB_URL: https://www.imdb.com/title/tt4873118/
+   :IMDB_VOTES: 93,000
+   :GENRE: Action, Drama, Thriller, War
    :YEAR: 2023
    :END:
    Description: During the war in Afghanistan, a local interpreter risks his own life to carry an injured sergeant across miles of grueling terrain.
 ** the titan
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 5.6
+   :IMDB_URL: https://www.imdb.com/title/tt4986098/
+   :IMDB_VOTES: 45,000
+   :GENRE: Drama, Sci-Fi, Thriller
    :YEAR: 2018
    :END:
    Description: A military family takes part in a ground-breaking experiment of genetic evolution and space exploration.
 ** The Old Guard
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.6
+   :IMDB_URL: https://www.imdb.com/title/tt7556122/
+   :IMDB_VOTES: 255,000
+   :GENRE: Action, Fantasy, Thriller
    :YEAR: 2020
    :END:
    Description: A covert group of tight-knit mercenaries with an inability to die have fought to protect the world for centuries. But when their abilities are suddenly exposed, they need to eliminate the threat of those who seek to replicate their power.
 ** the titan 2012
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 5.8
+   :IMDB_URL: https://www.imdb.com/title/tt1646987/
+   :IMDB_VOTES: 214,000
+   :GENRE: Action, Adventure, Fantasy
    :YEAR: 2012
    :END:
    Description: Perseus braves the treacherous underworld to rescue his father, Zeus, captured by his son, Ares, and brother Hades who unleash the ancient Titans upon the world.
 ** Finding You
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.4
+   :IMDB_URL: https://www.imdb.com/title/tt8707924/
+   :IMDB_VOTES: 13,000
+   :GENRE: Drama, Romance
    :YEAR: 2020
    :END:
    Description: Violinist Finley Sinclair travels to an Irish coastal village to begin a semester of studying abroad. At the B&B run by her host family, she encounters gregarious, persistent heartthrob movie star Beckett Rush.
@@ -487,38 +680,56 @@ it's just too stupid
    Description: A young Predator outcast from his clan finds an unlikely ally on his journey in search of the ultimate adversary.
 ** tomorrowland 2015
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.4
+   :IMDB_URL: https://www.imdb.com/title/tt1964418/
+   :IMDB_VOTES: 190,000
+   :GENRE: Action, Adventure, Family, Fantasy, Sci-Fi
    :YEAR: 2015
    :END:
    Description: Bound by a shared destiny, a teen bursting with scientific curiosity and a former boy-genius inventor embark on a mission to unearth the secrets of a place somewhere in time and space that exists in their collective memory.
 ** Odd Thomas
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.8
+   :IMDB_URL: https://www.imdb.com/title/tt1767354/
+   :IMDB_VOTES: 77,000
+   :GENRE: Action, Fantasy, Mystery
    :YEAR: 2013
    :END:
    Description: In a California desert town, a short-order cook with clairvoyant abilities encounters a mysterious man with a link to dark, threatening forces.
 ** Angel Has Fallen
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.4
+   :IMDB_URL: https://www.imdb.com/title/tt6189022/
+   :IMDB_VOTES: 134,000
+   :GENRE: Action, Thriller
    :YEAR: 2019
    :END:
    Description: Mike Banning is framed for the attempted assassination of the President, and now must evade his own agency, and the FBI, as he tries to uncover the real threat.
 ** the marksman
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 5.7
+   :IMDB_URL: https://www.imdb.com/title/tt3811906/
+   :IMDB_VOTES: 46,000
+   :GENRE: Action, Crime, Drama, Thriller
    :YEAR: 2021
    :END:
    Description: A rancher on the Arizona border becomes the unlikely defender of a young Mexican boy desperately fleeing the cartel assassins who've pursued him into the U.S.
 ** Immortals
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 6.0
+   :IMDB_URL: https://www.imdb.com/title/tt1253863/
+   :IMDB_VOTES: 203,000
+   :GENRE: Action, Drama, Fantasy
    :YEAR: 2011
    :END:
    Description: Theseus is a mortal man chosen by Zeus to lead the fight against the ruthless King Hyperion, who is on a rampage across Greece to obtain a weapon that can destroy humanity.
 * cartoo
 ** DONE Elemental
    :PROPERTIES:
-   :IMDB_RATING: N/A
+   :IMDB_RATING: 7.0
+   :IMDB_URL: https://www.imdb.com/title/tt2945210/
+   :IMDB_VOTES: 131,000
+   :GENRE: Animation, Adventure, Comedy, Family, Fantasy, Romance
    :YEAR: 2023
    :END:
    Description: Follows Ember and Wade, in a city where fire-, water-, earth- and air-residents live together.
