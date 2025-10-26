@@ -8,100 +8,530 @@
 https://patricia.frank-capra.com/user/panel/
 * movies to watch
 ** TODO Jojo rabbit
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2019
+   :END:
+   Description: A young German boy in the Hitler Youth, whose hero and imaginary friend is the country's dictator, is shocked to discover that his mother is hiding a Jewish girl in their home.
 ** UNDER THE SILVER LAKE
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2018
+   :END:
+   Description: Sam, a disenchanted young man, finds a mysterious woman swimming in his apartment's pool one night. The next morning, she disappears. Sam sets off across LA to find her, and along the way he uncovers a conspiracy far more bizarre.
 ** TODO The Worst Person in the World
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2013
+   :END:
+   Description: After doing something charitable, Seth Rogen decides it's okay to become the worst person in the world.
 ** love rosie
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2014
+   :END:
+   Description: Rosie and Alex have been best friends since they were 5, so they couldn't possibly be right for each other--or could they? When it comes to love, life and making the right choices, these two are their own worst enemies.
 ** dr zhivago
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 1965
+   :END:
+   Description: The life of a Russian physician and poet who, although married to another, falls in love with a political activist's wife and experiences hardship during World War I and then the October Revolution.
 ** now is good
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2012
+   :END:
+   Description: A teenage girl dying of leukemia compiles a list of things she would like to do before passing away. Topping the list is her desire to lose her virginity.
 ** TODO Brimstone
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2016
+   :END:
+   Description: From the moment the new Reverend climbs the pulpit, Liz knows that she and her family are in great danger.
 ** [[https://www.imdb.com/title/tt7984766/][the king]]
 ** [[https://www.imdb.com/title/tt5478478/][hostiles]]
 ** before i go to sleep
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2014
+   :END:
+   Description: A woman wakes up every day, remembering nothing as a result of a traumatic accident in her past. One day, new terrifying truths emerge that force her to question everyone around her.
 ** 2:22
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2017
+   :END:
+   Description: A man's life is derailed when an ominous pattern of events repeats itself in exactly the same manner every day, ending at precisely 2:22 p.m.
 ** the wall
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2013
+   :END:
+   Description: Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.
 ** [[https://www.imdb.com/title/tt1534089/][The Whore]]
 ** amerian honey
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2016
+   :END:
+   Description: A teenage girl with nothing to lose joins a traveling magazine sales crew, and gets caught up in a whirlwind of hard partying, law bending and young love as she criss-crosses the Midwest with a band of misfits.
 ** how to lose a guy in 10 days
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2003
+   :END:
+   Description: An advertising executive and ladies' man, to win a big campaign, bets that he can make a woman fall in love with him in 10 days.
 ** the choice
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2016
+   :END:
+   Description: Travis and Gabby first meet as neighbors in a small coastal town and wind up in a relationship that is tested by life's most defining events.
 ** Only the Brave
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2017
+   :END:
+   Description: Based on the true story of the Granite Mountain Hotshots, a group of elite firefighters who risk everything to protect a town from a historic wildfire.
 ** find out 
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 1940
+   :END:
+   Description: The manager of Kay Kyser's band books them for a birthday bash for an heiress at a spooky mansion, where sinister forces try to kill her.
 https://youtube.com/shorts/OmtpjKD3uCg?feature=share
 ** land of bad
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2024
+   :END:
+   Description: A Delta Force team fights for survival as an Air Force drone pilot becomes its eyes in the sky.
 ** Papillon
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2017
+   :END:
+   Description: Wrongfully convicted for murder, Henri Charriere forms an unlikely relationship with fellow inmate and quirky convicted counterfeiter, Louis Dega, in an attempt to escape from the notorious penal colony on Devil's Island.
 ** sleeping dogs
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2024
+   :END:
+   Description: An ex-homicide detective with memory loss is forced to solve a brutal murder, only to uncover chilling secrets from his forgotten past.
 ** Elevation - (2024)
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2024
+   :END:
+   Description: A single father and two women venture from the safety of their homes to face monstrous creatures to save the life of a young boy.
 ** A Dogs Tale
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: N/A
+   :END:
+   Description: No description available
 ** the outpost
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2019
+   :END:
+   Description: A small team of U.S. soldiers battles against hundreds of Taliban fighters in Afghanistan.
 ** Once Upon a Time in Hollywood
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2019
+   :END:
+   Description: As Hollywood's Golden Age is winding down during the summer of 1969, television actor Rick Dalton and his stunt double Cliff Booth endeavor to achieve lasting success in Hollywood while meeting several colorful characters along the way.
 ** Tomb Raider from 2018
-** Hyena Road
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2020
+   :END:
+   Description: After a sorcerer steals an artifact and kidnaps Lara Croft's friend, Lara must act quickly to stop an arcane ritual, but she finds herself outmatched and must help her friend help herself. A fan short.
+** [#B] Hyena Road
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2015
+   :END:
+   Description: Three different men, three different worlds, three different wars - all stand at the intersection of modern warfare - a murky world of fluid morality where all is not as it seems.
 ** Only The Brave (2017)
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2022
+   :END:
+   Description: No description available
 ** repo man (2010)
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2010
+   :END:
+   Description: David Cross makes a living as a Repo Man, but when he takes a car belonging to the bad guys, his wife is kidnapped and he has to do what he can to save her.
 ** Rebel Ridge
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2024
+   :END:
+   Description: A former Marine grapples his way through a web of small-town corruption when an attempt to post bail for his cousin escalates into a violent standoff with the local police chief.
 ** Subservience
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2024
+   :END:
+   Description: Follows a struggling father who purchases a domestic SIM to help care for his house and family, unaware she will gain awareness and turn deadly.
 ** Civil War
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2024
+   :END:
+   Description: In a dystopian future, four journalists travel across the United States during a nation-wide conflict. While trying to survive, they aim to reach the White House to interview the president before he is overthrown.
 ** Samaritan
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2022
+   :END:
+   Description: A young boy learns that a superhero who was thought to have died after an epic battle twenty-five years ago may in fact still be alive.
 ** Outside the Wire
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2021
+   :END:
+   Description: In the near future, a drone pilot sent into a war zone finds himself paired with a top-secret android officer on a mission to stop a nuclear attack.
 ** 15 Minutes of War
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2024
+   :END:
+   Description: Believe it or not the world community has written some rules for war. Since war is still a brutal business, the rules must cover some awfully nasty behavior.
 ** Tucker and Dale vs Evil (2010)
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2010
+   :END:
+   Description: Affable hillbillies Tucker and Dale are on vacation at their dilapidated mountain cabin when they are mistaken for murderers by a group of preppy college students.
 ** DONE [#A] dark tower
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2017
+   :END:
+   Description: A boy haunted by visions of a dark tower from a parallel reality teams up with the tower's disillusioned guardian to stop an evil warlock known as the Man in Black who plans to use the boy to destroy the tower and open the gates of Hell.
 CLOSED: [2025-09-27 Sat 06:18]
 it's just too stupid
 ** terminal list
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2025
+   :END:
+   Description: Navy SEAL Ben Edwards' abrupt discharge from the military lands him a new job working with a mysterious CIA operative. As he delves deeper into the world of covert intelligence he struggles with the moral gray areas of clandestine operations.
 ** megan
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2024
+   :END:
+   Description: A girl finds a M3gan android doll in a forest.
 ** the eternaut
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2025
+   :END:
+   Description: Follows Juan Salvo along with a group of survivors as they battle an alien threat that is under the direction of an invisible force after a horrific snowfall claims the lives of millions of people.
 ** Ghost Dog: The Way of the Samurai
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2012
+   :END:
+   Description: Oancitizen pays his respects to Jim Jarmusch by reviewing one of his better known titles.
 ** THE MINISTRY OF UNGENTLEMANLY WARFARE (2024)
 ** pingune
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 1980
+   :END:
+   Description: Children's stop-motion series set in Antarctica and focusing around penguin families living and working in igloos. The main character, Pingu, belongs to one such family. He goes on various adventures with his little sister and his friends.
 ** babygirl
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2024
+   :END:
+   Description: A high-powered CEO puts her career and family on the line when she begins a torrid affair with her much-younger intern.
 ** Replicas
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2018
+   :END:
+   Description: A scientist becomes obsessed with bringing back his family members who died in a traffic accident.
 ** The Lucky One"
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2012
+   :END:
+   Description: A Marine travels to Louisiana after serving three tours in Iraq and searches for the unknown woman he believes was his good luck charm during the war.
 ** Miss Peregrine's Home for Peculiar Children
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2016
+   :END:
+   Description: When Jacob discovers clues to a mystery that stretches across time, he finds Miss Peregrine's Home for Peculiar Children. But the danger deepens after he gets to know the residents and learns about their special powers.
 ** reate account
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 1973
+   :END:
+   Description: No description available
 ** Mickey 17
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2025
+   :END:
+   Description: During a human expedition to colonize space, Mickey 17, a so-called "expendable" employee, is sent to explore an ice planet.
 ** the gorge
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2025
+   :END:
+   Description: Two operatives are appointed to posts in guard towers on opposite sides of a classified gorge.
 ** [[https://www.imdb.com/title/tt0114787/][Underground]]
 ** Falcon Rising
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2014
+   :END:
+   Description: Chapman is an ex-marine in Brazil's slums, battling the yakuza outfit who attacked his sister and left her for dead.
 ** The Dark Tower (2017)
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2017
+   :END:
+   Description: A boy haunted by visions of a dark tower from a parallel reality teams up with the tower's disillusioned guardian to stop an evil warlock known as the Man in Black who plans to use the boy to destroy the tower and open the gates of Hell.
 ** [[https://www.imdb.com/title/tt5442430/][life]]
 ** The Brothers
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2001
+   :END:
+   Description: Four friends begin to question women and relationships when one of them announces impending nuptials.
 ** The 5th Wave
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2016
+   :END:
+   Description: Four waves of increasingly deadly alien attacks have left most of Earth in ruin. Cassie is on the run, desperately trying to save her younger brother.
 ** 22 miles
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2018
+   :END:
+   Description: A small team of elite American intelligence officers, part of a top-secret tactical command unit, try to smuggle a mysterious police officer with sensitive information out of Indonesia.
 ** grimsby
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2016
+   :END:
+   Description: A new assignment forces a top spy to team up with his football hooligan brother.
 ** 1.Too Old to Die Young
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2019
+   :END:
+   Description: Detective Martin Jones, who leads a double life as a killer for hire in Los Angeles' deadly underground, suffers an existential crisis which leads him deeper into a blood splattered world of violence.
 ** Kingsman: The Secret Service
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2014
+   :END:
+   Description: A spy organisation recruits a promising street kid into the agency's training program, while a global threat emerges from a twisted tech genius.
 ** Zodiac
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2007
+   :END:
+   Description: Between 1968 and 1983, a San Francisco cartoonist becomes an amateur detective obsessed with tracking down the Zodiac Killer, an unidentified individual who terrorizes Northern California with a killing spree.
 ** L'Immortel
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2010
+   :END:
+   Description: A retired mobster goes on a revenge spree after being left for dead with 22 bullets in his body by his former childhood friend.
 ** Polar
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2019
+   :END:
+   Description: A retiring assassin suddenly finds himself on the receiving end of a hit, contracted by none other than his own employer seeking to cash in on the pensions of aging employees.
 ** The Forever Purge
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2021
+   :END:
+   Description: All the rules are broken as a sect of lawless marauders decides that the annual Purge does not stop at daybreak and instead should never end.
 ** The Taking of Pelham 123
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2009
+   :END:
+   Description: Armed men hijack a New York City subway train, holding the passengers hostage in return for a ransom, and turning an ordinary day's work for dispatcher Walter Garber into a face-off with the mastermind behind the crime.
 ** The Mist
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2007
+   :END:
+   Description: After a massive thunderstorm, an eerie, unwavering fog descends upon a Maine community. Locals seek refuge in a grocery store from the monstrous creatures now roaming the countryside killing everyone they encounter.
 ** Туман (The Fog)
 ** Fear Street Part 1: 1994
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2021
+   :END:
+   Description: A circle of teenage friends accidentally encounter the ancient evil responsible for a series of brutal murders that have plagued their town for over 300 years. Welcome to Shadyside.
 ** Narcos
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2015
+   :END:
+   Description: A chronicled look at the criminal exploits of Colombian drug lord Pablo Escobar, as well as the many other drug kingpins who plagued the country through the years.
 ** jarhead
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2005
+   :END:
+   Description: A psychological study of Marine's state of mind during the Gulf War. Told through the eyes of a U.S. Marine sniper who struggles to cope with boredom, a sense of isolation, and other issues back home.
 ** elevation
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2024
+   :END:
+   Description: A single father and two women venture from the safety of their homes to face monstrous creatures to save the life of a young boy.
 ** Oldboy
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2003
+   :END:
+   Description: After being kidnapped and imprisoned for fifteen years, Oh Dae-Su is released, only to find that he must track down his captor in five days.
 ** anna
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2019
+   :END:
+   Description: Beneath Anna Poliatova's striking beauty lies a secret that will unleash her indelible strength and skill to become one of the world's most feared government assassins.
 ** Groundhog day
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 1993
+   :END:
+   Description: A narcissistic, self-centered weatherman finds himself in a time loop on Groundhog Day.
 ** Sniper The White raven
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2022
+   :END:
+   Description: After suffering a tragedy at the hand of invading soldiers in Donbas, an Ukrainian physics teacher seeks revenge. He sets his sights on an elite Russian sniper whose elimination could change the tide of the conflict.
 ** Crown for Christmas
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2015
+   :END:
+   Description: After getting fired from her job as a maid at a ritzy New York City hotel, Allie reluctantly accepts a temporary gig as the governess to a young girl who is part of a powerful family in Europe that lives in a castle.
 ** cold in july
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2014
+   :END:
+   Description: When a protective father meets a murderous ex-con, both need to deviate from the path they are on as they soon find themselves entangled in a downwards spiral of lies and violence while having to confront their own inner psyche.
 ** Centurion
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2010
+   :END:
+   Description: A splinter group of Roman soldiers fight for their lives behind enemy lines after their legion is devastated in a guerrilla attack.
 ** Rise of the Guardians
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2012
+   :END:
+   Description: When the evil spirit Pitch launches an assault on Earth, the Immortal Guardians team up to protect the innocence of children all around the world.
 ** The Covenant
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2023
+   :END:
+   Description: During the war in Afghanistan, a local interpreter risks his own life to carry an injured sergeant across miles of grueling terrain.
 ** the titan
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2018
+   :END:
+   Description: A military family takes part in a ground-breaking experiment of genetic evolution and space exploration.
 ** The Old Guard
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2020
+   :END:
+   Description: A covert group of tight-knit mercenaries with an inability to die have fought to protect the world for centuries. But when their abilities are suddenly exposed, they need to eliminate the threat of those who seek to replicate their power.
 ** the titan 2012
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2012
+   :END:
+   Description: Perseus braves the treacherous underworld to rescue his father, Zeus, captured by his son, Ares, and brother Hades who unleash the ancient Titans upon the world.
 ** Finding You
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2020
+   :END:
+   Description: Violinist Finley Sinclair travels to an Irish coastal village to begin a semester of studying abroad. At the B&B run by her host family, she encounters gregarious, persistent heartthrob movie star Beckett Rush.
 ** badlands 2025
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2025
+   :END:
+   Description: A young Predator outcast from his clan finds an unlikely ally on his journey in search of the ultimate adversary.
 ** tomorrowland 2015
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2015
+   :END:
+   Description: Bound by a shared destiny, a teen bursting with scientific curiosity and a former boy-genius inventor embark on a mission to unearth the secrets of a place somewhere in time and space that exists in their collective memory.
 ** Odd Thomas
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2013
+   :END:
+   Description: In a California desert town, a short-order cook with clairvoyant abilities encounters a mysterious man with a link to dark, threatening forces.
 ** Angel Has Fallen
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2019
+   :END:
+   Description: Mike Banning is framed for the attempted assassination of the President, and now must evade his own agency, and the FBI, as he tries to uncover the real threat.
 ** the marksman
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2021
+   :END:
+   Description: A rancher on the Arizona border becomes the unlikely defender of a young Mexican boy desperately fleeing the cartel assassins who've pursued him into the U.S.
 ** Immortals
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2011
+   :END:
+   Description: Theseus is a mortal man chosen by Zeus to lead the fight against the ruthless King Hyperion, who is on a rampage across Greece to obtain a weapon that can destroy humanity.
 * cartoo
 ** DONE Elemental
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2023
+   :END:
+   Description: Follows Ember and Wade, in a city where fire-, water-, earth- and air-residents live together.
 CLOSED: [2024-07-23 Tue 22:04]
 ** Anime name: Gate
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2024
+   :END:
+   Description: No description available
 ** Frieren: Beyond Journey's End
+   :PROPERTIES:
+   :IMDB_RATING: N/A
+   :YEAR: 2024
+   :END:
+   Description: No description available
