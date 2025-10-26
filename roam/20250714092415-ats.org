@@ -16,11 +16,11 @@ https://www.figma.com/proto/8xmjic6RtnoA27dV9Vp78x/Applicant-Tracking-System?pag
 ** User
 ** Integration issues
 * delivery process for ATS                                         :@bentoak:
-** finalizing the project[0/6]
+** finalizing the project[1/6]
 *** TODO finalizing authorization model and implementation [2/3]
 - State "TODO"       from              [2025-10-21 Tue 14:04]
 **** DELEGATED check authorization model with saleh                   :saleh:
-DEADLINE: <2025-10-24 Fri> SCHEDULED: <2025-10-22 Wed>
+DEADLINE: <2025-10-28 Tue> SCHEDULED: <2025-10-27 Mon>
 :LOGBOOK:
 - State "DELEGATED"  from "TODO"       [2025-10-23 Thu 15:25]
 :END:
@@ -41,8 +41,9 @@ CLOSED: [2025-10-23 Thu 15:40]
 - State "TODO"       from              [2025-10-21 Tue 14:49]
 *** TODO update documents on the project                              :arash:
 SCHEDULED: <2025-10-27 Mon>
-*** DELEGATED add extra users to user seed for setup                  :saleh:
-DEADLINE: <2025-10-23 Thu>
+*** DONE add extra users to user seed for setup                       :saleh:
+CLOSED: [2025-10-26 Sun 13:39] DEADLINE: <2025-10-23 Thu>
+- State "DONE"       from "DELEGATED"  [2025-10-26 Sun 13:39]
 :LOGBOOK:
 - State "DELEGATED"  from "DOINGNOW"   [2025-10-23 Thu 13:07]
 - State "DOINGNOW"   from "TODO"       [2025-10-23 Thu 13:06]
@@ -64,18 +65,20 @@ SCHEDULED: <2025-10-28 Tue>
 - State "TODO"       from              [2025-10-23 Thu 13:36]
 :END:
 ** deploy new environment for testing[0/1]
-*** set up appropriate environment variables[0/2]
+*** set up appropriate environment variables[2/2]
 :LOGBOOK:
 - State "TODO"       from              [2025-10-23 Thu 15:43]
 :END:
-**** NEXT move bucket name into environment                           :saleh:
-SCHEDULED: <2025-10-23 Thu>
+**** DONE move bucket name into environment                           :saleh:
+CLOSED: [2025-10-26 Sun 13:39] SCHEDULED: <2025-10-23 Thu>
+- State "DONE"       from "NEXT"       [2025-10-26 Sun 13:39]
 :LOGBOOK:
 - State "NEXT"       from "TODO"       [2025-10-23 Thu 15:42]
 - State "TODO"       from              [2025-10-23 Thu 15:42]
 :END:
-**** DELEGATED [#A] create appropriate environment variable in front-end :adib:basir:
-DEADLINE: <2025-10-23 Thu>
+**** DONE [#A] create appropriate environment variable in front-end :adib:basir:
+CLOSED: [2025-10-26 Sun 13:39] DEADLINE: <2025-10-23 Thu>
+- State "DONE"       from "DELEGATED"  [2025-10-26 Sun 13:39]
 :LOGBOOK:
 - State "DELEGATED"  from "TODO"       [2025-10-23 Thu 13:08]
 - State "TODO"       from              [2025-10-23 Thu 13:07]
@@ -91,8 +94,9 @@ SCHEDULED: <2025-10-26 Sun>
 - State "DELEGATED"  from              [2025-10-23 Thu 13:30]
 :END:
 ** fitting notification interfaces to acctech
-*** DOINGNOW identify the current interfaces we are using in the project
-SCHEDULED: <2025-10-23 Thu>
+*** DONE identify the current interfaces we are using in the project
+CLOSED: [2025-10-26 Sun 13:41] SCHEDULED: <2025-10-23 Thu>
+- State "DONE"       from "DOINGNOW"   [2025-10-26 Sun 13:41]
 :LOGBOOK:
 - State "DOINGNOW"   from "NEXT"       [2025-10-23 Thu 13:30]
 - State "NEXT"       from "TODO"       [2025-10-23 Thu 13:29]

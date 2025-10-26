@@ -60,12 +60,13 @@ this is the orchestrator of the project
 * delivery phase                                                   :@bentoak:
 ** finalizing the project
 *** TODO [#A] review ERD of each service
-SCHEDULED: <2025-10-23 Thu>
+SCHEDULED: <2025-10-27 Mon>
 :LOGBOOK:
 - State "TODO"       from              [2025-10-23 Thu 23:31]
 :END:
-*** TODO [#A] Review structure of communication
-SCHEDULED: <2025-10-24 Fri>
+*** DONE [#A] Review structure of communication
+CLOSED: [2025-10-26 Sun 13:41] SCHEDULED: <2025-10-24 Fri>
+- State "DONE"       from "TODO"       [2025-10-26 Sun 13:41]
 :LOGBOOK:
 - State "TODO"       from              [2025-10-24 Fri 10:56]
 :END:
