@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       4b0cd7aa-e8ba-42d4-a9bb-2eaa27836d1e
+:END:
+#+title: acctech
+* get contact point for Devops
+* Connect to git and
+** Sonar quebe
+** semgrep
+** trivy
+** grype

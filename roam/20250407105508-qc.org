@@ -60,6 +60,78 @@ f
 **** losing people
 ***** arash might be leaving US
 ***** Saleh might not be quite happy with our situation
-* QC revival
+* QC revival                                                       :@bentoak:
 ** defining the scope and flow of the project
 ** defining the updated road-map for the project
+** planning
+*** supplier ranking
+**** Get better documentation                                         :email:
+***** TODO Request Document IMS E10146.04
+:LOGBOOK:
+- State "TODO"       from              [2025-10-26 Sun 06:15]
+:END:
+***** TODO Request FR1343
+:LOGBOOK:
+- State "TODO"       from              [2025-10-26 Sun 06:17]
+:END:
+***** TODO Request E10081
+:LOGBOOK:
+- State "TODO"       from              [2025-10-26 Sun 06:18]
+:END:
+***** TODO request FR0071
+:LOGBOOK:
+- State "TODO"       from              [2025-10-26 Sun 06:18]
+:END:
+***** TODO Request FR0161
+:LOGBOOK:
+- State "TODO"       from              [2025-10-26 Sun 06:19]
+:END:
+***** TODO Request FR0671
+:LOGBOOK:
+- State "TODO"       from              [2025-10-26 Sun 06:19]
+:END:
+***** TODO Request FR0716
+:LOGBOOK:
+- State "TODO"       from              [2025-10-26 Sun 06:19]
+:END:
+**** figure out the apropriate flow
+**** Review 
+:LOGBOOK:
+- State "TODO"       from              [2025-10-26 Sun 06:18]
+:END:
+*** Raw material inspection process
+**** Gather Documentations
+***** Request GESZFH-PTH
+***** Request IPF004
+***** Request LBF021
+***** Request IPF020
+***** Request ESZ1M
+***** Request ESSTQ-STD
+***** Request PF033
+***** Request PF025
+**** Design appropriate forms and tasks
+***** NEXT how we are going to inform Quality control management
+:LOGBOOK:
+- State "NEXT"       from "TODO"       [2025-10-26 Sun 06:42]
+- State "TODO"       from              [2025-10-26 Sun 06:31]
+:END:
+***** TODO Design sampling and sampling numbering flow
+:LOGBOOK:
+- State "TODO"       from              [2025-10-26 Sun 06:51]
+:END:
+***** TODO Identify process of informing Company security regarding status of Raw material
+:LOGBOOK:
+- State "TODO"       from              [2025-10-26 Sun 06:51]
+:END:
+***** TODO Identify process of receiving Raw material shipment from
+:LOGBOOK:
+- State "TODO"       from              [2025-10-26 Sun 06:51]
+:END:
+***** TODO Identify how we are going to store Spectral analysis
+:LOGBOOK:
+- State "TODO"       from              [2025-10-26 Sun 06:53]
+:END:
+*** Labratory flow
+**** Gather documents
+***** request labratory flow
+***** List of available experiments and related forms
