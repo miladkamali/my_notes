@@ -15,13 +15,18 @@ https://www.figma.com/proto/8xmjic6RtnoA27dV9Vp78x/Applicant-Tracking-System?pag
 * demo 15 shahrivar
 ** User
 ** Integration issues
-* delivery process for ATS                                         :@bentoak:
-** finalizing the project[1/6]
-*** TODO finalizing authorization model and implementation [2/3]
-- State "TODO"       from              [2025-10-21 Tue 14:04]
-**** DELEGATED check authorization model with saleh                   :saleh:
-DEADLINE: <2025-10-28 Tue> SCHEDULED: <2025-10-27 Mon>
+* delivery process for ATS                                     :ATS:@bentoak:
+** finalizing the project[2/7]
+*** DONE finalizing authorization model and implementation [3/3]
+CLOSED: [2025-10-27 Mon 14:08]
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-10-27 Mon 14:08]
+:END:
+- State "TODO"       from              [2025-10-21 Tue 14:04]
+**** DONE check authorization model with saleh                        :saleh:
+CLOSED: [2025-10-27 Mon 13:44] DEADLINE: <2025-10-28 Tue> SCHEDULED: <2025-10-27 Mon>
+:LOGBOOK:
+- State "DONE"       from "DELEGATED"  [2025-10-27 Mon 13:44]
 - State "DELEGATED"  from "TODO"       [2025-10-23 Thu 15:25]
 :END:
 - State "TODO"       from              [2025-10-21 Tue 14:04]
@@ -64,7 +69,21 @@ SCHEDULED: <2025-10-28 Tue>
 :LOGBOOK:
 - State "TODO"       from              [2025-10-23 Thu 13:36]
 :END:
-** deploy new environment for testing[0/1]
+*** Review codes with SolarQube
+**** DELEGATED set up sonarQube                                       :arash:
+SCHEDULED: <2025-10-28 Tue>
+:LOGBOOK:
+- State "DELEGATED"  from "TODO"       [2025-10-27 Mon 14:12]
+- State "TODO"       from              [2025-10-27 Mon 14:10]
+:END:
+**** TODO create report for backend
+SCHEDULED: <2025-10-29 Wed>
+**** TODO create report for frontend
+SCHEDULED: <2025-10-29 Wed>
+:LOGBOOK:
+- State "TODO"       from              [2025-10-27 Mon 14:12]
+:END:
+** deploy new environment for testing[1/1]
 *** set up appropriate environment variables[2/2]
 :LOGBOOK:
 - State "TODO"       from              [2025-10-23 Thu 15:43]
@@ -83,14 +102,17 @@ CLOSED: [2025-10-26 Sun 13:39] DEADLINE: <2025-10-23 Thu>
 - State "DELEGATED"  from "TODO"       [2025-10-23 Thu 13:08]
 - State "TODO"       from              [2025-10-23 Thu 13:07]
 :END:
-*** DELEGATED set up environment with new address
+*** DONE set up environment with new address
+CLOSED: [2025-10-27 Mon 13:55]
 :LOGBOOK:
+- State "DONE"       from "DELEGATED"  [2025-10-27 Mon 13:55]
 - State "DELEGATED"  from              [2025-10-23 Thu 13:09]
 :END:
 ** create data entry endpoint
-*** DELEGATED create an endpoint that can be used to insert data      :saleh:
-SCHEDULED: <2025-10-26 Sun>
+*** DONE create an endpoint that can be used to insert data           :saleh:
+CLOSED: [2025-10-27 Mon 13:45] SCHEDULED: <2025-10-26 Sun>
 :LOGBOOK:
+- State "DONE"       from "DELEGATED"  [2025-10-27 Mon 13:45]
 - State "DELEGATED"  from              [2025-10-23 Thu 13:30]
 :END:
 ** fitting notification interfaces to acctech
@@ -103,8 +125,10 @@ CLOSED: [2025-10-26 Sun 13:41] SCHEDULED: <2025-10-23 Thu>
 - State "TODO"       from              [2025-10-23 Thu 13:29]
 :END:
 *** NEXT get notification endpoint from acctech
-SCHEDULED: <2025-10-25 Sat>
+SCHEDULED: <2025-10-28 Tue>
 :LOGBOOK:
+- Rescheduled from "[2025-10-25 Sat]" on [2025-10-27 Mon 13:41] \\
+  a meeting is set for this day with acctech
 - State "NEXT"       from              [2025-10-23 Thu 13:29]
 :END:
 *** TODO  integrating the endpoints

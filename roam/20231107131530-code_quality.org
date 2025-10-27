@@ -69,3 +69,5 @@
 * time estimation
 * speed
 do not rush
+* tools
+** 

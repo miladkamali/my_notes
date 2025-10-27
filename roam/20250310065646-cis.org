@@ -329,4 +329,13 @@ Recommendations for Immediate Action
 **** create ERD and data dictionary
 **** create basic structure of project document
 **** create all the dependencies and nuggets we are using
-
+** setting up demo for next week
+*** receive data for forms
+*** set up an environment for full end to end test
+*** set up environment in ATS
+*** get the connection for devops
+*** kubernates environment
+**** Kafka vs 
+**** rabit
+***** quaron type queue 
+**** minio Issue

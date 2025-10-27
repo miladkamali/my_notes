@@ -10,3 +10,7 @@
 *** TODO ask for user and address of git repo
 SCHEDULED: <2025-10-26 Sun>
 - State "TODO"       from              [2025-10-21 Tue 20:12]
+*** TODO  
+:LOGBOOK:
+- State "TODO"       from              [2025-10-27 Mon 13:42]
+:END:
