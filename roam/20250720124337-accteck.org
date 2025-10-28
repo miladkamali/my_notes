@@ -7,8 +7,11 @@
 ** vpn
 ** remote machine
 ** git
-*** TODO ask for user and address of git repo
-SCHEDULED: <2025-10-26 Sun>
+*** DONE ask for user and address of git repo
+CLOSED: [2025-10-28 Tue 21:55] SCHEDULED: <2025-10-26 Sun>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-10-28 Tue 21:55]
+:END:
 - State "TODO"       from              [2025-10-21 Tue 20:12]
 *** TODO  
 :LOGBOOK:
