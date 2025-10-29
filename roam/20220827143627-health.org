@@ -2,11 +2,12 @@
 :ID:       f60c034d-c734-4440-9dac-23517e04092e
 :END:
 #+title: health
+#+STARTUP: show2levels
 * improving jaw line
 ** [[id:B9CD95C8-6D00-4690-B521-3B31A2180BE1][attractiveness]]
 * better sleep
 ** [[https://www.youtube.com/watch?v=q3nVp4Rhn74][ Neuroscientist: "You will never wake up tired again" | Dr. Andrew Huberman ]]
-* [[https://www.youtube.com/watch?v=OM-AeVyW1kk][ How the Heart Changes with Exercise ]] 
+* [[https://www.youtube.com/watch?v=OM-AeVyW1kk][ How the Heart Changes with Exercise ]]
 * [[https://www.youtube.com/watch?v=IdE1SXCO3DQ][The Exercise That Prolongs Life ]]
 * [[https://www.youtube.com/watch?v=nOuzSOnfyv0][What Happens After 30 Days of Cold Showers]]
 * weight loss
@@ -38,7 +39,6 @@ average of 8-12 thousand steps
 ***** start weight training as soon as possible
 **** get accountability
 find someone who tracks you 
-** 
 * exercises
 ** ankle
 [[https://www.youtube.com/watch?v=klKZMaw4IFE][5 Science-Based Steps to Strong Feet & Ankles]]
@@ -55,10 +55,9 @@ find someone who tracks you
 ** [[https://www.youtube.com/watch?v=JstOobhU0RY][ Quick Workout for ED & Premature Ejaculation]]
 ** kegel exercises
 * [[https://www.youtube.com/watch?v=zi1d_Ht-7c8][rib flare]]
-* 
 * habits to get lean
 ** walking
-add walking to your daily 
+add walking to your daily
 *** [#A] talk on the phone while walking
 *** [#A] morning walk
 *** [#A] afternoon walk
@@ -83,9 +82,7 @@ there is a high association between skin tags and [[id:217E2512-4E15-4FB2-A2B2-5
 skin tags are more prevelant in women due to higher level of [[id:8EA89500-C2E7-4AB8-8B48-E97E7B57298D][estrogen]] it also
 more prevalent in pregnant women due to much higher levels of [[id:8EA89500-C2E7-4AB8-8B48-E97E7B57298D][estrogen]] 
 
-
 * [[id:C35F4B6F-2287-4758-B5B3-210D54F5DEC6][sleep]]
-
 * [[id:cc538733-6a22-4e68-8d77-7c700656ba3e][food]]
 * unblock your stuffy nose
 [[https://youtube.com/shorts/BUF6lulmOlo?feature=share][something that worked]]
@@ -93,3 +90,20 @@ more prevalent in pregnant women due to much higher levels of [[id:8EA89500-C2E7
 [[https://www.youtube.com/watch?v=e2mQOGzHtQc][The Miracle Doctor: Get Your Sex Life Back, Me[[id:3871C182-F6F4-45CE-912B-8B6D5EF14A7B][lt Belly Fat & Heal Your Injury! Dr. Mindy Pelz | E256]]
 * [[id:3871C182-F6F4-45CE-912B-8B6D5EF14A7B][cancer]]
 * https://youtube.com/shorts/ZEAqXjSR5oY?si=SChIAwB1NEhpYUFz
+* videos                                                             :health:
+** TODO [[https://www.youtube.com/watch?v=wm-AMmwtZAg][ THIS Is #1 FASTEST Way To BURN Dangerous Fat ]]             :@youtube:
+:LOGBOOK:
+- State "TODO"       from              [2025-10-29 Wed 21:55]
+:END:
+** TODO [[https://www.youtube.com/watch?v=JZaJTkGcDeM][ We Finally Know How To Detox Microplastics From Our Cells ]]
+:LOGBOOK:
+- State "TODO"       from              [2025-10-29 Wed 21:58]
+:END:
+** TODO [[https://www.youtube.com/watch?v=EtBUDWdSqG4][Best supliment stack to detox microplastic]]                 :@youtube:
+:LOGBOOK:
+- State "TODO"       from              [2025-10-29 Wed 21:59]
+:END:
+** TODO [[https://www.youtube.com/watch?v=aqCMEHa2JSM][I got tested for microplastic]]                              :@youtube:
+:LOGBOOK:
+- State "TODO"       from              [2025-10-29 Wed 22:00]
+:END:

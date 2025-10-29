@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       ee2d3ab0-b2ac-4dd9-9859-45a2562be4c9
+:END:
+#+title: trading strategy
+* videos to watch
+** [[https://www.youtube.com/watch?v=NLBXgSmRBgU&t=12s&pp=0gcJCQMKAYcqIYzv][ How I Develop Trading Strategies | Permutation Tests and Trading Strategy Development with Python ]]

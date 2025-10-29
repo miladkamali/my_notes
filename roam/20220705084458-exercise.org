@@ -84,7 +84,9 @@ these muscles around your belly button if you push your finger and by breathing
 in and out your fingers will move in and out
 
 * Running
-
 ** [[https://www.youtube.com/watch?v=pxn34Lx3CYY&pp=ugUHEgVlbi1VUw%3D%3D][how to breath so running feel easier]]
-
-
+* videos                                                           :exercise:
+** TODO [[https://www.youtube.com/shorts/lP3v7jnOKJ8][ ab exercises]]                                             :@research:
+:LOGBOOK:
+- State "TODO"       from              [2025-10-29 Wed 22:04]
+:END:

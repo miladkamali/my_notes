@@ -145,12 +145,19 @@ CLOSED: [2025-10-26 Sun 13:41] SCHEDULED: <2025-10-23 Thu>
 - State "NEXT"       from "TODO"       [2025-10-23 Thu 13:29]
 - State "TODO"       from              [2025-10-23 Thu 13:29]
 :END:
-*** NEXT get notification endpoint from acctech
-SCHEDULED: <2025-10-28 Tue>
+*** DONE get notification endpoint from acctech
+CLOSED: [2025-10-29 Wed 22:06] SCHEDULED: <2025-10-28 Tue>
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2025-10-29 Wed 22:06]
 - Rescheduled from "[2025-10-25 Sat]" on [2025-10-27 Mon 13:41] \\
   a meeting is set for this day with acctech
 - State "NEXT"       from              [2025-10-23 Thu 13:29]
+:END:
+*** TODELEGATE extract notification info from server                  :armin:
+SCHEDULED: <2025-10-30 Thu>
+:LOGBOOK:
+- State "TODELEGATE" from "TODO"       [2025-10-29 Wed 22:07]
+- State "TODO"       from              [2025-10-29 Wed 22:06]
 :END:
 *** TODO  integrating the endpoints
 :LOGBOOK:

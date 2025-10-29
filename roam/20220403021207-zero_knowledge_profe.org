@@ -3,3 +3,5 @@
 :END:
 #+title: zero knowledge proof
 https://www.youtube.com/watch?v=V5uVKZn3F_4
+https://www.youtube.com/watch?v=HUs1bH85X9I
+https://www.youtube.com/watch?v=_MYpZQVZdiM
