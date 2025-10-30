@@ -3,4 +3,16 @@
 :END:
 #+title: trading strategy
 * videos to watch
-** [[https://www.youtube.com/watch?v=NLBXgSmRBgU&t=12s&pp=0gcJCQMKAYcqIYzv][ How I Develop Trading Strategies | Permutation Tests and Trading Strategy Development with Python ]]
+** TODO [[https://www.youtube.com/watch?v=NLBXgSmRBgU&t=12s&pp=0gcJCQMKAYcqIYzv][ How I Develop Trading Strategies | Permutation Tests and Trading Strategy Development with Python ]]
+:LOGBOOK:
+- State "TODO"       from              [2025-10-30 Thu 07:29]
+:END:
+** TODO [[https://www.youtube.com/watch?v=oW6MHjzxHpU][a video to watch to learn a bunch of good ideas]]            :@youtube:
+:LOGBOOK:
+- State "TODO"       from              [2025-10-30 Thu 07:29]
+:END:
+* TODO what is kelly criterion                                    :@research:
+:LOGBOOK:
+- State "TODO"       from              [2025-10-30 Thu 07:20]
+:END:
+** https://en.wikipedia.org/wiki/Kelly_criterion

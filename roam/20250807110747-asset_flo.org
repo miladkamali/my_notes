@@ -18,3 +18,4 @@ CLOCK: [2025-08-07 Thu 11:00]--[2025-08-07 Thu 11:45] =>  0:45
 **** figure out how to collect performance of a asset in meta
 *** figure out AI analysis pipline
 https://g.co/gemini/share/056227ca6797
+** Reading the Documents and preparing access

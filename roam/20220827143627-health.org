@@ -107,3 +107,7 @@ more prevalent in pregnant women due to much higher levels of [[id:8EA89500-C2E7
 :LOGBOOK:
 - State "TODO"       from              [2025-10-29 Wed 22:00]
 :END:
+** TODO [[https://www.youtube.com/watch?v=TMK-aYM4g7s][ STOP Doing THIS! Your Dementia Risk Skyrockets By 80% ]]    :@youtube:
+:LOGBOOK:
+- State "TODO"       from              [2025-10-30 Thu 07:00]
+:END:

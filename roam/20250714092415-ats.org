@@ -74,6 +74,7 @@ SCHEDULED: <2025-10-28 Tue>
 **** DELEGATED set up sonarQube                                       :arash:
 SCHEDULED: <2025-10-29 Wed>
 :LOGBOOK:
+- State "DELEGATED"  from "DELEGATED"  [2025-10-30 Thu 20:40]
 - Rescheduled from "[2025-10-28 Tue]" on [2025-10-28 Tue 21:55] \\
   arash did not manage to start doing it
 - State "DELEGATED"  from "TODO"       [2025-10-27 Mon 14:12]
@@ -85,14 +86,23 @@ SCHEDULED: <2025-10-30 Thu>
 - Rescheduled from "[2025-10-29 Wed]" on [2025-10-28 Tue 21:56] \\
   just because sonar is not available
 :END:
-**** TODO create report for frontend
-SCHEDULED: <2025-10-30 Thu>
+**** DONE create report for front-end                                  :adib:
+CLOSED: [2025-10-30 Thu 06:53] SCHEDULED: <2025-10-30 Thu>
 :LOGBOOK:
+- State "DONE"       from "DELEGATED"  [2025-10-30 Thu 06:53]
+- State "DELEGATED"  from "TODO"       [2025-10-30 Thu 06:35]
 - Rescheduled from "[2025-10-29 Wed]" on [2025-10-28 Tue 21:56] \\
   just because sonar is not available
 - State "TODO"       from              [2025-10-27 Mon 14:12]
 :END:
-** deploy new environment for testing[1/3]
+**** DELEGATED reduce number of issues                           :adib:basir:
+DEADLINE: <2025-11-03 Mon> SCHEDULED: <2025-10-30 Thu>
+- maintainablility down to zero up to medium
+:LOGBOOK:
+- State "DELEGATED"  from "TODO"       [2025-10-30 Thu 06:54]
+- State "TODO"       from              [2025-10-30 Thu 06:53]
+:END:
+** deploy new environment for testing[3/4]
 *** set up appropriate environment variables[2/2]
 :LOGBOOK:
 - State "TODO"       from              [2025-10-23 Thu 15:43]
@@ -117,17 +127,25 @@ CLOSED: [2025-10-27 Mon 13:55]
 - State "DONE"       from "DELEGATED"  [2025-10-27 Mon 13:55]
 - State "DELEGATED"  from              [2025-10-23 Thu 13:09]
 :END:
-*** DELEGATED fix issues related to department selection              :arash:
-SCHEDULED: <2025-10-28 Tue>
+*** DONE fix issues related to department selection                   :arash:
+CLOSED: [2025-10-30 Thu 21:14] SCHEDULED: <2025-10-28 Tue>
 :LOGBOOK:
+- State "DONE"       from "DELEGATED"  [2025-10-30 Thu 21:14]
 - State "DELEGATED"  from "TODO"       [2025-10-28 Tue 21:58]
 - State "TODO"       from              [2025-10-28 Tue 21:57]
 :END:
-*** DELEGATED import all the users that were given to us              :saleh:
-SCHEDULED: <2025-10-29 Wed>
+*** DONE import all the users that were given to us                   :saleh:
+CLOSED: [2025-10-30 Thu 21:12] SCHEDULED: <2025-11-02 Sun>
 :LOGBOOK:
+- State "DONE"       from "DELEGATED"  [2025-10-30 Thu 21:12]
 - State "DELEGATED"  from "TODO"       [2025-10-28 Tue 21:58]
 - State "TODO"       from              [2025-10-28 Tue 21:58]
+:END:
+*** NEXT review users and company structure
+SCHEDULED: <2025-11-02 Sun>
+:LOGBOOK:
+- State "NEXT"       from "TODO"       [2025-10-30 Thu 21:13]
+- State "TODO"       from              [2025-10-30 Thu 21:13]
 :END:
 ** create data entry endpoint
 *** DONE create an endpoint that can be used to insert data           :saleh:
