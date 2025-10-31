@@ -2,12 +2,16 @@
 :ID:       305C1F31-5238-4E38-BE9E-54512B29D322
 :END:
 #+title: asset-flo
-* time log
+* information
+** server
+5.189.160.91
+user: root
+password:j6jK8iVTZJhSN99
+* tasks
 ** reading and learning documents
 :LOGBOOK:
 CLOCK: [2025-08-11 Mon 10:59]--[2025-08-11 Mon 11:57] =>  0:58
-CLOCK: [2025-08-08 Fri 19:27]--[2025-08-08 Fri 21:27] =>  2:00
-CLOCK: [2025-08-08 Fri 12:10]--[2025-08-08 Fri 14:10] =>  2:00
+CLOCK: [2025-08-08 Fri 12:10]--[2025-08-08 Fri 14:00] =>  1:50
 CLOCK: [2025-08-08 Fri 10:12]--[2025-08-08 Fri 11:27] =>  1:15
 CLOCK: [2025-08-07 Thu 22:10]--[2025-08-07 Thu 22:45] =>  0:35
 CLOCK: [2025-08-07 Thu 11:00]--[2025-08-07 Thu 11:45] =>  0:45
@@ -19,3 +23,33 @@ CLOCK: [2025-08-07 Thu 11:00]--[2025-08-07 Thu 11:45] =>  0:45
 *** figure out AI analysis pipline
 https://g.co/gemini/share/056227ca6797
 ** Reading the Documents and preparing access
+** setting up the project
+:LOGBOOK:
+CLOCK: [2025-10-31 Fri 10:45]--[2025-10-31 Fri 11:43] =>  0:58
+CLOCK: [2025-10-31 Fri 09:15]--[2025-10-31 Fri 09:45] =>  0:30
+CLOCK: [2025-10-31 Fri 06:40]--[2025-10-31 Fri 08:38] =>  1:58
+:END:
+*** DELEGATED get access to access token                              :admin:
+:LOGBOOK:
+- State "DELEGATED"  from "DONE"       [2025-10-31 Fri 09:03]
+- State "DONE"       from "TODO"       [2025-10-31 Fri 09:03]
+- State "TODO"       from              [2025-10-31 Fri 09:01]
+:END:
+** get proper access to facebook
+*** DELEGATED set up facebook account                                 :admin:
+:LOGBOOK:
+- State "DELEGATED"  from              [2025-10-31 Fri 09:02]
+:END:
+*** DELEGATED set up associated gmail account                         :admin:
+:LOGBOOK:
+- State "DELEGATED"  from              [2025-10-31 Fri 09:02]
+:END:
+** setting up server
+:LOGBOOK:
+CLOCK: [2025-10-31 Fri 09:45]--[2025-10-31 Fri 10:01] =>  0:16
+CLOCK: [2025-10-31 Fri 08:38]--[2025-10-31 Fri 08:58] =>  0:20
+:END:
+** meeting 
+:LOGBOOK:
+CLOCK: [2025-10-31 Fri 11:30]--[2025-10-31 Fri 12:09] =>  0:39
+:END:
