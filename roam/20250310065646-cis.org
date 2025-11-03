@@ -339,3 +339,24 @@ Recommendations for Immediate Action
 **** rabit
 ***** quaron type queue 
 **** minio Issue
+* info
+** bff
+sqp_8d5547ca5b3476260c5b04c346b8113a17f4a1ba
+dotnet sonarscanner begin /k:"cis-bff" /d:sonar.host.url="https://sonar.code4coffee.ir"  /d:sonar.token="sqp_8d5547ca5b3476260c5b04c346b8113a17f4a1b
+dotnet build
+dotnet sonarscanner end /d:sonar.token="sqp_8d5547ca5b3476260c5b04c346b8113a17f4a1ba"
+
+
+
+
+** form-handler
+sqp_5b902118544f6d13741b92b961dcd9e1f12b721f
+
+dotnet sonarscanner end /d:sonar.token="sqp_5b902118544f6d13741b92b961dcd9e1f12b721f"
+
+** state monitoring
+sqp_c95fe64ff1a068067e9f90228ceeeb3d2ba731e9
+
+dotnet sonarscanner begin /k:"state-monitoring-service" /d:sonar.host.url="https://sonar.code4coffee.ir"  /d:sonar.token="sqp_c95fe64ff1a068067e9f90228ceeeb3d2ba731e9"
+dotnet build
+dotnet sonarscanner end /d:sonar.token="sqp_c95fe64ff1a068067e9f90228ceeeb3d2ba731e9"
