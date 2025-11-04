@@ -16,8 +16,8 @@ https://www.figma.com/proto/8xmjic6RtnoA27dV9Vp78x/Applicant-Tracking-System?pag
 * demo 15 shahrivar
 ** User
 ** Integration issues
-* delivery process for ATS                                     :ATS:@bentoak:
-** finalizing the project[2/6]
+* delivery process for ATS                        :ats_delivery:ATS:@bentoak:
+** finalizing the project[2/7]
 *** DONE finalizing authorization model and implementation [3/3]
 CLOSED: [2025-10-27 Mon 14:08]
 :LOGBOOK:
@@ -178,6 +178,10 @@ SCHEDULED: <2025-10-30 Thu>
 - State "TODELEGATE" from "TODO"       [2025-10-29 Wed 22:07]
 - State "TODO"       from              [2025-10-29 Wed 22:06]
 :END:
+**** DELEGATED fix access of armin to the server                       :neda:
+SCHEDULED: <2025-11-02 Sun>
+- State "DELEGATED"  from "TODO"       [2025-11-02 Sun 07:07]
+- State "TODO"       from              [2025-11-02 Sun 07:06]
 *** TODO  integrating the endpoints
 :LOGBOOK:
 - State "TODO"       from              [2025-10-23 Thu 13:31]
@@ -199,4 +203,8 @@ SCHEDULED: <2025-10-30 Thu>
 :LOGBOOK:
 - State "TODO"       from              [2025-10-23 Thu 13:48]
 :END:
-
+*** TODO call the devops person
+SCHEDULED: <2025-11-02 Sun>
+:LOGBOOK:
+- State "TODO"       from              [2025-11-02 Sun 07:12]
+:END:
