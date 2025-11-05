@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       7a0922df-453a-4788-bb9c-90d3ff52f163
+:END:
+#+title: UID infrastructure
+* taking back control of infrastructure                                :@uid:
+** create a dependency graph of our services
+** get address of grafana
+** get address of 
+** control of servers
+*** DELEGATED get list of servers
+:LOGBOOK:
+- State "DELEGATED"  from              [2025-11-05 Wed 08:52]
+:END:
+*** get access to kubernates
+
+*** get access to vmwave
+*** get access to monitoring
+**** elastic
+http://46.245.89.2:5601/login?next=%2F
+elastic
+KanUup6P9l
