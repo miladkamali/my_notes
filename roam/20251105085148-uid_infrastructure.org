@@ -13,7 +13,6 @@
 :END:
 *** get access to kubernates
 
-*** get access to vmwave
 *** get access to monitoring
 **** elastic
 http://46.245.89.2:5601/login?next=%2F
@@ -23,7 +22,7 @@ KanUup6P9l
 *** dependencies
   - kubectl
   - k9s
-** credential
+*** credential
 #+NAME: kube_certificate
 #+BEGIN_SRC yaml
 apiVersion: v1
@@ -54,7 +53,77 @@ sudo echo "46.245.89.9 k8s-lb.internal" >> /etc/hosts
 #+end_src
 
 #+RESULTS:
-** connection
+*** connection
 k9s  --kubeconfig  ~/.kube/config
 
 :namespace production
+** TODO access to backups
+SCHEDULED: <2025-11-07 Fri>
+:LOGBOOK:
+- State "TODO"       from              [2025-11-07 Fri 10:38]
+:END:
+** TODO get access to vmwave
+SCHEDULED: <2025-11-07 Fri>
+:LOGBOOK:
+- State "TODO"       from              [2025-11-07 Fri 10:38]
+:END:
+
+ssh -L 127.0.0.1:8444:192.168.100.4:443  milad@46.245.89.4 -p 3316
+
+https://127.0.0.1:8444
+*** TODO get user name and password from hosein
+SCHEDULED: <2025-11-08 Sat>
+:LOGBOOK:
+- State "TODO"       from              [2025-11-07 Fri 12:03]
+:END:
+** TODO get access to all the servers
+SCHEDULED: <2025-11-07 Fri>
+:LOGBOOK:
+- State "TODO"       from              [2025-11-07 Fri 10:38]
+:END:
+** TODO monitoring status of servers
+SCHEDULED: <2025-11-07 Fri>
+:LOGBOOK:
+- State "TODO"       from              [2025-11-07 Fri 10:38]
+:END:
+** DELEGATED uid vpn
+:LOGBOOK:
+- State "DELEGATED"  from "TODO"       [2025-11-07 Fri 11:23]
+- State "TODO"       from              [2025-11-07 Fri 11:22]
+:END:
+** List of servers
+https://conflu.uid.ir/pages/viewpage.action?spaceKey=DEV&title=asitech
+*** 46.245.89.2 monitoring service
+ssh milad@46.245.89.2 -p 3316
+
+grafana
+elkstack
+monitoring
+*** 46.245.89.4 ha proxy
+/docker/ha/conf
+*** 46.245.89.7 minio server
+*** 46.245.89.9 gateway kubernates
+*** DELEGATED 46.245.89.12 can only be accessed to from 46.245.89.9
+:LOGBOOK:
+- State "DELEGATED"  from              [2025-11-07 Fri 11:57]
+:END:
+*** DELEGATED 46.245.89.13
+need to be set
+:LOGBOOK:
+- State "DELEGATED"  from              [2025-11-07 Fri 11:56]
+:END:
+*** 46.245.89.15
+ca
+sana
+crypto
+*** 46.245.89.15
+authentication
+simplified
+bff
+** TODO how do i reset passwords
+:LOGBOOK:
+- State "TODO"       from              [2025-11-07 Fri 11:35]
+:END:
+** git and confluence
+m.kamali
+WY4d5E1EZFf2
