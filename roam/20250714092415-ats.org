@@ -72,18 +72,20 @@ SCHEDULED: <2025-10-28 Tue>
 - State "TODO"       from              [2025-10-23 Thu 13:36]
 :END:
 *** Review codes with SolarQube
-**** DELEGATED set up sonarQube                                       :arash:
-SCHEDULED: <2025-10-29 Wed>
+**** DONE set up sonarQube                                            :arash:
+CLOSED: [2025-11-08 Sat 14:17] SCHEDULED: <2025-10-29 Wed>
 :LOGBOOK:
+- State "DONE"       from "DELEGATED"  [2025-11-08 Sat 14:17]
 - State "DELEGATED"  from "DELEGATED"  [2025-10-30 Thu 20:40]
 - Rescheduled from "[2025-10-28 Tue]" on [2025-10-28 Tue 21:55] \\
   arash did not manage to start doing it
 - State "DELEGATED"  from "TODO"       [2025-10-27 Mon 14:12]
 - State "TODO"       from              [2025-10-27 Mon 14:10]
 :END:
-**** TODO create report for backend
-SCHEDULED: <2025-10-30 Thu>
+**** DONE create report for backend
+CLOSED: [2025-11-08 Sat 14:17] SCHEDULED: <2025-10-30 Thu>
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-08 Sat 14:17]
 - Rescheduled from "[2025-10-29 Wed]" on [2025-10-28 Tue 21:56] \\
   just because sonar is not available
 :END:
@@ -96,14 +98,15 @@ CLOSED: [2025-10-30 Thu 06:53] SCHEDULED: <2025-10-30 Thu>
   just because sonar is not available
 - State "TODO"       from              [2025-10-27 Mon 14:12]
 :END:
-**** DELEGATED reduce number of issues                           :adib:basir:
-DEADLINE: <2025-11-03 Mon> SCHEDULED: <2025-10-30 Thu>
+**** DONE reduce number of issues                                :adib:basir:
+CLOSED: [2025-11-08 Sat 14:20] DEADLINE: <2025-11-03 Mon> SCHEDULED: <2025-10-30 Thu>
 - maintainablility down to zero up to medium
 :LOGBOOK:
+- State "DONE"       from "DELEGATED"  [2025-11-08 Sat 14:20]
 - State "DELEGATED"  from "TODO"       [2025-10-30 Thu 06:54]
 - State "TODO"       from              [2025-10-30 Thu 06:53]
 :END:
-** deploy new environment for testing[3/4]
+** deploy new environment for testing[4/4]
 *** set up appropriate environment variables[2/2]
 :LOGBOOK:
 - State "TODO"       from              [2025-10-23 Thu 15:43]
@@ -142,9 +145,10 @@ CLOSED: [2025-10-30 Thu 21:12] SCHEDULED: <2025-11-02 Sun>
 - State "DELEGATED"  from "TODO"       [2025-10-28 Tue 21:58]
 - State "TODO"       from              [2025-10-28 Tue 21:58]
 :END:
-*** NEXT review users and company structure
-SCHEDULED: <2025-11-02 Sun>
+*** DONE review users and company structure
+CLOSED: [2025-11-08 Sat 14:17] SCHEDULED: <2025-11-02 Sun>
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2025-11-08 Sat 14:17]
 - State "NEXT"       from "TODO"       [2025-10-30 Thu 21:13]
 - State "TODO"       from              [2025-10-30 Thu 21:13]
 :END:
@@ -172,14 +176,18 @@ CLOSED: [2025-10-29 Wed 22:06] SCHEDULED: <2025-10-28 Tue>
   a meeting is set for this day with acctech
 - State "NEXT"       from              [2025-10-23 Thu 13:29]
 :END:
-*** TODELEGATE extract notification info from server                  :armin:
-SCHEDULED: <2025-10-30 Thu>
+*** DONE extract notification info from server                        :armin:
+CLOSED: [2025-11-08 Sat 14:17] SCHEDULED: <2025-10-30 Thu>
 :LOGBOOK:
+- State "DONE"       from "TODELEGATE" [2025-11-08 Sat 14:17]
 - State "TODELEGATE" from "TODO"       [2025-10-29 Wed 22:07]
 - State "TODO"       from              [2025-10-29 Wed 22:06]
 :END:
-**** DELEGATED fix access of armin to the server                       :neda:
-SCHEDULED: <2025-11-02 Sun>
+**** DONE fix access of armin to the server                            :neda:
+CLOSED: [2025-11-08 Sat 14:17] SCHEDULED: <2025-11-02 Sun>
+:LOGBOOK:
+- State "DONE"       from "DELEGATED"  [2025-11-08 Sat 14:17]
+:END:
 - State "DELEGATED"  from "TODO"       [2025-11-02 Sun 07:07]
 - State "TODO"       from              [2025-11-02 Sun 07:06]
 *** TODO  integrating the endpoints
@@ -203,8 +211,9 @@ SCHEDULED: <2025-11-02 Sun>
 :LOGBOOK:
 - State "TODO"       from              [2025-10-23 Thu 13:48]
 :END:
-*** TODO call the devops person
-SCHEDULED: <2025-11-02 Sun>
+*** DONE call the devops person
+CLOSED: [2025-11-08 Sat 14:18] SCHEDULED: <2025-11-02 Sun>
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-08 Sat 14:18]
 - State "TODO"       from              [2025-11-02 Sun 07:12]
 :END:

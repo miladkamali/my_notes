@@ -39,7 +39,7 @@ CLOSED: [2025-10-23 Thu 13:00] SCHEDULED: <2025-10-22 Wed>
 **** define endpoints for wallet service
 **** modify authentication service to follow 
 *** moving services into kubernates
-** follow up about ESOP[2/3]
+** follow up about ESOP[3/4]
 :LOGBOOK:
 - State "TODO"       from              [2025-10-21 Tue 12:54]
 :END:
@@ -56,9 +56,13 @@ CLOSED: [2025-10-27 Mon 13:46] SCHEDULED: <2025-10-27 Mon>
 - State "TODO"       from              [2025-10-21 Tue 12:55]
 :END:
 i talked to him and he said we need to receive a document from our share holder company to continue with the proceedings
-*** NEXT follow up again with sajad about the document that needed to be received regarding ESOP
-SCHEDULED: <2025-11-05 Wed>
+*** DONE follow up again with sajad about the document that needed to be received regarding ESOP
+CLOSED: [2025-11-08 Sat 14:19] SCHEDULED: <2025-11-05 Wed>
+it seems it's pending other allocations
+why on earth vosoughi is getting way more than me in ESOP?
 :LOGBOOK:
+- State "DONE"       from "DONE"       [2025-11-08 Sat 14:20]
+- State "DONE"       from "NEXT"       [2025-11-08 Sat 14:19]
 - State "NEXT"       from              [2025-10-27 Mon 13:46]
 :END:
 *** DONE check with banihashemi about the situation with esap
@@ -67,4 +71,10 @@ CLOSED: [2025-10-21 Tue 13:36] SCHEDULED: <2025-10-21 Tue>
 - State "DONE"       from "DOINGNOW"   [2025-10-21 Tue 13:36]
 - State "DOINGNOW"   from "TODO"       [2025-10-21 Tue 13:36]
 - State "TODO"       from              [2025-10-21 Tue 12:57]
+:END:
+*** NEXT follow up about the situation with ESOP
+SCHEDULED: <2025-11-11 Tue>
+:LOGBOOK:
+- State "NEXT"       from "TODO"       [2025-11-08 Sat 14:18]
+- State "TODO"       from              [2025-11-08 Sat 14:18]
 :END:

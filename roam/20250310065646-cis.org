@@ -104,9 +104,11 @@ use nlog or serilog to log into files similar to
 :LOGBOOK:
 - State "TODO"       from              [2025-10-23 Thu 23:32]
 :END:
-*** TODO finalize the protobuf design
-SCHEDULED: <2025-10-23 Thu>
+*** DONE finalize the protobuf design
+CLOSED: [2025-11-08 Sat 14:17] SCHEDULED: <2025-10-23 Thu>
 :LOGBOOK:
+- State "DONE"       from "FOLLOWUP"   [2025-11-08 Sat 14:17]
+- State "FOLLOWUP"   from "TODO"       [2025-11-08 Sat 14:17]
 - State "TODO"       from              [2025-10-23 Thu 23:40]
 :END:
 make sure form validation are repeated
