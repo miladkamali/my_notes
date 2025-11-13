@@ -110,27 +110,37 @@ f
 ***** Request PF033
 ***** Request PF025
 **** Design appropriate forms and tasks
-***** NEXT how we are going to inform Quality control management
-:LOGBOOK:
-- State "NEXT"       from "TODO"       [2025-10-26 Sun 06:42]
-- State "TODO"       from              [2025-10-26 Sun 06:31]
-:END:
-***** TODO Design sampling and sampling numbering flow
-:LOGBOOK:
-- State "TODO"       from              [2025-10-26 Sun 06:51]
-:END:
-***** TODO Identify process of informing Company security regarding status of Raw material
-:LOGBOOK:
-- State "TODO"       from              [2025-10-26 Sun 06:51]
-:END:
-***** TODO Identify process of receiving Raw material shipment from
-:LOGBOOK:
-- State "TODO"       from              [2025-10-26 Sun 06:51]
-:END:
-***** TODO Identify how we are going to store Spectral analysis
-:LOGBOOK:
-- State "TODO"       from              [2025-10-26 Sun 06:53]
-:END:
+***** requirement
+****** multitenent
+****** multi language
+***** نقش ها
+****** بازرس کنترل کیفی محصول
+****** سرپرست کنتر
+***** فرم کالاها
+****** ورود دیتا از طریق ERP
+****** EXCEL
+****** crud
+******* No hard delete
+***** نحوه شروع فرآیند
+سیستم کنترل کیفیت چکونه از ورود مواد اولیه با خبر میشه و چه اطلاعاتی رو بهش میدن
+***** بازرس کنترل کیفیت چه اطلاعاتی نیاز داره برای بررسی محموله
+***** فرآیند نمونه گیری
+****** نحوه و تعداد نمونه برداری برای هر محموله
+آیا لازمه در هر مورد به بازرس یادآوری کنیم جه تعداد نمونه . چطور نمونه برداری انجام شود
+****** نحوه شماره گذاری نمونه‌ها برای ارسال به آزمایشگاه چگونه است
+****** مسیر ثبت نمونه‌ها برای ارسال به آزمایشگاه
+u
+****** فلو پیگیری نمونه‌ها(کی تحویل آزمایشگاه شده و ...)
+***** تایید کیفیت محموله
+****** آیا لازم است به صورت خودکار تایید یا رد محموله انجام شود
+****** نحوه نشان دادن دیتا آزمایشگاه به کسی که باید تایید یا رد کند
+***** نحوه اطلاع رسانی به انتظامات چگونه است
+***** در اطلاع رسانی به سرپرست کنترل چه اطلاعاتی باید نمایش داده شود
+فرم خاصی وجود دارد؟
+***** فرم ثبت عناصر آزمایشگاه GESZ1M
+***** فرمت گزارش جمعی IPF033
+***** فرآیند اعلام به تامیین کننده
+****** چه نقشی لازم است این کار را انجام دهد
 *** Labratory flow
 **** Gather documents
 ***** request labratory flow

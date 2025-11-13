@@ -25,6 +25,8 @@ https://g.co/gemini/share/056227ca6797
 ** Reading the Documents and preparing access
 ** setting up the project
 :LOGBOOK:
+CLOCK: [2025-11-13 Thu 18:28]--[2025-11-13 Thu 20:47] =>  2:19
+CLOCK: [2025-11-10 Mon 18:27]--[2025-11-10 Mon 20:28] =>  2:01
 CLOCK: [2025-11-08 Sat 15:28]--[2025-11-08 Sat 18:39] =>  3:11
 CLOCK: [2025-10-31 Fri 10:45]--[2025-10-31 Fri 11:43] =>  0:58
 CLOCK: [2025-10-31 Fri 09:15]--[2025-10-31 Fri 09:45] =>  0:30
