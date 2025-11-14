@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       a4f23dc4-6304-4ea5-90fa-c4cd8ae11110
+:END:
+#+title: docker
+* tools to analyze docker
+** [[https://github.com/wagoodman/dive][dive]]
+** [[https://github.com/slimtoolkit/slim][slim]]
+* minimal images
+** [[https://github.com/GoogleContainerTools/distroless][distroless]]
+** [[https://hub.docker.com/_/alpine][alpine]]
+* minimizing docker image size
+** [[https://www.youtube.com/watch?v=t779DVjCKCs][ Docker Image BEST Practices - From 1.2GB to 10MB ]]
