@@ -2,6 +2,22 @@
 :ID:       4b0cd7aa-e8ba-42d4-a9bb-2eaa27836d1e
 :END:
 #+title: acctech
+* access to resources
+** vpn
+install openfortivpn
+sudo dnf install openfortivpn
+connect with
+sudo openfortivpn tellwork.acctechco.com:10443 --username=Alavian_Bentoak --password=uLsvkbb66Pc@!
+** pam
+https://dmz-pam.acctechco.com:8282
+user:p.karami
+pass:Mk1234!@#$
+** login to desktop
+user: karami-ben
+password: Ldghn2025@)@%
+** git
+user: m.kamali
+password: Bro38860
 * get contact point for Devops
 * Connect to git and
 ** Sonar quebe
