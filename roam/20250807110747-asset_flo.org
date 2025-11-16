@@ -33,19 +33,29 @@ CLOCK: [2025-10-31 Fri 10:45]--[2025-10-31 Fri 11:43] =>  0:58
 CLOCK: [2025-10-31 Fri 09:15]--[2025-10-31 Fri 09:45] =>  0:30
 CLOCK: [2025-10-31 Fri 06:40]--[2025-10-31 Fri 08:38] =>  1:58
 :END:
-*** DELEGATED get access to access token                              :admin:
+** setting up initial demo
 :LOGBOOK:
+CLOCK: [2025-11-15 Sat 19:43]--[2025-11-15 Sat 22:05] =>  2:22
+:END:
+*** DONE get access to access token                                   :admin:
+CLOSED: [2025-11-15 Sat 19:35]
+:LOGBOOK:
+- State "DONE"       from "DOINGNOW"   [2025-11-15 Sat 19:35]
+- State "DOINGNOW"   from "BLOCKED"    [2025-11-15 Sat 19:35]
+- State "BLOCKED"    from "DELEGATED"  [2025-11-15 Sat 19:34]
 - State "DELEGATED"  from "DONE"       [2025-10-31 Fri 09:03]
 - State "DONE"       from "TODO"       [2025-10-31 Fri 09:03]
 - State "TODO"       from              [2025-10-31 Fri 09:01]
 :END:
 ** get proper access to facebook
-*** DELEGATED set up facebook account                                 :admin:
+*** BLOCKED set up facebook account                                   :admin:
 :LOGBOOK:
+- State "BLOCKED"    from "DELEGATED"  [2025-11-15 Sat 19:35]
 - State "DELEGATED"  from              [2025-10-31 Fri 09:02]
 :END:
-*** DELEGATED set up associated gmail account                         :admin:
+*** BLOCKED set up associated gmail account                           :admin:
 :LOGBOOK:
+- State "BLOCKED"    from "DELEGATED"  [2025-11-15 Sat 19:35]
 - State "DELEGATED"  from              [2025-10-31 Fri 09:02]
 :END:
 *** ask admin to add FACEBOOK_REDIRECT_URI to whitelist urls
