@@ -82,8 +82,11 @@ SCHEDULED: <2025-11-07 Fri>
 :LOGBOOK:
 - State "TODO"       from              [2025-11-07 Fri 10:38]
 :END:
-** DELEGATED uid vpn
+** DONE uid vpn
+CLOSED: [2025-11-18 Tue 11:29]
 :LOGBOOK:
+- State "DONE"       from "DOINGNOW"   [2025-11-18 Tue 11:29]
+- State "DOINGNOW"   from "DELEGATED"  [2025-11-18 Tue 11:29]
 - State "DELEGATED"  from "TODO"       [2025-11-07 Fri 11:23]
 - State "TODO"       from              [2025-11-07 Fri 11:22]
 :END:
@@ -99,12 +102,41 @@ CLOSED: [2025-11-18 Tue 08:53] SCHEDULED: <2025-11-09 Sun>
 - State "DONE"       from "TODO"       [2025-11-18 Tue 08:53]
 - State "TODO"       from              [2025-11-09 Sun 09:48]
 :END:
-*** TODO learn how can i create these vpns
+*** DONE learn how can i create these vpns
+CLOSED: [2025-11-18 Tue 09:52]
 SCHEDULED: <2025-11-18 Tue>
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-18 Tue 09:52]
 - Rescheduled from "[2025-11-09 Sun]" on [2025-11-18 Tue 08:53] \\
   just postponed to today
 - State "TODO"       from              [2025-11-09 Sun 09:54]
+:END:
+ssh milad@10.4.4.41 -p 2222
+
+/home/uid/openvpn-install.sh
+cert password uid123
+**** NEXT figure out all the available users in the openvpn
+SCHEDULED: <2025-11-18 Tue>
+:LOGBOOK:
+- State "NEXT"       from              [2025-11-18 Tue 09:57]
+:END:
+     1) zara
+     2) mzkamali
+     3) milad-local
+     4) soleymani
+     5) hasan
+     6) mk-local
+     7) faraz-local
+     8) hamed-local
+**** NEXT list all the users in 10.4.4.41 server
+SCHEDULED: <2025-11-19 Wed>
+:LOGBOOK:
+- State "NEXT"       from              [2025-11-18 Tue 10:09]
+:END:
+**** NEXT figure out the config of microtik to expose this computer
+SCHEDULED: <2025-11-19 Wed>
+:LOGBOOK:
+- State "NEXT"       from              [2025-11-18 Tue 10:09]
 :END:
 ** List of servers
 https://conflu.uid.ir/pages/viewpage.action?spaceKey=DEV&title=asitech
@@ -135,7 +167,7 @@ crypto
 authentication
 simplified
 bff
-** TODO how do i reset passwords
+** TODO how do i reset passwords in ldap
 SCHEDULED: <2025-11-18 Tue>
 :LOGBOOK:
 - State "TODO"       from              [2025-11-07 Fri 11:35]
@@ -154,6 +186,9 @@ SCHEDULED: <2025-11-18 Tue>
 :LOGBOOK:
 - State "NEXT"       from              [2025-11-18 Tue 08:54]
 :END:
+48:8F:5A:4D:40:1A
+user milad
+password: 58ed57e2-1d6d-461c-830d-135015689239
 ** NEXT get access to hauwi router
 SCHEDULED: <2025-11-18 Tue>
 :LOGBOOK:
@@ -166,6 +201,11 @@ WY4d5E1EZFf2
 *** check about basic restart system
 *** check about the alerts being changed
 *** why i'm no longer receiving alerts
+** asiatech panel
+https://my.asiatech.ir/
+
+14008858450
+p~]4=w?p}ebB!+9u4P^3P~]Tn+f-R
 * key issues to be solved
 ** create a plan that we can detect issues with services in less than 5 minutes
 ** figure out how we can use N8N
