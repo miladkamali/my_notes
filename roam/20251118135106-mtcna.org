@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       31dde454-f123-4ba1-8862-8c566d75100d
+:END:
+#+title: mtcna
+i
+* cources
+** [[https://www.youtube.com/playlist?list=PLJ7SGFemsLl0ld4OrcnVBHg4kPk0Y2_Z9][Free MTCNA ROSv7]]
+** [[https://www.youtube.com/playlist?list=PLM17aCh6X2z-ibBruJ6YVXuABwspl47Rk][Free Online MTCNA Course]]

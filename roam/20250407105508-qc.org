@@ -2,7 +2,7 @@
 :ID:       AF6B688F-713D-4EB7-96C4-A0AF45445F6E
 :END:
 #+title: qc
-
+#+startup: overview
 * archive
 ** qc                                                              :@bentoak:
 - State "TODO"       from              [2025-10-21 Tue 13:37]
@@ -145,3 +145,9 @@ u
 **** Gather documents
 ***** request labratory flow
 ***** List of available experiments and related forms
+** modules
+*** design of the modules
+*** authorization and authenticatino
+*** form handler module
+*** flow handler module
+*** 

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       6590d9bf-db61-45d5-8777-19a8687d2b1f
+:END:
+#+title: kubernates
+* tutorials
+** [[https://www.youtube.com/watch?v=s_o8dwzRlu4&pp=ygUKa3ViZXJuYXRlcw%3D%3D][crash course]]
+** [[https://www.youtube.com/watch?v=X48VuDVv0do&pp=ygUKa3ViZXJuYXRlcw%3D%3D][full tutorial 2020]]
+** [[https://www.youtube.com/watch?v=MTHGoGUFpvE][zero to hero 2025]]
