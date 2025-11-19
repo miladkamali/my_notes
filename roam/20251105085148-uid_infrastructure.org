@@ -115,9 +115,10 @@ ssh milad@10.4.4.41 -p 2222
 
 /home/uid/openvpn-install.sh
 cert password uid123
-**** NEXT figure out all the available users in the openvpn
-SCHEDULED: <2025-11-18 Tue>
+**** DONE figure out all the available users in the openvpn
+CLOSED: [2025-11-19 Wed 08:34] SCHEDULED: <2025-11-18 Tue>
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2025-11-19 Wed 08:34]
 - State "NEXT"       from              [2025-11-18 Tue 09:57]
 :END:
      1) zara
@@ -181,9 +182,10 @@ SCHEDULED: <2025-11-09 Sun>
 :LOGBOOK:
 - State "TODO"       from              [2025-11-09 Sun 10:31]
 :END:
-** NEXT get access to microtick
-SCHEDULED: <2025-11-18 Tue>
+** DONE get access to microtick
+CLOSED: [2025-11-19 Wed 08:34] SCHEDULED: <2025-11-18 Tue>
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2025-11-19 Wed 08:34]
 - State "NEXT"       from              [2025-11-18 Tue 08:54]
 :END:
 48:8F:5A:4D:40:1A
@@ -211,3 +213,6 @@ p~]4=w?p}ebB!+9u4P^3P~]Tn+f-R
 ** figure out how we can use N8N
 ** access to old logs
 ** access to old backups
+** add users meta data to logs for easier tracking
+** find a way to alert our customers for service outage
+** 

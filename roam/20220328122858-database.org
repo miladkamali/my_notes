@@ -39,6 +39,8 @@ https://dgraph.io/
 * key-value
 ** Etcd
 ** Redis
+** valkey
+*** [[https://www.youtube.com/watch?v=wWTjxLcMVsg][comparision of redis va valkey]]
 ** [[https://dragonflydb.io][dragonFly]]
 ** [[https://docs.keydb.dev][keyDB]]
 
