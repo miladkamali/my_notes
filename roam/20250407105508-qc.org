@@ -151,3 +151,62 @@ u
 *** form handler module
 *** flow handler module
 *** 
+*** 
+* QC Planning                                                   :QC:@bentoak:
+** set up basic project structure
+*** set up frontend code structure
+*** set up kubernates and CI/CD
+*** finalize the ERD of the project
+*** finalize the document storage system between opneKM or mayan EDMS or minio or alferesco 
+**** TODO review openKM                                    :openKM:@research:
+:LOGBOOK:
+- State "TODO"       from              [2025-11-20 Thu 09:50]
+:END:
+***** NEXT install opneKM on your system
+:LOGBOOK:
+- State "NEXT"       from "TODO"       [2025-11-20 Thu 09:54]
+- State "TODO"       from              [2025-11-20 Thu 09:54]
+:END:
+**** TODO Review Mayan EDMS                                       :@research:
+:LOGBOOK:
+- State "TODO"       from              [2025-11-20 Thu 09:51]
+:END:
+***** NEXT install Mayan EDMS on your system
+:LOGBOOK:
+- State "NEXT"       from "TODO"       [2025-11-20 Thu 09:55]
+- State "TODO"       from              [2025-11-20 Thu 09:55]
+:END:
+*** finalize the shift management system
+*** finalize the multitenent design
+*** design data entry process
+*** TODO set up standard for the APIs 
+:LOGBOOK:
+- State "TODO"       from              [2025-11-20 Thu 10:07]
+:END:
+** user login and authorization
+*** set up backend code structure
+*** set up openfga
+**** set up permission schema
+*** clean up roles and permissions
+*** set up user registration
+*** create appropriate endpoints for login and user role management
+*** implement shift management system
+** create a demo for login and shift management 
+** implementation of basic information
+*** implement company
+*** implement workshop
+*** implement workstation
+*** implement operations
+*** implement machine
+*** implement instruments and instrument calibration
+*** implement parameters
+** demo for basic information
+** implement form and workflow service
+*** finalize design of the form system
+*** finalize the design of form data
+*** finalize the design of form version and workflow version
+** implement input material workflow
+** implement manufacturing inspection workflow
+** implementation of Lab workflow
+*** design lab workflow
+** 
