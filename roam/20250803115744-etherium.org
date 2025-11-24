@@ -22,3 +22,6 @@ used to code etherium smart contract in other language
 ** TODO [[https://www.youtube.com/watch?v=FqW7TlAY9t0][pectra]] already in                                             :watch:
 ** fusaka
 ** Glamsterdam
+* lido finace
+** STETH
+** WSTETH

@@ -5,8 +5,30 @@
 #+STARTUP: overview
 * taking back control of infrastructure                                :@uid:
 ** create a dependency graph of our services
+** infra git
+https://gitlab2.uid.ir/services/docker-compose-file
+https://gitlab2.uid.ir/infrastructure/platform-infra
 ** get address of grafana
+https://grafana.u-id.ir
+*** TODO password of grafana
+:LOGBOOK:
+- State "TODO"       from              [2025-11-24 Mon 20:58]
+:END:
+** elastic
+
+elastic
+KanUup6P9l
 ** get address of 
+** argocd
+https://argocd.u-id.ir/
+admin
+dUOTk0JWeWnTu
+*** TODO how do i change argocd password
+:LOGBOOK:
+- State "TODO"       from              [2025-11-24 Mon 20:57]
+:END:
+** adminer
+https://adminer.u-id.ir
 ** control of servers
 *** DELEGATED get list of servers
 :LOGBOOK:
@@ -160,7 +182,7 @@ need to be set
 :LOGBOOK:
 - State "DELEGATED"  from              [2025-11-07 Fri 11:56]
 :END:
-*** 46.245.89.15
+*** 46.245.89.14
 ca
 sana
 crypto
@@ -216,6 +238,20 @@ connect serial
 
 fortigate user admin
 fortigate password 123
+** f
+** CI/CD
+
+platform infra helm hcarts
+
+ssh milad@192.168.20.58 build service
+
+
+all the docker compose are located at /docker/
+
+
+
+ssh milad@192.168.20.6 backup  server
+it needs to be cleaned periodically 
 
 * key issues to be solved
 ** create a plan that we can detect issues with services in less than 5 minutes
