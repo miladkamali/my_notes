@@ -238,7 +238,6 @@ connect serial
 
 fortigate user admin
 fortigate password 123
-** f
 ** CI/CD
 
 platform infra helm hcarts
@@ -260,4 +259,4 @@ it needs to be cleaned periodically
 ** access to old backups
 ** add users meta data to logs for easier tracking
 ** find a way to alert our customers for service outage
-** 
+** integrating firewall with our infrastructure

@@ -2,7 +2,7 @@
 :ID:       69115fd3-204b-488e-865f-28ad56403709
 :END:
 #+title: movies
-
+#+STARTUP: overview
 * places to watch
 
 https://patricia.frank-capra.com/user/panel/
@@ -325,6 +325,18 @@ it's just too stupid
    :YEAR: 2025
    :END:
    Description: Navy SEAL Ben Edwards' abrupt discharge from the military lands him a new job working with a mysterious CIA operative. As he delves deeper into the world of covert intelligence he struggles with the moral gray areas of clandestine operations.
+** Die My Love
+   :PROPERTIES:
+   :IMDB_RATING: 6.6
+   :IMDB_URL: https://www.imdb.com/title/tt2584384/
+   :IMDB_VOTES: 13,000
+   :GENRE: Romance
+   :YEAR: 2025
+   :END:
+   Grace, a writer and young mother, is slowly slipping into madness. Locked
+   away in an old house in and around Montana, we see her acting increasingly
+   agitated and erratic, leaving her companion, Jackson, increasingly worried
+   and helpless.
 ** megan
    :PROPERTIES:
    :IMDB_RATING: N/A
