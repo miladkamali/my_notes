@@ -7,6 +7,9 @@
 5.189.160.91
 user: root
 password:j6jK8iVTZJhSN99
+
+
+[[https://docs.google.com/document/d/1IzLl7LwCZDft6kiuFNkVYmQgB0VRxt10wWJ1YSWA1SM/edit?tab=t.0][original proposal document]]
 * tasks
 ** reading and learning documents
 :LOGBOOK:
@@ -67,6 +70,7 @@ CLOCK: [2025-10-31 Fri 08:38]--[2025-10-31 Fri 08:58] =>  0:20
 :END:
 ** working on integrating with ads
 :LOGBOOK:
+CLOCK: [2025-11-25 Tue 16:00]--[2025-11-25 Tue 17:59] =>  1:59
 CLOCK: [2025-11-24 Mon 08:00]--[2025-11-24 Mon 09:44] =>  1:44
 :END:
 ** meeting 
