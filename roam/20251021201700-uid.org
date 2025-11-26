@@ -39,7 +39,7 @@ CLOSED: [2025-10-23 Thu 13:00] SCHEDULED: <2025-10-22 Wed>
 **** define endpoints for wallet service
 **** modify authentication service to follow 
 *** moving services into kubernates
-** follow up about ESOP[3/4]
+** follow up about ESOP[4/4]
 :LOGBOOK:
 - State "TODO"       from              [2025-10-21 Tue 12:54]
 :END:
@@ -72,9 +72,10 @@ CLOSED: [2025-10-21 Tue 13:36] SCHEDULED: <2025-10-21 Tue>
 - State "DOINGNOW"   from "TODO"       [2025-10-21 Tue 13:36]
 - State "TODO"       from              [2025-10-21 Tue 12:57]
 :END:
-*** NEXT follow up about the situation with ESOP
-SCHEDULED: <2025-11-11 Tue>
+*** DONE follow up about the situation with ESOP
+CLOSED: [2025-11-26 Wed 13:05] SCHEDULED: <2025-11-11 Tue>
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2025-11-26 Wed 13:05]
 - State "NEXT"       from "TODO"       [2025-11-08 Sat 14:18]
 - State "TODO"       from              [2025-11-08 Sat 14:18]
 :END:

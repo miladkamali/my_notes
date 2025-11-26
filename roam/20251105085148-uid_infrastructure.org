@@ -80,14 +80,16 @@ sudo echo "46.245.89.9 k8s-lb.internal" >> /etc/hosts
 k9s  --kubeconfig  ~/.kube/config
 
 :namespace production
-** TODO access to backups
-SCHEDULED: <2025-11-10 Mon>
+** DONE access to backups
+CLOSED: [2025-11-26 Wed 13:05] SCHEDULED: <2025-11-10 Mon>
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-26 Wed 13:05]
 - State "TODO"       from              [2025-11-07 Fri 10:38]
 :END:
-** TODO get access to vmwave
-SCHEDULED: <2025-11-07 Fri>
+** DONE get access to vmwave
+CLOSED: [2025-11-26 Wed 13:05] SCHEDULED: <2025-11-07 Fri>
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-26 Wed 13:05]
 - State "TODO"       from              [2025-11-07 Fri 10:38]
 :END:
 
@@ -99,9 +101,15 @@ SCHEDULED: <2025-11-09 Sun>
 :LOGBOOK:
 - State "TODO"       from              [2025-11-07 Fri 12:03]
 :END:
-** TODO monitoring status of servers
-SCHEDULED: <2025-11-07 Fri>
+** TODO review vmware
+SCHEDULED: <2025-11-27 Thu>
 :LOGBOOK:
+- State "TODO"       from              [2025-11-26 Wed 13:03]
+:END:
+** DONE monitoring status of servers
+CLOSED: [2025-11-26 Wed 13:03] SCHEDULED: <2025-11-07 Fri>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-26 Wed 13:03]
 - State "TODO"       from              [2025-11-07 Fri 10:38]
 :END:
 ** DONE uid vpn
@@ -151,14 +159,16 @@ CLOSED: [2025-11-19 Wed 08:34] SCHEDULED: <2025-11-18 Tue>
      6) mk-local
      7) faraz-local
      8) hamed-local
-**** NEXT list all the users in 10.4.4.41 server
-SCHEDULED: <2025-11-19 Wed>
+**** DONE list all the users in 10.4.4.41 server
+CLOSED: [2025-11-26 Wed 13:05] SCHEDULED: <2025-11-19 Wed>
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2025-11-26 Wed 13:05]
 - State "NEXT"       from              [2025-11-18 Tue 10:09]
 :END:
-**** NEXT figure out the config of microtik to expose this computer
-SCHEDULED: <2025-11-19 Wed>
+**** DONE figure out the config of microtik to expose this computer
+CLOSED: [2025-11-26 Wed 13:05] SCHEDULED: <2025-11-19 Wed>
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2025-11-26 Wed 13:05]
 - State "NEXT"       from              [2025-11-18 Tue 10:09]
 :END:
 ** List of servers
@@ -199,9 +209,10 @@ SCHEDULED: <2025-11-18 Tue>
 :LOGBOOK:
 - State "TODO"       from              [2025-11-09 Sun 10:31]
 :END:
-*** TODO fix email server
-SCHEDULED: <2025-11-09 Sun>
+*** DONE fix email server
+CLOSED: [2025-11-26 Wed 13:03] SCHEDULED: <2025-11-09 Sun>
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-26 Wed 13:03]
 - State "TODO"       from              [2025-11-09 Sun 10:31]
 :END:
 ** DONE get access to microtick
@@ -213,9 +224,10 @@ CLOSED: [2025-11-19 Wed 08:34] SCHEDULED: <2025-11-18 Tue>
 48:8F:5A:4D:40:1A
 user milad
 password: 58ed57e2-1d6d-461c-830d-135015689239
-** NEXT get access to hauwi router
-SCHEDULED: <2025-11-18 Tue>
+** DONE get access to hauwi router
+CLOSED: [2025-11-26 Wed 13:05] SCHEDULED: <2025-11-18 Tue>
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2025-11-26 Wed 13:05]
 - State "NEXT"       from              [2025-11-18 Tue 08:54]
 :END:
 ** git and confluence

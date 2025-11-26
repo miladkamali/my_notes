@@ -17,7 +17,7 @@ https://www.figma.com/proto/8xmjic6RtnoA27dV9Vp78x/Applicant-Tracking-System?pag
 ** User
 ** Integration issues
 * delivery process for ATS                        :ats_delivery:ATS:@bentoak:
-** finalizing the project[2/7]
+** finalizing the project[4/6]
 *** DONE finalizing authorization model and implementation [3/3]
 CLOSED: [2025-10-27 Mon 14:08]
 :LOGBOOK:
@@ -45,8 +45,11 @@ CLOSED: [2025-10-23 Thu 15:40]
 - State "DONE"       from "TODO"       [2025-10-23 Thu 15:40]
 :END:
 - State "TODO"       from              [2025-10-21 Tue 14:49]
-*** TODO update documents on the project                              :arash:
-SCHEDULED: <2025-10-27 Mon>
+*** DONE update documents on the project                              :arash:
+CLOSED: [2025-11-26 Wed 13:06] SCHEDULED: <2025-10-27 Mon>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-26 Wed 13:06]
+:END:
 *** DONE add extra users to user seed for setup                       :saleh:
 CLOSED: [2025-10-26 Sun 13:39] DEADLINE: <2025-10-23 Thu>
 - State "DONE"       from "DELEGATED"  [2025-10-26 Sun 13:39]
@@ -66,9 +69,10 @@ SCHEDULED: <2025-10-26 Sun>
 - State "DELEGATED"  from "TODO"       [2025-11-03 Mon 06:40]
 - State "TODO"       from              [2025-10-23 Thu 13:35]
 :END:
-*** TODO clean up and review tests of the project
-SCHEDULED: <2025-10-28 Tue>
+*** DONE clean up and review tests of the project
+CLOSED: [2025-11-26 Wed 13:06] SCHEDULED: <2025-10-28 Tue>
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-26 Wed 13:06]
 - State "TODO"       from              [2025-10-23 Thu 13:36]
 :END:
 *** Review codes with SolarQube
