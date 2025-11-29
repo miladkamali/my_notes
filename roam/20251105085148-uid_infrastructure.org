@@ -10,8 +10,14 @@ https://gitlab2.uid.ir/services/docker-compose-file
 https://gitlab2.uid.ir/infrastructure/platform-infra
 ** get address of grafana
 https://grafana.u-id.ir
-*** TODO password of grafana
+http://46.245.89.2:3000
+admin
+jXUdJR9cn9
+*** DONE password of grafana
+CLOSED: [2025-11-29 Sat 15:27]
 :LOGBOOK:
+- State "DONE"       from "DELEGATED"  [2025-11-29 Sat 15:27]
+- State "DELEGATED"  from "TODO"       [2025-11-29 Sat 15:27]
 - State "TODO"       from              [2025-11-24 Mon 20:58]
 :END:
 ** elastic
@@ -30,8 +36,10 @@ dUOTk0JWeWnTu
 ** adminer
 https://adminer.u-id.ir
 ** control of servers
-*** DELEGATED get list of servers
+*** DONE get list of servers
+CLOSED: [2025-11-29 Sat 12:03]
 :LOGBOOK:
+- State "DONE"       from "DELEGATED"  [2025-11-29 Sat 12:03]
 - State "DELEGATED"  from              [2025-11-05 Wed 08:52]
 :END:
 *** get access to kubernates
@@ -250,6 +258,15 @@ connect serial
 
 fortigate user admin
 fortigate password 123
+** access to minio
+*** NEXT get master password of minio
+ssh -L 127.0.0.1:9003:127.0.0.1:9003 milad@46.245.89.7 -p 3316
+MINIO_ROOT_USER: c4wTRpjVbdeCL6yH
+MINIO_ROOT_PASSWORD: "7wTKhrC]Q_Hbb3g6vnbC+guV3U._'z"
+SCHEDULED: <2025-11-29 Sat>
+:LOGBOOK:
+- State "NEXT"       from              [2025-11-29 Sat 10:28]
+:END:
 ** CI/CD
 
 platform infra helm hcarts
@@ -258,11 +275,13 @@ ssh milad@192.168.20.58 build service
 
 
 all the docker compose are located at /docker/
-
-
-
+** backup server
 ssh milad@192.168.20.6 backup  server
 it needs to be cleaned periodically 
+
+minio
+      MINIO_ROOT_USER: uid
+      MINIO_ROOT_PASSWORD: "3tVa3RqOcfRL"
 
 * key issues to be solved
 ** create a plan that we can detect issues with services in less than 5 minutes

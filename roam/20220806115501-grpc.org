@@ -11,3 +11,12 @@ https://www.haproxy.com/blog/haproxy-1-9-2-adds-grpc-support/
 [[https://github.com/grpc/grpc-java/issues/5018][issue with discovering real client ip]]
 
 https://tousu.in/qa/?qa=326539/go-how-can-i-get-the-client-ip-address-in-grpc-from-a-load-balancer-that-adds-x-real-ip-and-x-forward-for-to-the-header
+* grpcurl
+https://github.com/fullstorydev/grpcurl
+* building protoset
+protoc --proto_path=. \
+    --descriptor_set_out=myservice.protoset \
+    --include_imports \
+    my/custom/server/service.proto
+* prpcui
+https://github.com/fullstorydev/grpcui
