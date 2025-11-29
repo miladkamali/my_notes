@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       4baeda2e-f31e-477b-ae2d-8876a5834fb1
+:END:
+#+title: networking
+* network commands
+** ip a
+** ip route
+** nmcli
+** network manage nmtui
+it's not installed by default on fedora and ubuntu
+
+
+
+ip route show scope host table all
+
+ip route show scope link table all
+
+cat /etc/iproute2/rt_tables
+
+
+
+list of network devices are located at sys/class/net
+** network naming
+eno1 bios provided index number
+ens192 PCIe hot PLUG enabled
+enp11s0 physical location based upon bus/slot
