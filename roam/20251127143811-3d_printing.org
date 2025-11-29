@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       a4e2120f-bf0f-44d8-a737-1a127a6034d1
+:END:
+#+title: 3d printing
+* printers
+** bambu lab hs2
+** ps1 combo
+** ps2 combo
+* projects
+** tools
+*** [[https://www.youtube.com/watch?v=6Js8erWbsDQ][lathe]]
+https://www.printables.com/model/1048400-open-lathe-v1/files
+** wearable
+*** [[https://makerworld.com/en/models/756466-belt-2-0#profileId-690758][belt]]

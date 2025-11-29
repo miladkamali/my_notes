@@ -9,7 +9,14 @@ user: root
 password:j6jK8iVTZJhSN99
 
 
+
+
 [[https://docs.google.com/document/d/1IzLl7LwCZDft6kiuFNkVYmQgB0VRxt10wWJ1YSWA1SM/edit?tab=t.0][original proposal document]]
+** users
+admin@example.com
+Bro38860
+** ad account
+319438279876094
 * tasks
 ** reading and learning documents
 :LOGBOOK:
@@ -70,6 +77,9 @@ CLOCK: [2025-10-31 Fri 08:38]--[2025-10-31 Fri 08:58] =>  0:20
 :END:
 ** working on integrating with ads
 :LOGBOOK:
+CLOCK: [2025-11-28 Fri 14:45]--[2025-11-28 Fri 15:27] =>  0:42
+CLOCK: [2025-11-27 Thu 21:17]--[2025-11-27 Thu 22:25] =>  1:08
+CLOCK: [2025-11-27 Thu 14:01]--[2025-11-27 Thu 17:12] =>  3:11
 CLOCK: [2025-11-25 Tue 16:00]--[2025-11-25 Tue 17:59] =>  1:59
 CLOCK: [2025-11-24 Mon 08:00]--[2025-11-24 Mon 09:44] =>  1:44
 :END:
@@ -77,3 +87,1976 @@ CLOCK: [2025-11-24 Mon 08:00]--[2025-11-24 Mon 09:44] =>  1:44
 :LOGBOOK:
 CLOCK: [2025-10-31 Fri 11:30]--[2025-10-31 Fri 12:09] =>  0:39
 :END:
+* data
+
+{
+  "success": true,
+  "count": 25,
+  "data": [
+    {
+      "id": "120236486078960774",
+      "name": "Johnson PP",
+      "status": "PAUSED",
+      "adset_id": "120207698522320774",
+      "campaign_id": "120207698522210774",
+      "creative": {
+        "id": "691250047108064"
+      },
+      "created_time": "2025-11-25T06:41:45+0000",
+      "updated_time": "2025-11-27T04:15:31+0000",
+      "preview_shareable_link": "https://fb.me/27U7zKrGDINHy8T",
+      "source_ad": {
+        "id": "120233084654720774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1150818460535812"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1150818460535812"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1150818460535812"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120236486208220774",
+      "name": "Thomas PP",
+      "status": "ACTIVE",
+      "adset_id": "120207698522320774",
+      "campaign_id": "120207698522210774",
+      "creative": {
+        "id": "848590547755063"
+      },
+      "created_time": "2025-11-25T06:44:53+0000",
+      "updated_time": "2025-11-26T15:05:27+0000",
+      "preview_shareable_link": "https://fb.me/2kXUNzuYIDQJTPD",
+      "source_ad": {
+        "id": "120236486078960774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1150817097202615"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1150817097202615"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1150817097202615"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120236485882700774",
+      "name": "Bidwell PP",
+      "status": "ACTIVE",
+      "adset_id": "120207698522320774",
+      "campaign_id": "120207698522210774",
+      "creative": {
+        "id": "2351409148610971"
+      },
+      "created_time": "2025-11-25T06:36:39+0000",
+      "updated_time": "2025-11-25T12:57:50+0000",
+      "preview_shareable_link": "https://fb.me/24ue2MrzyFzZBKs",
+      "source_ad": {
+        "id": "120212383814830774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1151015203849471"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1151015203849471"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1151015203849471"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120212383814830774",
+      "name": "Wardrobe",
+      "status": "PAUSED",
+      "adset_id": "120207698522320774",
+      "campaign_id": "120207698522210774",
+      "creative": {
+        "id": "120212424946050774"
+      },
+      "created_time": "2024-10-21T16:41:31+0000",
+      "updated_time": "2025-11-25T06:30:48+0000",
+      "preview_shareable_link": "https://fb.me/1XXEFFmy2HYm0uT",
+      "source_ad": {
+        "id": "120212383778640774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "7661298917270570",
+            "7836567503067619",
+            "8004597956237459",
+            "8139367502761799",
+            "8246341365410283"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "858447186439609"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "858447186439609"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120217070202570774",
+      "name": "Pulp Fiction",
+      "status": "PAUSED",
+      "adset_id": "120207698522320774",
+      "campaign_id": "120207698522210774",
+      "creative": {
+        "id": "1424165292326334"
+      },
+      "created_time": "2025-02-27T09:47:48+0000",
+      "updated_time": "2025-11-24T03:30:52+0000",
+      "preview_shareable_link": "https://fb.me/1XHnvVSS0RGOcG7",
+      "source_ad": {
+        "id": "120214997211110774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "7661298917270570",
+            "7836567503067619",
+            "8004597956237459",
+            "8139367502761799",
+            "8246341365410283"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "944117591205901"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "944117591205901"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120233084654720774",
+      "name": "Boys On Tour.",
+      "status": "PAUSED",
+      "adset_id": "120207698522320774",
+      "campaign_id": "120207698522210774",
+      "creative": {
+        "id": "816376214404173"
+      },
+      "created_time": "2025-09-30T09:46:51+0000",
+      "updated_time": "2025-11-22T05:08:56+0000",
+      "preview_shareable_link": "https://fb.me/1Y6H1VrNZMEL79r",
+      "source_ad": {
+        "id": "120233084509250774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1104677988483193"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770661120774",
+      "name": "Pulp Fiction – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235770661340774",
+      "campaign_id": "120235770661430774",
+      "creative": {
+        "id": "4300123570271406"
+      },
+      "created_time": "2025-11-13T17:24:42+0000",
+      "updated_time": "2025-11-13T17:29:06+0000",
+      "preview_shareable_link": "https://fb.me/1P4r5tMNX8FdB97",
+      "source_ad": {
+        "id": "120235770620330774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1142200008064324"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200008064324"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200008064324"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770661240774",
+      "name": "Pulp Fiction – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235770661370774",
+      "campaign_id": "120235770661430774",
+      "creative": {
+        "id": "1658232725561100"
+      },
+      "created_time": "2025-11-13T17:24:18+0000",
+      "updated_time": "2025-11-13T17:28:38+0000",
+      "preview_shareable_link": "https://fb.me/1N50qT1DeubAXbT",
+      "source_ad": {
+        "id": "120235770620140774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200004730991"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200004730991"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1142200004730991"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770661470774",
+      "name": "Pulp Fiction – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235770661320774",
+      "campaign_id": "120235770661430774",
+      "creative": {
+        "id": "25244520278497916"
+      },
+      "created_time": "2025-11-13T17:24:42+0000",
+      "updated_time": "2025-11-13T17:28:27+0000",
+      "preview_shareable_link": "https://fb.me/1RkA3YM8JOTNgw1",
+      "source_ad": {
+        "id": "120235770620090774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1142199984730993"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142199984730993"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142199984730993"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770661590774",
+      "name": "Pulp Fiction – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235770661350774",
+      "campaign_id": "120235770661430774",
+      "creative": {
+        "id": "816969834461213"
+      },
+      "created_time": "2025-11-13T17:24:18+0000",
+      "updated_time": "2025-11-13T17:27:58+0000",
+      "preview_shareable_link": "https://fb.me/2gY127eJeZM9Jf4",
+      "source_ad": {
+        "id": "120235770620110774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1142200018064323"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200018064323"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200018064323"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770620110774",
+      "name": "Pulp Fiction – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235210749810774",
+      "campaign_id": "120235210749510774",
+      "creative": {
+        "id": "816969834461213"
+      },
+      "created_time": "2025-11-13T17:23:10+0000",
+      "updated_time": "2025-11-13T17:27:34+0000",
+      "preview_shareable_link": "https://fb.me/22sUQHnq4l3z6Ql",
+      "source_ad": {
+        "id": "120217070202570774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1142200018064323"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200018064323"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200018064323"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770661400774",
+      "name": "Pulp Fiction – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235770661330774",
+      "campaign_id": "120235770661430774",
+      "creative": {
+        "id": "860430489782938"
+      },
+      "created_time": "2025-11-13T17:24:59+0000",
+      "updated_time": "2025-11-13T17:26:36+0000",
+      "preview_shareable_link": "https://fb.me/1YrFYW1EMph6FLO",
+      "source_ad": {
+        "id": "120235770620240774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1142200028064322"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200028064322"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200028064322"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770661310774",
+      "name": "Boys On Tour. – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235770661360774",
+      "campaign_id": "120235770661430774",
+      "creative": {
+        "id": "816376214404173"
+      },
+      "created_time": "2025-11-13T17:24:56+0000",
+      "updated_time": "2025-11-13T17:26:36+0000",
+      "preview_shareable_link": "https://fb.me/1XyVrSuZxku6byF",
+      "source_ad": {
+        "id": "120235770620150774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1104677988483193"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770661290774",
+      "name": "Pulp Fiction – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235770661360774",
+      "campaign_id": "120235770661430774",
+      "creative": {
+        "id": "2557085924675029"
+      },
+      "created_time": "2025-11-13T17:24:59+0000",
+      "updated_time": "2025-11-13T17:26:27+0000",
+      "preview_shareable_link": "https://fb.me/3015GvnHXnbotH7",
+      "source_ad": {
+        "id": "120235770620190774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142199991397659"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1142199991397659"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142199991397659"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770661580774",
+      "name": "Boys On Tour. – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235770661330774",
+      "campaign_id": "120235770661430774",
+      "creative": {
+        "id": "816376214404173"
+      },
+      "created_time": "2025-11-13T17:24:56+0000",
+      "updated_time": "2025-11-13T17:26:16+0000",
+      "preview_shareable_link": "https://fb.me/297jRgsMN2j1L3E",
+      "source_ad": {
+        "id": "120235770620250774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1104677988483193"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770661500774",
+      "name": "Boys On Tour. – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235770661320774",
+      "campaign_id": "120235770661430774",
+      "creative": {
+        "id": "816376214404173"
+      },
+      "created_time": "2025-11-13T17:24:36+0000",
+      "updated_time": "2025-11-13T17:26:04+0000",
+      "preview_shareable_link": "https://fb.me/AfUfbZHIocOgXAt",
+      "source_ad": {
+        "id": "120235770620080774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1104677988483193"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770661180774",
+      "name": "Boys On Tour. – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235770661340774",
+      "campaign_id": "120235770661430774",
+      "creative": {
+        "id": "816376214404173"
+      },
+      "created_time": "2025-11-13T17:24:36+0000",
+      "updated_time": "2025-11-13T17:26:01+0000",
+      "preview_shareable_link": "https://fb.me/29y0JTVA4lJf6ay",
+      "source_ad": {
+        "id": "120235770620340774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1104677988483193"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770661620774",
+      "name": "Boys On Tour. – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235770661350774",
+      "campaign_id": "120235770661430774",
+      "creative": {
+        "id": "816376214404173"
+      },
+      "created_time": "2025-11-13T17:24:27+0000",
+      "updated_time": "2025-11-13T17:25:52+0000",
+      "preview_shareable_link": "https://fb.me/2muHWfxlmOjjxb4",
+      "source_ad": {
+        "id": "120235770620120774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1104677988483193"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770661220774",
+      "name": "Boys On Tour. – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235770661370774",
+      "campaign_id": "120235770661430774",
+      "creative": {
+        "id": "816376214404173"
+      },
+      "created_time": "2025-11-13T17:24:21+0000",
+      "updated_time": "2025-11-13T17:25:51+0000",
+      "preview_shareable_link": "https://fb.me/2gG3C4YPvcBNL7H",
+      "source_ad": {
+        "id": "120235770620130774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1104677988483193"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770620190774",
+      "name": "Pulp Fiction – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235213777890774",
+      "campaign_id": "120235210749510774",
+      "creative": {
+        "id": "2557085924675029"
+      },
+      "created_time": "2025-11-13T17:23:10+0000",
+      "updated_time": "2025-11-13T17:25:23+0000",
+      "preview_shareable_link": "https://fb.me/2drmMsb3lUBDQay",
+      "source_ad": {
+        "id": "120217070202570774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142199991397659"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1142199991397659"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142199991397659"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770620240774",
+      "name": "Pulp Fiction – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235213777860774",
+      "campaign_id": "120235210749510774",
+      "creative": {
+        "id": "860430489782938"
+      },
+      "created_time": "2025-11-13T17:23:10+0000",
+      "updated_time": "2025-11-13T17:25:13+0000",
+      "preview_shareable_link": "https://fb.me/1XWtvJOl6TFQMr1",
+      "source_ad": {
+        "id": "120217070202570774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1142200028064322"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200028064322"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200028064322"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770620090774",
+      "name": "Pulp Fiction – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235213777880774",
+      "campaign_id": "120235210749510774",
+      "creative": {
+        "id": "25244520278497916"
+      },
+      "created_time": "2025-11-13T17:23:10+0000",
+      "updated_time": "2025-11-13T17:24:59+0000",
+      "preview_shareable_link": "https://fb.me/1QaQWm1cW8jWfYu",
+      "source_ad": {
+        "id": "120217070202570774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1142199984730993"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142199984730993"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142199984730993"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770620330774",
+      "name": "Pulp Fiction – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235213777870774",
+      "campaign_id": "120235210749510774",
+      "creative": {
+        "id": "4300123570271406"
+      },
+      "created_time": "2025-11-13T17:23:10+0000",
+      "updated_time": "2025-11-13T17:24:58+0000",
+      "preview_shareable_link": "https://fb.me/1RUb8Qz0aC4IImm",
+      "source_ad": {
+        "id": "120217070202570774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1142200008064324"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200008064324"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200008064324"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770620140774",
+      "name": "Pulp Fiction – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235213777850774",
+      "campaign_id": "120235210749510774",
+      "creative": {
+        "id": "1658232725561100"
+      },
+      "created_time": "2025-11-13T17:23:10+0000",
+      "updated_time": "2025-11-13T17:24:57+0000",
+      "preview_shareable_link": "https://fb.me/25QmQj5nSWkJFUA",
+      "source_ad": {
+        "id": "120217070202570774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200004730991"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1142200004730991"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1142200004730991"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "120235770620150774",
+      "name": "Boys On Tour. – Copy",
+      "status": "ACTIVE",
+      "adset_id": "120235213777890774",
+      "campaign_id": "120235210749510774",
+      "creative": {
+        "id": "816376214404173"
+      },
+      "created_time": "2025-11-13T17:23:10+0000",
+      "updated_time": "2025-11-13T17:24:47+0000",
+      "preview_shareable_link": "https://fb.me/266UXDcYGbY93Aa",
+      "source_ad": {
+        "id": "120233084654720774"
+      },
+      "tracking_specs": [
+        {
+          "action.type": [
+            "commerce_event"
+          ],
+          "page": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "offsite_conversion"
+          ],
+          "fb_pixel": [
+            "4503792916343521"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ],
+          "conversion_id": [
+            "24683046084634609"
+          ]
+        },
+        {
+          "action.type": [
+            "onsite_conversion"
+          ]
+        },
+        {
+          "action.type": [
+            "link_click"
+          ],
+          "post": [
+            "1104677988483193"
+          ],
+          "post.wall": [
+            "100230198932502"
+          ]
+        },
+        {
+          "action.type": [
+            "post_engagement"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        },
+        {
+          "action.type": [
+            "post_interaction_gross"
+          ],
+          "page": [
+            "100230198932502"
+          ],
+          "post": [
+            "1104677988483193"
+          ]
+        }
+      ]
+    }
+  ]
+}
