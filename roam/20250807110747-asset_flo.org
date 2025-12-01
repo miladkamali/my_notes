@@ -17,6 +17,8 @@ admin@example.com
 Bro38860
 ** ad account
 319438279876094
+** ad id with data
+120212383814830774
 * tasks
 ** reading and learning documents
 :LOGBOOK:
@@ -45,7 +47,7 @@ CLOCK: [2025-10-31 Fri 06:40]--[2025-10-31 Fri 08:38] =>  1:58
 :END:
 ** setting up initial demo
 :LOGBOOK:
-CLOCK: [2025-11-15 Sat 19:43]--[2025-11-15 Sat 22:05] =>  2:22
+CLOCK: [2025-11-15 Sat 18:43]--[2025-11-15 Sat 22:05] =>  3:22
 :END:
 *** DONE get access to access token                                   :admin:
 CLOSED: [2025-11-15 Sat 19:35]
@@ -72,12 +74,13 @@ CLOSED: [2025-11-15 Sat 19:35]
 FACEBOOK_REDIRECT_URI=http://localhost:3000/auth/meta/callback
 ** setting up server
 :LOGBOOK:
-CLOCK: [2025-10-31 Fri 09:45]--[2025-10-31 Fri 10:01] =>  0:16
+CLOCK: [2025-10-31 Fri 08:45]--[2025-10-31 Fri 10:01] =>  1:16
 CLOCK: [2025-10-31 Fri 08:38]--[2025-10-31 Fri 08:58] =>  0:20
 :END:
 ** working on integrating with ads
 :LOGBOOK:
-CLOCK: [2025-11-28 Fri 14:45]--[2025-11-28 Fri 15:27] =>  0:42
+CLOCK: [2025-12-01 Mon 16:05]--[2025-12-01 Mon 20:00] =>  3:55
+CLOCK: [2025-11-28 Fri 12:45]--[2025-11-28 Fri 15:27] =>  2:42
 CLOCK: [2025-11-27 Thu 21:17]--[2025-11-27 Thu 22:25] =>  1:08
 CLOCK: [2025-11-27 Thu 14:01]--[2025-11-27 Thu 17:12] =>  3:11
 CLOCK: [2025-11-25 Tue 16:00]--[2025-11-25 Tue 17:59] =>  1:59

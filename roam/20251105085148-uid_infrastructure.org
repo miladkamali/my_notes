@@ -281,7 +281,47 @@ it needs to be cleaned periodically
 minio
       MINIO_ROOT_USER: uid
       MINIO_ROOT_PASSWORD: "3tVa3RqOcfRL"
-
+** HA
+*** TODO figure out all the HA that actually do redirections
+SCHEDULED: <2025-12-01 Mon>
+:LOGBOOK:
+- State "TODO"       from              [2025-12-01 Mon 06:41]
+:END:
+*** DELEGATED simplify HA of 4
+SCHEDULED: <2025-12-01 Mon>
+:LOGBOOK:
+- State "DELEGATED"  from              [2025-12-01 Mon 06:43]
+:END:
+*** DELEGATED simplify HA of 14
+SCHEDULED: <2025-12-01 Mon>
+:LOGBOOK:
+- State "DELEGATED"  from              [2025-12-01 Mon 06:43]
+:END:
+*** DELEGATED simplify HA of 15
+SCHEDULED: <2025-12-01 Mon>
+:LOGBOOK:
+- State "DELEGATED"  from              [2025-12-01 Mon 06:43]
+:END:
+*** DELEGATED create a diagram of how things are being routed 
+:LOGBOOK:
+- State "DELEGATED"  from              [2025-12-01 Mon 06:44]
+:END:
+*** TODO List all the certificates and how we renew them
+SCHEDULED: <2025-12-01 Mon>
+:LOGBOOK:
+- State "TODO"       from              [2025-12-01 Mon 06:44]
+:END:
+** kubernates
+*** figure out how to add nodes
+*** TODO figure out the storage structure
+:LOGBOOK:
+- State "TODO"       from              [2025-12-01 Mon 06:49]
+:END:
+*** TODO figure out backup and restore of database
+:LOGBOOK:
+- State "TODO"       from              [2025-12-01 Mon 06:50]
+:END:
+** 
 * key issues to be solved
 ** create a plan that we can detect issues with services in less than 5 minutes
 ** figure out how we can use N8N
