@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e306427f-4ff3-452f-85dd-c36c0c42d838
+:END:
+#+title: opensearch
+* https://opensearch.org/
+** TODO watch a video about opensearch                   :@research:@youtube:
+:LOGBOOK:
+- State "TODO"       from              [2025-12-02 Tue 08:44]
+:END:

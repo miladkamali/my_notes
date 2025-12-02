@@ -103,7 +103,6 @@ model: |
       define committee_member: [user]
       define committee_secretary: [user]
       define committee_manager: [user]
-      
       define can_view_reports: hr_expert or hr_deputy or Supervision_expert or Supervision_manager or committee_member or committee_secretary or committee_manager
 tuples:
   - object: company:test
@@ -118,7 +117,7 @@ tuples:
   - user: user:hamid
     relation: hr_expert
     object: company:test2
-  - user: company:test2  
+  - user: company:test2
     relation: parent
     object: company:software_department
   - user: company:software_department

@@ -1,0 +1,56 @@
+name: ats-model
+model: |
+  model
+    schema 1.1
+
+
+  type user
+
+      
+
+  type project
+    relations
+      define project_roles: [role]
+      define project_access: [access]
+      define sections: [sections]
+      define project_users:[user]
+    
+  type sections
+    relations
+      define access: [access]
+
+
+  type role
+    relations
+
+      define role_access: [access]
+      define assignee: [user with non_expired_grant,user]
+      
+  type access
+
+  condition non_expired_grant(current_time: timestamp, expiration_time: timestamp) {
+    current_time < expiration_time
+  }
+
+
+tuples:
+  # - object: project:test
+  #   user: user:milad
+  #   relation: project_users
+  - user: user:milad
+    object: role:hr_expert
+    relation: assignee
+  - user: role:hr_expert
+    object: project:test
+    relation: project_roles
+
+
+tests:
+  - name: Tests
+    check:
+      - user: user:milad
+        object: project:test
+        assertions:
+          project_users: true
+          
+  
