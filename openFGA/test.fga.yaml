@@ -1,0 +1,34 @@
+name: ats-model
+model: |
+  model
+    schema 1.1
+
+
+  type user
+
+      
+
+  type project
+    relations
+      define project_role : [role]
+      define associate_user_roles:[user_roles]
+      define project_access: [access]
+
+
+
+  type user_roles
+    relations
+      define associated_user:[user]
+      define associate_role:[role]
+      define associated_access: role_access from associate_role
+
+  type role
+    relations
+      define role_access:[access]
+    
+  type access
+
+tests:
+  - name: Tests
+    check: []
+

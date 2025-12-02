@@ -22,7 +22,6 @@ model: |
 
   type role
     relations
-
       define role_access: [access]
       define assignee: [user with non_expired_grant,user]
       
