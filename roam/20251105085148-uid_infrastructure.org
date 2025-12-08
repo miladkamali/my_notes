@@ -103,6 +103,7 @@ CLOSED: [2025-11-26 Wed 13:05] SCHEDULED: <2025-11-07 Fri>
 ssh -L 127.0.0.1:8444:192.168.100.4:443  milad@46.245.89.4 -p 3316
 
 https://127.0.0.1:8444
+username:uid password: Ec9yaqT9
 *** TODO get user name and password from hosein
 SCHEDULED: <2025-11-09 Sun>
 :LOGBOOK:
@@ -258,12 +259,14 @@ connect serial
 fortigate user admin
 fortigate password 123
 ** access to minio
-*** NEXT get master password of minio
+*** DONE get master password of minio
+CLOSED: [2025-12-03 Wed 17:24]
 ssh -L 127.0.0.1:9003:127.0.0.1:9003 milad@46.245.89.7 -p 3316
 MINIO_ROOT_USER: c4wTRpjVbdeCL6yH
 MINIO_ROOT_PASSWORD: "7wTKhrC]Q_Hbb3g6vnbC+guV3U._'z"
 SCHEDULED: <2025-11-29 Sat>
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2025-12-03 Wed 17:24]
 - State "NEXT"       from              [2025-11-29 Sat 10:28]
 :END:
 ** CI/CD

@@ -1,4 +1,4 @@
-name: ats-model
+name: modular-model
 model: |
   model
     schema 1.1
