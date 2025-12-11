@@ -19,6 +19,11 @@ Bro38860
 319438279876094
 ** ad id with data
 120212383814830774
+** previous token
+curl -G \
+  -d "fields=name,username,link,about,followers_count" \
+  -d "access_token=EAAQDU9ylEQ0BQLbnx4Hgd6Rm7G7X4PsPIpS5lXqpw8c4GZBTe5MJpId6bGQmjSJV4BU9lTkELxMw8M4OmmbZAoZCMUlAyNVL17KgUZCWtLKWdlVNos7NGAZBZAF7XBzVF40VzOPeyx1ZAuaMlx7IerBG56oahaZAiSOfPUGSrmMby3ij2sR8K4VSaJeOZASyZBMZBrSDW2x52fG1I0eL2Taa4PvjPhQcavZAEXzwD93uTfLaS4Vrp5c3IdNnZAYeNibpC9t6AGXviR1n1VTEn2CEDhwPcvjcniN6gA9DsNdHv" \
+  "https://graph.facebook.com/v19.0/100230198932502"
 * tasks
 ** reading and learning documents
 :LOGBOOK:
@@ -79,6 +84,7 @@ CLOCK: [2025-10-31 Fri 08:38]--[2025-10-31 Fri 08:58] =>  0:20
 :END:
 ** working on integrating with ads
 :LOGBOOK:
+CLOCK: [2025-12-11 Thu 05:57]--[2025-12-11 Thu 09:41] =>  3:44
 CLOCK: [2025-12-09 Tue 16:38]--[2025-12-09 Tue 19:54] =>  3:16
 CLOCK: [2025-12-03 Wed 14:33]--[2025-12-03 Wed 16:40] =>  2:07
 CLOCK: [2025-12-01 Mon 16:05]--[2025-12-01 Mon 20:00] =>  3:55
