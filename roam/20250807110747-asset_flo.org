@@ -84,6 +84,7 @@ CLOCK: [2025-10-31 Fri 08:38]--[2025-10-31 Fri 08:58] =>  0:20
 :END:
 ** working on integrating with ads
 :LOGBOOK:
+CLOCK: [2025-12-12 Fri 11:30]
 CLOCK: [2025-12-11 Thu 05:57]--[2025-12-11 Thu 09:41] =>  3:44
 CLOCK: [2025-12-09 Tue 16:38]--[2025-12-09 Tue 19:54] =>  3:16
 CLOCK: [2025-12-03 Wed 14:33]--[2025-12-03 Wed 16:40] =>  2:07
@@ -2071,3 +2072,18 @@ CLOCK: [2025-10-31 Fri 11:30]--[2025-10-31 Fri 12:09] =>  0:39
     }
   ]
 }
+* information and apis
+** get token permissions
+
+curl https://graph.facebook.com/v24.0/me/permissions?access_token=EAAQDU9ylEQ0BQGu9hIKETR82Q5a7ZAsA3qalQFVY6HRVyilAlwOY2rqTzZCYM5ZBOLEWkNtHziwPC2f3W5w0IlauaqxqIn2KXgLjUhulZC58WpZAGRjgitsXY8YiiufTOUKLKGj3ZB0c8ZBWtWUZCu4F8Sjecko2nLjZBc2Cxy6dJewPEbhfWeKo2d7nrUIQTfmB4teQ5gI3Dj3ZAo0LUcHuvZBjNL083OTR2fZAIPrPtZB56GZAZAgHP6DohdRnFCZCWoBprQagd5UKnMUg5pzOjZBFzkf93Cb8TFxRRO4L4YPhN|jq
+** getting the video
+curl -G \
+  "https://graph.facebook.com/v24.0/2407670316347233" \
+  -d "access_token=EAAQDU9ylEQ0BQGu9hIKETR82Q5a7ZAsA3qalQFVY6HRVyilAlwOY2rqTzZCYM5ZBOLEWkNtHziwPC2f3W5w0IlauaqxqIn2KXgLjUhulZC58WpZAGRjgitsXY8YiiufTOUKLKGj3ZB0c8ZBWtWUZCu4F8Sjecko2nLjZBc2Cxy6dJewPEbhfWeKo2d7nrUIQTfmB4teQ5gI3Dj3ZAo0LUcHuvZBjNL083OTR2fZAIPrPtZB56GZAZAgHP6DohdRnFCZCWoBprQagd5UKnMUg5pzOjZBFzkf93Cb8TFxRRO4L4YPhN" \
+  -d "fields=source,permalink_url,description,length"
+** getting a list of all add campaings and adcreatives
+curl -G \
+  "https://graph.facebook.com/v19.0/act_YOUR_AD_ACCOUNT_ID/campaigns" \
+  -d "access_token=EAAQDU9ylEQ0BQGu9hIKETR82Q5a7ZAsA3qalQFVY6HRVyilAlwOY2rqTzZCYM5ZBOLEWkNtHziwPC2f3W5w0IlauaqxqIn2KXgLjUhulZC58WpZAGRjgitsXY8YiiufTOUKLKGj3ZB0c8ZBWtWUZCu4F8Sjecko2nLjZBc2Cxy6dJewPEbhfWeKo2d7nrUIQTfmB4teQ5gI3Dj3ZAo0LUcHuvZBjNL083OTR2fZAIPrPtZB56GZAZAgHP6DohdRnFCZCWoBprQagd5UKnMUg5pzOjZBFzkf93Cb8TFxRRO4L4YPhN" \
+  -d "limit=50" \
+  -d "fields=name,id,ads{name,adlabels,adcreatives{title,body,image_url,thumbnail_url,object_story_spec,asset_feed_spec}}"

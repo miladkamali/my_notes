@@ -1,0 +1,315 @@
+name: modular-model
+model: |
+  model
+    schema 1.1
+
+  type user
+
+  type project
+    relations
+      # Project hierarchy - projects can have parent projects
+      # This allows creating nested project structures (e.g., organization -> department -> team)
+      # Child projects can inherit permissions from parent projects
+      # Example: project:engineering_department -> parent -> project:company
+      define parent: [project]
+      
+      # Direct user assignments (for owners and admins)
+      # Owner has full control over the project and all child projects
+      # Owner permissions are inherited by child projects through the parent relation
+      define owner: [user] or owner from parent
+      
+      # Admin users - can manage the project but don't have delete rights
+      # Admins can be assigned directly or inherit from parent projects
+      define admin: [user] or owner or admin from parent
+      
+      # Role-based access - roles assigned to this project
+      # Note: project_role cannot inherit from parent because it's used in tuplesets (assignee from project_role)
+      # Roles must be explicitly assigned to each project
+      define project_role: [role]
+      
+      # Computed relations for checking access
+      # A user is a member if they are assigned to a role that is assigned to this project
+      # Membership can also be inherited from parent projects (through admin/owner)
+      define member: [user] or assignee from project_role or member from parent
+      
+      # Permission checks
+      # View permission: members, admins, or inherited from parent
+      define can_view: member or admin or can_view from parent
+      # Edit permission: admins or inherited from parent
+      # Note: Users cannot be directly granted edit permission - only admins can edit
+      define can_edit: admin or can_edit from parent
+      # Delete permission: only owners (inherited from parent)
+      define can_delete: owner or can_delete from parent
+      
+      # User management permission - allows managing users on the project
+      # Base relation: can_manage_users_user allows explicitly granting this permission to specific users
+      # This is useful when you want to grant user management rights without making someone a full admin
+      # Example: Grant user:bob the ability to manage users on project:project1
+      #   - object: project:project1
+      #     user: user:bob
+      #     relation: can_manage_users_user
+      define can_manage_users_user: [user]
+      
+      # Computed relation: checks if a user can manage users on this project
+      # Checks three conditions (in order):
+      #   1. admin - admins automatically have user management rights
+      #   2. can_manage_users_user - users explicitly granted this permission
+      #   3. can_manage_users from parent - inherits permission from parent project in hierarchy
+      # This allows flexible user management: admins always can, specific users can be granted,
+      # and permissions flow down through the project hierarchy
+      define can_manage_users: admin or can_manage_users_user or can_manage_users from parent
+      
+      # Check if user has specific access/permission through their role
+      # Access objects represent granular permissions that can be granted to roles
+      # Example: A role might have "write_access" which grants "write" permission
+      # This allows checking: "Does this user have access:write_access on this project?"
+      # Access can also be inherited from parent projects
+      define has_access: [access] or has_access from project_role or has_access from parent
+
+  type role
+    relations
+      # Users assigned to this role
+      # The condition not_expired_grants ensures that only non-expired grants are valid
+      # When assigning a user to a role, you can include expiration_time in the context
+      # Example: assignee relation with expiration_time in the tuple context
+      define assignee: [user with not_expired_grants, user]
+      
+      # Permissions/access this role grants
+      # Access objects are assigned to roles to grant specific capabilities
+      # Example: role:developer might have access:write_access assigned to it
+      # This creates a reusable permission bundle that can be shared across roles
+      # Access can be inherited from parent roles (e.g., "admin" role inherits from "member")
+      # Usage: Assign access objects to roles, then assign roles to projects
+      define grants_access: [access] or grants_access from parent
+      
+      # Role hierarchy (for role inheritance)
+      # e.g., "admin" role can inherit from "member" role
+      define parent: [role]
+      
+      # Delegation permission - allows users with this role to delegate permissions to others
+      # Can be set directly on roles (by assigning the role to itself)
+      # Note: Cannot inherit from parent because it's used in tuplesets (assignee from can_delegate)
+      # Example: role:manager has can_delegate, so users with manager role can delegate access
+      define can_delegate: [role]
+      
+      # Computed: users with this role
+      define members: assignee
+      
+      # Check if role has specific access (through direct grant or inheritance)
+      # This allows querying: "Does role:developer have access:write_access?"
+      # Access can be directly assigned to the role or inherited from a parent role
+      # Example: If role:senior_dev has access:write_access, and role:developer
+      # inherits from role:senior_dev, then role:developer also has access:write_access
+      define has_access: grants_access or has_access from parent
+      
+      # Specific permission flags for roles
+      # These can be set directly on roles (by assigning the role to itself) or inherited from parent roles
+      define can_edit: [role] or can_edit from parent
+      define can_manage_users: [role] or can_manage_users from parent
+      
+      # Users who can edit/manage through this role (computed based on role permissions)
+      define users_who_can_edit: assignee
+      define users_who_can_manage_users: assignee
+      
+      # Users who can delegate through this role (only if role has can_delegate permission)
+      # This allows checking: "Can user:dave delegate?" (yes, if they're assigned to role:manager which has can_delegate)
+      define users_who_can_delegate: assignee from can_delegate
+
+  type access
+    # Access objects are reusable permission bundles that can be assigned to roles
+    # Think of access as a "permission package" - it groups related permissions together
+    # Example: access:write_access might grant permission:write and permission:edit
+    # This allows you to define common permission sets once and reuse them across roles
+    # 
+    # Access vs Direct Permissions (can_edit, can_view):
+    # - Direct permissions (can_edit, can_view) are simple boolean checks on projects/roles
+    # - Access objects provide more granular, reusable permission bundles
+    # - Use access when you need to group multiple permissions or reuse them across roles
+    # - Use direct permissions for simple, project-specific checks
+    relations
+      # What permissions this access object grants
+      # An access object can grant one or more specific permissions
+      # Example: access:write_access -> grants_permission -> permission:write
+      # This creates a link: "write_access grants the write permission"
+      # Multiple permissions can be linked to the same access object
+      define grants_permission: [permission]
+      
+
+  type permission
+    # Permissions are leaf nodes representing specific actions or capabilities
+    # They are the atomic units of authorization - the smallest grantable privilege
+    # Examples: "read", "write", "delete", "manage_users", "view_reports", "export_data"
+    # 
+    # Permission Hierarchy:
+    # 1. Permission: The atomic action (e.g., permission:write)
+    # 2. Access: Groups permissions together (e.g., access:write_access contains permission:write)
+    # 3. Role: Has access objects assigned (e.g., role:developer has access:write_access)
+    # 4. Project: Has roles assigned (e.g., project:project1 has role:developer)
+    # 5. User: Assigned to roles (e.g., user:bob is assignee of role:developer)
+    # 
+    # Result: user:bob -> role:developer -> access:write_access -> permission:write
+    # This allows checking: "Can user:bob perform permission:write on project:project1?"
+    # 
+    # No relations needed - permissions are identified by their type name
+    # They are referenced through access objects, not directly assigned to users or roles
+
+  # Condition: Check if an access grant is still valid (not expired)
+  # This condition is used to enforce time-based access control
+  # Parameters:
+  #   - current_time: The current timestamp (typically provided by the system)
+  #   - expiration_time: The timestamp when the grant expires (stored in tuple context)
+  # Returns: true if current_time < expiration_time (grant is still valid)
+  # 
+  # Usage: Applied to role assignee relations to ensure expired role assignments are invalid
+  # Example: When checking if user:bob is assignee of role:developer, this condition
+  # verifies that the assignment hasn't expired based on the expiration_time in the tuple context
+  condition not_expired_grants(current_time: timestamp, expiration_time: timestamp) {
+    current_time < expiration_time
+  }
+
+
+
+
+
+
+tuples:
+  # Example: Create a parent project (organization level) and assign owner
+  - object: project:organization
+    user: user:alice
+    relation: owner
+  
+  # Example: Create a child project (department level) with parent relationship
+  - object: project:project1
+    user: project:organization
+    relation: parent
+  
+  # Example: Create another child project
+  - object: project:project2
+    user: project:organization
+    relation: parent
+  
+  # Example: Create roles and assign permissions
+  # Developer role can edit (assign role to itself to grant the permission)
+  - object: role:developer
+    user: role:developer
+    relation: can_edit
+  
+  # Viewer role has no special permissions, just basic access through membership
+  
+  # Example: Assign role to project
+  - object: project:project1
+    user: role:developer
+    relation: project_role
+  
+  # Example: Assign user to role (permanent assignment, no expiration)
+  - object: role:developer
+    user: user:bob
+    relation: assignee
+  
+  # Example: Assign user to role with expiration time (using condition)
+  # This demonstrates time-based access control - the assignment expires at a specific time
+  # Note: In actual usage, you would include expiration_time in the tuple context
+  # For demonstration, we show a permanent assignment above and mention expiration here
+  
+  # Example: Assign user to a role that's not assigned to project1 (for testing unassigned access)
+  - object: role:viewer
+    user: user:charlie
+    relation: assignee
+  
+  # Example: Create an access object and link to permission
+  # This creates access:write_access and links it to permission:write
+  # Now access:write_access represents a reusable "write permission bundle"
+  # You can link multiple permissions to the same access object if needed
+  - object: access:write_access
+    user: permission:write
+    relation: grants_permission
+  
+  # Example: Grant access to role
+  # This assigns access:write_access to role:developer
+  # Now any user assigned to role:developer will have access:write_access
+  # through the chain: user -> role -> access -> permission
+  # This allows checking: "Does user:bob have access:write_access?" (yes, through role:developer)
+  - object: role:developer
+    user: access:write_access
+    relation: grants_access
+  
+  # Example: Create a manager role with delegation permission
+  - object: role:manager
+    user: role:manager
+    relation: can_delegate
+  
+  # Example: Assign manager role to project
+  - object: project:project1
+    user: role:manager
+    relation: project_role
+  
+  # Example: Assign user to manager role (with delegation capability)
+  - object: role:manager
+    user: user:dave
+    relation: assignee
+
+tests:
+  - name: Owner has full access to parent project
+    check:
+      - user: user:alice
+        object: project:organization
+        assertions:
+          can_view: true
+          can_edit: true
+          can_delete: true
+          can_manage_users: true
+  
+  - name: Owner inherits access to child projects
+    check:
+      - user: user:alice
+        object: project:project1
+        assertions:
+          can_view: true
+          can_edit: true
+          can_delete: true
+          can_manage_users: true
+  
+  - name: User with role has access
+    check:
+      - user: user:bob
+        object: project:project1
+        assertions:
+          can_view: true
+          can_edit: false  # Only admins can edit, not regular users with roles
+          can_manage_users: false
+  
+  - name: Unassigned user has no access
+    check:
+      - user: user:charlie
+        object: project:project1
+        assertions:
+          can_view: false
+          can_edit: false
+  
+  - name: Hierarchy inheritance test
+    check:
+      - user: user:alice
+        object: project:project2
+        assertions:
+          can_view: true
+          can_delete: true
+  
+  - name: Delegation permission test
+    check:
+      # Check if role:manager has can_delegate permission (role assigned to itself)
+      - user: role:manager
+        object: role:manager
+        assertions:
+          can_delegate: true
+      # Check if user:dave can delegate through their role assignment
+      - user: user:dave
+        object: role:manager
+        assertions:
+          users_who_can_delegate: true
+  
+  - name: Non-expired grant condition test
+    check:
+      - user: user:bob
+        object: role:developer
+        assertions:
+          assignee: true
