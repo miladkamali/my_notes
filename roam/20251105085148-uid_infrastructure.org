@@ -331,11 +331,13 @@ DEADLINE: <2025-12-06 Sat>
 :LOGBOOK:
 - State "TODO"       from              [2025-12-03 Wed 13:07]
 :END:
-*** TODO get email user and password
-DEADLINE: <2025-12-06 Sat>
+*** DONE get email user and password
+CLOSED: [2025-12-14 Sun 18:25] DEADLINE: <2025-12-06 Sat>
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-12-14 Sun 18:25]
 - State "TODO"       from              [2025-12-03 Wed 13:07]
 :END:
+
 * key issues to be solved
 ** create a plan that we can detect issues with services in less than 5 minutes
 ** figure out how we can use N8N
