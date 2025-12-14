@@ -10,6 +10,7 @@ https://gitlab2.uid.ir/services/docker-compose-file
 https://gitlab2.uid.ir/infrastructure/platform-infra
 ** get address of grafana
 https://grafana.u-id.ir
+http://46.245.89.2:300/
 admin
 jXUdJR9cn9
 *** DONE password of grafana
@@ -324,7 +325,17 @@ SCHEDULED: <2025-12-01 Mon>
 :LOGBOOK:
 - State "TODO"       from              [2025-12-01 Mon 06:50]
 :END:
-** 
+** DNS
+*** TODO migrate all the dns to the email made for uid
+DEADLINE: <2025-12-06 Sat>
+:LOGBOOK:
+- State "TODO"       from              [2025-12-03 Wed 13:07]
+:END:
+*** TODO get email user and password
+DEADLINE: <2025-12-06 Sat>
+:LOGBOOK:
+- State "TODO"       from              [2025-12-03 Wed 13:07]
+:END:
 * key issues to be solved
 ** create a plan that we can detect issues with services in less than 5 minutes
 ** figure out how we can use N8N
@@ -333,3 +344,4 @@ SCHEDULED: <2025-12-01 Mon>
 ** add users meta data to logs for easier tracking
 ** find a way to alert our customers for service outage
 ** integrating firewall with our infrastructure
+** automate certificate renewal or use cloudflare 15 years certificate
