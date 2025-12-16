@@ -19,7 +19,7 @@ focus on root and stem then branches and finally the leaves
 *** start with the basics
 *** read broadly
 *** apply what you learn
-*** 
+**** 
 * [[[[https://www.youtube.com/watch?v=bSDprg24pEA]]][ How To Learn Any Skill So Fast It Feels Illegal ]]
 * the art of doing anything exceptionally well
 ** master the fundemental KIHON  基本, きほん
@@ -40,3 +40,51 @@ highest standard
   - when you are discouraged you practice anyway
   - when you receive negative feedback you look for useful information without taking it personaly
   - when some one else achieve your goal you study their method instead of becoming jealous
+* learn any thing fast
+** the 80/20 rule
+in every discipline there are few core things that if you master them you can
+handle 80 percent of all the problem in that field. figure them out as fast as
+you can. For example if you want to play Gitar just by mastering the 4 cords you
+can play almost 80 percent of the popular songs.
+** Drill down on your weakness
+once you identify the core things you have to learn start practicing them until
+you master them. in this process you inevitably find places that you do not have
+adequate mastery and you fail over and over again. instead of focusing on the
+whole exercise just focus on the part that makes you fail the process. repeat
+this section until you can do it effortlessly then go back to the bigger routine.
+** see one, do one, teach one
+watch someone performing the skill you want to learn, then without delay you
+attempt to do exactly that, even if you fail miserably, after that attempt to
+teach the same skill to someone else even if you only explain it to yourself in
+front of your camera.
+
+when you want to teach the same skill your brain needs to organize what you have
+learned in a totally different way, this actually enforce your previous learning.
+* how to remember what you read
+
+** read the book like you hate the author
+your brain normally forgets about 90 percent of the material presented to it so
+in order to use it strategically you need to try to find contradiction in the
+information that is being presented to you. this way you automatically ignore
+the 80% of what you already know or agree with. once you find point of
+contention your brain will remember it since it had to work hard for it.
+** one sentence summaries
+instead of taking very long notes and trying to remember them, just distill what
+you have learned into a one catchy sentence you can use in a party to impress
+people. your brain will remember this once sentence.
+** you do not have to finish the book
+It's quite counter intuitive to not finish a book you have started, however when
+reading most books you will get the big idea roughly in the first 30% of the
+book. After that usually the authors repeat themselves since the publisher
+incentivize them into creating 200 plus pages books.
+
+This is quite counter intuitive because on the other hand you are recomended to
+finish what you have started and unfinished books and tasks do weigh on your
+unconscious mind.
+* natural way of learning
+[[https://www.youtube.com/watch?v=DcnKaEiuJsM][ The CIA's Secret Learning Method (It Works Scary Fast) ]]
+** sleep learning
+** chaos training
+** scent to remind your topics
+** memory palace
+** the 20 minutes switch
