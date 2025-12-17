@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       2b48bcb6-9fc4-4373-a5c5-3bedd5cf4c98
+:END:
+#+title: investment
+* samaneh
+0.331 eth before cleanup
+0.187 eth before cleanup
