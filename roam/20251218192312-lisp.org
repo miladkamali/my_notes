@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       9244e5ba-ec5b-4854-aa46-2a83e0f8d6e7
+:END:
+#+title: lisp
+* lisp variant
+** scheme
+*** Guile
+*** racket
+https://racket-lang.org
+** common lisp
+*** SBCL Steel Bank Common Lisp
+*** emacs lisp
+** clojure
+
+#+begin_src C :export results
+  #include<stdio.h>
+  printf("%d", 1 + 1  * 2);
+#+end_src
+
+#+RESULTS:
+: 3
+
+
+#+begin_src C
+  #include<stdio.h>
+  int main() {
+      printf("Hello World\n");
+      return 0;
+  }
+#+end_src
+
+#+begin_src elisp
+(setq org-confirm-babel-evaluate nil)
+  (* 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
+#+end_src
+
+#+RESULTS:
+: 2432902008176640000

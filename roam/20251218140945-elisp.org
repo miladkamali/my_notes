@@ -1,0 +1,99 @@
+:PROPERTIES:
+:ID:       277ff5b7-453a-443f-bc67-4c0b6a8b1a80
+:END:
+#+title: elisp
+
+src emacs-lisp
+
+#+begin_src elisp
+  (+ 1 2 )
+  (defun milad_add ()
+    "test milad add"
+    (interactive)
+    (message 1 2 3))
+  (global-set-key (kbd "C-S-s") 'milad_add)
+  (keymap-global-set "C-S-s" 'milad_add)
+#+end_src
+
+(if 'condition
+
+#+begin_src elisp
+    (if nil
+      'it-was-true
+      'it-was-false)
+  (when t 'this-was-true)
+  (unless nil 'this-was-false)
+  (and t nil )
+  (or t nil)
+  (when t (progn
+            (message "hello")
+            'test
+            ))
+#+end_src
+
+#+RESULTS:
+: test
+* resources
+** DONE [[https://www.youtube.com/watch?v=1y__2IK-aLM&t=478s][ Learn Emacs Lisp in 30 Minutes ]]
+CLOSED: [2025-12-18 Thu 19:47]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-12-18 Thu 19:47]
+- State "TODO"       from              [2025-12-18 Thu 19:47]
+:END:
+** TODO [[https://www.youtube.com/watch?v=NocDm4zzToo][ LEARN EMACS LISP - Mostly The Strange Parts ]]
+:LOGBOOK:
+- State "TODO"       from              [2025-12-18 Thu 19:47]
+:END:
+** TODO [[https://www.youtube.com/watch?v=i4tmF_1nZng][ LOOP Common Lisps Superior For ]]
+:LOGBOOK:
+- State "TODO"       from              [2025-12-18 Thu 19:47]
+:END:
+* information
+** repel environment
+ielm
+** M-: to eval
+* figure out cond
+* figure out progn
+* stting a variable
+#+begin_src elisp
+  (setq markdown-hide-url t)
+#+end_src
+
+
+** setopt
+** defvar
+* loop
+** cl-loop
+#+begin_src elisp
+  (require 'cl-lib)
+  (cl-loop for i from 0 to 10
+           collect (* i i)
+           )
+#+end_src
+
+#+RESULTS:
+| 0 | 1 | 4 | 9 | 16 | 25 | 36 | 49 | 64 | 81 | 100 |
+** dotimes
+#+begin_src elisp
+  (setq total nil)
+  (dotimes (i 3)
+    (setq total(cons total i)))
+  total
+#+end_src
+
+#+RESULTS:
+: (((nil . 0) . 1) . 2)
+
+** dolist
+#+begin_src elisp
+  (setq total 0)
+  (dolist(i '(1 2 3))
+    (setq total (+ total i ))
+    )
+  total
+#+end_src
+
+#+RESULTS:
+: 6
+
+* variabls
