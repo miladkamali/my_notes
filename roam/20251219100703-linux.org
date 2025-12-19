@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       f3f56c40-3814-4a04-b21c-403d1d318371
+:END:
+#+title: linux
+* command line utilities
+** sed
+** tr
+** cut
+** [[id:8a1f57c2-d279-4090-9020-219dcf71d6cf][jq]]
+** yq
+** fzf
+** curl

@@ -1,0 +1,76 @@
+:PROPERTIES:
+:ID:       8a1f57c2-d279-4090-9020-219dcf71d6cf
+:END:
+#+title: jq
+#+PROPERTY: header-args:bash :var json_data=raw-data :results output
+
+* Data Source
+#+NAME: raw-data
+#+begin_example
+something that is not json{"user": "milad","details": {"active": true,"roles": ["admin", "editor"]}}
+#+end_example
+
+* Use Cases
+
+** Extract simple field
+#+begin_src bash
+  # We use grep here to filter the garbage text so simple jq works
+  echo $json_data #| grep "{" | jq -r '.user'
+#+end_src
+
+#+RESULTS:
+: something that is not json{"user": "milad","details": {"active": true,"roles": ["admin", "editor"]}}
+
+** Extract nested boolean
+#+begin_src bash
+  echo "$json_data" | grep "{" | jq -r '.details.active'
+#+end_src
+
+** Extract array item
+#+begin_src bash
+  echo "$json_data" | grep "{" | jq -r '.details.roles[1]'
+#+end_src
+
+** Handle "Garbage" text (Robust Method)
+#+begin_src bash
+  # This method parses the raw mixed data directly
+  echo "$json_data" | jq -R 'sub("^[^{]*"; "") | fromjson? | .details.roles[1]'
+#+end_src
+
+#+RESULTS:
+
+
+
+#+NAME: setup_data
+#+begin_src bash :session my-shell :results silent
+  export USER_NAME="Milad"
+  export API_KEY="12345"
+  echo "Variables loaded."
+#+end_src
+
+#+NAME: main_script
+#+begin_src bash :session my-shell :var _=setup_data
+  # The block above ran automatically just now!
+  echo "Hello $USER_NAME, your key is $API_KEY"
+#+end_src
+
+#+RESULTS: main_script
+: Hello Milad, your key is 12345
+
+
+
+
+
+#+NAME: define_vars
+#+begin_src bash :results silent
+  export JSON_DATA='{"id": 100, "status": "active"}'
+#+end_src
+
+#+begin_src bash :noweb yes
+  <<define_vars>>
+  # It is as if you typed the export line right here.
+  echo $JSON_DATA | jq '.id'
+#+end_src
+
+#+RESULTS:
+: 100
