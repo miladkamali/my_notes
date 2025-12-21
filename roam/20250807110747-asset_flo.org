@@ -28,10 +28,10 @@ curl -G \
 ** reading and learning documents
 :LOGBOOK:
 CLOCK: [2025-08-11 Mon 10:59]--[2025-08-11 Mon 11:57] =>  0:58
-CLOCK: [2025-08-08 Fri 12:10]--[2025-08-08 Fri 14:00] =>  1:50
+CLOCK: [2025-08-08 Fri 11:15]--[2025-08-08 Fri 14:00] =>  2:45
 CLOCK: [2025-08-08 Fri 10:12]--[2025-08-08 Fri 11:27] =>  1:15
-CLOCK: [2025-08-07 Thu 22:10]--[2025-08-07 Thu 22:45] =>  0:35
-CLOCK: [2025-08-07 Thu 11:00]--[2025-08-07 Thu 11:45] =>  0:45
+CLOCK: [2025-08-07 Thu 21:40]--[2025-08-07 Thu 22:45] =>  1:05
+CLOCK: [2025-08-07 Thu 09:45]--[2025-08-07 Thu 11:45] =>  2:00
 :END:
 *** meta
 **** figure out how we are going to connect to Meta
