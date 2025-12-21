@@ -10,3 +10,11 @@
 ** yq
 ** fzf
 ** curl
+** managing csv files
+*** dockdb
+sudo dnf copr enable iucar/duckdb
+sudo dnf install duckdb
+*** xsv
+cargo install xsv
+*** mlr
+sudo dnf install miller
