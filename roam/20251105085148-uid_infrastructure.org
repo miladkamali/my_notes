@@ -10,7 +10,10 @@ https://gitlab2.uid.ir/services/docker-compose-file
 https://gitlab2.uid.ir/infrastructure/platform-infra
 ** get address of grafana
 https://grafana.u-id.ir
-http://46.245.89.2:300/
+admin
+UPpXbm6oWN
+
+http://46.245.89.2:3000/
 admin
 jXUdJR9cn9
 *** DONE password of grafana
