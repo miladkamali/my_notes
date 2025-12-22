@@ -1,0 +1,1441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-12-22 Mon 22:19 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>uid-reports</title>
+<meta name="author" content="milad" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">uid-reports</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org64adcf2">1. daily provider report from csv files</a>
+<ul>
+<li><a href="#org92f7e48">1.1. all providers combined</a>
+<ul>
+<li><a href="#org0c5459f">1.1.1. daily report</a></li>
+<li><a href="#org80f8bba">1.1.2. aggregate hourly report</a></li>
+<li><a href="#orgeab55c9">1.1.3. hourly report</a></li>
+</ul>
+</li>
+<li><a href="#org6b341b5">1.2. each provider</a>
+<ul>
+<li><a href="#org3e6e72c">1.2.1. yekta</a></li>
+<li><a href="#orgc9dc698">1.2.2. finotech response</a></li>
+<li><a href="#orgb3cc156">1.2.3. comparison of finotech vs yekta when yekta fails</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org64adcf2" class="outline-2">
+<h2 id="org64adcf2"><span class="section-number-2">1.</span> daily provider report from csv files</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org92f7e48" class="outline-3">
+<h3 id="org92f7e48"><span class="section-number-3">1.1.</span> all providers combined</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org0c5459f" class="outline-4">
+<h4 id="org0c5459f"><span class="section-number-4">1.1.1.</span> daily report</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">day</td>
+<td class="org-right">failureCount</td>
+<td class="org-right">successCount</td>
+<td class="org-right">allCount</td>
+<td class="org-right">success<sub>ratio</sub></td>
+</tr>
+
+<tr>
+<td class="org-right">----------</td>
+<td class="org-right">------------</td>
+<td class="org-right">------------</td>
+<td class="org-right">--------</td>
+<td class="org-right">-------------</td>
+</tr>
+
+<tr>
+<td class="org-right">2025-12-20</td>
+<td class="org-right">3708</td>
+<td class="org-right">12303</td>
+<td class="org-right">16011</td>
+<td class="org-right">0.77</td>
+</tr>
+
+<tr>
+<td class="org-right">2025-12-21</td>
+<td class="org-right">20684</td>
+<td class="org-right">11716</td>
+<td class="org-right">32400</td>
+<td class="org-right">0.36</td>
+</tr>
+
+<tr>
+<td class="org-right">2025-12-22</td>
+<td class="org-right">19348</td>
+<td class="org-right">6489</td>
+<td class="org-right">25837</td>
+<td class="org-right">0.25</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div id="org9231ce1" class="figure">
+<p><img src="daily_personal_info_stats.png" alt="daily_personal_info_stats.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org80f8bba" class="outline-4">
+<h4 id="org80f8bba"><span class="section-number-4">1.1.2.</span> aggregate hourly report</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">hour<sub>slot</sub></td>
+<td class="org-right">failureCount</td>
+<td class="org-right">successCount</td>
+<td class="org-right">allCount</td>
+<td class="org-right">success<sub>ratio</sub></td>
+</tr>
+
+<tr>
+<td class="org-right">00:00</td>
+<td class="org-right">108</td>
+<td class="org-right">243</td>
+<td class="org-right">351</td>
+<td class="org-right">0.69</td>
+</tr>
+
+<tr>
+<td class="org-right">01:00</td>
+<td class="org-right">51</td>
+<td class="org-right">227</td>
+<td class="org-right">278</td>
+<td class="org-right">0.82</td>
+</tr>
+
+<tr>
+<td class="org-right">02:00</td>
+<td class="org-right">134</td>
+<td class="org-right">230</td>
+<td class="org-right">364</td>
+<td class="org-right">0.63</td>
+</tr>
+
+<tr>
+<td class="org-right">03:00</td>
+<td class="org-right">137</td>
+<td class="org-right">466</td>
+<td class="org-right">603</td>
+<td class="org-right">0.77</td>
+</tr>
+
+<tr>
+<td class="org-right">04:00</td>
+<td class="org-right">145</td>
+<td class="org-right">1093</td>
+<td class="org-right">1238</td>
+<td class="org-right">0.88</td>
+</tr>
+
+<tr>
+<td class="org-right">05:00</td>
+<td class="org-right">773</td>
+<td class="org-right">1342</td>
+<td class="org-right">2115</td>
+<td class="org-right">0.63</td>
+</tr>
+
+<tr>
+<td class="org-right">06:00</td>
+<td class="org-right">2663</td>
+<td class="org-right">1463</td>
+<td class="org-right">4126</td>
+<td class="org-right">0.35</td>
+</tr>
+
+<tr>
+<td class="org-right">07:00</td>
+<td class="org-right">3577</td>
+<td class="org-right">1833</td>
+<td class="org-right">5410</td>
+<td class="org-right">0.34</td>
+</tr>
+
+<tr>
+<td class="org-right">08:00</td>
+<td class="org-right">2679</td>
+<td class="org-right">2533</td>
+<td class="org-right">5212</td>
+<td class="org-right">0.49</td>
+</tr>
+
+<tr>
+<td class="org-right">09:00</td>
+<td class="org-right">2410</td>
+<td class="org-right">2528</td>
+<td class="org-right">4938</td>
+<td class="org-right">0.51</td>
+</tr>
+
+<tr>
+<td class="org-right">10:00</td>
+<td class="org-right">2341</td>
+<td class="org-right">2723</td>
+<td class="org-right">5064</td>
+<td class="org-right">0.54</td>
+</tr>
+
+<tr>
+<td class="org-right">11:00</td>
+<td class="org-right">3839</td>
+<td class="org-right">2508</td>
+<td class="org-right">6347</td>
+<td class="org-right">0.4</td>
+</tr>
+
+<tr>
+<td class="org-right">12:00</td>
+<td class="org-right">7688</td>
+<td class="org-right">1319</td>
+<td class="org-right">9007</td>
+<td class="org-right">0.15</td>
+</tr>
+
+<tr>
+<td class="org-right">13:00</td>
+<td class="org-right">4698</td>
+<td class="org-right">1705</td>
+<td class="org-right">6403</td>
+<td class="org-right">0.27</td>
+</tr>
+
+<tr>
+<td class="org-right">14:00</td>
+<td class="org-right">4840</td>
+<td class="org-right">982</td>
+<td class="org-right">5822</td>
+<td class="org-right">0.17</td>
+</tr>
+
+<tr>
+<td class="org-right">15:00</td>
+<td class="org-right">985</td>
+<td class="org-right">1461</td>
+<td class="org-right">2446</td>
+<td class="org-right">0.6</td>
+</tr>
+
+<tr>
+<td class="org-right">16:00</td>
+<td class="org-right">295</td>
+<td class="org-right">808</td>
+<td class="org-right">1103</td>
+<td class="org-right">0.73</td>
+</tr>
+
+<tr>
+<td class="org-right">17:00</td>
+<td class="org-right">437</td>
+<td class="org-right">1152</td>
+<td class="org-right">1589</td>
+<td class="org-right">0.72</td>
+</tr>
+
+<tr>
+<td class="org-right">18:00</td>
+<td class="org-right">666</td>
+<td class="org-right">1589</td>
+<td class="org-right">2255</td>
+<td class="org-right">0.7</td>
+</tr>
+
+<tr>
+<td class="org-right">19:00</td>
+<td class="org-right">1765</td>
+<td class="org-right">1456</td>
+<td class="org-right">3221</td>
+<td class="org-right">0.45</td>
+</tr>
+
+<tr>
+<td class="org-right">20:00</td>
+<td class="org-right">2321</td>
+<td class="org-right">1167</td>
+<td class="org-right">3488</td>
+<td class="org-right">0.33</td>
+</tr>
+
+<tr>
+<td class="org-right">21:00</td>
+<td class="org-right">860</td>
+<td class="org-right">821</td>
+<td class="org-right">1681</td>
+<td class="org-right">0.49</td>
+</tr>
+
+<tr>
+<td class="org-right">22:00</td>
+<td class="org-right">241</td>
+<td class="org-right">540</td>
+<td class="org-right">781</td>
+<td class="org-right">0.69</td>
+</tr>
+
+<tr>
+<td class="org-right">23:00</td>
+<td class="org-right">87</td>
+<td class="org-right">319</td>
+<td class="org-right">406</td>
+<td class="org-right">0.79</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">hour<sub>slot</sub></td>
+<td class="org-right">failureCount</td>
+<td class="org-right">successCount</td>
+<td class="org-right">success<sub>ratio</sub></td>
+</tr>
+
+<tr>
+<td class="org-right">00:00</td>
+<td class="org-right">108</td>
+<td class="org-right">243</td>
+<td class="org-right">0.69</td>
+</tr>
+
+<tr>
+<td class="org-right">01:00</td>
+<td class="org-right">51</td>
+<td class="org-right">227</td>
+<td class="org-right">0.82</td>
+</tr>
+
+<tr>
+<td class="org-right">02:00</td>
+<td class="org-right">134</td>
+<td class="org-right">230</td>
+<td class="org-right">0.63</td>
+</tr>
+
+<tr>
+<td class="org-right">03:00</td>
+<td class="org-right">137</td>
+<td class="org-right">466</td>
+<td class="org-right">0.77</td>
+</tr>
+
+<tr>
+<td class="org-right">04:00</td>
+<td class="org-right">145</td>
+<td class="org-right">1093</td>
+<td class="org-right">0.88</td>
+</tr>
+
+<tr>
+<td class="org-right">05:00</td>
+<td class="org-right">773</td>
+<td class="org-right">1342</td>
+<td class="org-right">0.63</td>
+</tr>
+
+<tr>
+<td class="org-right">06:00</td>
+<td class="org-right">2663</td>
+<td class="org-right">1463</td>
+<td class="org-right">0.35</td>
+</tr>
+
+<tr>
+<td class="org-right">07:00</td>
+<td class="org-right">3577</td>
+<td class="org-right">1833</td>
+<td class="org-right">0.34</td>
+</tr>
+
+<tr>
+<td class="org-right">08:00</td>
+<td class="org-right">2679</td>
+<td class="org-right">2533</td>
+<td class="org-right">0.49</td>
+</tr>
+
+<tr>
+<td class="org-right">09:00</td>
+<td class="org-right">2410</td>
+<td class="org-right">2528</td>
+<td class="org-right">0.51</td>
+</tr>
+
+<tr>
+<td class="org-right">10:00</td>
+<td class="org-right">2341</td>
+<td class="org-right">2723</td>
+<td class="org-right">0.54</td>
+</tr>
+
+<tr>
+<td class="org-right">11:00</td>
+<td class="org-right">3839</td>
+<td class="org-right">2508</td>
+<td class="org-right">0.4</td>
+</tr>
+
+<tr>
+<td class="org-right">12:00</td>
+<td class="org-right">7688</td>
+<td class="org-right">1319</td>
+<td class="org-right">0.15</td>
+</tr>
+
+<tr>
+<td class="org-right">13:00</td>
+<td class="org-right">4698</td>
+<td class="org-right">1705</td>
+<td class="org-right">0.27</td>
+</tr>
+
+<tr>
+<td class="org-right">14:00</td>
+<td class="org-right">4840</td>
+<td class="org-right">982</td>
+<td class="org-right">0.17</td>
+</tr>
+
+<tr>
+<td class="org-right">15:00</td>
+<td class="org-right">985</td>
+<td class="org-right">1461</td>
+<td class="org-right">0.6</td>
+</tr>
+
+<tr>
+<td class="org-right">16:00</td>
+<td class="org-right">295</td>
+<td class="org-right">808</td>
+<td class="org-right">0.73</td>
+</tr>
+
+<tr>
+<td class="org-right">17:00</td>
+<td class="org-right">437</td>
+<td class="org-right">1152</td>
+<td class="org-right">0.72</td>
+</tr>
+
+<tr>
+<td class="org-right">18:00</td>
+<td class="org-right">666</td>
+<td class="org-right">1589</td>
+<td class="org-right">0.7</td>
+</tr>
+
+<tr>
+<td class="org-right">19:00</td>
+<td class="org-right">1765</td>
+<td class="org-right">1456</td>
+<td class="org-right">0.45</td>
+</tr>
+
+<tr>
+<td class="org-right">20:00</td>
+<td class="org-right">2321</td>
+<td class="org-right">1167</td>
+<td class="org-right">0.33</td>
+</tr>
+
+<tr>
+<td class="org-right">21:00</td>
+<td class="org-right">860</td>
+<td class="org-right">821</td>
+<td class="org-right">0.49</td>
+</tr>
+
+<tr>
+<td class="org-right">22:00</td>
+<td class="org-right">241</td>
+<td class="org-right">540</td>
+<td class="org-right">0.69</td>
+</tr>
+
+<tr>
+<td class="org-right">23:00</td>
+<td class="org-right">87</td>
+<td class="org-right">319</td>
+<td class="org-right">0.79</td>
+</tr>
+</tbody>
+</table>
+
+
+<div id="orgc3642ac" class="figure">
+<p><img src="hourly_personal_info_stats.png" alt="hourly_personal_info_stats.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgeab55c9" class="outline-4">
+<h4 id="orgeab55c9"><span class="section-number-4">1.1.3.</span> hourly report</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">hour<sub>slot</sub></td>
+<td class="org-right">failureCount</td>
+<td class="org-right">successCount</td>
+<td class="org-right">success<sub>ratio</sub></td>
+</tr>
+
+<tr>
+<td class="org-right">-----------</td>
+<td class="org-right">------------</td>
+<td class="org-right">------------</td>
+<td class="org-right">-------------</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-00:00</td>
+<td class="org-right">12</td>
+<td class="org-right">71</td>
+<td class="org-right">0.86</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-01:00</td>
+<td class="org-right">7</td>
+<td class="org-right">77</td>
+<td class="org-right">0.92</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-02:00</td>
+<td class="org-right">43</td>
+<td class="org-right">85</td>
+<td class="org-right">0.66</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-03:00</td>
+<td class="org-right">41</td>
+<td class="org-right">167</td>
+<td class="org-right">0.8</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-04:00</td>
+<td class="org-right">13</td>
+<td class="org-right">412</td>
+<td class="org-right">0.97</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-05:00</td>
+<td class="org-right">6</td>
+<td class="org-right">483</td>
+<td class="org-right">0.99</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-06:00</td>
+<td class="org-right">15</td>
+<td class="org-right">654</td>
+<td class="org-right">0.98</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-07:00</td>
+<td class="org-right">66</td>
+<td class="org-right">874</td>
+<td class="org-right">0.93</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-08:00</td>
+<td class="org-right">76</td>
+<td class="org-right">957</td>
+<td class="org-right">0.93</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-09:00</td>
+<td class="org-right">39</td>
+<td class="org-right">777</td>
+<td class="org-right">0.95</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-10:00</td>
+<td class="org-right">7</td>
+<td class="org-right">1013</td>
+<td class="org-right">0.99</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-11:00</td>
+<td class="org-right">379</td>
+<td class="org-right">1316</td>
+<td class="org-right">0.78</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-12:00</td>
+<td class="org-right">843</td>
+<td class="org-right">888</td>
+<td class="org-right">0.51</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-13:00</td>
+<td class="org-right">695</td>
+<td class="org-right">578</td>
+<td class="org-right">0.45</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-14:00</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">1.0</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-15:00</td>
+<td class="org-right">14</td>
+<td class="org-right">0</td>
+<td class="org-right">0.0</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-16:00</td>
+<td class="org-right">0</td>
+<td class="org-right">4</td>
+<td class="org-right">1.0</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-17:00</td>
+<td class="org-right">54</td>
+<td class="org-right">384</td>
+<td class="org-right">0.88</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-18:00</td>
+<td class="org-right">327</td>
+<td class="org-right">841</td>
+<td class="org-right">0.72</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-19:00</td>
+<td class="org-right">459</td>
+<td class="org-right">1008</td>
+<td class="org-right">0.69</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-20:00</td>
+<td class="org-right">315</td>
+<td class="org-right">790</td>
+<td class="org-right">0.71</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-21:00</td>
+<td class="org-right">166</td>
+<td class="org-right">467</td>
+<td class="org-right">0.74</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-22:00</td>
+<td class="org-right">88</td>
+<td class="org-right">295</td>
+<td class="org-right">0.77</td>
+</tr>
+
+<tr>
+<td class="org-right">12-20-23:00</td>
+<td class="org-right">43</td>
+<td class="org-right">161</td>
+<td class="org-right">0.79</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-00:00</td>
+<td class="org-right">51</td>
+<td class="org-right">94</td>
+<td class="org-right">0.65</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-01:00</td>
+<td class="org-right">34</td>
+<td class="org-right">86</td>
+<td class="org-right">0.72</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-02:00</td>
+<td class="org-right">71</td>
+<td class="org-right">95</td>
+<td class="org-right">0.57</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-03:00</td>
+<td class="org-right">67</td>
+<td class="org-right">207</td>
+<td class="org-right">0.76</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-04:00</td>
+<td class="org-right">79</td>
+<td class="org-right">491</td>
+<td class="org-right">0.86</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-05:00</td>
+<td class="org-right">133</td>
+<td class="org-right">641</td>
+<td class="org-right">0.83</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-06:00</td>
+<td class="org-right">152</td>
+<td class="org-right">729</td>
+<td class="org-right">0.83</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-07:00</td>
+<td class="org-right">236</td>
+<td class="org-right">875</td>
+<td class="org-right">0.79</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-08:00</td>
+<td class="org-right">296</td>
+<td class="org-right">992</td>
+<td class="org-right">0.77</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-09:00</td>
+<td class="org-right">596</td>
+<td class="org-right">1001</td>
+<td class="org-right">0.63</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-10:00</td>
+<td class="org-right">379</td>
+<td class="org-right">867</td>
+<td class="org-right">0.7</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-11:00</td>
+<td class="org-right">2448</td>
+<td class="org-right">355</td>
+<td class="org-right">0.13</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-12:00</td>
+<td class="org-right">3206</td>
+<td class="org-right">166</td>
+<td class="org-right">0.05</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-13:00</td>
+<td class="org-right">3536</td>
+<td class="org-right">100</td>
+<td class="org-right">0.03</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-14:00</td>
+<td class="org-right">3645</td>
+<td class="org-right">102</td>
+<td class="org-right">0.03</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-15:00</td>
+<td class="org-right">535</td>
+<td class="org-right">1013</td>
+<td class="org-right">0.65</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-16:00</td>
+<td class="org-right">295</td>
+<td class="org-right">804</td>
+<td class="org-right">0.73</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-17:00</td>
+<td class="org-right">383</td>
+<td class="org-right">768</td>
+<td class="org-right">0.67</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-18:00</td>
+<td class="org-right">339</td>
+<td class="org-right">748</td>
+<td class="org-right">0.69</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-19:00</td>
+<td class="org-right">1306</td>
+<td class="org-right">448</td>
+<td class="org-right">0.26</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-20:00</td>
+<td class="org-right">2006</td>
+<td class="org-right">377</td>
+<td class="org-right">0.16</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-21:00</td>
+<td class="org-right">694</td>
+<td class="org-right">354</td>
+<td class="org-right">0.34</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-22:00</td>
+<td class="org-right">153</td>
+<td class="org-right">245</td>
+<td class="org-right">0.62</td>
+</tr>
+
+<tr>
+<td class="org-right">12-21-23:00</td>
+<td class="org-right">44</td>
+<td class="org-right">158</td>
+<td class="org-right">0.78</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-00:00</td>
+<td class="org-right">45</td>
+<td class="org-right">78</td>
+<td class="org-right">0.63</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-01:00</td>
+<td class="org-right">10</td>
+<td class="org-right">64</td>
+<td class="org-right">0.86</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-02:00</td>
+<td class="org-right">20</td>
+<td class="org-right">50</td>
+<td class="org-right">0.71</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-03:00</td>
+<td class="org-right">29</td>
+<td class="org-right">92</td>
+<td class="org-right">0.76</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-04:00</td>
+<td class="org-right">53</td>
+<td class="org-right">190</td>
+<td class="org-right">0.78</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-05:00</td>
+<td class="org-right">634</td>
+<td class="org-right">218</td>
+<td class="org-right">0.26</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-06:00</td>
+<td class="org-right">2496</td>
+<td class="org-right">80</td>
+<td class="org-right">0.03</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-07:00</td>
+<td class="org-right">3275</td>
+<td class="org-right">84</td>
+<td class="org-right">0.03</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-08:00</td>
+<td class="org-right">2307</td>
+<td class="org-right">584</td>
+<td class="org-right">0.2</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-09:00</td>
+<td class="org-right">1775</td>
+<td class="org-right">750</td>
+<td class="org-right">0.3</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-10:00</td>
+<td class="org-right">1955</td>
+<td class="org-right">843</td>
+<td class="org-right">0.3</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-11:00</td>
+<td class="org-right">1012</td>
+<td class="org-right">837</td>
+<td class="org-right">0.45</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-12:00</td>
+<td class="org-right">3639</td>
+<td class="org-right">265</td>
+<td class="org-right">0.07</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-13:00</td>
+<td class="org-right">467</td>
+<td class="org-right">1027</td>
+<td class="org-right">0.69</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-14:00</td>
+<td class="org-right">1195</td>
+<td class="org-right">879</td>
+<td class="org-right">0.42</td>
+</tr>
+
+<tr>
+<td class="org-right">12-22-15:00</td>
+<td class="org-right">436</td>
+<td class="org-right">448</td>
+<td class="org-right">0.51</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div id="orgd5168c8" class="figure">
+<p><img src="hourly_daily_personal_info_stats.png" alt="hourly_daily_personal_info_stats.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org6b341b5" class="outline-3">
+<h3 id="org6b341b5"><span class="section-number-3">1.2.</span> each provider</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org3e6e72c" class="outline-4">
+<h4 id="org3e6e72c"><span class="section-number-4">1.2.1.</span> yekta</h4>
+<div class="outline-text-4" id="text-1-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org0f67e8f"></a>daily report<br />
+<div class="outline-text-5" id="text-1-2-1-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">gnuplot&gt;</td>
+<td class="org-left">set</td>
+<td class="org-left">output</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">gnuplot&gt;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">gnuplot&gt;</td>
+<td class="org-left">day</td>
+<td class="org-left">failureCount</td>
+<td class="org-left">successCount</td>
+<td class="org-left">allCount</td>
+<td class="org-left">success<sub>ratio</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">----------</td>
+<td class="org-left">------------</td>
+<td class="org-left">------------</td>
+<td class="org-left">--------</td>
+<td class="org-left">-------------</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">2025-12-20</td>
+<td class="org-left">4528</td>
+<td class="org-left">11483</td>
+<td class="org-left">16011</td>
+<td class="org-left">0.72</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">2025-12-21</td>
+<td class="org-left">21873</td>
+<td class="org-left">10527</td>
+<td class="org-left">32400</td>
+<td class="org-left">0.32</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">2025-12-22</td>
+<td class="org-left">19480</td>
+<td class="org-left">6357</td>
+<td class="org-left">25837</td>
+<td class="org-left">0.25</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div id="org7d4bcc8" class="figure">
+<p><img src="yekta_daily_personal_info_stats.png" alt="yekta_daily_personal_info_stats.png" />
+</p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgc9dc698" class="outline-4">
+<h4 id="orgc9dc698"><span class="section-number-4">1.2.2.</span> finotech response</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">day</td>
+<td class="org-right">failureCount</td>
+<td class="org-right">successCount</td>
+<td class="org-right">allCount</td>
+<td class="org-right">success<sub>ratio</sub></td>
+</tr>
+
+<tr>
+<td class="org-right">----------</td>
+<td class="org-right">------------</td>
+<td class="org-right">------------</td>
+<td class="org-right">--------</td>
+<td class="org-right">-------------</td>
+</tr>
+
+<tr>
+<td class="org-right">2025-12-20</td>
+<td class="org-right">0</td>
+<td class="org-right">820</td>
+<td class="org-right">820</td>
+<td class="org-right">1.0</td>
+</tr>
+
+<tr>
+<td class="org-right">2025-12-21</td>
+<td class="org-right">44</td>
+<td class="org-right">1180</td>
+<td class="org-right">1224</td>
+<td class="org-right">0.96</td>
+</tr>
+
+<tr>
+<td class="org-right">2025-12-22</td>
+<td class="org-right">1</td>
+<td class="org-right">131</td>
+<td class="org-right">132</td>
+<td class="org-right">0.99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgb3cc156" class="outline-4">
+<h4 id="orgb3cc156"><span class="section-number-4">1.2.3.</span> comparison of finotech vs yekta when yekta fails</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">day</td>
+<td class="org-right">failureCount</td>
+<td class="org-right">successCount</td>
+<td class="org-right">allCount</td>
+<td class="org-right">success<sub>ratio</sub></td>
+</tr>
+
+<tr>
+<td class="org-right">----------</td>
+<td class="org-right">------------</td>
+<td class="org-right">------------</td>
+<td class="org-right">--------</td>
+<td class="org-right">-------------</td>
+</tr>
+
+<tr>
+<td class="org-right">2025-12-20</td>
+<td class="org-right">0</td>
+<td class="org-right">820</td>
+<td class="org-right">820</td>
+<td class="org-right">1.0</td>
+</tr>
+
+<tr>
+<td class="org-right">2025-12-21</td>
+<td class="org-right">44</td>
+<td class="org-right">1180</td>
+<td class="org-right">1224</td>
+<td class="org-right">0.96</td>
+</tr>
+
+<tr>
+<td class="org-right">2025-12-22</td>
+<td class="org-right">1</td>
+<td class="org-right">131</td>
+<td class="org-right">132</td>
+<td class="org-right">0.99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: milad</p>
+<p class="date">Created: 2025-12-22 Mon 22:19</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

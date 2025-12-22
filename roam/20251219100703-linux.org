@@ -18,3 +18,7 @@ sudo dnf install duckdb
 cargo install xsv
 *** mlr
 sudo dnf install miller
+*** ods2csv
+sudo dnf install ghc cabal-install zlib-devel
+cabal update
+cabal install ods2csv --install-method=copy --overwrite-policy=always

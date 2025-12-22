@@ -1,0 +1,339 @@
+:PROPERTIES:
+:ID:       3fbc4275-d8c2-491d-b682-d591eb436030
+:END:
+#+title: uid-reports
+* daily provider report from csv files
+:PROPERTIES:
+  :header-args: :exports results
+:END:
+#+NAME: setup_data
+#+begin_src bash :session my-shell :results silent :exports results
+  export personal_info_file="/home/milad/Downloads/personalInfoReport_2/personal_info.csv"
+  export personal_image_file="~/Downloads/personalInfoReport_2/personal_image.csv"
+  echo "Variables loaded."
+#+end_src
+** all providers combined
+*** daily report
+#+NAME: daily-calculator-personal-info
+#+begin_src bash :session my-shell :var _=setup_data
+  duckdb -column -c "select 
+      CAST(creation_time AS DATE) as day,
+      count(*) FILTER (WHERE response NOT LIKE '%SUCCESS%') as failureCount,
+      count(*) FILTER (WHERE response LIKE '%SUCCESS%') as successCount,
+      count(*) as allCount,
+      round(avg(CASE WHEN response LIKE '%SUCCESS%' THEN 1.0 ELSE 0.0 END), 2) as success_ratio
+  from '"$personal_info_file"' 
+  group by day 
+  order by day"
+
+#+end_src
+
+#+RESULTS: daily-calculator-personal-info
+|        day | failureCount | successCount | allCount | success_ratio |
+| ---------- | ------------ | ------------ | -------- | ------------- |
+| 2025-12-20 |         3708 |        12303 |    16011 |          0.77 |
+| 2025-12-21 |        20684 |        11716 |    32400 |          0.36 |
+| 2025-12-22 |        19348 |         6489 |    25837 |          0.25 |
+
+
+#+begin_src gnuplot :var data=daily-calculator-personal-info :file daily_personal_info_stats.png
+  reset
+  set title "Hourly Traffic: Success vs Failure"
+  set terminal pngcairo size 1200,600 font "Arial,12"
+  set style data histograms
+  set style histogram rowstacked
+  set style fill solid 1.0 border -5
+  set boxwidth 0.75
+  set key outside right top
+  set grid y
+  set xtics rotate by 90
+  set xtics offset -0,-6
+  set bmargin 10
+  set yrange [0:*]
+
+  # Parse the Org-mode table data
+  # 'data' variable automatically handles the array from the previous block
+  plot data using 2:xtic(1) title 'Failure' lc rgb "#cc0000", \
+       '' using 3 title 'Success' lc rgb "#00cc00"
+#+end_src
+
+#+RESULTS:
+[[file:daily_personal_info_stats.png]]
+
+*** aggregate hourly report
+#+NAME: hourly-calculator-shell
+#+begin_src bash :session my-shell :var _=setup_data :exports results
+  duckdb -csv -c "select 
+      strftime(creation_time, '%H:00') as hour_slot,
+      count(*) FILTER (WHERE response NOT LIKE '%SUCCESS%') as failureCount,
+      count(*) FILTER (WHERE response LIKE '%SUCCESS%') as successCount,
+      count(*) as allCount,
+      round(avg(CASE WHEN response LIKE '%SUCCESS%' THEN 1.0 ELSE 0.0 END), 2) as success_ratio
+  from '"$personal_info_file"' 
+  group by hour_slot 
+  order by hour_slot"
+
+
+#+end_src
+
+#+RESULTS:
+| hour_slot | failureCount | successCount | success_ratio |
+|     00:00 |           108 |           243 |          0.69 |
+|     01:00 |            51 |           227 |          0.82 |
+|     02:00 |           134 |           230 |          0.63 |
+|     03:00 |           137 |           466 |          0.77 |
+|     04:00 |           145 |          1093 |          0.88 |
+|     05:00 |           773 |          1342 |          0.63 |
+|     06:00 |          2663 |          1463 |          0.35 |
+|     07:00 |          3577 |          1833 |          0.34 |
+|     08:00 |          2679 |          2533 |          0.49 |
+|     09:00 |          2410 |          2528 |          0.51 |
+|     10:00 |          2341 |          2723 |          0.54 |
+|     11:00 |          3839 |          2508 |           0.4 |
+|     12:00 |          7688 |          1319 |          0.15 |
+|     13:00 |          4698 |          1705 |          0.27 |
+|     14:00 |          4840 |           982 |          0.17 |
+|     15:00 |           985 |          1461 |           0.6 |
+|     16:00 |           295 |           808 |          0.73 |
+|     17:00 |           437 |          1152 |          0.72 |
+|     18:00 |           666 |          1589 |           0.7 |
+|     19:00 |          1765 |          1456 |          0.45 |
+|     20:00 |          2321 |          1167 |          0.33 |
+|     21:00 |           860 |           821 |          0.49 |
+|     22:00 |           241 |           540 |          0.69 |
+|     23:00 |            87 |           319 |          0.79 |
+
+#+begin_src emacs-lisp
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((gnuplot . t)))
+#+end_src
+
+#+RESULTS:
+
+#+begin_src gnuplot :var data=hourly-calculator-shell :file hourly_personal_info_stats.png
+  reset
+  set title "Hourly Traffic: Success vs Failure"
+  set terminal pngcairo size 1200,600 font "Arial,12"
+  set style data histograms
+  set style histogram rowstacked
+  set style fill solid 1.0 border -5
+  set boxwidth 0.75
+  set key outside right top
+  set grid y
+  set xtics rotate by 45
+  set xtics offset -1,-2
+  set bmargin 5
+  set yrange [0:*]
+
+  # Parse the Org-mode table data
+  # 'data' variable automatically handles the array from the previous block
+  plot data using 2:xtic(1) title 'Failure' lc rgb "#cc0000", \
+       '' using 3 title 'Success' lc rgb "#00cc00"
+#+end_src
+
+#+RESULTS:
+[[file:hourly_personal_info_stats.png]]
+
+*** hourly report
+#+NAME: hourly-daily-calculator-shell
+#+begin_src bash :session my-shell :var _=setup_data :exports results
+duckdb -column -c "select 
+    strftime(creation_time, '%m-%d-%H:00') as hour_slot,
+    count(*) FILTER (WHERE response NOT LIKE '%SUCCESS%') as failureCount,
+    count(*) FILTER (WHERE response LIKE '%SUCCESS%') as successCount,
+    round(avg(CASE WHEN response LIKE '%SUCCESS%' THEN 1.0 ELSE 0.0 END), 2) as success_ratio
+from '"$personal_info_file"' 
+group by hour_slot 
+order by hour_slot"
+
+#+end_src
+#+RESULTS: hourly-daily-calculator-shell
+|   hour_slot | failureCount | successCount | success_ratio |
+| ----------- | ------------ | ------------ | ------------- |
+| 12-20-00:00 |           12 |           71 |          0.86 |
+| 12-20-01:00 |            7 |           77 |          0.92 |
+| 12-20-02:00 |           43 |           85 |          0.66 |
+| 12-20-03:00 |           41 |          167 |           0.8 |
+| 12-20-04:00 |           13 |          412 |          0.97 |
+| 12-20-05:00 |            6 |          483 |          0.99 |
+| 12-20-06:00 |           15 |          654 |          0.98 |
+| 12-20-07:00 |           66 |          874 |          0.93 |
+| 12-20-08:00 |           76 |          957 |          0.93 |
+| 12-20-09:00 |           39 |          777 |          0.95 |
+| 12-20-10:00 |            7 |         1013 |          0.99 |
+| 12-20-11:00 |          379 |         1316 |          0.78 |
+| 12-20-12:00 |          843 |          888 |          0.51 |
+| 12-20-13:00 |          695 |          578 |          0.45 |
+| 12-20-14:00 |            0 |            1 |           1.0 |
+| 12-20-15:00 |           14 |            0 |           0.0 |
+| 12-20-16:00 |            0 |            4 |           1.0 |
+| 12-20-17:00 |           54 |          384 |          0.88 |
+| 12-20-18:00 |          327 |          841 |          0.72 |
+| 12-20-19:00 |          459 |         1008 |          0.69 |
+| 12-20-20:00 |          315 |          790 |          0.71 |
+| 12-20-21:00 |          166 |          467 |          0.74 |
+| 12-20-22:00 |           88 |          295 |          0.77 |
+| 12-20-23:00 |           43 |          161 |          0.79 |
+| 12-21-00:00 |           51 |           94 |          0.65 |
+| 12-21-01:00 |           34 |           86 |          0.72 |
+| 12-21-02:00 |           71 |           95 |          0.57 |
+| 12-21-03:00 |           67 |          207 |          0.76 |
+| 12-21-04:00 |           79 |          491 |          0.86 |
+| 12-21-05:00 |          133 |          641 |          0.83 |
+| 12-21-06:00 |          152 |          729 |          0.83 |
+| 12-21-07:00 |          236 |          875 |          0.79 |
+| 12-21-08:00 |          296 |          992 |          0.77 |
+| 12-21-09:00 |          596 |         1001 |          0.63 |
+| 12-21-10:00 |          379 |          867 |           0.7 |
+| 12-21-11:00 |         2448 |          355 |          0.13 |
+| 12-21-12:00 |         3206 |          166 |          0.05 |
+| 12-21-13:00 |         3536 |          100 |          0.03 |
+| 12-21-14:00 |         3645 |          102 |          0.03 |
+| 12-21-15:00 |          535 |         1013 |          0.65 |
+| 12-21-16:00 |          295 |          804 |          0.73 |
+| 12-21-17:00 |          383 |          768 |          0.67 |
+| 12-21-18:00 |          339 |          748 |          0.69 |
+| 12-21-19:00 |         1306 |          448 |          0.26 |
+| 12-21-20:00 |         2006 |          377 |          0.16 |
+| 12-21-21:00 |          694 |          354 |          0.34 |
+| 12-21-22:00 |          153 |          245 |          0.62 |
+| 12-21-23:00 |           44 |          158 |          0.78 |
+| 12-22-00:00 |           45 |           78 |          0.63 |
+| 12-22-01:00 |           10 |           64 |          0.86 |
+| 12-22-02:00 |           20 |           50 |          0.71 |
+| 12-22-03:00 |           29 |           92 |          0.76 |
+| 12-22-04:00 |           53 |          190 |          0.78 |
+| 12-22-05:00 |          634 |          218 |          0.26 |
+| 12-22-06:00 |         2496 |           80 |          0.03 |
+| 12-22-07:00 |         3275 |           84 |          0.03 |
+| 12-22-08:00 |         2307 |          584 |           0.2 |
+| 12-22-09:00 |         1775 |          750 |           0.3 |
+| 12-22-10:00 |         1955 |          843 |           0.3 |
+| 12-22-11:00 |         1012 |          837 |          0.45 |
+| 12-22-12:00 |         3639 |          265 |          0.07 |
+| 12-22-13:00 |          467 |         1027 |          0.69 |
+| 12-22-14:00 |         1195 |          879 |          0.42 |
+| 12-22-15:00 |          436 |          448 |          0.51 |
+
+
+#+begin_src gnuplot :var data=hourly-daily-calculator-shell :file hourly_daily_personal_info_stats.png
+  reset
+  set title "Hourly Traffic: Success vs Failure"
+  set terminal pngcairo size 6200,600 font "Arial,12"
+  set style data histograms
+  set style histogram rowstacked
+  set style fill solid 1.0 border -5
+  set boxwidth 0.75
+  set key outside right top
+  set grid y
+  set xtics rotate by 90
+  set xtics offset 0,-5
+  set bmargin 10
+  set yrange [0:*]
+
+  # Parse the Org-mode table data
+  # 'data' variable automatically handles the array from the previous block
+  plot data using 2:xtic(1) title 'Failure' lc rgb "#cc0000", \
+       '' using 3 title 'Success' lc rgb "#00cc00"
+#+end_src
+
+#+RESULTS:
+[[file:hourly_daily_personal_info_stats.png]]
+
+
+** each provider
+*** yekta
+**** daily report
+#+name: yekta-personal-daily-report-generator
+#+begin_src bash :session my-shell :var _=setup_data
+  duckdb -column -c "select 
+        CAST(creation_time AS DATE) as day,
+        count(*) FILTER (WHERE yekta_message NOT LIKE '%SUCCESS%') as failureCount,
+        count(*) FILTER (WHERE yekta_message LIKE '%SUCCESS%') as successCount,
+        count(*) as allCount,
+        round(avg(CASE WHEN yekta_message LIKE '%SUCCESS%' THEN 1.0 ELSE 0.0 END), 2) as success_ratio
+    from '"$personal_info_file"' 
+    where yekta_message is not null
+    group by day 
+    order by day"
+
+#+end_src
+
+#+RESULTS: yekta-personal-daily-report-generator
+|        day | failureCount | successCount | allCount | success_ratio |
+| ---------- | ------------ | ------------ | -------- | ------------- |
+| 2025-12-20 |         4528 |        11483 |    16011 |          0.72 |
+| 2025-12-21 |        21873 |        10527 |    32400 |          0.32 |
+| 2025-12-22 |        19480 |         6357 |    25837 |          0.25 |
+
+
+#+begin_src gnuplot :var data=yekta-personal-daily-report-generator :file yekta_daily_personal_info_stats.png
+  reset
+  set title "Hourly Traffic: Success vs Failure"
+  set terminal pngcairo size 1200,600 font "Arial,12"
+  set style data histograms
+  set style histogram rowstacked
+  set style fill solid 1.0 border -5
+  set boxwidth 0.75
+  set key outside right top
+  set grid y
+  set xtics rotate by 90
+  set xtics offset -0,-6
+  set bmargin 10
+  set yrange [0:*]
+
+  # Parse the Org-mode table data
+  # 'data' variable automatically handles the array from the previous block
+  plot data using 2:xtic(1) title 'Failure' lc rgb "#cc0000", \
+       '' using 3 title 'Success' lc rgb "#00cc00"
+#+end_src
+
+#+RESULTS:
+[[file:yekta_daily_personal_info_stats.png]]
+
+
+*** finotech response 
+#+begin_src bash :session my-shell :var _=setup_data
+  duckdb -column -c "select 
+        CAST(creation_time AS DATE) as day,
+        count(*) FILTER (WHERE finno_tech_message NOT LIKE '%SUCCESS%') as failureCount,
+        count(*) FILTER (WHERE finno_tech_message LIKE '%SUCCESS%') as successCount,
+        count(*) as allCount,
+        round(avg(CASE WHEN finno_tech_message LIKE '%SUCCESS%' THEN 1.0 ELSE 0.0 END), 2) as success_ratio
+    from '"$personal_info_file"' 
+    where finno_tech_message is not null
+    group by day 
+    order by day"
+
+#+end_src
+
+#+RESULTS:
+|        day | failureCount | successCount | allCount | success_ratio |
+| ---------- | ------------ | ------------ | -------- | ------------- |
+| 2025-12-20 |            0 |          820 |      820 |           1.0 |
+| 2025-12-21 |           44 |         1180 |     1224 |          0.96 |
+| 2025-12-22 |            1 |          131 |      132 |          0.99 |
+
+
+*** comparison of finotech vs yekta when yekta fails
+#+begin_src bash :session my-shell :var _=setup_data
+  duckdb -column -c "select 
+        CAST(creation_time AS DATE) as day,
+        count(*) FILTER (WHERE finno_tech_message NOT LIKE '%SUCCESS%') as failureCount,
+        count(*) FILTER (WHERE finno_tech_message LIKE '%SUCCESS%') as successCount,
+        count(*) as allCount,
+        round(avg(CASE WHEN finno_tech_message LIKE '%SUCCESS%' THEN 1.0 ELSE 0.0 END), 2) as success_ratio
+    from '"$personal_info_file"' 
+    where finno_tech_message is not null and  yekta_message NOT LIKE '%SUCCESS%'
+    group by day 
+    order by day"
+
+#+end_src
+#+RESULTS:
+|        day | failureCount | successCount | allCount | success_ratio |
+| ---------- | ------------ | ------------ | -------- | ------------- |
+| 2025-12-20 |            0 |          820 |      820 |           1.0 |
+| 2025-12-21 |           44 |         1180 |     1224 |          0.96 |
+| 2025-12-22 |            1 |          131 |      132 |          0.99 |
+
