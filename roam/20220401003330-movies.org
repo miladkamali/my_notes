@@ -737,6 +737,8 @@ it's just too stupid
    :END:
    Description: Theseus is a mortal man chosen by Zeus to lead the fight against the ruthless King Hyperion, who is on a rampage across Greece to obtain a weapon that can destroy humanity.
 ** the electric state
+** M3GAN 2.0
+
 * cartoo
 ** DONE Elemental
    :PROPERTIES:

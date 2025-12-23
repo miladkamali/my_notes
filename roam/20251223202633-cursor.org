@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       79bad6db-a774-4543-a89a-d0064b765da8
+:END:
+#+title: cursor
+* cursor
+** cursor rules
+cursor rules are supposed to guide the cursor into doing things exactly the way
+you want them to be done based on a preset rules
+
+you should place all the rules for each project u
+*** global rules
+*** project specific rules
+open cursor setting with (C-S-j
+*** places to get the cursor rules
+[[https://cursor.directory/rules/python][cursor directory]]
+[[https://pageai.pro/blog/cursor-rules-tutorial][cursor rules to add cursor rules for projects]]
+[[https://github.com/supabase/supabase/tree/master/examples/prompts][supabase prompts]]
+** reading docs
+use @Doc to reference any document that has been analyzed with the project or
+it's dependencies
+you can add documents or websites to be used as references
+** MCP (model context protocol)
+[[https://glama.ai/mcp/servers?attributes=hosting%3Aremote-capable%2Ccategory%3Aopen-data][list of mcp ]]
+
