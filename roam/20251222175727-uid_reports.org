@@ -30,11 +30,8 @@
 #+end_src
 
 #+RESULTS: daily-calculator-personal-info
-|        day | failureCount | successCount | allCount | success_ratio |
-| ---------- | ------------ | ------------ | -------- | ------------- |
-| 2025-12-20 |         3708 |        12303 |    16011 |          0.77 |
-| 2025-12-21 |        20684 |        11716 |    32400 |          0.36 |
-| 2025-12-22 |        19348 |         6489 |    25837 |          0.25 |
+| [1m[31mIO | Error: |       |      |       |     |         |                                                                         |
+| [0mNo       | files  | found | that | match | the | pattern | [33m/home/milad/Downloads/personalInfoReport_2/personal_info.csv[0m |
 
 
 #+begin_src gnuplot :var data=daily-calculator-personal-info :file daily_personal_info_stats.png
