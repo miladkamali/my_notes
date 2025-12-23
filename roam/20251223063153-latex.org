@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       07dd0923-b9b0-4097-80a6-731f61070adb
+:END:
+#+title: latex
+* installation
+** debian
+apt install texlive-full
+** fedora
+sudo dnf install texlive-scheme-full

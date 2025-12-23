@@ -9,11 +9,12 @@
 #+NAME: setup_data
 #+begin_src bash :session my-shell :results silent :exports results
   export personal_info_file="/home/milad/Downloads/personalInfoReport_2/personal_info.csv"
-  export personal_image_file="~/Downloads/personalInfoReport_2/personal_image.csv"
+  export personal_image_file="/home/milad/Downloads/personalInfoReport_2/personal_image.csv"
   echo "Variables loaded."
 #+end_src
-** all providers combined
-*** daily report
+** personal information
+*** all providers combined
+**** daily report
 #+NAME: daily-calculator-personal-info
 #+begin_src bash :session my-shell :var _=setup_data
   duckdb -column -c "select 
@@ -60,7 +61,7 @@
 #+RESULTS:
 [[file:daily_personal_info_stats.png]]
 
-*** aggregate hourly report
+**** aggregate hourly report
 #+NAME: hourly-calculator-shell
 #+begin_src bash :session my-shell :var _=setup_data :exports results
   duckdb -csv -c "select 
@@ -135,7 +136,7 @@
 #+RESULTS:
 [[file:hourly_personal_info_stats.png]]
 
-*** hourly report
+**** hourly report
 #+NAME: hourly-daily-calculator-shell
 #+begin_src bash :session my-shell :var _=setup_data :exports results
 duckdb -column -c "select 
@@ -240,11 +241,9 @@ order by hour_slot"
 
 #+RESULTS:
 [[file:hourly_daily_personal_info_stats.png]]
-
-
-** each provider
-*** yekta
-**** daily report
+*** each provider
+**** yekta
+***** daily report
 #+name: yekta-personal-daily-report-generator
 #+begin_src bash :session my-shell :var _=setup_data
   duckdb -column -c "select 
@@ -293,7 +292,7 @@ order by hour_slot"
 [[file:yekta_daily_personal_info_stats.png]]
 
 
-*** finotech response 
+**** finotech response 
 #+begin_src bash :session my-shell :var _=setup_data
   duckdb -column -c "select 
         CAST(creation_time AS DATE) as day,
@@ -316,7 +315,7 @@ order by hour_slot"
 | 2025-12-22 |            1 |          131 |      132 |          0.99 |
 
 
-*** comparison of finotech vs yekta when yekta fails
+**** comparison of finotech vs yekta when yekta fails
 #+begin_src bash :session my-shell :var _=setup_data
   duckdb -column -c "select 
         CAST(creation_time AS DATE) as day,
@@ -337,3 +336,205 @@ order by hour_slot"
 | 2025-12-21 |           44 |         1180 |     1224 |          0.96 |
 | 2025-12-22 |            1 |          131 |      132 |          0.99 |
 
+** personal image
+*** all providers
+#+NAME: daily-calculator-personal-image
+#+begin_src bash :session my-shell :var _=setup_data
+  duckdb -column -c "select 
+      CAST(creation_time AS DATE) as day,
+      count(*) FILTER (WHERE response NOT LIKE '%SUCCESS%') as failureCount,
+      count(*) FILTER (WHERE response LIKE '%SUCCESS%') as successCount,
+      count(*) as allCount,
+      round(avg(CASE WHEN response LIKE '%SUCCESS%' THEN 1.0 ELSE 0.0 END), 2) as success_ratio
+  from '"$personal_image_file"' 
+  group by day 
+  order by day"
+
+#+end_src
+
+#+RESULTS: daily-calculator-personal-image
+|        day | failureCount | successCount | allCount | success_ratio |
+| ---------- | ------------ | ------------ | -------- | ------------- |
+| 2025-12-20 |         1222 |          176 |     1398 |          0.13 |
+| 2025-12-21 |          863 |          324 |     1187 |          0.27 |
+| 2025-12-22 |          630 |          312 |      942 |          0.33 |
+
+
+#+begin_src gnuplot :var data=daily-calculator-personal-image :file daily_personal_image_stats.png
+  reset
+  set title "Daily Traffic Of personal Image: Success vs Failure"
+  set terminal pngcairo size 1200,600 font "Arial,12"
+  set style data histograms
+  set style histogram rowstacked
+  set style fill solid 1.0 border -5
+  set boxwidth 0.75
+  set key outside right top
+  set grid y
+  set xtics rotate by 90
+  set xtics offset -0,-6
+  set bmargin 10
+  set yrange [0:*]
+
+  # Parse the Org-mode table data
+  # 'data' variable automatically handles the array from the previous block
+  plot data using 2:xtic(1) title 'Failure' lc rgb "#cc0000", \
+       '' using 3 title 'Success' lc rgb "#00cc00"
+#+end_src
+
+#+RESULTS:
+[[file:daily_personal_image_stats.png]]
+*** hourly
+#+NAME: hourly-calculator-personal-image-shell
+#+begin_src bash :session my-shell :var _=setup_data :exports results
+  duckdb -csv -c "select 
+      strftime(creation_time, '%H:00') as hour_slot,
+      count(*) FILTER (WHERE response NOT LIKE '%SUCCESS%') as failureCount,
+      count(*) FILTER (WHERE response LIKE '%SUCCESS%') as successCount,
+      count(*) as allCount,
+      round(avg(CASE WHEN response LIKE '%SUCCESS%' THEN 1.0 ELSE 0.0 END), 2) as success_ratio
+  from '"$personal_image_file"' 
+  group by hour_slot 
+  order by hour_slot"
+
+
+#+end_src
+
+#+RESULTS: hourly-calculator-personal-image-shell
+| hour_slot | failureCount | successCount | allCount | success_ratio |
+|     00:00 |           30 |            7 |       37 |          0.19 |
+|     01:00 |           16 |            1 |       17 |          0.06 |
+|     02:00 |           28 |            1 |       29 |          0.03 |
+|     03:00 |           77 |           10 |       87 |          0.11 |
+|     04:00 |          147 |           12 |      159 |          0.08 |
+|     05:00 |          242 |           33 |      275 |          0.12 |
+|     06:00 |          200 |           28 |      228 |          0.12 |
+|     07:00 |          246 |           50 |      296 |          0.17 |
+|     08:00 |          313 |           64 |      377 |          0.17 |
+|     09:00 |          249 |           48 |      297 |          0.16 |
+|     10:00 |          195 |           52 |      247 |          0.21 |
+|     11:00 |          121 |           70 |      191 |          0.37 |
+|     12:00 |           91 |           63 |      154 |          0.41 |
+|     13:00 |           92 |           73 |      165 |          0.44 |
+|     14:00 |          112 |           63 |      175 |          0.36 |
+|     15:00 |          115 |           42 |      157 |          0.27 |
+|     16:00 |           60 |           25 |       85 |          0.29 |
+|     17:00 |           55 |           48 |      103 |          0.47 |
+|     18:00 |           77 |           45 |      122 |          0.37 |
+|     19:00 |           83 |           23 |      106 |          0.22 |
+|     20:00 |           57 |           24 |       81 |           0.3 |
+|     21:00 |           48 |           12 |       60 |           0.2 |
+|     22:00 |           38 |           14 |       52 |          0.27 |
+|     23:00 |           23 |            4 |       27 |          0.15 |
+
+
+#+begin_src gnuplot :var data=hourly-calculator-personal-image-shell :file hourly_personal_image_stats.png
+  reset
+  set title "Hourly Traffic: Success vs Failure"
+  set terminal pngcairo size 1200,600 font "Arial,12"
+  set style data histograms
+  set style histogram rowstacked
+  set style fill solid 1.0 border -5
+  set boxwidth 0.75
+  set key outside right top
+  set grid y
+  set xtics rotate by 45
+  set xtics offset -1,-2
+  set bmargin 5
+  set yrange [0:*]
+
+  # Parse the Org-mode table data
+  # 'data' variable automatically handles the array from the previous block
+  plot data using 2:xtic(1) title 'Failure' lc rgb "#cc0000", \
+       '' using 3 title 'Success' lc rgb "#00cc00"
+#+end_src
+
+#+RESULTS:
+[[file:hourly_personal_image_stats.png]]
+** each provider
+*** yekta
+
+#+name: yekta-personal-image-daily-report-generator
+#+begin_src bash :session my-shell :var _=setup_data
+  duckdb -column -c "select 
+        CAST(creation_time AS DATE) as day,
+        count(*) FILTER (WHERE yekta_message NOT LIKE '%SUCCESS%') as failureCount,
+        count(*) FILTER (WHERE yekta_message LIKE '%SUCCESS%') as successCount,
+        count(*) as allCount,
+        round(avg(CASE WHEN yekta_message LIKE '%SUCCESS%' THEN 1.0 ELSE 0.0 END), 2) as success_ratio
+    from '"$personal_image_file"' 
+    where yekta_message is not null
+    group by day 
+    order by day"
+
+#+end_src
+
+#+RESULTS: yekta-personal-image-daily-report-generator
+|        day | failureCount | successCount | allCount | success_ratio |
+| ---------- | ------------ | ------------ | -------- | ------------- |
+| 2025-12-20 |            2 |            0 |        2 |           0.0 |
+| 2025-12-21 |            0 |            1 |        1 |           1.0 |
+| 2025-12-22 |            6 |            0 |        6 |           0.0 |
+
+
+#+begin_src gnuplot :var data=yekta-personal-image-daily-report-generator :file yekta_daily_personal_info_stats.png
+  reset
+  set title "Daily Traffic: Success vs Failure"
+  set terminal pngcairo size 1200,600 font "Arial,12"
+  set style data histograms
+  set style histogram rowstacked
+  set style fill solid 1.0 border -5
+  set boxwidth 0.75
+  set key outside right top
+  set grid y
+  set xtics rotate by 90
+  set xtics offset -0,-6
+  set bmargin 10
+  set yrange [0:*]
+
+  # Parse the Org-mode table data
+  # 'data' variable automatically handles the array from the previous block
+  plot data using 2:xtic(1) title 'Failure' lc rgb "#cc0000", \
+       '' using 3 title 'Success' lc rgb "#00cc00"
+#+end_src
+
+#+RESULTS:
+[[file:yekta_daily_personal_info_stats.png]]
+*** finotech
+#+name: finotech-personal-daily-stat-generator
+#+begin_src bash :session my-shell :var _=setup_data
+  duckdb -column -c "select 
+        CAST(creation_time AS DATE) as day,
+        count(*) FILTER (WHERE finno_tech_message NOT LIKE '%SUCCESS%') as failureCount,
+        count(*) FILTER (WHERE finno_tech_message LIKE '%SUCCESS%') as successCount,
+        count(*) as allCount,
+        round(avg(CASE WHEN finno_tech_message LIKE '%SUCCESS%' THEN 1.0 ELSE 0.0 END), 2) as success_ratio
+    from '"$personal_image_file"' 
+    where finno_tech_message is not null
+    group by day 
+    order by day"
+
+#+end_src
+
+#+begin_src gnuplot :var data=finotech-personal-daily-stat-generator :file finotech_daily_personal_info_stats.png
+  reset
+  set title "Daily Traffic: Success vs Failure"
+  set terminal pngcairo size 1200,600 font "Arial,12"
+  set style data histograms
+  set style histogram rowstacked
+  set style fill solid 1.0 border -5
+  set boxwidth 0.75
+  set key outside right top
+  set grid y
+  set xtics rotate by 90
+  set xtics offset -0,-6
+  set bmargin 10
+  set yrange [0:*]
+
+  # Parse the Org-mode table data
+  # 'data' variable automatically handles the array from the previous block
+  plot data using 2:xtic(1) title 'Failure' lc rgb "#cc0000", \
+       '' using 3 title 'Success' lc rgb "#00cc00"
+#+end_src
+
+#+RESULTS:
+[[file:finotech_daily_personal_info_stats.png]]
