@@ -107,7 +107,8 @@ CLOSED: [2025-11-26 Wed 13:05] SCHEDULED: <2025-11-07 Fri>
 ssh -L 127.0.0.1:8444:192.168.100.4:443  milad@46.245.89.4 -p 3316
 
 https://127.0.0.1:8444
-username:uid password: Ec9yaqT9
+username:uid
+password: Ec9yaqT9
 *** TODO get user name and password from hosein
 SCHEDULED: <2025-11-09 Sun>
 :LOGBOOK:
@@ -345,7 +346,6 @@ CLOSED: [2025-12-14 Sun 18:25] DEADLINE: <2025-12-06 Sat>
 - State "DONE"       from "TODO"       [2025-12-14 Sun 18:25]
 - State "TODO"       from              [2025-12-03 Wed 13:07]
 :END:
-
 * key issues to be solved
 ** create a plan that we can detect issues with services in less than 5 minutes
 ** figure out how we can use N8N
