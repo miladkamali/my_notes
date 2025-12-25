@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       1e5adc2e-dce5-4546-8f3c-6d7f94fc41c1
+:END:
+#+title: plotting
+* tools
+** [[id:b99923d1-d333-4781-a91a-dde5e3ee6eb7][gnuplot]]
+** Matplotlib (Python)
+** ggplot2(R)
+** octave
+** matlab

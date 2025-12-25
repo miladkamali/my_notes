@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       b99923d1-d333-4781-a91a-dde5e3ee6eb7
+:END:
+#+title: gnuplot
+
+* basic plotting
+#+begin_src gnuplot :results output :session none
+  set term dumb
+  set xrange[-1:1]
+  plot sin(x),x**2
+#+end_src
+
+
+#+begin_src gnuplot :file ./temp.png
+  reset
+  set title "Test plot"
+  set terminal pngcairo size 1200,600 font "Arial,12"
+  set xrange[-1:1]
+  plot sin(x),x**2,x**3
+#+end_src
+
+#+RESULTS:
+[[file:./temp.png]]
+
+
+
+
+#+begin_src gnuplot  :file daily_personal_info_stats.png
+  reset
+  set title "Hourly Traffic: Success vs Failure"
+  set terminal pngcairo size 1200,600 font "Arial,12"
+
+  # Parse the Org-mode table data
+  # 'data' variable automatically handles the array from the previous block
+  plot sin(x)
+#+end_src
+
+#+RESULTS:
+[[file:daily_personal_info_stats.png]]

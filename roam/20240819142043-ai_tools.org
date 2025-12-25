@@ -10,3 +10,4 @@ https://v0.dev/chat
 * https://jules.google.com/settings
 * [[https://www.youtube.com/watch?v=0u9NY__BGmQ][ goose the agent ]]
 https://block.github.io/goose/docs/getting-started/installation/
+* [[https://www.task-master.dev/][task master]]
