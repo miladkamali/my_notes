@@ -39,14 +39,6 @@ dUOTk0JWeWnTu
 ** adminer
 https://adminer.u-id.ir
 ** control of servers
-*** DONE get list of servers
-CLOSED: [2025-11-29 Sat 12:03]
-:LOGBOOK:
-- State "DONE"       from "DELEGATED"  [2025-11-29 Sat 12:03]
-- State "DELEGATED"  from              [2025-11-05 Wed 08:52]
-:END:
-*** get access to kubernates
-
 *** get access to monitoring
 **** elastic
 http://46.245.89.2:5601/login?next=%2F
@@ -206,6 +198,7 @@ need to be set
 - State "DELEGATED"  from              [2025-11-07 Fri 11:56]
 :END:
 *** 46.245.89.14
+ssh milad@46.245.89.14 -p 3316
 ca
 sana
 crypto
