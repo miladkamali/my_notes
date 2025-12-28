@@ -25,3 +25,4 @@ SPC a o o agenda view
 , d s org-schedule
 , e e org export 
 
+C-u C-c | convert from json to table

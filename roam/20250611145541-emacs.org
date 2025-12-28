@@ -7,5 +7,3 @@ describe a variable C+h v
 
 describe-function C-h f
 
-#+RESULTS:
-: 5

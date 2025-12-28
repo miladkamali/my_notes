@@ -28,4 +28,3 @@ put these in init.el
    https://mathlive.io/reference.html
    https://orgmode.org/manual/LaTeX-fragments.html#LaTeX-fragments
    https://orgmode.org/manual/Previewing-LaTeX-fragments.html#Previewing-LaTeX-fragments
-** 
