@@ -1,0 +1,93 @@
+:PROPERTIES:
+:ID:       9db5905d-e00a-405c-8760-1af10724acfc
+:END:
+#+title: emacs-TRAMP
+TRAMP (Transparent Remote Access, Multiple Protocols) is a built-in feature of Emacs that allows you to edit files on remote servers as if they were on your own computer.
+
+In the context of Org-mode code blocks, it means you can write code in your local Org file, but when you press C-c C-c (execute), Emacs will:
+
+    Connect to a remote server (via SSH, Docker, etc.).
+
+    Send your code to that server.
+
+    Run it on that server.
+
+    Capture the output and display it right back in your local Org file.
+
+This turns your Org file into a remote control console.
+1. The Syntax
+
+To tell Org-mode to run code remotely, you use the :dir header argument with a special path format:
+
+/method:user@host:/path/to/directory
+
+    method: Usually ssh (for servers), docker (for containers), or sudo (for root access).
+
+    user: The username on the remote machine.
+
+    host: The IP address or domain name of the remote machine.
+
+    path: The directory on the remote machine where the command should run.
+
+2. Examples
+Example A: Running a shell command on a Remote Linux Server
+
+Imagine you are on your laptop, but you want to check the disk usage on your server (myserver.com).
+Code snippet
+
+#+BEGIN_SRC sh :dir /ssh:root@myserver.com:/var/log/
+  hostname
+  df -h .
+#+END_SRC
+
+#+RESULTS:
+: myserver-production
+: Filesystem      Size  Used Avail Use% Mounted on
+: /dev/sda1        50G   30G   20G  60% /
+
+What just happened?
+
+    Emacs SSH'd into myserver.com as root.
+
+    It navigated to /var/log/.
+
+    It ran hostname and df -h.
+
+    It pasted the result into your local file.
+
+Example B: Running Python on a Remote GPU Server
+
+You have a heavy Python script that needs a GPU, but you are writing on a MacBook Air. You can execute the block on your heavy-duty desktop.
+Code snippet
+
+#+BEGIN_SRC python :dir /ssh:user@192.168.1.50:/home/user/projects/
+  import socket
+  return "I am running on: " + socket.gethostname()
+#+END_SRC
+
+#+RESULTS:
+: I am running on: deep-learning-rig
+
+Note: The Python interpreter used here is the one installed on the remote machine (192.168.1.50), not your local one.
+Example C: Running code inside a Docker Container
+
+You can use TRAMP to execute code directly inside a running Docker container without manually attaching to a shell.
+Code snippet
+
+#+BEGIN_SRC sh :dir /docker:my-container:/app
+  ls -la
+#+END_SRC
+
+3. Why is this useful?
+
+    Unified Notebook: You can have one Org file that manages five different servers. Block A updates Server 1, Block B restarts a service on Server 2, and Block C checks the logs on Server 3.
+
+    Environment Isolation: You don't need to install Node.js, Python, Rust, and Go all on your laptop. You can just spin up Docker containers or VMs for them and point your Org blocks to use those environments.
+
+    Documentation as Infrastructure: You can write a "Runbook" for fixing server issues. Instead of saying "Now login to the server and type reboot", you just have a code block with a button that actually does it.
+
+4. Important Prerequisite
+
+For this to work smoothly (especially with SSH), you should have SSH Key-based authentication set up so you don't have to type your password every time you run a block.
+
+If you can type ssh user@host in your terminal and get in without a password, TRAMP will work automatically in Org-mode.

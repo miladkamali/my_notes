@@ -7,9 +7,371 @@
 * [[id:4a5cb504-9db9-41cd-84b2-250d60eef3aa][table]]
 * technical documents
 https://www.youtube.com/watch?v=0g9BcZvQbXU
+* org-attributes
+** set size of an image
+#+ATTR_ORG: :width 500
+* code blocks
+to edit source block just use C-c ' and a standard emacs buffer opens for that source block
+** execution and results
+*** :results
+controls the output of the code block
+possible values are
+| vvalue  | description                                                   |
+|---------+---------------------------------------------------------------|
+| value   | return the value of the last statement like a function return |
+| output  | captures every thing that has been printed to the stdout      |
+| replace | returns the code but prints nothing to the document           |
+| silent  | (default) replaces previous results                           |
+| append  | add new result to the list of previous results                |
+| drawer  | wraps result in a :RESULTS: drawer to keep buffer clean       |
+
+you can combine some of these together like
+output append or output drawer or output drawer append
+**** examples
+***** output
+#+BEGIN_SRC python :results output
+  print("Hello")
+  print("World")
+#+END_SRC
+#+RESULTS:
+: Hello
+: World
+***** value
+#+BEGIN_SRC python :results value
+  print("Hello")
+  print("World")
+#+END_SRC
+#+RESULTS:
+: None
+#+BEGIN_SRC python :results value :exports both
+  print("Hello")
+  print("World")
+  return "hi"
+#+END_SRC
+#+RESULTS:
+: hi
+***** silent
+#+BEGIN_SRC python :results silent
+  print("Hello")
+  print("World")
+#+END_SRC
+#+RESULTS:
+***** replace
+#+BEGIN_SRC python :results replace
+  print("Hello")
+  print("World")
+#+END_SRC
+#+RESULTS:
+
+: None
+***** append
+#+BEGIN_SRC python :results append
+  print("Hello")
+  print("World")
+#+END_SRC
+
+#+RESULTS:
+: None
+: None
+: None
+***** drawer
+#+BEGIN_SRC python :results drawer
+  print("Hello")
+  print("World")
+
+#+END_SRC
+
+#+RESULTS:
+:results:
+None
+:end:
+*** :session
+#+BEGIN_SRC python :session mysession
+  x = 10
+#+END_SRC
+
+#+RESULTS:
+: None
+
+#+BEGIN_SRC python :session mysession
+  x * 2
+#+END_SRC
+
+#+RESULTS:
+: 20
+*** :var
+#+NAME: my-data
+| Name  | Age |
+|-------+-----|
+| Alice | 30  |
+| Bob   | 25  |
+
+#+NAME: my-data-2
+| Name  | gender |
+|-------+--------|
+| Alice | female |
+| Bob   | male   |
+
+#+BEGIN_SRC python :var data=my-data data2=my-data-2 :results output
+  # 'data' is automatically a list of lists here
+  print(data[0][1])
+  print(data2[1][1])
+#+END_SRC
+
+#+RESULTS:
+: 30
+: male
+*** :cashe
+caches results of block execution, if the code or input value remains the same
+it will not re-run the code block
+#+BEGIN_SRC sh :cache yes
+  sleep 10 # Simulating a long process
+  echo "Done"
+#+END_SRC
+
+#+RESULTS[977a22359be6e07a519c6980735d7943afb3ff26]:
+: Done
+** :exporting
+values : code results both none
+#+BEGIN_SRC python :exports results
+  return "You see the result, but not the code."
+#+END_SRC
+** literate programming and File generation
+*** :tangle
+write the code block to specified source file
+[[id:834b1702-c439-4234-b86f-5fe58277c56c][org-tangle]]
+
+#+BEGIN_SRC org
+  The :tangle header argument is the cornerstone of "Literate Programming" in Org-mode. It allows you to write code in small, documented chunks and then "tangle" (export) them into a functional source code file.
+
+  By default, :tangle overwrites the target file. It does not append to existing files outside of the current "tangling" session. However, its behavior can be nuanced depending on how you use it.
+
+  Here is a deep dive into :tangle with specific examples and edge cases.
+  1. Default Behavior: Overwriting
+
+  When you run org-babel-tangle (usually C-c C-v t), Org-mode looks at every block in the current buffer.
+
+      It deletes the target file if it exists.
+
+      It writes the contents of the blocks to that file.
+
+  If you have multiple blocks pointing to the same file, Org-mode concatenates them in the order they appear in the document.
+  Example: Building a Config File
+
+  Imagine you are writing a init.vim configuration file, but you want to explain each section.
+  Code snippet
+
+  ,* My Vim Config
+  Here is my basic setup.
+
+  ,#+BEGIN_SRC vim :tangle ~/.config/nvim/init.vim
+    set number
+    set relativenumber
+  ,#+END_SRC
+
+  I also need some keybindings. Note that this block *also* tangles to the same file.
+
+  ,#+BEGIN_SRC vim :tangle ~/.config/nvim/init.vim
+    let mapleader = " "
+    nnoremap <leader>w :w<CR>
+  ,#+END_SRC
+
+  Result (~/.config/nvim/init.vim):
+  Vim Script
+
+  set number
+  set relativenumber
+  let mapleader = " "
+  nnoremap <leader>w :w<CR>
+
+  Note: Org-mode effectively "appends" the second block to the first inside the generated file, but the file itself is freshly created every time you tangle the document.
+  2. Tangling to Multiple Files
+
+  You can define a project structure entirely within one Org file by pointing blocks to different paths.
+  Code snippet
+
+  ,* Project Setup
+  I need a Python script and a requirement file.
+
+  ,** The Script
+  ,#+BEGIN_SRC python :tangle src/main.py
+    import requests
+    print("Hello World")
+  ,#+END_SRC
+
+  ,** The Requirements
+  ,#+BEGIN_SRC text :tangle src/requirements.txt
+    requests==2.28.0
+  ,#+END_SRC
+
+  Result:
+
+      Creates src/main.py
+
+      Creates src/requirements.txt
+
+  3. Preventing Tangling (:tangle no)
+
+  Sometimes you want to show code for demonstration or testing purposes, but you don't want that specific block to end up in the final source file.
+  Code snippet
+
+  ,* Testing
+  Here is a test I ran to verify the logic. I don't want this in my final script.
+
+  ,#+BEGIN_SRC python :tangle no
+    assert 1 + 1 == 2
+  ,#+END_SRC
+
+  ,* Actual Code
+  This goes into the file.
+
+  ,#+BEGIN_SRC python :tangle script.py
+    def main():
+        pass
+  ,#+END_SRC
+
+  Result (script.py): Only contains the def main(): block.
+  4. Advanced: The "Append" Myth & Comments
+
+  Users often ask: "Can I append to a file that already exists on my disk (created by something else)?" No. Org-mode treats the target file as its own property. It will wipe it and recreate it.
+
+  However, you can control how the tangled code is formatted using :comments.
+  :comments link
+
+  This wraps the code in the output file with comments pointing back to the specific line in your Org file. This is incredibly useful for debugging.
+  Code snippet
+
+  ,#+BEGIN_SRC python :tangle main.py :comments link
+    print("Error here")
+  ,#+END_SRC
+
+  Result (main.py):
+  Python
+
+  # [[file:~/my-project/notes.org::*The Script][The Script:1]]
+  print("Error here")
+  # The Script:1 ends here
+
+  5. Tangling with File Permissions (:shebang + :tangle)
+
+  If you tangle a script meant to be executed (like a bash script), it will not have execution permissions (+x) by default. You must use :shebang to tell Org-mode to make it executable.
+  Code snippet
+
+  ,#+BEGIN_SRC sh :tangle script.sh :shebang "#!/bin/bash"
+    echo "I am executable!"
+  ,#+END_SRC
+
+  Behavior:
+
+      Writes the file.
+
+      Adds #!/bin/bash at the very top.
+
+      Runs chmod +x script.sh.
+
+  6. Complex Workflow: "mkdir" before Tangle
+
+  Org-mode will throw an error if you try to tangle to a directory that doesn't exist (e.g., :tangle src/config/app.conf when src/config doesn't exist).
+
+  You can solve this using a "hook" or a setup block that runs before tangling.
+
+  The Workaround:
+  Code snippet
+
+  ,#+BEGIN_SRC sh :results silent
+    mkdir -p src/config
+  ,#+END_SRC
+
+  ,#+BEGIN_SRC conf :tangle src/config/app.conf
+    [main]
+    debug = true
+  ,#+END_SRC
+
+  You must execute the mkdir block manually (C-c C-c) or rely on Emacs Lisp hooks to create directories automatically.
+  Summary Table
+  Goal	Header Argument	Behavior
+  Combine blocks	:tangle myfile.py (on multiple blocks)	Blocks are concatenated in document order into myfile.py.
+  Skip a block	:tangle no	Block is ignored during tangle.
+  Make executable	:tangle script.sh :shebang "#!/bin/bash"	Adds shebang and chmod +x.
+  Debug Traceback	:tangle yes :comments link	Adds comments in source file pointing back to Org file location.
+  Existing Files	N/A	Org-mode always overrides the target file. It does not append to files created outside the tangle process.
+#+END_SRC
+*** :noweb
+Allows you to embed other code blocks inside the current one using <<block-name>> syntax.
+
+    Common Values: yes, no, strip-export.
+
+    Use Case: Reusing a common snippet (like a database connection setup) across
+    multiple different scripts without rewriting it.
+#+NAME: common-setup
+#+BEGIN_SRC python
+  import numpy as np
+  import pandas as pd
+#+END_SRC
+
+#+BEGIN_SRC python :noweb yes
+  <<common-setup>>
+  df = pd.DataFrame()
+#+END_SRC
+*** :shebang
+Adds a shebang line (e.g., #!/bin/bash) to the top of the tangled file and makes it executable.
+
+    Use Case: Creating standalone executable scripts directly from Org-mode.
+
+#+BEGIN_SRC sh :tangle myscript.sh :shebang "#!/bin/bash"
+  echo "I am an executable script"
+#+END_SRC
+** file system and environment
+*** :dir
+Specifies the working directory where the code should run.
+
+    Use Case: Running a command in a specific project folder without having to
+    cd into it manually inside the block. It also supports [[id:9db5905d-e00a-405c-8760-1af10724acfc][TRAMP]] syntax for
+    running code on remote servers.
+#+BEGIN_SRC sh :tangle myscript.sh :shebang "#!/bin/bash"
+  echo "I am an executable script"
+#+END_SRC
+*** :file
+Saves the result of the code block to a file (usually for graphics) and inserts a link to it in the Org document.
+#+BEGIN_SRC python :results file :file plot.png
+  import matplotlib.pyplot as plt
+  plt.plot([1, 2, 3])
+  plt.savefig('plot.png')
+  return 'plot.png' # Must return filename for Org to link it
+#+END_SRC
+** Formatting & Presentation
+*** :wrap
+Wraps the output in a specific block type (e.g., #+BEGIN_SRC or a custom block).
+
+    Use Case: If your Python script generates XML or JSON, you can wrap the
+    output in a source block so Org-mode highlights the syntax of the result.
+
+#+BEGIN_SRC sh :wrap src json
+  echo '{"foo": "bar"}'
+#+END_SRC
+
+#+RESULTS:
+#+begin_src json
+{"foo": "bar"}
+#+end_src
+*** :eval
+controls whether the block is allowed to execute or not
+Common Values: never, query (ask for permission), yes.
+#+BEGIN_SRC sh :eval never
+  #something very dangerious  # This block is safe; it will never run
+#+END_SRC
+** org block
+#+BEGIN_SRC org
+  ,* Root Level
+  ,** Sub-Level
+     Here is some text.
+     ,#+BEGIN_SRC python
+       print("Hello")
+     ,#+END_SRC
+#+END_SRC
 * useful toggles
 ** to view images inside a org file
-org-toggle-inline-image
+org-toggle-inline-image  C-c C-x C-v
 
 
 org-show-todo-tree
