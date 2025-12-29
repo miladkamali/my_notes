@@ -5,3 +5,27 @@
 * initial steps
 ** TODO Design modular architecture
 ** TODO Estimate modular roadmap
+** design                                                          :@bentoak:
+*** DELEGATED get access to design rules for acctech                   :neda:
+:LOGBOOK:
+- State "DELEGATED"  from              [2025-12-29 Mon 14:18]
+:END:
+*** analyse the ATS structure
+**** DELEGATED ask armin to give you a least of all the acctions in ATS
+:LOGBOOK:
+- State "DELEGATED"  from "TODO"       [2025-12-29 Mon 14:19]
+- State "TODO"       from "NEXT"       [2025-12-29 Mon 14:19]
+- State "NEXT"       from "TODO"       [2025-12-29 Mon 14:19]
+- State "TODO"       from              [2025-12-29 Mon 14:19]
+:END:
+**** NEXT analyze the results for mohamad
+:LOGBOOK:
+- State "NEXT"       from              [2025-12-29 Mon 14:19]
+:END:
+** project management
+*** TODO define tasks for hasan
+SCHEDULED: <2025-12-31 Wed>
+:LOGBOOK:
+- State "TODO"       from              [2025-12-29 Mon 14:44]
+:END:
+*** 
