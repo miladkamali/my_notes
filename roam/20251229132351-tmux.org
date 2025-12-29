@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       fb6b0e08-1fcc-49c2-a1eb-29041c7b539d
+:END:
+#+title: tmux
+
+https://tmuxcheatsheet.com/

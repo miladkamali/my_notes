@@ -11,6 +11,9 @@ https://www.openpolicyagent.org/
 * Permit.io
 * Keycloak
 * gemeni conversation
+
+
+#+begin_src markdown
 1. Open Policy Agent (OPA)
 Best for: A general-purpose, high-performance policy engine that can be used across your stack.
 
@@ -183,6 +186,8 @@ Keycloak is an excellent choice for an ABAC engine if:
  * You want a graphical user interface to manage your authorization policies.
 
 In summary, Keycloak's authorization services provide a rich and flexible framework for implementing Attribute-Based Access Control, allowing you to move beyond simple role-based permissions and build more dynamic and secure applications.
+#+end_src
+
 * QC presentation
 ** attributes
 *** Holding
