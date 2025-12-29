@@ -2,6 +2,7 @@
 :ID:       1e5adc2e-dce5-4546-8f3c-6d7f94fc41c1
 :END:
 #+title: plotting
+also take a look at [[id:3356bff5-c604-4963-bab9-f2ebcca02cb9][visualization]]
 * tools
 ** [[id:b99923d1-d333-4781-a91a-dde5e3ee6eb7][gnuplot]]
 ** Matplotlib (Python)

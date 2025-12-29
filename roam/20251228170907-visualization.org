@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       3356bff5-c604-4963-bab9-f2ebcca02cb9
+:END:
+#+title: visualization
+* tools for visualization
+** [[id:b99923d1-d333-4781-a91a-dde5e3ee6eb7][gnuplot]]
+** [[https://altair-viz.github.io][altir-vis]]
+a python viwualization library
+** [[https://github.com/plotly/plotly.py][plotly]]
+** D3.js
+** https://shiny.posit.co/
+an interactive system for making visualization apps and website within python and R
+** [[https://demo.bokeh.org/][Boken]]
+** [[https://github.com/Kanaries/pygwalker][pygwalker]]
+** [[https://github.com/vizzuhq/vizzu-lib][vizzu-lib]
+animate between visualizations
+https://github.com/vizzuhq

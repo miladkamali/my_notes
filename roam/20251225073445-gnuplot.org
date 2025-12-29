@@ -9,6 +9,9 @@
 (princ (format "#+ATTR_ORG: :width %s\n%s" width data))
 #+end_src
 
+#+RESULTS: attr_wrap
+#+ATTR_ORG: :width 400
+
 * basic plotting
 #+ATTR_ORG: :width 400
 ** ascii output
@@ -36,7 +39,69 @@
 [[file:./temp.png]]
 
 
+** for plot
+#+begin_src gnuplot :results file raw :file ./temp.png :post attr_wrap(data=*this*, width=500)
+  reset
+  set title "Test plot"
+  set terminal pngcairo size 1200,600 font "Arial,12"
+  set xrange[-1:1]
+  set yrange[-2:2]
+  plot for[i=1:25] sin(i*x)
+#+end_src
+
+#+RESULTS:
+#+ATTR_ORG: :width 500
+[[file:./temp.png]]
 
 
 
+#+begin_src gnuplot :results file raw :file ./temp.png :post attr_wrap(data=*this*, width=500)
+  reset
+  set title "Test plot"
+  do for [i=0:20] {
+      
+      # Calculate a "shift" value (phase) for the sine wave
+      shift = i * 0.1 * pi
+      
+      # 3. Create a dynamic filename (e.g., frame_000.png, frame_001.png)
+      # %03d pads the number with zeros (001 instead of 1), which helps sorting later.
+      outfile = sprintf('frame_%03d.png', i)
+      set output outfile
+      
+      # 4. Plot the current frame
+      set title sprintf("Phase shift: %.2f pi", i * 0.1)
+      plot sin(x + shift) lw 3 title "Moving Sine Wave"
+      
+      # 5. Close the file (optional but good practice)
+      unset output
+  }
+#+end_src
 
+
+#+begin_src gnuplot :results file raw :file ./temp.png :post attr_wrap(data=*this*, width=500)
+set term gif animate delay 10 loop 0 optimize
+set output 'animation.gif'
+
+do for [n=0:20] {
+    
+    # Create your decimal value 'i' here
+    i = n / 10.0
+    
+    set title sprintf("Phase: %.1f", i)
+    plot sin(x + i)
+    pause 0.1  # Optional: adds a small delay so you can see the animation
+}do for [i=0:20:0.1] {
+    plot sin(x + i*0.1)
+}
+#+end_src
+** setting sample rates
+set samples 500
+the default sample rate is 100
+
+** constants
+*** pi
+*** Nan
+*** I
+*** exp(1)
+** milad function
+ plot sin(x**cos(x**2+1)) 
