@@ -1,0 +1,88 @@
+:PROPERTIES:
+:ID:       C890076E-049F-4F24-ABEB-1D6370AFF7A8
+:END:
+#+title: persuation
+* resources
+** made to stick
+*Made to Stick* by Chip and Dan Heath is a classic in communication and marketing that explores why some ideas—from urban legends to successful ad campaigns—thrive while others fade away. The authors argue that "stickiness" is not an innate quality of an idea but a result of how it is packaged and shared.
+
+The book’s central premise is that we often fail to communicate because of the **Curse of Knowledge**: once we know something, we find it impossible to imagine what it was like *not* to know it. This makes us speak in abstractions and jargon that others can’t follow. To combat this, the Heaths provide the **SUCCESs** framework.
+
+---
+
+## The SUCCESs Framework
+
+To make an idea "stick," it should follow these six principles:
+
+### 1. Simple (Find the Core)
+
+Simplicity isn't about "dumbing down" an idea; it’s about finding its **essential core**.
+
+* **The Golden Rule:** Simple = Core + Compact.
+* **Key Concept:** Avoid "burying the lead." Like a journalist, put the most important info first.
+* **Example:** Southwest Airlines’ core mission is "THE low-fare airline." This simple rule helps employees make every decision (e.g., "Will serving a salad help us be the low-fare airline? No? Then no salad.")
+
+### 2. Unexpected (Get and Hold Attention)
+
+The first challenge of communication is getting attention; the second is keeping it.
+
+* **Surprise:** Break a pattern to jolt people out of "autopilot."
+* **Curiosity Gaps:** Identify a "gap" in someone's knowledge and then promise to fill it. This creates an intellectual "itch" that the audience wants to scratch.
+
+### 3. Concrete (Make it Clear)
+
+Abstract language is hard to remember. Concrete language—using sensory details and "hooks"—is the "Velcro" of the mind.
+
+* **Key Concept:** Use the "Universal Language" of the five senses.
+* **Example:** Instead of saying "Our product is high-performance," show a video of it being dropped from a building and surviving.
+
+### 4. Credible (Make People Believe)
+
+Ideas need a reason to be believed. This can come from:
+
+* **External Sources:** Experts or "anti-authorities" (e.g., a smoker with lung cancer speaking about health).
+* **Internal Sources:** Vivid details or the **Sinatra Test** (if you can make it there, you can make it anywhere—e.g., if you handled security for Fort Knox, you’re credible for any security job).
+
+### 5. Emotional (Make People Care)
+
+People are more likely to act if they feel something.
+
+* **The Mother Theresa Effect:** People donate more to a single, named starving child than to "21 million starving Africans." We feel for individuals, not abstractions.
+* **WIIFY:** Always answer "What’s In It For You" for the listener.
+
+### 6. Stories (Drive Action)
+
+Stories act as "mental flight simulators." They provide:
+
+* **Simulation:** They show us *how* to act.
+* **Inspiration:** They give us the *energy* to act.
+* **Key Concept:** A good story allows the audience to "test-drive" your idea in their imagination.
+
+---
+
+## Main Ideas Proposed in the Book
+
+1. **The Curse of Knowledge is the Enemy:** Most communication fails because the speaker assumes the listener has the same background knowledge. You must "unlearn" your expertise to speak to a novice.
+2. **Stickiness can be Engineered:** You don’t need to be a creative genius to make an idea stick; you just need to follow a checklist (SUCCESs).
+3. **Accuracy vs. Accessibility:** It is often better to be 90% accurate and 100% understood than 100% accurate and 0% understood.
+4. **Common Sense is the Killer of Unexpectedness:** If an idea feels like common sense, people won't pay attention. You must highlight the "uncommon" part of your message to make it memorable.
+
+> **Summary Quote:** "A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away."
+
+Would you like me to help you apply the **SUCCESs framework** to a specific project, presentation, or business idea you are currently working on?
+* the art of persuation
+what you find obvious by yourself sometime other people find completely alien to them
+so do not assume familiarity for you ideas
+** the four pillars of persuation
+*** credibility and authority
+people tend be far more easily persuaded by people who has the credibility or the authority on the subject
+*** evidence and example 
+*** emotional connection
+** make to stick
+*** simple
+*** unexpected
+*** concrete
+*** credible
+*** emotion
+*** storie
+
