@@ -28,3 +28,8 @@ pass: Ab1234!@#$
 ** semgrep
 ** trivy
 ** grype
+* projects
+** [[id:296B2C37-BC5E-4559-8494-909156885281][ATS]]
+** [[id:B5B37EB3-FEAE-45DC-B1B3-DCC82B6D64FF][cis]]
+** [[id:AF6B688F-713D-4EB7-96C4-A0AF45445F6E][qc]]
+** [[id:a5b619a7-db51-4581-8ed5-8106d1b6463e][modular_project]]

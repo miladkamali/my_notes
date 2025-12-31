@@ -194,8 +194,10 @@ CLOSED: [2025-11-08 Sat 14:17] SCHEDULED: <2025-11-02 Sun>
 :END:
 - State "DELEGATED"  from "TODO"       [2025-11-02 Sun 07:07]
 - State "TODO"       from              [2025-11-02 Sun 07:06]
-*** TODO  integrating the endpoints
+*** DONE integrating the endpoints
+CLOSED: [2025-12-31 Wed 11:13]
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-12-31 Wed 11:13]
 - State "TODO"       from              [2025-10-23 Thu 13:31]
 :END:
 ** start handover to Devops team
@@ -221,3 +223,16 @@ CLOSED: [2025-11-08 Sat 14:18] SCHEDULED: <2025-11-02 Sun>
 - State "DONE"       from "TODO"       [2025-11-08 Sat 14:18]
 - State "TODO"       from              [2025-11-02 Sun 07:12]
 :END:
+** set up mail and sms in staging
+*** TODO send an email to set the timeline for delivery
+SCHEDULED: <2025-12-31 Wed>
+:LOGBOOK:
+- State "TODO"       from              [2025-12-31 Wed 11:12]
+:END:
+** code review 
+*** TODO create an email to set up time line for delivery
+SCHEDULED: <2025-12-31 Wed>
+:LOGBOOK:
+- State "TODO"       from              [2025-12-31 Wed 11:13]
+:END:
+*** 
