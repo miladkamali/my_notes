@@ -4,6 +4,8 @@
 #+title: uid-reports
 #+STARTUP: hideblocks hidedrawers
 org-latext-export-to-pdf
+zcat http-service--31-12-2025-*|cut -d '|' -f5|grep "https://api.cloudcarbon.ir/carbon/v4.0/kyc_service/inquiry/national_id\""|jq 'select(.response.status == 200)|.response.body'|sed -e 's/\\"/"/g' -e 's/^"//' -e 's/"$//'|jq 'select(.result.gender=="female" and .result.alive=="false")|[.result.national_id,.result.birth_date,.tracking_number,.timestamp]| join(",")' >> dead_female_data.csv
+
 * daily provider report from csv files
 :PROPERTIES:
   :header-args: :exports results

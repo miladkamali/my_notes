@@ -83,12 +83,6 @@ sudo echo "46.245.89.9 k8s-lb.internal" >> /etc/hosts
 k9s  --kubeconfig  ~/.kube/config
 
 :namespace production
-** DONE access to backups
-CLOSED: [2025-11-26 Wed 13:05] SCHEDULED: <2025-11-10 Mon>
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2025-11-26 Wed 13:05]
-- State "TODO"       from              [2025-11-07 Fri 10:38]
-:END:
 ** DONE get access to vmwave
 CLOSED: [2025-11-26 Wed 13:05] SCHEDULED: <2025-11-07 Fri>
 :LOGBOOK:
