@@ -3,3 +3,72 @@
 :END:
 #+title: spring boot
 [[https://www.youtube.com/watch?v=mPPhcU7oWDU][ Spring Boot Microservice Project Full Course in 6 Hours 🔥🔥🔥 ]]
+* setting up a spring boot project
+** project structure
+com.myapp
+ ├── config/          # SecurityConfig, AppConfig
+ ├── controller/      # UserController, OrderController
+ ├── model/           # User, Order (Entities/POJOs)
+ ├── repository/      # UserRepository, OrderRepository
+ ├── service/         # UserService, OrderService
+ └── Application.java # Main entry point
+
+
+ project-root
+ ├── pom.xml (or build.gradle)
+ ├── src
+ │    ├── main
+ │    │    └── java
+ │    │         └── com/example/shop
+ │    │              ├── controller
+ │    │              │    └── ProductController.java
+ │    │              ├── service
+ │    │              │    ├── ProductService.java       (Interface)
+ │    │              │    └── impl
+ │    │              │         └── ProductServiceImpl.java
+ │    │              └── repository
+ │    │                   └── ProductRepository.java
+ │    └── test
+ │         └── java
+ │              └── com/example/shop
+ │                   ├── controller
+ │                   │    └── ProductControllerTest.java  <-- Unit Test
+ │                   └── service
+ │                        └── ProductServiceTest.java
+** setting up database
+spring.datasource.url=jdbc:postgresql://localhost:5432/appdb
+spring.datasource.username=appuser
+spring.datasource.password=apppassword
+
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.hibernate.ddl-auto=none
+** defining entities
+entity must have all the members set to private and have getters and setters to
+access the data this is essential since almost all the java libraries rely on
+this behavior and by ignoring the getter and setter you can receive null when asking for
+#+begin_src java
+  @Entity
+  @Getter
+  @Setter
+  @NoArgsConstructor // Required by Hibernate
+  // @AllArgsConstructor // Optional: useful for your tests, but not required by Hibernate
+  public class User {
+      @Id
+      @GeneratedValue
+      private Long id;
+      
+      private String name;
+      
+      // ...
+  }
+#+end_src
+
+#+RESULTS:
+
+** defining repositories
+| Interface           | Best For...                                                                            | Returns Collections As   | Key Features                       |
+| Repository          | Strict Security. When you want to expose zero methods by default.                      | N/A                      | Marker only.                       |
+| CrudRepository      | Minimalism. When you want basic DB access across different DB types (Mongo, JPA, etc). | Iterable (Harder to use) | Basic CRUD.                        |
+| ListCrudRepository  | Clean Code. Same as CrudRepository but easier to use in Java.                          | List (Standard)          | Basic CRUD + List support.         |
+| PagingAndSorting... | Large Data. When the table is too big to ever fetch "All".                             | Iterable (Page)          | Pagination & Sorting inputs.       |
+| JpaRepository       | Most Apps. The standard default for SQL databases.                                     | List                     | Flushing, Batching, JPA specifics. |

@@ -6,22 +6,99 @@
 ** TODO Design modular architecture
 ** TODO Estimate modular roadmap
 ** design                                                          :@bentoak:
-*** DELEGATED get access to design rules for acctech                   :neda:
+*** DONE get access to design rules for acctech                        :neda:
+CLOSED: [2026-01-02 Fri 07:20]
 :LOGBOOK:
+- State "DONE"       from "DELEGATED"  [2026-01-02 Fri 07:20]
 - State "DELEGATED"  from              [2025-12-29 Mon 14:18]
 :END:
 *** analyse the ATS structure
-**** DELEGATED ask armin to give you a least of all the acctions in ATS
+**** DONE ask armin to give you a least of all the acctions in ATS
+CLOSED: [2026-01-02 Fri 07:20]
+
 :LOGBOOK:
+- State "DONE"       from "DELEGATED"  [2026-01-02 Fri 07:20]
 - State "DELEGATED"  from "TODO"       [2025-12-29 Mon 14:19]
 - State "TODO"       from "NEXT"       [2025-12-29 Mon 14:19]
 - State "NEXT"       from "TODO"       [2025-12-29 Mon 14:19]
 - State "TODO"       from              [2025-12-29 Mon 14:19]
 :END:
+**** 
 **** NEXT analyze the results for mohamad
-:LOGBOOK:
-- State "NEXT"       from              [2025-12-29 Mon 14:19]
-:END:
+***** list of all permissions
+can_approve_case_by_deputy
+can_archive_case
+can_cancel_attendance_for_interviewers
+can_cancel_interview_attendance_for_self
+can_create_committee_comment
+can_create_interview
+can_create_job_opportunity
+can_create_jobseeker
+can_create_supervision_comment
+can_delete_interview
+can_disable_job_opportunity
+can_edit_job_opportunity
+can_edit_job_seeker
+can_enable_job_opportunity
+can_expire_interviewers_comment_window
+can_feedback
+can_manage_company
+can_manage_note
+can_notify_interview
+can_refer_from_committee
+can_refer_from_deputy
+can_refer_from_supervision
+can_reply_to_referrer_unit
+can_send_case_to_deputy
+can_send_case_to_supervision
+can_send_committee_manager
+can_start_research_on_case
+can_unarchive_case
+can_update_interview
+can_view_case
+can_view_company
+can_view_interviews
+can_view_job_opportunity
+can_view_job_seeker
+***** access and permissions
+| Access Group                     | Permission Code                          |
+| Global Administration            | can_manage                               |
+| Global Administration            | can_create                               |
+| Global Administration            | can_view                                 |
+| Global Administration            | can_manage_company                       |
+| Global Administration            | can_view_company                         |
+| Job Opportunity Management       | can_create_job_opportunity               |
+| Job Opportunity Management       | can_edit_job_opportunity                 |
+| Job Opportunity Management       | can_view_job_opportunity                 |
+| Job Opportunity Management       | can_enable_job_opportunity               |
+| Job Opportunity Management       | can_disable_job_opportunity              |
+| Job Seeker & Case Basics         | can_create_jobseeker                     |
+| Job Seeker & Case Basics         | can_edit_job_seeker                      |
+| Job Seeker & Case Basics         | can_view_job_seeker                      |
+| Job Seeker & Case Basics         | can_view_case                            |
+| Job Seeker & Case Basics         | can_archive_case                         |
+| Job Seeker & Case Basics         | can_unarchive_case                       |
+| Job Seeker & Case Basics         | can_manage_note                          |
+| Interview Coordination           | can_create_interview                     |
+| Interview Coordination           | can_update_interview                     |
+| Interview Coordination           | can_delete_interview                     |
+| Interview Coordination           | can_view_interviews                      |
+| Interview Coordination           | can_notify_interview                     |
+| Interview Coordination           | can_cancel_attendance_for_interviewers   |
+| Interview Coordination           | can_expire_interviewers_comment_window   |
+| Interview Participation          | can_cancel_interview_attendance_for_self |
+| Interview Participation          | can_feedback                             |
+| Workflow: Research & Supervision | can_start_research_on_case               |
+| Workflow: Research & Supervision | can_send_case_to_supervision             |
+| Workflow: Research & Supervision | can_create_supervision_comment           |
+| Workflow: Research & Supervision | can_refer_from_supervision               |
+| Workflow: Deputy Approval        | can_send_case_to_deputy                  |
+| Workflow: Deputy Approval        | can_approve_case_by_deputy               |
+| Workflow: Deputy Approval        | can_refer_from_deputy                    |
+| Workflow: Committee & External   | can_send_committee_manager               |
+| Workflow: Committee & External   | can_create_committee_comment             |
+| Workflow: Committee & External   | can_refer_from_committee                 |
+| Workflow: Committee & External   | can_reply_to_referrer_unit               |
 ** project management
 *** TODO define tasks for hasan
 SCHEDULED: <2025-12-31 Wed>
