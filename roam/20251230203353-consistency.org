@@ -2,6 +2,8 @@
 :ID:       71ac7dfd-7177-41f8-aeae-62af706a328b
 :END:
 #+title: consistency
+* resources
+** TODO [[https://www.youtube.com/watch?v=7CKrumDEoHA][How to Master Consistency to Achieve Your Goals]]    :to_watch:youtube:
 * how to achieve your goals
 ** make plans to reach your goals
 ** create milestones  and celebrate when you reach your milestones
