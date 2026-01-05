@@ -4,3 +4,6 @@
 #+title: things to build
 * self loading cross bow
 https://www.youtube.com/watch?v=_uFdarU_19Y
+* slingshot
+** https://www.youtube.com/watch?v=PIvmThVtsPA
+** https://www.youtube.com/watch?v=PRW_FICeE2E
