@@ -5,7 +5,8 @@
 #+STARTUP: hideblocks hidedrawers
 org-latext-export-to-pdf
 zcat http-service--31-12-2025-*|cut -d '|' -f5|grep "https://api.cloudcarbon.ir/carbon/v4.0/kyc_service/inquiry/national_id\""|jq 'select(.response.status == 200)|.response.body'|sed -e 's/\\"/"/g' -e 's/^"//' -e 's/"$//'|jq 'select(.result.gender=="female" and .result.alive=="false")|[.result.national_id,.result.birth_date,.tracking_number,.timestamp]| join(",")' >> dead_female_data.csv
-
+zcat http-service--25-12-2025-*|cut -d '|' -f5|grep "https://api.cloudcarbon.ir/carbon/v4.0/kyc_service/inquiry/national_id\""|jq 'select(.response.status == 200)|.response.body'|sed -e 's/\\"/"/g' -e 's/^"//' -e 's/"$//'|jq 'select(.result.gender=="female" and .result.alive=="false")|.result.national_id'|wc -l
+zcat http-service--25-12-2025-*|cut -d '|' -f5|grep "https://api.cloudcarbon.ir/carbon/v4.0/kyc_service/inquiry/national_id\""|jq 'select(.response.status == 200)|.response.body'|sed -e 's/\\"/"/g' -e 's/^"//' -e 's/"$//'|wc -l
 * daily provider report from csv files
 :PROPERTIES:
   :header-args: :exports results
@@ -576,7 +577,8 @@ duckdb -column -c "select
 [[file:yekta_daily_personal_info_stats.png]]
 
 
-**** finotech response 
+**** finotech response
+
 #+name:finotech-personal-info-daily-generator
 #+begin_src bash :session my-shell :var _=setup_data
   duckdb -column -c "select 
@@ -595,19 +597,34 @@ duckdb -column -c "select
 #+RESULTS: finotech-personal-info-daily-generator
 |        day | failureCount | successCount | allCount | success_ratio |
 | ---------- | ------------ | ------------ | -------- | ------------- |
-| 2025-12-14 |            6 |           40 |       46 |          0.87 |
-| 2025-12-15 |         2007 |          136 |     2143 |          0.06 |
-| 2025-12-16 |          798 |          626 |     1424 |          0.44 |
-| 2025-12-17 |         1953 |          748 |     2701 |          0.28 |
-| 2025-12-18 |            0 |          876 |      876 |           1.0 |
-| 2025-12-19 |            1 |           57 |       58 |          0.98 |
-| 2025-12-20 |            0 |          820 |      820 |           1.0 |
-| 2025-12-21 |           44 |         1180 |     1224 |          0.96 |
-| 2025-12-22 |            1 |         1499 |     1500 |           1.0 |
-| 2025-12-23 |          463 |         5704 |     6167 |          0.92 |
+| 2025-12-28 |           82 |       102726 |   102808 |           1.0 |
+| 2025-12-29 |           11 |       110194 |   110205 |           1.0 |
+| 2025-12-30 |          433 |       169230 |   169663 |           1.0 |
+| 2025-12-31 |           84 |       251955 |   252039 |           1.0 |
+| 2026-01-01 |           49 |       113728 |   113777 |           1.0 |
+| 2026-01-02 |           38 |        14348 |    14386 |           1.0 |
+| 2026-01-03 |            3 |        12021 |    12024 |           1.0 |
+| 2026-01-04 |           31 |         2800 |     2831 |          0.99 |
 
 
-#+begin_src gnuplot :var data=finotech-personal-info-daily-generator :file finotech_daily_personal_info_stats.png
+
+#+name: dead-female-result
+|        day | deadFemaleCount |          200 |      400 |           402 | deadFemale/success ratio |
+| ---------- |    ------------ | ------------ | -------- | ------------- |                          |
+| 2025-12-25 |            2579 |         8791 |    12888 |             0 |                          |
+| 2025-12-26 |            1687 |         5298 |    11860 |         34495 |                          |
+| 2025-12-27 |              11 |           28 |      423 |         53562 |                          |
+| 2025-12-28 |            6843 |        11681 |    10028 |         81033 |                          |
+| 2025-12-29 |            6273 |         9676 |    13478 |         87040 |                          |
+| 2025-12-30 |           21132 |        29110 |    38832 |        101290 |                          |
+| 2025-12-31 |           51980 |        60397 |    42012 |        149728 |                          |
+| 2026-01-01 |           47724 |        55386 |    30415 |         27942 |                          |
+| 2026-01-02 |            3759 |        12417 |     1953 |             0 |                          |
+| 2026-01-03 |            3477 |        10825 |     1211 |             0 |                          |
+| 2026-01-04 |             991 |         3332 |     1349 |             0 |                          |
+
+
+#+begin_src gnuplot :var data=finotech-personal-info-daily-generator dead=dead-female-result :file finotech_daily_personal_info_stats.png
   reset
   set title "Daily Traffic: Success vs Failure"
   set terminal pngcairo size 1200,600 font "Arial,12"
@@ -620,16 +637,20 @@ duckdb -column -c "select
   set xtics rotate by 90
   set xtics offset -0,-6
   set bmargin 10
+  #set logscale y 10
   set yrange [0:*]
+
 
   # Parse the Org-mode table data
   # 'data' variable automatically handles the array from the previous block
-  plot data using 2:xtic(1) title 'Failure' lc rgb "#cc0000", \
-       '' using 3 title 'Success' lc rgb "#00cc00"
+   plot dead using 2:xtic(1) title 'dead female' lc rgb "#cc0000", \
+        '' using 3 title '200 response' lc rgb "#00cc00"#, dead  using 2:xtic(1) title 'dead-female' lc rgb "#110000"
+  #plot dead using 2:xtic(1) title 'dead female' lc rgb "#cc0000", '' using 3 title '200' lc rgb "#00cc00"
 #+end_src
 
 #+RESULTS:
 [[file:finotech_daily_personal_info_stats.png]]
+
 
 **** comparison of finotech vs yekta when yekta fails
 #+begin_src bash :session my-shell :var _=setup_data

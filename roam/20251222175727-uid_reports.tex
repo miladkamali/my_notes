@@ -1,4 +1,4 @@
-% Created 2026-01-01 Thu 15:40
+% Created 2026-01-04 Sun 12:02
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -20,7 +20,7 @@
  pdftitle={uid-reports},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 30.2 (Org mode 9.7.11)}, 
+ pdfcreator={Emacs 30.2 (Org mode 9.7.39)}, 
  pdflang={English}}
 \begin{document}
 
@@ -28,15 +28,18 @@
 \tableofcontents
 
 org-latext-export-to-pdf
+zcat http-service--31-12-2025-*|cut -d '|' -f5|grep "\url{https://api.cloudcarbon.ir/carbon/v4.0/kyc\_service/inquiry/national\_id\\""|jq} 'select(.response.status \texttt{= 200)|.response.body'|sed -e 's/\textbackslash{}\textbackslash{}"/"/g' -e 's/\textasciicircum{}"//' -e 's/"\$//'|jq 'select(.result.gender=}"female" and .result.alive=="false")|[.result.national\textsubscript{id,.result.birth}\textsubscript{date,.tracking}\textsubscript{number,.timestamp}]| join(",")' >> dead\textsubscript{female}\textsubscript{data.csv}
+zcat http-service--25-12-2025-*|cut -d '|' -f5|grep "\url{https://api.cloudcarbon.ir/carbon/v4.0/kyc\_service/inquiry/national\_id\\""|jq} 'select(.response.status \texttt{= 200)|.response.body'|sed -e 's/\textbackslash{}\textbackslash{}"/"/g' -e 's/\textasciicircum{}"//' -e 's/"\$//'|jq 'select(.result.gender=}"female" and .result.alive=="false")|.result.national\textsubscript{id}'|wc -l
+zcat http-service--25-12-2025-*|cut -d '|' -f5|grep "\url{https://api.cloudcarbon.ir/carbon/v4.0/kyc\_service/inquiry/national\_id\\""|jq} 'select(.response.status == 200)|.response.body'|sed -e 's/$\backslash$\"\emph{"\emph{g' -e 's/\^{}"}}' -e 's/"\$//'|wc -l
 \section{daily provider report from csv files}
-\label{sec:org8e155e3}
+\label{sec:orgfc92c02}
 \subsection{personal information}
-\label{sec:org5027b41}
+\label{sec:orgb9f758b}
 \subsubsection{all providers combined}
-\label{sec:orgcafc7c4}
+\label{sec:orga41fafa}
 \begin{enumerate}
 \item daily report
-\label{sec:org3e3bf41}
+\label{sec:orgcaba90a}
 daily report of all the providers
 \begin{table}[htbp]
 \label{daily-calculator-personal-info}
@@ -44,12 +47,14 @@ daily report of all the providers
 \begin{tabular}{rrrrr}
 day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 ---------- & ------------ & ------------ & -------- & -------------\\
-2025-12-27 & 1 & 13754 & 13755 & 1.0\\
 2025-12-28 & 69 & 129158 & 129227 & 1.0\\
 2025-12-29 & 10 & 144063 & 144073 & 1.0\\
 2025-12-30 & 312 & 185703 & 186015 & 1.0\\
 2025-12-31 & 57 & 251982 & 252039 & 1.0\\
-2026-01-01 & 20 & 108412 & 108432 & 1.0\\
+2026-01-01 & 34 & 113743 & 113777 & 1.0\\
+2026-01-02 & 20 & 14366 & 14386 & 1.0\\
+2026-01-03 & 2 & 12022 & 12024 & 1.0\\
+2026-01-04 & 28 & 2803 & 2831 & 0.99\\
 \end{tabular}
 \end{table}
 \begin{center}
@@ -57,37 +62,37 @@ day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 \label{}
 \end{center}
 \item aggregate hourly report
-\label{sec:org671a1a0}
+\label{sec:org92302b3}
 this report 
 \begin{table}[htbp]
 \label{hourly-calculator-shell}
 \centering
 \begin{tabular}{rrrrr}
 hour\textsubscript{slot} & failureCount & successCount & allCount & success\textsubscript{ratio}\\
-00:00 & 0 & 32872 & 32872 & 1.0\\
-01:00 & 1 & 35307 & 35308 & 1.0\\
-02:00 & 1 & 35649 & 35650 & 1.0\\
-03:00 & 1 & 37789 & 37790 & 1.0\\
-04:00 & 0 & 43750 & 43750 & 1.0\\
-05:00 & 0 & 42486 & 42486 & 1.0\\
-06:00 & 2 & 39759 & 39761 & 1.0\\
-07:00 & 12 & 31715 & 31727 & 1.0\\
-08:00 & 25 & 35736 & 35761 & 1.0\\
-09:00 & 0 & 48018 & 48018 & 1.0\\
-10:00 & 1 & 43397 & 43398 & 1.0\\
-11:00 & 1 & 38275 & 38276 & 1.0\\
-12:00 & 20 & 29119 & 29139 & 1.0\\
-13:00 & 5 & 21361 & 21366 & 1.0\\
-14:00 & 6 & 21496 & 21502 & 1.0\\
-15:00 & 59 & 25535 & 25594 & 1.0\\
-16:00 & 5 & 32180 & 32185 & 1.0\\
-17:00 & 23 & 31057 & 31080 & 1.0\\
-18:00 & 70 & 38170 & 38240 & 1.0\\
-19:00 & 2 & 38298 & 38300 & 1.0\\
-20:00 & 192 & 34361 & 34553 & 0.99\\
-21:00 & 43 & 31541 & 31584 & 1.0\\
-22:00 & 0 & 33061 & 33061 & 1.0\\
-23:00 & 0 & 32140 & 32140 & 1.0\\
+00:00 & 0 & 33383 & 33383 & 1.0\\
+01:00 & 1 & 35716 & 35717 & 1.0\\
+02:00 & 1 & 35977 & 35978 & 1.0\\
+03:00 & 1 & 38204 & 38205 & 1.0\\
+04:00 & 0 & 44398 & 44398 & 1.0\\
+05:00 & 11 & 43662 & 43673 & 1.0\\
+06:00 & 14 & 41663 & 41677 & 1.0\\
+07:00 & 17 & 33858 & 33875 & 1.0\\
+08:00 & 25 & 37117 & 37142 & 1.0\\
+09:00 & 15 & 48881 & 48896 & 1.0\\
+10:00 & 2 & 44268 & 44270 & 1.0\\
+11:00 & 2 & 38228 & 38230 & 1.0\\
+12:00 & 19 & 29171 & 29190 & 1.0\\
+13:00 & 5 & 22085 & 22090 & 1.0\\
+14:00 & 6 & 21891 & 21897 & 1.0\\
+15:00 & 59 & 26312 & 26371 & 1.0\\
+16:00 & 7 & 33206 & 33213 & 1.0\\
+17:00 & 25 & 33433 & 33458 & 1.0\\
+18:00 & 70 & 40404 & 40474 & 1.0\\
+19:00 & 2 & 39157 & 39159 & 1.0\\
+20:00 & 192 & 34390 & 34582 & 0.99\\
+21:00 & 55 & 32063 & 32118 & 1.0\\
+22:00 & 3 & 33704 & 33707 & 1.0\\
+23:00 & 0 & 32669 & 32669 & 1.0\\
 \end{tabular}
 \end{table}
 \begin{center}
@@ -95,7 +100,7 @@ hour\textsubscript{slot} & failureCount & successCount & allCount & success\text
 \label{}
 \end{center}
 \item hourly report
-\label{sec:org3b55cd6}
+\label{sec:org879f745}
 \begin{table}[htbp]
 \label{hourly-daily-calculator-shell}
 \centering
@@ -116,23 +121,72 @@ hour\textsubscript{slot} & failureCount & successCount & success\textsubscript{r
 01-01-11:00 & 0 & 7111 & 1.0\\
 01-01-12:00 & 13 & 6033 & 1.0\\
 01-01-13:00 & 2 & 418 & 1.0\\
-01-01-14:00 & 0 & 245 & 1.0\\
-12-27-08:00 & 0 & 397 & 1.0\\
-12-27-09:00 & 0 & 918 & 1.0\\
-12-27-10:00 & 0 & 765 & 1.0\\
-12-27-11:00 & 0 & 1192 & 1.0\\
-12-27-12:00 & 1 & 950 & 1.0\\
-12-27-13:00 & 0 & 377 & 1.0\\
-12-27-14:00 & 0 & 1176 & 1.0\\
-12-27-15:00 & 0 & 1395 & 1.0\\
-12-27-16:00 & 0 & 1275 & 1.0\\
-12-27-17:00 & 0 & 84 & 1.0\\
-12-27-18:00 & 0 & 65 & 1.0\\
-12-27-19:00 & 0 & 1363 & 1.0\\
-12-27-20:00 & 0 & 1812 & 1.0\\
-12-27-21:00 & 0 & 1019 & 1.0\\
-12-27-22:00 & 0 & 645 & 1.0\\
-12-27-23:00 & 0 & 321 & 1.0\\
+01-01-14:00 & 0 & 535 & 1.0\\
+01-01-15:00 & 0 & 580 & 1.0\\
+01-01-16:00 & 2 & 666 & 1.0\\
+01-01-17:00 & 0 & 776 & 1.0\\
+01-01-18:00 & 0 & 734 & 1.0\\
+01-01-19:00 & 0 & 729 & 1.0\\
+01-01-20:00 & 0 & 568 & 1.0\\
+01-01-21:00 & 12 & 422 & 0.97\\
+01-01-22:00 & 0 & 359 & 1.0\\
+01-01-23:00 & 0 & 207 & 1.0\\
+01-02-00:00 & 0 & 121 & 1.0\\
+01-02-01:00 & 0 & 122 & 1.0\\
+01-02-02:00 & 0 & 72 & 1.0\\
+01-02-03:00 & 0 & 90 & 1.0\\
+01-02-04:00 & 0 & 137 & 1.0\\
+01-02-05:00 & 0 & 236 & 1.0\\
+01-02-06:00 & 0 & 522 & 1.0\\
+01-02-07:00 & 0 & 651 & 1.0\\
+01-02-08:00 & 0 & 747 & 1.0\\
+01-02-09:00 & 15 & 759 & 0.98\\
+01-02-10:00 & 1 & 864 & 1.0\\
+01-02-11:00 & 1 & 673 & 1.0\\
+01-02-12:00 & 0 & 570 & 1.0\\
+01-02-13:00 & 0 & 644 & 1.0\\
+01-02-14:00 & 0 & 803 & 1.0\\
+01-02-15:00 & 0 & 1088 & 1.0\\
+01-02-16:00 & 0 & 1016 & 1.0\\
+01-02-17:00 & 2 & 1129 & 1.0\\
+01-02-18:00 & 0 & 965 & 1.0\\
+01-02-19:00 & 0 & 895 & 1.0\\
+01-02-20:00 & 0 & 783 & 1.0\\
+01-02-21:00 & 0 & 633 & 1.0\\
+01-02-22:00 & 1 & 509 & 1.0\\
+01-02-23:00 & 0 & 337 & 1.0\\
+01-03-00:00 & 0 & 193 & 1.0\\
+01-03-01:00 & 0 & 138 & 1.0\\
+01-03-02:00 & 0 & 128 & 1.0\\
+01-03-03:00 & 0 & 137 & 1.0\\
+01-03-04:00 & 0 & 177 & 1.0\\
+01-03-05:00 & 0 & 448 & 1.0\\
+01-03-06:00 & 0 & 652 & 1.0\\
+01-03-07:00 & 0 & 907 & 1.0\\
+01-03-08:00 & 0 & 1031 & 1.0\\
+01-03-09:00 & 0 & 1022 & 1.0\\
+01-03-10:00 & 0 & 772 & 1.0\\
+01-03-11:00 & 0 & 472 & 1.0\\
+01-03-12:00 & 0 & 432 & 1.0\\
+01-03-13:00 & 0 & 457 & 1.0\\
+01-03-14:00 & 0 & 478 & 1.0\\
+01-03-15:00 & 0 & 504 & 1.0\\
+01-03-16:00 & 0 & 619 & 1.0\\
+01-03-17:00 & 0 & 555 & 1.0\\
+01-03-18:00 & 0 & 600 & 1.0\\
+01-03-19:00 & 0 & 598 & 1.0\\
+01-03-20:00 & 0 & 490 & 1.0\\
+01-03-21:00 & 0 & 486 & 1.0\\
+01-03-22:00 & 2 & 420 & 1.0\\
+01-03-23:00 & 0 & 306 & 1.0\\
+01-04-00:00 & 0 & 197 & 1.0\\
+01-04-01:00 & 0 & 149 & 1.0\\
+01-04-02:00 & 0 & 128 & 1.0\\
+01-04-03:00 & 0 & 188 & 1.0\\
+01-04-04:00 & 0 & 334 & 1.0\\
+01-04-05:00 & 11 & 492 & 0.98\\
+01-04-06:00 & 12 & 730 & 0.98\\
+01-04-07:00 & 5 & 585 & 0.99\\
 12-28-00:00 & 0 & 190 & 1.0\\
 12-28-01:00 & 0 & 142 & 1.0\\
 12-28-02:00 & 0 & 229 & 1.0\\
@@ -238,22 +292,22 @@ hour\textsubscript{slot} & failureCount & successCount & success\textsubscript{r
 \label{}
 \end{center}
 \item national id
-\label{sec:orgd42fd30}
+\label{sec:orgb380992}
 number of duplicated national ids that we receive each day
 \begin{table}[htbp]
 \label{daily-calculator-national-id-personal-info}
 \centering
-\begin{tabular}{rrrrl}
-gnuplot> & set & output &  & \\
-gnuplot> &  &  &  & \\
-gnuplot> & day & national\textsubscript{ids}\textsubscript{count} & allCount & ratio\\
----------- & ------------------ & -------- & ----- & \\
-2025-12-27 & 13140 & 13755 & 0.96 & \\
-2025-12-28 & 37666 & 129227 & 0.29 & \\
-2025-12-29 & 29914 & 144073 & 0.21 & \\
-2025-12-30 & 27965 & 186015 & 0.15 & \\
-2025-12-31 & 16876 & 252039 & 0.07 & \\
-2026-01-01 & 8171 & 108432 & 0.08 & \\
+\begin{tabular}{rrrr}
+day & national\textsubscript{ids}\textsubscript{count} & allCount & ratio\\
+---------- & ------------------ & -------- & -----\\
+2025-12-28 & 37666 & 129227 & 0.29\\
+2025-12-29 & 29914 & 144073 & 0.21\\
+2025-12-30 & 27965 & 186015 & 0.15\\
+2025-12-31 & 16876 & 252039 & 0.07\\
+2026-01-01 & 13058 & 113777 & 0.11\\
+2026-01-02 & 13214 & 14386 & 0.92\\
+2026-01-03 & 11338 & 12024 & 0.94\\
+2026-01-04 & 2594 & 2831 & 0.92\\
 \end{tabular}
 \end{table}
 \begin{center}
@@ -262,25 +316,27 @@ gnuplot> & day & national\textsubscript{ids}\textsubscript{count} & allCount & r
 \end{center}
 \end{enumerate}
 \subsubsection{each provider}
-\label{sec:org02f806b}
+\label{sec:orgaf5aeef}
 \begin{enumerate}
 \item yekta
-\label{sec:org5806af9}
+\label{sec:orge3623e2}
 \begin{enumerate}
 \item daily report
-\label{sec:org8361a8b}
+\label{sec:orgc4e6f16}
 \begin{table}[htbp]
 \label{yekta-personal-daily-report-generator}
 \centering
 \begin{tabular}{rrrrr}
 day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 ---------- & ------------ & ------------ & -------- & -------------\\
-2025-12-27 & 3172 & 4269 & 7441 & 0.57\\
 2025-12-28 & 102808 & 26356 & 129164 & 0.2\\
 2025-12-29 & 110205 & 33868 & 144073 & 0.24\\
 2025-12-30 & 169663 & 16352 & 186015 & 0.09\\
 2025-12-31 & 198257 & 0 & 198257 & 0.0\\
-2026-01-01 & 27 & 0 & 27 & 0.0\\
+2026-01-01 & 49 & 0 & 49 & 0.0\\
+2026-01-02 & 38 & 0 & 38 & 0.0\\
+2026-01-03 & 3 & 0 & 3 & 0.0\\
+2026-01-04 & 31 & 0 & 31 & 0.0\\
 \end{tabular}
 \end{table}
 
@@ -291,19 +347,44 @@ day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 \end{center}
 \end{enumerate}
 \item finotech response
-\label{sec:org37bcb5b}
+\label{sec:org10dff95}
+
 \begin{table}[htbp]
 \label{finotech-personal-info-daily-generator}
 \centering
 \begin{tabular}{rrrrr}
 day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 ---------- & ------------ & ------------ & -------- & -------------\\
-2025-12-27 & 1 & 3171 & 3172 & 1.0\\
 2025-12-28 & 82 & 102726 & 102808 & 1.0\\
 2025-12-29 & 11 & 110194 & 110205 & 1.0\\
 2025-12-30 & 433 & 169230 & 169663 & 1.0\\
 2025-12-31 & 84 & 251955 & 252039 & 1.0\\
-2026-01-01 & 27 & 108405 & 108432 & 1.0\\
+2026-01-01 & 49 & 113728 & 113777 & 1.0\\
+2026-01-02 & 38 & 14348 & 14386 & 1.0\\
+2026-01-03 & 3 & 12021 & 12024 & 1.0\\
+2026-01-04 & 31 & 2800 & 2831 & 0.99\\
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[htbp]
+\label{dead-female-result}
+\centering
+\begin{tabular}{rrrrrl}
+day & deadFemaleCount & 200 & 400 & 402 & deadFemale/success ratio\\
+---------- & ------------ & ------------ & -------- & ------------- & \\
+2025-12-25 & 2579 & 8791 & 12888 & 0 & \\
+2025-12-26 & 1687 & 5298 & 11860 & 34495 & \\
+2025-12-27 & 11 & 28 & 423 & 53562 & \\
+2025-12-28 & 6843 & 11681 & 10028 & 81033 & \\
+2025-12-29 & 6273 & 9676 & 13478 & 87040 & \\
+2025-12-30 & 21132 & 29110 & 38832 & 101290 & \\
+2025-12-31 & 51980 & 60397 & 42012 & 149728 & \\
+2026-01-01 & 47724 & 55386 & 30415 & 27942 & \\
+2026-01-02 & 3759 & 12417 & 1953 & 0 & \\
+2026-01-03 & 3477 & 10825 & 1211 & 0 & \\
+2026-01-04 & 991 & 3332 & 1349 & 0 & \\
 \end{tabular}
 \end{table}
 
@@ -313,34 +394,35 @@ day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 \label{}
 \end{center}
 \item comparison of finotech vs yekta when yekta fails
-\label{sec:org2d15072}
+\label{sec:org60a5035}
 \begin{table}[htbp]
 \label{}
 \centering
 \begin{tabular}{rrrrr}
 day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 ---------- & ------------ & ------------ & -------- & -------------\\
-2025-12-27 & 1 & 3171 & 3172 & 1.0\\
 2025-12-28 & 82 & 102726 & 102808 & 1.0\\
 2025-12-29 & 11 & 110194 & 110205 & 1.0\\
 2025-12-30 & 433 & 169230 & 169663 & 1.0\\
 2025-12-31 & 84 & 198173 & 198257 & 1.0\\
-2026-01-01 & 27 & 0 & 27 & 0.0\\
+2026-01-01 & 49 & 0 & 49 & 0.0\\
+2026-01-02 & 38 & 0 & 38 & 0.0\\
+2026-01-03 & 3 & 0 & 3 & 0.0\\
+2026-01-04 & 31 & 0 & 31 & 0.0\\
 \end{tabular}
 \end{table}
 \item toman
-\label{sec:org3a9250d}
+\label{sec:org24d8c6e}
 
 \begin{enumerate}
 \item daily
-\label{sec:org8609d56}
+\label{sec:orgfa8511a}
 \begin{table}[htbp]
 \label{toman-personal-daily-report-generator}
 \centering
-\begin{tabular}{rrrrr}
+\begin{tabular}{lllll}
 day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 ---------- & ------------ & ------------ & -------- & -------------\\
-2025-12-27 & 7441 & 6314 & 13755 & 0.46\\
 2025-12-28 & 8010 & 63 & 8073 & 0.01\\
 \end{tabular}
 \end{table}
@@ -351,24 +433,26 @@ day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 \end{enumerate}
 \end{enumerate}
 \subsection{personal image}
-\label{sec:orgc3c8519}
+\label{sec:orga82f111}
 \subsubsection{all providers}
-\label{sec:orgc21de9d}
+\label{sec:org2ec821b}
 \begin{enumerate}
 \item daily
-\label{sec:org8027c2a}
+\label{sec:org658745f}
 \begin{table}[htbp]
 \label{daily-calculator-personal-image}
 \centering
 \begin{tabular}{rrrrr}
 day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 ---------- & ------------ & ------------ & -------- & -------------\\
-2025-12-27 & 612 & 92 & 704 & 0.13\\
 2025-12-28 & 1473 & 261 & 1734 & 0.15\\
 2025-12-29 & 2796 & 477 & 3273 & 0.15\\
 2025-12-30 & 3669 & 1924 & 5593 & 0.34\\
 2025-12-31 & 1596 & 383 & 1979 & 0.19\\
-2026-01-01 & 247 & 183 & 430 & 0.43\\
+2026-01-01 & 337 & 321 & 658 & 0.49\\
+2026-01-02 & 185 & 220 & 405 & 0.54\\
+2026-01-03 & 352 & 216 & 568 & 0.38\\
+2026-01-04 & 257 & 51 & 308 & 0.17\\
 \end{tabular}
 \end{table}
 \begin{center}
@@ -376,36 +460,36 @@ day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 \label{}
 \end{center}
 \item hourly
-\label{sec:org6927164}
+\label{sec:orge494da3}
 \begin{table}[htbp]
 \label{hourly-calculator-personal-image-shell}
 \centering
 \begin{tabular}{rrrrr}
 hour\textsubscript{slot} & failureCount & successCount & allCount & success\textsubscript{ratio}\\
-00:00 & 48 & 2 & 50 & 0.04\\
-01:00 & 59 & 4 & 63 & 0.06\\
-02:00 & 65 & 1 & 66 & 0.02\\
-03:00 & 137 & 4 & 141 & 0.03\\
-04:00 & 364 & 1 & 365 & 0.0\\
-05:00 & 616 & 13 & 629 & 0.02\\
-06:00 & 516 & 185 & 701 & 0.26\\
-07:00 & 509 & 210 & 719 & 0.29\\
-08:00 & 887 & 136 & 1023 & 0.13\\
-09:00 & 1141 & 145 & 1286 & 0.11\\
-10:00 & 1111 & 98 & 1209 & 0.08\\
-11:00 & 452 & 288 & 740 & 0.39\\
-12:00 & 228 & 294 & 522 & 0.56\\
-13:00 & 200 & 250 & 450 & 0.56\\
-14:00 & 324 & 284 & 608 & 0.47\\
-15:00 & 260 & 348 & 608 & 0.57\\
-16:00 & 483 & 264 & 747 & 0.35\\
-17:00 & 858 & 284 & 1142 & 0.25\\
-18:00 & 605 & 264 & 869 & 0.3\\
-19:00 & 555 & 164 & 719 & 0.23\\
-20:00 & 471 & 54 & 525 & 0.1\\
-21:00 & 263 & 16 & 279 & 0.06\\
-22:00 & 174 & 5 & 179 & 0.03\\
-23:00 & 67 & 6 & 73 & 0.08\\
+00:00 & 58 & 8 & 66 & 0.12\\
+01:00 & 65 & 9 & 74 & 0.12\\
+02:00 & 79 & 3 & 82 & 0.04\\
+03:00 & 156 & 7 & 163 & 0.04\\
+04:00 & 419 & 13 & 432 & 0.03\\
+05:00 & 672 & 33 & 705 & 0.05\\
+06:00 & 589 & 222 & 811 & 0.27\\
+07:00 & 579 & 240 & 819 & 0.29\\
+08:00 & 875 & 159 & 1034 & 0.15\\
+09:00 & 1127 & 172 & 1299 & 0.13\\
+10:00 & 1086 & 120 & 1206 & 0.1\\
+11:00 & 404 & 311 & 715 & 0.43\\
+12:00 & 245 & 302 & 547 & 0.55\\
+13:00 & 222 & 256 & 478 & 0.54\\
+14:00 & 360 & 286 & 646 & 0.44\\
+15:00 & 277 & 377 & 654 & 0.58\\
+16:00 & 454 & 319 & 773 & 0.41\\
+17:00 & 865 & 343 & 1208 & 0.28\\
+18:00 & 600 & 305 & 905 & 0.34\\
+19:00 & 586 & 201 & 787 & 0.26\\
+20:00 & 438 & 93 & 531 & 0.18\\
+21:00 & 256 & 41 & 297 & 0.14\\
+22:00 & 166 & 21 & 187 & 0.11\\
+23:00 & 87 & 12 & 99 & 0.12\\
 \end{tabular}
 \end{table}
 
@@ -415,7 +499,7 @@ hour\textsubscript{slot} & failureCount & successCount & allCount & success\text
 \label{}
 \end{center}
 \item national\textsubscript{id}
-\label{sec:orgb38f614}
+\label{sec:org01ae907}
 number of duplicated national ids that we receive each day
 \begin{table}[htbp]
 \label{daily-calculator-national-id-personal-image}
@@ -423,12 +507,14 @@ number of duplicated national ids that we receive each day
 \begin{tabular}{rrrr}
 day & national\textsubscript{ids}\textsubscript{count} & allCount & ratio\\
 ---------- & ------------------ & -------- & -----\\
-2025-12-27 & 91 & 92 & 0.99\\
 2025-12-28 & 259 & 261 & 0.99\\
 2025-12-29 & 471 & 477 & 0.99\\
 2025-12-30 & 1880 & 1924 & 0.98\\
 2025-12-31 & 377 & 383 & 0.98\\
-2026-01-01 & 177 & 183 & 0.97\\
+2026-01-01 & 313 & 321 & 0.98\\
+2026-01-02 & 218 & 220 & 0.99\\
+2026-01-03 & 212 & 216 & 0.98\\
+2026-01-04 & 49 & 51 & 0.96\\
 \end{tabular}
 \end{table}
 \begin{center}
@@ -437,10 +523,10 @@ day & national\textsubscript{ids}\textsubscript{count} & allCount & ratio\\
 \end{center}
 \end{enumerate}
 \subsubsection{each provider}
-\label{sec:org2f7b5cc}
+\label{sec:orgd2288db}
 \begin{enumerate}
 \item yekta
-\label{sec:orga8d8bc1}
+\label{sec:org125c700}
 
 \begin{table}[htbp]
 \label{yekta-personal-image-daily-report-generator}
@@ -448,12 +534,12 @@ day & national\textsubscript{ids}\textsubscript{count} & allCount & ratio\\
 \begin{tabular}{rrrrr}
 day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 ---------- & ------------ & ------------ & -------- & -------------\\
-2025-12-27 & 704 & 0 & 704 & 0.0\\
 2025-12-28 & 1734 & 0 & 1734 & 0.0\\
 2025-12-29 & 3273 & 0 & 3273 & 0.0\\
 2025-12-30 & 5593 & 0 & 5593 & 0.0\\
 2025-12-31 & 1694 & 0 & 1694 & 0.0\\
 2026-01-01 & 1 & 0 & 1 & 0.0\\
+2026-01-04 & 1 & 0 & 1 & 0.0\\
 \end{tabular}
 \end{table}
 
@@ -463,19 +549,21 @@ day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 \label{}
 \end{center}
 \item finotech
-\label{sec:org2c58144}
+\label{sec:org5486c5b}
 \begin{table}[htbp]
 \label{finotech-personal-daily-stat-generator}
 \centering
 \begin{tabular}{rrrrr}
 day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 ---------- & ------------ & ------------ & -------- & -------------\\
-2025-12-27 & 608 & 92 & 700 & 0.13\\
 2025-12-28 & 699 & 261 & 960 & 0.27\\
 2025-12-29 & 2077 & 477 & 2554 & 0.19\\
 2025-12-30 & 3090 & 1923 & 5013 & 0.38\\
 2025-12-31 & 1464 & 383 & 1847 & 0.21\\
-2026-01-01 & 247 & 183 & 430 & 0.43\\
+2026-01-01 & 337 & 321 & 658 & 0.49\\
+2026-01-02 & 185 & 220 & 405 & 0.54\\
+2026-01-03 & 352 & 216 & 568 & 0.38\\
+2026-01-04 & 257 & 51 & 308 & 0.17\\
 \end{tabular}
 \end{table}
 
@@ -484,17 +572,16 @@ day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 \label{}
 \end{center}
 \item toman
-\label{sec:orgcef2a9c}
+\label{sec:org56eeffa}
 \begin{enumerate}
 \item daily
-\label{sec:org0560a9c}
+\label{sec:orgb04e9aa}
 \begin{table}[htbp]
 \label{toman-personal-image-daily-report-generator}
 \centering
-\begin{tabular}{rrrrr}
+\begin{tabular}{lllll}
 day & failureCount & successCount & allCount & success\textsubscript{ratio}\\
 ---------- & ------------ & ------------ & -------- & -------------\\
-2025-12-27 & 1 & 0 & 1 & 0.0\\
 2025-12-28 & 1 & 0 & 1 & 0.0\\
 \end{tabular}
 \end{table}
