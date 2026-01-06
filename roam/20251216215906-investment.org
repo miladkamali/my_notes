@@ -4,4 +4,12 @@
 #+title: investment
 * samaneh
 0.331 eth before cleanup
+
+* milad
 0.187 eth before cleanup
+
+* trc 20 usdt TEz1HhJrNViWHHUzq5wyVWHTPtzawXGzsq
+https://usdt.tokenview.io/en/address/TEz1HhJrNViWHHUzq5wyVWHTPtzawXGzsq
+
+* bitcoin bc1qx5c0rlmdher60p7v5jrunw94yea4fjmadh7u69
+https://www.cointracker.io/wallet/bitcoin

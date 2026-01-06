@@ -11,9 +11,21 @@
 #+begin_src bash :noweb yes
   <<date>>
   echo "finotech_national_id_info"
-  zcat http-service--$date* |cut -d '|' -f5|grep "https://api.cloudcarbon.ir/carbon/v4.0/kyc_service/inquiry/national_id"|grep -v "national_id_photo"|jq '.response.status'|sort|uniq -c
+  zcat http-service--04-01-2026* |cut -d '|' -f5|grep "https://api.cloudcarbon.ir/carbon/v4.0/kyc_service/inquiry/national_id"|grep -v "national_id_photo"|jq '.response.status'|sort|uniq -c
   echo "finotech_national_id_image"
-  zcat http-service--$date* |cut -d '|' -f5|grep "https://api.cloudcarbon.ir/carbon/v4.0/kyc_service/inquiry/national_id_photo"|jq '.response.status'|sort|uniq -c
+  zcat http-service--04-01-2026-1* |cut -d '|' -f5|grep "https://api.cloudcarbon.ir/carbon/v4.0/kyc_service/inquiry/national_id_photo"|jq '.response.status'|sort|uniq -c
   echo "dead females finotech"
-  zcat http-service--$date*|cut -d '|' -f5|grep "https://api.cloudcarbon.ir/carbon/v4.0/kyc_service/inquiry/national_id"|grep -v "national_id_photo"|jq 'select(.response.status == 200)|.response.body'|sed -e 's/\\"/"/g' -e 's/^"//' -e 's/"$//'|jq 'select(.result.gender=="female" and .result.alive=="false")|.tracking_number'|wc -l
+  zcat http-service--04-01-2026-1*|cut -d '|' -f5|grep "https://api.cloudcarbon.ir/carbon/v4.0/kyc_service/inquiry/national_id"|grep -v "national_id_photo"|jq 'select(.response.status == 200)|.response.body'|sed -e 's/\\"/"/g' -e 's/^"//' -e 's/"$//'|jq 'select(.result.gender=="female" and .result.alive=="false")|.tracking_number'|wc -l
+  echo "yekta national image"
+  zcat http-service--04-01-2026-1*|cut -d '|' -f5 |grep "https://api-gateway.yektasmartcity.ir/api/v1/Inquiry/PersonalNationalCardImage"|jq '.response.status'|sort|uniq -c
+  echo "yekta get personal info"
+  zcat http-service--04-01-2026-1*|cut -d '|' -f5 |grep "https://api-gateway.yektasmartcity.ir/api/v1/Inquiry/GetPersonalInfo"|jq '.response.status'|sort|uniq -c
 #+end_src
+
+#+RESULTS:
+| finotech_national_id_info  |          |          |      |
+| finotech_national_id_image |          |          |      |
+| dead                       | females  | finotech |      |
+| 0                          |          |          |      |
+| yekta                      | national | image    |      |
+| yekta                      | get      | oersibak | info |
