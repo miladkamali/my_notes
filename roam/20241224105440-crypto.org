@@ -5,6 +5,12 @@
 * exchanges
 ** dydx
 ** toobit
+* security
+** TODO [[https://www.youtube.com/watch?v=U6TFeEVrzt0][How Did My Crypto Disappear While I Slept?]]       :@watching:@youtube:
+SCHEDULED: <2026-01-09 Fri>
+:LOGBOOK:
+- State "TODO"       from              [2026-01-07 Wed 18:55]
+:END:
 * tools to get information
 ** https://playwright.dev/
 ** https://github.com/Kaliiiiiiiiii-Vinyzu/patchright-python

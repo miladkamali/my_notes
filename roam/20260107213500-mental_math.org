@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       0CAD1AC2-9385-4F79-961B-1EC6F449D90C
+:END:
+#+title: mental math
+
+[[https://www.youtube.com/watch?v=1wAr2Kbe-GM][How to Calculate Faster than a Calculator - Mental Math #1]]
+[[https://www.youtube.com/watch?v=YllkyKiQMS8][How to Calculate Faster than a Calculator - Mental Math #2]]
+[[https://www.youtube.com/watch?v=ypOOBqf3LLY][People% of 99 Don't Know this Secret Math Trick | Crazy Math Percentage Trick]]
