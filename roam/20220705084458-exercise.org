@@ -50,6 +50,16 @@ you can also hit true failure using knee pushup.
 - push up with your legs on
 ** increase core muscle strength
 ** increase the range of motion on push up
+** TODO [[https://www.youtube.com/watch?v=5rEoCJ2arYs][How to Do 90+ Push Ups in 1 Set (PROVEN Method)]]
+incline push up to failure
+normal push up to failure
+raise push up to failure
+knee push up to failure
+
+1 time a day 3 times a week
+:LOGBOOK:
+- State "TODO"       from              [2026-01-09 Fri 17:25]
+:END:
 * [[https://www.youtube.com/watch?v=hEXjX6nwDoY][How To Start Calisthenics at Home for Beginners (No Equipment)]]
 * hand
 ** [[https://www.youtube.com/watch?v=ZSzz6JChQhE][5 Steps to Get Bigger Arms in 30 Days]]

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       65367C44-BBDD-4731-B660-8763BB6CCB96
+:END:
+#+title: gost
+
+create a http 
+gost -L "http://0.0.0.0:8080"
