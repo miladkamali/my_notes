@@ -79,3 +79,209 @@ CLOSED: [2025-11-26 Wed 13:05] SCHEDULED: <2025-11-11 Tue>
 - State "NEXT"       from "TODO"       [2025-11-08 Sat 14:18]
 - State "TODO"       from              [2025-11-08 Sat 14:18]
 :END:
+** how to recover dns
+Below is a full, practical DNS recon workflow used in real security assessments and audits.
+It assumes Linux/macOS, but works on Windows (WSL) as well.
+
+⚠️ Legal note: Only run this against domains you own or have permission to test.
+
+⸻
+
+🔍 Full DNS Recon Workflow (End-to-End)
+
+Phase 0 — Setup (tools)
+
+sudo apt install -y dnsutils jq
+go install github.com/owasp-amass/amass/v4/...@latest
+go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+go install github.com/projectdiscovery/httpx/cmd/httpx@latest
+
+
+⸻
+
+Phase 1 — Baseline DNS records (authoritative truth)
+
+Query authoritative name servers
+
+dig example.com NS +short
+
+Pull core records
+
+for t in A AAAA MX TXT NS SOA CAA SRV; do
+  dig example.com $t +noall +answer
+done
+
+✔️ Identifies:
+	•	Hosting providers
+	•	Mail providers
+	•	SPF / DKIM / DMARC
+	•	Certificate restrictions (CAA)
+
+⸻
+
+Phase 2 — Zone transfer check (rare but critical)
+
+for ns in $(dig example.com NS +short); do
+  dig @$ns example.com AXFR
+done
+
+✅ If this works → YOU ARE DONE
+❌ If refused (normal) → continue
+
+⸻
+
+Phase 3 — Passive subdomain enumeration (non-intrusive)
+
+Subfinder (fast passive sources)
+
+subfinder -d example.com -all -recursive -o subs_subfinder.txt
+
+Amass (deep passive intelligence)
+
+amass enum -passive -d example.com -o subs_amass.txt
+
+Combine + deduplicate
+
+cat subs_*.txt | sort -u > subs_all.txt
+
+✔️ Finds:
+	•	Cloud assets
+	•	Forgotten services
+	•	Historical DNS
+
+⸻
+
+Phase 4 — Resolve DNS (what actually exists)
+
+cat subs_all.txt | dnsx -silent -a -aaaa -cname -mx -ns > resolved.txt
+
+Or basic:
+
+while read d; do dig $d A +short; done < subs_all.txt
+
+✔️ Removes dead subdomains
+✔️ Maps subdomain → IP
+
+⸻
+
+Phase 5 — Identify tech exposure
+
+HTTP/S services
+
+cat subs_all.txt | httpx -title -status-code -tech-detect -o http_alive.txt
+
+✔️ Finds:
+	•	Admin panels
+	•	APIs
+	•	Old dashboards
+	•	CDN behavior
+
+⸻
+
+Phase 6 — Mail & DNS security posture
+
+SPF
+
+dig example.com TXT | grep spf
+
+DMARC
+
+dig _dmarc.example.com TXT +short
+
+DKIM discovery
+
+for s in default google selector1 selector2 mail; do
+  dig $s._domainkey.example.com TXT +short
+done
+
+✔️ Detects spoofing risk
+✔️ Misconfigured mail infra
+
+⸻
+
+Phase 7 — ASN & infrastructure mapping
+
+whois $(dig example.com A +short | head -n1)
+
+Or bulk ASN discovery:
+
+amass intel -ip $(dig example.com A +short)
+
+✔️ Reveals:
+	•	Cloud provider
+	•	Network ranges
+	•	Shadow IT
+
+⸻
+
+Phase 8 — Historical DNS (passive databases)
+
+Use at least one:
+	•	VirusTotal
+	•	SecurityTrails
+	•	DNSDB (paid)
+	•	crt.sh (cert transparency)
+
+Cert Transparency trick
+
+curl -s "https://crt.sh/?q=%25.example.com&output=json" \
+| jq -r '.[].name_value' | sed 's/\*\.//' | sort -u > crt_subs.txt
+
+Merge again:
+
+cat subs_all.txt crt_subs.txt | sort -u > subs_final.txt
+
+
+⸻
+
+Phase 9 — High-risk checks (manual review)
+
+Look for:
+	•	admin.*
+	•	dev.*
+	•	test.*
+	•	old.*
+	•	vpn.*
+	•	mail.*
+	•	jira.*
+	•	grafana.*
+
+grep -Ei "(admin|dev|test|vpn|grafana|jira)" subs_final.txt
+
+
+⸻
+
+Phase 10 — Final deliverables
+
+Clean asset list
+
+subs_final.txt
+resolved.txt
+http_alive.txt
+
+Optional JSON export
+
+amass enum -d example.com -json amass.json
+
+
+⸻
+
+🧠 What this workflow gives you
+
+✅ Maximum possible DNS visibility
+✅ Zero brute force
+✅ Audit-ready output
+✅ Real-world attack surface mapping
+
+⸻
+
+🔥 Want upgrades?
+
+I can:
+	•	Convert this into one script
+	•	Output CSV / JSON
+	•	Add alerting for DNS changes
+	•	Tailor for red team / blue team
+	•	Make it CI-friendly
+
+Just tell me your goal (security audit, bug bounty, migration, monitoring).

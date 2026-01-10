@@ -24,3 +24,4 @@ printf "ovpn-1136\nsgkzga\n87654321\n"|openvpn3 session-start --dco true --confi
 
 
 
+91.92.214.61 hgv0a1f1c1j.sn.mynetname.net

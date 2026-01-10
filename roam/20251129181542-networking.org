@@ -24,3 +24,14 @@ list of network devices are located at sys/class/net
 eno1 bios provided index number
 ens192 PCIe hot PLUG enabled
 enp11s0 physical location based upon bus/slot
+** setting up name servers
+/etc/resolv.conf
+nameserver 5.202.100.100
+nameserver 178.22.122.100
+nameserver 8.8.8.8
+nameserver 4.2.4.2
+
+
+resolvectl status
+
+systemctl restart systemd-resolved
