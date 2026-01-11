@@ -12,3 +12,23 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 once this is set you should use
 brew update
 to update t
+
+* environment variables
+| Variable                     | Description                                                                                               |
+| HOMEBREW_NO_AUTO_UPDATE      | If set, Homebrew will not auto-update before running commands.                                            |
+| HOMEBREW_AUTO_UPDATE_SECS    | Only auto-update if this many seconds have passed since the last update (default: 3600).                  |
+| HOMEBREW_NO_INSTALL_FROM_API | Forces Homebrew to use local Git taps instead of the JSON API (makes it slower but more offline-capable). |
+| HOMEBREW_API_DOMAIN          | Used to point Homebrew to a mirror of the JSON API if the main one is slow/blocked.                       |
+| HOMEBREW_CURL_RETRIES        | Number of times to retry a download (default: 3).                                                         |
+| HOMEBREW_CACHE               | The directory where Homebrew stores downloaded files (default: ~/Library/Caches/Homebrew).                |
+| HOMEBREW_TEMP                | The directory where Homebrew performs temporary builds (default: /tmp).                                   |
+| HOMEBREW_LOGS                | Where Homebrew writes its logs (default: ~/Library/Logs/Homebrew).                                        |
+| HOMEBREW_PREFIX              | The root of where Homebrew is installed (e.g., /opt/homebrew).                                            |
+| HOMEBREW_MAKE_JOBS           | Number of parallel make jobs to use when compiling from source (default: number of CPU cores).            |
+| HOMEBREW_BAT                 | If set (and bat is installed), Homebrew uses bat for colorized output when viewing formulae.              |
+| HOMEBREW_EDITOR              | The editor Homebrew uses for commands like brew edit (falls back to $EDITOR or vim).                      |
+| HOMEBREW_NO_ANALYTICS        | Completely disables Homebrew’s anonymous usage tracking.                                                  |
+| HOMEBREW_NO_EMOJI            | If you prefer a boring terminal, this hides the beer mugs and other emojis.                               |
+| HOMEBREW_NO_ENV_HINTS        | Stops Homebrew from suggesting environment variables (like HOMEBREW_NO_ANALYTICS).                        |
+| HOMEBREW_VERBOSE             | Always run Homebrew in "talkative" mode (the equivalent of adding -v to every command).                   |
+| HOMEBREW_GITHUB_API_TOKEN    | Uses a Personal Access Token (PAT) for GitHub to avoid rate-limiting on formula lookups.                  |

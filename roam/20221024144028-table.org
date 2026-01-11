@@ -2,6 +2,10 @@
 :ID:       4a5cb504-9db9-41cd-84b2-250d60eef3aa
 :END:
 #+title: table
+* convert csv into table
+C-c |
+C-u C-C |
+
 * insert/remove column
 Alt Shift right
 Alt Shift Left
