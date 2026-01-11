@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       05A612BB-260E-492D-B8E9-286EE2007F0A
+:END:
+#+title: ssh
+starting ssh agent
+eval "$(ssh-agent -s)"
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
