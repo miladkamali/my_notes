@@ -1,5 +1,4 @@
 :PROPERTIES:
-pen
 :ID:       8ae95a67-5d39-45f0-8376-44038e36bf15
 :END:
 #+title: openvpn

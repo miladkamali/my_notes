@@ -38,3 +38,19 @@ utf8.RuneCountInString("string")
 
 len(string) returns the byte size of string and not the actual characters
 ** 
+** import
+for importing anything you use
+#+begin_src go
+  import "packageName"
+  import (
+    	"packageName1"
+    	"packageName2"
+  )
+#+end_src
+
+#+begin_src go
+  import (
+   	. "packagename" //all the functions of the package are accessible here
+  	pk "namespace/package" //shortname for package
+  )
+#+end_src
