@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       e0b4ae4b-b27e-4986-aa5c-58f83b5e59b4
+:END:
+#+title: C++
+* compilation process
+pre-processor processes headers and source files then compiler  compiles them into object files
+then a linker link them into a executable or a library 
+* data types
+type name
+geeksforgeeks.org/c-data-types/
+| name   | type    | length  | range         |
+|--------+---------+---------+---------------|
+| bool   | boolean | 8bit    | true or false |
+|--------+---------+---------+---------------|
+| int    |         | 4 bytes |               |
+| float  |         | 4 bytes |               |
+| double |         | 8 bytes |               |
+| char   |         |         |               |
+| bool   |         |         |               |
+| bool   |         |         |               |
+| bool   |         |         |               |
+| bool   |         |         |               |
+| bool   |         |         |               |
+| bool   |         |         |               |
+| bool   |         |         |               |
+| bool   |         |         |               |
+** enums
+#+begin_src c++
+  enum Color{ red,green,blue};
+  enum Color2{red=1,green=3,blue=10};
+  std::cout<<"color is"<<Color::red<<std::endl;
+#+end_src
+** structs
+#+begin_src C++
+  enum Color{ red,green,blue};
+  struct product{
+    int weight;
+    double value;
+    Color color;
+  }
+#+end_src
+* standard library
+** array
+#+begin_src c++
+  #include<array>
+  std::array<int,10> cars;
+  car[1] = 2;
+#+end_src
+* concepts to review
+** integer overflow
+** floating point errors 

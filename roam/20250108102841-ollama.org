@@ -3,3 +3,6 @@
 :END:
 #+title: ollama
 https://blog.driftingruby.com/ollama-context-window/
+
+
+https://git.ir/article/ollama-setup/

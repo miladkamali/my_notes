@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       D9EEBBB3-C160-4371-B95A-BFD7EE48A13D
+:END:
+#+title: proxy
+mitmdump proxy is the one i used to create a proxy and new authority for browser
+to intercept all the traffic for kucoin when doing research with salman and vahid

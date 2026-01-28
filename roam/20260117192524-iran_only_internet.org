@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       7DFF5B3C-6DD2-4EA8-9363-B54AE4CF2946
+:END:
+#+title: iran only internet
+* repos
+** https://www.arvancloud.ir/fa/dev/linux-repository
+** https://repo.iut.ac.ir/
+** https://docker.ir/
+* search engine
+** zarebin.ir
+* software
+** soft98.ir
+** p30download.ir
+** p30day.ir
+** par30games.ir
+** downloadha.com
+** myket.ir
+** sarzamindownload.com
+** softsaz.ir
+** softsaaz.ir
+** literoid.net
+* files sharing
+** files.ir

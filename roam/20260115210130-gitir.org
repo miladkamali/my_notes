@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       E8C38F33-F87F-40C8-B680-1091C04E16EC
+:END:
+#+title: gitir
+* courses
+** c network programming
+https://en.git.ir/linkedin-network-programming-in-c/
+** one point perspective
+https://en.git.ir/skillshare-one-point-perspective-drawing-easy-guide-to-add-depth-and-dimension-to-your-sketches/
+** Blender Masterclass : Learn Blender From Scratch To Advance
+https://en.git.ir/udemy-blender-masterclass-learn-blender-from-scratch-to-advance/
+** qt 6
+https://en.git.ir/udemy-qt-6-core-beginners-with-c-2/
+** draw box
+https://en.git.ir/udemy-draw-boxes-learn-the-hidden-keys-to-drawing-anything-well/
+** qt 5
+https://en.git.ir/udemy-qt-5-application-development-with-qt-5-2-in-1/

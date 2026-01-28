@@ -4,10 +4,25 @@
 #+title: UID infrastructure
 #+STARTUP: overview
 * taking back control of infrastructure                                :@uid:
+** uid zytel ip
+81.91.155.88
+** uid shuttle ip
+84.241.10.73
 ** create a dependency graph of our services
+
 ** infra git
 https://gitlab2.uid.ir/services/docker-compose-file
 https://gitlab2.uid.ir/infrastructure/platform-infra
+ARGO_PASS|dUOTk0JWeWnTu
+CI_DEPLOY_PASSWORD|RmU7YwopwCqpy4bohZMF
+CI_REGISTRY|registry.uid.ir
+MINIO_ACCESS_KEY|uid
+MINIO_SECRET_KEY|3tVa3RqOcfRL
+NPM_EMAIL|admin@example.org
+NPM_PASSWORD|RW5SSVk0anQ=
+NPM_USERNAME|admin
+REGISTRY_PASS|DSsn8OmkaT9c
+
 ** get address of grafana
 https://grafana.u-id.ir
 admin
@@ -382,3 +397,5 @@ CLOSED: [2025-12-14 Sun 18:25] DEADLINE: <2025-12-06 Sat>
 |    |                 |                                                                                          |                                                          |                                                                                                                                       |                            |                         |                      |                |
 | 24 | user new server | milad : 123                                                                              |                                                          |                                                                                                                                       |                            |                         |                      |                |
 | 25 |                 |                                                                                          |                                                          |                                                                                                                                       |                            |                         |                      |                |
+* commands
+docker exec -t psql-uid-crypto   pg_dump -U uid   -d uid_crypto_db > /home/pishro/backup/crypto/uid-crypto/db/test.sql

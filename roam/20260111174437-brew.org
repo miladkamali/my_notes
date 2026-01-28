@@ -1,7 +1,13 @@
 :PROPERTIES:
 :ID:       8E476FFF-F829-46FD-A5DD-2F785D18EED6
 :END:
+<<<<<<< HEAD
 #+title: brew
+=======
+#+title: bre
+to force brew to use proxy
+export ALL_PROXY=proxyIP:port
+>>>>>>> 9e5578a (update)
 
 * setting up fixed intervals for updates
 export HOMEBREW_AUTO_UPDATE_SECS=86400

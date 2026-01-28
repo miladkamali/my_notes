@@ -6,3 +6,6 @@
 ** [[https://www.youtube.com/watch?v=s_o8dwzRlu4&pp=ygUKa3ViZXJuYXRlcw%3D%3D][crash course]]
 ** [[https://www.youtube.com/watch?v=X48VuDVv0do&pp=ygUKa3ViZXJuYXRlcw%3D%3D][full tutorial 2020]]
 ** [[https://www.youtube.com/watch?v=MTHGoGUFpvE][zero to hero 2025]]
+* commands
+updating core dns
+kubectl -n kube-config edit configmap coredns --kubeconfig=./kube/config

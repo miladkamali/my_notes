@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       29bf0dd8-99b7-4708-b85b-3ef43c722028
+:END:
+#+title: qt
+* installation on fedora
+qt-assistant qt-common qt-demos qt-devel qt-doc qt-examples
+* learning qt
+** Core
+** widgets
+** QML
+* main components
+** qt creator 
+* build process
+QT MOC( Meta Object Compiler) comes in pre-processing stage and add a few things
+to the files before the compilation continues to create the QT magic happens
+* QDebug
+qInstallMessageHandler
+qInfo()
+qWarning()
+qDebug()
+qCritical()
+qFatal()
+* slot and signals
+QObject.connect(senderAddress,sender signal,receive address 
+emit signal
