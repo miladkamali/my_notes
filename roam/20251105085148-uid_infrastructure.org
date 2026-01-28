@@ -348,6 +348,25 @@ CLOSED: [2025-12-14 Sun 18:25] DEADLINE: <2025-12-06 Sat>
 - State "DONE"       from "TODO"       [2025-12-14 Sun 18:25]
 - State "TODO"       from              [2025-12-03 Wed 13:07]
 :END:
+** ILO
+
+vpn info
+L2tp preshared
+address: idc-vpn.asiatech.ir
+username: BINESH-HOOSHMAND
+password: Binesh-Hooshmand@1544
+Preshared Key : asiatech
+
+
+|         ILO ip | server name |  server address | username      | password      | note                                    |
+| 172.17.174.238 | uid14       |                 | administrator | administrator |                                         |
+| 172.17.174.239 | ?           |                 |               |               | user and password are not administrator |
+| 172.17.174.231 | minio       |                 | administrator | administrator |                                         |
+| 172.17.174.226 | ?           |                 |               |               | cant connect seems it's not there       |
+| 172.17.174.228 | esx         |   192.168.100.4 | administrator | administrator |                                         |
+| 172.17.174.231 | esx         | 192.168.100.209 | administrator | administrator |                                         |
+| 172.17.174.237 | esx         | 1921.168.100.13 | administrator | administrator |                                         |
+|                |             |                 |               |               |                                         |
 * key issues to be solved
 ** create a plan that we can detect issues with services in less than 5 minutes
 ** figure out how we can use N8N

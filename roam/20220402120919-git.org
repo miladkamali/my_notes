@@ -17,5 +17,13 @@
 4b4603a3cd16..a56e6fe3969
 * git presentation
 ** [[https://git-school.github.io/visualizing-git/][a very good visual presentation for each git commands]]
+* setting up proxy for git
+for a specific repo
+git config http.proxy "socks5h://127.0.0.1:1080"
+git config https.proxy "socks5h://127.0.0.1:1080"
+
+git config --global http.proxy "socks5h://127.0.0.1:1080"
+git config --global https.proxy "socks5h://127.0.0.1:1080"
 * alternative
 https://github.com/jj-vcs/jj
+
