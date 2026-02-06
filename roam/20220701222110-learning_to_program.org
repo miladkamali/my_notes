@@ -6,6 +6,10 @@
 ** https://www.freecodecamp.org/news/the-10-most-popular-coding-challenge-websites-of-2016-fb8a5672d22f/
 ** https://www.geeksforgeeks.org/7-best-coding-challenge-websites-in-2020/
 ** https://flatironschool.com/blog/best-websites-to-practice-coding-for-beginners/
+** https://craftinginterpreters.com/
+** youtube
+*** [[https://www.youtube.com/c/Mr4thProgramming][Mr. 4th Programming]]
+*** [[https://www.youtube.com/playlist?list=PLnuhp3Xd9PYTt6svyQPyRO_AAuMWGxPzU][Handmade Hero Complete]]
 * sites that offers exercise
 ** https://www.spoj.com
 ** https://exercism.org

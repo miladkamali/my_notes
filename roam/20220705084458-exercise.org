@@ -100,3 +100,7 @@ in and out your fingers will move in and out
 :LOGBOOK:
 - State "TODO"       from              [2025-10-29 Wed 22:04]
 :END:
+** TODO [[https://www.youtube.com/watch?v=CKJI029ZikY&pp=ugUEEgJlbg%3D%3D][ how Duck Walks completely change the human body]]
+:LOGBOOK:
+- State "TODO"       from              [2026-02-06 Fri 20:25]
+:END:
