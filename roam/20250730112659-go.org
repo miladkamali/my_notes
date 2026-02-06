@@ -2,6 +2,8 @@
 :ID:       83ebf5cd-e7c4-48b1-9894-3c6585a387c1
 :END:
 #+title: go
+* tutorials
+** [[https://www.youtube.com/watch?v=bymQakvTY40][10 hour file system]]
 * basic types 
 |         |   |
 |---------+---|

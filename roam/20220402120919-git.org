@@ -26,4 +26,9 @@ git config --global http.proxy "socks5h://127.0.0.1:1080"
 git config --global https.proxy "socks5h://127.0.0.1:1080"
 * alternative
 https://github.com/jj-vcs/jj
+* git lfs
+brew install git-lfs
+git lfs install
 
+In the repo, fetch + checkout LFS files
+git lfs pull
