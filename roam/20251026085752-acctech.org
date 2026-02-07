@@ -7,7 +7,8 @@
 install openfortivpn
 sudo dnf install openfortivpn
 connect with
-sudo openfortivpn tellwork.acctechco.com:10443 --username=Alavian_Bentoak --password=uLsvkbb66Pc@u!
+sudo openfortivpn tellwork.acctechco.com:10443 --username=Alavian_Bentoak --trusted-cert cca59376e43d1cfa5715ed1ccee7e1e025c81a9a34cf958c3b04f4a58ab93941
+password: ?bHo*ER@mL!o$raD
 ** pam
 https://dmz-pam.acctechco.com:8282
 user:p.karami
