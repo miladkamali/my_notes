@@ -104,3 +104,11 @@ in and out your fingers will move in and out
 :LOGBOOK:
 - State "TODO"       from              [2026-02-06 Fri 20:25]
 :END:
+** TODO [[https://www.youtube.com/watch?v=DJsBFxRkeRs][ 5 navy seals exercise]]
+:LOGBOOK:
+- State "TODO"       from              [2026-02-07 Sat 13:51]
+:END:
+** TODO [[https://www.youtube.com/watch?v=BfsC3WsYAJ0][ the vikings new something about strength we didn't]]
+:LOGBOOK:
+- State "TODO"       from              [2026-02-07 Sat 13:56]
+:END:
