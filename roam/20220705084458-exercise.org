@@ -112,3 +112,12 @@ in and out your fingers will move in and out
 :LOGBOOK:
 - State "TODO"       from              [2026-02-07 Sat 13:56]
 :END:
+** NEXT [[https://www.youtube.com/watch?v=AUuduLoaD6I&pp=ugUEEgJlbtIHCQmRCgGHKiGM7w%3D%3D][ 3 Exercises That Fix 95% Of Your Problems ]]
+:LOGBOOK:
+- State "NEXT"       from "TODO"       [2026-02-08 Sun 05:29]
+- State "TODO"       from              [2026-02-08 Sun 05:28]
+:END:
+** TODO [[https://www.youtube.com/watch?v=AUuduLoaD6I][ 5 Bodyweight Exercises That Fix 95% Of Your Mobility Problems ]]
+:LOGBOOK:
+- State "TODO"       from              [2026-02-08 Sun 05:29]
+:END:
