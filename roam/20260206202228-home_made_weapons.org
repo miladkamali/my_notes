@@ -4,3 +4,5 @@
 #+title: home made weapons
 * crossbow
 https://www.youtube.com/shorts/y5k_PeOpGBw
+
+[[https://www.youtube.com/shorts/hYGXlL2qyoY][sling shot]]
