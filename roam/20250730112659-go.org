@@ -4,6 +4,7 @@
 #+title: go
 * tutorials
 ** [[https://www.youtube.com/watch?v=bymQakvTY40][10 hour file system]]
+** [[https://www.youtube.com/watch?v=LMrxfWB6sbQ][ Simple Redis Server From Scratch In Golang - FULL PROJECT ]]
 * basic types 
 |         |   |
 |---------+---|

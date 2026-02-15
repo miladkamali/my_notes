@@ -120,4 +120,8 @@ in and out your fingers will move in and out
 ** TODO [[https://www.youtube.com/watch?v=AUuduLoaD6I][ 5 Bodyweight Exercises That Fix 95% Of Your Mobility Problems ]]
 :LOGBOOK:
 - State "TODO"       from              [2026-02-08 Sun 05:29]
+** TODO [[https://www.youtube.com/watch?v=vkAM8wwc9S0][ Can These Push Ups Really Change 70% Of Your Body ]]
+:LOGBOOK:
+- State "TODO"       from              [2026-02-09 Mon 12:29]
+>>>>>>> 74fc3fa (update)
 :END:
