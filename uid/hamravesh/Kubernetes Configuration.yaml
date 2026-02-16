@@ -1,0 +1,17 @@
+clusters:
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://62.220.126.73:6443
+  name: uid-c138
+contexts:
+- context:
+    cluster: uid-c138
+    user: uid-c138-admin
+  name: uid-c138
+current-context: uid-c138
+kind: Config
+preferences: {}
+users:
+- name: uid-c138-admin
+  user:
+    token: eyJhbGciOiJSUzI1NiIsImtpZCI6InRSczI4QUhvamdZMThvMjBRWDVtaDNHVFVQNkRzb2Nod05CeDk2S0FtODgifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlLXN5c3RlbSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJ1aWQtYzEzOC1hZG1pbi10b2tlbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50Lm5hbWUiOiJ1aWQtYzEzOC1hZG1pbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6ImNhZDc4MTlhLWNiZGYtNGNiNC1iY2U3LWY5MjA5MDQyNzhmNyIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDprdWJlLXN5c3RlbTp1aWQtYzEzOC1hZG1pbiJ9.Ucj66j9opE4gDPKkXVqJeyY83h1yzuMqDOysTiLTSbUV9Vie8jq-BrxHACxYa7XYnMOsXE0cvJViAbPZsDtSSK5uvUA3Z2ZD5kiYOrZwFVUzplXB6Ec_ILU5VVVF1Ahj-DGWZGOlSIomfIW13rdVrGt_1KvEzeVD6RVHujFF4OZJgmGStL3A5PPYIBa3Z-ZV9amfhHKC1djzBZSUO0yXXMhwlpnTO2c_75oe55IfFrj24V1rkeFyXDOAaN3CDAKzUpZwAS7wnrcp8qGzkYq6eEz8ob8YN_0JyS-h5QipFAcGfVtSWHLFNHsp9miNZIsDMoindvDGex7L0PqQl2ORLQ
