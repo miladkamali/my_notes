@@ -1,0 +1,60 @@
+;;
+;; Domain:     u-id.ir.
+;; Exported:   2026-02-17 14:19:56
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+u-id.ir	3600	IN	SOA	aria.ns.cloudflare.com. dns.cloudflare.com. 2052300459 10000 2400 604800 3600
+
+;; NS Records
+u-id.ir.	86400	IN	NS	aria.ns.cloudflare.com.
+u-id.ir.	86400	IN	NS	jeremy.ns.cloudflare.com.
+
+;; A Records
+adminer.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+argocd-cli.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+argocd.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+ceph.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+dispatch.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+gotify.u-id.ir.	1	IN	A	46.245.89.4 ; cf_tags=cf-proxied:false
+grafana.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+health-check.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+kubedash.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+minio.u-id.ir.	1	IN	A	46.245.89.4 ; cf_tags=cf-proxied:false
+stage-console-minio.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+stage-dispatch-core.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+stage-dispatcher.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+stage-face-detection.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+stage-liveness.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+stage-minio.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+stage-ocr.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+stage-saja.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+u-id.ir.	1	IN	A	77.238.121.155 ; cf_tags=cf-proxied:false
+web-stage-temporal.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+web-temporal.u-id.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+www.u-id.ir.	1	IN	A	77.238.121.155 ; cf_tags=cf-proxied:false
+
+;; TXT Records
+_acme-challenge.u-id.ir.	1	IN	TXT	"sulCogHt9SpAIkSH9zrIxEv8uYwpCpQrJCUVhQdc3ec"
+u-id.ir.	1	IN	TXT	"v=spf1 include:spf.brevo.com mx ~all"
+u-id.ir.	1	IN	TXT	"brevo-code:39343faafb843bb963fd0bebff7e2aec"

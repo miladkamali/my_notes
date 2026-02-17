@@ -1,0 +1,58 @@
+;;
+;; Domain:     u-id.net.
+;; Exported:   2026-02-17 14:19:30
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+u-id.net	3600	IN	SOA	aria.ns.cloudflare.com. dns.cloudflare.com. 2052300457 10000 2400 604800 3600
+
+;; NS Records
+u-id.net.	86400	IN	NS	aria.ns.cloudflare.com.
+u-id.net.	86400	IN	NS	jeremy.ns.cloudflare.com.
+
+;; A Records
+api-bff.u-id.net.	1	IN	A	46.245.89.14 ; cf_tags=cf-proxied:false
+api-naji.u-id.net.	1	IN	A	185.12.101.166 ; cf_tags=cf-proxied:false
+bff.u-id.net.	1	IN	A	46.245.89.14 ; cf_tags=cf-proxied:false
+blog.u-id.net.	1	IN	A	77.238.121.155 ; cf_tags=cf-proxied:false
+ca-api-bff.u-id.net.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+ca-bff.u-id.net.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+ca-panel-bff.u-id.net.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+minio.u-id.net.	1	IN	A	185.12.101.166 ; cf_tags=cf-proxied:false
+naji.u-id.net.	1	IN	A	185.12.101.166 ; cf_tags=cf-proxied:false
+panel-naji.u-id.net.	1	IN	A	185.12.101.166 ; cf_tags=cf-proxied:false
+redirect-bff.u-id.net.	1	IN	A	185.112.35.131 ; cf_tags=cf-proxied:false
+redirect-dev-bff.u-id.net.	1	IN	A	81.91.155.98 ; cf_tags=cf-proxied:false
+*.u-id.net.	1	IN	A	77.238.121.155 ; cf_tags=cf-proxied:false
+u-id.net.	1	IN	A	77.238.121.155 ; cf_tags=cf-proxied:false
+www.u-id.net.	1	IN	A	77.238.121.155 ; cf_tags=cf-proxied:false
+
+;; TXT Records
+_acme-challenge.u-id.net.	1	IN	TXT	"zzY-a_2w4NUUlVmP8XMu2Ten3ol8zZj2H-W7mW-k7GY"
+_acme-challenge.u-id.net.	1	IN	TXT	"DPPtvrtjeDLKQwR--eh2peKztyhV-ei3sgqGaioyHAQ"
+_acme-challenge.u-id.net.	1	IN	TXT	"rA2_pCeLA2eevtRGkvFtBBtMJZHlEO8DB-OAnkD4IV4"
+_acme-challenge.u-id.net.	1	IN	TXT	"BvFo3Yz4doIsv2sytbdiooykB1ZAX5NTgLWN0oSjDfA"
+_dmarc.u-id.net.	1	IN	TXT	"v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com"
+mail._domainkey.u-id.net.	1	IN	TXT	"k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDeMVIzrCa3T14JsNY0IRv5/2V1/v2itlviLQBwXsa7shBD6TrBkswsFUToPyMRWC9tbR/5ey0nRBH0ZVxp+lsmTxid2Y2z+FApQ6ra2VsXfbJP3HE6wAO0YTVEJt1TmeczhEd2Jiz/fcabIISgXEdSpTYJhb0ct0VJRxcg4c8c7wIDAQAB "
+u-id.net.	1	IN	TXT	"brevo-code:39343faafb843bb963fd0bebff7e2aec"
+u-id.net.	1	IN	TXT	"v=spf1 include:spf.brevo.com mx ~all"

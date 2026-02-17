@@ -1,0 +1,105 @@
+;;
+;; Domain:     uid.ir.
+;; Exported:   2026-02-17 14:19:44
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+uid.ir	3600	IN	SOA	aria.ns.cloudflare.com. dns.cloudflare.com. 2052300458 10000 2400 604800 3600
+
+;; NS Records
+uid.ir.	86400	IN	NS	aria.ns.cloudflare.com.
+uid.ir.	86400	IN	NS	jeremy.ns.cloudflare.com.
+
+;; A Records
+admin-hoppscotch.uid.ir.	1	IN	A	46.245.89.4 ; cf_tags=cf-proxied:false
+alert.uid.ir.	1	IN	A	46.245.89.4 ; cf_tags=cf-proxied:false
+api-auth.uid.ir.	1	IN	A	46.245.89.14 ; cf_tags=cf-proxied:false
+api-bff.uid.ir.	1	IN	A	46.245.89.14 ; cf_tags=cf-proxied:false
+api-crypto.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+api-hoppscotch.uid.ir.	1	IN	A	46.245.89.4 ; cf_tags=cf-proxied:false
+api-sana.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+bff-panel.uid.ir.	1	IN	A	46.245.89.14 ; cf_tags=cf-proxied:false
+bff.uid.ir.	1	IN	A	46.245.89.14 ; cf_tags=cf-proxied:false
+bpa.uid.ir.	1	IN	A	46.245.89.14 ; cf_tags=cf-proxied:false
+bp-crypto.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+callcenter-crypto.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+callcenter-labour.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+callcenter-sana.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+ca-minio.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+cloud.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+conflu.uid.ir.	1	IN	A	46.245.89.4 ; cf_tags=cf-proxied:false
+cpa.uid.ir.	1	IN	A	46.245.89.14 ; cf_tags=cf-proxied:false
+crypto.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+dev-saja.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+dispatch-core.uid.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+dispatcher.uid.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+doc-auth-api.uid.ir.	1	IN	A	81.91.155.98 ; cf_tags=cf-proxied:false
+email.uid.ir.	1	IN	A	81.91.155.98 ; cf_tags=cf-proxied:false
+face-detection.uid.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+files.uid.ir.	1	IN	A	46.245.89.4 ; cf_tags=cf-proxied:false
+gitlab2.uid.ir.	1	IN	A	46.245.89.4 ; cf_tags=cf-proxied:false
+hoppscotch.uid.ir.	1	IN	A	46.245.89.4 ; cf_tags=cf-proxied:false
+internal-auth-api.uid.ir.	1	IN	A	46.245.89.14 ; cf_tags=cf-proxied:false
+jira.uid.ir.	1	IN	A	46.245.89.4 ; cf_tags=cf-proxied:false
+json-api.uid.ir.	1	IN	A	46.245.89.14 ; cf_tags=cf-proxied:false
+liveness.uid.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+mfs.uid.ir.	1	IN	A	46.245.89.7 ; cf_tags=cf-proxied:false
+minio.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+mm.uid.ir.	1	IN	A	46.245.89.4 ; cf_tags=cf-proxied:false
+nexus.uid.ir.	1	IN	A	46.245.89.4 ; cf_tags=cf-proxied:false
+ocr.uid.ir.	1	IN	A	46.245.89.9 ; cf_tags=cf-proxied:false
+operator-panel.uid.ir.	1	IN	A	185.112.35.131 ; cf_tags=cf-proxied:false
+redirect-sana.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+registry.uid.ir.	1	IN	A	46.245.89.4 ; cf_tags=cf-proxied:false
+simplified-auth-api.uid.ir.	1	IN	A	46.245.89.14 ; cf_tags=cf-proxied:false
+stage-callcenter-sana.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+stage-dispatcher.uid.ir.	1	IN	A	46.245.89.14 ; cf_tags=cf-proxied:false
+sup.uid.ir.	1	IN	A	46.245.89.14 ; cf_tags=cf-proxied:false
+www.uid.ir.	1	IN	A	46.245.89.15 ; cf_tags=cf-proxied:false
+
+;; CNAME Records
+argo.uid.ir.	1	IN	CNAME	c12.hamravesh.onhamravesh.ir. ; cf_tags=cf-proxied:false
+sana.uid.ir.	1	IN	CNAME	cloud.uid.ir. ; cf_tags=cf-proxied:false
+uid.ir.	1	IN	CNAME	u-id.net. ; cf_tags=cf-proxied:false
+
+;; MX Records
+uid.ir.	600	IN	MX	10 email.uid.ir.
+
+;; SRV Records
+_imaps._tcp.uid.ir.	300	IN	SRV	1 1 993 email.uid.ir.
+_imap._tcp.uid.ir.	300	IN	SRV	1 1 143 email.uid.ir.
+_pop3s._tcp.uid.ir.	1	IN	SRV	1 1 995 email.uid.ir.
+_pop3._tcp.uid.ir.	300	IN	SRV	1 1 110 email.uid.ir.
+_submission._tcp.uid.ir.	300	IN	SRV	1 1 587 email.uid.ir.
+
+;; TXT Records
+_acme-challenge.uid.ir.	1	IN	TXT	"fQi4gQigVDDlhn0kNsxk2RzW_OuTIdBx9-aw_ZkOVR8"
+_acme-challenge.uid.ir.	1	IN	TXT	"jFHRMEbnIls9tDkUnlKyLtx5KqhjzAR4CAyf0pI1kYk"
+_acme-challenge.uid.ir.	1	IN	TXT	"-4b5MxdppYGo1Cj2629OrkUlJxNrVzzMM-ETExLhqtY"
+_acme-challenge.uid.ir.	1	IN	TXT	"ECEqZghR5Sa81QsqxTkxBL3_OInrkBcOzcXW-RgDbfo"
+default._domainkey.email.uid.ir.	1	IN	TXT	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoPH+lcptrwB5+iVxyqmcbYBzqzAJ4Od1VZahRo/icMbrVj1+5FgJ0vbqvrA6pKo7uuwaXMCTxAba/fIihQ7lm0rBn3xNTLe48cyiXY80df2DxC/R2MvkwhNeufzJY7IInlt5ShYEI5JIKIh246Ba8XIYp6sTzfY/Di7+P076unbYTq8uPwCVGCf8R8mE2kOqY" "v0bqGE6FKoMooudKPcNibphYxVF2CQtyd45b6Jc8NpD96rVKxLfh0GrnnrJS/kxEgmk2RB9hxbF/JJMUnoFyzA5C328IFlwvmPFNcqn9FxuO8nc+oXWQChoJNVzAOxrJpKR1UPsg145alXwEWQt8QIDAQAB"
+dkim._domainkey.uid.ir.	1	IN	TXT	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoPH+lcptrwB5+iVxyqmcbYBzqzAJ4Od1VZahRo/icMbrVj1+5FgJ0vbqvrA6pKo7uuwaXMCTxAba/fIihQ7lm0rBn3xNTLe48cyiXY80df2DxC/R2MvkwhNeufzJY7IInlt5ShYEI5JIKIh246Ba8XIYp6sTzfY/Di7+P076unbYTq8uPwCVGCf8R8mE2kOqY" "v0bqGE6FKoMooudKPcNibphYxVF2CQtyd45b6Jc8NpD96rVKxLfh0GrnnrJS/kxEgmk2RB9hxbF/JJMUnoFyzA5C328IFlwvmPFNcqn9FxuO8nc+oXWQChoJNVzAOxrJpKR1UPsg145alXwEWQt8QIDAQAB"
+_dmarc.uid.ir.	1	IN	TXT	"v=DMARC1; p=reject; rua=mailto:admin@uid.ir; ruf=mailto:admin@uid.ir; adkim=s; aspf=s"
+google._domainkey.mail.uid.ir.	1	IN	TXT	"v=DKIM1;t=s;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArLnBO89moWMSnEKooMZ8hw7WBs9led1xjK1+oeBup+4rFKMn5Ga3HhaluP49zbSERXeqBgx/qgcUpKcBFdtTyWfHyuPO790byjCiZ6IhV62jCPTkOU1X4BQfU5ovbhkn449b5AZPUPoB3rpkZtIrGx2GZiVRw7wCBMCxOLn9AOyzqu7FEKie+qehnbruUiy/vSz6j" "kvVZkD9SDcxIyx/NKIqLJXzumPBN8n3Jc69DTxS5eCaU2XkH9d1qxNgb3dS3lr4TtqRObsqIa6GZXUsbOfvCZZCuVJR09R5//RUW6AGz95vWaTHrGyToESp1Y4OJXc/UTCc8lS3F69ar07pNwIDAQAB"
+uid.ir.	300	IN	TXT	"v=spf1 mx a:email.uid.ir ~all"
+uid.ir.	1	IN	TXT	"google-site-verification=OSY6xvofDqgUY_nIvAlXtxYkTDBquXaoVepIDifpy_M"
