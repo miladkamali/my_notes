@@ -236,3 +236,24 @@ SCHEDULED: <2025-12-31 Wed>
 - State "TODO"       from              [2025-12-31 Wed 11:13]
 :END:
 *** 
+* ats actions
+** part 2
+*** number 1 0.5 day
+*** number 2 is done
+*** number 3 is done
+*** number 4 is done 0.5 day
+*** number 5 change base entity to have created at and updated at 3 days
+*** number 6 Iexeception handler vs middleware ( we are not going to accept it)
+*** number 7 needs more discussion
+*** number 8 we are going to do 0.5 day
+*** number 9 we are going to do 0.5 day
+*** number 10 is done
+*** number 11 needs discussion, we are already using it
+** part 3
+*** number 1 needs discussion, we are already doing that
+*** number 2 is preference and not in the required scope or best practices, we need to discuss it
+*** number 3   3 days
+*** number 4  0.5 days
+*** number 5 is not applicapale to every where we are going to do conversation 0.5 days
+*** number 6 log in database is not reasonable, need discussion
+*** number 7 1 days
