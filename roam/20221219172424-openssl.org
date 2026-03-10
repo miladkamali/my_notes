@@ -238,5 +238,8 @@ RSA TOOLS Options in OpenSSL
       openssl rsa -in key.pem -RSAPublicKey_out -out pubkey.pem
 
 * encrypting and decrypting messages
+encrypt command
 echo -n "hello world" | openssl enc -aes256 -base64
+
+decrypt command
 echo "U2FsdGVkX199Gm/PHkqP4bEGlmgwLxDHZ3f1b/vlOc4="|openssl enc -d -aes256 -base64

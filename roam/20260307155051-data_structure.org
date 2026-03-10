@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       3F963175-85E1-4293-A179-C05C4049E00A
+:END:
+#+title: data structure
+* Core
+** Array
+** Vector
+** LinkedList
+** Stack
+** Queue
+** Deque
+** Bitset
+** Matrix
+* lookup ordering and priority 
+** Hash table
+** Set
+** Balanced BST
+** Ordered Map
+** Ordered Set
+** Heap
+** priority queue
+** Skip list
+** LRU cache (usually hash map + doubly linked list)
+* Trees, hierarchies, and range-query structures
+** general tree/n-ary tree
+** binary tree
+** B-tree/ B+ tree
+** Trie/prefix tree/radix tree
+** Disjoint set/ union find
+** prefix sum array
+** Fenwick tree/binary indexed tree
+** segment tree
+** Interval tree
