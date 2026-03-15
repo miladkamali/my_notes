@@ -1,0 +1,1223 @@
+:PROPERTIES:
+:ID:       40E9FDB8-003A-45DF-B1FB-24895B680210
+:END:
+#+title: algorithm cpp
+* algorithm
+** search/inspect algorithm
+*** all_of
+Check if every item matches a rule
+std::all_of(v.begin(), v.end(), [](int x){ return x > 0; });
+*** any_of
+Check if at least one item matches
+std::any_of(v.begin(), v.end(), [](int x){ return x == 0; });
+*** none_of
+Check if no item matches
+std::none_of(v.begin(), v.end(), [](int x){ return x < 0; });
+*** for_each
+Run an action for every item
+std::for_each(v.begin(), v.end(), [](int& x){ x *= 2; });
+*** for_each_n
+Run an action on the first n items
+std::for_each_n(v.begin(), 3, [](int& x){ x += 10; });
+*** count
+Count exact matches
+std::count(v.begin(), v.end(), 5);
+*** count_if
+Count items matching a rule
+std::count_if(v.begin(), v.end(), [](int x){ return x % 2 == 0; });
+*** mismatch
+Find first place where two ranges differ
+auto p = std::mismatch(a.begin(), a.end(), b.begin());
+*** equal
+Check if two ranges are equal
+std::equal(a.begin(), a.end(), b.begin());
+*** find
+Find a specific value
+auto it = std::find(v.begin(), v.end(), 42);
+*** find_if
+Find first item matching a rule
+auto it = std::find_if(v.begin(), v.end(), [](int x){ return x > 10; });
+*** find_if_not
+Find first item not matching a rule
+auto it = std::find_if_not(v.begin(), v.end(), [](int x){ return x > 0; });
+*** adjacent_find
+Find equal neighbors
+auto it = std::adjacent_find(v.begin(), v.end());
+*** search
+Find a subsequence inside another
+auto it = std::search(text.begin(), text.end(), pat.begin(), pat.end());
+*** search_n
+Find n repeated values in a row
+auto it = std::search_n(v.begin(), v.end(), 3, 0);
+*** find_end
+Find the last occurrence of a subsequence
+auto it = std::find_end(text.begin(), text.end(), pat.begin(), pat.end());
+*** find_first_of
+Find first element that appears in another set
+auto it = std::find_first_of(v.begin(), v.end(), needles.begin(), needles.end());
+** Copy / move / fill / generate
+*** copy
+Copy one range into another
+std::copy(src.begin(), src.end(), dst.begin());
+*** copy_n
+Copy first n elements
+std::copy_n(src.begin(), 5, dst.begin());
+*** copy_if
+Copy only matching elements
+std::copy_if(v.begin(), v.end(), out.begin(), [](int x){ return x > 0; });
+*** copy_backward
+Copy into overlapping range from the back
+std::copy_backward(v.begin(), v.begin()+3, v.begin()+5);
+*** move
+Move elements instead of copying
+std::move(src.begin(), src.end(), dst.begin());
+*** move_backward
+Move into overlapping range from the back
+std::move_backward(v.begin(), v.begin()+3, v.begin()+5);
+*** fill
+Set every element to one value
+std::fill(v.begin(), v.end(), 0);
+*** fill_n
+Set first n elements to one value
+std::fill_n(v.begin(), 3, 7);
+*** generate
+Fill using a generator function
+std::generate(v.begin(), v.end(), [n=0]() mutable { return n++; });
+*** generate_n
+Generate n values
+std::generate_n(v.begin(), 4, []{ return rand()%10; });
+*** transform
+Map one range into another
+std::transform(v.begin(), v.end(), v.begin(), [](int x){ return x*x; });
+*** swap
+Swap two values/containers
+std::swap(a, b);
+*** swap_ranges
+Swap items between two ranges
+std::swap_ranges(a.begin(), a.end(), b.begin());
+*** iter_swap
+Swap the elements pointed to by two iterators
+std::iter_swap(it1, it2);
+** Remove / replace / unique
+*** remove
+Move all matching values to the end
+v.erase(std::remove(v.begin(), v.end(), 0), v.end());
+*** remove_if
+Remove items matching a rule
+v.erase(std::remove_if(v.begin(), v.end(), is_bad), v.end());
+*** remove_copy
+Copy everything except one value
+std::remove_copy(v.begin(), v.end(), out.begin(), 0);
+*** remove_copy_if
+Copy everything except matching items
+std::remove_copy_if(v.begin(), v.end(), out.begin(), is_bad);
+*** replace
+Replace one value with another
+std::replace(v.begin(), v.end(), 0, -1);
+*** replace_if
+Replace items matching a rule
+std::replace_if(v.begin(), v.end(), is_bad, -1);
+*** replace_copy
+Copy with replacement
+std::replace_copy(v.begin(), v.end(), out.begin(), 0, -1);
+*** replace_copy_if
+Copy with conditional replacement
+std::replace_copy_if(v.begin(), v.end(), out.begin(), is_bad, -1);
+*** unique
+Collapse consecutive duplicates
+v.erase(std::unique(v.begin(), v.end()), v.end());
+*** unique_copy
+Copy while removing consecutive duplicates
+std::unique_copy(v.begin(), v.end(), out.begin());
+** Reordering algorithms
+*** reverse
+Reverse a range
+std::reverse(v.begin(), v.end());
+*** reverse_copy
+Copy reversed data
+std::reverse_copy(v.begin(), v.end(), out.begin());
+*** rotate
+Move a middle position to the front
+std::rotate(v.begin(), v.begin()+2, v.end());
+*** rotate_copy
+Copy rotated data
+std::rotate_copy(v.begin(), v.begin()+2, v.end(), out.begin());
+*** shuffle
+Randomly shuffle items
+std::shuffle(v.begin(), v.end(), rng);
+*** sample
+Randomly pick n items
+std::sample(v.begin(), v.end(), out.begin(), 3, rng);
+** Partitioning algorithms
+*** partition
+Put matching items first
+auto it = std::partition(v.begin(), v.end(), is_even);
+*** stable_partition
+Partition but keep original relative order
+auto it = std::stable_partition(v.begin(), v.end(), is_even);
+*** partition_copy
+Copy matching and non-matching items separately
+std::partition_copy(v.begin(), v.end(), yes.begin(), no.begin(), is_even);
+*** is_partitioned
+Check whether range is already partitioned
+std::is_partitioned(v.begin(), v.end(), is_even);
+*** partition_point
+Find boundary in a partitioned range
+auto it = std::partition_point(v.begin(), v.end(), is_even);
+** sorting algorithm
+*** sort
+General-purpose sort
+std::sort(v.begin(), v.end());
+*** stable_sort
+Sort while preserving equal-element order
+std::stable_sort(v.begin(), v.end(), by_grade);
+*** partial_sort
+Sort only the smallest k items to the front
+std::partial_sort(v.begin(), v.begin()+3, v.end());
+*** partial_sort_copy
+Copy the smallest k sorted items elsewhere
+std::partial_sort_copy(v.begin(), v.end(), out.begin(), out.end());
+*** nth_element
+Put the nth item where it belongs
+std::nth_element(v.begin(), v.begin()+4, v.end());
+*** is_sorted
+Check if already sorted
+std::is_sorted(v.begin(), v.end());
+*** is_sorted_until
+Find where sorted order stops
+auto it = std::is_sorted_until(v.begin(), v.end())
+** Binary-search algorithms for sorted ranges
+*** lower_bound
+First place where value could go
+auto it = std::lower_bound(v.begin(), v.end(), 10);
+*** upper_bound
+First place after all equal values
+auto it = std::upper_bound(v.begin(), v.end(), 10);
+*** equal_range
+Get both lower and upper bounds at once
+auto [a,b] = std::equal_range(v.begin(), v.end(), 10);
+*** binary_search
+Check if value exists in sorted range
+bool ok = std::binary_search(v.begin(), v.end(), 10);
+** Merge and set algorithms for sorted ranges
+*** merge
+Merge two sorted ranges
+std::merge(a.begin(), a.end(), b.begin(), b.end(), out.begin());
+*** inplace_merge
+Merge two adjacent sorted subranges
+std::inplace_merge(v.begin(), mid, v.end());
+*** includes
+Check if one sorted range contains another
+std::includes(a.begin(), a.end(), b.begin(), b.end());
+*** set_union
+Union of two sorted ranges
+std::set_union(a.begin(), a.end(), b.begin(), b.end(), out.begin());
+*** set_intersection
+Common elements of two sorted ranges
+std::set_intersection(a.begin(), a.end(), b.begin(), b.end(), out.begin());
+*** set_difference
+Elements in first but not second
+std::set_difference(a.begin(), a.end(), b.begin(), b.end(), out.begin());
+*** set_symmetric_difference
+Elements in exactly one range
+std::set_symmetric_difference(a.begin(), a.end(), b.begin(), b.end(), out.begin());
+** Heap algorithm
+*** make_heap
+Turn a range into a heap
+std::make_heap(v.begin(), v.end());
+*** push_heap
+Add the last element into the heap
+v.push_back(x); std::push_heap(v.begin(), v.end());
+*** pop_heap
+Move top heap element to the end
+std::pop_heap(v.begin(), v.end()); v.pop_back();
+*** sort_heap
+Sort a heap
+std::sort_heap(v.begin(), v.end());
+*** is_heap
+Check if range is a heap
+std::is_heap(v.begin(), v.end());
+*** is_heap_until
+Find where heap property stops
+auto it = std::is_heap_until(v.begin(), v.end());
+** Min / max / comparison algorithms
+*** min
+Smaller of two values
+auto x = std::min(a, b);
+*** max
+Larger of two values
+auto x = std::max(a, b);
+*** minmax
+Get both min and max at once
+auto [lo, hi] = std::minmax(a, b);
+*** min_element
+Smallest item in a range
+auto it = std::min_element(v.begin(), v.end());
+*** max_element
+Largest item in a range
+auto it = std::max_element(v.begin(), v.end());
+*** minmax_element
+Smallest and largest iterators in a range
+auto [lo, hi] = std::minmax_element(v.begin(), v.end());
+*** clamp
+Keep a value inside a range
+x = std::clamp(x, 0, 100);
+*** lexicographical_compare
+Compare two sequences like dictionary order
+bool less = std::lexicographical_compare(a.begin(), a.end(), b.begin(), b.end());
+** Permutation algorithms
+*** next_permutation
+Move to next ordering
+std::next_permutation(v.begin(), v.end());
+*** prev_permutation
+Move to previous ordering
+std::prev_permutation(v.begin(), v.end());
+*** is_permutation
+Check whether two ranges contain same multiset of values
+std::is_permutation(a.begin(), a.end(), b.begin());
+* numeric
+** std::accumulate
+
+What it does: folds a range into one value, usually a sum.
+Use when: you want one final result from many elements.
+
+#include <numeric>
+#include <vector>
+
+std::vector<int> v{1,2,3,4};
+int sum = std::accumulate(v.begin(), v.end(), 0);   // 10
+
+With custom operation:
+
+int product = std::accumulate(v.begin(), v.end(), 1,
+    [](int a, int b) { return a * b; });            // 24
+
+
+⸻
+
+** std::reduce
+
+What it does: like accumulate, but intended for generalized reduction and parallel-friendly use.
+Use when: you want a sum/reduction and the operation is associative enough for reduction-style use.
+
+#include <numeric>
+#include <vector>
+
+std::vector<int> v{1,2,3,4};
+int sum = std::reduce(v.begin(), v.end(), 0);       // 10
+
+Custom reducer:
+
+int product = std::reduce(v.begin(), v.end(), 1, std::multiplies<>{});
+
+
+⸻
+
+** std::inner_product
+
+What it does: multiplies pairs from two ranges and sums the results.
+Use when: dot product, weighted sums, similarity scores.
+
+#include <numeric>
+#include <vector>
+
+std::vector<int> a{1,2,3};
+std::vector<int> b{4,5,6};
+
+int dot = std::inner_product(a.begin(), a.end(), b.begin(), 0); // 32
+
+Custom combine/reduce:
+
+int x = std::inner_product(a.begin(), a.end(), b.begin(), 0,
+    std::plus<>{},
+    [](int u, int v) { return u * v; });
+
+
+⸻
+
+** std::transform_reduce
+
+What it does: transforms elements, then reduces them.
+Use when: map-then-sum in one step.
+
+Unary-style:
+
+#include <numeric>
+#include <vector>
+
+std::vector<int> v{1,2,3};
+int sum_sq = std::transform_reduce(
+    v.begin(), v.end(), 0, std::plus<>{},
+    [](int x) { return x * x; });                   // 14
+
+Binary-style:
+
+std::vector<int> a{1,2,3};
+std::vector<int> b{4,5,6};
+
+int dot = std::transform_reduce(
+    a.begin(), a.end(), b.begin(), 0);              // 32
+
+
+⸻
+
+** std::partial_sum
+
+What it does: writes cumulative results.
+Use when: prefix sums like running totals.
+
+#include <numeric>
+#include <vector>
+
+std::vector<int> v{1,2,3,4};
+std::vector<int> out(v.size());
+
+std::partial_sum(v.begin(), v.end(), out.begin());  // {1,3,6,10}
+
+Custom operation:
+
+std::partial_sum(v.begin(), v.end(), out.begin(), std::multiplies<>{});
+// {1,2,6,24}
+
+
+⸻
+
+** std::inclusive_scan
+
+What it does: prefix reduction including the current element.
+Use when: modern replacement for many partial_sum cases.
+
+#include <numeric>
+#include <vector>
+
+std::vector<int> v{1,2,3,4};
+std::vector<int> out(v.size());
+
+std::inclusive_scan(v.begin(), v.end(), out.begin()); // {1,3,6,10}
+
+With initial value:
+
+std::inclusive_scan(v.begin(), v.end(), out.begin(), std::plus<>{}, 10);
+// {11,13,16,20}
+
+
+⸻
+
+** std::exclusive_scan
+
+What it does: prefix reduction excluding the current element.
+Use when: offsets, prefix counts, index generation.
+
+#include <numeric>
+#include <vector>
+
+std::vector<int> v{1,2,3,4};
+std::vector<int> out(v.size());
+
+std::exclusive_scan(v.begin(), v.end(), out.begin(), 0); // {0,1,3,6}
+
+
+⸻
+
+** std::transform_inclusive_scan
+
+What it does: transform each element, then inclusive-scan it.
+Use when: prefix sums of mapped values.
+
+#include <numeric>
+#include <vector>
+
+std::vector<int> v{1,2,3};
+std::vector<int> out(v.size());
+
+std::transform_inclusive_scan(
+    v.begin(), v.end(), out.begin(),
+    std::plus<>{},
+    [](int x){ return x * x; });                    // {1,5,14}
+
+
+⸻
+
+** std::transform_exclusive_scan
+
+What it does: transform each element, then exclusive-scan it.
+Use when: prefix totals after mapping.
+
+#include <numeric>
+#include <vector>
+
+std::vector<int> v{1,2,3};
+std::vector<int> out(v.size());
+
+std::transform_exclusive_scan(
+    v.begin(), v.end(), out.begin(), 0,
+    std::plus<>{},
+    [](int x){ return x * x; });                    // {0,1,5}
+
+
+⸻
+
+** std::adjacent_difference
+
+What it does: writes the first element, then differences between neighbors.
+Use when: delta encoding, changes between samples.
+
+#include <numeric>
+#include <vector>
+
+std::vector<int> v{10,13,20,21};
+std::vector<int> out(v.size());
+
+std::adjacent_difference(v.begin(), v.end(), out.begin()); // {10,3,7,1}
+
+Custom binary op:
+
+std::adjacent_difference(v.begin(), v.end(), out.begin(),
+    [](int a, int b){ return a - b; });
+
+
+⸻
+
+** std::iota
+
+What it does: fills a range with consecutive values.
+Use when: generate indices or simple sequences.
+
+#include <numeric>
+#include <vector>
+
+std::vector<int> v(5);
+std::iota(v.begin(), v.end(), 10);                 // {10,11,12,13,14}
+
+Those are the standard <numeric> algorithms listed by the STL reference.  ￼
+
+⸻
+* std::ranges algorithm
+2) The newer std::ranges algorithm forms
+
+What changes with ranges?
+
+The big idea is not “new behavior”, but new calling style:
+
+Classic form:
+
+std::sort(v.begin(), v.end());
+
+Ranges form:
+
+std::ranges::sort(v);
+
+Ranges algorithms are mostly the same algorithm families as the classic ones, but they accept a whole range and are constrained by concepts.  ￼
+
+⸻
+
+2A) Search / inspection
+
+** std::ranges::all_of
+
+Checks whether all elements match a predicate.
+
+bool ok = std::ranges::all_of(v, [](int x){ return x > 0; });
+
+** std::ranges::any_of
+
+Checks whether any element matches.
+
+bool has_zero = std::ranges::any_of(v, [](int x){ return x == 0; });
+
+** std::ranges::none_of
+
+Checks whether no elements match.
+
+bool none_neg = std::ranges::none_of(v, [](int x){ return x < 0; });
+
+** std::ranges::for_each
+
+Applies a function to each element.
+
+std::ranges::for_each(v, [](int& x){ x *= 2; });
+
+** std::ranges::find
+
+Find a value.
+
+auto it = std::ranges::find(v, 42);
+
+** std::ranges::find_if
+
+Find first matching element.
+
+auto it = std::ranges::find_if(v, [](int x){ return x > 10; });
+
+** std::ranges::find_if_not
+
+Find first element not matching.
+
+auto it = std::ranges::find_if_not(v, [](int x){ return x > 0; });
+
+** std::ranges::find_end
+
+Find last occurrence of a subsequence.
+
+auto sub = std::ranges::find_end(text, pattern);
+
+** std::ranges::find_first_of
+
+Find first element equal to any element in another range.
+
+auto it = std::ranges::find_first_of(v, needles);
+
+** std::ranges::adjacent_find
+
+Find equal adjacent elements.
+
+auto it = std::ranges::adjacent_find(v);
+
+** std::ranges::count
+
+Count exact matches.
+
+auto n = std::ranges::count(v, 5);
+
+** std::ranges::count_if
+
+Count matches by predicate.
+
+auto n = std::ranges::count_if(v, [](int x){ return x % 2 == 0; });
+
+** std::ranges::mismatch
+
+Find first place two ranges differ.
+
+auto [a, b] = std::ranges::mismatch(x, y);
+
+** std::ranges::equal
+
+Check whether two ranges are equal.
+
+bool same = std::ranges::equal(a, b);
+
+** std::ranges::search
+
+Find subsequence.
+
+auto sub = std::ranges::search(text, pattern);
+
+** std::ranges::search_n
+
+Find n consecutive equal values.
+
+auto it = std::ranges::search_n(v, 3, 0);
+
+** std::ranges::starts_with
+
+Check prefix.
+
+bool ok = std::ranges::starts_with(v, prefix);
+
+** std::ranges::ends_with
+
+Check suffix.
+
+bool ok = std::ranges::ends_with(v, suffix);
+
+** std::ranges::contains
+
+Check whether a range contains a value.
+
+bool ok = std::ranges::contains(v, 7);
+
+** std::ranges::contains_subrange
+
+Check whether a range contains another range.
+
+bool ok = std::ranges::contains_subrange(text, pattern);
+
+
+⸻
+
+** 2B) Copy / move / transform
+
+*** std::ranges::copy
+
+std::ranges::copy(src, std::back_inserter(dst));
+
+*** std::ranges::copy_if
+
+std::ranges::copy_if(v, std::back_inserter(out),
+    [](int x){ return x > 0; });
+
+*** std::ranges::copy_n
+
+std::ranges::copy_n(v.begin(), 3, out.begin());
+
+*** std::ranges::copy_backward
+
+std::ranges::copy_backward(v.begin(), v.begin()+3, v.begin()+5);
+
+*** std::ranges::move
+
+std::ranges::move(src, dst.begin());
+
+*** std::ranges::move_backward
+
+std::ranges::move_backward(v.begin(), v.begin()+3, v.begin()+5);
+
+*** std::ranges::fill
+
+std::ranges::fill(v, 0);
+
+*** std::ranges::fill_n
+
+std::ranges::fill_n(v.begin(), 4, 9);
+
+*** std::ranges::generate
+
+int n = 0;
+std::ranges::generate(v, [&]{ return n++; });
+
+*** std::ranges::generate_n
+
+int n = 100;
+std::ranges::generate_n(v.begin(), 3, [&]{ return n++; });
+
+*** std::ranges::transform
+
+Unary:
+
+std::ranges::transform(v, out.begin(),
+    [](int x){ return x * x; });
+
+Binary:
+
+std::ranges::transform(a, b, out.begin(),
+    [](int x, int y){ return x + y; });
+
+*** std::ranges::swap_ranges
+
+std::ranges::swap_ranges(a, b);
+
+
+⸻
+
+** 2C) Replace / remove / unique
+
+*** std::ranges::replace
+
+std::ranges::replace(v, 0, -1);
+
+*** std::ranges::replace_if
+
+std::ranges::replace_if(v, [](int x){ return x < 0; }, 0);
+
+*** std::ranges::replace_copy
+
+std::ranges::replace_copy(v, out.begin(), 0, -1);
+
+*** std::ranges::replace_copy_if
+
+std::ranges::replace_copy_if(v, out.begin(),
+    [](int x){ return x < 0; }, 0);
+
+*** std::ranges::remove
+
+auto new_end = std::ranges::remove(v, 0);
+v.erase(new_end.begin(), new_end.end());
+
+*** std::ranges::remove_if
+
+auto new_end = std::ranges::remove_if(v, [](int x){ return x < 0; });
+v.erase(new_end.begin(), new_end.end());
+
+*** std::ranges::remove_copy
+
+std::ranges::remove_copy(v, std::back_inserter(out), 0);
+
+*** std::ranges::remove_copy_if
+
+std::ranges::remove_copy_if(v, std::back_inserter(out),
+    [](int x){ return x < 0; });
+
+*** std::ranges::unique
+
+auto new_end = std::ranges::unique(v);
+v.erase(new_end.begin(), new_end.end());
+
+*** std::ranges::unique_copy
+
+std::ranges::unique_copy(v, std::back_inserter(out));
+
+
+⸻
+
+** 2D) Reordering
+
+*** std::ranges::reverse
+
+std::ranges::reverse(v);
+
+*** std::ranges::reverse_copy
+
+std::ranges::reverse_copy(v, out.begin());
+
+*** std::ranges::rotate
+
+std::ranges::rotate(v, v.begin() + 2);
+
+*** std::ranges::rotate_copy
+
+std::ranges::rotate_copy(v, v.begin() + 2, out.begin());
+
+*** std::ranges::shuffle
+
+std::mt19937 rng(std::random_device{}());
+std::ranges::shuffle(v, rng);
+
+std::ranges::sample
+
+std::mt19937 rng(std::random_device{}());
+std::ranges::sample(v, std::back_inserter(out), 3, rng);
+
+std::ranges::shift_left
+
+std::ranges::shift_left(v, 2);
+
+std::ranges::shift_right
+
+std::ranges::shift_right(v, 2);
+
+
+⸻
+
+** 2E) Partitioning
+
+*** std::ranges::partition
+
+auto mid = std::ranges::partition(v, [](int x){ return x % 2 == 0; });
+
+*** std::ranges::stable_partition
+
+auto mid = std::ranges::stable_partition(v, [](int x){ return x % 2 == 0; });
+
+*** std::ranges::partition_copy
+
+std::ranges::partition_copy(v,
+    std::back_inserter(evens),
+    std::back_inserter(odds),
+    [](int x){ return x % 2 == 0; });
+
+*** std::ranges::is_partitioned
+
+bool ok = std::ranges::is_partitioned(v, pred);
+
+*** std::ranges::partition_point
+
+auto it = std::ranges::partition_point(v, pred);
+
+
+⸻
+
+** 2F) Sorting and sorted-range operations
+
+*** std::ranges::sort
+
+std::ranges::sort(v);
+
+*** std::ranges::stable_sort
+
+std::ranges::stable_sort(v, {}, &User::age);
+
+*** std::ranges::partial_sort
+
+std::ranges::partial_sort(v, v.begin() + 3);
+
+*** std::ranges::partial_sort_copy
+
+std::ranges::partial_sort_copy(v, out);
+
+*** std::ranges::nth_element
+
+std::ranges::nth_element(v, v.begin() + 4);
+
+*** std::ranges::is_sorted
+
+bool ok = std::ranges::is_sorted(v);
+
+*** std::ranges::is_sorted_until
+
+auto it = std::ranges::is_sorted_until(v);
+
+
+⸻
+
+** 2G) Binary search on sorted ranges
+
+*** std::ranges::lower_bound
+
+auto it = std::ranges::lower_bound(v, 10);
+
+*** std::ranges::upper_bound
+
+auto it = std::ranges::upper_bound(v, 10);
+
+*** std::ranges::equal_range
+
+auto sub = std::ranges::equal_range(v, 10);
+
+*** std::ranges::binary_search
+
+bool found = std::ranges::binary_search(v, 10);
+
+
+⸻
+
+** 2H) Merge and set algorithms
+
+*** std::ranges::merge
+
+std::ranges::merge(a, b, out.begin());
+
+*** std::ranges::inplace_merge
+
+std::ranges::inplace_merge(v, mid);
+
+*** std::ranges::includes
+
+bool ok = std::ranges::includes(a, b);
+
+*** std::ranges::set_union
+
+std::ranges::set_union(a, b, out.begin());
+
+*** std::ranges::set_intersection
+
+std::ranges::set_intersection(a, b, out.begin());
+
+*** std::ranges::set_difference
+
+std::ranges::set_difference(a, b, out.begin());
+
+*** std::ranges::set_symmetric_difference
+
+std::ranges::set_symmetric_difference(a, b, out.begin());
+
+
+⸻
+
+** 2I) Heap algorithms
+
+*** std::ranges::make_heap
+
+std::ranges::make_heap(v);
+
+*** std::ranges::push_heap
+
+v.push_back(x);
+std::ranges::push_heap(v);
+
+*** std::ranges::pop_heap
+
+std::ranges::pop_heap(v);
+v.pop_back();
+
+*** std::ranges::sort_heap
+
+std::ranges::sort_heap(v);
+
+*** std::ranges::is_heap
+
+bool ok = std::ranges::is_heap(v);
+
+*** std::ranges::is_heap_until
+
+auto it = std::ranges::is_heap_until(v);
+
+
+⸻
+
+** 2J) Min/max and comparisons
+
+*** std::ranges::min
+
+int x = std::ranges::min(v);
+
+*** std::ranges::max
+
+int x = std::ranges::max(v);
+
+*** std::ranges::minmax
+
+auto [lo, hi] = std::ranges::minmax(v);
+
+*** std::ranges::min_element
+
+auto it = std::ranges::min_element(v);
+
+*** std::ranges::max_element
+
+auto it = std::ranges::max_element(v);
+
+*** std::ranges::minmax_element
+
+auto [lo, hi] = std::ranges::minmax_element(v);
+
+*** std::ranges::clamp
+
+int x = std::ranges::clamp(value, 0, 100);
+
+*** std::ranges::lexicographical_compare
+
+bool less = std::ranges::lexicographical_compare(a, b);
+
+*** std::ranges::lexicographical_compare_three_way
+
+auto cmp = std::ranges::lexicographical_compare_three_way(a, b);
+
+
+⸻
+
+** 2K) Permutations
+
+*** std::ranges::next_permutation
+
+std::ranges::next_permutation(v);
+
+** std::ranges::prev_permutation
+
+std::ranges::prev_permutation(v);
+
+** std::ranges::is_permutation
+
+bool ok = std::ranges::is_permutation(a, b);
+
+
+⸻
+
+** 2L) New fold-style ranges algorithms
+
+These are the newer fold family added after the original C++20 ranges set.
+
+*** std::ranges::fold_left
+
+Left-fold a range.
+
+auto r = std::ranges::fold_left(v, 0, std::plus<>{});
+
+*** std::ranges::fold_left_first
+
+Left-fold using the first element as the initial value.
+
+auto r = std::ranges::fold_left_first(v, std::plus<>{});
+
+*** std::ranges::fold_right
+
+Right-fold a range.
+
+auto r = std::ranges::fold_right(v, 0, std::plus<>{});
+
+*** std::ranges::fold_right_last
+
+Right-fold using the last element as the initial value.
+
+auto r = std::ranges::fold_right_last(v, std::plus<>{});
+
+*** std::ranges::fold_left_with_iter
+
+Like fold_left, but also returns where folding ended.
+
+auto r = std::ranges::fold_left_with_iter(v, 0, std::plus<>{});
+
+*** std::ranges::fold_left_first_with_iter
+
+Like fold_left_first, but also returns the final iterator.
+
+auto r = std::ranges::fold_left_first_with_iter(v, std::plus<>{});
+
+
+⸻
+
+** 2M) A few useful std::ranges helpers that are not algorithms
+
+These are often confused with algorithms, so it helps to separate them:
+	•	std::ranges::begin, end, size, empty, data, distance, next, prev
+	•	std::views::filter, transform, take, drop, split, keys, values
+
+These are part of the ranges ecosystem, but they are helper functions or views/adaptors, not the algorithm family itself.  ￼
+
+⸻
+
+Which ones matter most in practice?
+
+If you only want the high-value subset to learn first:
+
+<numeric>
+	•	accumulate
+	•	reduce
+	•	inner_product
+	•	partial_sum
+	•	inclusive_scan
+	•	exclusive_scan
+	•	iota
+
+std::ranges
+	•	ranges::find, find_if
+	•	ranges::all_of, any_of
+	•	ranges::copy, copy_if
+	•	ranges::transform
+	•	ranges::sort
+	•	ranges::lower_bound, binary_search
+	•	ranges::remove_if
+	•	ranges::for_each
+
+That matches how the standard library positions numeric algorithms in <numeric> and ranges algorithms as range-friendly versions of the classic algorithms.  ￼
+
+If you want, I can turn this into a single-page C++17/C++20/C++23 cheat sheet with:
+“algorithm name → header → C++ version → one-line example.”
+
+* cheat sheet
+** <numeric> cheat sheet
+| Algorithm                | Header    | Version | What it does                             | One-line example                                                                     |
+| accumulate               | <numeric> | C++98   | Reduce range to one value                | auto s = std::accumulate(v.begin(), v.end(), 0);                                     |
+| inner_product            | <numeric> | C++98   | Dot product / pairwise combine + reduce  | auto d = std::inner_product(a.begin(), a.end(), b.begin(), 0);                       |
+| partial_sum              | <numeric> | C++98   | Running totals                           | std::partial_sum(v.begin(), v.end(), out.begin());                                   |
+| adjacent_difference      | <numeric> | C++98   | First element, then neighbor differences | std::adjacent_difference(v.begin(), v.end(), out.begin());                           |
+| iota                     | <numeric> | C++11   | Fill with increasing values              | std::iota(v.begin(), v.end(), 0);                                                    |
+| reduce                   | <numeric> | C++17   | Reduction, parallel-friendly form        | auto s = std::reduce(v.begin(), v.end(), 0);                                         |
+| transform_reduce         | <numeric> | C++17   | Transform then reduce                    | auto s = std::transform_reduce(v.begin(), v.end(), 0, std::plus<>{}, f);             |
+| inclusive_scan           | <numeric> | C++17   | Prefix scan including current element    | std::inclusive_scan(v.begin(), v.end(), out.begin());                                |
+| exclusive_scan           | <numeric> | C++17   | Prefix scan excluding current element    | std::exclusive_scan(v.begin(), v.end(), out.begin(), 0);                             |
+| transform_inclusive_scan | <numeric> | C++17   | Transform then inclusive scan            | std::transform_inclusive_scan(v.begin(), v.end(), out.begin(), std::plus<>{}, f);    |
+| transform_exclusive_scan | <numeric> | C++17   | Transform then exclusive scan            | std::transform_exclusive_scan(v.begin(), v.end(), out.begin(), 0, std::plus<>{}, f); |
+
+** std::ranges::* cheat sheet
+
+Search / inspect
+
+| Algorithm                 | Header      | Version | What it does                        | One-line example                                     |
+| ranges::all_of            | <algorithm> | C++20   | All match predicate                 | bool ok = std::ranges::all_of(v, pred);              |
+| ranges::any_of            | <algorithm> | C++20   | Any matches predicate               | bool ok = std::ranges::any_of(v, pred);              |
+| ranges::none_of           | <algorithm> | C++20   | None match predicate                | bool ok = std::ranges::none_of(v, pred);             |
+| ranges::for_each          | <algorithm> | C++20   | Apply function to each element      | std::ranges::for_each(v, f);                         |
+| ranges::find              | <algorithm> | C++20   | Find value                          | auto it = std::ranges::find(v, 42);                  |
+| ranges::find_if           | <algorithm> | C++20   | Find by predicate                   | auto it = std::ranges::find_if(v, pred);             |
+| ranges::find_if_not       | <algorithm> | C++20   | Find first not matching             | auto it = std::ranges::find_if_not(v, pred);         |
+| ranges::find_end          | <algorithm> | C++20   | Last matching subrange              | auto r = std::ranges::find_end(text, pat);           |
+| ranges::find_first_of     | <algorithm> | C++20   | First element also in another range | auto it = std::ranges::find_first_of(v, needles);    |
+| ranges::adjacent_find     | <algorithm> | C++20   | Equal neighbors                     | auto it = std::ranges::adjacent_find(v);             |
+| ranges::count             | <algorithm> | C++20   | Count value                         | auto n = std::ranges::count(v, 7);                   |
+| ranges::count_if          | <algorithm> | C++20   | Count by predicate                  | auto n = std::ranges::count_if(v, pred);             |
+| ranges::mismatch          | <algorithm> | C++20   | First mismatch between ranges       | auto [a,b] = std::ranges::mismatch(x, y);            |
+| ranges::equal             | <algorithm> | C++20   | Range equality                      | bool same = std::ranges::equal(a, b);                |
+| ranges::search            | <algorithm> | C++20   | Find subrange                       | auto r = std::ranges::search(text, pat);             |
+| ranges::search_n          | <algorithm> | C++20   | Find n repeated values              | auto it = std::ranges::search_n(v, 3, 0);            |
+| ranges::starts_with       | <algorithm> | C++23   | Prefix check                        | bool ok = std::ranges::starts_with(v, prefix);       |
+| ranges::ends_with         | <algorithm> | C++23   | Suffix check                        | bool ok = std::ranges::ends_with(v, suffix);         |
+| ranges::contains          | <algorithm> | C++23   | Membership check                    | bool ok = std::ranges::contains(v, 7);               |
+| ranges::contains_subrange | <algorithm> | C++23   | Subrange membership                 | bool ok = std::ranges::contains_subrange(text, pat); |
+
+** Copy / move / generate / transform
+
+| Algorithm             | Header      | Version | What it does           | One-line example                                        |
+| ranges::copy          | <algorithm> | C++20   | Copy range             | std::ranges::copy(src, out.begin());                    |
+| ranges::copy_if       | <algorithm> | C++20   | Copy matching elements | std::ranges::copy_if(v, std::back_inserter(out), pred); |
+| ranges::copy_n        | <algorithm> | C++20   | Copy first n           | std::ranges::copy_n(v.begin(), 3, out.begin());         |
+| ranges::copy_backward | <algorithm> | C++20   | Copy backward          | std::ranges::copy_backward(v.begin(), mid, end);        |
+| ranges::move          | <algorithm> | C++20   | Move range             | std::ranges::move(src, out.begin());                    |
+| ranges::move_backward | <algorithm> | C++20   | Move backward          | std::ranges::move_backward(v.begin(), mid, end);        |
+| ranges::fill          | <algorithm> | C++20   | Fill range with value  | std::ranges::fill(v, 0);                                |
+| ranges::fill_n        | <algorithm> | C++20   | Fill first n           | std::ranges::fill_n(v.begin(), 5, 9);                   |
+| ranges::generate      | <algorithm> | C++20   | Fill by generator      | std::ranges::generate(v, [&]{ return n++; });           |
+| ranges::generate_n    | <algorithm> | C++20   | Generate n outputs     | std::ranges::generate_n(v.begin(), 5, gen);             |
+| ranges::transform     | <algorithm> | C++20   | Map one or two ranges  | std::ranges::transform(v, out.begin(), f);              |
+| ranges::swap_ranges   | <algorithm> | C++20   | Swap two ranges        | std::ranges::swap_ranges(a, b);                         |
+
+** Replace / remove / unique
+
+| Algorithm               | Header      | Version | What it does                      | One-line example                                               |
+| ranges::replace         | <algorithm> | C++20   | Replace exact value               | std::ranges::replace(v, 0, -1);                                |
+| ranges::replace_if      | <algorithm> | C++20   | Replace by predicate              | std::ranges::replace_if(v, pred, 0);                           |
+| ranges::replace_copy    | <algorithm> | C++20   | Copy with replacement             | std::ranges::replace_copy(v, out.begin(), 0, -1);              |
+| ranges::replace_copy_if | <algorithm> | C++20   | Copy with conditional replacement | std::ranges::replace_copy_if(v, out.begin(), pred, 0);         |
+| ranges::remove          | <algorithm> | C++20   | Logical remove by value           | auto r = std::ranges::remove(v, 0);                            |
+| ranges::remove_if       | <algorithm> | C++20   | Logical remove by predicate       | auto r = std::ranges::remove_if(v, pred);                      |
+| ranges::remove_copy     | <algorithm> | C++20   | Copy excluding value              | std::ranges::remove_copy(v, std::back_inserter(out), 0);       |
+| ranges::remove_copy_if  | <algorithm> | C++20   | Copy excluding matches            | std::ranges::remove_copy_if(v, std::back_inserter(out), pred); |
+| ranges::unique          | <algorithm> | C++20   | Collapse adjacent duplicates      | auto r = std::ranges::unique(v);                               |
+| ranges::unique_copy     | <algorithm> | C++20   | Copy without adjacent duplicates  | std::ranges::unique_copy(v, std::back_inserter(out));          |
+
+** Reorder / partition
+
+| Algorithm                | Header      | Version | What it does                  | One-line example                                         |
+| ranges::reverse          | <algorithm> | C++20   | Reverse in place              | std::ranges::reverse(v);                                 |
+| ranges::reverse_copy     | <algorithm> | C++20   | Copy reversed                 | std::ranges::reverse_copy(v, out.begin());               |
+| ranges::rotate           | <algorithm> | C++20   | Rotate around middle          | std::ranges::rotate(v, v.begin()+2);                     |
+| ranges::rotate_copy      | <algorithm> | C++20   | Copy rotated                  | std::ranges::rotate_copy(v, v.begin()+2, out.begin());   |
+| ranges::shuffle          | <algorithm> | C++20   | Random shuffle                | std::ranges::shuffle(v, rng);                            |
+| ranges::sample           | <algorithm> | C++20   | Random sample                 | std::ranges::sample(v, std::back_inserter(out), 3, rng); |
+| ranges::shift_left       | <algorithm> | C++20   | Shift elements left           | std::ranges::shift_left(v, 2);                           |
+| ranges::shift_right      | <algorithm> | C++20   | Shift elements right          | std::ranges::shift_right(v, 2);                          |
+| ranges::partition        | <algorithm> | C++20   | Partition by predicate        | auto it = std::ranges::partition(v, pred);               |
+| ranges::stable_partition | <algorithm> | C++20   | Stable partition              | auto it = std::ranges::stable_partition(v, pred);        |
+| ranges::partition_copy   | <algorithm> | C++20   | Copy into yes/no outputs      | std::ranges::partition_copy(v, yes, no, pred);           |
+| ranges::is_partitioned   | <algorithm> | C++20   | Check partitioned             | bool ok = std::ranges::is_partitioned(v, pred);          |
+| ranges::partition_point  | <algorithm> | C++20   | Boundary in partitioned range | auto it = std::ranges::partition_point(v, pred);         |
+
+** Sorting / sorted-range algorithms
+
+| Algorithm                 | Header      | Version | What it does                | One-line example                             |
+| ranges::sort              | <algorithm> | C++20   | Sort range                  | std::ranges::sort(v);                        |
+| ranges::stable_sort       | <algorithm> | C++20   | Stable sort                 | std::ranges::stable_sort(v, comp);           |
+| ranges::partial_sort      | <algorithm> | C++20   | Sort smallest k to front    | std::ranges::partial_sort(v, v.begin()+k);   |
+| ranges::partial_sort_copy | <algorithm> | C++20   | Copy smallest sorted subset | std::ranges::partial_sort_copy(v, out);      |
+| ranges::nth_element       | <algorithm> | C++20   | Put nth in final position   | std::ranges::nth_element(v, v.begin()+n);    |
+| ranges::is_sorted         | <algorithm> | C++20   | Check sorted                | bool ok = std::ranges::is_sorted(v);         |
+| ranges::is_sorted_until   | <algorithm> | C++20   | Find sorted prefix end      | auto it = std::ranges::is_sorted_until(v);   |
+| ranges::lower_bound       | <algorithm> | C++20   | First not-less-than         | auto it = std::ranges::lower_bound(v, 10);   |
+| ranges::upper_bound       | <algorithm> | C++20   | First greater-than          | auto it = std::ranges::upper_bound(v, 10);   |
+| ranges::equal_range       | <algorithm> | C++20   | Both bounds                 | auto r = std::ranges::equal_range(v, 10);    |
+| ranges::binary_search     | <algorithm> | C++20   | Sorted membership test      | bool ok = std::ranges::binary_search(v, 10); |
+
+** Merge / set / heap
+
+| Algorithm                        | Header      | Version | What it does                 | One-line example                                          |
+| ranges::merge                    | <algorithm> | C++20   | Merge sorted ranges          | std::ranges::merge(a, b, out.begin());                    |
+| ranges::inplace_merge            | <algorithm> | C++20   | Merge adjacent sorted halves | std::ranges::inplace_merge(v, mid);                       |
+| ranges::includes                 | <algorithm> | C++20   | Check sorted containment     | bool ok = std::ranges::includes(a, b);                    |
+| ranges::set_union                | <algorithm> | C++20   | Sorted union                 | std::ranges::set_union(a, b, out.begin());                |
+| ranges::set_intersection         | <algorithm> | C++20   | Sorted intersection          | std::ranges::set_intersection(a, b, out.begin());         |
+| ranges::set_difference           | <algorithm> | C++20   | Sorted difference            | std::ranges::set_difference(a, b, out.begin());           |
+| ranges::set_symmetric_difference | <algorithm> | C++20   | Sorted xor                   | std::ranges::set_symmetric_difference(a, b, out.begin()); |
+| ranges::make_heap                | <algorithm> | C++20   | Build heap                   | std::ranges::make_heap(v);                                |
+| ranges::push_heap                | <algorithm> | C++20   | Add to heap                  | v.push_back(x); std::ranges::push_heap(v);                |
+| ranges::pop_heap                 | <algorithm> | C++20   | Pop heap top                 | std::ranges::pop_heap(v); v.pop_back();                   |
+| ranges::sort_heap                | <algorithm> | C++20   | Heap to sorted range         | std::ranges::sort_heap(v);                                |
+| ranges::is_heap                  | <algorithm> | C++20   | Check heap                   | bool ok = std::ranges::is_heap(v);                        |
+| ranges::is_heap_until            | <algorithm> | C++20   | Heap prefix end              | auto it = std::ranges::is_heap_until(v);                  |
+
+** Min / max / compare / permutation
+
+| Algorithm                                 | Header      | Version | What it does                  | One-line example                                               |
+| ranges::min                               | <algorithm> | C++20   | Minimum value                 | auto x = std::ranges::min(v);                                  |
+| ranges::max                               | <algorithm> | C++20   | Maximum value                 | auto x = std::ranges::max(v);                                  |
+| ranges::minmax                            | <algorithm> | C++20   | Min and max                   | auto [lo, hi] = std::ranges::minmax(v);                        |
+| ranges::min_element                       | <algorithm> | C++20   | Iterator to min               | auto it = std::ranges::min_element(v);                         |
+| ranges::max_element                       | <algorithm> | C++20   | Iterator to max               | auto it = std::ranges::max_element(v);                         |
+| ranges::minmax_element                    | <algorithm> | C++20   | Iterators to min/max          | auto [lo, hi] = std::ranges::minmax_element(v);                |
+| ranges::clamp                             | <algorithm> | C++20   | Clamp to bounds               | auto x = std::ranges::clamp(n, 0, 100);                        |
+| ranges::lexicographical_compare           | <algorithm> | C++20   | Dictionary-order compare      | bool less = std::ranges::lexicographical_compare(a, b);        |
+| ranges::lexicographical_compare_three_way | <algorithm> | C++20   | 3-way compare                 | auto c = std::ranges::lexicographical_compare_three_way(a, b); |
+| ranges::next_permutation                  | <algorithm> | C++20   | Next permutation              | std::ranges::next_permutation(v);                              |
+| ranges::prev_permutation                  | <algorithm> | C++20   | Previous permutation          | std::ranges::prev_permutation(v);                              |
+| ranges::is_permutation                    | <algorithm> | C++20   | Same multiset/orderless check | bool ok = std::ranges::is_permutation(a, b);                   |
+
+** Newer ranges folds
+
+| Algorithm                         | Header      | Version | What it does                          | One-line example                                                   |
+| ranges::fold_left                 | <algorithm> | C++23   | Left fold with init                   | auto r = std::ranges::fold_left(v, 0, std::plus<>{});              |
+| ranges::fold_left_first           | <algorithm> | C++23   | Left fold using first element as init | auto r = std::ranges::fold_left_first(v, std::plus<>{});           |
+| ranges::fold_right                | <algorithm> | C++23   | Right fold with init                  | auto r = std::ranges::fold_right(v, 0, std::plus<>{});             |
+| ranges::fold_right_last           | <algorithm> | C++23   | Right fold using last element as init | auto r = std::ranges::fold_right_last(v, std::plus<>{});           |
+| ranges::fold_left_with_iter       | <algorithm> | C++23   | Fold + final iterator                 | auto r = std::ranges::fold_left_with_iter(v, 0, std::plus<>{});    |
+| ranges::fold_left_first_with_iter | <algorithm> | C++23   | Fold-first + final iterator           | auto r = std::ranges::fold_left_first_with_iter(v, std::plus<>{}); |
+
+

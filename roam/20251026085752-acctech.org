@@ -22,7 +22,7 @@ password: Bro38860
 ** pam-infra
 https://pam-infra.acctechco.com:8282/
 username: Alavian_Bentoak
-pass: Ab1234!@#$
+pass: Ab1234!@#$1
 * get contact point for Devops
 * Connect to git and
 ** Sonar quebe

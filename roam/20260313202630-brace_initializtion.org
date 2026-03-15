@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       703F6FA5-290E-47C6-9764-98C785BB798D
+:END:
+#+title: brace initializtion
+

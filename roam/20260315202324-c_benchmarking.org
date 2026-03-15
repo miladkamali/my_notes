@@ -1,0 +1,62 @@
+:PROPERTIES:
+:ID:       EC2EF38B-AF90-4721-8112-D6431AC6B894
+:END:
+#+title: c++ benchmarking
+
+* fast and dirty using std::chrono
+
+#+begin_src c++
+  #include <chrono>
+  #include <iostream>
+
+  int main() {
+      auto start = std::chrono::high_resolution_clock::now();
+      // Your code block to measure
+      for (int i = 0; i < 1000000; ++i) {
+          // Some operation
+          volatile int x = i * i; // volatile prevents optimization
+      }
+      auto end = std::chrono::high_resolution_clock::now();
+      auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+      std::cout << "Time taken: " << duration.count() << " microseconds" << std::endl;
+      return 0;
+  }
+
+#+end_src
+
+* custom RAII timer
+#+begin_src c++
+  #include <chrono>
+  #include <iostream>
+  #include <string>
+
+  class Timer {
+  private:
+      std::chrono::high_resolution_clock::time_point start_time;
+      std::string operation_name;
+  public:
+      explicit Timer(const std::string& name) : operation_name(name) {
+          start_time = std::chrono::high_resolution_clock::now();
+      }
+      ~Timer() {
+          auto end_time = std::chrono::high_resolution_clock::now();
+          auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time);
+          std::cout << operation_name << " took " << duration.count() << " microseconds" << std::endl;
+      }
+  };
+
+  // Usage:
+  int main() {
+      {
+          Timer timer("My operation");
+          // Your code here
+          for (int i = 0; i < 1000000; ++i) {
+              volatile int x = i * i;
+          }
+      } // Timer automatically prints when going out of scope
+      return 0;
+  }
+
+#+end_src
+
+* 
