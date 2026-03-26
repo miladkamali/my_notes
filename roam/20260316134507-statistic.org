@@ -1,0 +1,103 @@
+:PROPERTIES:
+:ID:       86981DF8-6402-4B56-80C5-DE822C645889
+:END:
+#+title: statistic
+* population and sample
+* sampling methods
+** probabilistic
+*** simple random
+*** systematic
+*** stratified
+*** cluster
+** non probabilistic
+*** convenience
+*** quota
+*** Judgment
+*** snowball
+* bias
+a systematic difference between the sampling method and the population
+** sampling bias
+*** non response bias
+consider sending follow up
+include small incentive for the participants
+** measurement bias
+*** instrument bias
+good quality tools
+well worded survey
+take multiple measurements
+*** observer bias
+when person measuring let his expectation effect what they see
+** response bias
+people may not respond honestly even to anonymous surveys
+** analyst bias
+*** confirmation bias
+* visualizing data
+** histogram
+* characterizing a distribution
+** central tendencies
+*** mean
+*** median
+50% percentile where 50% of the numbers are below it and 50% are above it
+
+25th percentile
+
+75th percentile
+*** mode
+** variability
+*** range
+*** interquartile range
+*** variance
+\sum (x - xmean)^2/(n-1)
+*** standard deviation
+** skewness
+compare median and mean
+if median is smaller than mean the fat tail is to the right
+if the median is larger than mean then the fat tail is to the left
+if they are close to each other then the data distribution is symmetric
+*** 
+* time series
+** correlation
+*** pearson correlation coefficient (r)
+it's a number between -1 and 1
+
+| absolute value of r | strength |
+|---------------------+----------|
+|             0 - 0.3 | weak     |
+|             0.3-0.7 | moderate |
+|             0.7-1.0 | strong   |
+** correlation vs causation
+- correlation indicates a relationship or association between the two
+- it doesn't imply one is the cause for the other
+- positive correlation means two features move in the same direction
+- negative correlation means two features move in the opposite directions
+
+
+- causation implies one feature directly effect the other one
+- it establishes a cause and effect relationship
+- pearson correlation is not sufficient for determining causation, it requires rigorous testing and investigation
+* confidence interval
+* Hypothesis testing
+* probabilities
+** independent
+p(A|B) = P(A) * P(B)
+** dependent
+P(A & B) = P(A) * P( A|B)
+* variables
+** discrete random variable
+** continues random variable
+* fomulas
+depending wether we are working with population or samples formulas could be different 
+
+mean has the same formula for sample and population
+standard deviation has different formulas for samples and populations
+* distributions
+** discrete 
+*** bernuli distribution
+*** binomial distribution
+* z-score
+* inferential statistic
+* descriptive statistic
+* TODO learn more about central limit theorem
+:LOGBOOK:
+- State "TODO"       from              [2026-03-20 Fri 20:44]
+:END:

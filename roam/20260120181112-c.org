@@ -46,6 +46,7 @@ geeksforgeeks.org/c-data-types/
   std::array<int,10> cars;
   car[1] = 2;
 #+end_src
+* [[id:EC2EF38B-AF90-4721-8112-D6431AC6B894][c++ benchmarking]]
 * concepts to review
 ** integer overflow
 ** floating point errors 

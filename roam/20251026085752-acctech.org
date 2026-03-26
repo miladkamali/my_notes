@@ -12,7 +12,7 @@ password: ?bHo*ER@mL!o$raD
 ** pam
 https://dmz-pam.acctechco.com:8282
 user:p.karami
-pass:Mk1234!@#$
+pass:Pk1234!@#$
 ** login to desktop
 user: karami-ben
 password: Ldghn2025@)@%
