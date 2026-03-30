@@ -22,3 +22,21 @@ sudo dnf install miller
 sudo dnf install ghc cabal-install zlib-devel
 cabal update
 cabal install ods2csv --install-method=copy --overwrite-policy=always
+* practical eamples
+** setting up a quick webserver
+python -m http.server port
+
+
+ruby -run -ehttpd . -p8000
+
+
+npm install -g http-server
+http-server -p 8000
+
+
+php -S 127.0.0.1:8000
+** setting up auditing
+[[id:7C7D4821-A5F7-46DC-9ABB-BE424AB3EB4D][auditctl]]
+[[id:02D5443B-1F3C-4E8F-BE8A-DBA163A04409][inotify]]
+
+

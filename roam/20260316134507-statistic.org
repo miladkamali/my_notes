@@ -101,3 +101,10 @@ standard deviation has different formulas for samples and populations
 :LOGBOOK:
 - State "TODO"       from              [2026-03-20 Fri 20:44]
 :END:
+* statistical significance
+** defining your hypothesis
+in defining your hypothesis you should define two hypothesis, null hypothesis and the alternative hypothesis
+** calculate the test statistic
+** defining the significance level
+** calculating the p value
+** interpreting the results

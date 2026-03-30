@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       7C7D4821-A5F7-46DC-9ABB-BE424AB3EB4D
+:END:
+#+title: auditctl
+
+Step 1: Configure the Watch Rules
+You need to tell auditd to watch the authorized_keys file for writes (w) and attribute changes (a).
+
+Run these commands as root (or via sudo):
+
+# Watch all regular users' authorized_keys files
+sudo auditctl -w /home/*/.ssh/authorized_keys -p wa -k ssh_keys
+
+# Watch root's authorized_keys file specifically (wildcards don't catch /root)
+sudo auditctl -w /root/.ssh/authorized_keys -p wa -k ssh_keys
+-w: Watch the path.
+-p wa: Watch for writes (w) and attribute changes (a).
+-k ssh_keys: Assign a tag (key) so you can filter logs easily later.
+Step 2: Verify the Rules
+Check that the rules are active:
+
+sudo auditctl -l
+You should see entries similar to: -w /home/*/.ssh/authorized_keys -p wa -k ssh_keys
+
+Step 3: Monitor the Logs
+When a change occurs, the audit log will capture the User ID (uid), the Process Name (comm), and the Command Line.
+
+To view the logs for your specific key (ssh_keys):
+
+sudo ausearch -k ssh_keys
+
+Example Output:
+
+type=SYSCALL msg=audit(1715623400.123:567): arch=c000003e syscall=257 success=yes exit=0 a0=7fff5fbff8c0 a1=3 a2=1 a3=0 items=1 ppid=1 pid=4321 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 fsgid=1000 tty=pts0 ses=1 comm="ssh-keygen" exe="/usr/bin/ssh-keygen" key="ssh_keys"
+type=PATH msg=audit(1715623400.123:567): item=0 name="/home/user/.ssh/authorized_keys" inode=123456 dev=08:01 mode=0100644 ouid=1000 ogid=1000 rdev=00:00
+comm="ssh-keygen": This tells you the program that made the change.
+uid=1000: This tells you the user ID.
+name="/home/user/.ssh/authorized_keys": The specific file path.
+To make the logs easier to read:
+
+sudo ausearch -k ssh_keys -i
+(The -i flag translates IDs to usernames and timestamps to readable dates.)
+
+Step 4: Make Rules Persistent
+The commands in Step 1 are temporary (they reset on reboot). To make them permanent:
+
+Create a rules file:
+echo "-w /home/*/.ssh/authorized_keys -p wa -k ssh_keys" | sudo tee /etc/audit/rules.d/ssh_keys.rules
+echo "-w /root/.ssh/authorized_keys -p wa -k ssh_keys" | sudo tee -a /etc/audit/rules.d/ssh_keys.rules
+Restart auditd to load them:
+sudo systemctl restart auditd

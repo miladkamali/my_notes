@@ -125,3 +125,7 @@ in and out your fingers will move in and out
 - State "TODO"       from              [2026-02-09 Mon 12:29]
 >>>>>>> 74fc3fa (update)
 :END:
+** TODO [[https://www.youtube.com/watch?v=1CmsqMkITgM&pp=0gcJCdkKAYcqIYzv][THESE 6 Exercises Build More Muscle Than Lifting Weights]]
+:LOGBOOK:
+- State "TODO"       from              [2026-03-28 Sat 15:43]
+:END:

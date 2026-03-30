@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       02D5443B-1F3C-4E8F-BE8A-DBA163A04409
+:END:
+#+title: inotify
+sudo apt install inotify-tools
+
+sudo inotifywait -m -e modify -e create -e delete --format '%T %w %f' --timefmt '%Y-%m-%d %H:%M:%S' /home/*/.ssh/authorized_keys
+

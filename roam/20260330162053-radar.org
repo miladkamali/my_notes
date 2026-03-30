@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       0425843F-C4A4-46C3-82E2-A8D30882CCC8
+:END:
+#+title: radar
+this youtube channel introduce how to make your own radar 
+https://www.youtube.com/playlist?list=PLxC4LYGYcMqmPDEr8E8AlktQPcuHx4izm
