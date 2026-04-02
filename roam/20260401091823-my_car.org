@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       D5BC17C2-82A4-44F3-8E9D-B30390ED5F8A
+:END:
+#+title: my car
+ battery for remote is 2032 best model is varta

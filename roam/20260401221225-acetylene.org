@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       9D417A8F-F0DF-419C-8AFF-2A41BB30ECF2
+:END:
+#+title: acetylene
+

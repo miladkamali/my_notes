@@ -2,6 +2,11 @@
 :ID:       86981DF8-6402-4B56-80C5-DE822C645889
 :END:
 #+title: statistic
+* resource
+** [[https://www.youtube.com/watch?v=1g3pCE_B12E][Hypothesis Testing EXPLAINED]]
+** [[https://www.youtube.com/watch?v=XZo4xyJXCak&list=PL0o_zxa4K1BVsziIRdfv4Hl4UIqDZhXWV&index=3][Introduction to Statistics]]
+** [[https://www.youtube.com/playlist?list=PL0o_zxa4K1BVsziIRdfv4Hl4UIqDZhXWV][playlist]]
+** https://www.youtube.com/@FoundationsOfMath/videos
 * population and sample
 * sampling methods
 ** probabilistic

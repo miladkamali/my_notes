@@ -1,0 +1,76 @@
+:PROPERTIES:
+:ID:       CB224632-54B4-47FF-AB89-94D4BDF37286
+:END:
+#+title: explosive
+
+* explosive classification
+** Class A
+substances that has a maximum hazard capability because of detonation
+*** List
+**** Dynamite
+**** Lead azide
+**** picric Acid
+**** Mercury fulminate
+** Class B
+substances that poses a flammable hazard such as propellant explosive
+*** list
+**** smokeless propellant
+**** photographic flash powder
+**** 
+** Class C
+manufactured items that contain either class A or B or combination of them such as
+detcord,  bullet , ...
+** type of explosive
+*** low explosive
+rate of decomposition proceed through material at less than speed of sound,
+basically deflagration 
+*** High explosive
+rate of decomposition proceed through material at super sonic speed, causing
+detonation
+** sensitivity of explosive
+*** contact
+very sensitive to stimuli,
+nitrogen triiodide can explode by being touched by a feather
+[[https://www.youtube.com/watch?v=DFfRqoIdArM][slow motion contac explosive nitrogen triiodide]]
+*** primary
+explosive that usually found in detonators,
+lead azide, acetone peroxide  mercury (||) fulminate and nitrogrlycerin 
+*** secondary
+is less sensitive than primary explosive and requires substantially more energy
+to initiate
+TNT(Trinitrotoluene), RDX(1,2,5-Trinitroperhydro-1,3,5 triazine) and PETN (pentaerythritol Tetranitrate) 
+*** tertiary
+** type of stimuli for explosive to react to 
+*** impact
+*** heat
+*** friction
+*** Electromagnetic radiation
+*** static electricity
+* [[id:BD06FBE3-EDD2-4CE0-8BE6-9F29C20C4497][Acetone peroxide]] contact high explosive
+* [[id:97710619-E4CA-4360-963C-D9777D487AB4][black powder]]
+* [[id:ED8E1F8D-04B6-44A8-B69E-BDA7BD72C7D5][smokeless powder]]
+* [[id:7C96496D-C78C-43EE-99FF-0A3114DEA6AE][flash powder]]
+* [[id:E6119333-137F-424E-9EF2-3AB85F2704EC][HMDT]]
+* [[id:9D417A8F-F0DF-419C-8AFF-2A41BB30ECF2][acetylene]]
+* [[id:D51FA601-5E1C-4DF3-9911-C6EDA2F943DA][PLX]]
+* mercuri fulminate
+https://www.youtube.com/watch?v=lH6UIGqaTkg
+* 
+* nitroglycerine 
+https://www.youtube.com/watch?v=9IxoCSeaca0&pp=ugUHEgVlbi1VUw%3D%3D
+https://www.youtube.com/watch?v=1lvZNK9KyK8
+[[https://www.youtube.com/watch?v=1lvZNK9KyK8][How I made 100% PURE NITROGLYCERIN]]
+[[https://www.youtube.com/watch?v=R83UaF-sHtA][vegtable oil to nitroglycerine]]
+* rocket engine
+https://www.youtube.com/watch?v=TSzgvP0OW-Q
+
+https://www.youtube.com/watch?v=2xVP91ZJ93o&pp=ugUEEgJlbg%3D%3D
+https://www.youtube.com/watch?v=89NFRs9IrR8
+https://www.youtube.com/watch?v=E0bnPb1WIuc
+https://www.youtube.com/watch?v=qY9fpU8Vpig
+https://www.youtube.com/watch?v=IQWWa9hedOo
+
+[[https://www.youtube.com/watch?v=2xVP91ZJ93o][Casting Sugar Rocket Fuel - Build a KNSB (Sugar) Rocket Motor - Part 5]]
+* black powder
+https://www.youtube.com/watch?v=pTCXsy76vJU
+https://www.youtube.com/watch?v=2ZgTQ0P2svk&pp=ugUHEgVlbi1VUw%3D%3D

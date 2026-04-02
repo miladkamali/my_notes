@@ -2,6 +2,9 @@
 :ID:       ED600863-3CC6-4BA3-A170-4975ADF4CDB7
 :END:
 #+title: ai tools
+* lm studio
+* ollama
+* https://github.com/qaribhaider/ollama-to-lmstudio-symlinks/releases/tag/v0.3.1
 * auto commit
 https://github.com/Nutlope/aicommits
 * code generation
