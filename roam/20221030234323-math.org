@@ -4,3 +4,5 @@
 #+title: math
 * [[https://youtube.com/shorts/bfI7fWGSWOw?feature=share][kaperkar constant]]
 [[https://www.youtube.com/watch?v=AMQ6VeXV278&pp=ugUHEgVlbi1DQQ%3D%3D][Gradient, Divergence and Curl]]
+* visualization
+https://www.geogebra.org/classic?lang=en

@@ -1,0 +1,17 @@
+* liveness and face matching
+* move Minio to hamravesh
+** create a program to copy selected section of the 
+** create a program that removes data older than 3 month from hamravesh
+** create a backup program that moves all 
+* start using hamravesh minio in
+** BFF
+** Auth
+** Dispatcher
+* we can then mo
+* dispatcher service
+* authentication service
+* simplified authentication service
+* BFF service
+* crypto
+* sana
+** 

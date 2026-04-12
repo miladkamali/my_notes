@@ -3,3 +3,12 @@
 :END:
 #+title: electronics
 [[https://www.youtube.com/watch?v=0loXukB302Q][how to use a multimeter]]
+* simulation software
+[[https://www.youtube.com/watch?v=fLzmRKxGGtI][10 Best Circuit Simulators!]]
+** proteus pro 
+** LTspices
+** https://www.circuitlab.com/editor/#?id=7pq5wm&from=homepage
+** https://everycircuit.com
+** https://qucs.sourceforge.net
+** https://www.falstad.com/circuit/
+** https://www.tinkercad.com/dashboard

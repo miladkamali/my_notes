@@ -61,6 +61,14 @@ https://patricia.frank-capra.com/user/panel/
    :YEAR: 2012
    :END:
    Description: A teenage girl dying of leukemia compiles a list of things she would like to do before passing away. Topping the list is her desire to lose her virginity.
+** the Guest
+   :PROPERTIES:
+   :IMDB_RATING: 6.7
+   :IMDB_URL: https://www.imdb.com/title/tt2980592/
+   :IMDB_VOTES: 114,000
+   :GENRE: Drama, Romance
+   :YEAR: 2014
+   :END:
 ** TODO Brimstone
    :PROPERTIES:
    :IMDB_RATING: 7.0
