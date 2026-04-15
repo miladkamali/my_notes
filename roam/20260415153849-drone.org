@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       4fb5fcd0-5386-4f21-a309-4c7fc9a9c546
+:END:
+#+title: drone
+
+* channels related to drones
+
+** [[https://www.youtube.com/@MechNinja][mech ninja]]
+*** https://www.youtube.com/watch?v=2JUeF_L9QYY
+* info
+*** [[https://www.youtube.com/watch?v=3TwXTqH9ntU][Making A Complex Hollow Carbon Fibre Drone Fuselage]]
+*** [[https://www.youtube.com/watch?v=1isqsi9h7c4&t=10s][Designing a GIANT Drone Motor from Scratch]]
