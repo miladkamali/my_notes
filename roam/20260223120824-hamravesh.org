@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a1280532-09cf-4ba5-a069-05867bc52dc2
+:END:
+#+title: hamravesh
+ argocd
+ argo.uid.ir
+ Ysp1EZbFjjOY0gUU
+
+ datree

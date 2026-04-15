@@ -98,28 +98,18 @@ sudo echo "46.245.89.9 k8s-lb.internal" >> /etc/hosts
 k9s  --kubeconfig  ~/.kube/config
 
 :namespace production
-** DONE get access to vmwave
+** DONE get access to vmwave  esx
 CLOSED: [2025-11-26 Wed 13:05] SCHEDULED: <2025-11-07 Fri>
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2025-11-26 Wed 13:05]
 - State "TODO"       from              [2025-11-07 Fri 10:38]
 :END:
 
-ssh -L 127.0.0.1:8444:192.168.100.4:443  milad@46.245.89.4 -p 3316
+ssh -L 127.0.0.1:8444:192.168.100.4:443  milad@46.245.89.14 -p 3316
 
-https://127.0.0.1:8444
+https://127.0..1:8444
 username:uid
 password: Ec9yaqT9
-*** TODO get user name and password from hosein
-SCHEDULED: <2025-11-09 Sun>
-:LOGBOOK:
-- State "TODO"       from              [2025-11-07 Fri 12:03]
-:END:
-** TODO review vmware
-SCHEDULED: <2025-11-27 Thu>
-:LOGBOOK:
-- State "TODO"       from              [2025-11-26 Wed 13:03]
-:END:
 ** DONE monitoring status of servers
 CLOSED: [2025-11-26 Wed 13:03] SCHEDULED: <2025-11-07 Fri>
 :LOGBOOK:
@@ -364,7 +354,7 @@ Preshared Key : asiatech
 | 172.17.174.231 | minio       |                 | administrator | administrator |                                         |
 | 172.17.174.226 | ?           |                 |               |               | cant connect seems it's not there       |
 | 172.17.174.228 | esx         |   192.168.100.4 | administrator | administrator |                                         |
-| 172.17.174.231 | esx         | 192.168.100.209 | administrator | administrator |                                         |
+| 172.17.174.233 | esx         | 192.168.100.209 | administrator | administrator |                                         |
 | 172.17.174.237 | esx         | 1921.168.100.13 | administrator | administrator |                                         |
 |                |             |                 |               |               |                                         |
 * key issues to be solved
