@@ -4,7 +4,11 @@
 #+title: uid
 * current projects                                                     :@uid:
 ** technical
-*** centralized panel
+*** CANCELLED centralized panel
+CLOSED: [2026-04-18 Sat 08:34]
+:LOGBOOK:
+- State "CANCELLED"  from              [2026-04-18 Sat 08:34]
+:END:
 **** DONE review designs with hamed
 CLOSED: [2025-10-23 Thu 13:00] SCHEDULED: <2025-10-22 Wed>
 :LOGBOOK:
@@ -35,10 +39,23 @@ CLOSED: [2025-10-23 Thu 13:00] SCHEDULED: <2025-10-22 Wed>
 - State "TODO"       from              [2025-10-21 Tue 21:14]
 - State "TODO"       from              [2025-10-21 Tue 21:12]
 :END:
-*** wallet service[0/0]
+*** CANCELLED wallet service[1/1]
+CLOSED: [2026-04-18 Sat 08:34]
+:LOGBOOK:
+- State "CANCELLED"  from              [2026-04-18 Sat 08:34]
+:END:
 **** define endpoints for wallet service
-**** modify authentication service to follow 
-*** moving services into kubernates
+**** CANCELLED modify authentication service to follow 
+CLOSED: [2026-04-18 Sat 08:34]
+:LOGBOOK:
+- State "CANCELLED"  from              [2026-04-18 Sat 08:34]
+:END:
+*** CANCELLED moving services into kubernates
+CLOSED: [2026-04-18 Sat 08:33]
+:LOGBOOK:
+- State "CANCELLED"  from              [2026-04-18 Sat 08:33]
+:END:
+*** moving services into hamravesh
 ** follow up about ESOP[4/4]
 :LOGBOOK:
 - State "TODO"       from              [2025-10-21 Tue 12:54]
@@ -285,3 +302,5 @@ I can:
 	•	Make it CI-friendly
 
 Just tell me your goal (security audit, bug bounty, migration, monitoring).
+** 
+** 

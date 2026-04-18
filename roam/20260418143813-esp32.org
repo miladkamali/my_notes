@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       7aefe0bc-2f0c-4eee-b5fd-681c965b3365
+:END:
+#+title: esp32
+* buy link
+** https://microbotmarket.com/product/6980132?utm_medium=PPC&utm_source=Torob&torob_clid=019da087-af2b-72cd-ae50-0c83b5ae91d8
+** https://thecaferobot.com/store/esp32-s3-wroom-1-development-board
