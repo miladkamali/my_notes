@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       48b5e0b8-0d59-4163-a70d-2a503dd89176
+:END:
+#+title: rasberi pi
+[[https://www.youtube.com/watch?v=UEtpaiODNs0][ Cute, but powerful: meet NanoCluster, a tiny supercomputer ]]

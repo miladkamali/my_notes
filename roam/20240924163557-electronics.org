@@ -12,3 +12,7 @@
 ** https://qucs.sourceforge.net
 ** https://www.falstad.com/circuit/
 ** https://www.tinkercad.com/dashboard
+* tutorial
+** [[https://www.youtube.com/watch?v=dR8nqJzrnSg][ Essential Tools For An Electronics Lab ]]
+** [[https://www.youtube.com/watch?v=g0kPZJNZodU][ 36 Essential Tools For Getting Started With Electronics ]]
+** [[https://www.youtube.com/watch?v=SzKo1wE0KeQ][i wish i knew this before building my home lab]]

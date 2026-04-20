@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       45cae1b6-4a0b-4dc4-9a96-a7877865c414
+:END:
+#+title: soldering
+
+[[https://www.youtube.com/watch?v=NQwGUACUr34][ Soldering Sheet Metal ]]
+
+ [[https://www.youtube.com/watch?v=gEs6vb6mWzY][ Wire Modeling and Soldering Basics for Designers Architects hobbyists & crafters ]]
+
+
+  [[https://www.youtube.com/watch?v=V13EEkeeYfM][how to solder cooper pipe like a pro]]
+
+[[https://www.youtube.com/watch?v=GAjuZoyAhgI][ Soldering Complete Tutorial for Beginners | Leaded, SMTs, Chip【Step by Step】 ]]
+* tools 
+** solderubg wick , سیم قلع کش
+  https://torob.com/browse/4998/%D8%B3%DB%8C%D9%85-%D9%82%D9%84%D8%B9-%DA%A9%D8%B4/

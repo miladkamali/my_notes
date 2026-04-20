@@ -56,6 +56,10 @@ CLOSED: [2026-04-18 Sat 08:33]
 - State "CANCELLED"  from              [2026-04-18 Sat 08:33]
 :END:
 *** moving services into hamravesh
+**** export liveness and facematching images and push them to hamravesh
+SCHEDULED: <2026-04-19 Sun>
+**** start liveness and facematching service in hamravesh
+**** 
 ** follow up about ESOP[4/4]
 :LOGBOOK:
 - State "TODO"       from              [2025-10-21 Tue 12:54]
@@ -302,5 +306,4 @@ I can:
 	•	Make it CI-friendly
 
 Just tell me your goal (security audit, bug bounty, migration, monitoring).
-** 
-** 
+
