@@ -13,3 +13,6 @@
 *** [[https://www.youtube.com/watch?v=LrQPa1_s8Qs][ Heavy Lift Drone 100kg Test - It Works! ]]
 *** [[https://www.youtube.com/watch?v=Wqr1b4mWDsE][making bldc motor]]
 https://www.hobbywing.com/en/products/x13-g2
+* models
+** tomahawk
+https://cults3d.com/en/3d-model/gadget/tomahawk-64mm-cruise-jet
