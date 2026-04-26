@@ -36,3 +36,76 @@
 
 #+RESULTS:
 ** images
+* 
+
+Moving a running image from your local environment to a new registry involves a three-step process: **authenticating**, **retagging**, and **pushing**.
+
+Based on the container info you provided, here is the sequence of commands to get that image into the new registry.
+
+---
+
+### 1. Login to the New Registry
+First, you need to authenticate with the Hamdocker registry. When you run this, it will prompt you for the username and password you mentioned.
+
+```bash
+docker login registry.hamdocker.ir
+```
+
+### 2. Tag the Image
+Docker identifies where to push an image based on its name. You need to create a new tag that points to the destination registry. You can use the Image ID (`99c552788a77`) to do this.
+
+```bash
+docker tag 99c552788a77 registry.hamdocker.ir/binesh-hooshmand/liveness-detection:master-v1.0.1
+```
+
+### 3. Push to the Registry
+Now that the image is tagged correctly, upload it to the new repository.
+
+```bash
+docker push registry.hamdocker.ir/binesh-hooshmand/liveness-detection:master-v1.0.1
+```
+
+---
+
+### Summary Table of Parameters
+| Parameter | Value |
+| :--- | :--- |
+| **Source Image ID** | `99c552788a77` |
+| **New Registry Host** | `registry.hamdocker.ir` |
+| **Repository Path** | `binesh-hooshmand/liveness-detection` |
+| **Tag** | `master-v1.0.1` |
+
+> **Note:** If you are performing this on a production server, ensure you have sufficient disk space for the temporary tagging and that your firewall allows outgoing traffic to `registry.hamdocker.ir` on port **443**.
+
+
+
+
+The error happens because when you refer to an image only by its ID (`99c552788a77`), Docker sometimes defaults to looking for a `:latest` version of that specific ID if it can't immediately resolve the reference, or it gets confused by the local tag mapping.
+
+Since your image is currently tagged as `registry.uid.ir/uid/liveness-detection:master-v1.0.1`, you should use the **full source name and tag** instead of the ID. This is more explicit and prevents Docker from guessing.
+
+Try this command instead:
+
+```bash
+docker tag registry.uid.ir/uid/liveness-detection:master-v1.0.1 registry.hamdocker.ir/binesh-hooshmand/liveness-detection:master-v1.0.1
+```
+
+### Why this works better
+1. **Explicit Targeting:** By providing the full name `registry.uid.ir/uid/liveness-detection:master-v1.0.1`, you tell Docker exactly which layer stack to grab.
+2. **Tag Matching:** It ensures the version string (`master-v1.0.1`) carries over correctly to the new registry.
+
+### If you still want to use the ID
+If you prefer using the ID, you must specify the tag explicitly so Docker doesn't append `:latest`. However, using the full name (above) is the standard "best practice" for production moves.
+
+**Alternative using ID:**
+```bash
+docker tag 99c552788a77 registry.hamdocker.ir/binesh-hooshmand/liveness-detection:master-v1.0.1
+```
+*(If this fails again with the same error, it means the local Docker daemon has lost the association between that ID and its metadata, and you should definitely stick to the full name method.)*
+
+### Verification
+After running the tag command, you can run this to make sure both entries point to the same Image ID:
+```bash
+docker images | grep 99c552788a77
+```
+You should see two rows with different repository names but the **exact same Image ID**.
