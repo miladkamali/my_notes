@@ -1,0 +1,115 @@
+:PROPERTIES:
+:ID:       a426fdda-a5f9-430e-a690-8a8fe1897d31
+:END:
+#+title: lvm
+
+* expanding a partition with LVM
+Expanding a partition with LVM (Logical Volume Manager) is a multi-step process that depends on whether you have already added physical disk space or if you are just reallocating existing space within your Volume Group.
+
+In LVM, you don't actually "expand a partition"—you expand a **Logical Volume (LV)** and then the **Filesystem** sitting on top of it.
+
+---
+
+## The Workflow
+
+<Steps>
+{/* Reason: Skipping the filesystem resize (Step 4) is the most common reason users think the expansion failed. This sequence ensures data integrity. */}
+  <Step title="Identify your targets" subtitle="Confirm your volume names">
+    Run `lsblk` and `vgs` to find your Volume Group (VG) name and Logical Volume (LV) name. 
+    *Example: If `lsblk` shows `/dev/mapper/ubuntu--vg-ubuntu--lv`, your LV is `ubuntu-lv` and your VG is `ubuntu-vg`.*
+  </Step>
+  <Step title="Check available space" subtitle="Find free Extents">
+    Run `vgs` or `vgdisplay`. Look for the **"VFree"** or **"Free PE"** column. If this is 0, you must first add a new physical disk or expand your virtual disk in your hypervisor.
+  </Step>
+  <Step title="Extend the Logical Volume" subtitle="The 'lvextend' command">
+    To use all available free space in the Volume Group:
+    `sudo lvextend -l +100%FREE /dev/VG_NAME/LV_NAME`
+    *(Replace with your actual names found in Step 1).*
+  </Step>
+  <Step title="Resize the Filesystem" subtitle="Make the OS see the space">
+    This is the critical final step. 
+    * **For ext4:** `sudo resize2fs /dev/VG_NAME/LV_NAME`
+    * **For XFS:** `sudo xfs_growfs /` (XFS requires the mount point, not the device path).
+  </Step>
+</Steps>
+
+---
+
+## Pro Tip: The "All-in-One" Command
+If you are confident and want to do Steps 3 and 4 in a single shot, use the `-r` (resize) flag. This automatically detects your filesystem type and grows it after the volume expansion is successful:
+
+```bash
+sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv -r
+```
+
+---
+
+## Troubleshooting: What if `vgs` shows 0 Free Space?
+If your Volume Group is full, you cannot expand the LV until you give the VG more physical "ingredients." 
+
+1.  **If you added a new disk (`/dev/sdb`):** `sudo pvcreate /dev/sdb` (Initialize it)
+    `sudo vgextend ubuntu-vg /dev/sdb` (Add it to the group)
+2.  **If you expanded an existing virtual disk:** `sudo pvresize /dev/sda3` (Tell LVM the underlying partition grew)
+
+---
+
+### Understanding the LVM Hierarchy
+
+
+> **Note:** Unlike traditional partitions, LVM allows you to expand the filesystem **while it is mounted and live**. There is no need to boot into a Live CD or unmount the drive for most modern Linux distributions.
+
+<Elicitations message="To help with specific commands:">
+  <Elicitation label="I'm on a Virtual Machine (Proxmox/ESXi)" query="How do I expand a Linux LVM partition after increasing the disk size in Proxmox or VMware?" />
+  <Elicitation label="Verify my specific VG/LV names" query="How can I use 'pvdisplay', 'vgdisplay', and 'lvdisplay' to see exactly how much space I have?" />
+</Elicitations>
+
+
+
+
+You aren't seeing the space because ESXi has made the "physical" disk larger, but LVM is still looking at the old boundaries of the partition. LVM won't see that extra space until you tell the **Partition Table** and the **Physical Volume (PV)** that the underlying drive has grown.
+
+Since you've already handled the ESXi side, here is the sequence to bring that space into your Volume Group.
+
+---
+
+## The Recovery Sequence
+
+<Steps>
+{/* Reason: This specific order is required because LVM sits on a partition, which sits on a disk. You must expand the layers from the bottom up (Disk -> Partition -> PV -> VG -> LV). */}
+  <Step title="Rescan the SCSI Bus" subtitle="No reboot required">
+    Tell the Linux kernel to check for the new disk size:
+    `echo 1 | sudo tee /dev/block/$(lsblk -no PKNAME $(findmnt -no SOURCE /))/device/rescan`
+    *(Alternatively, a simple `sudo rescan-scsi-bus.sh` works if you have sg3-utils installed).*
+  </Step>
+  <Step title="Fix the Partition Table" subtitle="Grow the partition">
+    Use `growpart` to expand the partition (usually partition 3 or 2 on Ubuntu) to fill the new disk space:
+    `sudo growpart /dev/sda 3`
+    *(Note: Replace `3` with your actual partition number from `lsblk`).*
+  </Step>
+  <Step title="Resize the Physical Volume" subtitle="Update LVM's awareness">
+    Now that the partition is larger, tell LVM to use the new space:
+    `sudo pvresize /dev/sda3`
+  </Step>
+  <Step title="Extend the Logical Volume & Filesystem" subtitle="The final expansion">
+    Now `vgs` will show `VFree`. Use it all and resize the filesystem in one go:
+    `sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv -r`
+  </Step>
+</Steps>
+
+---
+
+### Verifying the Change
+After running these, check your space again. You should see the `VFree` temporarily jump up in step 3, and then your `df -h` should show the new capacity after step 4.
+
+| Command | What to look for |
+| :--- | :--- |
+| `lsblk` | Ensure the `sda` disk size matches your ESXi setting. |
+| `pvs` | Ensure `PFree` is now greater than 0 after `pvresize`. |
+| `df -h /` | Confirm the "Size" of your root partition has increased. |
+
+> **Warning:** If `growpart` fails with a "layout" error, you may have a swap partition or another partition blocking the end of the disk. In that case, you'd need to move or delete the blocking partition first.
+
+<Elicitations message="If you run into an error during these steps:">
+  <Elicitation label="I got an 'is in use' error from growpart" query="How do I fix the 'partition is in use' or 'could not find a free area' error when running growpart?" />
+  <Elicitation label="Show me how to check my partition numbers" query="How do I use 'lsblk' and 'fdisk -l' to identify exactly which partition number I need to grow?" />
+</Elicitations>

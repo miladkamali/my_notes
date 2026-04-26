@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       ee3e3fa7-77b1-466a-b3e8-a49eef585f50
+:END:
+#+title: minio
+* using mc
+** setting up a connection
+# Syntax: mc alias set <ALIAS_NAME> <URL> <ACCESS_KEY> <SECRET_KEY>
+mc alias set myminio https://your-minio-server.com ACCESS_KEY SECRET_KEY
+** basic usage
+List all buckets: mc ls myminio/
+
+List objects inside a bucket: mc ls myminio/my-bucket
+
+Recursive list (see everything): mc ls -r myminio/my-bucket
+
+
+mc du myminio/my-bucket
+Pro Tip: Use mc du --summary myminio/ to see a breakdown of every bucket on the server at once.
+
+
+
+# Syntax: mc share download --expire <TIME> <ALIAS>/<BUCKET>/<FILE>
+mc share download --expire 4h myminio/my-bucket/report.pdf
+
+
+
+mc share upload --expire 24h myminio/my-bucket/uploads/
+** monitoring
+1
+Watch live traffic
+The 'admin trace' command
+
+To see every API call hitting your server (who is reading/writing right now), use:
+mc admin trace myminio
+2
+Check server health
+The 'admin info' command
+
+See drive health, uptime, and versioning info:
+mc admin info myminio
+3
+Live Event Tailing
+The 'event' command
+
+If you want to watch for specific actions (like only seeing when new files are created), use:
+mc event tail myminio/my-bucket --event put
+** migrating
+mc mirror --watch --overwrite myminio/source-bucket news3/dest-bucket
+--watch: Keeps the command running and syncs new files as they arrive.
+
+--overwrite: Ensures that if a file is updated on the source, it is replaced on the destination.
