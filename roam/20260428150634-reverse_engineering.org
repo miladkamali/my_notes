@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       32ed864b-e9c0-4239-aaf6-3e5af15abd87
+:END:
+#+title: reverse engineering
+[[https://www.youtube.com/watch?v=m0XAPRAOJ8A][everything is opensource if you know reverse engineering]]

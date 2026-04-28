@@ -49,3 +49,9 @@ mc mirror --watch --overwrite myminio/source-bucket news3/dest-bucket
 --watch: Keeps the command running and syncs new files as they arrive.
 
 --overwrite: Ensures that if a file is updated on the source, it is replaced on the destination.
+
+
+
+
+
+./minioMC mirror --watch --overwrite myminio/uid-bff hamravesh/bff
