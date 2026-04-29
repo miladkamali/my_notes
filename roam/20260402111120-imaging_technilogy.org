@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       dd2a7258-a261-4408-b5f0-2246c25a3976
+:END:
+#+title: imaging technilogy
+* hyperspectral satellite
+[[https://www.youtube.com/watch?v=HSWdIawJ46w][ New Hyperspectral Satellites See 'Impossible' Color Details ]]
+
+ this technology can be used to 
+** push broom imaging band
+this method basically allow a thin strip of light to inter the optical grating mechanism which in turn will be mapped into a 2d sensor
+since we are mapping one dimensional info into a 2 dimensional array we can capture large quantity of color data for each pixel
+
+https://www.adept.net.au/news/newsletter/202001-jan/pushbroom.shtml
+https://backend.orbit.dtu.dk/ws/portalfiles/portal/2953419/imm259.pdf
+** linear variable filter(LVF)
+as the camera is moving over the target the target will be scanned with different wavelength
+the issue here is pixels color are not at the same, so for a dynamic or moving target it proves to be problem
+** snapshot designs 
+*** focal plane based matrix of fiber optics
+*** computer tomography imaging spectrometers
+https://en.wikipedia.org/wiki/Computed_tomography_imaging_spectrometer
+https://patents.google.com/patent/US6522403B2/en
+https://github.com/madspeters/CTIS
+*** coded aperture snapshot spectral imaging (CASSI)
+https://www.nature.com/articles/s41598-023-39117-2
+
+https://opg.optica.org/oe/fulltext.cfm?uri=oe-17-8-6368

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       2d78b65f-1e57-4383-bc08-b726aeec39cb
+:END:
+#+title: complex numbers
+* learn about conformal maps 
