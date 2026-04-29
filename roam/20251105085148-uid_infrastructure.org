@@ -408,3 +408,10 @@ Preshared Key : asiatech
 | 25 |                 |                                                                                          |                                                          |                                                                                                                                       |                            |                         |                      |                |
 * commands
 docker exec -t psql-uid-crypto   pg_dump -U uid   -d uid_crypto_db > /home/pishro/backup/crypto/uid-crypto/db/test.sql
+
+
+
+
+
+
+ip route add 192.168.20.0/24 via 192.168.100.20 dev eno2

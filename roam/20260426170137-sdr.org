@@ -31,5 +31,8 @@ gnu radio
 
 https://github.com/greatscottgadgets/hackrf
 * 
+* devices
+** https://malltina.com/product/mlt-37087144
 * youtube resource
 ** https://www.youtube.com/@TheTechPrepper/playlists
+** [[https://www.youtube.com/watch?v=1ybheoXRNYU][ Diamond D3000N Super Discone Ultra-Wideband Antenna: Great for SDR and Scanners! ]]

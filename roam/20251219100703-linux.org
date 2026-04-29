@@ -38,4 +38,101 @@ php -S 127.0.0.1:8000
 ** setting up auditing
 [[id:7C7D4821-A5F7-46DC-9ABB-BE424AB3EB4D][auditctl]]
 [[id:02D5443B-1F3C-4E8F-BE8A-DBA163A04409][inotify]]
+** network monitoring
+*** darkstat
+Option 1: Darkstat (The "Quick & Simple" Web View)
 
+Best if: You want a lightweight web interface to see a list of "Top Hosts" (IPs) and how much they’ve sent/received since the tool started.
+
+    How it works: It runs as a background service, captures traffic, and provides a simple table at http://your-server-ip:667.
+
+    Setup:
+    Bash
+
+    sudo apt update && sudo apt install darkstat -y
+
+    Configuration: Edit /etc/darkstat/init.cfg:
+
+        Change START_DARKSTAT=no to yes.
+
+        Set INTERFACE="-i eth0" (or your specific interface).
+
+        Set PORT="-p 667".
+
+    Start: sudo systemctl start darkstat
+*** vnstat
+Best if: You want to see daily/monthly totals from the terminal without a web server. Note that vnstat by default tracks total interface traffic, but can be configured to watch specific subnets.
+
+    How it works: It uses kernel statistics, so it has almost zero CPU impact.
+
+    Setup:
+    Bash
+
+    sudo apt install vnstat -y
+
+    Usage:
+
+        Daily report: vnstat -d
+
+        Live per-second: vnstat -l
+*** ntopng
+To monitor your server’s traffic by destination over time, you need a tool that doesn't just show "live" data like iftop, but one that stores a history of flows (who talked to whom).
+
+Depending on how much detail you need, here are the three best ways to set this up:
+Option 1: Darkstat (The "Quick & Simple" Web View)
+
+Best if: You want a lightweight web interface to see a list of "Top Hosts" (IPs) and how much they’ve sent/received since the tool started.
+
+    How it works: It runs as a background service, captures traffic, and provides a simple table at http://your-server-ip:667.
+
+    Setup:
+    Bash
+
+    sudo apt update && sudo apt install darkstat -y
+
+    Configuration: Edit /etc/darkstat/init.cfg:
+
+        Change START_DARKSTAT=no to yes.
+
+        Set INTERFACE="-i eth0" (or your specific interface).
+
+        Set PORT="-p 667".
+
+    Start: sudo systemctl start darkstat
+
+Option 2: vnStat (The "Command Line" Daily Log)
+
+Best if: You want to see daily/monthly totals from the terminal without a web server. Note that vnstat by default tracks total interface traffic, but can be configured to watch specific subnets.
+
+    How it works: It uses kernel statistics, so it has almost zero CPU impact.
+
+    Setup:
+    Bash
+
+    sudo apt install vnstat -y
+
+    Usage:
+
+        Daily report: vnstat -d
+
+        Live per-second: vnstat -l
+
+Option 3: ntopng (The "Enterprise" Choice)
+
+Best if: You need professional-grade forensics. It shows you countries of origin, application types (e.g., "This IP is using BitTorrent"), and historical charts for every single destination.
+
+    How it works: A heavy-duty traffic analyzer with a rich web UI.
+
+    Installation: It's best installed via their official repository (packages.ntop.org), but a basic version is often in standard repos:
+    Bash
+
+    sudo apt install ntopng -y
+
+    Setup: Access it via http://your-server-ip:3000. It will show you a "Flows" tab which is exactly what you need to see where traffic is going right now and where it went yesterday.
+
+Summary Recommendation
+
+
+
+
+https://gemini.google.com/app/970b1ecceae97dea
