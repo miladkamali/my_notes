@@ -29,10 +29,20 @@ https://github.com/AlexandreRouma/SDRPlusPlus/releases/tag/nightly
 gqrx
 gnu radio
 
+https://ariadna.ir/sdr-board/
+
 https://github.com/greatscottgadgets/hackrf
 * 
 * devices
 ** https://malltina.com/product/mlt-37087144
+** B210
+https://www.amazon.de/-/en/Software-Defined-Development-70MHz-6GHz-Platform-black/dp/B0CXDHRWHD/ref=sr_1_1?crid=35QNU3WMV0RJ0&dib=eyJ2IjoiMSJ9.yfsyfphsZ9gsxOPyfHf2PQ3irL1ncFvrsufFx6LM5sUzD2FURWfP3m09fjYogV7scQ9kvFEpr6ad-EtrAVhgb44rhLZVJhepudTYOwJGONNfpTeHJvkZSdBFaossQpLz0IB-QO1tmurqk6rZq5QDMEMdWaSuh6YnWtMhiVi8ZT3JPI1Oto5ce5pHzqmlOsud.NGWay0V9loNoJktPzDiGULDRW3EgVR-8gE9P0FaRgoQ&dib_tag=se&keywords=B210+AD9361&qid=1777728657&sprefix=b210+ad9361%2Caps%2C223&sr=8-1
+https://www.amazon.de/-/en/70MHz-6GHz-USB3-0-Development-Platform-Schematic/dp/B0CWKVN2NN/ref=sr_1_5?crid=35QNU3WMV0RJ0&dib=eyJ2IjoiMSJ9.yfsyfphsZ9gsxOPyfHf2PQ3irL1ncFvrsufFx6LM5sUzD2FURWfP3m09fjYogV7scQ9kvFEpr6ad-EtrAVhgb44rhLZVJhepudTYOwJGONNfpTeHJvkZSdBFaossQpLz0IB-QO1tmurqk6rZq5QDMEMdWaSuh6YnWtMhiVi8ZT3JPI1Oto5ce5pHzqmlOsud.NGWay0V9loNoJktPzDiGULDRW3EgVR-8gE9P0FaRgoQ&dib_tag=se&keywords=B210+AD9361&qid=1777728657&sprefix=b210+ad9361%2Caps%2C223&sr=8-5
+https://opensourcesdrlab.com/products/b210-ad9361
+** pluto +
+https://malltina.com/product/mlt-37087144
 * youtube resource
 ** https://www.youtube.com/@TheTechPrepper/playlists
 ** [[https://www.youtube.com/watch?v=1ybheoXRNYU][ Diamond D3000N Super Discone Ultra-Wideband Antenna: Great for SDR and Scanners! ]]
+** https://www.youtube.com/@TechMindsOfficial
+** [[https://www.youtube.com/watch?v=iXNgPYVpTng][ Create Your Own Open-Source Software-Defined Radio ]]

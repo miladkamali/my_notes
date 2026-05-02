@@ -10,6 +10,10 @@
 ** yq
 ** fzf
 ** curl
+** paste
+concat each 3 lines into a csv 
+
+paste -d, - - -  < inputfile
 ** managing csv files
 *** dockdb
 sudo dnf copr enable iucar/duckdb

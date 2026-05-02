@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       1b37cb7d-5968-4458-a34d-78f26c460ba2
+:END:
+#+title: sed
+
+concating multiple line together into one line
+
+sed 'N;N;s/\n/,/g' input.txt
+
+How it works:
+
+    N;N;: These two N commands pull the next two lines into the pattern space, so sed is holding three lines at once.
+
+    s/\n/,/g: This replaces all internal newlines (the ones between the three lines) with commas.
