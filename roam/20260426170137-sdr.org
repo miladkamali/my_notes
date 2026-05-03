@@ -41,6 +41,9 @@ https://www.amazon.de/-/en/70MHz-6GHz-USB3-0-Development-Platform-Schematic/dp/B
 https://opensourcesdrlab.com/products/b210-ad9361
 ** pluto +
 https://malltina.com/product/mlt-37087144
+** https://www.ettus.com/all-products/x310-kit/
+** https://www.ettus.com/all-products/x310-kit/
+https://www.ettus.com/wp-content/uploads/2024/01/X300_X310_Spec_Sheet_2024-01-23.pdf
 * youtube resource
 ** https://www.youtube.com/@TheTechPrepper/playlists
 ** [[https://www.youtube.com/watch?v=1ybheoXRNYU][ Diamond D3000N Super Discone Ultra-Wideband Antenna: Great for SDR and Scanners! ]]
