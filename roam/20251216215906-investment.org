@@ -4,9 +4,12 @@
 #+title: investment
 * samaneh
 0.331 eth before cleanup
+0.1518 eth before cleanup
 
 * milad
 0.187 eth before cleanup
+0.12163 before cleanup 
+0.33962 before cleanup 
 
 * trc 20 usdt TEz1HhJrNViWHHUzq5wyVWHTPtzawXGzsq
 https://usdt.tokenview.io/en/address/TEz1HhJrNViWHHUzq5wyVWHTPtzawXGzsq
