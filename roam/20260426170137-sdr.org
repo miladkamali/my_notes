@@ -53,3 +53,4 @@ https://www.nuand.com/bladerf-2-0-micro/
 ** https://www.youtube.com/@TechMindsOfficial
 ** [[https://www.youtube.com/watch?v=iXNgPYVpTng][ Create Your Own Open-Source Software-Defined Radio ]]
 ** https://www.youtube.com/@jonkraft
+** [[https://www.youtube.com/watch?v=3l_0z_MBgQ8][ This is NOT a normal Radio! But it can do amazing things! ]]
