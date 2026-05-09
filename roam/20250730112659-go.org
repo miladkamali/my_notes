@@ -5,6 +5,9 @@
 * tutorials
 ** [[https://www.youtube.com/watch?v=bymQakvTY40][10 hour file system]]
 ** [[https://www.youtube.com/watch?v=LMrxfWB6sbQ][ Simple Redis Server From Scratch In Golang - FULL PROJECT ]]
+* resources
+** [[https://devhints.io/go][cheat sheet]]
+** [[https://gobyexample.com/][go examples]]
 * basic types 
 |         |   |
 |---------+---|
@@ -57,3 +60,54 @@ for importing anything you use
   	pk "namespace/package" //shortname for package
   )
 #+end_src
+** functions
+#+begin_src go
+  import (
+  	"errors"
+  	"fmt"
+  )
+
+  func main(){
+  	printMe()
+  	var result,remainder,err = intDivision(30,0)
+  	switch{
+  		case err!=nil:
+  		    fmt.Println(err.Error())
+  		case remainder==0:
+  		    fmt.Printf("the result of integer division is %v",result)
+  		default:
+  		    fmt.Printf("the result is %v with remainder %v",result,remainder)
+  	}
+  }
+  func printMe(){
+  	fmt.Println("hello World")
+  }
+
+  func intDivision(numerator int, denominator int) (int, int, error) {
+  	var err error
+  	if denominator == 0 {
+  		err = errors.New("can not divide by zero")
+  		return 0, 0, err
+  	}
+  	var result int = numerator / denominator
+  	var remainder int = numerator % denominator
+  	return result, remainder, err
+  }
+#+end_src
+** switch
+
+
+
+#+begin_src go
+	switch {
+	case err != nil:
+		fmt.Printf(err.Error())
+	case remainder == 0:
+		fmt.Printf("the result is %v", result)
+	default:
+		fmt.Printf("the result is %v with remainder %v", result, remainder)
+	}
+#+end_src
+** array
+var intarr [3]int32
+** 
