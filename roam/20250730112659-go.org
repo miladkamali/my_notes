@@ -5,6 +5,7 @@
 * tutorials
 ** [[https://www.youtube.com/watch?v=bymQakvTY40][10 hour file system]]
 ** [[https://www.youtube.com/watch?v=LMrxfWB6sbQ][ Simple Redis Server From Scratch In Golang - FULL PROJECT ]]
+** https://roadmap.sh/golang
 * resources
 ** [[https://devhints.io/go][cheat sheet]]
 ** [[https://gobyexample.com/][go examples]]
@@ -43,8 +44,8 @@ import "unicode/utf8
 utf8.RuneCountInString("string")
 
 len(string) returns the byte size of string and not the actual characters
-** 
-** import
+
+* import
 for importing anything you use
 #+begin_src go
   import "packageName"
@@ -60,7 +61,7 @@ for importing anything you use
   	pk "namespace/package" //shortname for package
   )
 #+end_src
-** functions
+* functions
 #+begin_src go
   import (
   	"errors"
@@ -94,7 +95,7 @@ for importing anything you use
   	return result, remainder, err
   }
 #+end_src
-** switch
+* switch
 
 
 
@@ -108,6 +109,15 @@ for importing anything you use
 		fmt.Printf("the result is %v with remainder %v", result, remainder)
 	}
 #+end_src
-** array
+* array
 var intarr [3]int32
-** 
+* slice
+var intslice []int32 = []int32{1,2,3}
+intSlice = append(intSlice,7)
+//create a slice using make function 
+var floatSlice []float32 = make([]float32, 3,optional_capacity)
+
+fmt.Println(intSlice, len(intSlice), cap(intSlice))
+* map
+var myMap map[string]uint8 = make(make[string]uint8]
+
