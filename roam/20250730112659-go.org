@@ -6,6 +6,7 @@
 ** [[https://www.youtube.com/watch?v=bymQakvTY40][10 hour file system]]
 ** [[https://www.youtube.com/watch?v=LMrxfWB6sbQ][ Simple Redis Server From Scratch In Golang - FULL PROJECT ]]
 ** https://roadmap.sh/golang
+** https://www.youtube.com/playlist?list=PL-2EBeDYMIbR1ag15E2MonJOj_cCIjUnd
 * resources
 ** [[https://devhints.io/go][cheat sheet]]
 ** [[https://gobyexample.com/][go examples]]
