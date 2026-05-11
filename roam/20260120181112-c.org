@@ -366,3 +366,6 @@ Use constinit.
 
 If you tell me which C++ version you’re using (C++11/14/17/20/23) and whether your static member is meant to be constant or mutable shared state, I can show you the cleanest pattern for your exact case (including header/source layout).i
 ** brace initialization
+** rule of 3
+** rule of 5
+** constexpr consteval constinit

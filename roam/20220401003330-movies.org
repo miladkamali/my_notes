@@ -96,6 +96,7 @@ https://patricia.frank-capra.com/user/panel/
    :YEAR: 2017
    :END:
    Description: In 1892, a legendary Army captain reluctantly agrees to escort a Cheyenne war chief and his family through dangerous territory.
+** [#A] project Hail mary
 ** before i go to sleep
    :PROPERTIES:
    :IMDB_RATING: 6.6

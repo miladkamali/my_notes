@@ -7,6 +7,9 @@
 ** [[https://www.youtube.com/watch?v=LMrxfWB6sbQ][ Simple Redis Server From Scratch In Golang - FULL PROJECT ]]
 ** https://roadmap.sh/golang
 ** https://www.youtube.com/playlist?list=PL-2EBeDYMIbR1ag15E2MonJOj_cCIjUnd
+** [[https://www.youtube.com/watch?v=erHz7d0v8Vw&t=291s][ #55 Golang - Get Started with gRPC in Golang – Server & Client ]]
+** [[https://www.youtube.com/watch?v=mPESsBfUKkc&t=330s][ 2024 gRPC Golang Tutorial - The tutorial I wish I had when I was learning ]]
+** [[https://www.youtube.com/@codeheim][codeHeim]]
 * resources
 ** [[https://devhints.io/go][cheat sheet]]
 ** [[https://gobyexample.com/][go examples]]
@@ -121,4 +124,10 @@ var floatSlice []float32 = make([]float32, 3,optional_capacity)
 fmt.Println(intSlice, len(intSlice), cap(intSlice))
 * map
 var myMap map[string]uint8 = make(make[string]uint8]
+* grpc
+first install the dependencies
 
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+
+make sure 
