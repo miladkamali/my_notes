@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       121287f4-91f4-4c09-af0e-2aed050a901b
+:END:
+#+title: figureout
+
+* TODO what is pingora framework released by cloudflare
+:LOGBOOK:
+- State "TODO"       from              [2026-05-14 Thu 16:33]
+:END:

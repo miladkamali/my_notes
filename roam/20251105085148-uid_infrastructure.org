@@ -378,7 +378,7 @@ Preshared Key : asiatech
 |  7 |    46.245.89.14 | auth-simplified-bff                                                                      |                                                          |                                                                                                                                       |                            |                         |                      |                |
 |  8 |    46.245.89.15 | sana-ca-bff-crypto                                                                       |                                                          |                                                                                                                                       |                            |                         |                      |                |
 |  9 |   192.168.20.10 | vpn asiatec                                                                              | milad : 123                                              |                                                                                                                                       |                            |                         |                      |                |
-| 10 |       10.4.4.41 | vpn-local-mail sertve                                                                    | /home/uid/openvpn-install.sh , mail is dokcer            | What is the mail package?                                                                                                             |                            |                         |                      |                |
+| 10 |       10.4.4.41 | vpn-local-mail sertve  ssh port 2222  password openvpn uid123                            | /home/uid/openvpn-install.sh , mail is dokcer            | What is the mail package?                                                                                                             |                            |                         |                      |                |
 | 11 |        10.4.4.1 | mikrotik                                                                                 | milad:764a6e5abfc99ccc                                   |                                                                                                                                       |                            |                         |                      |                |
 | 12 |                 | ldap password reset                                                                      | http://192.168.20.60/phpldapadmin/                       | cn=admin,dc=uid,dc=ir , password:mRifIvnE                                                                                             |                            |                         |                      |                |
 | 13 |                 | how are we managing ssl for u-id.net                                                     | https://spaceiran.com/ - cpanel generated                | user ?                                                                                                                                |                            |                         |                      |                |
@@ -415,3 +415,9 @@ docker exec -t psql-uid-crypto   pg_dump -U uid   -d uid_crypto_db > /home/pishr
 
 
 ip route add 192.168.20.0/24 via 192.168.100.20 dev eno2
+
+
+
+
+
+joooooon
