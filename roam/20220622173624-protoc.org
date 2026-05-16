@@ -8,6 +8,8 @@ https://github.com/pseudomuto/protoc-gen-doc/wiki/Custom-Templates
 https://github.com/pseudomuto/protoc-gen-doc/blob/master/examples/templates/grpc-md.tmpl
 
 
+https://protobuf.dev/getting-started/gotutorial/
+
 protoc --doc_out=./doc  ir/uid/services/*
 protoc --doc_out=./doc --doc_opt=html,index.html `find ./ir -name "*.proto"|grep -v node`
 

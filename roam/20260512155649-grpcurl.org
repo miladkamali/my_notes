@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       b8d1d884-adb3-46d7-a75b-df930bb9b0ce
+:END:
+#+title: grpcurl
+
+https://aristanetworks.github.io/openmgmt/examples/gnoi/grpcurl/
+https://github.com/fullstorydev/grpcurl

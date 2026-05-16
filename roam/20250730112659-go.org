@@ -10,6 +10,8 @@
 ** [[https://www.youtube.com/watch?v=erHz7d0v8Vw&t=291s][ #55 Golang - Get Started with gRPC in Golang – Server & Client ]]
 ** [[https://www.youtube.com/watch?v=mPESsBfUKkc&t=330s][ 2024 gRPC Golang Tutorial - The tutorial I wish I had when I was learning ]]
 ** [[https://www.youtube.com/@codeheim][codeHeim]]
+** https://www.youtube.com/watch?v=xQRr2cO8Pg0
+** https://www.youtube.com/watch?v=5gFcb_kGGHQ
 * resources
 ** [[https://devhints.io/go][cheat sheet]]
 ** [[https://gobyexample.com/][go examples]]

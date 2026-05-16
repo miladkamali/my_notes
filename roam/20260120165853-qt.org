@@ -2,6 +2,8 @@
 :ID:       29bf0dd8-99b7-4708-b85b-3ef43c722028
 :END:
 #+title: qt
+* resources
+https://wiki.qt.io/Qt_for_Beginners
 * installation on fedora
 qt-assistant qt-common qt-demos qt-devel qt-doc qt-examples
 * learning qt

@@ -1,0 +1,82 @@
+:PROPERTIES:
+:ID:       95bd8436-be62-4a9c-9276-4ffa65dfbaaa
+:END:
+#+title: protobuf
+I totally get the frustration. Dealing with those generated pointer fields in Go can feel like you're fighting the language just to assign a simple string. This usually happens because your Protobuf definition uses the `optional` keyword, which tells the Go compiler to generate `*string` instead of a plain `string` to allow for nullability.
+
+Here are the three best ways to clean this up, ranging from "quick fix" to "pro level."
+
+---
+
+### 1. The "Helper Function" Approach (Most Common)
+
+Since you can't take the address of a string literal directly in Go (e.g., `&"milad"` is a syntax error), the most readable way is to use a tiny helper function. Most gRPC developers keep a `utils` package for this.
+
+```go
+func Ptr[T any](v T) *T {
+    return &v
+}
+
+// Now your code looks like this:
+request := pb.LoginRequest{
+    Username: Ptr("milad"),
+    Password: Ptr("1234"),
+}
+
+```
+
+### 2. Use `proto` Package Helpers
+
+If you don't want to write your own helper, the official Google Protobuf library actually provides these for you for standard types.
+
+```go
+import "google.golang.org/protobuf/proto"
+
+request := pb.LoginRequest{
+    Username: proto.String("milad"),
+    Password: proto.String("1234"),
+}
+
+```
+
+*Note: This is very common in unit tests, but it only works for basic types like `String`, `Int32`, `Bool`, etc.*
+
+---
+
+### 3. Re-evaluate your `.proto` Definition
+
+If you find yourself constantly doing this and you **don't actually need** to distinguish between an "empty string" and a "null string," you should remove the `optional` keyword from your `.proto` file.
+
+**Instead of this:**
+
+```protobuf
+message LoginRequest {
+  optional string username = 1; // Generates *string
+  optional string password = 2; // Generates *string
+}
+
+```
+
+**Do this:**
+
+```protobuf
+message LoginRequest {
+  string username = 1; // Generates string
+  string password = 2; // Generates string
+}
+
+```
+
+> **Why this matters:** In gRPC (Proto3), fields are "zero-valued" by default. If you send an empty string, the other side receives an empty string. You only need `optional` (pointers) if your business logic specifically needs to know if the user *omitted* the field entirely vs. sending it as blank.
+
+---
+
+### Summary Table
+
+| Method | Verbosity | Best Use Case |
+| --- | --- | --- |
+| **Helper Function** | Low | General projects / Custom types |
+| **`proto.String()`** | Medium | When you want to stay "standard library" |
+| **Remove `optional**` | None | When "null" isn't a requirement |
+
+Which approach fits your current project architecture better? Are you actually relying on those fields being `nil` for some logic?

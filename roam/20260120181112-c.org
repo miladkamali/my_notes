@@ -7,6 +7,7 @@
 ** https://www.youtube.com/watch?v=Gv4sDL9Ljww
 ** https://github.com/LaurieWired/XplaneFlightData
 ** https://roadmap.sh/cpp
+** https://www.stroustrup.com/JSF-AV-rules.pdf
 * compilation process
 pre-processor processes headers and source files then compiler  compiles them into object files
 then a linker link them into a executable or a library 
