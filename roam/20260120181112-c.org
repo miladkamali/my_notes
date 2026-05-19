@@ -8,6 +8,11 @@
 ** https://github.com/LaurieWired/XplaneFlightData
 ** https://roadmap.sh/cpp
 ** https://www.stroustrup.com/JSF-AV-rules.pdf
+* video resources
+** [[https://www.youtube.com/@lowlevelgamedev9330/videos][Low Level Game Dev]]
+** [[https://www.youtube.com/@MollyRocket][Molly Rocket]]
+** [[https://www.youtube.com/@javidx9][javidx9]]
+** [[https://www.youtube.com/watch?v=OSAOh4L41Wg&pp=ugUEEgJlbtIHCQkECwGHKiGM7w%3D%3D][simulating atoms in c++]]
 * compilation process
 pre-processor processes headers and source files then compiler  compiles them into object files
 then a linker link them into a executable or a library 
