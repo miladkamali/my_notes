@@ -246,3 +246,5 @@ echo "U2FsdGVkX199Gm/PHkqP4bEGlmgwLxDHZ3f1b/vlOc4="|openssl enc -d -aes256 -base
 
 * checking a website ssl certificate
 openssl s_client -showcerts -connect https://uat-ttbank.wingom.ir </dev/null |openssl x509 -enddate  -noout
+
+curl -Iv https://u-id.net 2>&1 | grep -E "start date|expire date|common name|issuer"
