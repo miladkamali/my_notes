@@ -8,6 +8,10 @@
 ** https://github.com/LaurieWired/XplaneFlightData
 ** https://roadmap.sh/cpp
 ** https://www.stroustrup.com/JSF-AV-rules.pdf
+** ELF ABI
+*** https://www.youtube.com/watch?v=nC1U1LJQL8o&t=125s&pp=ygUHRUxGIEFCSdIHCQkECwGHKiGM7w%3D%3D
+*** https://www.youtube.com/watch?v=Fsx_RnjyYqc&t=397s&pp=ygUHRUxGIEFCSQ%3D%3D
+*** https://www.youtube.com/watch?v=ddLB8A1ai_M&t=110s&pp=ygUHRUxGIEFCSQ%3D%3D
 * video resources
 ** [[https://www.youtube.com/@lowlevelgamedev9330/videos][Low Level Game Dev]]
 ** [[https://www.youtube.com/@MollyRocket][Molly Rocket]]

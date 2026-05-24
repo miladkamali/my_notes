@@ -418,9 +418,7 @@ ip route add 192.168.20.0/24 via 192.168.100.20 dev eno2
 
 
 
-
-
-
+sudo proxychains certbot certonly --dns-cloudflare -d "u-id.net,*.u-id.net"
 
 
 supervisorctl  reread  &&  supervisorctl  update
@@ -428,4 +426,5 @@ vim /etc/supervisor/conf.d/ping-gost-1.conf
 docker logs -f -n100 gost-ssh-tunnel
  cd /docker/d/
  vim docker-compose.yml
+
 
