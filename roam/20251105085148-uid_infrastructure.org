@@ -345,6 +345,7 @@ L2tp preshared
 address: idc-vpn.asiatech.ir
 username: BINESH-HOOSHMAND
 password: Binesh-Hooshmand@1544
+password2 :Binesh-Hooshmand-Pishro@1544
 Preshared Key : asiatech
 
 
