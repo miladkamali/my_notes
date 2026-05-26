@@ -12,6 +12,8 @@
 ** [[https://www.youtube.com/@codeheim][codeHeim]]
 ** https://www.youtube.com/watch?v=xQRr2cO8Pg0
 ** https://www.youtube.com/watch?v=5gFcb_kGGHQ
+** sqlx and sqlc
+https://github.com/jmoiron/sqlx
 * resources
 ** [[https://devhints.io/go][cheat sheet]]
 ** [[https://gobyexample.com/][go examples]]
