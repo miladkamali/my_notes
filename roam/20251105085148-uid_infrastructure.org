@@ -110,6 +110,7 @@ ssh -L 127.0.0.1:8444:192.168.100.4:443  milad@46.245.89.14 -p 3316
 https://127.0.0.1:8444
 username:uid
 password: Ec9yaqT9
+password: xp#jMMwc8.'zJDp
 ** DONE monitoring status of servers
 CLOSED: [2025-11-26 Wed 13:03] SCHEDULED: <2025-11-07 Fri>
 :LOGBOOK:

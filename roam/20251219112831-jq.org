@@ -79,3 +79,8 @@ something that is not json{"user": "milad","details": {"active": true,"roles": [
 
 https://qmacro.org/blog/posts/2022/05/19/json-object-values-into-csv-with-jq/
 https://github.com/jqlang/awesome-jq
+
+
+
+
+cat http-service.log |grep "https://aggr-svc-sig.ttbank.ir/auth/CallBackKycAp"| cut -d '|' -f5|jq 'select(.response.status== 400)'|jq '.response.requestTime|= (. / 1000 | strftime("%Y-%m-%d %H:%M:%S"))'|jq '.response.requestTime'
