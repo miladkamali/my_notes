@@ -15,6 +15,12 @@
 ** database
 https://github.com/rbock/sqlpp11
 sqlpp11 or sqlx-cpp
+** package managers
+vcpkg
+conan
+hunter
+** networking
+https://www.youtube.com/watch?v=v6m70HyI0XE
 * video resources
 ** [[https://www.youtube.com/@lowlevelgamedev9330/videos][Low Level Game Dev]]
 ** [[https://www.youtube.com/@MollyRocket][Molly Rocket]]

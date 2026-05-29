@@ -56,6 +56,8 @@ Docker identifies where to push an image based on its name. You need to create a
 
 ```bash
 docker tag 99c552788a77 registry.hamdocker.ir/binesh-hooshmand/liveness-detection:master-v1.0.1
+docker tag 631d0aca752e registry.hamdocker.ir/binesh-hooshmand/bff-panel:0.0.15
+docker tag 4daa90134352 registry.hamdocker.ir/binesh-hooshmand/authentication-api-call-center-panel:0.0.30
 ```
 
 ### 3. Push to the Registry

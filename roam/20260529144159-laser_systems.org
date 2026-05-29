@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       b6f98a96-efe5-4d18-a870-1acea7d463bd
+:END:
+#+title: laser systems
+helious 60KW laser already operational
+songbow 400KW laser 
+
+

@@ -4,6 +4,7 @@
 #+title: hamravesh
  argocd
  argo.uid.ir
+ admin
  Ysp1EZbFjjOY0gUU
 
  datree
@@ -23,3 +24,10 @@
  production1
  sFeWTXqMJWgM2MBernttUg
  cjYr9HvLBNyk0RAeUAQzX2l3iBT2CLgmKebWEjXhI2c
+
+
+
+registry
+registry.hamdocker.ir/binesh-hooshmand
+ binesh-hooshmand
+ wpFdX0BV7KdrjRDbA1!

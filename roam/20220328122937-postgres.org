@@ -104,6 +104,14 @@ select stock_id,date,time,second as place ,third as num_buyer,fourth as buy_volu
 ** [[https://www.youtube.com/watch?v=atvgYJTBEF4][efficient time series with postgres]]
 * TODO learn generte_series function
 * permissions
+
+
+ALTER USER temporal NOCREATEDB;
+GRANT ALL PRIVILEGES ON DATABASE temporal TO temporal;
+GRANT ALL ON SCHEMA public TO temporal;
+
+
+
   Grant usage schema:
 
 GRANT USAGE ON SCHEMA database_name TO username;

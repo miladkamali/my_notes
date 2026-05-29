@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       a420adbc-9f06-4286-b5c5-b40a64e09354
+:END:
+#+title: helm
+creating a helm chart
+helm create webapp1
+
+
+
+helm install mywebapp-release webapp1/ --values webapp1/values.yaml
+
+k create namespace dev
+k create namespace prod
+helm install mywebapp-release-dev webapp1/ --values webapp1/values.yaml -f webapp1/values-dev.yaml -n dev
+helm install mywebapp-release-prod webapp1/ --values webapp1/values.yaml -f webapp1/values-prod.yaml -n prod
+helm ls --all-namespaces
+
+
+helm upgrade liveness-release-prod liveness-detection/   --values liveness-detection/values.yaml   -f liveness-detection/values-prod.yaml   -n prod
+helm uninstall liveness-release-prod -n prod
+
+
+helm install face-detection-prod face-detection/   --values face-detection/values.yaml   -f face-detection/values-prod.yaml   -n prod
+
+helm install haproxy-prod haproxy/   --values haproxy/values.yaml   -f haproxy/values-prod.yaml   -n prod
+
+helm install bff-panel-prod bff-panel --values bff-panel/values.yaml -f bff-panel/values-prod.yaml -n prod
+
+helm install authentication-panel-prod bff-panel --values authentication-panel/values.yaml -f authentication-panel/values-prod.yaml -n prod
+
+helm install sana-panel-prod sana-panel --values sana-panel/values.yaml -f sana-panel/values-prod.yaml -n prod
+
+helm install crypto-panel-prod cryto-panel --values crypto-panel/values.yaml -f crypto-panel/values-prod.yaml -n prod
+
+helm install crypto-business-panel-prod crypto-business-panel --values crypto-business-panel/values.yaml -f crypto-business-panel/values-prod.yaml -n prod
+
+helm install sana-web-prod sana-web --values sana-web/values.yaml -f sana-web/values-prod.yaml -n prod
+
+helm install bff-web-prod bff-web --values bff-web/values.yaml -f bff-web/values-prod.yaml -n prod
+
+
+
+helm upgrade --install temporal-prod temporal --values temporal/values.yaml -f temporal/values/values.postgresql.yaml -n temporal-prod --timeout 900s

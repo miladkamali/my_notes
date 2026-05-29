@@ -9,3 +9,106 @@
 * commands
 updating core dns
 kubectl -n kube-config edit configmap coredns --kubeconfig=./kube/config
+* monitoring kubernates
+kubectl top needs the Metrics Server installed in the cluster:
+
+kubectl get deployment metrics-server -n kube-system
+If it is missing, kubectl top will fail even though the cluster is fine.
+
+
+** List nodes (machines in the cluster)
+kubectl get nodes
+kubectl get nodes -o wide
+Shows status, roles, Kubernetes version, internal/external IPs.
+
+** Per-node CPU, memory, disk (capacity vs usage)
+Capacity and allocatable resources (what the node has vs what Kubernetes can schedule):
+
+kubectl describe node <node-name>
+Look for sections like:
+
+Capacity — total CPU, memory, pods, ephemeral storage
+Allocatable — what is available for workloads (after system/kube reserved)
+Non-terminated Pods — current requests/limits usage on that node
+All nodes at once:
+
+kubectl describe nodes
+Live usage (requires metrics-server):
+
+kubectl top nodes
+Example output columns: NAME, CPU(cores), CPU%, MEMORY(bytes), MEMORY%.
+
+** Cluster-wide workload consumption
+kubectl top pods -A
+kubectl top pods -A --containers
+Sort by memory (example):
+
+kubectl top pods -A --sort-by=memory
+** Quick custom view (capacity in one table)
+kubectl get nodes -o custom-columns=\
+NAME:.metadata.name,\
+CPU:.status.capacity.cpu,\
+MEMORY:.status.capacity.memory,\
+PODS:.status.capacity.pods,\
+ALLOC_CPU:.status.allocatable.cpu,\
+ALLOC_MEM:.status.allocatable.memory
+** Storage (if you mean disk/PV)
+kubectl get storageclass
+kubectl get pv
+kubectl get pvc -A
+Node ephemeral storage is in kubectl describe node under capacity/allocatable.
+
+6. Sanity check that kubectl can reach the cluster
+kubectl cluster-info
+kubectl get componentstatuses   # deprecated on newer clusters; may be empty
+kubectl get --raw /readyz?verbose   # API server health (K8s 1.16+)
+* setting up secret
+kubectl -n prod create secret docker-registry hamravesh-docker-registry \
+  --docker-server=registry.hamdocker.ir \
+  --docker-username='binesh-hooshmand' \
+  --docker-password='wpFdX0BV7KdrjRDbA1!' \
+* install ingress
+** ha proxy ingress
+helm repo add haproxytech https://haproxytech.github.io/helm-charts
+helm repo update
+
+
+kubectl create namespace haproxy-controller
+
+helm install haproxy-kic haproxytech/kubernetes-ingress \
+  -n haproxy-controller \
+  --set controller.ingressClass=haproxy \
+  --set controller.ingressClassResource.name=haproxy \
+  --set controller.ingressClassResource.default=false \
+  --set controller.service.type=LoadBalancer
+
+
+
+  4) Verify it’s running
+
+kubectl -n haproxy-controller get pods
+kubectl -n haproxy-controller get svc
+kubectl get ingressclass
+
+
+
+
+
+
+helm upgrade haproxy-kic haproxytech/kubernetes-ingress \
+  -n haproxy-controller \
+  --reuse-values \
+  --set controller.service.annotations."hlb\.hamravesh\.com/ip-pool"=traefik \
+  --set controller.service.annotations."hlb\.hamravesh\.com/expose-as"=port \
+  --set controller.service.annotations."hlb\.hamravesh\.com/allow-shared-ip"="false"
+
+
+
+
+  helm upgrade haproxy-kic haproxytech/kubernetes-ingress \
+  -n haproxy-controller \
+  --reuse-values \
+  --set controller.service.annotations."hlb\.hamravesh\.com/ip-pool"=traefik \
+  --set controller.service.annotations."hlb\.hamravesh\.com/expose-as"=port \
+  --set controller.service.annotations."hlb\.hamravesh\.com/allow-shared-ip"="false" \
+  --set controller.service.externalTrafficPolicy=Local
