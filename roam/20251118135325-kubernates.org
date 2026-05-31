@@ -112,3 +112,24 @@ helm upgrade haproxy-kic haproxytech/kubernetes-ingress \
   --set controller.service.annotations."hlb\.hamravesh\.com/expose-as"=port \
   --set controller.service.annotations."hlb\.hamravesh\.com/allow-shared-ip"="false" \
   --set controller.service.externalTrafficPolicy=Local
+* debuging
+Run these in order — they’ll show the exact scheduling blocker.
+
+# 1) Most useful: pod events/reason
+kubectl -n prod describe pod satpay-service-prod-uid-generic-service-f6fc6bbb6-47ml2
+# 2) Quick status with node assignment
+kubectl -n prod get pod satpay-service-prod-uid-generic-service-f6fc6bbb6-47ml2 -o wide
+# 3) Namespace events (latest at bottom)
+kubectl -n prod get events --sort-by=.metadata.creationTimestamp
+For Pending pods, common messages in describe are:
+
+FailedScheduling (insufficient CPU/memory)
+pod has unbound immediate PersistentVolumeClaims (PVC not bound)
+node selector / taint mismatch
+image pull secret issues (usually this shows after scheduled, but still check)
+Since your chart uses PVC, also check storage immediately:
+
+kubectl -n prod get pvc
+kubectl -n prod describe pvc satpay-service-prod-uid-generic-service-pvc
+kubectl get storageclass
+If you paste the Events: section from describe pod, I can tell you the exact fix in one step.
