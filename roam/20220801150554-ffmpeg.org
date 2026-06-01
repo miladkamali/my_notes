@@ -2,4 +2,21 @@
 :ID:       3e4335e1-3dc9-44dd-bda6-5a0f8e259a4f
 :END:
 #+title: ffmpeg
+* encoders
+** h264
+** h265
+** h266
+ffmpeg -i input.mp4 -c:v libvvenc -preset medium -qp 32 -pix_fmt yuv420p10le -an output.mkv
+
+** av1
+** av2
+** getting list of available encoders
+ffmpeg -encoders 
+* installation
+** fedora
+https://linuxcapable.com/install-ffmpeg-on-fedora-linux/
+* options
+** scale
+-vf "scale=1080:-1"
+-vf "scale=1080:720"
 

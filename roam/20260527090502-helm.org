@@ -43,3 +43,6 @@ helm install bff-web-prod bff-web --values bff-web/values.yaml -f bff-web/values
 helm upgrade --install temporal-prod temporal --values temporal/values.yaml -f temporal/values/values.postgresql.yaml -n temporal-prod --timeout 900s
 
 helm upgrade --install satpay-service-prod satpay-service --values satpay-service/values.yaml -f satpay-service/values.yaml -n prod
+
+
+helm upgrade --install saja-service-prod saja-service --values saja-service/values.yaml -f saja-service/values.yaml -n prod

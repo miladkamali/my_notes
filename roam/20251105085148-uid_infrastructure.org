@@ -6,6 +6,10 @@
 * taking back control of infrastructure                                :@uid:
 ** uid zytel ip
 81.91.155.88
+** email servers
+iranserver.com
+uid@iran.ir
+Uid@1234
 ** uid shuttle ip
 84.241.10.73
 ** create a dependency graph of our services
