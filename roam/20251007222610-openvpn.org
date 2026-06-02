@@ -50,5 +50,43 @@ admin
 اطلاعات اکانت 
 user: ovpn-1831
 pass: n0tf9q
-pk: 87654321
 
+pk: 87654321
+* openvpn
+# Connect
+openvpn3 session-start --config ~/test.ovpn
+# List connections
+openvpn3 sessions-list
+# Disconnect
+openvpn3 session-manage --session-path /net/openvpn/v3/sessions/fbd8d1d7s682cs5555sb18bs4c10c18c28ea --disconnect
+
+# Enable Split tunneling, add this lines to .ovpn file
+route-nopull
+route 192.168.8.1 255.255.255.255
+
+
+
+
+
+
+import pexpect
+from pexpect import popen_spawn
+
+commands = "openvpn3 session-start --config profile-40.ovpn"
+commands_list = commands.split(" ")
+username = "x"
+password = "x"
+
+session = pexpect.popen_spawn.PopenSpawn(commands)
+session.expect("Auth User name: ")
+session.sendline(username)
+print("first_done")
+
+session.expect("Auth Password: ")
+session.sendline(password)
+print("second_done")
+* projects
+** https://github.com/NordSecurity/gopenvpn
+** https://pkg.go.dev/github.com/NordSecurity/gopenvpn/openvpn
+** https://github.com/adamwalach/go-openvpn/blob/master/server/mi/client.go
+** https://github.com/ooni/minivpn
