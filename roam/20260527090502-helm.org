@@ -42,7 +42,27 @@ helm install bff-web-prod bff-web --values bff-web/values.yaml -f bff-web/values
 
 helm upgrade --install temporal-prod temporal --values temporal/values.yaml -f temporal/values/values.postgresql.yaml -n temporal-prod --timeout 900s
 
+
+ kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d satpay -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE satpay TO satpay;
+GRANT USAGE, CREATE ON SCHEMA public TO satpay;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO satpay;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO satpay;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO satpay;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO satpay;
+SQL
+
+
 helm upgrade --install satpay-service-prod satpay-service --values satpay-service/values.yaml -f satpay-service/values.yaml -n prod
 
+
+kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d saja -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE satpay TO saja-user;
+GRANT USAGE, CREATE ON SCHEMA public TO saja-user;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO saja-user;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO saja-user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO saja-user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO saja-user;
+SQL
 
 helm upgrade --install saja-service-prod saja-service --values saja-service/values.yaml -f saja-service/values.yaml -n prod

@@ -133,3 +133,13 @@ kubectl -n prod get pvc
 kubectl -n prod describe pvc satpay-service-prod-uid-generic-service-pvc
 kubectl get storageclass
 If you paste the Events: section from describe pod, I can tell you the exact fix in one step.
+* check database connection
+kubectl -n prod run pg-test \
+  --rm -i \
+  --restart=Never \
+  --image=postgres:17 \
+  --env="PGPASSWORD=q5amohbmR4B93fXTOOru" \
+  --command -- \
+  psql -h uid-production-database-proxy.database.svc -p 5432 -U postgres -d postgres \
+  -c "SELECT 1 AS ok;"
+* 
