@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       56157e9c-1d18-4351-83d7-5da1d3eb58a1
+:END:
+#+title: code challenge
+advent of code 
+https://www.youtube.com/watch?v=5rb0vvJ7NCY
