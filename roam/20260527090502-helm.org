@@ -16,7 +16,7 @@ helm install mywebapp-release-prod webapp1/ --values webapp1/values.yaml -f weba
 helm ls --all-namespaces
 
 
-helm upgrade liveness-release-prod liveness-detection/   --values liveness-detection/values.yaml   -f liveness-detection/values-prod.yaml   -n prod
+helm upgrade liveness-detection-prod liveness-detection/   --values liveness-detection/values.yaml   -f liveness-detection/values-prod.yaml   -n prod
 helm uninstall liveness-release-prod -n prod
 
 
@@ -56,13 +56,111 @@ SQL
 helm upgrade --install satpay-service-prod satpay-service --values satpay-service/values.yaml -f satpay-service/values.yaml -n prod
 
 
-kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d saja -v ON_ERROR_STOP=1 <<'SQL'
-GRANT CONNECT ON DATABASE satpay TO saja-user;
-GRANT USAGE, CREATE ON SCHEMA public TO saja-user;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO saja-user;
-GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO saja-user;
-ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO saja-user;
-ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO saja-user;
+kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d saja-service -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE satpay TO saja;
+GRANT USAGE, CREATE ON SCHEMA public TO saja;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO saja;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO saja;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO saja;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO saja;
 SQL
 
 helm upgrade --install saja-service-prod saja-service --values saja-service/values.yaml -f saja-service/values.yaml -n prod
+
+
+kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d rahbar-service -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE satpay TO rahbar;
+GRANT USAGE, CREATE ON SCHEMA public TO rahbar;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO rahbar;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO rahbar;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO rahbar;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO rahbar
+SQL
+
+
+helm upgrade --install rahbar-service-prod rahbar-service --values rahbar-service/values.yaml -f rahbar-service/values.yaml -n prod
+
+
+
+kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d faraboom-service -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE satpay TO faraboom;
+GRANT USAGE, CREATE ON SCHEMA public TO faraboom;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO faraboom;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO faraboom;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO faraboom;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO faraboom;
+SQL
+
+
+helm upgrade --install faraboom-service-prod faraboom-service \
+  --values faraboom-service/values.yaml \
+  -f faraboom-service/values-prod.yaml \
+  -n prod
+
+
+kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d sandbad-service -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE satpay TO sandbad;
+GRANT USAGE, CREATE ON SCHEMA public TO sandbad;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO sandbad;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO sandbad;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO sandbad;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO sandbad;
+SQL
+
+
+helm upgrade --install sandbad-service-prod sandbad-service \
+  --values sandbad-service/values.yaml \
+  -f sandbad-service/values-prod.yaml \
+  -n prod
+
+
+  kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d zibal-service -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE satpay TO zibal;
+GRANT USAGE, CREATE ON SCHEMA public TO zibal;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO zibal;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO zibal;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO zibal;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO zibal;
+SQL
+
+
+helm upgrade --install zibal-service-prod zibal-service \
+  --values zibal-service/values.yaml \
+  -f zibal-service/values-prod.yaml \
+  -n prod
+
+
+
+  kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d vandar-service -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE satpay TO vandar;
+GRANT USAGE, CREATE ON SCHEMA public TO vandar;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO vandar;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO vandar;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO vandar;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO vandar;
+SQL
+
+helm upgrade --install vandar-service-prod vandar-service \
+  --values vandar-service/values.yaml \
+  -f vandar-service/values-prod.yaml \
+  -n prod
+
+
+
+
+kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d afra-service -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE satpay TO afra;
+GRANT USAGE, CREATE ON SCHEMA public TO afra;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO afra;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO afra;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO afra;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO afra;
+SQL
+
+
+helm upgrade --install afra-service-prod afra-service \
+  --values afra-service/values.yaml \
+  -f afra-service/values-prod.yaml \
+  -n prod
+
+  

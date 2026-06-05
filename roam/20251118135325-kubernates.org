@@ -142,4 +142,38 @@ kubectl -n prod run pg-test \
   --command -- \
   psql -h uid-production-database-proxy.database.svc -p 5432 -U postgres -d postgres \
   -c "SELECT 1 AS ok;"
-* 
+* checking environment of a pod
+kubectl exec -n prod satpay-service-prod-uid-generic-service-746c4c9bd6-tfkx7 -- env
+* checking pods resource allocation
+kubectl get pods -n prod -o custom-columns=\
+'NAME:.metadata.name,'\
+'CPU_REQ:.spec.containers[*].resources.requests.cpu,'\
+'MEM_REQ:.spec.containers[*].resources.requests.memory,'\
+'CPU_LIM:.spec.containers[*].resources.limits.cpu,'\
+'MEM_LIM:.spec.containers[*].resources.limits.memory'
+
+
+
+
+kubectl get pods -n prod -o json | jq -r '
+  .items[] |
+  .metadata.name as $pod |
+  .spec.containers[] |
+  [
+    $pod,
+    .name,
+    (.resources.requests.cpu // "-"),
+    (.resources.requests.memory // "-"),
+    (.resources.limits.cpu // "-"),
+    (.resources.limits.memory // "-")
+  ] | @tsv
+' | column -t
+
+
+
+
+kubectl describe nodes | grep -A6 "Allocated resources"
+# What's actually running in prod
+kubectl get pods -n prod -o wide
+
+kubectl get pods -n prod --sort-by=.spec.containers[0].resources.requests.memory

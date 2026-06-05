@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       c47b37bf-f4ad-43f9-b787-20bdde95169a
+:END:
+#+title: quantum computer
+* microsoft  Majorana 2
+https://www.youtube.com/shorts/inreqB1J-z4

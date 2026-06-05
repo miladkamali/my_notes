@@ -6,6 +6,7 @@
 ** h264
 ** h265
 ** h266
+libvvenc H.266
 ffmpeg -i input.mp4 -c:v libvvenc -preset medium -qp 32 -pix_fmt yuv420p10le -an output.mkv
 
 ** av1
