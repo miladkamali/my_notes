@@ -26,6 +26,7 @@ https://www.youtube.com/watch?v=v6m70HyI0XE
 ** [[https://www.youtube.com/@MollyRocket][Molly Rocket]]
 ** [[https://www.youtube.com/@javidx9][javidx9]]
 ** [[https://www.youtube.com/watch?v=OSAOh4L41Wg&pp=ugUEEgJlbtIHCQkECwGHKiGM7w%3D%3D][simulating atoms in c++]]
+** [[https://youtu.be/DMQ_HcNSOAI?is=aJWEZMLaZiS0jdhE][perfect hashmap faster than rust and C++]]
 * compilation process
 pre-processor processes headers and source files then compiler  compiles them into object files
 then a linker link them into a executable or a library 
