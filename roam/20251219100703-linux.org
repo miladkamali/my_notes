@@ -140,3 +140,9 @@ Summary Recommendation
 
 
 https://gemini.google.com/app/970b1ecceae97dea
+** checking external ip from terminal
+curl ifconfig.me;
+curl ifconfig.me/all;
+curl icanhazip.com;
+curl ipecho.net/plain;
+curl ifconfig.co;

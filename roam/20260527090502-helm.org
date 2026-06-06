@@ -164,3 +164,16 @@ helm upgrade --install afra-service-prod afra-service \
   -n prod
 
   
+kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d dispatcher-service -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE satpay TO dispatcher;
+GRANT USAGE, CREATE ON SCHEMA public TO dispatcher;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO dispatcher;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO dispatcher;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO dispatcher;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO dispatcher;
+SQL
+
+
+ helm upgrade --install dispatcher-prod ./dispatcher-service   -f dispatcher-service/values.yaml   -f dispatcher-service/values-prod.yaml   -n prod
+
+
