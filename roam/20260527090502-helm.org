@@ -16,13 +16,13 @@ helm install mywebapp-release-prod webapp1/ --values webapp1/values.yaml -f weba
 helm ls --all-namespaces
 
 
-helm upgrade liveness-detection-prod liveness-detection/   --values liveness-detection/values.yaml   -f liveness-detection/values-prod.yaml   -n prod
+helm upgrade --install liveness-detection-prod liveness-detection/   --values liveness-detection/values.yaml   -f liveness-detection/values-prod.yaml   -n prod
 helm uninstall liveness-release-prod -n prod
 
 
-helm install face-detection-prod face-detection/   --values face-detection/values.yaml   -f face-detection/values-prod.yaml   -n prod
+helm upgrade --install face-detection-prod face-detection/   --values face-detection/values.yaml   -f face-detection/values-prod.yaml   -n prod
 
-helm install haproxy-prod haproxy/   --values haproxy/values.yaml   -f haproxy/values-prod.yaml   -n prod
+helm upgrade --install haproxy-prod haproxy/   --values haproxy/values.yaml   -f haproxy/values-prod.yaml   -n prod
 
 helm install bff-panel-prod bff-panel --values bff-panel/values.yaml -f bff-panel/values-prod.yaml -n prod
 
@@ -177,3 +177,16 @@ SQL
  helm upgrade --install dispatcher-prod ./dispatcher-service   -f dispatcher-service/values.yaml   -f dispatcher-service/values-prod.yaml   -n prod
 
 
+kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d authentication -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE satpay TO authentication;
+GRANT USAGE, CREATE ON SCHEMA public TO authentication;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO authentication;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO authentication;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO authentication;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO authentication;
+SQL
+
+
+ helm upgrade --install authentication-api ./authentication-api \
+  -f authentication-api/values-prod.yaml \
+  -n prod
