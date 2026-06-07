@@ -5,3 +5,27 @@
 starting ssh agent
 eval "$(ssh-agent -s)"
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+
+tunneling one server to reach an other
+
+by setting in ~/.ssh/config
+
+Host server4
+    HostName <server4_ip_or_domain>
+    User <your_username_on_server4>
+    Port 3316
+
+Host server58
+    HostName <server58_ip_or_domain>
+    User <your_username_on_server58>
+    ProxyJump server4
+
+Host server1
+    HostName <server1_ip_or_domain>
+    User <your_username_on_server1>
+    ProxyJump server58
+
+scp server1:/path/to/remote/file.txt /path/to/local/destination/
+
+or we can
+scp -J user@server4:3316,user@server58 user@server1:/path/to/remote/file.txt /path/to/local/destination/
