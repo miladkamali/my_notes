@@ -146,3 +146,6 @@ curl ifconfig.me/all;
 curl icanhazip.com;
 curl ipecho.net/plain;
 curl ifconfig.co;
+** ram disk
+sudo mkdir /mnt/ramdisk
+sudo mount -t tmpfs -o rw,size=2G tmpfs /mnt/ramdisk

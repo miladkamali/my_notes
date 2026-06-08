@@ -2,6 +2,19 @@
 :ID:       cb498fe8-5273-46c2-925d-bc8e690712b0
 :END:
 #+title: postgres
+* capabilities
+** key-value cache similar to redis
+CREATE UNLOGGED TABLE session_cache(
+key text primary key,
+value jsonb,
+ttl timestamptz,
+)
+** pub sub
+https://brojonat.com/posts/go-postgres-listen-notify/
+** search
+** schema less document
+** vector
+** job queue
 * resources
 ** https://tapoueh.org/page/3/
 ** https://tapoueh.org/blog/2014/02/postgresql-aggregates-and-histograms/

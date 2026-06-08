@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       79690366-57cc-467e-bbd0-254caa68647f
+:END:
+#+title: file storage
+* minio
+* s3
+* ceph
+* rook ceph
+* [[https://juicefs.com/en/][juiceFS]]
