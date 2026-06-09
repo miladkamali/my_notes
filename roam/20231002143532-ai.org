@@ -2,6 +2,10 @@
 :ID:       2C8D485F-5140-4723-9663-6DEAC1C3476A
 :END:
 #+title: ai
+
+
+
+
 https://openrouter.ai/chat?room=orc-h21vfjnQAhLtEAg0xIgehkI3DEGx
 autogpt
 google bard
@@ -20,6 +24,10 @@ midjourney ai
 
 
 https://hexmos.com/lama2/tutorials/installation.html
+* videos
+** [[https://www.youtube.com/watch?v=v_jDvpEGTIg&pp=ugUEEgJlbg%3D%3D][ Yann LeCun's $1B Bet Against LLMs [Part 2] ]]
+** [[https://www.youtube.com/watch?v=kYkIdXwW2AE&t=737s][ Yann LeCun's $1B Bet Against LLMs [Part 1] ]]
+** [[https://www.youtube.com/watch?v=qx7hirqgfuU&pp=ugUEEgJlbg%3D%3D][ why deep learning works unreasonably well]]
 * lama
 https://github.com/jmorganca/ollama
 https://huggingface.co/jarradh/llama2_70b_chat_uncensored

@@ -19,6 +19,10 @@ sqlpp11 or sqlx-cpp
 vcpkg
 conan
 hunter
+** multithreading
+*** lock_guard
+std::mutex mtx;
+std::lock_guard<std::mutex> lock(mtx);
 ** networking
 https://www.youtube.com/watch?v=v6m70HyI0XE
 * video resources
