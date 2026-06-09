@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       ee5c32e6-a60e-4482-9f63-907d09cf442c
+:END:
+#+title: game development
+* information
+** [[https://www.youtube.com/watch?v=5zlfJW2VGLM&t=326s][when your game is bad but your optimization is genius]]

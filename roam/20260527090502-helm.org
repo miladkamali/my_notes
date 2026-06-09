@@ -31,7 +31,10 @@ helm upgrade --install face-detection-prod face-detection/   --values face-detec
 ** ha-proxy liveness/facedetection
 helm upgrade --install haproxy-prod haproxy/   --values haproxy/values.yaml   -f haproxy/values-prod.yaml   -n prod
 
-** bff
+** TODO bff
+:LOGBOOK:
+- State "TODO"       from              [2026-06-09 Tue 21:22]
+:END:
 *** bff-panel
 helm upgrade --install bff-panel-prod bff-panel --values bff-panel/values.yaml -f bff-panel/values-prod.yaml -n prod
 *** bff-core
@@ -48,6 +51,56 @@ SQL
 
 helm upgrade --install bff-core-prod bff-core --values bff-core/values.yaml -f bff-core/values-prod.yaml -n prod
 
+**** the error
+2026-06-09T17:36:45,551 | ERROR| [main[] | o.s.b.SpringApplication | Application
+run failed org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'temporalConfig' def │ │ ined in URL
+[jar:file:/app/uid-bff-backend-0.0.1-SNAPSHOT-spring-boot.jar!/BOOT-INF/classes!/ir/uid/bff/config/TemporalConfig.class]:
+Unsatisfied dependency expressed through constructor parameter 2: Error cr │ │
+eating bean with name 'userSessionService' defined in URL
+[jar:file:/app/uid-bff-backend-0.0.1-SNAPSHOT-spring-boot.jar!/BOOT-INF/classes!/ir/uid/bff/service/application/UserSessionService.class]:
+Unsatisfied │ │ dependency expressed through constructor parameter 0: Error
+creating bean with name 'userSessionRepository': Invocation of init method
+failed| at org.springframework.beans.factory.support.ConstructorResol │ │
+ver.createArgumentArray(ConstructorResolver.java:800)
+~[spring-beans-6.0.8.jar!/:6.0.8]| at
+org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245)
+~ │ │ [spring-beans-6.0.8.jar!/:6.0.8]| at
+org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352)
+~[spring-beans-6.0.8.jar! │ │ /:6.0.8]| at
+org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
+~[spring-beans-6.0.8.jar!/:6.0.8]| at org.sprin │ │
+gframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+~[spring-beans-6.0.8.jar!/:6.0.8]| at org.springframework.beans.factory.support
+│ │
+.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+~[spring-beans-6.0.8.jar!/:6.0.8]| at
+org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetB │ │
+ean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.8.jar!/:6.0.8]| at
+org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+~[spring │ │ -beans-6.0.8.jar!/:6.0.8]| at
+org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+~[spring-beans-6.0.8.jar!/:6.0.8]| at org.springframework.beans.factor │ │
+y.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+~[spring-beans-6.0.8.jar!/:6.0.8]| at
+org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(Defau
+│ │ ltListableBeanFactory.java:973) ~[spring-beans-6.0.8.jar!/:6.0.8]| at
+org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+~[s │ │ pring-context-6.0.8.jar!/:6.0.8]| at
+org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+~[spring-context-6.0.8.jar!/:6.0.8]| at org.springframewo │ │
+rk.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+~[spring-boot-3.0.6.jar!/:3.0.6]| at
+org.springframework.boot.SpringApplication.refresh(S │ │
+pringApplication.java:732) ~[spring-boot-3.0.6.jar!/:3.0.6]| at
+org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+~[spring-boot-3.0.6.jar!/:3.0.6]| at org.springframe │ │
+work.boot.SpringApplication.run(SpringApplication.java:310)
+~[spring-boot-3.0.6.jar!/:3.0.6]| at
+org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+~[spring-boot-3.0.6.jar!/:3.0.6] │ └───────────────────────────
+
+
 helm upgrade --install bff-core . -f values-prod.yaml -n prod
 ** authentication-panel
 helm upgrade --install authentication-panel-prod authentication-panel --values authentication-panel/values.yaml -f authentication-panel/values-prod.yaml -n prod
@@ -60,6 +113,28 @@ helm upgrade --install crypto-panel-prod cryto-panel --values crypto-panel/value
 
 ** crypto-business-panel
 helm upgrade --install crypto-business-panel-prod crypto-business-panel --values crypto-business-panel/values.yaml -f crypto-business-panel/values-prod.yaml -n prod
+
+** TODO crypto-api
+:LOGBOOK:
+- State "TODO"       from              [2026-06-09 Tue 21:22]
+:END:
+
+ kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d crypto -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE crypto TO crypto;
+GRANT USAGE, CREATE ON SCHEMA public TO crypto;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO crypto;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO crypto;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO crypto;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO crypto;
+SQL
+
+helm upgrade --install crypto-api-prod crypto-api --values crypto-api/values.yaml -f crypto-api/values-prod.yaml -n prod
+
+
+
+*** error
+│ 2026-06-09T19:21:40,324 | FATAL| [main[] | i.u.c.r.RedisSessionRepository | **************** Redis has been crashed ! --- ERROR: Unable to connect to Redis ****************                                     │
+
 
 ** sana-web
 helm upgrade --install sana-web-prod sana-web --values sana-web/values.yaml -f sana-web/values-prod.yaml -n prod
