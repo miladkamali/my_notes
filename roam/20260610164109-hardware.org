@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       30ecec49-e45b-4471-a131-e5b85e063ba8
+:END:
+#+title: hardware
+* cpu
+** [[https://www.youtube.com/watch?v=tadUeiNe5-g][ How CPUs Interact with So Many Different Devices ]]

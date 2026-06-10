@@ -4,3 +4,5 @@
 #+title: radar
 this youtube channel introduce how to make your own radar 
 https://www.youtube.com/playlist?list=PLxC4LYGYcMqmPDEr8E8AlktQPcuHx4izm
+* videos 
+** [[https://www.youtube.com/watch?v=XP8OWMDHfOQ][ Monopulse Tracking with a Low Cost Pluto SDR ]]

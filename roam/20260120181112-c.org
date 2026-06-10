@@ -23,6 +23,8 @@ hunter
 *** lock_guard
 std::mutex mtx;
 std::lock_guard<std::mutex> lock(mtx);
+** tutorials
+*** [[https://www.youtube.com/watch?v=UUwDyPpQ3n4][ 16 C++ Habits That Make Your Code Better ]]
 ** networking
 https://www.youtube.com/watch?v=v6m70HyI0XE
 * video resources
