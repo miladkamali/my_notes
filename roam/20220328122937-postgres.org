@@ -3,6 +3,7 @@
 :END:
 #+title: postgres
 * capabilities
+[[https://www.youtube.com/watch?v=GbdeGYW_lNE][ Is Your ORM Lying to You About Postgres? ]]
 ** key-value cache similar to redis
 CREATE UNLOGGED TABLE session_cache(
 key text primary key,
