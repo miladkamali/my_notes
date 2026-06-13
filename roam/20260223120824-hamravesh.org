@@ -31,3 +31,8 @@ registry
 registry.hamdocker.ir/binesh-hooshmand
  binesh-hooshmand
  wpFdX0BV7KdrjRDbA1!
+
+
+ object storage
+ eytLXt1skHc_P_mh-mlXvg
+ 3KaaU45dxIf2CJy-OmKV5LHII5CUrb7IRudd7Zsxm3E
