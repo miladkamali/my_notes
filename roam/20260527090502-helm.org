@@ -332,8 +332,8 @@ SQL
 
  helm upgrade --install dispatcher-prod ./dispatcher-service   -f dispatcher-service/values.yaml   -f dispatcher-service/values-prod.yaml   -n prod
 ** authentication-api
-kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d authentication3 -v ON_ERROR_STOP=1 <<'SQL'
-GRANT CONNECT ON DATABASE authentication3 TO authentication;
+kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d authentication5 -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE authentication5 TO authentication;
 GRANT USAGE, CREATE ON SCHEMA public TO authentication;
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO authentication;
 GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO authentication;
