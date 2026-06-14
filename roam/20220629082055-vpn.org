@@ -42,3 +42,9 @@ hysteria2://EAP69t23bv@212.192.248.198:11123?obfs=salamander&obfs-password=aw4bt
 * setup
 ** passwall on openwt
 https://github.com/Ramtiiin/install-passwall2-openwrt
+* go
+** TODO figure it out
+:LOGBOOK:
+- State "TODO"       from              [2026-06-14 Sun 08:14]
+:END:
+https://pkg.go.dev/github.com/metacubex/mihomo
