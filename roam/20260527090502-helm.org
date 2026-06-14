@@ -219,7 +219,8 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO satpay;
 SQL
 
 
-helm upgrade --install satpay-service-prod satpay-service --values satpay-service/values.yaml -f satpay-service/values.yaml -n prod
+helm upgrade satpay-service-prod helm-charts/apps/satpay-service \
+  -n prod -f values.yaml -f values-prod.yaml
 
 ** saja
 kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d saja-service -v ON_ERROR_STOP=1 <<'SQL'
