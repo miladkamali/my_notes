@@ -101,7 +101,8 @@ org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
 ~[spring-boot-3.0.6.jar!/:3.0.6] │ └───────────────────────────
 
 
-helm upgrade --install bff-core . -f values-prod.yaml -n prod
+
+helm upgrade --install bff-core-prod bff-core/  --values bff-core/values.yaml -f bff-core/values-prod.yaml -n prod
 ** authentication-panel
 helm upgrade --install authentication-panel-prod authentication-panel --values authentication-panel/values.yaml -f authentication-panel/values-prod.yaml -n prod
 

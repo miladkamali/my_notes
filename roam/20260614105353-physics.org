@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       4e184c76-c3ab-4d6f-a914-adf81a076be3
+:END:
+#+title: physics
+* [[https://www.youtube.com/watch?v=qVqtkL-wNZw][ I Tested the Principle of Least Action (using Pure Randomness) ]]
