@@ -1,0 +1,56 @@
+:PROPERTIES:
+:ID:       8083076c-b41f-48f0-a233-ef0f9ad64e43
+:END:
+#+title: mongodb
+
+* basic operations
+
+** login
+mongosh -h host -u username -d password 
+
+
+| list all database    | show dbs                |
+| database statistic   | db.stats()              |
+| get collection       | db.getCollectionNames() |
+| select a database    | use database            |
+| list all collections | show collections        |
+|                      |                         |
+
+
+
+
+
+** configuration
+*** setting maxinum size of cache
+db.adminCommand({
+  setParameter: 1,
+  wiredTigerEngineRuntimeConfig: "cache_size=1G"
+})
+
+** scripts
+*** sort all the collections in a db
+db.getCollectionNames().map(c => ({ name: c, ...db.getCollection(c).stats() })).sort((a, b) => b.storageSize - a.storageSize).forEach( c=> print(c.name+ "storage "+ (c.storageSize/1024/1024) + "MB  index "+ (c.totalIndexSize/1024/1024)+ "MB" + " docs: " + c.count ));
+** backup and restore
+
+Full database
+mongodump \
+  --uri="mongodb://USER:PASSWORD@HOST:27017/DATABASE" \
+  --out=/tmp/mongo-backup-$(date +%F)
+Single database
+mongodump \
+  --uri="mongodb://USER:PASSWORD@HOST:27017/mydb" \
+  --db=mydb \
+  --out=/tmp/mongo-backup
+Single collection
+mongodump \
+  --uri="mongodb://USER:PASSWORD@HOST:27017/mydb" \
+  --db=mydb \
+  --collection=user_profile \
+  --out=/tmp/mongo-backup
+
+  tar -czf mongo-backup-$(date +%F).tar.gz -C /tmp mongo-backup-$(date +%F)
+
+
+  mongodump --uri="mongodb://localhost:27017" --gzip --archive=mongo-$(date +%F).gz
+
+  mongorestore --uri="mongodb://localhost:27017" --gzip --archive=mongo-2026-06-13.gz
