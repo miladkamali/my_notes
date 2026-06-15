@@ -22,14 +22,14 @@ helm ls --all-namespaces
 ** ai
 
 *** liveness
-helm upgrade --install liveness-detection-prod liveness-detection/   --values liveness-detection/values.yaml   -f liveness-detection/values-prod.yaml   -n prod
+helm upgrade --install liveness-detection-prod liveness-detection/   -f liveness-detection/values.yaml   -f liveness-detection/values-prod.yaml   -n prod
 helm uninstall liveness-release-prod -n prod
 
 *** face-detection
-helm upgrade --install face-detection-prod face-detection/   --values face-detection/values.yaml   -f face-detection/values-prod.yaml   -n prod
+helm upgrade --install face-detection-prod face-detection/   -f face-detection/values.yaml   -f face-detection/values-prod.yaml   -n prod
 
 ** ha-proxy liveness/facedetection
-helm upgrade --install haproxy-prod haproxy/   --values haproxy/values.yaml   -f haproxy/values-prod.yaml   -n prod
+helm upgrade --install haproxy-prod haproxy/   -f haproxy/values.yaml   -f haproxy/values-prod.yaml   -n prod
 
 ** TODO bff
 :LOGBOOK:
@@ -183,7 +183,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO ap_payment_b
 SQL
 
 
-helm upgrade --install ap-payment-bff-prod ap-payment --values ap-payment/values.yaml -f ap-payment/values-prod.yaml -n prod
+helm upgrade --install ap-payment-bff-prod ap-payment -f ap-payment/values.yaml -f ap-payment/values-prod.yaml -n prod
 
 ** temporal
 
@@ -206,7 +206,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO temporal;
 SQL
 
 
-helm upgrade --install temporal-prod temporal --values temporal/values.yaml -f temporal/values/values.postgresql.yaml -n temporal-prod --timeout 900s
+helm upgrade --install temporal-prod temporal -f temporal/values.yaml -f temporal/values/values.postgresql.yaml -n temporal-prod --timeout 900s
 
 ** satpay
  kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d satpay -v ON_ERROR_STOP=1 <<'SQL'
@@ -219,8 +219,8 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO satpay;
 SQL
 
 
-helm upgrade satpay-service-prod helm-charts/apps/satpay-service \
-  -n prod -f values.yaml -f values-prod.yaml
+
+helm upgrade --install  satpay-service-prod satpay-service   -n prod -f satpay-service/values.yaml -f satpay-service/values-prod.yaml
 
 ** saja
 kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d saja-service -v ON_ERROR_STOP=1 <<'SQL'
@@ -243,7 +243,7 @@ GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO rahbar;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO rahbar;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO rahbar
 SQL
-helm upgrade --install rahbar-service-prod rahbar-service --values rahbar-service/values.yaml -f rahbar-service/values.yaml -n prod
+helm upgrade --install rahbar-service-prod rahbar-service -f rahbar-service/values.yaml -f rahbar-service/values.yaml -n prod
 ** faraboom
 
 
@@ -262,8 +262,8 @@ helm upgrade --install faraboom-service-prod faraboom-service \
   -f faraboom-service/values-prod.yaml \
   -n prod
 ** sandbad
-kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d sandbad-service -v ON_ERROR_STOP=1 <<'SQL'
-GRANT CONNECT ON DATABASE satpay TO sandbad;
+kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d sandbad -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE sandbad TO sandbad;
 GRANT USAGE, CREATE ON SCHEMA public TO sandbad;
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO sandbad;
 GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO sandbad;
@@ -272,10 +272,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO sandbad;
 SQL
 
 
-helm upgrade --install sandbad-service-prod sandbad-service \
-  --values sandbad-service/values.yaml \
-  -f sandbad-service/values-prod.yaml \
-  -n prod
+helm upgrade --install sandbad-service-prod sandbad-service -f sandbad-service/values.yaml -f sandbad-service/values-prod.yaml -n prod
 ** zibal
   kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d zibal-service -v ON_ERROR_STOP=1 <<'SQL'
 GRANT CONNECT ON DATABASE satpay TO zibal;
@@ -287,10 +284,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO zibal;
 SQL
 
 
-helm upgrade --install zibal-service-prod zibal-service \
-  --values zibal-service/values.yaml \
-  -f zibal-service/values-prod.yaml \
-  -n prod
+helm upgrade --install zibal-service-prod zibal-service -f zibal-service/values.yaml -f zibal-service/values-prod.yaml -n prod
 ** vandar
   kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d vandar-service -v ON_ERROR_STOP=1 <<'SQL'
 GRANT CONNECT ON DATABASE satpay TO vandar;
@@ -301,10 +295,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO vandar;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO vandar;
 SQL
 
-helm upgrade --install vandar-service-prod vandar-service \
-  --values vandar-service/values.yaml \
-  -f vandar-service/values-prod.yaml \
-  -n prod
+helm upgrade --install vandar-service-prod vandar-service -f vandar-service/values.yaml -f vandar-service/values-prod.yaml -n prod
 ** afra
 
 kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d afra-service -v ON_ERROR_STOP=1 <<'SQL'
@@ -317,10 +308,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO afra;
 SQL
 
 
-helm upgrade --install afra-service-prod afra-service \
-  --values afra-service/values.yaml \
-  -f afra-service/values-prod.yaml \
-  -n prod
+helm upgrade --install afra-service-prod afra-service -f afra-service/values.yaml -f afra-service/values-prod.yaml -n prod
 ** dispatcher service
 kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d dispatcher-service -v ON_ERROR_STOP=1 <<'SQL'
 GRANT CONNECT ON DATABASE satpay TO dispatcher;
@@ -343,9 +331,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO authentication;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO authentication;
 SQL
 
- helm upgrade --install authentication-api ./authentication-api \
-  -f authentication-api/values-prod.yaml \
-  -n prod
+ helm upgrade --install authentication-api ./authentication-api -f authentication/values.yaml -f authentication-api/values-prod.yaml -n prod
 
   { echo "SET synchronous_commit = off;"; gunzip -c auth-26-06-11-12.sql.gz; } |   psql -h uid-production-database-proxy.database.svc -U authentication -d authentication3 -v ON_ERROR_STOP=1
 

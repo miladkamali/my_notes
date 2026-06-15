@@ -177,3 +177,41 @@ kubectl describe nodes | grep -A6 "Allocated resources"
 kubectl get pods -n prod -o wide
 
 kubectl get pods -n prod --sort-by=.spec.containers[0].resources.requests.memory
+* setting up dns
+
+kubectl edit configmap coredns -n kube-system
+
+
+
+.:53 {
+    errors
+    health {
+       lameduck 5s
+    }
+    ready
+    hosts {
+       148.251.200.187 mailservice11.irandns.com
+       fallthrough
+    }
+    kubernetes cluster.local in-addr.arpa ip6.arpa {
+       pods insecure
+       fallthrough in-addr.arpa ip6.arpa
+       ttl 30
+    }
+    prometheus :9153
+    forward . /etc/resolv.conf {
+       max_concurrent 1000
+    }
+    cache 30
+    loop
+    reload
+    loadbalance
+}
+
+
+kubectl rollout restart deployment/coredns -n kube-system
+
+
+verify
+kubectl run dns-test --rm -it --image=busybox:1.36 --restart=Never -- nslookup mailservice11.irandns.com
+

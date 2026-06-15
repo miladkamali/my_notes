@@ -141,6 +141,8 @@ Summary Recommendation
 
 https://gemini.google.com/app/970b1ecceae97dea
 ** checking external ip from terminal
+curl https://ifconfig.co/
+curl https://ip.mci.dev/
 curl ifconfig.me;
 curl ifconfig.me/all;
 curl icanhazip.com;
