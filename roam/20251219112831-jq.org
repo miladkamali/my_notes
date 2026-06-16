@@ -84,3 +84,11 @@ https://github.com/jqlang/awesome-jq
 
 
 cat http-service.log |grep "https://aggr-svc-sig.ttbank.ir/auth/CallBackKycAp"| cut -d '|' -f5|jq 'select(.response.status== 400)'|jq '.response.requestTime|= (. / 1000 | strftime("%Y-%m-%d %H:%M:%S"))'|jq '.response.requestTime'
+
+
+
+mc cat hamravesh/infra-storage/logs/authentication-api/http-user.log|cut -d '|' -f5|grep '^ {'|jq -R 'try fromjson catch empty'  |jq -r '[.request.address,.response.status,.response.body]'|jq '{address: .[0]} + {status: .[1]} +(.[2] | fromjson)' |jq -r '[.address,.status]|@csv'|sort|uniq -c
+
+
+
+zcat `ls -rt |grep "^user"|grep gz|tail -n60`|grep "7d7ba9b6-688f-4f8f-a025-3cc28496d718"|cut -d '|' -f5|jq '[.request.body,.response.body]'|jq 'map(fromjson) | add'|jq -r '[.requestContext.apiInfo.businessId,.requestContext.apiInfo.businessToken,.responseContext.status.message]|@csv'|sort|uniq -c

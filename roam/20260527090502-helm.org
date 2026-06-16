@@ -49,7 +49,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO bff;
 SQL
 
 
-helm upgrade --install bff-core-prod bff-core --values bff-core/values.yaml -f bff-core/values-prod.yaml -n prod
+helm upgrade --install bff-core-prod bff-core -f bff-core/values.yaml -f bff-core/values-prod.yaml -n prod
 
 **** the error
 2026-06-09T17:36:45,551 | ERROR| [main[] | o.s.b.SpringApplication | Application
@@ -243,7 +243,8 @@ GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO rahbar;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO rahbar;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO rahbar
 SQL
-helm upgrade --install rahbar-service-prod rahbar-service -f rahbar-service/values.yaml -f rahbar-service/values.yaml -n prod
+
+helm upgrade --install rahbar-service-prod rahbar-service -f rahbar-service/values.yaml -f rahbar-service/values-prod.yaml -n prod
 ** faraboom
 
 
@@ -336,3 +337,6 @@ SQL
   { echo "SET synchronous_commit = off;"; gunzip -c auth-26-06-11-12.sql.gz; } |   psql -h uid-production-database-proxy.database.svc -U authentication -d authentication3 -v ON_ERROR_STOP=1
 
 ** bff-ba
+
+** kaveh-negar
+helm upgrade --install kavehnegar-service-prod kaveh-negar -n prod -f  kaveh-negar/values.yaml  -f kaveh-negar/values-prod.yaml

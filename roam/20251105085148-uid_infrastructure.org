@@ -111,7 +111,7 @@ CLOSED: [2025-11-26 Wed 13:05] SCHEDULED: <2025-11-07 Fri>
 
 ssh -L 127.0.0.1:8444:192.168.100.4:443  milad@46.245.89.14 -p 3316 
 
-https://127.0.0.1:8444
+https://127.0.0.1:84i44
 username:uid
 password: Ec9yaqT9
 password: xp#jMMwc8.'zJDp
