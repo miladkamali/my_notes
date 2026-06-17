@@ -340,3 +340,6 @@ SQL
 
 ** kaveh-negar
 helm upgrade --install kavehnegar-service-prod kaveh-negar -n prod -f  kaveh-negar/values.yaml  -f kaveh-negar/values-prod.yaml
+
+** debian-tools
+kubectl apply -f debian-tools-pod.yaml -n prod
