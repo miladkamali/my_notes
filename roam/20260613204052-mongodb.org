@@ -32,6 +32,18 @@ db.adminCommand({
 db.getCollectionNames().map(c => ({ name: c, ...db.getCollection(c).stats() })).sort((a, b) => b.storageSize - a.storageSize).forEach( c=> print(c.name+ "storage "+ (c.storageSize/1024/1024) + "MB  index "+ (c.totalIndexSize/1024/1024)+ "MB" + " docs: " + c.count ));
 ** backup and restore
 
+
+mongodump \
+  --uri="mongodb://uid-bff:uid-bff@localhost:27017/test?authSource=admin" \
+  --db=test \
+  --collection=user_profile \
+  --out=/tmp/mongo-backup
+
+
+  
+
+
+
 Full database
 mongodump \
   --uri="mongodb://USER:PASSWORD@HOST:27017/DATABASE" \
@@ -54,3 +66,18 @@ mongodump \
   mongodump --uri="mongodb://localhost:27017" --gzip --archive=mongo-$(date +%F).gz
 
   mongorestore --uri="mongodb://localhost:27017" --gzip --archive=mongo-2026-06-13.gz
+** uid
+
+docker exec -it bff-mongo mongodump \
+  --uri="mongodb://uid-bff:uid-bff@localhost:27017/test?authSource=admin" \
+  --db=test \
+  --collection=user_profile \
+  --out=/tmp/mongo-backup
+
+  docker cp bff-mongo:/tmp/mongo-backup ./mongo-backup
+
+  
+mongorestore \
+  --uri="mongodb://root:pSbpZtJaXkkBlnIg1O5dVPvAcl1ohaMK@uid-mongo.database.svc:27017/?authSource=admin" \
+  --db=bff \
+  ./mongo-backup/test
