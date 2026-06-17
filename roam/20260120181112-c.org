@@ -12,11 +12,17 @@ https://github.com/shafik/cpp_youtube_channels
 https://www.youtube.com/@GlobalCpp
 *** https://www.cppstories.com/
 *** learncpp.com
+*** 
 *** TODO figure out https://getcracked.io
 :LOGBOOK:
 - State "TODO"       from              [2026-06-16 Tue 13:56]
 :END:
 *** [[https://www.youtube.com/playlist?list=PL5jc9xFGsL8FWtnZBeTqZBbniyw0uHyaH][Bo Qian]]
+** grpc c++
+https://grpc.io/docs/languages/cpp/basics/
+C++/ObjC/Java have supported Cronet since 2017
+https://github.com/grpc/grpc/issues/19126
+https://github.com/ngtcp2/nghttp3
 ** [[https://www.stroustrup.com/JSF-AV-rules.pdf][jsf rules]]
 ** https://www.youtube.com/watch?v=Gv4sDL9Ljww
 ** https://github.com/LaurieWired/XplaneFlightData

@@ -142,8 +142,8 @@ helm upgrade --install sana-web-prod sana-web --values sana-web/values.yaml -f s
 
 ** sana-api
 
- kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d sana -v ON_ERROR_STOP=1 <<'SQL'
-GRANT CONNECT ON DATABASE sana TO sana;
+ kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d sana_api -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE sana_api TO sana;
 GRANT USAGE, CREATE ON SCHEMA public TO sana;
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO sana;
 GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO sana;
@@ -151,7 +151,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO sana;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO sana;
 SQL
 
-helm upgrade --install sana-core-prod sana-core --values sana-core/values.yaml -f sana-core/values-prod.yaml -n prod
+helm upgrade --install sana-core-prod sana-core -f sana-core/values.yaml -f sana-core/values-prod.yaml -n prod
 
 
 ** sana-service
