@@ -132,11 +132,8 @@ SQL
 helm upgrade --install crypto-api-prod crypto-api --values crypto-api/values.yaml -f crypto-api/values-prod.yaml -n prod
 
 
-
-*** error
-│ 2026-06-09T19:21:40,324 | FATAL| [main[] | i.u.c.r.RedisSessionRepository | **************** Redis has been crashed ! --- ERROR: Unable to connect to Redis ****************                                     │
-
-
+** crypto-web
+helm upgrade --install crypto-web-prod crypto-web -f crypto-web/values.yaml -f crypto-web/values-prod.yaml -n prod
 ** sana-web
 helm upgrade --install sana-web-prod sana-web --values sana-web/values.yaml -f sana-web/values-prod.yaml -n prod
 
@@ -153,7 +150,7 @@ SQL
 
 helm upgrade --install sana-core-prod sana-core -f sana-core/values.yaml -f sana-core/values-prod.yaml -n prod
 
-
+docker exec -t psql-sana-api  pg_dump -U sana_api -d sana_api >  sana_backup.sql
 ** sana-service
 
  kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d sana_service -v ON_ERROR_STOP=1 <<'SQL'
@@ -165,7 +162,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO sana_service;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO sana_service;
 SQL
 
-helm upgrade --install sana-service-prod sana-service --values sana-service/values.yaml -f sana-service/values-prod.yaml -n prod
+helm upgrade --install sana-service-prod sana-service -f sana-service/values.yaml -f sana-service/values-prod.yaml -n prod
 
 
 ** bff-web
@@ -343,3 +340,8 @@ helm upgrade --install kavehnegar-service-prod kaveh-negar -n prod -f  kaveh-neg
 
 ** debian-tools
 kubectl apply -f debian-tools-pod.yaml -n prod
+
+** sana-audit
+
+helm upgrade --install sana-audit-prod sana-audit -n prod -f  sana-audit/values.yaml  -f sana-audit/values-prod.yaml
+helm upgrade --install sana-audit-prod sana-audit -n prod -f  sana-audit/values.yaml  -f sana-audit/values-prod.yaml
