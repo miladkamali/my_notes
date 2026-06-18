@@ -218,3 +218,248 @@ kubectl run dns-test --rm -it --image=busybox:1.36 --restart=Never -- nslookup m
 kubectl get cronjob -n prod
 * get into containers
 kubectl exec -n prod -it ap-payment-bff-prod-54c49dbc85-c78ss -c ap-payment -- bash
+* monitoring ha proxy queue
+
+The haproxy Helm chart in prod does not expose a stats page or admin socket right now, so you cannot see live queue depth (qcur) out of the box. You can still inspect queue behavior from logs, and you can enable proper stats if you want a live view.
+
+What the chart does today
+haproxy-prod in namespace prod fronts two listeners:
+
+Service	Port	Backend
+Face matching
+7500
+face-detection_backend
+Liveness
+7000
+liveness-detection_backend
+Each backend server has maxconn: 1, so when all pods are busy, new requests wait in the queue (timeout queue 60s).
+
+Option 1: Check queue timing in logs (works now)
+Logs already include queue metrics:
+
+kubectl logs -n prod deploy/haproxy-prod -f
+Filter by backend:
+
+kubectl logs -n prod deploy/haproxy-prod -f | grep liveness-detection
+kubectl logs -n prod deploy/haproxy-prod -f | grep face-detection
+Log fields:
+
+Tq — time waiting in the global queue
+Tw — time waiting for a free server slot
+Tr — server response time
+Example from your cluster:
+
+... liveness-detection liveness-detection_backend/srv1 ... Tq=1 Tw=0 ... Status=200
+... face-detection face-detection_backend/srv3 ... Tq=0 Tw=0 ... Status=200
+Tq>0 or Tw>0 means the request was queued.
+
+To see only queued requests:
+
+kubectl logs -n prod deploy/haproxy-prod --tail=1000 \
+  | grep -E 'liveness-detection|face-detection' \
+  | grep -E 'Tq=[1-9]|Tw=[1-9]'
+Option 2: Live queue depth via HAProxy stats (not enabled yet)
+The deployed config has no stats socket or stats HTTP page. To get live queue counts (qcur, qmax, active sessions), you would need to add something like this to helm-charts/apps/haproxy/templates/configmap.yaml:
+
+global
+  stats socket /tmp/haproxy.sock mode 660 level admin expose-fd listeners
+listen stats
+  bind :8404
+  stats enable
+  stats uri /stats
+  stats refresh 5s
+Then after deploy:
+
+# HTTP stats page
+kubectl port-forward -n prod deploy/haproxy-prod 8404:8404
+# open http://localhost:8404/stats
+# Or via admin socket
+kubectl exec -n prod deploy/haproxy-prod -- \
+  sh -c 'echo "show stat" | socat stdio /tmp/haproxy.sock' \
+  | awk -F, '$1 ~ /liveness-detection|face-detection/ {print $1,$2,$18,$19}'
+In show stat, columns qcur and qmax are current/max queue size.
+
+Option 3: Check backend capacity
+See how many backend pods are available:
+
+kubectl get endpoints -n prod face-detection-prod liveness-detection-prod
+kubectl get pods -n prod -l app=face-detection
+kubectl get pods -n prod -l app=liveness-detection
+With maxconn 1 per pod, if you have 10 pods, at most 10 requests per service can run at once; the rest queue in HAProxy.
+
+Summary: Right now, use kubectl logs and watch Tq/Tw. For a proper live queue dashboard or show stat, the chart needs a stats socket/page added first. I can add that to the haproxy Helm chart if you want.
+* auto scaling
+
+Your setup today is a fixed-size pool behind HAProxy, with no autoscaling hooks yet. Here is how it works and what you can do.
+
+Current architecture
+Clients (sana-core, bff-core, …)
+    → haproxy-prod (:7000 liveness, :7500 face)
+        → liveness-detection-prod / face-detection-prod (10 pods each, headless svc)
+Relevant HAProxy settings:
+
+maxconn 1 per backend pod → each pod handles one request at a time
+server-template srv 15 → HAProxy can discover up to 15 pods via DNS
+timeout queue 60s → requests wait in HAProxy when all pods are busy
+No stats/metrics in the Helm chart today (no queue depth or latency metrics exported)
+Both workloads are fixed at replicaCount: 10 with no HPA. The cluster has Victoria Metrics (vm-stack) but no KEDA and no custom-metrics HPA setup for these services.
+
+What you want to scale on
+Signal	Where it lives	Good for
+Queue depth
+HAProxy (qcur)
+“We need more capacity now”
+Avg response time (Tr in logs, ~3–5s today)
+HAProxy / app metrics
+“Pods are overloaded or slow”
+In-flight requests
+App (gRPC)
+Per-pod load
+CPU / memory
+kubelet
+Weak signal for ML inference workloads
+Queue depth and response time are HAProxy-level signals (or app-level if you instrument the gRPC services). Standard CPU-based HPA will not track them well.
+
+Option 1: KEDA + Prometheus (recommended)
+Best fit for scaling on queue depth and/or latency with PromQL.
+
+Flow:
+
+Enable HAProxy Prometheus exporter (your legacy haproxy/haproxy-15.cfg already had this on :8404)
+Scrape it with VMServiceScrape
+Install KEDA
+Create ScaledObject per deployment with Prometheus triggers
+Example triggers:
+
+# Scale when HAProxy queue > 2 for 2 minutes
+- type: prometheus
+  metadata:
+    serverAddress: http://vmselect.monitoring-system.svc:8481/select/0/prometheus
+    query: haproxy_backend_current_queue{backend="liveness-detection_backend"}
+    threshold: "2"
+# Scale when avg backend response time > 6s
+- type: prometheus
+  metadata:
+    query: rate(haproxy_backend_response_time_average_seconds{backend="liveness-detection_backend"}[2m])
+    threshold: "6"
+Pros: Native K8s autoscaling, multiple metrics, scales to zero possible, fits your VM stack
+Cons: Need HAProxy metrics + KEDA install + tuning to avoid flapping
+
+Option 2: HPA v2 with custom/external metrics
+Same metrics as Option 1, but via prometheus-adapter (or Victoria Metrics custom-metrics bridge) feeding the Kubernetes metrics API.
+
+metrics:
+  - type: External
+    external:
+      metric:
+        name: haproxy_backend_current_queue
+        selector:
+          matchLabels:
+            backend: liveness-detection_backend
+      target:
+        type: AverageValue
+        averageValue: "1"   # scale when >1 queued request per “unit”
+Pros: No KEDA; built-in HPA
+Cons: Harder to combine multiple signals; you need a metrics adapter; less flexible than KEDA
+
+Option 3: App-level metrics + HPA/KEDA
+Instrument liveness/face-matching to expose:
+
+grpc_server_handled_total
+grpc_server_handling_seconds (histogram → p95 latency)
+active / in-flight requests
+Then scale on:
+
+sum(grpc_server_handling_seconds_sum) / sum(grpc_server_handling_seconds_count) > 5
+# or
+sum(grpc_server_started_total - grpc_server_handled_total) > N
+Pros: Measures actual service performance, not just proxy queue
+Cons: Requires app changes; queue at HAProxy can still build if HAProxy maxconn is the bottleneck
+
+Option 4: CPU/memory HPA (quick but weak)
+Add HPA like ha-web has, targeting CPU or memory.
+
+Pros: Simple, no new infra
+Cons: Your pods request 100m CPU but limit 3000m; inference may not show high CPU until already saturated. Does not scale on queue or latency.
+
+Option 5: Custom autoscaler controller
+A small controller (CronJob or Deployment) that:
+
+Queries HAProxy stats socket (show stat)
+Computes desiredReplicas = ceil((current_sessions + queue) / target_per_pod)
+Patches the Deployment
+Pros: Full control, no KEDA
+Cons: You own reliability, cooldowns, and edge cases
+
+Option 6: Scale HAProxy itself (usually not enough)
+Scaling haproxy-prod helps only with HAProxy CPU/network. It does not add inference capacity. You need to scale liveness-detection-prod and face-detection-prod.
+
+Practical recommendation
+For your exact goals (queue + avg response time), a sensible path is:
+
+Phase 1 — Observability (required for any good autoscaling)
+Add to helm-charts/apps/haproxy/templates/configmap.yaml:
+stats socket (admin API)
+Prometheus exporter frontend on :8404 (as in legacy config)
+Add VMServiceScrape for haproxy-prod
+Confirm metrics like:
+haproxy_backend_current_queue
+haproxy_backend_http_total_time_average_seconds (or equivalent)
+haproxy_backend_current_sessions
+Phase 2 — Autoscaling
+Install KEDA in the cluster
+Add ScaledObject to liveness-detection and face-detection charts
+Start with queue depth as primary trigger (directly matches your goal)
+Add response time as secondary trigger or use KEDA advanced scaling with multiple triggers
+Phase 3 — Tune
+Knob	Suggestion
+minReplicas
+3–5 (avoid cold start)
+maxReplicas
+15 initially (matches HAProxy server-template srv 15)
+Scale-up cooldown
+30–60s
+Scale-down cooldown
+5–10 min (inference pods are expensive to churn)
+Target queue
+qcur > 0 for 1–2 min → add replicas
+Important: If you scale beyond 15 pods, increase server-template srv 15 in HAProxy config or new pods will not receive traffic.
+
+Scaling formula (intuition)
+With maxconn 1 per pod:
+
+needed_replicas ≈ ceil((active_requests + queue_depth) / 1)
+Using latency (Little’s Law):
+
+needed_replicas ≈ ceil(arrival_rate × avg_response_time_seconds)
+Example: 2 req/s × 5s avg response → ~10 replicas (matches your current fixed size).
+
+Summary
+Option	Queue-aware	Latency-aware	Effort	Fit
+KEDA + HAProxy Prometheus
+Yes
+Yes
+Medium
+Best
+HPA + custom metrics adapter
+Yes
+Yes
+Medium–High
+Good
+App gRPC metrics + KEDA/HPA
+Indirect
+Yes
+High
+Good long-term
+CPU/memory HPA
+No
+No
+Low
+Poor fit
+Custom controller
+Yes
+Yes
+Medium
+OK if you avoid KEDA
+I can implement Phase 1 (HAProxy metrics + scrape config) and scaffold KEDA ScaledObject templates in the liveness/face Helm charts if you want to move forward.
+
