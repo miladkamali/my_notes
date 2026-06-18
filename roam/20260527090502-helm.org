@@ -169,7 +169,7 @@ helm upgrade --install sana-service-prod sana-service --values sana-service/valu
 
 
 ** bff-web
-helm upgrade --install bff-web-prod bff-web --values bff-web/values.yaml -f bff-web/values-prod.yaml -n prod
+helm upgrade --install bff-web-prod bff-web -f bff-web/values.yaml -f bff-web/values-prod.yaml -n prod
 
 
 ** ap-payment
