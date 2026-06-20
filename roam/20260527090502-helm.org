@@ -229,7 +229,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO saja;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO saja;
 SQL
 
-helm upgrade --install saja-service-prod saja-service --values saja-service/values.yaml -f saja-service/values.yaml -n prod
+helm upgrade --install saja-service-prod saja-service -f saja-service/values.yaml -f saja-service/values.yaml -n prod
 
 ** rahbar
 kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d rahbar-service -v ON_ERROR_STOP=1 <<'SQL'
