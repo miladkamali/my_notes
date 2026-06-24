@@ -2,6 +2,14 @@
 :ID:       cb498fe8-5273-46c2-925d-bc8e690712b0
 :END:
 #+title: postgres
+* things to look at
+** multigres
+https://multigres.com/docs
+[[https://www.youtube.com/watch?v=PxlZssDNrws][ Multigres is Built To Handle Tens of Thousands of Database Nodes | Supabase Select 2025 ]]
+** stolon
+https://github.com/sorintlab/stolon
+
+https://www.datazoom.io/community-resources/setting-up-postgresql-on-kubernetes-using-stolon
 * capabilities
 [[https://www.youtube.com/watch?v=GbdeGYW_lNE][ Is Your ORM Lying to You About Postgres? ]]
 ** key-value cache similar to redis
@@ -12,10 +20,14 @@ ttl timestamptz,
 )
 ** pub sub
 https://brojonat.com/posts/go-postgres-listen-notify/
-** search
+** full text search
+*** paradedb
+*** [[id:6d4e7e19-3d9b-46f8-a4d1-c1cb43a2171c][pg_search]]
+[[https://www.youtube.com/watch?v=GRwIa-ce7RA][ Master Postgres Full-text Search in 5 Minutes ]]
 ** schema less document
 ** vector
 ** job queue
+
 * resources
 ** https://tapoueh.org/page/3/
 ** https://tapoueh.org/blog/2014/02/postgresql-aggregates-and-histograms/
@@ -54,7 +66,7 @@ FROM
 WHERE 
    table_name = 'city';
 * user creation
-  CREATE USER jonathan;
+CREATE USER jonathan;
 
 Create a user with a password:
 

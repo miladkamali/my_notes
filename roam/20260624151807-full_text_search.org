@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       463515ac-075a-4b91-bea0-7b13587328d3
+:END:
+#+title: full text search
+* TODO BM25 algorithm
+:LOGBOOK:
+- State "TODO"       from              [2026-06-24 Wed 15:18]
+:END:
+* TF-IDF term-frequency-inverse docuent frequency

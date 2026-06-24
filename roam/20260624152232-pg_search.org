@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       6d4e7e19-3d9b-46f8-a4d1-c1cb43a2171c
+:END:
+#+title: pg_search
+ an extention that brings elasticsearch -quality FTS(full text search)  to postgres
+ it's build in rust with pgrx
+ it uses FTS library called tantivy
