@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       d086889d-baa9-4ba3-ab26-fc380224fc0c
+:END:
+#+title: rustfs
+
+https://rustfs.com/
+
+[[https://www.youtube.com/watch?v=KfuFJS14aQY][ This S3 Alternative is INSANELY Lightweight (and 100% open source) ]]

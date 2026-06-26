@@ -4,3 +4,7 @@
 #+title: proxy
 mitmdump proxy is the one i used to create a proxy and new authority for browser
 to intercept all the traffic for kucoin when doing research with salman and vahid
+* mitmdump
+a proxy to use as a man in middle attack for browser
+* [[id:7d196e60-879b-4dc6-889b-e212ce9273fd][caddy]]
+* [[id:b7c79139-f6a5-4aec-a8e7-7bc91eac4268][ngrok]]

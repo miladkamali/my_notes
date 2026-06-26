@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       6c7971c6-0f6a-434a-acfb-de3294c9b5b4
+:END:
+#+title: backup
+* [[id:f59486d9-3188-4432-accc-6a6938a07abb][restic]]

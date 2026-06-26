@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       69e3c9dd-da0b-4ec6-bcd9-599fa9656ab8
+:END:
+#+title: object storage
+* [[id:ee3e3fa7-77b1-466a-b3e8-a49eef585f50][minio]]
+* s3
+* garage
+https://garagehq.deuxfleurs.fr/
+* [#A] [[id:d086889d-baa9-4ba3-ab26-fc380224fc0c][rustfs]]
+* [[id:60ed097d-f292-4669-9111-bd8b67b38f7d][seaweedfs]]

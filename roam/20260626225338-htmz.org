@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       e9f6b3c6-0e42-43d1-b473-a0f0b7f3b7bb
+:END:
+#+title: htmz
+for targeting iframe 
+https://leanrada.com/htmz/

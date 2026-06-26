@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       204acefd-7b05-4bcc-8b07-1e7c7ad1e2a9
+:END:
+#+title: logging
+https://github.com/amir20/dozzle
+https://www.youtube.com/watch?v=ztjlsmJcVnE

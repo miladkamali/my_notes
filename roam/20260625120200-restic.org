@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       f59486d9-3188-4432-accc-6a6938a07abb
+:END:
+#+title: restic
+ a back up solution that works with s3
+
+ https://restic.net/

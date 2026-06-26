@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       7d196e60-879b-4dc6-889b-e212ce9273fd
+:END:
+#+title: caddy
+a reverse proxy 
+https://caddyserver.com/docs/quick-starts/reverse-proxy

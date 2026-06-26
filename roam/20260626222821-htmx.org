@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       f3c0242f-765b-45e8-baa0-5633a9f2830c
+:END:
+#+title: htmx
+
+a simple javascript framework that lets you make reactive html pages based on attributes
+[[https://www.youtube.com/watch?v=PgyggSRHY1o][ HTMX Explained: The "Dumb" HTML Secret Replacing React ]]
+ https://htmx.org/
+
+
+* resources
+** video
+*** [[https://www.youtube.com/watch?v=r-GSGH2RxJs][ htmx in 100 seconds ]]
+*** https://dev.to/coderonfleek/htmx-go-build-a-crud-app-with-golang-and-htmx-1le2
+*** [[https://www.youtube.com/watch?v=inRB6ull5WQ][ "The Life & Death of htmx" by Alexander Petros at Big Sky Dev Con 2024 ]]
+*** [[https://www.youtube.com/watch?v=NA5Fcgs_viU][the truth about htmx]]

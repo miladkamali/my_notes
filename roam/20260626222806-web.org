@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b9ce2d58-b6a2-48cc-b45a-6b009ac4482e
+:END:
+#+title: web
+* [[id:f3c0242f-765b-45e8-baa0-5633a9f2830c][htmx]]
+* [[id:e9f6b3c6-0e42-43d1-b473-a0f0b7f3b7bb][htmz]]

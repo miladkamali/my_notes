@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       60ed097d-f292-4669-9111-bd8b67b38f7d
+:END:
+#+title: seaweedfs
+
+https://github.com/seaweedfs/seaweedfs

@@ -55,3 +55,6 @@ mc mirror --watch --overwrite myminio/source-bucket news3/dest-bucket
 
 
 ./minioMC mirror --watch --overwrite myminio/uid-bff hamravesh/bff
+
+
+
