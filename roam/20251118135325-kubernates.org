@@ -62,6 +62,106 @@ Node ephemeral storage is in kubectl describe node under capacity/allocatable.
 kubectl cluster-info
 kubectl get componentstatuses   # deprecated on newer clusters; may be empty
 kubectl get --raw /readyz?verbose   # API server health (K8s 1.16+)
+** health check
+*** checking which nodes has disk pressure
+#+begin_src bash
+  kubectl get nodes -o json 2>&1 | python3 -c "
+import json,sys
+data=json.load(sys.stdin)
+print(f\"{'NODE':<12} {'DISK':<6} {'READY':<6} {'EPHEMERAL_ALLOC':<18} {'EPHEMERAL_CAP':<18} {'CONDITION_MSG'}\")
+print('-'*100)
+for n in sorted(data['items'], key=lambda x: x['metadata']['name']):
+    name=n['metadata']['name']
+    ready='?'
+    disk='?'
+    msg=''
+    for c in n['status'].get('conditions',[]):
+        if c['type']=='Ready': ready=c['status']
+        if c['type']=='DiskPressure':
+            disk=c['status']
+            if c['status']=='True': msg=c.get('message','') or c.get('reason','')
+    alloc=n['status'].get('allocatable',{}).get('ephemeral-storage','?')
+    cap=n['status'].get('capacity',{}).get('ephemeral-storage','?')
+    flag=' ***' if disk=='True' else ''
+    print(f\"{name:<12} {disk:<6} {ready:<6} {str(alloc):<18} {str(cap):<18} {msg}{flag}\")
+"
+
+#+end_src
+
+
+#+begin_src bash
+python3 <<'PY'
+import json, re, subprocess
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+def parse_bytes(val):
+    if not val or val == '?':
+        return None
+    m = re.match(r'^([0-9.]+)(Ki|Mi|Gi|Ti|Pi|Ei)?$', str(val))
+    if not m:
+        return None
+    num = float(m.group(1))
+    suffix = m.group(2) or ''
+    mult = {'': 1, 'Ki': 1024, 'Mi': 1024**2, 'Gi': 1024**3, 'Ti': 1024**4, 'Pi': 1024**5, 'Ei': 1024**6}
+    return num * mult.get(suffix, 1)
+
+def to_gi(val):
+    b = parse_bytes(val)
+    return '?' if b is None else f"{b / (1024**3):.2f}Gi"
+
+def to_alloc_cap_pct(alloc, cap):
+    a, c = parse_bytes(alloc), parse_bytes(cap)
+    if a is None or c is None or c == 0:
+        return '?'
+    return f"{a / c * 100:.1f}%"
+
+def fetch_fs_used_pct(node_name):
+    try:
+        raw = subprocess.check_output(
+            ['kubectl', 'get', '--raw', f'/api/v1/nodes/{node_name}/proxy/stats/summary'],
+            stderr=subprocess.DEVNULL, timeout=15)
+        fs = json.loads(raw).get('node', {}).get('fs', {})
+        used, cap = fs.get('usedBytes'), fs.get('capacityBytes')
+        if used is not None and cap:
+            return used / cap * 100
+    except Exception:
+        pass
+    return None
+
+nodes = json.loads(subprocess.check_output(['kubectl', 'get', 'nodes', '-o', 'json']))
+names = [n['metadata']['name'] for n in nodes['items']]
+used_pct_by_node = {}
+with ThreadPoolExecutor(max_workers=10) as ex:
+    futs = {ex.submit(fetch_fs_used_pct, name): name for name in names}
+    for fut in as_completed(futs):
+        pct = fut.result()
+        if pct is not None:
+            used_pct_by_node[futs[fut]] = pct
+
+print(f"{'NODE':<12} {'DISK':<6} {'READY':<6} {'storage_used':<14} {'ALLOC/CAP%':<12} {'EPHEMERAL_CAP':<18} {'CONDITION_MSG'}")
+print('-'*108)
+for n in sorted(nodes['items'], key=lambda x: x['metadata']['name']):
+    name = n['metadata']['name']
+    ready, disk, msg = '?', '?', ''
+    for c in n['status'].get('conditions', []):
+        if c['type'] == 'Ready':
+            ready = c['status']
+        if c['type'] == 'DiskPressure':
+            disk = c['status']
+            if c['status'] == 'True':
+                msg = c.get('message', '') or c.get('reason', '')
+    raw_alloc = n['status'].get('allocatable', {}).get('ephemeral-storage', '?')
+    raw_cap = n['status'].get('capacity', {}).get('ephemeral-storage', '?')
+    pct = used_pct_by_node.get(name)
+    storage_used = f"{pct:.1f}%" if pct is not None else '?'
+    alloc_cap_pct = to_alloc_cap_pct(raw_alloc, raw_cap)
+    flag = ' ***' if disk == 'True' else ''
+    print(f"{name:<12} {disk:<6} {ready:<6} {storage_used:<14} {alloc_cap_pct:<12} {to_gi(raw_cap):<18} {msg}{flag}")
+PY
+#+end_src
+
+#+RESULTS:
+
 * setting up secret
 kubectl -n prod create secret docker-registry hamravesh-docker-registry \
   --docker-server=registry.hamdocker.ir \
