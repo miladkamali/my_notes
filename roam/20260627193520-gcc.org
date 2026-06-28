@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       d7ada3fa-9596-49c1-8d2f-d51c94f2c4a9
+:END:
+#+title: gcc
+letting gcc to print the intermediate steps
+
+gcc main.c -o main -save-temps
+
+stop at assembler 
+gcc main.c -S -o main
+
+you can start from any where in the pipeline like passing the assembler file
+gcc main.s -o main

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       3389d7a4-350d-4a1c-806b-d3ab9a8699a4
+:END:
+#+title: abi
+application binary interface
