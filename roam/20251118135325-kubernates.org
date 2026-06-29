@@ -562,4 +562,9 @@ Yes
 Medium
 OK if you avoid KEDA
 I can implement Phase 1 (HAProxy metrics + scrape config) and scaffold KEDA ScaledObject templates in the liveness/face Helm charts if you want to move forward.
-
+* update certificate
+kubectl create secret tls wildcard-uid-ir-tls \
+  --cert=secrets/uid-ir/tls/tls.crt \
+  --key=secrets/uid-ir/tls/tls.key \
+  -n prod \
+  --dry-run=client -o yaml | kubectl apply -f -
