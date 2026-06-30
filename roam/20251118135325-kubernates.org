@@ -568,3 +568,175 @@ kubectl create secret tls wildcard-uid-ir-tls \
   --key=secrets/uid-ir/tls/tls.key \
   -n prod \
   --dry-run=client -o yaml | kubectl apply -f -
+** setting up auto update for certificate
+The Helm install failed because cert-manager is already in your cluster — it was installed by Flux, not Helm. Helm refuses to take over CRDs that lack its ownership labels.
+
+What’s already running
+Component	Status
+cert-manager pods
+Running in platform-system
+CRDs
+Installed by Flux (kustomize.toolkit.fluxcd.io/name: cert-manager)
+ClusterIssuer
+acme-prod — Ready
+DNS solver
+acmeDNS (auth.acme-dns.io / auth.acme-dns.ir in some namespaces)
+Do not run helm install cert-manager. You’d be duplicating what Flux already manages.
+
+What to do instead
+Your prod TLS secrets (wildcard-uid-ir-tls, wildcard-u-id-net-tls) were applied manually with kubectl — cert-manager is not renewing them. Hand cert them to cert-manager with Certificate resources.
+
+1. Wildcard certs (DNS-01 required)
+Create a namespace Issuer in prod (or reuse an existing pattern), then Certificate objects:
+
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: dns-default
+  namespace: prod
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: issuer-dns-default-auth
+    solvers:
+      - dns01:
+          acmeDNS:
+            host: https://auth.acme-dns.ir   # or .io — match your DNS setup
+            accountSecretRef:
+              name: issuer-dns-default-acme
+              key: acmedns.json
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wildcard-uid-ir-tls
+  namespace: prod
+spec:
+  secretName: wildcard-uid-ir-tls
+  issuerRef:
+    name: dns-default
+    kind: Issuer
+  dnsNames:
+    - "*.uid.ir"
+    - uid.ir
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wildcard-u-id-net-tls
+  namespace: prod
+spec:
+  secretName: wildcard-u-id-net-tls
+  issuerRef:
+    name: dns-default
+    kind: Issuer
+  dnsNames:
+    - "*.u-id.net"
+    - u-id.net
+Apply via Flux/GitOps if that’s how your platform team manages platform-system resources, or kubectl apply if you own prod directly.
+
+2. Per-host certs (HTTP-01 via Traefik)
+For hosts like ap-payment.uid.ir, you can use the existing acme-prod ClusterIssuer with an Ingress annotation:
+
+ingress:
+  annotations:
+    cert-manager.io/cluster-issuer: acme-prod
+  tls:
+    - hosts:
+        - ap-payment.uid.ir
+      secretName: uid-ir-tls-secret   # cert-manager will create/renew this
+That works for non-wildcard hostnames because acme-prod already has an HTTP-01 solver for Traefik.
+
+3. Remove manual secrets from git
+Once cert-manager owns the secrets and kubectl describe certificate -n prod shows Ready: True, stop committing secrets/uid-ir/tls/*.crt and *.key and retire the Kustomize secretGenerator for TLS.
+
+One issue to fix now
+Several ingresses in prod reference uid-ir-tls-secret, but that secret does not exist in prod today:
+
+authentication-api
+ap-payment-bff-prod
+crypto-api-prod
+Either create a Certificate for those specific hosts, or point them at wildcard-uid-ir-tls if the wildcard covers them.
+
+If you really wanted Helm (you don’t)
+Only if Flux were removed and you needed Helm to own cert-manager:
+
+# Delete Flux-managed CRDs + cert-manager first (disruptive — don't do this casually)
+kubectl delete kustomization cert-manager -n platform-system
+# ... then helm install
+That’s unnecessary here — cert-manager is healthy; you only need Certificate resources.
+
+Next step: I can draft manifests for prod that match your acme-dns credentials and Helm secretName values, or walk through verifying an existing Certificate once you apply one. Which DNS provider do you use for uid.ir / u-id.net?
+** manual update
+
+sudo apt install certbot python3-certbot-dns-cloudflare
+
+
+sudo certbot certonly \
+  --dns-cloudflare \
+  --dns-cloudflare-credentials /etc/letsencrypt/dns-credentials.ini \
+  -d "uid.ir" -d "*.uid.ir" \
+  --agree-tos -m admin@uid.ir \
+  --non-interactive
+# u-id.net wildcard
+sudo certbot certonly \
+  --dns-cloudflare \
+  --dns-cloudflare-credentials /etc/letsencrypt/dns-credentials.ini \
+  -d "u-id.net" -d "*.u-id.net" \
+  --agree-tos -m admin@u-id.net \
+  --non-interactive
+
+
+
+Create /usr/local/bin/cert-deploy.sh:
+
+
+set -euo pipefail
+DOMAIN="${RENEWED_LINEAGE##*/}"   # e.g. uid.ir or u-id.net
+LIVE_DIR="/etc/letsencrypt/live/${DOMAIN}"
+CRT="${LIVE_DIR}/fullchain.pem"
+KEY="${LIVE_DIR}/privkey.pem"
+# --- 1) HAProxy edge (both domains) ---
+HAPROXY_CERT_DIR="/usr/local/etc/certs"
+install -m 644 "${CRT}" "${HAPROXY_CERT_DIR}/${DOMAIN}.pem"
+cat "${KEY}" >> "${HAPROXY_CERT_DIR}/${DOMAIN}.pem"
+# If HAProxy uses a combined PEM per domain, adjust naming to match your layout
+systemctl reload haproxy || service haproxy reload
+# --- 2) Kubernetes secrets ---
+case "${DOMAIN}" in
+  uid.ir)
+    kubectl -n production create secret tls wildcard-uid-ir-tls \
+      --cert="${CRT}" --key="${KEY}" \
+      --dry-run=client -o yaml | kubectl apply -f -
+    kubectl -n production create secret tls uid-ir-tls-secret \
+      --cert="${CRT}" --key="${KEY}" \
+      --dry-run=client -o yaml | kubectl apply -f -
+  ;;
+  u-id.net)
+    kubectl -n production create secret tls wildcard-u-id-net-tls \
+      --cert="${CRT}" --key="${KEY}" \
+      --dry-run=client -o yaml | kubectl apply -f -
+  ;;
+esac  
+
+
+Register it with certbot:
+
+
+
+
+sudo chmod +x /usr/local/bin/cert-deploy.sh
+# Run once after initial issuance
+sudo certbot renew --cert-name uid.ir --deploy-hook /usr/local/bin/cert-deploy.sh
+sudo certbot renew --cert-name u-id.net --deploy-hook /usr/local/bin/cert-deploy.sh
+
+
+
+
+
+Step 4 — Auto-renewal timer
+Certbot usually installs a systemd timer. Verify:
+
+sudo systemctl status certbot.timer
+sudo certbot renew --dry-run
