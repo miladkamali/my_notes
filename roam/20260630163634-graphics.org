@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       f3185a52-1c21-4f7b-bf02-2170e3acefe9
+:END:
+#+title: graphics
+[[https://www.youtube.com/watch?v=8_bExMR4FsA][ I Spent 2 Years Coding a Graphics Library in C++ ]]
