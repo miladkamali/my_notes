@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       8db898c6-6dab-401d-978a-9c4199e2b927
+:END:
+#+title: programming
+* parsing
+[[https://www.youtube.com/watch?v=0c8b7YfsBKs][ This Simple Algorithm Powers Real Interpreters: Pratt Parsing ]]
+** pratt parsing
+** backus-naur form(BNF)
+** [[https://www.youtube.com/watch?v=V77J9l8N-P8][ Introduction to Tokenization | Writing a Custom Language Parser in Golang ]]
+* interesting
+** [[https://www.youtube.com/watch?v=VDQmu6KzDvU][ i implemented the md5 in bash with 0 external utilities]]
+

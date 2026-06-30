@@ -5,3 +5,7 @@
  an extention that brings elasticsearch -quality FTS(full text search)  to postgres
  it's build in rust with pgrx
  it uses FTS library called tantivy
+
+
+
+[[ https://www.youtube.com/watch?v=XEiQV4zRC-U][ Postgres Just Killed Elasticsearch ]]
