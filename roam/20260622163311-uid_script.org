@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       6A347ADC-9DB9-478A-829E-2FC4DCE2DF3C
+:END:
+#+title: uid-script
+* check iban ownership
+cat http-user.log |cut -d '|' -f5|grep "/api/validate/iban/ownership"|jq '.response.body|fromjson|.responseContext.status.message'|sort|uniq -c
+* card ownership
+cat http-user.log |cut -d '|' -f5|grep "api/validate/card/ownership"|jq '.response.body|fromjson|.responseContext.status.message'|sort|uniq -c

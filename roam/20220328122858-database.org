@@ -77,7 +77,11 @@ also supports searching vectores
 ** [[https://www.trychroma.com/][chroma]]
 
 * figure out
-** tiger beetle database
+** TODO tiger beetle database
+:LOGBOOK:
+- State "TODO"       from              [2026-06-22 Mon 07:51]
+:END:
+https://docs.tigerbeetle.com/start/
 ** scylladb
 https://www.scylladb.com/product/tools/?utm_source=google&utm_medium=ppc&utm_campaign=Brand_DB-Terms_Search&utm_content=NoSQL_KW_DB-Terms&utm_medium=cpc&utm_source=google&utm_campaign=20781620396&utm_placement=&gad_source=1&gad_campaignid=20781620396&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6hFInl7arVpgxalxTzIDk7KVMcFTWKcffLEEnwIutLetIBXTc_sWA8aArr-EALw_wcB
 ** ETS

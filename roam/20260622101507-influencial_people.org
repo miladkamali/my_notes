@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       86ECFDCD-B10B-4E0C-A91A-CB9CB0AA5E3B
+:END:
+#+title: influencial people
+* john carmack

@@ -330,6 +330,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO authenticati
 SQL
 
  helm upgrade --install authentication-api ./authentication-api -f authentication/values.yaml -f authentication-api/values-prod.yaml -n prod
+ helm upgrade --install authentication-api authentication-api -f authentication-api/values.yaml -f authentication-api/values-prod.yaml -n prod
 
   { echo "SET synchronous_commit = off;"; gunzip -c auth-26-06-11-12.sql.gz; } |   psql -h uid-production-database-proxy.database.svc -U authentication -d authentication3 -v ON_ERROR_STOP=1
 
