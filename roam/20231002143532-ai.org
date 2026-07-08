@@ -24,6 +24,9 @@ midjourney ai
 
 
 https://hexmos.com/lama2/tutorials/installation.html
+* projects
+** https://github.com/kju4q/ai-weekend-builds/
+
 * videos
 ** [[https://www.youtube.com/watch?v=v_jDvpEGTIg&pp=ugUEEgJlbg%3D%3D][ Yann LeCun's $1B Bet Against LLMs [Part 2] ]]
 ** [[https://www.youtube.com/watch?v=kYkIdXwW2AE&t=737s][ Yann LeCun's $1B Bet Against LLMs [Part 1] ]]

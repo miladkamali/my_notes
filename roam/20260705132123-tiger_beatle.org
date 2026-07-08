@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       42514513-3C9B-4BF3-BA79-AAE3642370B3
+:END:
+#+title: tiger beatle
+* videos
+** [[https://www.youtube.com/watch?v=yKgfk8lTQuE][1000x: The Power of an Interface for Performance by Joran Dirk Greef]]
+https://docs.tigerbeetle.com/start/

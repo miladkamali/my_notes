@@ -17,6 +17,15 @@ https://github.com/jmoiron/sqlx
 * resources
 ** [[https://devhints.io/go][cheat sheet]]
 ** [[https://gobyexample.com/][go examples]]
+** videos
+*** [[https://youtu.be/8omcakb31xQ?is=Uf3-bkK3Sw4BL7tI][golang context package explained: the package that changed concurrency forever]]
+*** [[https://youtu.be/2XEQsJLsLN0?is=QAQTOJvQaJd14WYF][go lang pointers explained]]
+*** [[https://youtu.be/8omcakb31xQ?is=sP45YipbN780Z7F2][golang context package explained: the package that changed concurrency forever]]
+*** [[https://www.youtube.com/watch?v=1zExeiOZ4CU][Say Goodbye to Magic Numbers: Using "Enums" in Golang!]]
+*** [[https://www.youtube.com/watch?v=y2jP45S9BHk][Golang Concurrency - All the Basics you have to know!]]
+*** [[https://www.youtube.com/watch?v=c8H0w4yBL10][This is your last video about Golang Structs!]]
+*** [[https://www.youtube.com/watch?v=vtHZb7gNlbw][Creating custom struct tags in Golang is awesome!]]
+*** [[https://www.youtube.com/watch?v=SX1gT5A9H-U][Golang: The Last Interface Explanation You'll Ever Need]]
 * basic types 
 |         |   |
 |---------+---|

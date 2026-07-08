@@ -2,11 +2,6 @@
 :ID:       c78587eb-59d2-478b-a63f-642d2fe232c5
 :END:
 #+title: database
-* ACID
-** Atomicity
-** Consistency
-** Isolation
-** Durability
 * index types
 ** B-tree
 ** GIN
@@ -15,83 +10,85 @@
 ** Hash
 ** gin_trgm
 gin trigram dataset
-* Relational Database
+* types of database
+** Relational Database
 Initially invented by [[https://en.wikipedia.org/wiki/Edgar_F._Codd][Ted Codd]]
-** [[id:cb498fe8-5273-46c2-925d-bc8e690712b0][postgres]]
-** [[id:b0f9d4d1-a27c-4d45-a72c-8dbcea23c48b][mysql]]
-** Oracle
-** decentralized
-*** cockroach
+*** [[id:cb498fe8-5273-46c2-925d-bc8e690712b0][postgres]]
+*** [[id:b0f9d4d1-a27c-4d45-a72c-8dbcea23c48b][mysql]]
+*** Oracle
+*** decentralized
+**** cockroach
 https://en.wikipedia.org/wiki/CockroachDB
 https://github.com/cockroachdb/cockroach
-* Graph
-** Neo4J
-** Dgraph
+** Graph
+*** Neo4J
+*** Dgraph
 https://dgraph.io/
-* search
-** solar
-** elastic search
-** lucene
-** algolia
-** meilisearch
-** 
-* multi-model
-** FAUNA
-* key-value
-** Etcd
-** Redis
-** valkey
-*** [[https://www.youtube.com/watch?v=wWTjxLcMVsg][comparision of redis va valkey]]
-** [[https://dragonflydb.io][dragonFly]]
-** [[https://docs.keydb.dev][keyDB]]
+** search
+*** solar
+*** elastic search
+*** lucene
+*** algolia
+*** meilisearch
+*** 
+** multi-model
+*** FAUNA
+** key-value
+*** Etcd
+*** Redis
+*** valkey
+**** [[https://www.youtube.com/watch?v=wWTjxLcMVsg][comparision of redis va valkey]]
+*** [[https://dragonflydb.io][dragonFly]]
+*** [[https://docs.keydb.dev][keyDB]]
 
-** Memcached
-* wide column database
+*** Memcached
+** wide column database
 best for
 - time-series data
 - historical records
 - high-write, low-read
-** Casandra
-** HBase
-* document object database
-** MongoDB
-** Firestore
-** DynamoDB
-** CoachDB
-* Data warehouse
-* time-series
-** Prometheus
-** InfluxDB
-** [[https://supabase.com/docs/guides/database/extensions/timescaledb#][postgres timescaledb]]
-* event-store
-** [[https://www.eventstore.com][eventstoredb]]
-** kafka
-* vector database
-** [[https://github.com/pgvector/pgvector][pgvector]]
-** redis
+*** Casandra
+*** HBase
+** document object database
+*** MongoDB
+*** Firestore
+*** DynamoDB
+*** CoachDB
+** Data warehouse
+** time-series
+*** Prometheus
+*** InfluxDB
+*** [[https://supabase.com/docs/guides/database/extensions/timescaledb#][postgres timescaledb]]
+** event-store
+*** [[https://www.eventstore.com][eventstoredb]]
+*** kafka
+** vector database
+*** [[https://github.com/pgvector/pgvector][pgvector]]
+*** redis
 also supports searching vectores
-** weaviate ( open source )
-** [[https://milvus.io/][milvus]] ( open source )
-** [[https://www.pinecone.io/][pinecone]] ( closed source )
-** ClickHouse
-** [[https://www.trychroma.com/][chroma]]
+*** weaviate ( open source )
+*** [[https://milvus.io/][milvus]] ( open source )
+*** [[https://www.pinecone.io/][pinecone]] ( closed source )
+*** ClickHouse
+*** [[https://www.trychroma.com/][chroma]]
 
-* figure out
-** TODO tiger beetle database
-:LOGBOOK:
-- State "TODO"       from              [2026-06-22 Mon 07:51]
-:END:
-https://docs.tigerbeetle.com/start/
-** scylladb
+** figure out
+
+*** [[id:42514513-3C9B-4BF3-BA79-AAE3642370B3][tiger beatle]]
+*** scylladb
 https://www.scylladb.com/product/tools/?utm_source=google&utm_medium=ppc&utm_campaign=Brand_DB-Terms_Search&utm_content=NoSQL_KW_DB-Terms&utm_medium=cpc&utm_source=google&utm_campaign=20781620396&utm_placement=&gad_source=1&gad_campaignid=20781620396&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6hFInl7arVpgxalxTzIDk7KVMcFTWKcffLEEnwIutLetIBXTc_sWA8aArr-EALw_wcB
-** ETS
+*** ETS
 https://elixirschool.com/en/lessons/storage/ets
-** MNesia
+*** MNesia
 https://www.youtube.com/watch?v=qjsDzYPodBs
-** ActiveMemory
+*** ActiveMemory
 * optimizing storage
 https://r.ena.to/blog/optimizing-postgres-table-layout-for-maximum-efficiency/
 * Concept
 ** MVCC
 ** WAL write ahead log
-* 
+** ACID
+*** Atomicity
+*** Consistency
+*** Isolation
+*** Durability

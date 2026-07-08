@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       5730D407-AB55-4452-B4F6-3130A7EB25DD
+:END:
+#+title: zig
+[[https://www.youtube.com/watch?v=l9eFGToyjf8][zig is better than rust sometimes]]

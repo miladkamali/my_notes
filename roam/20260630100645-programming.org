@@ -9,4 +9,6 @@
 ** [[https://www.youtube.com/watch?v=V77J9l8N-P8][ Introduction to Tokenization | Writing a Custom Language Parser in Golang ]]
 * interesting
 ** [[https://www.youtube.com/watch?v=VDQmu6KzDvU][ i implemented the md5 in bash with 0 external utilities]]
-
+* concepts
+** hoisting
+defining functions before or after the function that wants to use them

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       B3751399-6EEB-49BA-B123-A2F22DAF33F6
+:END:
+#+title: parallel computing
+* bend
+https://bendlang.com/setting-up-your-environment.html

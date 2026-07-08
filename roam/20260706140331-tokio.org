@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       9A320AD2-9337-41DD-A34F-A307DC73A799
+:END:
+#+title: tokio
+[[https://www.youtube.com/watch?v=dOzrO40jgbU][Getting started with Tokio. The ultimate starter guide to writing async Rust.]]
+
+
+
+tokio::task::spawn_blocking(move|| heavy_cpu_bound_operation).await 

@@ -4,3 +4,9 @@
 #+title: game development
 * information
 ** [[https://www.youtube.com/watch?v=5zlfJW2VGLM&t=326s][when your game is bad but your optimization is genius]]
+* physics
+[[https://www.youtube.com/watch?v=LYdjXNYdzzc][The Best Gaming Physics Engine Just Went Open Source]]
+** box2d
+https://box2d.org
+** box3d
+https://box2d.org/documentation3d/

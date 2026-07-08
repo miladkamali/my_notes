@@ -10,6 +10,8 @@
 ** [[https://hub.docker.com/_/alpine][alpine]]
 * minimizing docker image size
 ** [[https://www.youtube.com/watch?v=t779DVjCKCs][ Docker Image BEST Practices - From 1.2GB to 10MB ]]
+* videos
+** [[https://youtu.be/sSnlRAdlQvo?is=QzrMsbwD5jK_bsU-][Alpine Linux Explained for Beginners]]
 * docker tutorial
 ** volume
 *** creating a volume

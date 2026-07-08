@@ -2,10 +2,118 @@
 :ID:       7353A0D9-F811-49E2-A817-2624D18EB4EB
 :END:
 #+title: rust
+* videos
+[[https://www.youtube.com/watch?v=784JWR4oxOI][All Rust features explained]]
+[[https://www.youtube.com/watch?v=DhiHhQimSa4][How I’d learn Rust (If I could start over)]]
+[[https://dockyard.com/blog/2025/04/08/grpc-basics-for-rust-developers][rust grpc ]]
 
+[[https://www.youtube.com/watch?v=AiSl4vf40WU][Async Isn't Real & Cannot Hurt You]]
+[[https://www.youtube.com/watch?v=WhjEL817Onw&pp=ugUEEgJlbg%3D%3D][why i'm so bullish on rust for 2027]]
+
+[[https://www.youtube.com/watch?v=t1VZ-s-AAo8][Learning to Build Native Apps with Rust with FuturePaul (Bitcoin Wallet)]]
+[[https://www.youtube.com/watch?v=md-ecvXBGzI][Learn Rust (by building a simple bitcoin wallet) by FuturePaul]]
+
+* books
+** backend
+*** zero to production in rust
+*** rust locks and atomics
+*** asynchronous programming in rust
+** blockchain
+*** building bitcoin in rust
+https://github.com/braiins/build-bitcoin-in-rust
+* information
 install rust on m1
 https://www.rust-lang.org/tools/install
 
 
 unistall
 rustup self uninstall
+
+
+* cargo
+initializing a project
+cargo new project-name
+
+check the update available for all packages
+cargo update
+
+adding a package
+cargo add crate-name
+
+
+by installing
+cargo install cargo-edit
+
+you can run to upgrade all the dependencies
+cargo upgrade 
+
+** working offline
+
+
+* macros
+exporting macros
+
+#+begin_src rust
+#[macro_export]
+macro_rules! req_error {
+    ($($arg:tt)+) => {
+        log::error!(target: "http_requests", $($arg)+)
+    };
+}
+#+end_src
+
+
+and import the file you have define the macro with
+mod fileNameYouPutMacrosIn;
+
+
+* conventions
+** functions and variables
+they are defined as snake case 
+* traits
+** Display
+** Debug
+** Clone
+** Copy
+** PartialEq
+** Eq
+** Iterator
+** 
+* database
+https://youtu.be/VX6KzpjaPp8?is=_WmmXCywD8_xd_t2
+sqlx
+Cornucopia
+Diesel
+* async runtime
+** Embassy
+** [[id:9A320AD2-9337-41DD-A34F-A307DC73A799][tokio]]
+* async
+[[https://www.youtube.com/watch?v=wXtngLBkK4Q][Async Rust explained in 20 minutes]]
+** future
+rust futures are lazy they do not start 
+** task
+futures that are handed of to a async run time for execution
+#+begin_src rust
+fn async fetch_user(){
+  println!("hi");
+  }
+  
+#[tokio::main]
+fn async main(){
+ tokio::span(fetch_user());  
+}
+#+end_src
+
+** promise
+
+** await
+
+** join!
+
+** select!
+
+** 
+
+* web frameworks
+** [[id:D4F52496-AEB7-481E-89E0-89EC97D37945][actix]]
+** 

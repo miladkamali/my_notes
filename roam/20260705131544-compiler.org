@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       50CCA648-4682-4B67-893D-8A81B4233B80
+:END:
+#+title: compiler
+* writing a compiler
+** [[https://www.youtube.com/watch?v=eF9qWbuQLuw][Parser and Lexer — How to Create a Compiler part 1/5 — Converting text into an Abstract Syntax Tree]]
+** [[https://www.youtube.com/watch?v=4m7ubrdbWQU][Building a Parser from scratch. Lecture : Tokenizer | Parser]]

@@ -53,6 +53,9 @@ https://www.youtube.com/watch?v=v6m70HyI0XE
 ** [[https://www.youtube.com/@javidx9][javidx9]]
 ** [[https://www.youtube.com/watch?v=OSAOh4L41Wg&pp=ugUEEgJlbtIHCQkECwGHKiGM7w%3D%3D][simulating atoms in c++]]
 ** [[https://youtu.be/DMQ_HcNSOAI?is=aJWEZMLaZiS0jdhE][perfect hashmap faster than rust and C++]]
+** [[https://youtu.be/_lwuqH72ycM?is=3f65jlblmf6-lISG][Essential C++ Tips and Tricks for the Ultimate Cpp Performance - Andreas Fertig - C++Online 2025]]
+** [[https://www.youtube.com/watch?v=qCjEN5XRzHc][The Most Important Optimizations to Apply in Your C++ Programs - Jan Bielak - CppCon 2022]]
+** [[https://youtu.be/ltN9Rgq4k6Q?is=JQ9-QGKoCysneUtj][Everyone told me not to build a SaaS in C++]]
 * compilation process
 pre-processor processes headers and source files then compiler  compiles them into object files
 then a linker link them into a executable or a library 

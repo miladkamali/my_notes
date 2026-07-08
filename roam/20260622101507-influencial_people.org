@@ -3,3 +3,6 @@
 :END:
 #+title: influencial people
 * john carmack
+** [[https://youtu.be/I845O57ZSy4?is=Oc2wNXOCfyZqZrGo][John Carmack: Doom, Quake, VR, AGI, Programming, Video Games, and Rockets | Lex Fridman Podcast #309]]
+* Yann LeCun
+** [[https://www.youtube.com/watch?v=kYkIdXwW2AE&pp=ugUEEgJlbg%3D%3D][Yann LeCun's $1B Bet Against LLMs [Part 1]]
