@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       17767d3d-a964-454e-9d14-177c2c74eb07
+:END:
+#+title: opencv
+
+[[https://www.youtube.com/watch?v=piHpZWcgQyc][ OpenCV 5 Is Here - The Biggest Update Since 2018 (We Tested It) ]]

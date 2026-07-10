@@ -59,6 +59,7 @@ best for
 *** Prometheus
 *** InfluxDB
 *** [[https://supabase.com/docs/guides/database/extensions/timescaledb#][postgres timescaledb]]
+[[https://www.youtube.com/watch?v=BharE_Kc9sQ][The Postgres Performance Trap Every Developer Falls Into]]
 ** event-store
 *** [[https://www.eventstore.com][eventstoredb]]
 *** kafka

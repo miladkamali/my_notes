@@ -13,6 +13,12 @@
 [[https://www.youtube.com/watch?v=t1VZ-s-AAo8][Learning to Build Native Apps with Rust with FuturePaul (Bitcoin Wallet)]]
 [[https://www.youtube.com/watch?v=md-ecvXBGzI][Learn Rust (by building a simple bitcoin wallet) by FuturePaul]]
 [[https://www.youtube.com/watch?v=uXUyfMuCAuc][Cleaner Rust Errors in 5 Minutes]]
+[[https://www.youtube.com/watch?v=s5S2Ed5T-dc][ A Simpler Way to See Results ]]
+ [[https://www.youtube.com/watch?v=KWB-gDVuy_I][ Constructors Are Broken ]]
+[[https://www.youtube.com/watch?v=SMCRQj9Hbx8][ Comprehending Proc Macros ]]
+[[https://www.youtube.com/watch?v=wU8hQvU8aKM][ Two Ways To Do Dynamic Dispatch ]]
+[[https://www.youtube.com/watch?v=ModFC1bhobA][ rust macros are magic ]]
+[[https://www.youtube.com/watch?v=VIsKIzFz_zA&pp=ugUEEgJlbg%3D%3D][ Rust's God Mode ]]
 * books
 ** backend
 *** zero to production in rust

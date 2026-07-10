@@ -13,6 +13,8 @@ https://samnewman.io/patterns/architectural/bff/
 *** Component principle
 *** boundaries and dependencies 
 *** nearly every thing is just a detail
+** distributed transaction
+[[https://www.youtube.com/watch?v=DOFflggE_0Q&pp=ugUEEgJlbg%3D%3D][ Distributed Transactions Explained: 2 Phase Commit vs Saga Pattern ]]
 * common features
 ** layering + separate boundaries
 ** agnostic encapsulated core domain

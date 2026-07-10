@@ -3,3 +3,5 @@
 :END:
 #+title: graphics
 [[https://www.youtube.com/watch?v=8_bExMR4FsA][ I Spent 2 Years Coding a Graphics Library in C++ ]]
+
+ [[https://www.youtube.com/watch?v=lborsSRDri0][ I Didn’t Understand Graphics Engines, So I Built One ]]

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       0d3598bf-be5b-4cae-b15f-d2f7937fcd22
+:END:
+#+title: java
+[[https://www.youtube.com/watch?v=F4MCnVuKvzA][java 26 new features]]
