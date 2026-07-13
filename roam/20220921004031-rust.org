@@ -19,6 +19,12 @@
 [[https://www.youtube.com/watch?v=wU8hQvU8aKM][ Two Ways To Do Dynamic Dispatch ]]
 [[https://www.youtube.com/watch?v=ModFC1bhobA][ rust macros are magic ]]
 [[https://www.youtube.com/watch?v=VIsKIzFz_zA&pp=ugUEEgJlbg%3D%3D][ Rust's God Mode ]]
+[[https://www.youtube.com/watch?v=GqEeOrDk5DI&pp=ugUEEgJlbtIHCQlPCwGHKiGM7w%3D%3D][ How to Actually Learn C (2027 Edition) ]]
+[[https://www.youtube.com/watch?v=r_VoEa8HlPk][ BLAZINGLY FAST Rust Optimizations ]]
+[[https://www.youtube.com/watch?v=53XYcpCgQWE][ 21+ Rust Pro Tips (TOP SECRET) ]]
+[[https://www.youtube.com/watch?v=IXBaXyLdrTA][ Why Hello World in Rust is 200 times bigger than in C, and why it isn't ]]
+* crates
+** [[id:502c6f74-caed-4a8d-ae1b-aa4fd172d837][tonic]]
 * books
 ** backend
 *** zero to production in rust
@@ -55,6 +61,8 @@ cargo upgrade
 
 ** working offline
 
+
+** cargo new auth_service --lib
 
 * macros
 exporting macros
@@ -120,6 +128,12 @@ fn async main(){
 
 ** 
 
+* types 
+** sum types
+tagged unions
+enum in rust is basically a sum type
+** product types
+struct is product type
 * web frameworks
 ** [[id:D4F52496-AEB7-481E-89E0-89EC97D37945][actix]]
 ** 

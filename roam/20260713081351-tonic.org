@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       502c6f74-caed-4a8d-ae1b-aa4fd172d837
+:END:
+#+title: tonic
+
+[[https://www.youtube.com/watch?v=kerKXChDmsE&pp=ugUHEgVlbi1HQg%3D%3D][tonic makes grpc in rust stupidly simple]]

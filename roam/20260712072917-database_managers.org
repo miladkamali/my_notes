@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       def0f2a0-eb00-4910-8195-bc470c994904
+:END:
+#+title: database managers
+* dbeaver
+* beekeeper
+* adminer
+

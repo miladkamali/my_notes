@@ -93,3 +93,15 @@ https://r.ena.to/blog/optimizing-postgres-table-layout-for-maximum-efficiency/
 *** Consistency
 *** Isolation
 *** Durability
+** normal forms
+*** first normal Form
+*** Second Normal From
+*** Third Normal Form
+- eliminate repeating groups in tables
+- create a separate table for sets of related data
+- identify each set of related data with a key
+- create linking tables for many-to-many links
+- relate these tables with foreign keys
+- eliminate fiels that do not depend on the key
+*** BCNF
+*** Forth normal form

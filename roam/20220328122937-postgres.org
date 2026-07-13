@@ -10,6 +10,9 @@ https://multigres.com/docs
 https://github.com/sorintlab/stolon
 
 https://www.datazoom.io/community-resources/setting-up-postgresql-on-kubernetes-using-stolon
+* videos
+** [[https://www.youtube.com/watch?v=YLoYcwnqVzM&pp=ugUEEgJlbg%3D%3D][how instagram scaled postgres to 2 billion users ]]
+** [[https://www.youtube.com/watch?v=TdondBmyNXc&pp=ugUEEgJlbg%3D%3D][i replaced my entire stack with postgres]]
 * capabilities
 [[https://www.youtube.com/watch?v=GbdeGYW_lNE][ Is Your ORM Lying to You About Postgres? ]]
 ** key-value cache similar to redis

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       54228632-a84e-4b3c-908f-04e15f0840ae
+:END:
+#+title: software regulation
+* faa
+**  DO-178C
+is what faa uses to certify all commercial flight software
+- basically
+  - every line of code has to be traceable back to specific requirement
+  - has to be independently verified by someone other than who wrote it
