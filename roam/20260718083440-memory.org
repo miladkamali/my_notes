@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       bb04e6e0-5089-420a-8bb0-d7fb6ae59af2
+:END:
+#+title: memory
+[[https://www.youtube.com/watch?v=1K3sDiQ0kMM][ how process share memory without copying]]

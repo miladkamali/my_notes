@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       006c72b9-e94b-4649-8029-04f73b045b66
+:END:
+#+title: engine
+[[https://www.youtube.com/watch?v=c5ZdXl8KRs0][ Making A Twin Cylinder Engine For My R/C Airplane ]]
+[[https://www.youtube.com/watch?v=nKVq9u52A-c][ I Make This Tiny 2-Stroke Engine From Scratch ]]

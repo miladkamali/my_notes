@@ -3,7 +3,7 @@
 :END:
 #+title: ai
 
-
+[[https://www.youtube.com/watch?v=A4aLYwtpyes][ How to Use AI for Programming ]]
 
 
 https://openrouter.ai/chat?room=orc-h21vfjnQAhLtEAg0xIgehkI3DEGx

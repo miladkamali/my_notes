@@ -3,3 +3,4 @@
 :END:
 #+title: reverse engineering
 [[https://www.youtube.com/watch?v=m0XAPRAOJ8A][everything is opensource if you know reverse engineering]]
+[[https://www.youtube.com/watch?v=8vk5z9VAaBQ][every level of reverse engineering explained]]

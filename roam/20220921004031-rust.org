@@ -23,8 +23,16 @@
 [[https://www.youtube.com/watch?v=r_VoEa8HlPk][ BLAZINGLY FAST Rust Optimizations ]]
 [[https://www.youtube.com/watch?v=53XYcpCgQWE][ 21+ Rust Pro Tips (TOP SECRET) ]]
 [[https://www.youtube.com/watch?v=IXBaXyLdrTA][ Why Hello World in Rust is 200 times bigger than in C, and why it isn't ]]
+[[https://www.youtube.com/watch?v=wU8hQvU8aKM&pp=ugUEEgJlbg%3D%3D][two ways to do dynamic dispatch]]
+[[https://www.youtube.com/watch?v=j-VQCYP7wyw][Rust error Handling best practices]]
+[[https://www.youtube.com/watch?v=jio4aP6KoYY][rust when to leak memory]]
+[[https://www.youtube.com/watch?v=WhjEL817Onw&pp=ugUEEgJlbg%3D%3D][why i'm so bullish about rust in 2026]]
+[[https://www.youtube.com/watch?v=FTsaDmf0f_0][ The Secret to Rust Ownership: Rc vs. Arc ]]
+[[https://www.youtube.com/watch?v=ao4mTUgZ4H4][building fyrox a rust game engine ]]
+[[https://www.youtube.com/watch?v=BHxmWTVFWxQ][building a web server in rust part 1]]
 * crates
 ** [[id:502c6f74-caed-4a8d-ae1b-aa4fd172d837][tonic]]
+* 
 * books
 ** backend
 *** zero to production in rust
@@ -64,6 +72,15 @@ cargo upgrade
 
 ** cargo new auth_service --lib
 
+
+
+** cargo modules 
+cargo install cargo-modules
+cargo modules structure
+
+cargo modules structure --no-types --no-fns
+
+cargo modules structure --help
 * macros
 exporting macros
 
@@ -125,8 +142,6 @@ fn async main(){
 ** join!
 
 ** select!
-
-** 
 
 * types 
 ** sum types

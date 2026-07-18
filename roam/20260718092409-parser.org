@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       cdea0ea6-f85a-4ad1-ade0-51b1698dbff6
+:END:
+#+title: parser
+
+[[https://www.youtube.com/watch?v=0c8b7YfsBKs][ This Simple Algorithm Powers Real Interpreters: Pratt Parsing ]]
+
+ https://github.com/tlaceby/guide-to-interpreters-series
+
+ https://github.com/tlaceby/parser-series

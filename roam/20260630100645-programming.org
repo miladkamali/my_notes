@@ -12,3 +12,6 @@
 * concepts
 ** hoisting
 defining functions before or after the function that wants to use them
+* compiler internal 
+** [[https://www.youtube.com/watch?v=RnBOOF502p0][ How Real Projects Mix Compiled and Interpreted Languages ]]
+** [[https://www.youtube.com/watch?v=XJC5WB2Bwrc][ Why Some Projects Use Multiple Programming Languages ]]
