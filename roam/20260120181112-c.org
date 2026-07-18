@@ -55,6 +55,7 @@ https://www.youtube.com/watch?v=v6m70HyI0XE
 :LOGBOOK:
 - State "TODO"       from              [2026-07-10 Fri 20:46]
 :END:
+** [[https://youtu.be/Imj4ROIiMw0?is=WDt-0qab3i0b5Ewx][4x code performance with SIMD]]
 ** [[https://youtu.be/_lwuqH72ycM?is=3f65jlblmf6-lISG][Essential C++ Tips and Tricks for the Ultimate Cpp Performance - Andreas Fertig - C++Online 2025]]
 ** [[https://www.youtube.com/watch?v=qCjEN5XRzHc][The Most Important Optimizations to Apply in Your C++ Programs - Jan Bielak - CppCon 2022]]
 ** [[https://youtu.be/ltN9Rgq4k6Q?is=JQ9-QGKoCysneUtj][Everyone told me not to build a SaaS in C++]]

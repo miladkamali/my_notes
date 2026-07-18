@@ -4,7 +4,7 @@
 #+title: ai
 
 [[https://www.youtube.com/watch?v=A4aLYwtpyes][ How to Use AI for Programming ]]
-
+[[https://youtu.be/LvBsACJy4ww?is=M8qTz2pYRTgpNMoL][ google shrunk ai]]
 
 https://openrouter.ai/chat?room=orc-h21vfjnQAhLtEAg0xIgehkI3DEGx
 autogpt

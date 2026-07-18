@@ -30,6 +30,7 @@
 [[https://www.youtube.com/watch?v=FTsaDmf0f_0][ The Secret to Rust Ownership: Rc vs. Arc ]]
 [[https://www.youtube.com/watch?v=ao4mTUgZ4H4][building fyrox a rust game engine ]]
 [[https://www.youtube.com/watch?v=BHxmWTVFWxQ][building a web server in rust part 1]]
+[[https://youtu.be/algDLvbl1YY?si=zU7wACUtO9a5eWQo][the dark side of the .reserve()]]
 * crates
 ** [[id:502c6f74-caed-4a8d-ae1b-aa4fd172d837][tonic]]
 * 
