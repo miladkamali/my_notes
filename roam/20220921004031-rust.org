@@ -31,6 +31,12 @@
 [[https://www.youtube.com/watch?v=ao4mTUgZ4H4][building fyrox a rust game engine ]]
 [[https://www.youtube.com/watch?v=BHxmWTVFWxQ][building a web server in rust part 1]]
 [[https://youtu.be/algDLvbl1YY?si=zU7wACUtO9a5eWQo][the dark side of the .reserve()]]
+[[https://youtu.be/1Ql7sQG8snA?is=aAgAMziEQoMWOQHQ][5 rust design patterns]]
+[[https://www.youtube.com/watch?v=ZC6UWzX3Xug][ Rust Parallelism with Rayon - Use ALL CPUs ]]
+[[https://www.youtube.com/watch?v=o_x-Io4rUz0][ Async Rust Demystified: Next-Level Performance Many Will Miss ]]
+ [[https://www.youtube.com/watch?v=sZV6sz4P6QY&pp=ugUHEgVlbi1VUw%3D%3D][mastering error handling in rust]]
+* youtube channels
+** [[https://www.youtube.com/@codetothemoon][code to the moon]]
 * crates
 ** [[id:502c6f74-caed-4a8d-ae1b-aa4fd172d837][tonic]]
 * 
@@ -152,4 +158,41 @@ enum in rust is basically a sum type
 struct is product type
 * web frameworks
 ** [[id:D4F52496-AEB7-481E-89E0-89EC97D37945][actix]]
-** 
+** axum
+** frontend
+*** yew
+*** leptos
+*** dioxus
+* desktop
+** iced
+** egui
+** gpui
+* error handling
+** result type
+*** .unwrap()
+will assume the happy path and if Err variant is received the program panics
+*** .expect("with clean message")
+same as unwrap however with clean error messages telling you what happend
+*** unwrap_or()
+it provided a default value for when the failure case happens
+*** .ok()
+will convert result type into option, it will return Some for ok variant and none for error variant 
+** option type
+*** if let
+
+#+begin_src rust
+  fn to_int(s:&str)->Option<i32>{
+        s.parse().ok()
+  }
+  fn sum_str_vec(strs: Vec<String>) -> String{
+      let mut accum =0i32;
+      for s in strs{
+          if let Some(val) = to_int(&s){
+              accum += val;
+          }
+      }
+      accum.to_string()
+  }
+#+end_src
+
+

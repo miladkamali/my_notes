@@ -5,3 +5,8 @@
 * buy link
 ** https://microbotmarket.com/product/6980132?utm_medium=PPC&utm_source=Torob&torob_clid=019da087-af2b-72cd-ae50-0c83b5ae91d8
 ** https://thecaferobot.com/store/esp32-s3-wroom-1-development-board
+* tutorials
+** [[https://www.youtube.com/playlist?list=PL0U7YUX2VnBFbwTi96wUB1nZzPVN3HzgS][esp32 rust programming]]
+** [[https://www.youtube.com/@therustybits/videos][The Rusty Bits, some guy who is using rust with esp32]]
+** [[https://www.youtube.com/watch?v=dxgufYRcNDg][ ESP32 embedded Rust setup explained ]]
+** [[https://www.youtube.com/watch?v=dOVjb2wXI84&pp=0gcJCZkLAYcqIYzv][getting started with esp32]]

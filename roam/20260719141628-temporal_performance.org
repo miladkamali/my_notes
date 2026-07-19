@@ -1,0 +1,131 @@
+:PROPERTIES:
+:ID:       47a45089-0b37-4cab-97de-996d15abff3f
+:END:
+#+title: temporal performance
+* testing temporal performance
+i start by creating a simple hello world project and run 10000 GreetingWorkflow with different concurrency
+ by default setup of the temporal worker i get the following
+
+ #+begin_src shell
+   seq 1 10000 | xargs -I {} -P 200 ./temporal workflow start   --type GreetingWorkflow   --task-queue my-task-queue      --input "\"Ziggy {}\""
+ #+end_src
+
+ #+begin_src shell
+   ./temporal workflow list   --query 'WorkflowType="GreetingWorkflow" and ExecutionStatus="Completed"'   --limit 1000   --output json |   jq -r '.[] | (.executionDuration // .execution_duration) | rtrimstr("s") | tonumber' |   python3 -c '
+import sys, statistics, math
+data = sorted([float(x.strip()) for x in sys.stdin if x.strip()])
+if not data:
+    print("No completed workflows found."); sys.exit(0)
+n = len(data)
+def p(pct): return data[max(0, math.ceil(pct / 100.0 * n) - 1)]
+print(f"Count : {n}")
+print(f"Avg   : {statistics.mean(data):.4f}s")
+print(f"Median: {statistics.median(data):.4f}s")
+print(f"P95   : {p(95):.4f}s")
+print(f"P99   : {p(99):.4f}s")
+'
+Count : 1000
+Avg   : 136.1094s
+Median: 135.6640s
+P95   : 146.9149s
+P99   : 148.8596s
+
+ #+end_src
+
+
+
+ #+begin_src shell
+   seq 1 10000 | xargs -I {} -P 50 ./temporal workflow start   --type GreetingWorkflow   --task-queue my-task-queue      --input "\"Ziggy {}\""
+
+ #+end_src
+
+ #+begin_src shell
+   ./temporal workflow list   --query 'WorkflowType="GreetingWorkflow" and ExecutionStatus="Completed"'   --limit 100000   --output json |   jq -r '.[] | (.executionDuration // .execution_duration) | rtrimstr("s") | tonumber' |   python3 -c '
+import sys, statistics, math
+data = sorted([float(x.strip()) for x in sys.stdin if x.strip()])
+if not data:
+    print("No completed workflows found."); sys.exit(0)
+n = len(data)
+def p(pct): return data[max(0, math.ceil(pct / 100.0 * n) - 1)]
+print(f"Count : {n}")
+print(f"Avg   : {statistics.mean(data):.4f}s")
+print(f"Median: {statistics.median(data):.4f}s")
+print(f"P95   : {p(95):.4f}s")
+print(f"P99   : {p(99):.4f}s")
+'
+Count : 9975
+Avg   : 55.2449s
+Median: 73.8409s
+P95   : 90.5932s
+P99   : 92.0584s
+
+ #+end_src
+
+
+ #+begin_src shell
+   seq 1 10000 | xargs -I {} -P 20 ./temporal workflow start   --type GreetingWorkflow   --task-queue my-task-queue      --input "\"Ziggy {}\""
+ #+end_src
+
+
+ #+begin_src shell
+   ./temporal workflow list   --query 'WorkflowType="GreetingWorkflow" and ExecutionStatus="Completed"'   --limit 100000   --output json |   jq -r '.[] | (.executionDuration // .execution_duration) | rtrimstr("s") | tonumber' |   python3 -c '
+import sys, statistics, math
+data = sorted([float(x.strip()) for x in sys.stdin if x.strip()])
+if not data:
+    print("No completed workflows found."); sys.exit(0)
+n = len(data)
+def p(pct): return data[max(0, math.ceil(pct / 100.0 * n) - 1)]
+print(f"Count : {n}")
+print(f"Avg   : {statistics.mean(data):.4f}s")
+print(f"Median: {statistics.median(data):.4f}s")
+print(f"P95   : {p(95):.4f}s")
+print(f"P99   : {p(99):.4f}s")
+'
+Count : 9975
+Avg   : 0.1908s
+Median: 0.1714s
+P95   : 0.3155s
+P99   : 0.4088s
+
+ #+end_src
+
+
+* activity slot 500 workflow slot 500
+#+begin_src rust
+   let tuner = TunerBuilder::default()
+        // OPTIMIZATION 1: Activity Concurrency
+        // If activities are I/O bound (network calls, DB queries), set this high (e.g., 200-1000).
+        // If CPU bound, keep it closer to your logical CPU core count.
+        .activity_slot_supplier(Arc::new(FixedSizeSlotSupplier::new(500)))
+
+        // OPTIMIZATION 2: Workflow Concurrency
+        // Workflows are highly efficient. You can usually leave this at 100 or slightly increase it.
+        // Note: For caching, the worker must be willing to hand out at least two slots.
+        .workflow_slot_supplier(Arc::new(FixedSizeSlotSupplier::new(500)))
+        //.workflow_task_slot_supplier(Arc::new(FixedSizeSlotSupplier::new(200)))
+
+        // OPTIMIZATION 3: Local Activity Concurrency (if applicable)
+        .local_activity_slot_supplier(Arc::new(FixedSizeSlotSupplier::new(100)))
+        .build();
+#+end_src
+#+begin_src shell
+  ./temporal workflow list   --query 'WorkflowType="GreetingWorkflow" and ExecutionStatus="Completed"'   --limit 100000   --output json |   jq -r '.[] | (.executionDuration // .execution_duration) | rtrimstr("s") | tonumber' |   python3 -c '
+import sys, statistics, math
+data = sorted([float(x.strip()) for x in sys.stdin if x.strip()])
+if not data:
+    print("No completed workflows found."); sys.exit(0)
+n = len(data)
+def p(pct): return data[max(0, math.ceil(pct / 100.0 * n) - 1)]
+print(f"Count : {n}")
+print(f"Avg   : {statistics.mean(data):.4f}s")
+print(f"Median: {statistics.median(data):.4f}s")
+print(f"P95   : {p(95):.4f}s")
+print(f"P99   : {p(99):.4f}s")
+'
+Count : 9975
+Avg   : 77.2978s
+Median: 53.6928s
+P95   : 135.3887s
+P99   : 141.2767s
+
+#+end_src

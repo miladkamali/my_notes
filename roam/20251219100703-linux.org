@@ -151,3 +151,5 @@ curl ifconfig.co;
 ** ram disk
 sudo mkdir /mnt/ramdisk
 sudo mount -t tmpfs -o rw,size=2G tmpfs /mnt/ramdisk
+* videos
+** [[https://youtu.be/NvME0NGQ8RU?is=yOW0O-CJi1gBpZ-J][xorg vs wayland]]

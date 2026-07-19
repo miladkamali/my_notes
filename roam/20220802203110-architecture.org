@@ -19,3 +19,122 @@ https://samnewman.io/patterns/architectural/bff/
 ** layering + separate boundaries
 ** agnostic encapsulated core domain
 ** inversion of control
+* architecture styles
+** monolithic
+In a monolithic architecture, the entire application — user interface, business
+logic, and data access layers — is built, deployed, and scaled as a single
+unified codebase and deployable artifact.
+
+    Primary Use Case: Early-stage startups, minimum viable products (MVPs),
+    internal enterprise tools, or teams prioritizing rapid initial feature
+    development over massive scale.
+
+    Problems Solved:
+
+        Eliminates network latency: In-memory function calls replace slow,
+        error-prone network calls between application modules.
+
+        Simplified development and testing: End-to-end testing, local debugging,
+        and deployments are straightforward because there is only one moving
+        part.
+
+        Avoids distributed systems tax: Frees the team from managing partial
+        failures, eventual consistency, and distributed transactions.
+** micro-service
+An application structured as a collection of small, loosely coupled,
+independently deployable services. Each service is owned by a small team, models
+a specific business domain, and communicates with other services over
+well-defined APIs or lightweight message brokers.
+
+    Primary Use Case: Large engineering organizations with dozens of teams
+    working concurrently, high-traffic consumer platforms (e.g., e-commerce,
+    streaming), and systems where different features have drastically different
+    scaling requirements.
+
+    Problems Solved:
+
+        Organizational bottlenecks: Solves Conway's Law by allowing autonomous
+        teams to build, test, and deploy features without coordinating a
+        centralized release train.
+
+        Targeted scalability: If the checkout service experiences heavy load,
+        you scale only the checkout instances rather than duplicating the entire
+        application.
+
+        Fault isolation: A memory leak or crash in the recommendation service
+        will not bring down the core payment processing engine.
+** event-driven
+A distributed pattern where decoupled components communicate asynchronously by
+producing, detecting, and consuming events (immutable records of state changes)
+via message brokers or streaming platforms like Apache Kafka or RabbitMQ.
+
+    Primary Use Case: Real-time data processing, IoT data ingestion, financial
+    trading platforms, and complex notification engines where multiple
+    independent subsystems must react to the same user action.
+
+    Problems Solved:
+
+        Temporal coupling: Producers and consumers do not need to be online at
+        the same time. If a downstream database goes offline, messages queue up
+        safely in the broker until the service recovers.
+
+        Cascading latency: A user uploading a video receives an immediate
+        success response while background event consumers independently handle
+        transcoding, thumbnail generation, and search indexing.
+** server-less
+A cloud-native architecture where application logic is divided into granular,
+stateless, event-triggered functions (e.g., AWS Lambda). The cloud provider
+dynamically manages server provisioning, operating system patching, and
+container scaling.
+
+    Primary Use Case: Asynchronous background processing (e.g., image resizing
+    upon S3 upload), scheduled cron jobs, event-driven pipelines, and APIs with
+    highly unpredictable or spiky traffic patterns.
+
+    Problems Solved:
+
+        Idle infrastructure costs: You pay strictly for the exact milliseconds
+        your code executes, eliminating the cost of over-provisioned servers
+        sitting idle during low-traffic periods.
+
+        Operational overhead: Removes the need for manual auto-scaling rules,
+        capacity planning, and server infrastructure maintenance.
+** micro-kernel
+Consists of a stable, minimalist core system containing only essential
+operational logic, surrounded by plug-in modules that add specialized,
+extensible features without altering the core engine.
+
+    Primary Use Case: Integrated Development Environments (VS Code, Eclipse),
+    web browsers (Chrome extensions), workflow engines, and enterprise software
+    that requires custom business rules for different clients or regulatory
+    environments.
+
+    Problems Solved:
+
+        Codebase bloat and rigidity: Prevents the core engine from becoming an
+        unmaintainable tangle of conditional logic for edge cases.
+
+        Safe extensibility: Allows third-party developers or isolated internal
+        teams to add new functionalities without risking the stability of the
+        core system.
+** hexagonal
+A domain-centric architectural pattern that places the core business logic and
+domain models at the absolute center of the application. The domain communicates
+with the outside world exclusively through interfaces (ports), while pluggable
+technical components (adapters) handle external UIs, databases, and third-party
+APIs.
+
+    Primary Use Case: Complex, long-lived enterprise core systems (e.g., banking
+    ledgers, underwriting engines) where domain rules must outlive underlying
+    infrastructure technologies.
+
+    Problems Solved:
+
+        Infrastructure coupling: Protects critical business rules from database
+        vendor lock-in or framework obsolescence. Swapping PostgreSQL for
+        MongoDB only requires writing a new database adapter.
+
+        Testability: Allows engineers to test 100% of the core business logic in
+        milliseconds using simple in-memory test doubles without spinning up
+        real databases or web servers.
+** space-based
