@@ -5,7 +5,19 @@
 
 [[https://www.youtube.com/watch?v=A4aLYwtpyes][ How to Use AI for Programming ]]
 [[https://youtu.be/LvBsACJy4ww?is=M8qTz2pYRTgpNMoL][ google shrunk ai]]
-
+* figure out
+** TODO graphyfy
+:LOGBOOK:
+- State "TODO"       from              [2026-07-20 Mon 15:13]
+:END:
+it's supposed to create a knowledge graph so that 
+https://github.com/Graphify-Labs/graphify
+** TODO jcode
+:LOGBOOK:
+- State "TODO"       from              [2026-07-20 Mon 15:13]
+:END:
+https://github.com/1jehuang/jcode
+** openrouter
 https://openrouter.ai/chat?room=orc-h21vfjnQAhLtEAg0xIgehkI3DEGx
 autogpt
 google bard
