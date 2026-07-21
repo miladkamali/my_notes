@@ -35,6 +35,30 @@
 [[https://www.youtube.com/watch?v=ZC6UWzX3Xug][ Rust Parallelism with Rayon - Use ALL CPUs ]]
 [[https://www.youtube.com/watch?v=o_x-Io4rUz0][ Async Rust Demystified: Next-Level Performance Many Will Miss ]]
  [[https://www.youtube.com/watch?v=sZV6sz4P6QY&pp=ugUHEgVlbi1VUw%3D%3D][mastering error handling in rust]]
+ 
+* profiling
+** [[https://www.youtube.com/watch?v=q3VOsGzkM-M&t=48s][ The ultimate Rust performance guide ]]
+** tools
+*** sync programs
+**** Hyperfine
+**** Dhat
+**** cargo-flamegraph
+cargo install flamegraph
+*** async
+**** tokio-console
+**** oha
+for load testing http endpoints
+**** tracing
+*** perf
+*** heaptrack
+*** bytehound
+*** cachegrind
+*** callgrind
+*** flamegraph
+*** counts
+*** goose
+*** future-diagnose
+*** amd mprof
 * youtube channels
 ** [[https://www.youtube.com/@codetothemoon][code to the moon]]
 * crates

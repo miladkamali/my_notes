@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       fb45bf0e-6f7a-496d-be61-b11df7371ffe
+:END:
+#+title: coding exercise
+* adventofcode
+https://adventofcode.com/2022/day/19
+[[https://www.youtube.com/watch?v=5rb0vvJ7NCY][ going fast is about doing less ]]
