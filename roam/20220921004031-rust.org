@@ -86,6 +86,8 @@
 *** [[https://www.youtube.com/playlist?list=PLH6-VpZ3SvUWox7mJDLNCu_E0gl7a-fP3][euro rust]]
 * standard
 ** [[https://www.youtube.com/watch?v=oitYvDe4nps][ The Joy of C++26 Contracts - Myths, Misconceptions & Defensive Programming - Herb Sutter ]]
+  [[https://www.youtube.com/watch?v=q3VOsGzkM-M][The ultimate Rust performance guide]]
+ [[https://www.youtube.com/watch?v=WhjEL817Onw&pp=ugUEEgJlbg%3D%3D][why i'm so bullish on rust 2026]]
 * profiling
 ** [[https://www.youtube.com/watch?v=q3VOsGzkM-M&t=48s][ The ultimate Rust performance guide ]]
 ** tools
