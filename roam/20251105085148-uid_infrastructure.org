@@ -374,6 +374,32 @@ binesh hooshmand-4      1000010683
 binesh hooshmand-5      1000010684
 
 
+
+LSR-BINESH-HOOSHMAND-PISHRO-SRV3-P1            - 46.245.89.4
+
+BINESH-HOOSHMAND-PISHRO-11    46.245.89.12
+BINESH-HOOSHMAND-PISHRO-8    46.245.89.9    
+BINESH-HOOSHMAND-PISHRO-12    46.245.89.13
+BINESH-HOOSHMAND-PISHRO-14    46.245.89.15
+BINESH-HOOSHMAND-PISHRO-1    46.245.89.2    
+BINESH-HOOSHMAND-PISHRO-6    46.245.89.7    
+BINESH-HOOSHMAND-PISHRO-3    46.245.89.4
+لطفا IP ILOهای مشترک را اعلام نمایید . 
+سپاس 
+ 
+
+1405/04/30 17:23:40
+
+با سلام
+طبق اعلام واحد شبکه مرکز داده ( DCNM) :
+Server 1 --- 172.17.174.226
+Server 6 --- 172.17.174.231
+Server 8 --- 172.17.174.233
+Server 11 --- 172.17.174.236
+Server 12 --- 172.17.174.237
+Server 13 --- 172.17.174.238
+
+
 1 89.2
 srv03 pishro-3 46.245.89.4
 
@@ -382,6 +408,18 @@ srv03 pishro-3 46.245.89.4
 pishro 6 89.7
 pishro 8 89.9
 
+
+
+
+
+46.245.89.12 --- 1000010278 --- binesh hooshmand-13
+46.245.89.9 --- 1000010283 --- binesh hooshmand-6
+46.245.89.13 --- 1000010284 --- binesh hooshmand-7
+46.245.89.15 --- 1000010286 --- binesh hooshmand-9
+46.245.89.2 --- 1000010279 --- binesh hooshmand-14
+46.245.89.7 --- 1000010683 --- binesh hooshmand-4
+46.245.89.4 --- 1000010684 --- binesh hooshmand-5
+ 
 
 * key issues to be solved
 ** create a plan that we can detect issues with services in less than 5 minutes
