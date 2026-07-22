@@ -35,7 +35,7 @@
 [[https://www.youtube.com/watch?v=ZC6UWzX3Xug][ Rust Parallelism with Rayon - Use ALL CPUs ]]
 [[https://www.youtube.com/watch?v=o_x-Io4rUz0][ Async Rust Demystified: Next-Level Performance Many Will Miss ]]
  [[https://www.youtube.com/watch?v=sZV6sz4P6QY&pp=ugUHEgVlbi1VUw%3D%3D][mastering error handling in rust]]
- 
+[[https://www.youtube.com/watch?v=ao4mTUgZ4H4][ Building Fyrox: A Rust Game Engine (with Dmitry Stepanov) ]]
 * profiling
 ** [[https://www.youtube.com/watch?v=q3VOsGzkM-M&t=48s][ The ultimate Rust performance guide ]]
 ** tools
