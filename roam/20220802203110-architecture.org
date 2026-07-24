@@ -138,3 +138,7 @@ APIs.
         milliseconds using simple in-memory test doubles without spinning up
         real databases or web servers.
 ** space-based
+* concurrent programming
+** lmax disruptor
+martin thompso
+[[https://www.youtube.com/watch?v=lCdqVxz2kzE&t=946s][ Martin Thompson (keynote) – Adventures with concurrent programming in Java ]]
