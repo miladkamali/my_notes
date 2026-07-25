@@ -18,3 +18,7 @@ https://www.hobbywing.com/en/products/x13-g2
 * models
 ** tomahawk
 https://cults3d.com/en/3d-model/gadget/tomahawk-64mm-cruise-jet
+* simulator
+** https://store.steampowered.com/app/1682970/Uncrashed__FPV_Drone_Simulator/
+** https://www.liftoff-game.com/
+https://store.steampowered.com/app/410340/Liftoff_FPV_Drone_Racing/

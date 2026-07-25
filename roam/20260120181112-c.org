@@ -60,6 +60,9 @@ https://www.youtube.com/watch?v=v6m70HyI0XE
 ** [[https://www.youtube.com/watch?v=qCjEN5XRzHc][The Most Important Optimizations to Apply in Your C++ Programs - Jan Bielak - CppCon 2022]]
 ** [[https://youtu.be/ltN9Rgq4k6Q?is=JQ9-QGKoCysneUtj][Everyone told me not to build a SaaS in C++]]
 ** [[https://www.youtube.com/watch?v=Klq-sNxuP2g][moves are broken]]
+** [[https://www.youtube.com/watch?v=5n-bC2tsTCY][ std::launder Exists Because C++ Broke Its Own Rules ]]
+** [[https://www.youtube.com/watch?v=YrnAAp_Z16I][ Modern C++ is a Mess (And I Love It) ]]
+** [[https://www.youtube.com/watch?v=YjqV86jSNN0][ You Don't Know How to Initialize Variables in Modern C++ ]]
 * compilation process
 pre-processor processes headers and source files then compiler  compiles them into object files
 then a linker link them into a executable or a library 
