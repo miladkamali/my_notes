@@ -5,3 +5,4 @@
 * adventofcode
 https://adventofcode.com/2022/day/19
 [[https://www.youtube.com/watch?v=5rb0vvJ7NCY][ going fast is about doing less ]]
+[[https://www.youtube.com/playlist?list=PLpM-Dvs8t0Vba3v-9lweHuomr0DPhdX6P][Advent of Code 2020]]

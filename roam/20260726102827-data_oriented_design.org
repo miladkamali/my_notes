@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       b0e7cb54-0381-4586-be0f-b9110c994105
+:END:
+#+title: data oriented design
+[[https://www.youtube.com/watch?v=WwkuAqObplU][ Intro to Data Oriented Design for Games ]]
+[[https://www.youtube.com/watch?v=IroPQ150F6c][ Andrew Kelley: A Practical Guide to Applying Data Oriented Design (DoD) ]]
+ [[https://www.youtube.com/watch?v=rX0ItVEVjHc][ CppCon 2014: Mike Acton "Data-Oriented Design and C++" ]]
+
+ [[https://www.youtube.com/watch?v=xm4AQj5PHT4][ Data Oriented Design and Entity Component System Explained - Mathieu Ropert - ACCU 2024 ]]
+[[https://www.youtube.com/watch?v=SzjJfKHygaQ&pp=ygUecHJhY3RpY2FsIGRhdGEgb3JpZW50ZWQgZGVzaWdu][ More Speed & Simplicity: Practical Data-Oriented Design in C++ - Vittorio Romeo - CppCon 2025 ]]
+typical latency of memory
+  | type                  | size       | latency       |
+  |-----------------------+------------+---------------|
+  | (frying pan) register | 8-16 bytes | 0 cycles      |
+  | (Bench top) L1        | 64Kb       | 3 cycles      |
+  | (Shelves) L2          | 2Mb        | 20 cycles     |
+  | (Fridge) L3           | 32Mb       | ~100 cycles   |
+  | (Supermarket) DRAM    | +4Gb       | 300 cycles    |
+  | (Farm) Disk           | +100Gb     | 300000 cycles |
+  |                       |            |               |
+  
+the famous quake III fast inverse square root basically saved 30 cycles of cpu
+
+swapback array
