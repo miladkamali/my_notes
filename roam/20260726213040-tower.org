@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       fe8363c8-e64c-4813-9fbf-21e371bd98fa
+:END:
+#+title: tower
+[[https://www.youtube.com/watch?v=z78_RnUPnpY][ Intro to Tower and the Service Trait - Stefan Baumgartner - Rust Linz, July 2022 ]]
+tower service trait 
+
+
+#+begin_src rust
+  pub trait Service<Request> {
+      type Response;
+      type Error;
+      type Future: Future<Output = Result<Self::Response, Self::Error>>;
+
+      // Required methods
+      fn poll_ready(
+          &mut self,
+          cx: &mut Context<'_>,
+      ) -> Poll<Result<(), Self::Error>>;
+      fn call(&mut self, req: Request) -> Self::Future;
+  }
+#+end_src
+
+
+https://fettblog.eu/slides/introduction-to-tower/
+
+https://tokio.rs/blog/2021-05-14-inventing-the-service-trait
+
+https://github.com/ddprrt/lambda-hyper-example-workspace
+
+https://github.com/ddprrt/axum-tower-layer-services

@@ -37,6 +37,9 @@
  [[https://www.youtube.com/watch?v=sZV6sz4P6QY&pp=ugUHEgVlbi1VUw%3D%3D][mastering error handling in rust]]
 [[https://www.youtube.com/watch?v=ao4mTUgZ4H4][ Building Fyrox: A Rust Game Engine (with Dmitry Stepanov) ]]
  [[https://www.youtube.com/watch?v=M_EniM_IfnQ][ Performance Optimization in Rust - How to Profile with Samply ]]
+ [[https://www.youtube.com/watch?v=IPmRDS0OSxM][ A Firehose of Rust, for busy people who know some C++ ]]
+  [[https://www.youtube.com/watch?v=IvPP5U2wzlE][ Rust Vs C++ Beyond Safety - Joseph Cordell - ACCU Cambridge ]]
+[[https://www.youtube.com/watch?v=DpnXaNkM9_M&pp=0gcJCaMLAYcqIYzv][ I built my own memory profiler (in Rust, on Linux) ]]
 * profiling
 ** [[https://www.youtube.com/watch?v=q3VOsGzkM-M&t=48s][ The ultimate Rust performance guide ]]
 ** tools
@@ -113,6 +116,8 @@ cargo modules structure
 cargo modules structure --no-types --no-fns
 
 cargo modules structure --help
+
+
 * macros
 exporting macros
 
@@ -219,5 +224,5 @@ will convert result type into option, it will return Some for ok variant and non
       accum.to_string()
   }
 #+end_src
-
-
+* profiling
+[[https://www.youtube.com/watch?v=JRMOIE_wAFk][ Profiling Code in Rust - by Vitaly Bragilevsky - Rust Linz, December 2022 ]]

@@ -7,3 +7,6 @@
 
 
 tokio::task::spawn_blocking(move|| heavy_cpu_bound_operation).await 
+
+
+[[id:fe8363c8-e64c-4813-9fbf-21e371bd98fa][tower]]
