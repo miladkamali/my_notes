@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       756142de-a54c-4fbf-9df2-5e0091def017
+:END:
+#+title: glommio
+
+https://docs.rs/glommio/latest/glommio/
+
+https://emschwartz.me/async-rust-can-be-a-pleasure-to-work-with-without-send-sync-static/

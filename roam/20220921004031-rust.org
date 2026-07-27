@@ -40,6 +40,8 @@
  [[https://www.youtube.com/watch?v=IPmRDS0OSxM][ A Firehose of Rust, for busy people who know some C++ ]]
   [[https://www.youtube.com/watch?v=IvPP5U2wzlE][ Rust Vs C++ Beyond Safety - Joseph Cordell - ACCU Cambridge ]]
 [[https://www.youtube.com/watch?v=DpnXaNkM9_M&pp=0gcJCaMLAYcqIYzv][ I built my own memory profiler (in Rust, on Linux) ]]
+[[https://www.youtube.com/watch?v=IPmRDS0OSxM][ A Firehose of Rust, for busy people who know some C++ ]]
+[[https://www.youtube.com/watch?v=QQzAWxYKPSE][ Advanced Rust Programming Techniques • Florian Gilcher • GOTO 2024 ]]
 * profiling
 ** [[https://www.youtube.com/watch?v=q3VOsGzkM-M&t=48s][ The ultimate Rust performance guide ]]
 ** tools
@@ -67,7 +69,6 @@ for load testing http endpoints
 ** [[https://www.youtube.com/@codetothemoon][code to the moon]]
 * crates
 ** [[id:502c6f74-caed-4a8d-ae1b-aa4fd172d837][tonic]]
-* 
 * books
 ** backend
 *** zero to production in rust
@@ -76,6 +77,9 @@ for load testing http endpoints
 ** blockchain
 *** building bitcoin in rust
 https://github.com/braiins/build-bitcoin-in-rust
+** [[https://doc.rust-lang.org/nomicon/intro.html][rustonomicon]]
+** [[https://rust-unofficial.github.io/patterns/][rust design patterns]]
+** [[https://refactoring.guru/design-patterns/rust][refactoring guru]]
 * information
 install rust on m1
 https://www.rust-lang.org/tools/install
@@ -83,7 +87,6 @@ https://www.rust-lang.org/tools/install
 
 unistall
 rustup self uninstall
-
 
 * cargo
 initializing a project
@@ -117,7 +120,6 @@ cargo modules structure --no-types --no-fns
 
 cargo modules structure --help
 
-
 * macros
 exporting macros
 
@@ -134,11 +136,10 @@ macro_rules! req_error {
 and import the file you have define the macro with
 mod fileNameYouPutMacrosIn;
 
-
 * conventions
 ** functions and variables
 they are defined as snake case 
-* traits
+* traits and markers
 ** Display
 ** Debug
 ** Clone
@@ -146,7 +147,22 @@ they are defined as snake case
 ** PartialEq
 ** Eq
 ** Iterator
-** 
+** Send
+data is Send if it can be sent between threads safely, This means No Unsafe Mutable.
+if all the fields in the struct is Send compatible, the entire struct is promoted to be Send compatible
+#+begin_src rust
+  pub unsafe auto trait Send{
+  }
+#+end_src
+** Sync
+#+begin_src rust
+  pub unsafe auto trait Sync {
+  }
+#+end_src
+Data is Sync if it can be shared between threads safely. It promises that data
+is mutable safely with things like Mutexes and atomic
+
+if all the fields in a struct are Sync compatible, the Struct is promoted to be Sync compatible.
 * database
 https://youtu.be/VX6KzpjaPp8?is=_WmmXCywD8_xd_t2
 sqlx
@@ -155,6 +171,7 @@ Diesel
 * async runtime
 ** Embassy
 ** [[id:9A320AD2-9337-41DD-A34F-A307DC73A799][tokio]]
+** [[id:756142de-a54c-4fbf-9df2-5e0091def017][glommio]]
 * async
 [[https://www.youtube.com/watch?v=wXtngLBkK4Q][Async Rust explained in 20 minutes]]
 ** future
@@ -186,9 +203,37 @@ tagged unions
 enum in rust is basically a sum type
 ** product types
 struct is product type
+** Box
+allocates any variable in a box in heap
+#+begin_src rust
+  fn do_boxed(){
+      let array = [1,2,3,4];
+      let boxed = Box::new(array);
+      println!("box  size is {}",boxed.len());
+  }
+#+end_src
+** rc
+reference counter
+#+begin_src rust
+  let image = load_image();
+  let image_rc = Rc::new(image);
+  let ms1 = First{
+      image:image_rc.clone()
+  };
+  let ms2 = Second{
+      image:image_rc.clone()
+  };
+  drop(image_rc);
+  //First and Second carry on existing 
+#+end_src
+** arc
+atomic  reference counter
 * web frameworks
 ** [[id:D4F52496-AEB7-481E-89E0-89EC97D37945][actix]]
 ** axum
+** xitca-web
+
+https://crates.io/crates/xitca-web
 ** frontend
 *** yew
 *** leptos
