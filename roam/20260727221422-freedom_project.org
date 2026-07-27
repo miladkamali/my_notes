@@ -1,0 +1,116 @@
+:PROPERTIES:
+:ID:       da9d5958-f4d3-41f5-b32f-cb942ebce3a2
+:END:
+#+title: freedom project
+
+* self custodial financial infrastructure
+
+Here is a comprehensive summary of the highly resilient, self-custodial financial infrastructure we have co-architected to survive the extreme adversarial conditions of the Iranian network environment. Following the summary is a phased, concrete action plan to bring this system from blueprint to deployment.
+Part 1: Architectural Summary
+
+The system is designed to provide secure, self-custodial payments by isolating user data from state firewalls, eliminating physical/KYC traps for operators, and leveraging math to scale and survive.
+
+                  [ USER LAYER: Mobile PWA ]
+                              │
+                    (Local WebRTC Data) 
+                    (Mimics Domestic VoIP)
+                              ▼
+            [ ENTRY LAYER: Residential Go-Nodes ]
+                              │
+                  (Encrypted gRPC on NIN)
+                              ▼
+       [ ONION BACKBONE: Private Domestic Tor-Like Network ]
+                              │
+                              ▼
+           [ L2 STORAGE & SEQUENCING: Hidden Services ]
+                              │
+               (Airgapped Outward Starlink Tunnel)
+                              ▼
+                  [ L1 SETTLEMENT (Global) ]
+
+1. High-Level Topology: L2 Isolation & L1 Settlement
+
+    Local Operations on the NIN: All transaction processing, account updates, and localized consensus (L2) occur entirely within Iran's domestic National Information Network (NIN), insulating the system from global internet blackouts.
+    The Sequencer-Relayer Airgap: Local Sequencers operate blindly. They pack batches of finalized states and ZK-proofs, then dump them across an airgapped, local wireless connection (using directional antennas) to a physical "Burner Gateway" hooked up to a Starlink terminal. This gateway acts as a stateless, unidirectional forwarder to the Layer 1 network outside Iran, preventing RF-triangulation of critical server nodes.
+
+2. Distributed Cryptographic Proving (ZK-Rollup)
+
+    Client-Side WASM Proving: The heavy lifting of creating transaction proofs happens natively on user devices inside a WebAssembly (WASM) compiler instance. This ensures that the user’s private witness (balances, identities, and transaction metadata) never leaves their device.
+    Recursive Aggregation: Local L2 sequencers do not generate base transaction proofs. Instead, they act as aggregators, utilizing Recursive SNARKs or Folding Schemes (like Nova) to compress thousands of client-side proofs into a single, highly condensed state-update proof.
+
+3. PWA Defensive Key Management
+
+To bypass centralized App Store censorship while guaranteeing elite-tier security, the system starts as a Progressive Web App (PWA) with a defense-in-depth storage model:
+
+    Hardware-Bound Key Derivation: Uses the WebAuthn API + PRF Extension to derive a symmetric encryption key directly from the device's secure enclave (biometrics/fingerprint). This key decrypts the Web3 private key solely in the system memory.
+    Web Crypto API Barrier: As a fallback, keys are stored in IndexedDB using extractable: false. Even if an XSS attack occurs, the raw private key bytes cannot be extracted from the browser runtime.
+    WASM Memory Sandboxing: Key decryption and cryptographic operations are executed in isolated WebAssembly memory. Using crates like zeroize in Rust ensures key traces are wiped from memory immediately after signing.
+    Panic / Duress Wipe: Includes a "hidden trigger" (or duress PIN input) that immediately wipes IndexedDB, registers a service worker clean-slate, and purges all forensic traces from the device.
+
+4. Residential Peer-to-Peer Ingress (Anti-KYC)
+
+Renting domestic servers requires strict state KYC, turning infrastructure operators into high-value targets. To bypass this:
+
+    Residential Entry Guards: Desktop and home Wi-Fi users run a lightweight, Go-based terminal client, serving as localized Entry Guards.
+    WebRTC Obfuscation: The PWA connects to these residential nodes via WebRTC data channels. To the state’s Deep Packet Inspection (DPI) engines, the traffic is identical to standard domestic VoIP/video calls.
+    Dumb Relay Tunneling: The residential node has no cryptographic access to the financial payloads. It simply acts as a proxy, passing the encrypted gRPC data into the hidden L2 core.
+
+5. Private Domestic Onion Network
+
+    Localized Tor Daemon: A custom, isolated Tor network runs entirely within the NIN, using custom Directory Authorities and TestingTorNetwork flag configurations.
+    Hidden Service Backends: The central L2 Sequencers and transactional databases run as hidden .onion equivalents. Their physical locations and IP addresses are cryptographically masked, even from the entry guards.
+
+6. Trustless Liveness & Topology Isolation
+
+To prevent state actors from joining the mesh to map and blackhole residential nodes ("Spy in the Mesh" attack):
+
+    Restricted Probing Rings: The network is mapped as a $k$-regular graph. Each node only knows and tests $k$ specific neighbors (e.g., $k=3$). A compromised node can only reveal a microscopic portion of the mesh.
+    Cryptographic Proof of Liveness: Nodes test each other using signed, ephemeral nonces (Challenge-Response). Testers send these cryptographically verifiable reports to a central database without being able to fake the results.
+    Stealth Reporting Sinks: Node liveness reports are updated by writing encrypted strings to whitelisted APIs (e.g., mock entries on Notion, Github, or DNS-over-HTTPS TXT records). The central orchestrator polls these platforms to update the active routing directory.
+
+Part 2: Concrete Action Plan
+
+This phase-by-phase implementation plan outlines how to bring the architecture to life.
+Phase 1: Cryptographic Core & Client (WASM, PWA, WebAuthn)
+
+Goal: Build the secure frontend shell and the local proving engine.
+
+    [ ] Task 1.1: Develop the core transaction and zk-SNARK constraint circuits in Rust (using Plonky2, Halo2, or Nova for folding).
+    [ ] Task 1.2: Compile the proving logic to WebAssembly (WASM), using the zeroize crate to secure private witnesses and keys in memory.
+    [ ] Task 1.3: Build the PWA wrapper. Implement the WebAuthn PRF extension to trigger biometric key derivation. Write the fallback implementation using window.crypto.subtle with extractable: false stored in IndexedDB.
+    [ ] Task 1.4: Build the Panic Wipe script to trigger on a "Duress PIN" or specific gesture, completely scrubbing the local IndexedDB and service-worker cache.
+
+Phase 2: Local Mesh Node & WebRTC Transport (Go-Client)
+
+Goal: Build the software that turns home users into stealth routers.
+
+    [ ] Task 2.1: Write the Go-based residential client. Implement native WebRTC data-channel capabilities.
+    [ ] Task 2.2: Tune the Go client's network layer to aggressively mimic state-approved domestic video/audio streaming software (matching packet sizes, headers, and transmission rates).
+    [ ] Task 2.3: Implement the gRPC client-forwarding routine within the Go-client, ensuring it blindly hands decrypted WebRTC payloads over to the internal onion layer.
+
+Phase 3: Private Onion Backbone & Sequencers
+
+Goal: Create the secure hosting environment on the domestic intranet.
+
+    [ ] Task 3.1: Deploy a cluster of private Directory Authorities inside trusted local zones to spin up the private Tor-like domestic network.
+    [ ] Task 3.2: Configure Tor daemons using a custom torrc with TestingTorNetwork 1 and explicit DirAuthority definitions.
+    [ ] Task 3.3: Configure the Layer 2 Sequencer to host its gRPC interfaces strictly as Tor Hidden Services (.onion equivalent).
+
+Phase 4: Matchmaking, Liveness Ring & Signaling
+
+Goal: Create the coordination system that tells the PWA how to find the residential nodes securely.
+
+    [ ] Task 4.1: Write the $k$-regular graph mapping algorithm to divide active residential nodes into small, isolated testing loops.
+    [ ] Task 4.2: Implement the Challenge-Response protocol in Go (testing nodes ping targets, targets sign with local hardware keys, testers package the signature).
+    [ ] Task 4.3: Build the "Stealth Reporting Sink." Set up a secure pipeline that writes these encrypted liveness proofs to a whitelisted platform (e.g., updating a hidden page on Notion or writing to a Firebase database).
+    [ ] Task 4.4: Build the central matchmaking logic. When a PWA requests a connection, the matcher looks at the clean, verified residential nodes and assigns the client to a micro-segmented "cell" of peers using SNI spoofing/WebRTC signaling.
+
+Phase 5: Secure L1 Settlement Bridge (Airgapped Starlink)
+
+Goal: Safely ship the domestic L2 state updates to the outside world.
+
+    [ ] Task 5.1: Set up the physical airgap. Build an asynchronous transaction relay that saves L2 state updates to an encrypted, local directory.
+    [ ] Task 5.2: Program a unidirectional data-diode script (using a dedicated wireless bridge or serial connection) to transfer state files from the secure database server to the "Burner Gateway" connected to the Starlink terminal.
+    [ ] Task 5.3: Deploy the external relayer on a global L1 network (Ethereum, Arbitrum, or a highly optimized alternative) to receive and verify the master recursive SNARK proofs and commit the state changes.
+* mobile application
+https://share.gemini.google/CZOIYsGZmIEz
