@@ -40,9 +40,26 @@
  [[https://www.youtube.com/watch?v=IPmRDS0OSxM][ A Firehose of Rust, for busy people who know some C++ ]]
   [[https://www.youtube.com/watch?v=IvPP5U2wzlE][ Rust Vs C++ Beyond Safety - Joseph Cordell - ACCU Cambridge ]]
 [[https://www.youtube.com/watch?v=DpnXaNkM9_M&pp=0gcJCaMLAYcqIYzv][ I built my own memory profiler (in Rust, on Linux) ]]
-[[https://www.youtube.com/watch?v=IPmRDS0OSxM][ A Firehose of Rust, for busy people who know some C++ ]]
-[[https://www.youtube.com/watch?v=QQzAWxYKPSE][ Advanced Rust Programming Techniques • Florian Gilcher • GOTO 2024 ]]
-[[https://www.youtube.com/watch?v=qXNUHfpalts][ Understanding Rust Closures aka. Anonymous Functions 🦀 💻 ]]
+** TODO [[https://www.youtube.com/watch?v=IPmRDS0OSxM][ A Firehose of Rust, for busy people who know some C++ ]]
+:LOGBOOK:
+- State "TODO"       from              [2026-07-28 Tue 19:58]
+:END:
+** TODO [[https://www.youtube.com/watch?v=QQzAWxYKPSE][ Advanced Rust Programming Techniques • Florian Gilcher • GOTO 2024 ]]
+:LOGBOOK:
+- State "TODO"       from              [2026-07-28 Tue 19:58]
+:END:
+** TODO [[https://www.youtube.com/watch?v=qXNUHfpalts][ Understanding Rust Closures aka. Anonymous Functions 🦀 💻 ]]
+:LOGBOOK:
+- State "TODO"       from              [2026-07-28 Tue 19:58]
+:END:
+** TODO [[https://www.youtube.com/watch?v=373srjM3Sbw&pp=ugUEEgJlbg%3D%3D][ Rust’s Atomic Memory Model: The Logic Behind Safe Concurrency - Martin Ombura Jr. | EuroRust 2025 ]]
+:LOGBOOK:
+- State "TODO"       from              [2026-07-28 Tue 19:52]
+:END:
+** TODO [[https://www.youtube.com/watch?v=pJ-FRRB5E84][ The Impact of Memory Allocators on Performance: A Deep Dive - Arthur Pastel | EuroRust 2024 ]]
+:LOGBOOK:
+- State "TODO"       from              [2026-07-28 Tue 21:58]
+:END:
 * profiling
 ** [[https://www.youtube.com/watch?v=q3VOsGzkM-M&t=48s][ The ultimate Rust performance guide ]]
 ** tools
@@ -272,3 +289,7 @@ will convert result type into option, it will return Some for ok variant and non
 #+end_src
 * profiling
 [[https://www.youtube.com/watch?v=JRMOIE_wAFk][ Profiling Code in Rust - by Vitaly Bragilevsky - Rust Linz, December 2022 ]]
+* rust borrow checker
+** rust new borrow checker polonius
+[[https://www.youtube.com/watch?v=kD0w3YQxV6E][ Rust's new borrow checker is coming! ]]
+[[https://www.youtube.com/watch?v=uCN_LRcswts][ The first six years in the development of Polonius - Amanda Stjerna | EuroRust 2024 ]]
