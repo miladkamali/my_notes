@@ -42,6 +42,7 @@
 [[https://www.youtube.com/watch?v=DpnXaNkM9_M&pp=0gcJCaMLAYcqIYzv][ I built my own memory profiler (in Rust, on Linux) ]]
 [[https://www.youtube.com/watch?v=IPmRDS0OSxM][ A Firehose of Rust, for busy people who know some C++ ]]
 [[https://www.youtube.com/watch?v=QQzAWxYKPSE][ Advanced Rust Programming Techniques • Florian Gilcher • GOTO 2024 ]]
+[[https://www.youtube.com/watch?v=qXNUHfpalts][ Understanding Rust Closures aka. Anonymous Functions 🦀 💻 ]]
 * profiling
 ** [[https://www.youtube.com/watch?v=q3VOsGzkM-M&t=48s][ The ultimate Rust performance guide ]]
 ** tools

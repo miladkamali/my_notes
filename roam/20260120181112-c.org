@@ -62,7 +62,10 @@ https://www.youtube.com/watch?v=v6m70HyI0XE
 ** [[https://www.youtube.com/watch?v=Klq-sNxuP2g][moves are broken]]
 ** [[https://www.youtube.com/watch?v=5n-bC2tsTCY][ std::launder Exists Because C++ Broke Its Own Rules ]]
 ** [[https://www.youtube.com/watch?v=YrnAAp_Z16I][ Modern C++ is a Mess (And I Love It) ]]
-** [[https://www.youtube.com/watch?v=YjqV86jSNN0][ You Don't Know How to Initialize Variables in Modern C++ ]]
+** [[https://www.youtube.com/watch?v=YjqV86jSNN0][ You Don't Know How to Initialize Variables in Modern C++
+]]
+** [[https://www.youtube.com/watch?v=BedUiLRDOKo&pp=ugUEEgJlbg%3D%3D][ C++ Multithreading Explained: Mutexes, Locks, and Queues ]]
+** 
 * compilation process
 pre-processor processes headers and source files then compiler  compiles them into object files
 then a linker link them into a executable or a library 

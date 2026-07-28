@@ -6,5 +6,7 @@
 ** [[https://youtu.be/I845O57ZSy4?is=Oc2wNXOCfyZqZrGo][John Carmack: Doom, Quake, VR, AGI, Programming, Video Games, and Rockets | Lex Fridman Podcast #309]]
 * Yann LeCun
 ** [[https://www.youtube.com/watch?v=kYkIdXwW2AE&pp=ugUEEgJlbg%3D%3D][Yann LeCun's $1B Bet Against LLMs [Part 1]]
-* Casey Muratori 
+* Casey Muratori
+[[https://www.youtube.com/@MollyRocket][Molly Rocket]]
 ** [[https://www.youtube.com/watch?v=wo84LFzx5nI][ Casey Muratori – The Big OOPs: Anatomy of a Thirty-five-year Mistake – BSC 2025 ]]
+** [[https://www.youtube.com/watch?v=5IUj1EZwpJY][ The Only Unbreakable Law ]]
