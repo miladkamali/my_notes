@@ -61,6 +61,14 @@
 :LOGBOOK:
 - State "TODO"       from              [2026-07-28 Tue 21:58]
 :END:
+** TODO [[https://www.youtube.com/watch?v=9RsgFFp67eo][ Rust’s most complicated features explained ]]
+:LOGBOOK:
+- State "TODO"       from              [2026-07-30 Thu 20:50]
+:END:
+** TODO [[https://www.youtube.com/watch?v=V1cqQRmVAK0][ The Future of Rust Web Applications - Greg Johnston ]]
+:LOGBOOK:
+- State "TODO"       from              [2026-07-30 Thu 20:56]
+:END:
 * standard
 ** [[https://www.youtube.com/watch?v=oitYvDe4nps][ The Joy of C++26 Contracts - Myths, Misconceptions & Defensive Programming - Herb Sutter ]]
 * profiling
