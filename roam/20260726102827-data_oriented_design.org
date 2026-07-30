@@ -8,6 +8,7 @@
 
  [[https://www.youtube.com/watch?v=xm4AQj5PHT4][ Data Oriented Design and Entity Component System Explained - Mathieu Ropert - ACCU 2024 ]]
 [[https://www.youtube.com/watch?v=SzjJfKHygaQ&pp=ygUecHJhY3RpY2FsIGRhdGEgb3JpZW50ZWQgZGVzaWdu][ More Speed & Simplicity: Practical Data-Oriented Design in C++ - Vittorio Romeo - CppCon 2025 ]]
+ 
 typical latency of memory
   | type                  | size       | latency       |
   |-----------------------+------------+---------------|

@@ -2,6 +2,7 @@
 :ID:       e0b4ae4b-b27e-4986-aa5c-58f83b5e59b4
 :END:
 #+title: C++
+#+STARTUP: overview
 * resources
 ** learning resources
 *** global c++ usergroup
@@ -46,6 +47,10 @@ std::lock_guard<std::mutex> lock(mtx);
 *** [[https://www.youtube.com/watch?v=UUwDyPpQ3n4][ 16 C++ Habits That Make Your Code Better ]]
 ** networking
 https://www.youtube.com/watch?v=v6m70HyI0XE
+* standard
+** [[https://www.youtube.com/watch?v=oitYvDe4nps][ The Joy of C++26 Contracts - Myths, Misconceptions & Defensive Programming - Herb Sutter ]]
+** [[https://www.youtube.com/watch?v=Qvr9MTAU_y4][ Herb Sutter: Why C++ Is Growing and What C++26 Means for Production Systems ]]
+** [[https://www.youtube.com/watch?v=PcidhLUYp-4][ C++26 - What's In It For You? - Marc Gregoire - CppCon 2025 ]]
 * video resources
 ** [[https://www.youtube.com/@lowlevelgamedev9330/videos][Low Level Game Dev]]
 ** [[https://www.youtube.com/@MollyRocket][Molly Rocket]]
@@ -65,7 +70,6 @@ https://www.youtube.com/watch?v=v6m70HyI0XE
 ** [[https://www.youtube.com/watch?v=YjqV86jSNN0][ You Don't Know How to Initialize Variables in Modern C++
 ]]
 ** [[https://www.youtube.com/watch?v=BedUiLRDOKo&pp=ugUEEgJlbg%3D%3D][ C++ Multithreading Explained: Mutexes, Locks, and Queues ]]
-** 
 * compilation process
 pre-processor processes headers and source files then compiler  compiles them into object files
 then a linker link them into a executable or a library 

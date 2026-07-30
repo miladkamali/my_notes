@@ -2,6 +2,7 @@
 :ID:       7353A0D9-F811-49E2-A817-2624D18EB4EB
 :END:
 #+title: rust
+#+STARTUP: overview
 * videos
 [[https://www.youtube.com/watch?v=784JWR4oxOI][All Rust features explained]]
 [[https://www.youtube.com/watch?v=DhiHhQimSa4][How I’d learn Rust (If I could start over)]]
@@ -60,6 +61,8 @@
 :LOGBOOK:
 - State "TODO"       from              [2026-07-28 Tue 21:58]
 :END:
+* standard
+** [[https://www.youtube.com/watch?v=oitYvDe4nps][ The Joy of C++26 Contracts - Myths, Misconceptions & Defensive Programming - Herb Sutter ]]
 * profiling
 ** [[https://www.youtube.com/watch?v=q3VOsGzkM-M&t=48s][ The ultimate Rust performance guide ]]
 ** tools
