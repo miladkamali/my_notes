@@ -6,3 +6,31 @@
 cat http-user.log |cut -d '|' -f5|grep "/api/validate/iban/ownership"|jq '.response.body|fromjson|.responseContext.status.message'|sort|uniq -c
 * card ownership
 cat http-user.log |cut -d '|' -f5|grep "api/validate/card/ownership"|jq '.response.body|fromjson|.responseContext.status.message'|sort|uniq -c
+* checking situation in personal inquery
+cat http-user.log |cut -d '|' -f5|grep "/api/inquiry/person/v2"|jq -R 'fromjson?'|jq '.response.body|fromjson|.responseContext.status.message'|sort|uniq -c
+
+cat http-user.log |cut -d '|' -f5|grep "/api/inquiry/person/v2"|jq -R 'fromjson?'|jq '.request.body|fromjson|.nationalId'|sort|uniq -c|sort -h|tail -n 20
+
+
+
+ cat http-user.log |cut -d '|' -f5|grep "/api/inquiry/person/v2"|grep "1366121724"|jq -R 'fromjson?'|jq '.request.body|fromjson|.requestContext.apiInfo.businessId'|sort|uniq -c
+* analysing providers
+
+cat http-service.log |cut -d '|' -f5|jq '.request.address'|sort|uniq -c
+    471 "http://87.107.103.222:1151/Login"
+      2 "http://87.107.103.222:1151/api/CivilRegistration/AddIdentityInquiry"
+     53 "http://87.107.103.222:1151/api/CivilRegistration/AddIdentityPhotoInquiry"
+     16 "https://api.cloudcarbon.ir/carbon/v4.0/aaa/get_token"
+     22 "https://api.cloudcarbon.ir/carbon/v4.0/kyc_service/inquiry/national_id"
+    450 "https://api.cloudcarbon.ir/carbon/v4.0/kyc_service/inquiry/national_id_photo"
+    784 "https://gateway.ravena.ir/ctx/proxy/ravenaaf/1.0/level5"
+   1756 "https://service.zohal.io/api/v0/services/inquiry/national_identity_inquiry"
+
+
+   checking 
+
+
+
+   cat http-service.log |cut -d '|' -f5|grep "https://gateway.ravena.ir/ctx/proxy/ravenaaf/1.0/level5"|jq '.request.body|fromjson|.nationalId'|sort|uniq -c
+
+
