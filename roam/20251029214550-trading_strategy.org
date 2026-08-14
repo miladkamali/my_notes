@@ -16,3 +16,4 @@
 - State "TODO"       from              [2025-10-30 Thu 07:20]
 :END:
 ** https://en.wikipedia.org/wiki/Kelly_criterion
+* [[https://github.com/shiyu-coder/Kronos][Kronos: A Foundation Model for the Language of Financial Markets]]
