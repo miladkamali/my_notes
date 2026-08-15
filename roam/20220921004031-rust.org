@@ -304,3 +304,16 @@ will convert result type into option, it will return Some for ok variant and non
 ** rust new borrow checker polonius
 [[https://www.youtube.com/watch?v=kD0w3YQxV6E][ Rust's new borrow checker is coming! ]]
 [[https://www.youtube.com/watch?v=uCN_LRcswts][ The first six years in the development of Polonius - Amanda Stjerna | EuroRust 2024 ]]
+* compile time optimization
+[[https://www.youtube.com/watch?v=vFp4IbC2aZ0][ How to decrease your Rust compile times by 50% ]]
+** modifying debugging info in dev profile
+[profile.dev]
+debug = false
+debug = "line-tables-only"
+** parallel barrow checker
+-Zthreads
+add ~/.cargo/config.toml
+
+[build]
+rustflags=["-Z","threads=8"]
+
