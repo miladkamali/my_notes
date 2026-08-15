@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       53dc5ad8-50be-4dbb-877d-231f6a9c8294
+:END:
+#+title: ntfs
+to fix an ntfs file system when it's not mounting on linux you can do the following
+sudo ntfsfix  /dev/disk-id
+

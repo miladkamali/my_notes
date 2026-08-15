@@ -35,3 +35,4 @@ nameserver 4.2.4.2
 resolvectl status
 
 systemctl restart systemd-resolved
+* [[https://www.youtube.com/watch?v=_XTIdZuaitI][ Tyrannical ISP Cut My Internet. So I Built This. ]]
