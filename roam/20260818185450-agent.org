@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       1530e69e-d423-45d3-a788-551f2a05955e
+:END:
+#+title: agent
+* browser fro agents 
+** obscura
+** kitesurf
