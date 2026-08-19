@@ -70,6 +70,10 @@ https://www.youtube.com/watch?v=v6m70HyI0XE
 ** [[https://www.youtube.com/watch?v=YjqV86jSNN0][ You Don't Know How to Initialize Variables in Modern C++
 ]]
 ** [[https://www.youtube.com/watch?v=BedUiLRDOKo&pp=ugUEEgJlbg%3D%3D][ C++ Multithreading Explained: Mutexes, Locks, and Queues ]]
+** TODO [[https://www.youtube.com/watch?v=UJ_W0O3sFnY][ I Tried to Build a Faster grep. It’s Harder Than You Think ]]
+:LOGBOOK:
+- State "TODO"       from              [2026-08-19 Wed 08:31]
+:END:
 * compilation process
 pre-processor processes headers and source files then compiler  compiles them into object files
 then a linker link them into a executable or a library 

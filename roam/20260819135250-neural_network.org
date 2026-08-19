@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       a66c9f79-1c7d-45e2-92ce-4e8c7bae82fa
+:END:
+#+title: neural network
+* TODO [[https://www.youtube.com/watch?v=ISykCxLPIGw][ Parametric PINNs Explained | Train Once, Solve for Any Parameter ]]
+:LOGBOOK:
+- State "TODO"       from              [2026-08-19 Wed 13:53]
+:END:
