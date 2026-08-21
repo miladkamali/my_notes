@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       73d02580-a48b-498a-a039-a96f3ee65129
+:END:
+#+title: radio
+
+[[https://www.youtube.com/watch?v=WUeNJe_JALQ][ Digital Voice on Baofeng Radios via FreeDV ]]
+[[https://www.youtube.com/watch?v=_G-8b2Z1bVI][ Use A Baofeng As A Police Scanner - How To Use The Scanning Options On A Baofeng UV-5R Ham Radio ]]
