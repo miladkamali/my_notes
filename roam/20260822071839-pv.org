@@ -1,0 +1,77 @@
+:PROPERTIES:
+:ID:       4410f579-f2fb-4977-b6dc-0afc06da5fbe
+:END:
+#+title: pv
+pipe viewer
+basically a command you put in a pipe to get statistic about the data that is moving through the pipe
+[[https://www.youtube.com/watch?v=gwQH-db60WU][ This Linux command is Really Useful! `pv` aka Pipe Viewer ]]
+
+1. Basic Progress Bar for a Large File
+
+    Command: cat /usr/share/dict/words | pv
+
+    Explanation: By piping a command that outputs a lot of text (like reading a large dictionary file) into pv, you instantly get a progress bar, elapsed time, and data transfer rate.
+
+2. Monitoring Slow Output
+
+    Command: slowcat /usr/share/dict/words | pv > /dev/null
+
+    Explanation: If you are running a command that outputs data slowly (slowcat is used as an example here), putting pv in the pipeline before redirecting to a file or /dev/null allows you to monitor exactly how fast the data is being processed in real-time.
+
+3. Providing a Size Hint for Accurate ETAs
+
+    Command: slowcat /usr/share/dict/words | pv -s <size_in_bytes>
+
+    Explanation: When pv receives data from a pipe, it doesn't know the total size of the file, so it can't give you a percentage or an Estimated Time of Arrival (ETA). By using the -s (size) flag and providing the total bytes (found via ls -l), pv can accurately calculate when the process will finish.
+
+4. Rate Limiting Output (Line Mode vs. Byte Mode)
+
+    Command: pv -l -L 5 /usr/share/dict/words
+
+    Explanation: pv isn't just for viewing; it can actively throttle data.
+
+        The -L 5 flag limits the transfer to 5 bytes per second.
+
+        Adding the -l flag puts pv into line mode, changing the behavior to limit the transfer to 5 lines per second instead of bytes. (The creator actually reveals his slowcat script is just an alias for this exact pv command).
+
+5. Quiet Rate-Limiting Over SSH
+
+    Command: pv -q -L 50000 /usr/share/dict/words | ssh void "cat > words.txt"
+
+    Explanation: The -q (quiet) flag hides the progress bar entirely. This is useful when you want to use pv purely as a rate-limiter to avoid saturating your network bandwidth when sending files over SSH. (He later removes the -q flag to show how nice it is to get a progress bar for network transfers).
+
+6. Progress Bar for On-the-Fly Archiving over SSH
+
+    Command: tar -cf - bin/ | pv | ssh void "cat > bin.tar"
+
+    Explanation: Instead of creating a .tar file on your local drive and then copying it, you can stream the tar output directly over the network to a remote machine. Placing pv in the middle gives you a live speed and progress tracker for the transfer.
+
+7. Tracking Progress Before Compression
+
+    Command: tar -cf - Projects/ | pv | gzip > /dev/null
+
+    Explanation: You can chain pv in the middle of a compression pipeline. Here, it sits between tar (archiving) and gzip (compressing). This shows you how fast uncompressed data is being fed into the compressor.
+
+8. Adding a Status to dd
+
+    Command: dd if=/dev/zero | pv | dd of=/dev/null
+
+    Explanation: While modern versions of the dd command have a status=progress flag built-in, older versions do not. Even today, if you have mismatched inputs/outputs (like reading from a disk and writing to a network port via netcat), placing pv in the middle gives you a reliable status monitor.
+
+9. Using pv purely as a Timer
+
+    Command: some_really_long_command | pv -t
+
+    Explanation: The -t flag turns pv into a simple timer. It silently passes the data through the pipe without drawing a progress bar, but prints a clean, live-updating clock to the terminal showing how long the command has been running.
+
+10. Multiple pv Instances in One Pipeline (Cursor Mode)
+
+    Command: tar -cf - Movies/ | pv -c -N tar | gzip | pv -c -N gzip > /dev/null
+
+    Explanation: If you use multiple pv commands in a single pipeline, they will scramble each other's terminal output.
+
+        The -c (cursor) flag allows pv to use shared memory to coordinate with other instances so they stack neatly on separate lines.
+
+        The -N (name) flag gives each progress bar a custom label.
+
+        In this example, it allows you to watch the data speed before compression (tar) and the data speed after compression (gzip) simultaneously on two separate progress bars.

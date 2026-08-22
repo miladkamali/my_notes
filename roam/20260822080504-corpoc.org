@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       03e5a6e3-02ff-4f5a-af2a-adfe11ef5943
+:END:
+#+title: corpoc
+[[https://www.youtube.com/watch?v=ZRnBGWkGyBw][ This shell feature is really cool! Async programming with `coproc` in Bash ]]

@@ -14,6 +14,8 @@
 concat each 3 lines into a csv 
 
 paste -d, - - -  < inputfile
+** [[id:4410f579-f2fb-4977-b6dc-0afc06da5fbe][pv]]
+** [[id:03e5a6e3-02ff-4f5a-af2a-adfe11ef5943][corpoc]]
 ** managing csv files
 *** dockdb
 sudo dnf copr enable iucar/duckdb
@@ -153,3 +155,6 @@ sudo mkdir /mnt/ramdisk
 sudo mount -t tmpfs -o rw,size=2G tmpfs /mnt/ramdisk
 * videos
 ** [[https://youtu.be/NvME0NGQ8RU?is=yOW0O-CJi1gBpZ-J][xorg vs wayland]]
+** progressbar
+[[https://www.youtube.com/watch?v=U4CzyBXyOms][ Creating an Animated Progress Bar from scratch in Bash to batch-process files! ]]
+ [[https://www.youtube.com/watch?v=r2rbAvXMcXQ][ Creating a PERSISTENT Progress Bar on the Terminal with Bash! v2 Progress Bar ]]
