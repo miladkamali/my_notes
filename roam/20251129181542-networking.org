@@ -36,3 +36,4 @@ resolvectl status
 
 systemctl restart systemd-resolved
 * [[https://www.youtube.com/watch?v=_XTIdZuaitI][ Tyrannical ISP Cut My Internet. So I Built This. ]]
+* [[id:1dca0bf4-7951-42d1-80bf-8038e81519a3][libp2p]]

@@ -346,3 +346,6 @@ kubectl apply -f debian-tools-pod.yaml -n prod
 
 helm upgrade --install sana-audit-prod sana-audit -n prod -f  sana-audit/values.yaml  -f sana-audit/values-prod.yaml
 helm upgrade --install sana-audit-prod sana-audit -n prod -f  sana-audit/values.yaml  -f sana-audit/values-prod.yaml
+
+** uid-document
+helm upgrade --install uid-documentation  uid-documentation/ -f uid-documentation/values.yaml -f uid-documentation/values-prod.yaml -n prod

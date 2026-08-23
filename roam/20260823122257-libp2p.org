@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       1dca0bf4-7951-42d1-80bf-8038e81519a3
+:END:
+#+title: libp2p
+
+[[https://www.youtube.com/watch?v=CRe_oDtfRLw][ Introduction to libp2p - David Dias ]]
+
+ [[https://www.youtube.com/playlist?list=PLX9e-uG608s948HL293YSiRc6nh32du6n][libp2p Day @ IPFS Camp 2024]]
+
+[[https://www.youtube.com/watch?v=HqSXFlCwgMY][ Introduction to Rust Libp2p - Pierre Krieger ]]
+
+ [[https://www.youtube.com/watch?v=J7ZWbpo2AZk&pp=ugUHEgVlbi1VUw%3D%3D][ Intro to libp2p: helping with real world application problems - Max Inden ]]
+
+  [[https://www.youtube.com/watch?v=zcWHamr5m_k][ The Life of a libp2p Connection - Jacob Heun ]]
+
+ [[https://www.youtube.com/watch?v=cROI6RMyQ70][ Full Stack rust-libp2p apps, with Wasm and WebRTC - Doug Anderson ]]

@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       c1b264ad-485d-4618-96c9-d8b3a1fb2368
+:END:
+#+title: nat hole punching
+[[https://www.youtube.com/watch?v=bzL7Y1wYth8][ Decentralized NAT Hole-Punching - Dennis Trautwein ]]
+
+DCUtR 
+
+
+https://github.com/libp2p/punchr
+
+[[https://www.youtube.com/watch?v=GfRLNg6DOnI][ The most Elegant Solution in Networking ]]
+[[https://www.youtube.com/watch?v=pSXlpKlZX7I][ Libp2p Hole Punching (Max Inden @ FOSDEM) ]]

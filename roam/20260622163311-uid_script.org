@@ -32,5 +32,10 @@ cat http-service.log |cut -d '|' -f5|jq '.request.address'|sort|uniq -c
 
 
    cat http-service.log |cut -d '|' -f5|grep "https://gateway.ravena.ir/ctx/proxy/ravenaaf/1.0/level5"|jq '.request.body|fromjson|.nationalId'|sort|uniq -c
+* clean up stuck sana users 
+update "user" SET state = 'USER_STATE_INFLOW' WHERE state='USER_STATE_WAITING' and created_at < '2026-08-23 11:00:00'
 
-
+UPDATE "user" 
+SET state = 'USER_STATE_INFLOW' 
+WHERE state = 'USER_STATE_WAITING' 
+  AND created_at < NOW() - INTERVAL '30 minutes';

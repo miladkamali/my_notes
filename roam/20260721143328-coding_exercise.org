@@ -7,3 +7,7 @@ https://adventofcode.com/2022/day/19
 [[https://www.youtube.com/watch?v=5rb0vvJ7NCY][ going fast is about doing less ]]
 [[https://www.youtube.com/playlist?list=PLpM-Dvs8t0Vba3v-9lweHuomr0DPhdX6P][Advent of Code 2020]]
 [[https://www.youtube.com/watch?v=5rb0vvJ7NCY&t=13s][ going fast is about doing less ]]
+* https://vjudge.net/
+* https://codeforces.com/problemset/problem/69/A
+* https://earthshakira.github.io/a2oj-clientside/server/Ladder11.html
+* https://a2oj.online/

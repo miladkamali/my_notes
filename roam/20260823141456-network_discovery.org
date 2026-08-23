@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       93b4837f-6040-43af-91ae-175904ecb4a5
+:END:
+#+title: network discovery
+etherium uses disv5 to discover 
