@@ -740,3 +740,7 @@ Certbot usually installs a systemd timer. Verify:
 
 sudo systemctl status certbot.timer
 sudo certbot renew --dry-run
+* running backup
+kubectl create job --from=cronjob/authentication-api-backup authentication-api-backup-manual-$(date +%Y%m%d-%H%M%S) -n prod
+kubectl create job --from=cronjob/dispatcher-prod-backup dispatcher-prod-backup-manual-$(date +%Y%m%d-%H%M%S) -n prod
+

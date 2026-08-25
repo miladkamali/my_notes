@@ -39,3 +39,7 @@ UPDATE "user"
 SET state = 'USER_STATE_INFLOW' 
 WHERE state = 'USER_STATE_WAITING' 
   AND created_at < NOW() - INTERVAL '30 minutes';
+* meli gold mordad report
+zcat `ls -rt|grep http-user--|tail -n 33|head -n 31`|grep -v "توکن بیزینس نامعتبر است"|grep "7d7ba9b6-688f-4f8f-a025-3cc28496d718"|cut -d '|' -f5 | jq -r '[(.request.requestTime/1000|todate),.tracking.requestResponseTime,(.response.body|fromjson|.responseContext.status.message),(.response.body|fromjson|.responseContext.status.code)]|@csv' >> meligold_mordad.csv
+* kifepool all time report
+zcat `ls -rt|grep http-user--`|grep -v "توکن بیزینس نامعتبر است"|grep "e4caaae4-ed62-4234-8157-ee7cad1ffaf2"|cut -d '|' -f5 | jq -r '[(.request.requestTime/1000|todate),.tracking.requestResponseTime,(.response.body|fromjson|.responseContext.status.message),(.response.body|fromjson|.responseContext.status.code)]|@csv' >> kifepool_all_time.csv
