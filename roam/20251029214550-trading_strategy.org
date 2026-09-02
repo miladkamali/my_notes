@@ -17,3 +17,4 @@
 :END:
 ** https://en.wikipedia.org/wiki/Kelly_criterion
 * [[https://github.com/shiyu-coder/Kronos][Kronos: A Foundation Model for the Language of Financial Markets]]
+* [[https://www.youtube.com/watch?v=4qypxyHshJw][ Google TimesFM 3.0: AI That Predicts the Future in One Pass ]]

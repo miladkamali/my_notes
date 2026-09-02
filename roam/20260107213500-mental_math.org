@@ -6,3 +6,8 @@
 [[https://www.youtube.com/watch?v=1wAr2Kbe-GM][How to Calculate Faster than a Calculator - Mental Math #1]]
 [[https://www.youtube.com/watch?v=YllkyKiQMS8][How to Calculate Faster than a Calculator - Mental Math #2]]
 [[https://www.youtube.com/watch?v=ypOOBqf3LLY][People% of 99 Don't Know this Secret Math Trick | Crazy Math Percentage Trick]]
+
+conway's doomsday algorithm for calculating the day  for any given date
+
+rule of 72 to calculate doubling the money
+lock picking 
