@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       2afcf8da-327a-4251-b1c5-ad0eded49d36
+:END:
+#+title: dioxus
+
+[[https://www.youtube.com/watch?v=RaH-Nua8JPE&list=PLDi2liHqCnVqDGWduQ2NuGbEX64-V0-sc][ Cross Platform Development using RUST | Dioxus Intro | Guide ]]

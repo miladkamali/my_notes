@@ -4,3 +4,4 @@
 #+title: opencv
 
 [[https://www.youtube.com/watch?v=piHpZWcgQyc][ OpenCV 5 Is Here - The Biggest Update Since 2018 (We Tested It) ]]
+[[https://www.youtube.com/watch?v=tbLC2PyfprM][ OpenCV latest, and move towards differential computer vision - Gary R Bradski ]]

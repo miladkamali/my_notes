@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       d9a195d8-aa7e-4d4e-86ff-a35f417af9f8
+:END:
+#+title: chess
+[[https://www.youtube.com/watch?v=OngJKc-FAS0][give me 45 minutes and you will beat any one under 2000]]

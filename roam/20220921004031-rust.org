@@ -69,6 +69,7 @@
 :LOGBOOK:
 - State "TODO"       from              [2026-07-30 Thu 20:56]
 :END:
+** [[https://www.youtube.com/@Rustfully/videos][video tutorials ]]
 * standard
 ** [[https://www.youtube.com/watch?v=oitYvDe4nps][ The Joy of C++26 Contracts - Myths, Misconceptions & Defensive Programming - Herb Sutter ]]
 * profiling
@@ -316,4 +317,5 @@ add ~/.cargo/config.toml
 
 [build]
 rustflags=["-Z","threads=8"]
-
+* [[https://www.youtube.com/watch?v=d_UKbQBlwOU][ Rust Channels - Patterns and Best Practices ]]
+* [[https://www.youtube.com/watch?v=zRRSerGaa9A][ 5 weekend Rust projects that will teach you more than any course ]]

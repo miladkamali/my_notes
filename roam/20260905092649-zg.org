@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b9de050f-0316-417d-8625-f6e151b48e1c
+:END:
+#+title: zg
+
+https://zvec.org/en/blog/2026-08-28-zvec-grep-open-source/

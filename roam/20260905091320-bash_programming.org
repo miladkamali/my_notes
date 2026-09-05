@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e28806ce-a28d-4f1a-9209-43b75fc18441
+:END:
+#+title: bash programming
+
+[[https://www.youtube.com/@yousuckatprogramming][You Suck at Programming]]
+[[https://www.youtube.com/watch?v=U4CzyBXyOms][ Creating an Animated Progress Bar from scratch in Bash to batch-process files! ]]
+[[https://www.youtube.com/watch?v=r2rbAvXMcXQ][ Creating a PERSISTENT Progress Bar on the Terminal with Bash! v2 Progress Bar ]]
+[[https://www.youtube.com/watch?v=L967hYylZuc][ Can You Write A Web Server in PURE BASH?! (no socat, no netcat, no external tools) ]]
