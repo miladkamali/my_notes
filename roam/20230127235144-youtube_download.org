@@ -11,3 +11,20 @@ https://github.com/yt-dlp/yt-dlp
 
 to download subtitle without download the video
 --write-subs --no-download
+
+
+1. Install Deno (recommended JS runtime):
+
+curl -fsSL https://deno.land/install.sh | sh
+# then put ~/.deno/bin on PATH, or open a new shell
+2. Install the matching EJS solver (yt-dlp 2026.08.19 wants 0.8.0):
+
+python3 -m pip install --user "yt-dlp-ejs==0.8.0"
+If pip complains about a managed environment:
+
+python3 -m pip install --user --break-system-packages "yt-dlp-ejs==0.8.0"
+
+yt-dlp --js-runtimes deno:/home/milad/.deno/bin/deno \
+  --cookies-from-browser firefox \
+  --extractor-args "youtube:player_client=default,web_embedded" \
+  "https://www.youtube.com/watch?v=RpD-0oqGEzE"
