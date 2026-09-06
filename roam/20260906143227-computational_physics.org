@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       b55b5c49-32a7-4001-90fb-8d88d170a26d
+:END:
+#+title: computational physics
+[[https://www.youtube.com/watch?v=nCg3aXn5F3M][ The Code That Revolutionized Orbital Simulation ]]
