@@ -70,6 +70,14 @@
 :LOGBOOK:
 - State "TODO"       from              [2026-07-30 Thu 20:56]
 :END:
+** TODO [#A] [[https://www.youtube.com/watch?v=SMCRQj9Hbx8][ Comprehending Proc Macros ]]
+:LOGBOOK:
+- State "TODO"       from              [2026-09-10 Thu 12:09]
+:END:
+** TODO [[ https://www.youtube.com/watch?v=qXNUHfpalts&t=103s][ Understanding Rust Closures aka. Anonymous Functions 🦀 💻 ]]
+:LOGBOOK:
+- State "TODO"       from              [2026-09-10 Thu 12:10]
+:END:
 ** [[https://www.youtube.com/@Rustfully/videos][video tutorials ]]
 ** [[https://www.youtube.com/@Rustfully/videos][Rustfully basic tutorials]]
 ** conferances

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       541834e1-8d6b-4900-b65e-82ec38df236e
+:END:
+#+title: flutter
+creating a new project
+
+flutter create project-name
