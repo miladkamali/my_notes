@@ -28,6 +28,7 @@ sudo dnf install miller
 sudo dnf install ghc cabal-install zlib-devel
 cabal update
 cabal install ods2csv --install-method=copy --overwrite-policy=always
+** aria2
 * practical eamples
 ** setting up a quick webserver
 python -m http.server port

@@ -4,6 +4,7 @@
 #+title: rust
 #+STARTUP: overview
 * videos
+
 [[https://www.youtube.com/watch?v=784JWR4oxOI][All Rust features explained]]
 [[https://www.youtube.com/watch?v=DhiHhQimSa4][How I’d learn Rust (If I could start over)]]
 [[https://dockyard.com/blog/2025/04/08/grpc-basics-for-rust-developers][rust grpc ]]
@@ -70,6 +71,9 @@
 - State "TODO"       from              [2026-07-30 Thu 20:56]
 :END:
 ** [[https://www.youtube.com/@Rustfully/videos][video tutorials ]]
+** [[https://www.youtube.com/@Rustfully/videos][Rustfully basic tutorials]]
+** conferances
+*** [[https://www.youtube.com/playlist?list=PLH6-VpZ3SvUWox7mJDLNCu_E0gl7a-fP3][euro rust]]
 * standard
 ** [[https://www.youtube.com/watch?v=oitYvDe4nps][ The Joy of C++26 Contracts - Myths, Misconceptions & Defensive Programming - Herb Sutter ]]
 * profiling
