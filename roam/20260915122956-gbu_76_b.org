@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       7567c45e-a111-4fd9-9959-c76b3373cf82
+:END:
+#+title: GBU-76/B 
+
+* GBU-76/B Next Generation Penetrator (NGP)
+** Overview
+The GBU-76/B, formally known as the Next Generation Penetrator (NGP), is a bunker-buster program currently in development by the U.S. Air Force to succeed the GBU-57 MOP. It is optimized for survivability, precision, and long-range bomber operations against deeply buried command centers and strategic infrastructure in GPS-contested environments.
+
+** Penetration
+- Specific capabilities remain classified, but it is intended to offer comparable or superior penetration against reinforced concrete and rock compared to the GBU-57 MOP.
+- Capable of blast, fragmentation, and penetration effects.
+
+** Payload & Specifications
+- Class: 20,000 to 30,000-pound (9,070 to 13,600 kg) class weapon system.
+- Warhead: Described in earlier notices as weighing 22,000 pounds (9,980 kg) or less.
+
+** Usage & Guidance
+- Delivery Platforms: Designed to be compatible with the B-21 Raider (and potentially other tactical platforms), making it slightly lighter and more versatile than the MOP.
+- Guidance: Designed for high terminal accuracy (CE90 within 7.2 ft / 2.2 m) in "GPS-aided, degraded, and/or denied environments." Likely to incorporate Alternate Navigation Systems, anti-jam/anti-spoofing functions, and a multi-mode seeker.
+- Fuze: Next-generation hard-target smart fuze that can "count" structural floors and sense underground "voids" to calculate the exact optimal detonation depth.
+- Potential Additions: Exploring the integration of rocket boosters for standoff strike capabilities.
+
+** Estimated Production
+- Status: In early developmental/prototype stage. 
+- A contract was awarded in September 2025 to Applied Research Associates and Boeing to build a prototype. Full prototype demonstrations are expected by the end of Fiscal Year 2027.
+
+** Operational Usage
+- Currently in development; no operational combat usage yet.

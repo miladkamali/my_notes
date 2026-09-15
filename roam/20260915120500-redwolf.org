@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       61dd7038-57b8-405c-984c-1c6a810a3367
+:END:
+#+title: redwolf
+ https://www.youtube.com/watch?v=SyFBeBg5WCk 
+* Video Summary: Red Wolf Turns Marine Helicopters Into 200-Mile Shooters
+
+** Overview
+The US Marine Corps is seeking greater operational independence for long-range engagements, particularly in preparation for potential conflicts in the Indo-Pacific region. To achieve this, they are adopting the *Redwolf*, a new, cost-effective missile produced by L3 Harris.
+
+** The Redwolf Missile
+- *Manufacturer:* L3 Harris
+- *Range:* Over 200 nautical miles (approx. 230 miles or 370 km)
+- *Cost:* ~$300,000 per unit
+- *payloads* up to 25 pounds (11.3 kg)
+- *Platform:* Designed for Vertical Takeoff and Landing (VTOL) systems, specifically attack helicopters like the AH-1Z Viper, and potentially drones.
+- *Speed & Endurance:* Travels at subsonic speeds and can loiter in the air for up to 60 minutes.
+- *Terminology:* Often referred to as a "vehicle" or a "launched effect" because
+  it can be outfitted to perform kinetic strikes, electronic warfare, jamming,
+  or act as a decoy.
+
+** The PASM Program (Precision Attack Strike Munition)
+Redwolf is a key component of PASM (formerly the Long Range Attack Missile
+program). This is a Marine aviation effort to bring long-range precision effects
+to VTOL platforms.
+*** Core Requirements
+- *VTOL Family of Systems:* A suite of compatible vehicles and payloads rather than a single-use missile.
+- *Aircraft Agnostic:* Uses common interfaces (Universal Armament Interface) to easily move between different launch platforms.
+- *Network Enabled:* Capable of receiving in-flight updates and operating beyond line-of-sight using tactical data links like Link 16.
+- *Modular Design (WOSA):* Uses Weapons Open System Architecture, allowing the
+  military to change payloads and software without a total redesign or vendor
+  lock-in.
+
+** Why Range Matters (The Helicopter Problem)
+Helicopters are inherently vulnerable because they are slow and lack the altitude to glide-bomb targets from safe distances. In modern contested environments, traditional close-range munitions force helicopters to fly well within the enemy's air defense "kill bubble."
+*** Munition Comparisons
+- *JAGM (Joint Air-to-Ground Missile):* ~5 miles range, ~$319,000 each.
+- *Hellfire (AGM-114):* ~7 miles range, ~$150,000 each.
+- *Redwolf:* 200+ nautical miles, ~$300,000 each.
+- *Note:* Redwolf provides cruise missile-like standoff ranges from a helicopter
+  at a fraction of the cost of traditional long-range options (like the $800k
+  JASSM).
+
+** Challenges & Operations
+*** Over the Horizon Targeting (The Kill Chain)
+Firing a missile 200 nautical miles from a low-flying helicopter means shooting
+at targets over the curvature of the Earth that the crew cannot physically see.
+- Target tracking and mid-course updates must be fed to the missile by other network assets (satellites, drones, F-35s, ships, or ground sensors).
+- Hitting moving targets (like ships) in contested environments means overcoming heavy signal jamming and deception.
+*** The Green Wolf Variant
+Another variant in the "Wolf" family, designed specifically for non-kinetic
+payloads. It can carry jammers, decoys, or microwave weapons to blind enemy
+defenses, carving a safe path to the target for the kinetic Redwolf strikes.
+
+** Conclusion
+The primary takeaway is a fundamental shift in Marine aviation doctrine. By
+outfitting helicopters with low-cost, long-range, network-enabled weapons, the
+Marines are transforming them from close-support assets into *standoff network
+strike platforms*—a role traditionally reserved for fast jets. This capability
+aligns directly with the Marines' Force Design 2030 strategy for Pacific
+operations.

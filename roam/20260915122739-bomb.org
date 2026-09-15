@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       71bb9430-3a12-4a7b-ab12-f2c1a8f2a370
+:END:
+#+title: bomb
+* [[id:02b2f381-c00b-431a-8692-b201ec7656c7][GBU-57A/B MOP]]
+* [[id:7567c45e-a111-4fd9-9959-c76b3373cf82][GBU-76/B]]
+* [[id:9219f392-2e5c-49b0-bb02-897b384fd177][GBU-72]]
+* [[id:809d3197-26ed-4c31-b12d-9b73eb72009b][GBU-28]]

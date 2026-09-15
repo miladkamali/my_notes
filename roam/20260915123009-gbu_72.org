@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       9219f392-2e5c-49b0-bb02-897b384fd177
+:END:
+#+title: GBU-72
+
+* GBU-72/B Advanced 5K (A5K) Penetrator
+** Overview
+The GBU-72/B is a 5,000-pound (2,300 kg) class precision-guided bunker-busting bomb developed in the United States. It resembles an enlarged GBU-31/B JDAM and bridges the gap between smaller penetrators and the massive GBU-57.
+
+** Penetration
+- Exact depth is classified.
+- Lethality and penetration are expected to be "substantially higher" than similar legacy weapons like the GBU-28 (which penetrates 150 ft / 45.7 m of earth or 15+ ft / 4.6+ m of reinforced concrete).
+
+** Payload & Specifications
+- Class: 5,000-pound (2,300 kg) class bomb.
+- Length: Estimated 15 ft 1 in (4.6 m).
+- Diameter: Estimated 22 inches (570 mm).
+- Warhead: Utilizes a bunker-busting BLU-109 or BLU-137/B warhead.
+
+** Usage & Guidance
+- Delivery Platforms: Extensively tested and dropped from the F-15E Strike Eagle.
+- Guidance: Equipped with a GBU-31/B JDAM tail-mounted guidance kit (GPS and INS).
+- Features long fins on either side of the bomb's underside for steering and stability.
+
+** Estimated Production
+- Manufacturer: Boeing and Applied Research Associates.
+- Number Built: Unspecified, but transitioned to developmental and operational testing in 2022.
+
+** Operational Usage
+- March 2026: Employed by the United States Air Force against hardened Iranian anti-ship missile sites near the Strait of Hormuz during the 2026 Iran war (confirmed use of 5,000-pound penetrator munitions).
+- Rumored Uses: Suggested possible use in Yemen in 2024 and initially reported (but later disputed) in the September 2024 strike on Hezbollah's headquarters in Beirut.

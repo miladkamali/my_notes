@@ -1,0 +1,66 @@
+:PROPERTIES:
+:ID:       eb83504c-9e22-4fc3-8d05-1e4fa22950d9
+:END:
+#+title: AGM-179 JAGM
+
+* Video & Wikipedia Summary: Replacing the Legendary Hellfire Missile with the AGM-179 JAGM
+
+** Overview
+For 40 years, the AGM-114 Hellfire has been a cornerstone of America's air-to-surface missile capabilities. However, Lockheed Martin has now entered full-rate production (declared in August 2022) of its replacement: the AGM-179 JAGM (Joint Air-to-Ground Missile). This new weapon aims to replace the BGM-71 TOW, AGM-114 Hellfire, and AGM-65 Maverick missiles, simplifying logistics, reducing cognitive load on pilots, and providing greater flexibility. The U.S. Army, Navy, and Marine Corps collectively plan to buy tens of thousands of JAGMs (over 26,000 planned).
+
+** Development and History (Source: Wikipedia)
+- *Origins:* The JAGM program is a follow-on from the cancelled AGM-169 Joint Common Missile (JCM) program. It was initiated in 2007 with technology development starting in 2008. 
+- *Program Survival:* The program faced severe budget cuts and a temporary withdrawal by the Navy and Marines between 2012 and 2014, but survived.
+- *Milestones:* Low-Rate Initial Production (LRIP) was approved in 2018. It officially achieved Initial Operational Capability (IOC) on March 1, 2022, with the U.S. Marine Corps' AH-1Z Viper helicopters. Full-rate production was approved shortly after in August 2022.
+
+** The Legacy of the Hellfire (AGM-114)
+The Hellfire originally launched in the 1970s as an anti-tank weapon for rotorcraft like the AH-64 Apache. The name "Hellfire" was originally an abbreviation for "Heliborne Laser, Fire and Forget Missile."
+- *Platform Agnostic:* Over time, it was adapted for use on fixed-wing drones (MQ-9 Reaper), boats, ground vehicles, and even for surface-to-air operations.
+- *R9X Variant:* Famous for replacing its explosive warhead with six 18-inch pop-out blades, used by JSOC/CIA for pinpoint precision strikes that minimize collateral damage.
+
+*** The Two Main Variants Being Replaced
+Until now, users had to maintain separate inventories for two different Hellfire models:
+1. *AGM-114R Hellfire II ("Romeo"):* Uses semi-active laser guidance. Great for general-purpose strikes (up to 7 miles) but can be blinded by bad weather or smoke.
+2. *AGM-114L ("Longbow"):* Uses millimeter-wave radar. Excellent for bad weather and "fire and forget" anti-tank operations, but went out of production in 2005.
+
+** The Solution: AGM-179 JAGM
+The JAGM replaces both the Romeo and the Longbow by combining their targeting methods into a single system built upon the exact same form factor as the Hellfire.
+
+*** Key Features & Capabilities
+- *Dual-Mode Seeker:* Contains *both* a semi-active laser and a millimeter-wave radar sensor in the same missile body.
+- *Automatic Switching:* If laser guidance gets obscured by weather, smoke, or enemy countermeasures, the missile automatically switches to millimeter-wave radar without pilot input.
+- *Reduced Cognitive Load:* Pilots no longer have to guess what the weather or battlefield conditions will be before choosing their loadout.
+
+*** Technical Specifications
+- *Manufacturer:* Lockheed Martin
+- *Unit Cost:* ~$319,000 (FY 2023)
+- *Mass:* 108 lb (49 kg)
+- *Dimensions:* Length: 70 in (1,778 mm) | Diameter: 7 in (178 mm)
+- *Warhead:* 20 lb (9 kg) multi-purpose warhead 
+- *Speed:* Approx. Mach 1.6 (1,605 km/h)
+- *Range (Baseline):* 5 miles (8.0 km)
+
+*** JAGM Variants & Future Expansions
+- *AGM-179A:* The baseline dual-mode model currently in full-rate production.
+- *JAGM-MR (Medium Range):* An upgraded version that doubles the effective range to 10 miles (16 km). It features an improved rocket motor and introduces a *tri-mode seeker* by adding a Near Infrared (NIR)/imaging sensor.
+- *AGM-187 JAGM-F (Fixed Wing):* A variant being developed specifically for use by fast fixed-wing jet fighters.
+
+** Platforms and Launch Systems
+Because the JAGM shares the Hellfire's physical dimensions, it can leverage existing launchers (like the M299 quad launcher) without requiring infrastructure changes.
+- *Rotorcraft & Drones:* AH-1Z Viper, AH-64E Apache, MQ-1C Gray Eagle, and MQ-9 Reaper.
+- *Maritime / Naval:* Can be launched from boats and ships. Freedom-class Littoral Combat Ships are being equipped with vertical launch modules (like the JAGM Quad Launcher - JQL) for the weapon.
+- *Ground Vehicles:* Capable of being launched from ground-based launchers, eventually taking over the role of the BGM-71 TOW missile.
+
+** International Operators
+The JAGM is heavily utilized by the U.S. Army, Navy, and Marine Corps, but its capabilities have spurred international foreign military sales, primarily to equip AH-64E Apache fleets:
+- *United Kingdom:* Approved for 3,000 missiles ($957.4 million).
+- *Poland:* Requested 460 missiles as part of their Apache procurement.
+- *Netherlands:* Requested 296 missiles for their Apache helicopters.
+
+** Logistical and Strategic Benefits
+- *One Missile, Multiple Platforms:* Replaces multiple specialized missiles across all services.
+- *Interoperability:* Similar to NATO's adoption of the 5.56mm round, standardizing on JAGM means different branches (and allied nations) can easily share ammunition in a pinch.
+- *Cost and Training:* Reusing existing Hellfire launchers drives down the logistical overhead, limiting the need for ground crew retraining.
+
+** Conclusion: The Near-Future of Warfare
+While multi-million dollar hypersonic missiles and 6th-generation fighters dominate headlines, large-scale near-peer conflicts will heavily rely on a massive volume of legacy platforms (like 4th-generation fighters and existing rotorcraft). Upgrading these legacy platforms with highly efficient, cost-effective, multi-purpose weapons like the JAGM ensures the military maintains overwhelming firepower while minimizing logistical overhead and financial attrition.

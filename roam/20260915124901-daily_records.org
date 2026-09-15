@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       779f6151-c186-4a2a-9944-998d964a96fb
+:END:
+#+title: daily records
+* [2026-09-15 Tue]
+** at work                                                             :@uid:
+*** daily meeting and discussion about AP and SLA definitions
+*** updated bff web to manage soroush production environment also updated the naming of the environment variables for soroush
+*** update the new face matching algorithm
+*** walked for 20 minutes after lunch
+*** watched  [[https://www.youtube.com/watch?v=vnd7tkdzzPA][A Bitter Truth About Ashura That TV Will Never Tell You ]]
+*** watched https://youtu.be/SyFBeBg5WCk?si=OPJNpGCgjxE19a2G
+*** watched https://youtu.be/QbzkuMUna7o?si=bH-5Gop0EJaaVm7A
+*** watched https://youtu.be/rasWsXOHruc?si=a-Lu-TnGKP5V9wie
+*** started collecting information about different missile and bombs and creating org files for them
+*** did 30 squat after bathroom break
+*** watched https://www.youtube.com/live/nkpz5sFo-c4?si=kbq2OK784IT3Je63
+*** watched https://www.youtube.com/watch?v=5SntrSo8VMw
+*** background watch https://www.youtube.com/watch?v=2c2DXIpOxt8
+*** bought an snack and a chololate bar for 480000 tomans
+*** ate a snake and half a chocolate bar 
+*** meeting with ap about the new service

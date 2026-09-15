@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       809d3197-26ed-4c31-b12d-9b73eb72009b
+:END:
+#+title: GBU-28
+
+* GBU-28 Hard Target Penetrator
+** Overview
+The GBU-28 is a 4,000-5,000-pound (1,800-2,300 kg) class laser-guided bunker-busting bomb originally produced by the Watervliet Arsenal. It was famously designed, manufactured, and deployed in less than three weeks to fulfill an urgent requirement during the 1991 Gulf War.
+
+** Penetration
+- Proven capable of penetrating over 160 feet (50 m) of earth.
+- Over 16 feet (5 m) of solid concrete.
+- Sled testing demonstrated penetration through 22 feet (6.7 m) of reinforced concrete while retaining kinetic energy.
+
+** Payload & Specifications
+- Class: 4,000–5,000-pound (1,800–2,300 kg) class bomb.
+- Length: 19 ft 1.3 in (5.82 m) overall; 13 ft 3 in (4.04 m) for the bomb body.
+- Diameter: 15 inches (381 mm) main body; 16 inches (406 mm) at the widest point.
+- Warhead: BLU-113 bomb body (early variants built from modified 8-inch / 203 mm M110 howitzer artillery barrels). The GBU-28 C/B uses the BLU-122 bomb body (single-piece ES-1 Eglin steel alloy).
+- Explosive Weight: 630 to 675 lbs (286 to 306 kg) of Tritonal or AFX-757.
+
+** Usage & Guidance
+- Delivery Platforms: Historically dropped by the F-111F; later integrated into the F-15E Strike Eagle and other platforms.
+- Guidance: Primarily laser-guided. The operator illuminates the target with a laser designator. The "Enhanced GBU-28" (EGBU-28) augments this with INS and GPS.
+- Fuze: Short-delay time fuze activated upon ground impact.
+
+** Estimated Production
+- Manufacturer: Raytheon and General Dynamics Ordnance and Tactical Systems.
+- Number Built: Total unspecified, but produced in sufficient quantities for U.S. stockpiles and foreign military sales (e.g., exported to South Korea and Israel).
+
+** Operational Usage
+- 1991 Gulf War: Two units dropped by F-111Fs on the al-Taji Airbase bunker outside Baghdad on February 27/28, 1991 (one direct hit).
+- Operation Iraqi Freedom: One unit dropped.
+- Recent Conflicts: Employed in the Gaza war, the Israel-Hezbollah conflict (2024), and the 2026 Iran war.
