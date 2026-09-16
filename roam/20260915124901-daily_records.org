@@ -20,3 +20,14 @@
 *** bought an snack and a chololate bar for 480000 tomans
 *** ate a snake and half a chocolate bar 
 *** meeting with ap about the new service
+** [2026-09-16 Wed]
+*** wake up at 8:30
+*** 80 push ups
+*** start work at 9:25
+*** fixed issue with local vpn with wiregarud from surfshark
+i could not connect to local services using expressvpn, now i'm using nekobox with surfshark wireguard to connect to outside
+*** implement finotech provider
+*** move all configs to .env
+*** watched [[https://www.youtube.com/watch?v=TX9mGIDTAns&t=398s][ The Untold Story Behind 2,500 Years of Iran-Arab Hostility ]]
+*** watched https://www.youtube.com/watch?v=VJB4arMXH_Y
+*** watched https://www.youtube.com/watch?v=3Eu4DsafLVU

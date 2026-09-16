@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       323f3750-462a-458f-98c3-8e1571d95691
+:END:
+#+title: surfshark
+credentials
+
+FJl5dEV2hzq8rw19xm6dTzz95gRAaHPVzgJmX0l9VSQ=
+
+GD1MGr3GtiQwrxq2rO+Tbtror9ruZtpkcuKdr+mpBE8=
