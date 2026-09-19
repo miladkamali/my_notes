@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       486ec22c-d25f-4eb9-b804-6e7768d23ac4
+:END:
+#+title: Mark 48
+Overview
+The Mark 48 and its improved Advanced Capability (ADCAP) variant are heavyweight acoustic-homing torpedoes designed to sink fast, deep-diving nuclear-powered submarines and high-performance surface ships.
+
+Launch Platforms
+
+Submarine Torpedo Tubes (standard 533 mm)
+
+"Liberator" Containerized Seabed Launcher (experimental/concept platform mentioned in recent ASW developments)
+
+Technical Specifications (Metric)
+
+Mass: 1,676 kg
+
+Length: 5.79 m (often rounded to 5.8 m)
+
+Diameter: 533 mm
+
+Warhead Mass: 292.5 kg (High Explosive)
+
+Performance Metrics
+
+Maximum Speed: Estimated at 102 km/h (55 knots)
+
+Operational Range:
+
+~38 km at 102 km/h (55 knots)
+
+~50 km at 74 km/h (40 knots)
+
+Maximum Operating Depth: Estimated at 800 m
+
+Propulsion: Piston engine with pump jet, fueled by Otto fuel II.

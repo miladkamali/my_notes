@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       3d11e75c-a9bd-4dee-8db0-7fe6c5ed2f4e
+:END:
+#+title: torpido
+Overview
+This document lists the torpedo systems and related anti-submarine warfare (ASW) concepts mentioned in the video "U.S. Navy’s GENIUS Upgrade Makes Torpedoes FLY."
+
+Mentioned Torpedo Systems and Launch Platforms
+
+* [[id:2c6adfcb-ce32-41fa-a7a6-663dc62102af][SAA-LT]] Silent Anvil Air-Launched Torpedo (SAA-LT)
+
+Description: A stealth stand-off weapon designed to glide silently through the air before submerging to strike enemy submarines, significantly reducing acoustic detection windows.
+
+Launch Platforms: BRU-61/A bomb racks on fighters, bombers, and heavy drones.
+
+* [[id:486ec22c-d25f-4eb9-b804-6e7768d23ac4][Mark 48]] Mark 48 (Mk 48) Heavyweight Torpedo
+
+Description: The primary heavyweight anti-submarine and anti-surface warfare torpedo in the U.S. Navy arsenal.
+
+Launch Platforms: Submarine 21-inch torpedo tubes, and the newly conceptualized Containerized "Liberator" Seabed Launcher (as highlighted in the video).
+
+* [[id:8776f847-9f7e-4ad4-8eeb-722990a2a4ef][MK54]] Mark 54 (Mk 54) Lightweight Torpedo
+
+Description: The standard lightweight torpedo used for ASW by the U.S. Navy, facing modern proximity risks which are mitigated by stand-off launch concepts.
+
+Launch Platforms: Surface ships (notably utilizing the LRAW Rocket Booster Range Extension mentioned in the video), maritime patrol aircraft, and ASW helicopters.

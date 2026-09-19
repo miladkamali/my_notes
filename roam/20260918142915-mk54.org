@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       8776f847-9f7e-4ad4-8eeb-722990a2a4ef
+:END:
+#+title: MK54
+
+Overview
+The Mark 54 Lightweight Torpedo, previously known as the Lightweight Hybrid Torpedo (LHT), is a standard 324 mm anti-submarine warfare torpedo. It was designed to merge the homing capabilities of the Mk 50 with the simpler, proven propulsion of the Mk 46 to operate effectively in both deep water and littoral (shallow) environments.
+
+Launch Platforms
+
+Surface Vessel Torpedo Tubes (Mk 32)
+
+Vertical Launch ASROC (RUM-139C) for surface ships, sometimes utilizing LRAW (Long Range Anti-Submarine Warfare Weapon) concepts for range extension.
+
+Fixed-wing maritime patrol aircraft (e.g., P-8 Poseidon)
+
+Anti-submarine helicopters (e.g., MH-60R)
+
+Technical Specifications (Metric)
+
+Mass: 276 kg
+
+Length: 2.72 m
+
+Diameter: 324 mm
+
+Warhead Mass: 43.9 kg (PBXN-103 High Explosive)
+
+Performance Metrics
+
+Maximum Speed: > 74 km/h (40 knots)
+
+Operational Range: ~9.1 km to 10 km
+
+Propulsion: Reciprocating external combustion engine burning Otto fuel II.

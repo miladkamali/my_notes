@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       2c6adfcb-ce32-41fa-a7a6-663dc62102af
+:END:
+#+title: SAA-LT
+
+* Overview
+The Silent Anvil Air-Launched Torpedo (SAA-LT) is a next-generation U.S. Navy concept designed to extend the range of anti-submarine warfare (ASW) capabilities while keeping launch platforms safe from advanced air defenses. It acts as a stealth glide weapon, deploying a torpedo from high altitude and gliding to the target area before entering the water.
+
+* Key Features
+
+Stealth Glide: Glides silently through the air to minimize acoustic and radar detection.
+
+Standoff Range: Keeps aircrews outside the threat range of modern anti-aircraft defenses.
+
+Integration: Designed to integrate with existing standard bomb racks (BRU-61/A).
+
+Launch Platforms
+
+Strike Fighters
+
+Bombers
+
+Heavy Unmanned Aerial Vehicles (Drones)
+
+Technical Specifications (Estimated based on Lightweight Torpedo Payloads)
+/Note: As SAA-LT is an in-development concept responding to a recent Request for Information (RFI), exact metric dimensions refer largely to the munition it carries (likely a variant of the Mk 54) plus the glide kit./
+
+Estimated Total Mass: ~300 kg to 350 kg (with glide kit assembly)
+
+Payload Diameter: 324 mm (standard lightweight torpedo diameter)
+
+Estimated Assembly Length: ~3.0 m (incorporating aerodynamic fairings and tail kits)
+
+Effective Standoff Range: High-altitude launch allows glide ranges significantly exceeding standard air-drop ranges, potentially reaching 50+ km.

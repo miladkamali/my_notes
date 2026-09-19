@@ -76,6 +76,7 @@ https://www.youtube.com/watch?v=v6m70HyI0XE
 :END:
 ** [[https://www.youtube.com/watch?v=VXyaxnDhots][c++ HOT reloading is easier than you think]]
 ** [[https://www.youtube.com/watch?v=5zlfJW2VGLM&pp=ugUHEgVlbi1VUw%3D%3D][when your game is bad but your optimization is genius]]
+** [[https://www.youtube.com/watch?v=dOfucXtyEsU][the bits between the bits how we get to main]]
 * compilation process
 pre-processor processes headers and source files then compiler  compiles them into object files
 then a linker link them into a executable or a library 
