@@ -80,6 +80,7 @@
 :END:
 ** [[https://www.youtube.com/@Rustfully/videos][video tutorials ]]
 ** [[https://www.youtube.com/@Rustfully/videos][Rustfully basic tutorials]]
+** [[https://www.youtube.com/watch?v=j3OHppIYbO4&pp=ugUHEgVlbi1VUw%3D%3D][ I Spent 1 Week Learning to Code Shaders with Bevy & Rust ]]
 ** conferances
 *** [[https://www.youtube.com/playlist?list=PLH6-VpZ3SvUWox7mJDLNCu_E0gl7a-fP3][euro rust]]
 * standard
