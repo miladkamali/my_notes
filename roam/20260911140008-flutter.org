@@ -5,3 +5,7 @@
 creating a new project
 
 flutter create project-name
+
+
+
+https://cjycode.com/flutter_rust_bridge/quickstart
