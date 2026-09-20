@@ -21,4 +21,6 @@ it's dependencies
 you can add documents or websites to be used as references
 ** MCP (model context protocol)
 [[https://glama.ai/mcp/servers?attributes=hosting%3Aremote-capable%2Ccategory%3Aopen-data][list of mcp ]]
-
+** http proxy
+export http_proxy=http://127.0.0.1:2088
+export https_proxy=http://127.0.0.1:2088
