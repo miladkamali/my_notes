@@ -2,6 +2,7 @@
 :ID:       779f6151-c186-4a2a-9944-998d964a96fb
 :END:
 #+title: daily records
+#+STARTUP: overview
 * [2026-09-15 Tue]
 ** at work                                                             :@uid:
 *** daily meeting and discussion about AP and SLA definitions
@@ -38,5 +39,9 @@ i could not connect to local services using expressvpn, now i'm using nekobox wi
 * [2026-09-21 Mon]
 ** wake up at 8:45
 ** 95 pushup
-** 
-** 
+** started work at 8:45
+** deployed update for dispatcher
+** did not finished deployent of dispatcher next
+** get my hair cut
+** watched 2 koocheh video
+** watched to video 74 of flutter
