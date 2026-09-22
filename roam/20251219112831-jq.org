@@ -127,3 +127,16 @@ curl --location 'https://json-api.uid.ir/api/inquiry/person-with-image' \
         "nationalIdSerial": "4G29056878",
         "includeImage": true 
 }'
+
+
+
+
+jq -r '
+  (.request.body | fromjson) as $req |
+  (.response.body | fromjson) as $res |
+  [ 
+    $req.businessId, 
+    $res.sessionId, 
+    $res.error 
+  ] | @csv
+' input.json

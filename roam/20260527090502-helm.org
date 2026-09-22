@@ -219,6 +219,9 @@ SQL
 
 helm upgrade --install  satpay-service-prod satpay-service   -n prod -f satpay-service/values.yaml -f satpay-service/values-prod.yaml
 
+** dispatcher-next
+
+helm upgrade --install  dispatcher-next-prod dispatcher-next   -n prod -f dispatcher-next/values.yaml -f dispatcher-next/values-prod.yaml
 ** saja
 kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d saja-service -v ON_ERROR_STOP=1 <<'SQL'
 GRANT CONNECT ON DATABASE satpay TO saja;
@@ -349,3 +352,13 @@ helm upgrade --install sana-audit-prod sana-audit -n prod -f  sana-audit/values.
 
 ** uid-document
 helm upgrade --install uid-documentation  uid-documentation/ -f uid-documentation/values.yaml -f uid-documentation/values-prod.yaml -n prod
+
+
+ kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d general_dispatcher -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE general_dispatcher TO general_dispatcher;
+GRANT USAGE, CREATE ON SCHEMA public TO general_dispatcher;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO general_dispatcher;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO general_dispatcher;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO general_dispatcher;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO general_dispatcher;
+SQL
