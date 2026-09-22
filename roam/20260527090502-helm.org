@@ -362,3 +362,15 @@ GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO general_dispatcher;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO general_dispatcher;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO general_dispatcher;
 SQL
+
+** prometheus
+
+helm upgrade --install prometheus ./helm-charts/apps/prometheus \
+  -n prod -f helm-charts/apps/prometheus/values.yaml \
+  -f helm-charts/apps/prometheus/values-prod.yaml
+
+** grafana
+
+helm upgrade --install grafana ./helm-charts/apps/grafana \
+  -n prod -f helm-charts/apps/grafana/values.yaml \
+  -f helm-charts/apps/grafana/values-prod.yaml
