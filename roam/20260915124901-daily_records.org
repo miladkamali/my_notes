@@ -54,3 +54,5 @@ i could not connect to local services using expressvpn, now i'm using nekobox wi
 ** watched [[https://www.youtube.com/watch?v=5RyMUQEleV0][ سیاست با مراد ویسی: مردم ایران، از باور به سرنگونی اقدام برای سرنگونی ]]
 ** did 30 situps
 ** watched [[https://www.youtube.com/watch?v=ow5l3RUhteU][ آخرین پرواز پزشکیان،آغاز محاصره هوایی و زمین‌گیرشدن ایران!!! ]]
+** watched to video 78 on flutter
+** deploy and debug dispatcher next for bff

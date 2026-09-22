@@ -9,3 +9,22 @@ flutter create project-name
 
 
 https://cjycode.com/flutter_rust_bridge/quickstart
+
+
+
+* build on linux
+
+sudo dnf install gtk3-devel
+sudo dnf install clang cmake ninja-build pkgconf-pkg-config xz-devel libstdc++-devel
+
+first clean up the build
+
+rm -rf build/
+flutter clean
+
+
+* vscode useful things
+
+** code snipets for stateful and stateless widget
+to generate stateful and stateless widget using scafolds just type st it will
+suggest flutter stateful widget and flutter stateless widget
