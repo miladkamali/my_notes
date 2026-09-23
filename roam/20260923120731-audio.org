@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       d8353632-d560-41ab-b57a-2761ce2ee568
+:END:
+#+title: audio
+
+[[https://www.youtube.com/watch?v=fcy5eEkgFBE&pp=ugUEEgJlbg%3D%3D][every audio codec explain in 12 minutes]]
+* PCM Puls-code-modulation
+
+CD had sample rate of 44100
+16 bit percision
+1.4 MBs data
+* MP3
+* AAC
+* WMA
+* vorbis ogg
