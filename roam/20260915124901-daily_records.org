@@ -60,4 +60,11 @@ i could not connect to local services using expressvpn, now i'm using nekobox wi
 ** wake up at 8:10
 ** start work at 9:05
 ** went to bankid and talked 
-** 
+** fixed logs of general dispatcher
+* [2026-09-24 Thu]
+** wake up at 8:00
+** went to grand market to buy things needed to create the modem bag
+** watched koocheh
+** watched [[https://www.youtube.com/watch?v=sLmXRAhyvEk][ Why America Might Start Buying F-16s Again ]]
+** watched flutter2 until video 82
+** finished bill splitter app
