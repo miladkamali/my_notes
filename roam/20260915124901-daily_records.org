@@ -66,5 +66,6 @@ i could not connect to local services using expressvpn, now i'm using nekobox wi
 ** went to grand market to buy things needed to create the modem bag
 ** watched koocheh
 ** watched [[https://www.youtube.com/watch?v=sLmXRAhyvEk][ Why America Might Start Buying F-16s Again ]]
-** watched flutter2 until video 82
+** watched flutter2 until video 86
 ** finished bill splitter app
+** started quiz app
