@@ -34,3 +34,14 @@ flutter clean
 to generate stateful and stateless widget using scafolds just type st it will
 suggest flutter stateful widget and flutter stateless widget
 
+* widgets
+
+** Flexible
+for wrapping long text
+** ListView
+** Container
+** Text
+** ListTile
+** Inkwell
+** GestureDetector
+
