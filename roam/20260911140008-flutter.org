@@ -12,6 +12,11 @@ https://cjycode.com/flutter_rust_bridge/quickstart
 
 
 
+* video resources
+** [[https://www.youtube.com/@FlutterTeacher/videos][Flutter Teacher]]
+* videos
+** [[https://www.youtube.com/watch?v=eJA0HFpHcXs][ Flutter ListTile widget - Complete guide in one video ]]
+** [[https://www.youtube.com/watch?v=7wTCn_aU4WI][ Flutter ListView inside column - With 2 professional ways ]]
 * build on linux
 
 sudo dnf install gtk3-devel
@@ -28,3 +33,4 @@ flutter clean
 ** code snipets for stateful and stateless widget
 to generate stateful and stateless widget using scafolds just type st it will
 suggest flutter stateful widget and flutter stateless widget
+
