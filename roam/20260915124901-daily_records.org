@@ -70,7 +70,10 @@ i could not connect to local services using expressvpn, now i'm using nekobox wi
 ** finished bill splitter app
 ** started quiz app
 * [2026-09-25 Fri]
-*** wake up at 9:00
-*** 80 push up
-*** finished up quiz app
-*** watched fluter to video 99
+** wake up at 9:00
+** 80 push up
+** finished up quiz app
+** watched fluter to video 99
+* [2026-09-26 Sat]
+** wake up at 9:30
+** 
