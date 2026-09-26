@@ -48,3 +48,5 @@ https://github.com/Ramtiiin/install-passwall2-openwrt
 - State "TODO"       from              [2026-06-14 Sun 08:14]
 :END:
 https://pkg.go.dev/github.com/metacubex/mihomo
+* setting up express inside a docker
+https://hub.docker.com/r/misioslav/expressvpn
