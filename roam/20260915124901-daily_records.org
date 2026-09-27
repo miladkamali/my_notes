@@ -77,3 +77,7 @@ i could not connect to local services using expressvpn, now i'm using nekobox wi
 * [2026-09-26 Sat]
 ** wake up at 9:30
 ** 
+* [2026-09-27 Sun]
+** wake up at 8:45
+** 40 push ups
+** deploy bff to production

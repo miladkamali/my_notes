@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       d3cdedf3-1995-4ebe-a8aa-56767ef68604
+:END:
+#+title: tank shell
+* [[https://en.wikipedia.org/wiki/Beehive_anti-personnel_round][beehive]]
+* [[https://en.wikipedia.org/wiki/Canister_shot][canister]]

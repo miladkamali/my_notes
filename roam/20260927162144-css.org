@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       ebc7be86-1142-482b-a7a0-4bb6fab42cde
+:END:
+#+title: css
+[[https://www.youtube.com/@Seth-Centers-The-Div][css battle daily]]
