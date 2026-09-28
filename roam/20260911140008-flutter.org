@@ -44,4 +44,10 @@ for wrapping long text
 ** ListTile
 ** Inkwell
 ** GestureDetector
-
+** Padding
+** Stack
+** ClipRRect
+** ClipOval
+** ClipRect
+** SizedBox
+** Expanded

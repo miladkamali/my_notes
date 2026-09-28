@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       3c4cbeb0-3a2d-42d3-99c6-3479260f0725
+:END:
+#+title: helicopter
+* cobra
+* supercobra
+* Viper
+* Apache

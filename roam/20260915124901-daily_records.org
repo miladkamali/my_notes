@@ -81,3 +81,10 @@ i could not connect to local services using expressvpn, now i'm using nekobox wi
 ** wake up at 8:45
 ** 40 push ups
 ** deploy bff to production
+* [2026-09-28 Mon]
+** wake up at 7:30
+** did not do any exercise
+** fixed 3 bugs in dispatcher-next
+** deploy BFF 3 times
+** had a major diarrhea
+** stopped working at 20:10

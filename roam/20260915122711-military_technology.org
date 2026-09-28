@@ -5,3 +5,4 @@
 * [[id:3d11e75c-a9bd-4dee-8db0-7fe6c5ed2f4e][torpido]]
 * [[id:71bb9430-3a12-4a7b-ab12-f2c1a8f2a370][bomb]]
 * [[id:111DF148-A5A1-41E2-9604-806CFA3D70BD][missile]]
+* [[id:3c4cbeb0-3a2d-42d3-99c6-3479260f0725][helicopter]]
