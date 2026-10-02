@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a1fc197e-99fd-4b35-a2b4-4b7a8881aebb
+:END:
+#+title: under water drone
+* Lamperey MMAUV
+https://www.lockheedmartin.com/en-us/products/mmauv.html
+[[https://www.youtube.com/watch?v=cWATid94mTI][ Lockheed Built the Strangest Sea Drone on Earth. ]]
+* manta-ray
+https://www.northropgrumman.com/what-we-do/mission-solutions/sensors/manta-ray
