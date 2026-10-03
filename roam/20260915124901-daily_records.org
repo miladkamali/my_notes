@@ -88,3 +88,6 @@ i could not connect to local services using expressvpn, now i'm using nekobox wi
 ** deploy BFF 3 times
 ** had a major diarrhea
 ** stopped working at 20:10
+* [2026-10-03 Sat]
+** wake up at 8:30
+** start work at 9:20

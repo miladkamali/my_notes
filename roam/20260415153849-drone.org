@@ -13,6 +13,7 @@
 *** [[https://www.youtube.com/watch?v=LrQPa1_s8Qs][ Heavy Lift Drone 100kg Test - It Works! ]]
 *** [[https://www.youtube.com/watch?v=Wqr1b4mWDsE][making bldc motor]]
 https://www.hobbywing.com/en/products/x13-g2
+*** [[https://www.youtube.com/watch?v=1iUqn0owDJc&pp=ugUEEgJlbg%3D%3D][ I Tried Building a Mapping Drone for Large-Scale Photogrammetry ]]
 *** [[https://www.youtube.com/@iforce2d/videos][iforce2d]]
 *** [[https://www.youtube.com/watch?v=0_bcUFK3jl8][Twin Hopper part 5 (first flights)]]
 * models
