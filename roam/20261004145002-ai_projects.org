@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       5601a082-50f7-40e7-b2bd-a9e75ab541c4
+:END:
+#+title: ai projects
+* call of duty
+[[https://www.youtube.com/watch?v=9UbADrcEW5w][ The Modern Warfare 2 Rust Rewrite is Here... ]]
+ https://github.com/vladtrc/iw4L

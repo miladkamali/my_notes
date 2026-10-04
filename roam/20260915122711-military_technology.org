@@ -7,3 +7,4 @@
 * [[id:111DF148-A5A1-41E2-9604-806CFA3D70BD][missile]]
 * [[id:3c4cbeb0-3a2d-42d3-99c6-3479260f0725][helicopter]]
 * [[id:a1fc197e-99fd-4b35-a2b4-4b7a8881aebb][under water drone]]
+* [[id:2e72944d-92c7-4211-85bc-5b96ef295291][guns]]

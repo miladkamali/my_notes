@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       2e72944d-92c7-4211-85bc-5b96ef295291
+:END:
+#+title: guns
+* [[https://fnamerica.com/products/military/fn-mtl-30/][mtl 30 grenade luncher]]
+* [[https://www.youtube.com/watch?v=V1uL6GkJtYA][Rheinmetall's SSW40]]

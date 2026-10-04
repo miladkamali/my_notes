@@ -336,3 +336,86 @@ I can:
 Just tell me your goal (security audit, bug bounty, migration, monitoring).
 ** dispatcher
 *** 
+** v3
+flowchart TD
+    A[receive information]
+    A--> B{Check national Registery information}
+    B--> C[user has image]
+    B--> D[user do not have image]
+    B--> E[national registry service is not available ]
+    D--> END[ report error to api]
+    C--> F[generate session id and return in response]
+    F--> downloadVideo{download video}
+    E--> ff{has business opted for delayed response}
+    ff--> |yes| ffy[generate session id and return in resonse]
+    ffy --> downloadVideo_1{download video}
+    downloadVideo_1 --> |video link is not valid| make_callback_with_error
+    downloadVideo_1 --> |video size is not valid| make_callback_with_error
+    downloadVideo_1--> |video length is not valid| make_callback_with_error
+    downloadVideo_1 --> |video is valid| convertVideo_1{convert video}
+    convertVideo_1 --> |convert was not successful| flagForReview_1[flag for review]
+    convertVideo_1 --> |convert successful| ffyc{check national registry for user}
+    flagForReview_1 --> make_callback_with_error
+    ffyc --> |user image recived| checkLiveness
+    ffyc --> |user image do not exist| make_callback_with_error
+    ffyc --> |national registery is not available| checkBusinessTimeOut{has time out reached}
+    checkBusinessTimeOut --> |no| ffyc
+    checkBusinessTimeOut --> |yes| make_callback_with_error 
+    ff--> |No| ffn[return with error ]
+
+
+    downloadVideo --> |video link is not valid| make_callback_with_error
+    downloadVideo --> |video size is not valid| make_callback_with_error
+    downloadVideo --> |video length is not valid| make_callback_with_error
+    downloadVideo --> |video is valid| convertVideo{Convert video}
+    convertVideo --> |convert successful| checkLiveness{check liveness}
+    convertVideo --> |convert was not successful| flagForReview
+    flagForReview--> make_callback_with_error
+
+    checkLiveness --> |is_definately_live| CheckFaceMatching{check face matching}
+    checkLiveness --> |is_live| CheckFaceMatching
+    checkLiveness --> |is_definately_fake| checkBusinessLivenessConfig{ check business liveness config}
+    checkLiveness --> |is_fake| CheckFaceMatching
+    checkLiveness --> |not sure| CheckFaceMatching
+    checkLiveness --> |failed| checkLivenessFailureReason{check liveness failure reason}
+    checkLivenessFailureReason --> |not enough frames| ignoreLivenessError{خطای لایونس نادیده گرفته شود؟}
+    checkLivenessFailureReason --> |multiple face| ignoreLivenessError
+    checkLivenessFailureReason --> |far face| ignoreLivenessError
+    checkLivenessFailureReason --> |no face| ignoreLivenessError
+    checkLivenessFailureReason --> |bad quality| ignoreLivenessError
+    ignoreLivenessError --> |yes|HumanOperatorCheck
+    ignoreLivenessError --> |no| make_callback_with_error
+    checkLivenessFailureReason --> |no video| flagForReview
+
+
+
+    checkBusinessLivenessConfig --> |reject fake videos| Make_call_back_report
+    checkBusinessLivenessConfig --> |ignore fake videos| CheckFaceMatching
+    CheckFaceMatching --> |definately_similar| CheckBusinessForAsr
+    CheckFaceMatching --> |definately different| CheckBusinessForAsr
+    CheckFaceMatching --> |different| CheckBusinessForAsr
+    CheckFaceMatching --> |similar| CheckBusinessForAsr
+    CheckFaceMatching --> |not sure| CheckBusinessForAsr
+    CheckFaceMatching --> |failed| checkFaceMatchingError{check facematching error}
+    checkFaceMatchingError --> |no face| ignoreFaceMatchinError
+    checkFaceMatchingError --> |far face| ignoreFaceMatchinError
+    checkFaceMatchingError --> |multiple face| ignoreFaceMatchinError
+    checkFaceMatchingError --> |no ID| flagForReview
+    checkFaceMatchingError --> |no liveness image| flagForReview
+
+    CheckAsr{check asr}
+
+
+    CheckBusinessForAsr{بیزنس متن داره} --> |yes| CheckAsr
+    CheckBusinessForAsr-->|no| acceptDefinateResponse
+    CheckAsr-->|match| acceptDefinateResponse
+    CheckAsr -->|not match| HumanOperatorCheck
+    acceptDefinateResponse{  کانفیگ اعتماد به هوش} -->|yes| Make_call_back_report
+    acceptDefinateResponse --> |no| HumanOperatorCheck
+    HumanOperatorCheck{human operator check}
+    ignoreFaceMatchinError{خطای فیس نادیده گرفته شود؟} --> |yes| HumanOperatorCheck
+    ignoreFaceMatchinError --> |no| make_callback_with_error
+
+    Make_call_back_report[call back report]
+
+    HumanOperatorCheck--> Make_call_back_report
