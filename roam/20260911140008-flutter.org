@@ -8,9 +8,18 @@ flutter create project-name
 
 
 
+
+
+
+* rust_flutter_bridge
 https://cjycode.com/flutter_rust_bridge/quickstart
+rustup target add aarch64-linux-android armv7-linux-androideabi x86_64-linux-android i686-linux-android
+flutter emulators --launch Medium_Phone_API_36.1
+flutter pub get
+flutter run
 
-
+** generating rust code
+flutter_rust_bridge_codegen generate
 
 * video resources
 ** [[https://www.youtube.com/@FlutterTeacher/videos][Flutter Teacher]]
