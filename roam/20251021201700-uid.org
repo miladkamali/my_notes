@@ -2,6 +2,7 @@
 :ID:       ac58bcb8-9399-4c6e-8fe5-f4dac7c3fe10
 :END:
 #+title: uid
+#+STARTUP: overview
 * current projects                                                     :@uid:
 ** technical
 *** CANCELLED centralized panel
@@ -419,3 +420,4 @@ flowchart TD
     Make_call_back_report[call back report]
 
     HumanOperatorCheck--> Make_call_back_report
+** 

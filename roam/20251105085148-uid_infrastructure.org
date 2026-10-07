@@ -490,5 +490,22 @@ vim /etc/supervisor/conf.d/ping-gost-1.conf
 docker logs -f -n100 gost-ssh-tunnel
  cd /docker/d/
  vim docker-compose.yml
+** managing database
+*** temporal database upkeep
+REINDEX TABLE CONCURRENTLY executions_visibility;
+REINDEX INDEX CONCURRENTLY history_node_pkey;
+
+kubectl exec -it -n database uid-production-database-stolon-keeper-0-0 -- bash
+
+export PGPASSWORD=$(cat /etc/secrets/stolon/pg_su_password)
+export PGUSER=$(printenv STKEEPER_PG_SU_USERNAME)
+
+psql -h /tmp -d temporal -c "CREATE EXTENSION IF NOT EXISTS pg_repack;"
+psql -h /tmp -d temporal_visibility -c "CREATE EXTENSION IF NOT EXISTS pg_repack;"
+
+pg_repack -h /tmp -U "$PGUSER" -d temporal -n -N
+pg_repack -h /tmp -U "$PGUSER" -d temporal_visibility -n -N
 
 
+pg_repack -h /tmp -U "$PGUSER" -d temporal -n -j 2 -T 600 -D
+pg_repack -h /tmp -U "$PGUSER" -d temporal_visibility -n -j 2 -T 600 -D

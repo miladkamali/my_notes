@@ -222,6 +222,20 @@ helm upgrade --install  satpay-service-prod satpay-service   -n prod -f satpay-s
 ** dispatcher-next
 
 helm upgrade --install  dispatcher-next-prod dispatcher-next   -n prod -f dispatcher-next/values.yaml -f dispatcher-next/values-prod.yaml
+
+** dispatcher-next stage
+
+kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d general_dispatcher_stage -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE general_dispatcher_stage TO general_dispatcher_stage;
+GRANT USAGE, CREATE ON SCHEMA public TO general_dispatcher_stage;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO general_dispatcher_stage;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO general_dispatcher_stage;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO general_dispatcher_stage;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO general_dispatcher_stage;
+SQL
+
+helm upgrade --install  dispatcher-next-stage dispatcher-next   -n stage -f dispatcher-next/values.yaml -f dispatcher-next/values-stage.yaml
+
 ** saja
 kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d saja-service -v ON_ERROR_STOP=1 <<'SQL'
 GRANT CONNECT ON DATABASE satpay TO saja;
@@ -322,6 +336,19 @@ SQL
 
 
  helm upgrade --install dispatcher-prod ./dispatcher-service   -f dispatcher-service/values.yaml   -f dispatcher-service/values-prod.yaml   -n prod
+** bff-ba
+** authentication-api-stage
+kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d authentication_stage -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE authentication_stage TO authentication_stage;
+GRANT USAGE, CREATE ON SCHEMA public TO authentication_stage;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO authentication_stage;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO authentication_stage;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO authentication_stage;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO authentication_stage;
+SQL
+
+ helm upgrade --install authentication-api-stage ./authentication-api -f ./authentication-api/values.yaml -f ./authentication-api/values-stage.yaml -n stage
+
 ** authentication-api
 kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d authentication5 -v ON_ERROR_STOP=1 <<'SQL'
 GRANT CONNECT ON DATABASE authentication5 TO authentication;
@@ -336,8 +363,6 @@ SQL
  helm upgrade --install authentication-api authentication-api -f authentication-api/values.yaml -f authentication-api/values-prod.yaml -n prod
 
   { echo "SET synchronous_commit = off;"; gunzip -c auth-26-06-11-12.sql.gz; } |   psql -h uid-production-database-proxy.database.svc -U authentication -d authentication3 -v ON_ERROR_STOP=1
-
-** bff-ba
 
 ** kaveh-negar
 helm upgrade --install kavehnegar-service-prod kaveh-negar -n prod -f  kaveh-negar/values.yaml  -f kaveh-negar/values-prod.yaml
