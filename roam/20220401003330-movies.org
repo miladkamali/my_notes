@@ -97,7 +97,11 @@ https://patricia.frank-capra.com/user/panel/
    :YEAR: 2017
    :END:
    Description: In 1892, a legendary Army captain reluctantly agrees to escort a Cheyenne war chief and his family through dangerous territory.
-** [#A] project Hail mary
+** DONE [#A] project Hail mary
+CLOSED: [2026-10-08 Thu 23:54]
+:LOGBOOK:
+- State "DONE"       from              [2026-10-08 Thu 23:54]
+:END:
 ** before i go to sleep
    :PROPERTIES:
    :IMDB_RATING: 6.6
@@ -124,7 +128,9 @@ https://patricia.frank-capra.com/user/panel/
    :GENRE: Action, Drama, Thriller, War
    :YEAR: 2017
    :END:
-   Description: Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.
+   Description: Based on the true story of Jordan Belfort, from his rise to a
+   wealthy stock-broker living the high life to his fall involving crime,
+   corruption and the federal government.
 ** The Whore
    :PROPERTIES:
    :IMDB_RATING: 7.9
@@ -411,10 +417,15 @@ it's just too stupid
    :YEAR: 2025
    :END:
    Description: During a human expedition to colonize space, Mickey 17, a so-called "expendable" employee, is sent to explore an ice planet.
-** the gorge
+** DONE the gorge
+CLOSED: [2026-10-08 Thu 21:05]
    :PROPERTIES:
    :IMDB_RATING: N/A
    :YEAR: 2025
+   :END:
+   :LOGBOOK:
+   - State "DONE"       from "FOLLOWUP"   [2026-10-08 Thu 21:05]
+   - State "FOLLOWUP"   from              [2026-10-08 Thu 21:05]
    :END:
    Description: Two operatives are appointed to posts in guard towers on opposite sides of a classified gorge.
 ** Underground
@@ -632,13 +643,17 @@ it's just too stupid
    :YEAR: 2014
    :END:
    Description: When a protective father meets a murderous ex-con, both need to deviate from the path they are on as they soon find themselves entangled in a downwards spiral of lies and violence while having to confront their own inner psyche.
-** Centurion
+** DONE Centurion
+CLOSED: [2026-10-08 Thu 18:16]
    :PROPERTIES:
    :IMDB_RATING: 6.3
    :IMDB_URL: https://www.imdb.com/title/tt1020558/
    :IMDB_VOTES: 89,000
    :GENRE: Action, Adventure, Drama, History, Thriller, War
    :YEAR: 2010
+   :END:
+   :LOGBOOK:
+   - State "DONE"       from              [2026-10-08 Thu 18:16]
    :END:
    Description: A splinter group of Roman soldiers fight for their lives behind enemy lines after their legion is devastated in a guerrilla attack.
 ** Rise of the Guardians
@@ -760,12 +775,13 @@ it's just too stupid
    :END:
    Description: Follows Ember and Wade, in a city where fire-, water-, earth- and air-residents live together.
 CLOSED: [2024-07-23 Tue 22:04]
-** Anime name: Gate
+** [[https://www.imdb.com/title/tt4958580/?ref_=fn_t_2][Gate]]
    :PROPERTIES:
    :IMDB_RATING: N/A
    :YEAR: 2024
    :END:
    Description: No description available
+   https://www.imdb.com/title/tt4958580/?ref_=fn_t_2
 ** Frieren: Beyond Journey's End
    :PROPERTIES:
    :IMDB_RATING: N/A
