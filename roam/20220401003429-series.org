@@ -85,3 +85,14 @@ https://www.imdb.com/title/tt4181172/
 ** [#A] [[https://www.imdb.com/title/tt4047038/][Dirk Gently's Holistic Detective Agency]]
 ** [#B] [[https://www.imdb.com/title/tt3839822/][the son]]
 ** [#B] [[https://www.imdb.com/title/tt9139220/][dracula]]
+** [#A] marshal
+** [#A] monster
+** [#A] dark matter
+** [#A] mobland
+** [#A] criminal minds
+** [#A] the last air bender
+** [#A] pluribus
+** [#A] last samurai standing 
+** [#A] monster
+** [#A] mindhunter
+
