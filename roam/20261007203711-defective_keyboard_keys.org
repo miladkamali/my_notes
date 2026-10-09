@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       676cb99d-044d-476d-84b0-3d63f47f31e1
+:END:
+#+title: defective keyboard keys
+f12

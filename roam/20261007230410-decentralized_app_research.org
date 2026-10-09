@@ -1,0 +1,85 @@
+:PROPERTIES:
+:ID:       8ed3ed4f-7e6e-47f7-85e4-cfe0de0d4de9
+:END:
+#+title: decentralized app research
+* communication iroh and rust-libp2p
+Both **Iroh** and **rust-libp2p** are powerful tools for building peer-to-peer (P2P) networking in Rust, but they have fundamentally different philosophies, architectures, and target use cases.
+
+While `rust-libp2p` is a sprawling, modular toolkit designed to build massive distributed networks (like blockchains and IPFS), Iroh is a highly focused, modern transport layer optimized to ensure two devices can connect seamlessly—no matter what networks or firewalls they are behind.
+
+Here is a breakdown of how they compare.
+
+### 1. Philosophy & Scope
+
+#* **rust-libp2p:** Often described as a "boil the ocean" project. It is an incredibly comprehensive, modular networking stack. It provides implementations for almost every P2P concept: Distributed Hash Tables (DHTs), multiple transports (TCP, QUIC, WebSockets, WebTransport), PubSub (Gossipsub), and RPC. It is built to minimize reliance on central points of failure, which requires complex, fully distributed routing mechanisms.
+#* **Iroh:** Originally started as a Rust implementation of IPFS but pivoted sharply. The creators realized that offering every P2P feature resulted in a massive API surface and a "half-baked" feel. Iroh stripped everything down to focus purely on the transport layer: making direct, device-to-device connections that "just work." It deliberately offloads higher-level logic to application-specific protocols.
+
+### 2. Networking & Transports
+
+#* **rust-libp2p:** Supports a vast array of transports. You can configure a node to listen on TCP, WebSockets (for browser compatibility), and QUIC simultaneously. This is great for broad compatibility but requires the developer to explicitly wire up and configure these transports, connection upgrades, and multiplexers.
+#* **Iroh:** Goes all-in on **QUIC**. By utilizing QUIC (via the `quinn` crate), Iroh gets encryption (TLS), multiplexing, and reliability out of the box. It also leverages QUIC's multipath extension, allowing a connection to seamlessly migrate between networks (e.g., smoothly transitioning from Wi-Fi to cellular data without dropping the connection).
+
+### 3. NAT Traversal & Hole Punching
+
+This is the biggest practical differentiator for most application developers.
+
+#* **rust-libp2p:** Offers NAT traversal (using AutoNAT and STUN/TURN/Relay protocols), but it is notoriously difficult to configure correctly. Because it relies heavily on distributed routing, its hole-punching success rate is generally reported to cap around 70% in real-world scenarios.
+#* **Iroh:** Adopts a pragmatic approach heavily inspired by Tailscale. You do not connect to an IP address; you dial an endpoint's Ed25519 public key. Iroh handles the rest automatically. It attempts a direct connection, tries hole-punching using STUN, and if both fail, it seamlessly falls back to routing traffic through geographically distributed "Relays". This results in a near 100% connection success rate with zero configuration from the developer.
+
+### 4. API & Developer Experience
+
+#* **rust-libp2p:** Has a steep learning curve. Setting up a basic swarm requires understanding Network Behaviors, Transports, multiplexers, and security protocols. It requires a lot of boilerplate code just to get two nodes talking.
+#* **Iroh:** Designed to be a drop-in networking library. You create an Endpoint, give it a peer's public key, and you immediately have a QUIC stream to send data. It vastly reduces misconfiguration risks.
+
+---
+
+### Use Cases: When to use which?
+
+#### Choose `rust-libp2p` if you are building:
+
+#* **Blockchains and Web3 Infrastructure:** If you are building a cryptocurrency, a Polkadot parachain, or an Ethereum client, libp2p is the undisputed industry standard.
+#* **Global Distributed Systems:** Projects that require fully decentralized routing without any reliance on relay servers (like the IPFS public network or Filecoin).
+#* **Browser-to-Node communication:** If you need web apps to participate directly in the P2P network using WebSockets or WebTransport.
+#* **Complex PubSub Networks:** If your application relies heavily on decentralized message gossiping (via Gossipsub) across thousands of nodes.
+
+#### Choose Iroh if you are building:
+
+#* **Local-First Applications:** Apps that sync data directly between a user's phone and laptop without passing through a centralized cloud database (e.g., note-taking apps, local-first password managers).
+#* **Mobile P2P Apps:** Iroh's lightweight footprint, reliance on QUIC, and ability to seamlessly handle network handovers (Wi-Fi to 4G/5G) makes it vastly superior for mobile development.
+#* **Direct File Sharing / Blob Transfer:** If you need to move large files securely and reliably between two specific devices behind strict corporate firewalls or carrier-grade NATs.
+#* **Mesh VPNs or Remote Access Tools:** Applications that require secure, direct, device-to-device tunnels over the internet without setting up port forwarding.
+
+**Summary:** If you need to build a massive, fully decentralized network that routes traffic globally through peers, use **rust-libp2p**. If you are building an application where the primary goal is ensuring User A's device can reliably and securely sync data directly with User B's device across the internet, use **Iroh**.
+* iroh with tor
+Iroh is designed to be highly modular, and one of its advanced features is the ability to route traffic over custom transports instead of the standard internet (TCP/UDP).
+
+Using **Iroh with Tor** is achieved via an experimental module provided by Iroh's developers (n0 computer) called `iroh-tor-transport`. It allows you to run Iroh connections completely over the Tor anonymity network using Hidden Services.
+
+Here is how the combination of Iroh and Tor works and why you would use it.
+
+### How Iroh over Tor Works
+
+Normally, Iroh attempts to connect two peers by discovering their IP addresses, hole-punching through firewalls, and establishing a direct QUIC over UDP connection. If that fails, it uses Iroh Relay servers.
+
+When you configure an Iroh endpoint to use the `TorCustomTransport`, the architecture changes completely:
+
+1. **Hidden Service Creation:** When an Iroh node starts up with the Tor transport, the Tor daemon automatically creates a Tor Hidden Service (an `.onion` address) for that specific node.
+2. **Key Derivation (Zero Config):** Iroh maps its native **Endpoint ID** (an Ed25519 public key) directly to the `.onion` address.
+3. **Routing:** When Node A wants to connect to Node B using Node B's Iroh Endpoint ID, it does not look up IP addresses or use Iroh relays. Instead, the transport layer derives the `.onion` address from the Endpoint ID and establishes a connection through the Tor network.
+4. **Data Transfer:** Iroh's packets are packaged and routed through the Tor stream. The data retains all of Iroh's properties (multiplexed streams, RPC, end-to-end encryption), but is carried via Tor instead of native UDP.
+
+### Why Combine Them? (Use Cases)
+
+Combining these two tools merges Iroh’s modern API and stream multiplexing with Tor’s extreme anonymity and NAT traversal.
+
+#* **Extreme Anonymity:** Iroh is already end-to-end encrypted, but standard Iroh exposes IP addresses. If Node A connects to Node B, they both learn each other's IP addresses. By routing over Tor, neither the client nor the server knows the other's real IP address or physical location.
+#* **Ultimate NAT Traversal:** Iroh's standard hole-punching is excellent, but it can be blocked by highly restrictive corporate firewalls or authoritarian national ISPs (which might block Iroh's STUN or Relay servers). Tor is designed specifically to evade censorship. Because a Tor hidden service punches out from the local machine to the Tor network, it essentially guarantees a connection regardless of local firewall rules.
+#* **Simplifying Tor Development:** Building applications directly on top of Tor streams can be difficult. By using Iroh as the application layer over Tor, developers can use Iroh's simple QUIC-like stream API to easily build full-duplex communication, request/response protocols, or large file transfers without worrying about the underlying Tor routing logic.
+
+### Implementation Status
+
+It is important to note that the `iroh-tor-transport` is currently marked as **experimental**. It requires running a local Tor daemon (e.g., `tor --ControlPort 9051`) alongside your Rust application.
+
+Because Tor routes traffic through multiple volunteer nodes globally, any Iroh application using this transport will experience significantly higher latency and lower bandwidth compared to native Iroh connections. It is suited for secure messaging, control commands, or stealth data transfer, but not for real-time media or high-speed file syncing.
+* [[https://www.youtube.com/watch?v=jl4cAkRTMT8][ Unlimited, free file transfer, no account required ]]
+* [[https://www.youtube.com/watch?v=ogN_mBkWu7o&pp=ugUEEgJlbg%3D%3D][ p2p chat, in rust, from scratch ]]
