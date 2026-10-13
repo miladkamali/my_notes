@@ -10,6 +10,10 @@ flutter create project-name
 
 
 
+* videos
+
+** [[https://www.youtube.com/watch?v=FW6MWAUtu-s][ Awesome New Flutter 3D Game Engine - Flutter Scene! ]]
+
 
 * rust_flutter_bridge
 https://cjycode.com/flutter_rust_bridge/quickstart

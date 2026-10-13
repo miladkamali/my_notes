@@ -5,3 +5,8 @@
 * browser fro agents 
 ** obscura
 ** kitesurf
+* reverse engineering
+** [[https://github.com/morluto/rea][Reverse engineer anything]]
+*** https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3DFnB9tHKBJXQ&ved=2ahUKEwiqsNyZ8reXAxV6JhAIHWWXJN4QwqsBegQIHxAB&usg=AOvVaw342Iu-QuULK2TQUDDy03vL
+*** https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3DcHPWA4omJD8&ved=2ahUKEwiqsNyZ8reXAxV6JhAIHWWXJN4QwqsBegQIIBAB&usg=AOvVaw37iZUJCUVi7xttPnAszYPU
+*** https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3DdAzs_rU6080&ved=2ahUKEwiqsNyZ8reXAxV6JhAIHWWXJN4QwqsBegQIIRAB&usg=AOvVaw27KdMKvQBa12z0lTp1KoFw
