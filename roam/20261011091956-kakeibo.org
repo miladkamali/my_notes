@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       d2cc78a4-eb37-474f-959b-b19eb5d146d2
+:END:
+#+title: kakeibo
+
+the art of mindful spending
+
+kakeibo helps you manage your finances by mindful budgeting at the beginning of
+each month by deducting your constant expenditure from your income and setting
+you with allocated budget you can spend. while doing so you set a realistic goal
+for saving fixed amount of money.
+

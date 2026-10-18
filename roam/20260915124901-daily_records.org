@@ -91,3 +91,33 @@ i could not connect to local services using expressvpn, now i'm using nekobox wi
 * [2026-10-03 Sat]
 ** wake up at 8:30
 ** start work at 9:20
+* [2026-10-11 Sun]
+** wake up at 8:50
+** start work at 10:15
+** 40 push up 
+** learn about kakeibo
+** talk with hasan
+:LOGBOOK:
+CLOCK: [2026-10-11 Sun 09:53]--[2026-10-11 Sun 11:25] =>  1:32
+:END:
+** fixing mailserver
+:LOGBOOK:
+CLOCK: [2026-10-11 Sun 11:25]--[2026-10-11 Sun 11:53] =>  0:28
+:END:
+** extracting v3 and v3.1 errors
+:LOGBOOK:
+CLOCK: [2026-10-11 Sun 11:45]--[2026-10-11 Sun 12:08] =>  0:23
+:END:
+
+v3_callback_messages
+
+zcat http-service*.gz|cut -d '|' -f5|jq '.request.body|fromjson|.status.code'|sort|uniq -c
+ 306427 0
+   1008 14
+   4486 3
+   1727 5
+  33281 null
+** dispatcher implementing shahkar
+:LOGBOOK:
+CLOCK: [2026-10-11 Sun 12:28]
+:END:

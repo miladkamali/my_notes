@@ -79,6 +79,7 @@ https://www.youtube.com/watch?v=v6m70HyI0XE
 ** [[https://www.youtube.com/watch?v=dOfucXtyEsU][the bits between the bits how we get to main]]
 ** [[https://www.youtube.com/watch?v=VhKq0nzPTh0][ Cache Me Maybe: The Performance Secret Every C++ Developer Needs - Michelle D'Souza - CppCon 2025 ]]
 ** [[https://www.youtube.com/watch?v=i_wDa2AS_8w&pp=ugUEEgJlbtIHCQkeDAGHKiGM7w%3D%3D][ 31 nooby C++ habits you need to ditch ]]
+** [[https://www.youtube.com/watch?v=OW_h9oyHQ-0][ The Secret to C++ Reflection Now: CMake Code Generation - Bret Brown - C++Now 2026 ]]
 * compilation process
 pre-processor processes headers and source files then compiler  compiles them into object files
 then a linker link them into a executable or a library 
