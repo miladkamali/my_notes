@@ -79,6 +79,7 @@
 - State "TODO"       from              [2026-09-10 Thu 12:10]
 :END:
 ** [[https://www.youtube.com/@Rustfully/videos][video tutorials ]]
+** [[https://www.youtube.com/watch?v=zg6MgDnHlrU][rust gpu programming with cutile]]
 ** [[https://www.youtube.com/@Rustfully/videos][Rustfully basic tutorials]]
 ** [[https://www.youtube.com/watch?v=j3OHppIYbO4&pp=ugUHEgVlbi1VUw%3D%3D][ I Spent 1 Week Learning to Code Shaders with Bevy & Rust ]]
 ** [[https://www.youtube.com/watch?v=NHugujESp_s][100 TB saved by cloud flare]]
