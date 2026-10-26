@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       80533c6a-bc41-418d-a255-cb2ecb6c9588
+:END:
+#+title: decoy systems
+* nulka
+* LEED
+* ADM-160 MALD
