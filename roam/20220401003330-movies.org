@@ -7,6 +7,7 @@
 
 https://patricia.frank-capra.com/user/panel/
 * movies to watch
+** [#A] prodigy
 ** TODO Jojo rabbit
    :PROPERTIES:
    :IMDB_RATING: 7.8
@@ -34,6 +35,7 @@ https://patricia.frank-capra.com/user/panel/
    :YEAR: 2021
    :END:
    Description: The chronicles of four years in the life of Julie, a young woman who navigates the troubled waters of her love life and struggles to find her career path. Norwegian film directed by Joachim Trier.
+** tuner(2025)
 ** love rosie
    :PROPERTIES:
    :IMDB_RATING: 7.2

@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       7e26f955-e745-48a3-b655-43ac826e93c1
+:END:
+#+title: bevy
+* compile time optimization
+to reduce the compile time of the app
+we add the following to the cargo.toml
+
+[dependencies]
+# Links Bevy as a shared library so each `cargo run` does not relink the whole engine.
+# Turn this feature off before shipping a standalone build.
+bevy = { version = "0.20.1", features = ["dynamic_linking"] }
+
+[profile.dev]
+opt-level = 1
+
+# Enable a large amount of optimization in the dev profile for dependencies.
+[profile.dev.package."*"]
+opt-level = 3

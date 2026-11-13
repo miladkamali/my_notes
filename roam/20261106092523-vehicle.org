@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       2c0b7db5-01fe-4736-9457-570499adca7a
+:END:
+#+title: vehicle
+* humwee
+* JLTV
+* M-ATV
+this was the light version of MRAP for afghanistan mountain 
+* MRAP
+basically the vehicle that was produced to eliminate the casualty of the road mines in iraq
