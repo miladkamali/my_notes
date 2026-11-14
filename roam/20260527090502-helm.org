@@ -132,6 +132,18 @@ SQL
 helm upgrade --install crypto-api-prod crypto-api --values crypto-api/values.yaml -f crypto-api/values-prod.yaml -n prod
 
 
+** api-hub
+ kubectl run pg-fix2 --rm -i --restart=Never -n prod   --image=postgres:17-alpine   --env="PGPASSWORD=q5amohbmR4B93fXTOOru"   -- psql -h uid-production-database-proxy.database.svc -U postgres -d bff -v ON_ERROR_STOP=1 <<'SQL'
+GRANT CONNECT ON DATABASE api_hub TO api_hub;
+GRANT USAGE, CREATE ON SCHEMA public TO api_hub;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO api_hub;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO api_hub;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO api_hub;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO api_hub;
+SQL
+
+helm upgrade --install api-hub-prod api-hub --values api-hub/values.yaml -f api-hub/values-prod.yaml -n prod
+
 ** crypto-web
 helm upgrade --install crypto-web-prod crypto-web -f crypto-web/values.yaml -f crypto-web/values-prod.yaml -n prod
 ** sana-web
