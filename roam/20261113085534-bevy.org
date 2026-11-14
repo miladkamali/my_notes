@@ -25,3 +25,4 @@ opt-level = 3
 ** [[https://www.youtube.com/watch?v=ixh1a_nMbic&pp=ygUNYmV2eSB0dXRvcmlhbA%3D%3D][ How I Structure Gameplay Code in Rust and Bevy ]]
 ** [[https://www.youtube.com/watch?v=ru_oz09Zo-s&t=320s&pp=ugUEEgJlbg%3D%3D][500 million voxel]]
 ** [[https://www.youtube.com/watch?v=WwOuXhKgmMg][Building collision in rust and bevy]]
+** [[https://aibodh.com/posts/bevy-rust-game-development-chapter-1/][building 1]]
