@@ -91,3 +91,5 @@ Qwen very good for https://huggingface.co/Qwen
 * world generation
 ** veo
 ** genie 3
+* harness
+** [[https://github.com/alishahryar1/free-claude-code][free claude code]]
