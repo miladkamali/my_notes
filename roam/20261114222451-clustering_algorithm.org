@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       97545513-3b5f-4822-9478-83178c4259f3
+:END:
+#+title: clustering algorithm
+* e-means
+[[https://www.youtube.com/shorts/DHkjDbPD2zg][e-means vs k-means]]
+https://arxiv.org/html/2611.09501v1
