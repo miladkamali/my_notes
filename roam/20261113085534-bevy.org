@@ -19,6 +19,7 @@ opt-level = 1
 opt-level = 3
 * editor
 ** [[https://github.com/jbuehler23/jackdaw][jackdaw]]
+* [[https://github.com/jakobhellermann/bevy-inspector-egui][entity inspector]]
 * tutorials
 ** [[https://www.youtube.com/watch?v=jKSZ8k70dxM&pp=ygUNYmV2eSB0dXRvcmlhbA%3D%3D][flappy bird with bevy]]
 ** [[https://www.youtube.com/watch?v=bwIFdd0mFMg][ Rust Game Programming Tutorial with Linux with Bevy ]]
