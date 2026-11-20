@@ -27,3 +27,5 @@ opt-level = 3
 ** [[https://www.youtube.com/watch?v=ru_oz09Zo-s&t=320s&pp=ugUEEgJlbg%3D%3D][500 million voxel]]
 ** [[https://www.youtube.com/watch?v=WwOuXhKgmMg][Building collision in rust and bevy]]
 ** [[https://aibodh.com/posts/bevy-rust-game-development-chapter-1/][building 1]]
+** [[https://www.youtube.com/watch?v=p8d8TKo59LU][Bevy Top Down Shooter Tutorial With Massive Enemy Hordes]]
+https://github.com/bones-ai/bevy-2d-shooter/tree/main
