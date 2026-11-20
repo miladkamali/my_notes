@@ -322,6 +322,11 @@ will convert result type into option, it will return Some for ok variant and non
 ** rust new borrow checker polonius
 [[https://www.youtube.com/watch?v=kD0w3YQxV6E][ Rust's new borrow checker is coming! ]]
 [[https://www.youtube.com/watch?v=uCN_LRcswts][ The first six years in the development of Polonius - Amanda Stjerna | EuroRust 2024 ]]
+* [[id:14504CD7-D287-47A9-B584-7201F7F1BF3B][proof checker]]
+* proof checker
+** Verus
+[[https://www.youtube.com/watch?v=cpc9TVT_IFg][How Amazon Proves Critical Rust Code Works]]
+https://github.com/verus-lang/verus
 * compile time optimization
 [[https://www.youtube.com/watch?v=vFp4IbC2aZ0][ How to decrease your Rust compile times by 50% ]]
 ** modifying debugging info in dev profile

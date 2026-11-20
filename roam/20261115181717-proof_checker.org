@@ -1,0 +1,107 @@
+:PROPERTIES:
+:ID:       14504CD7-D287-47A9-B584-7201F7F1BF3B
+:END:
+#+title: proof checker
+The closest peers to **Verus** in the Rust formal verification ecosystem are **Creusot**, **Aeneas**, and **Prusti**. Like Verus, these are *deductive verification* tools designed to prove functional correctness (e.g., "this custom data structure maintains its invariants") using Rust-native annotations, rather than just finding panics or checking memory safety.
+
+### Direct Deductive Verification Peers
+
+These tools translate Rust code (often via `rustc` MIR) into logical formulas checked by SMT solvers or proof assistants.
+
+| Tool | Backend / Solver | Specification Style | Primary Strength |
+| --- | --- | --- | --- |
+| **Verus** | Z3 (SMT) | Native Rust syntax (`requires`, `ensures`, `proof` mode) | High-throughput systems code, ghost state, linear/tracked permissions without leaving Rust. |
+| **Creusot** | Why3 (Alt-Ergo, Z3, CVC5) | Rust-like contract macros (`#[requires]`, `#[ensures]`) + PearlLite | Leverages Rust's ownership/borrowing directly via **prophecy variables** to eliminate complex framing annotations. |
+| **Aeneas** | Lean 4, Coq, F*, HOL4 | External pure functional specs written in the target proof assistant | Translates safe Rust into pure functional code, letting you write complex mathematical proofs in **Lean 4** or **Coq** without dealing with memory models. |
+| **Prusti** | Viper (Z3) | Rust-like attributes (`#[requires]`, `#[ensures]`) | Uses separation logic (via Viper) to infer ownership and framing from Rust's borrow checker; strong IDE integration. |
+
+---
+
+### Interactive Proof Assistant Embedding (Deepest Guarantees)
+
+If you need to prove properties too complex for automated SMT solvers (like Z3) and want full machine-checked proofs in Coq or Lean:
+
+* **RefinedRust:** Built on top of **Iris** (concurrent separation logic in Coq). It uses a refinement type system to verify unsafe and low-level Rust code with foundational soundness guarantees, though it requires significant proof engineering effort.
+* **hacspec / Charon + Eurydice:** Originally aimed at cryptographic code, **Charon** extracts Rust MIR into an AST that feeds tools like **Aeneas** or **F*** (via Eurydice), bridging systems Rust with high-assurance cryptographic verification.
+
+---
+
+### Bounded Model Checkers & Symbolic Execution (Different Trade-off)
+
+Unlike Verus, these tools do not prove properties for *all* possible inputs via inductive invariants. Instead, they explore state spaces up to a bound, requiring far less manual proof annotation:
+
+* **Kani:** Developed by AWS, Kani compiles Rust to CBMC (a bounded model checker). You write standard Rust `#[kani::proof]` harnesses with `kani::any()` symbolic inputs. Ideal for verifying unsafe blocks, FFI boundaries, and absence of panics/UB without writing ghost code.
+* **Flux:** A **liquid/refinement type checker** for Rust. Instead of full pre/post-condition theorem proving, you annotate types with logical predicates (e.g., `i32{v: v > 0}`), and an SMT solver checks them automatically during compilation. Much lighter weight than Verus, though less expressive for complex state machines.
+* **MIRAI:** An abstract interpreter for Rust MIR that performs taint analysis and checks precondition annotations (`precondition!`, `verify!`).
+* **Crux-MIR:** Galois's symbolic execution engine for Rust MIR, capable of checking assertions against symbolic inputs using SMT solvers.
+
+### Choosing Between Them
+
+* **Stay with Verus** if you want SMT automation, native Rust spec syntax, and need to verify concurrent or systems-level code with explicit ghost permissions.
+* **Try Creusot** if you want SMT-backed deductive verification of safe Rust where mutable borrows (`&mut`) are handled automatically via prophecies rather than manual state threading.
+* **Try Aeneas** if your code is safe, mostly functional/algorithmic, and you prefer writing proofs in **Lean 4** or **Coq** rather than fighting SMT solver timeouts.
+* **Try Kani or Flux** if writing full functional proofs is overkill and you want automated checking of invariants, bounds, or unsafe code invariants.
+
+
+* formal proof system
+Formal verification proves software works not by running test cases (which only check specific inputs), but by translating both the program and its specification (what it is supposed to do) into mathematical objects and proving that one satisfies the other across /all/ possible inputs and execution paths.
+
+Because there is a fundamental trade-off between automation (push-button speed) and expressiveness (the complexity of properties you can prove), several distinct families of proof systems have evolved.
+
+The Core Proof Paradigms
+
+| Paradigm | Core Mechanism | Automation vs. Effort | Best Used For | Notable Tools |
+|----------+----------------+-----------------------+---------------+---------------|
+| 1. Deductive Verification | Hoare logic + SMT solvers | Medium effort (requires writing contracts/invariants) | Functional correctness of algorithms, data structures, and systems code | Verus, Dafny, Creusot, Frama-C, Why3 |
+| 2. Interactive Theorem Proving (ITP) | Type theory / higher-order logic + human proof scripts | High effort (manual proof engineering) | Deep mathematical properties, compilers, OS kernels, cryptography | Rocq (Coq), Lean 4, Isabelle/HOL, Agda |
+| 3. Model Checking | Exhaustive state-space exploration | High automation ("push-button") | Distributed protocols, concurrency, deadlocks, hardware | TLA+, SPIN, NuSMV, Kani (bounded) |
+| 4. Abstract Interpretation | Over-approximating program states via lattice theory | Fully automatic | Proving absence of runtime errors (overflows, null derefs) in huge codebases | Astrée, Polyspace, MIRAI |
+| 5. Type-Based Verification | Curry-Howard correspondence (types as propositions) | Low-to-medium effort (compiler-checked) | Memory safety, resource ownership, liquid/refinement bounds | Rust (affine types), Flux, F*, Idris |
+
+How Each System Proves Software Works
+
+ 1. Deductive Verification (Contract-Based)
+
+How it works: Based on Hoare Logic ($\{P\} \, C \, \{Q\}$), you annotate functions with preconditions (=requires=), postconditions (=ensures=), and loop invariants. A tool called a /Verification Condition Generator (VCGen)/ translates the code and its annotations into pure mathematical formulas (Verification Conditions). It then hands those formulas to an automated SMT solver (like Z3 or cvc5) to prove they hold for every conceivable input.
+
+Why humans are still needed: Loops and recursion are undecidable in general. The solver cannot guess /why/ a loop works, so you must supply the loop invariant—a mathematical truth that holds before, during, and after every iteration.
+
+ 2. Interactive Theorem Proving (Proof Assistants)
+
+How it works: Instead of relying on automated solvers that might time out on complex math, you build the proof interactively alongside a proof assistant. The system has a tiny, rock-solid mathematical kernel (based on Dependent Type Theory or Higher-Order Logic). You write high-level proof steps ("tactics") to break a massive theorem down into simpler subgoals until every step is verified down to fundamental axioms.
+
+How software is proven: You either write the program directly inside the proof assistant (like Lean or Rocq) and extract executable code, or translate external code (e.g., C or Rust) into the assistant's logic. This is how landmark projects like the CompCert C compiler and the seL4 microkernel were proven bug-free.
+
+ 3. Model Checking (State-Space Exploration)
+
+How it works: You model your software or protocol as a state machine (nodes = system states, edges = transitions) and express desired properties in Temporal Logic (e.g., /"Always eventually, every request receives a response"/ or /"Two threads are never in the critical section simultaneously"/). The model checker systematically explores every reachable state and thread interleaving.
+
+Handling infinite states: Full model checking hits the state-space explosion problem on large systems. Bounded Model Checkers (like CBMC or Rust's Kani) solve this by unrolling loops up to a fixed bound $k$ and encoding the entire execution into a giant SAT/SMT boolean formula. If a bug exists within $k$ steps, the solver hands you an exact step-by-step counterexample trace.
+
+ 4. Abstract Interpretation
+
+How it works: Running a program on every possible 64-bit integer is impossible. Abstract interpretation executes the program using abstract domains instead of concrete values. For example, instead of tracking =x = 42=, it tracks $x \in [1, 100]$ (interval domain) or $x > 0$ (sign domain).
+
+How it proves safety: It computes a sound over-approximation of all possible runtime states. If the over-approximated interval for a pointer offset never exceeds the buffer size, it has mathematically proven that a buffer overflow is impossible—without a single annotation from the developer. Airbus famously uses this (via Astrée) to prove flight-control software has zero runtime exceptions.
+
+ 5. Advanced Type Systems (Curry-Howard Correspondence)
+
+How it works: Under the Curry-Howard correspondence, /types are logical propositions/ and /programs are proofs/. When your code compiles, the type checker has verified a mathematical proof.
+
+Spectrum of power:
+
+Substructural / Affine Types (Rust): Prove memory safety and data-race freedom by encoding ownership and lifetimes into the type system.
+
+Refinement / Liquid Types (Flux, Liquid Haskell): Attach SMT-checked predicates directly to standard types (e.g., =Vec{len > 0}=), proving bounds and invariants at compile time.
+
+Dependent Types (Idris, Agda, Lean): Allow types to depend on runtime values (e.g., a function returning a =Vector= whose exact length is computed from an input integer), unifying programming and theorem proving in one language.
+
+How They Work Together in Practice
+
+Modern verification rarely relies on just one system:
+
+Design Phase: Architects use TLA+ (Model Checking) to prove a distributed consensus protocol has no deadlocks or split-brain edge cases before writing a line of production code.
+
+Implementation Phase: Engineers use Type Systems and Abstract Interpretation in CI to automatically rule out memory corruption, race conditions, and integer overflows.
+
+Critical Core: For mission-critical parsers, cryptographic primitives, or kernel schedulers, engineers apply Deductive Verification (like Verus) or Interactive Theorem Proving (like Lean/Rocq) to prove exact functional equivalence to the mathematical specification.
