@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       6d2c699c-d9d1-4064-8285-76ba934f13a9
+:END:
+#+title: forensic
+* audio forensic
+[[https://youtu.be/UytYrhYLOKI?si=FJztxLq_0LIZ64UB][ I discovered a sound that leaks your exact location (and it's everywhere) ]]
