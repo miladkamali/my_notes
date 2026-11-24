@@ -42,6 +42,7 @@
  [[https://www.youtube.com/watch?v=IPmRDS0OSxM][ A Firehose of Rust, for busy people who know some C++ ]]
   [[https://www.youtube.com/watch?v=IvPP5U2wzlE][ Rust Vs C++ Beyond Safety - Joseph Cordell - ACCU Cambridge ]]
 [[https://www.youtube.com/watch?v=DpnXaNkM9_M&pp=0gcJCaMLAYcqIYzv][ I built my own memory profiler (in Rust, on Linux) ]]
+ [[https://www.youtube.com/watch?v=flS3cmjcows][ How to Learn Rust in 2027 (Step by Step Roadmap) ]]
 ** TODO [[https://www.youtube.com/watch?v=IPmRDS0OSxM][ A Firehose of Rust, for busy people who know some C++ ]]
 :LOGBOOK:
 - State "TODO"       from              [2026-07-28 Tue 19:58]
@@ -85,6 +86,7 @@
 ** [[https://www.youtube.com/watch?v=NHugujESp_s][100 TB saved by cloud flare]]
 ** conferances
 *** [[https://www.youtube.com/playlist?list=PLH6-VpZ3SvUWox7mJDLNCu_E0gl7a-fP3][euro rust]]
+
 * standard
 ** [[https://www.youtube.com/watch?v=oitYvDe4nps][ The Joy of C++26 Contracts - Myths, Misconceptions & Defensive Programming - Herb Sutter ]]
   [[https://www.youtube.com/watch?v=q3VOsGzkM-M][The ultimate Rust performance guide]]

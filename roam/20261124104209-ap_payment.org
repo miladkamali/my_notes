@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       096c2f7a-7578-431f-bb7d-8f84806a274e
+:END:
+#+title: ap-payment
+how the up payment workflow works in uid
+
+first we call https://ipgrest.asanpardakht.ir/v1/Token with request body similar to the following 
+#+begin_src js
+  {
+      "serviceTypeId": 1,
+      "merchantConfigurationId": 126655,
+      "localInvoiceId": 497722000,
+      "amountInRials": 1572000,
+      "localDate": "20261025 164132",
+      "additionalData": "",
+      "callbackURL": "https://bff.u-id.net?workflow_id=ASAN_PARDAKHT-2a775f09-8770-4a63-8a19-e5a45e4cbe45&local_invoice_id=497722000",
+      "paymentId": "497722000"
+  }
+
+#+end_src
+
+
+where we get a payment token similar to
+2QPSDJFCadNzYOuVW
+
+we transfer this token to the frontend 
