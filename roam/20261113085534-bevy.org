@@ -37,3 +37,5 @@ https://github.com/bones-ai/bevy-2d-shooter/tree/main
 https://www.youtube.com/watch?v=4uASkH-FUWk
 * ideas
 ** [[https://www.youtube.com/shorts/NDXJkplN4_4][pac man explanation]]
+** [[https://youtu.be/neyIpnII-WQ?si=qI79G7kkKGBLeHgL][ Compute Shaders in Bevy ]]
+

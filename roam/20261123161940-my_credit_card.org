@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       6fedac96-4a8d-4f65-addf-1972004b3d13
+:END:
+#+title: my credit card
+
+4343405623143137
+CVV: 450
+Expiration Date: 11/27
+zipCode: 90012
+address: 549 North Los Angeles Street
+Name: Jenna Gillespie
+City: Los Angeles
+State: California
+Country: United States
