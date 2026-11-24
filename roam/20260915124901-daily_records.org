@@ -118,6 +118,11 @@ zcat http-service*.gz|cut -d '|' -f5|jq '.request.body|fromjson|.status.code'|so
    1727 5
   33281 null
 ** dispatcher implementing shahkar
+* [2026-11-22 Sun]
+** wake up at 7:20
+** start work at 8:13
+** worked on asset loader
 :LOGBOOK:
-CLOCK: [2026-10-11 Sun 12:28]
+CLOCK: [2026-11-22 Sun 08:20]
 :END:
+** 

@@ -29,6 +29,9 @@ opt-level = 3
 ** [[https://aibodh.com/posts/bevy-rust-game-development-chapter-1/][building 1]]
 ** [[https://www.youtube.com/watch?v=p8d8TKo59LU][Bevy Top Down Shooter Tutorial With Massive Enemy Hordes]]
 https://github.com/bones-ai/bevy-2d-shooter/tree/main
+** [[https://www.youtube.com/watch?v=qAN_tOMaeZQ][ I Joined a Game Jam for the FIRST TIME in 2 Years ]]
+** [[https://www.youtube.com/watch?v=BY5lXATLRwQ][ Making a large Battle Simulator game with Bevy and Rust ]]
 * useful
 ** [[https://bevy.org/examples/games/loading-screen/][loading-screen]]
 https://www.youtube.com/watch?v=4uASkH-FUWk
+
