@@ -33,6 +33,13 @@ https://github.com/bones-ai/bevy-2d-shooter/tree/main
 ** [[https://www.youtube.com/watch?v=BY5lXATLRwQ][ Making a large Battle Simulator game with Bevy and Rust ]]
 ** [[https://www.youtube.com/watch?v=BzrZoJZcmVI][ Caitlin Sar Campbell: Making games in Rust with Bevy ]]
 ** [[https://www.youtube.com/@bipedpotato][Biped Potato]]
+** [[https://www.youtube.com/watch?v=5oKEPZ6LbNE][ Bevy Rendering Demystified ]]
+** [[https://www.youtube.com/watch?v=GwlZ5EPu8l0][ Rapier Physics Engine Showcase: Rust Physics Engine for Bevy ]]
+** [[https://www.youtube.com/watch?v=EiAMaHQiHN4][ Rust Graphics Programming from Scratch: wgpu for Beginners ]]
+** [[https://www.youtube.com/watch?v=neyIpnII-WQ][ Compute Shaders in Bevy ]]
+** [[https://www.youtube.com/watch?v=SOOOc9-joVo][ What's in a wgsl fragment shader? ft Bevy ]]
+** [[https://www.youtube.com/watch?v=GwlZ5EPu8l0][ Rapier Physics Engine Showcase: Rust Physics Engine for Bevy ]]
+** [[https://www.youtube.com/watch?v=fBHO0yptg1Y][ Networking in Bevy/Rust: Bevy Renet Showcase ]]
 * useful
 ** [[https://bevy.org/examples/games/loading-screen/][loading-screen]]
 https://www.youtube.com/watch?v=4uASkH-FUWk
