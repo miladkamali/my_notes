@@ -4,3 +4,8 @@
 #+title: compression
 * openZL
 [[https://idroot.us/install-openzl-fedora-42/][openzl]]
+* theory
+** [[https://www.youtube.com/watch?v=l6DKRf-fAAM][ Shannon's dream: The limit of compressibility | Information theory, part 1 ]]
+** [[https://www.youtube.com/watch?v=GlYgs6v2YfU][ Cross-entropy: When compression measures learning | Information theory, part 2 ]]
+** [[https://www.youtube.com/watch?v=qbsb9DpdZ6s][ This algorithm changed how I think about compression | Information theory, part 3 ]]
+* 
